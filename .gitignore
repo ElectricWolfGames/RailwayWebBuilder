@@ -3,3 +3,5 @@
 ################################################################################
 
 /packages
+/RailwayWebBuilder/bin/Debug
+/RailwayWebBuilder/obj/Debug
