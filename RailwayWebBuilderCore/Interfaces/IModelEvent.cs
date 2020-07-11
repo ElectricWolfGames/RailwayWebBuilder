@@ -1,6 +1,8 @@
-﻿namespace RailwayWebBuilder.Interfaces
+﻿using eWolfBootstrap.Interfaces;
+
+namespace RailwayWebBuilder.Interfaces
 {
-    public interface IModelEvent : IHeader, IModelPageDetails
+    public interface IModelEvent : IPageHeader, IModelPageDetails
     {
         void Fix();
 

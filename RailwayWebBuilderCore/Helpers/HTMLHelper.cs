@@ -5,7 +5,7 @@ namespace RailwayWebBuilder.Helpers
 {
     public static class HTMLHelper
     {
-        public static void AddImageToPage(string htmlpath, string imagePath, StringBuilder stringBuilder, string image)
+        public static void AddImageToPage(string htmlpath, string imagePath, eWolfBootstrap.Interfaces.IPageBuilder stringBuilder, string image)
         {
             string newImagePath = ImageHelper.CopyImageTo(imagePath, image);
             string newImagePathThumb = ImageHelper.CopyImageToThumb(imagePath, image);
@@ -14,7 +14,7 @@ namespace RailwayWebBuilder.Helpers
             newImagePathThumb = newImagePathThumb.Replace(htmlpath, string.Empty);
 
             string imageTitle = Path.GetFileNameWithoutExtension(newImagePath);
-            stringBuilder.AppendLine(HTMLHelper.BuildImageCard(newImagePath, newImagePathThumb, imageTitle));
+            stringBuilder.Append(HTMLHelper.BuildImageCard(newImagePath, newImagePathThumb, imageTitle));
         }
 
         public static string BuildImageCard(string image, string imageThumb, string title)

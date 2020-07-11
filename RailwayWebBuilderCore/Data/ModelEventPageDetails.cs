@@ -1,10 +1,11 @@
-﻿using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilder.Headers;
+using RailwayWebBuilder.Interfaces;
 using System;
 using System.Collections.Generic;
 
 namespace RailwayWebBuilder.Data
 {
-    public class ModelEventPageDetails : IModelEvent
+    public class ModelEventPageDetails : HeaderBase, IModelEvent
     {
         public string Name { get; set; }
 

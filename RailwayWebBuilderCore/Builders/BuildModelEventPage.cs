@@ -1,4 +1,5 @@
-﻿using RailwayWebBuilder.Configuration;
+﻿using eWolfBootstrap.Builder;
+using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
 using System;
@@ -29,29 +30,25 @@ namespace RailwayWebBuilder.Builders
             string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + "\\";
             string imagePath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images";
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(PageHeaderHelper.PageHeader(pageDetails));
-            stringBuilder.Append("<body>");
-            stringBuilder.Append(NavBarHelper.NavBar("../../"));
-            stringBuilder.AppendLine("<div class='container mt-4'>");
-            stringBuilder.Append(Jumbotron(pageDetails));
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, pageDetails);
+            pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            pageBuilder.Append("<div class='container mt-4'>");
+            pageBuilder.Append(Jumbotron(pageDetails));
 
-            stringBuilder.AppendLine("<div class='row'>");
+            pageBuilder.Append("<div class='row'>");
 
-            AddImagesByLayout(images, pageDetails, htmlpath, imagePath, stringBuilder);
+            AddImagesByLayout(images, pageDetails, htmlpath, imagePath, pageBuilder);
 
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            stringBuilder.AppendLine(HTMLHelper.Modal());
+            pageBuilder.Append(HTMLHelper.Modal());
 
-            stringBuilder.Append("<script src='../../Scripts/script.js'></script>");
-            stringBuilder.Append("</body>");
-
-            File.WriteAllText(htmlpath + "index.html", stringBuilder.ToString());
+            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+            pageBuilder.Output();
         }
 
-        private static void AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath, StringBuilder stringBuilder)
+        private static void AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath, eWolfBootstrap.Interfaces.IPageBuilder stringBuilder)
         {
             bool any = false;
             int count = 2;
@@ -62,9 +59,9 @@ namespace RailwayWebBuilder.Builders
                     continue;
                 }
 
-                stringBuilder.AppendLine("</div>");
+                stringBuilder.Append("</div>");
                 stringBuilder.Append($"<hr/><h2><a id='{layout.IDName}'> {layout.Name}</a></h2>");
-                stringBuilder.AppendLine("<div class='row'>");
+                stringBuilder.Append("<div class='row'>");
 
                 count = 2;
                 foreach (string layoutImage in layout.ImagePaths)
@@ -75,8 +72,8 @@ namespace RailwayWebBuilder.Builders
                         if (count-- == 0)
                         {
                             count = 2;
-                            stringBuilder.AppendLine("</div></div>");
-                            stringBuilder.AppendLine("<div class='container mt-4'><div class='row'>");
+                            stringBuilder.Append("</div></div>");
+                            stringBuilder.Append("<div class='container mt-4'><div class='row'>");
                         }
                         any = true;
                         images.Remove(layoutImage);
@@ -88,9 +85,9 @@ namespace RailwayWebBuilder.Builders
                 count = 2;
                 if (any)
                 {
-                    stringBuilder.AppendLine("</div>");
+                    stringBuilder.Append("</div>");
                     stringBuilder.Append("<hr/><h4>Others</h4>");
-                    stringBuilder.AppendLine("<div class='row'>");
+                    stringBuilder.Append("<div class='row'>");
                 }
                 foreach (string image in images)
                 {
@@ -98,10 +95,10 @@ namespace RailwayWebBuilder.Builders
                     if (count-- == 0)
                     {
                         count = 2;
-                        stringBuilder.AppendLine("</div>");
-                        stringBuilder.AppendLine("</div>");
-                        stringBuilder.AppendLine("<div class='container mt-4'>");
-                        stringBuilder.AppendLine("<div class='row'>");
+                        stringBuilder.Append("</div>");
+                        stringBuilder.Append("</div>");
+                        stringBuilder.Append("<div class='container mt-4'>");
+                        stringBuilder.Append("<div class='row'>");
                     }
                 }
             }

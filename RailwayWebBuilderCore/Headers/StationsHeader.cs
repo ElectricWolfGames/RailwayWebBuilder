@@ -1,9 +1,14 @@
-﻿using RailwayWebBuilder.Interfaces;
+﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Data
+namespace RailwayWebBuilder.Headers
 {
-    public class StationsHeader : IHeader
+    public class HeaderBase
+    {
+        public string Author { get; set; } = "Electric Wolf";
+    }
+
+    public class StationsHeader : HeaderBase, IPageHeader
     {
         public string Title { get; set; }
         public List<string> Keywords { get; set; }

@@ -1,5 +1,6 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
+﻿using eWolfBootstrap.Builder;
+using RailwayWebBuilder.Configuration;
+using RailwayWebBuilder.Headers;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
 using System.Collections.Generic;
@@ -15,24 +16,22 @@ namespace RailwayWebBuilder.Builders
             string htmlpath = Constants.RushcliffeHalt;
             Directory.CreateDirectory(htmlpath);
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(PageHeaderHelper.PageHeader(new StationsHeader()));
-            stringBuilder.Append("<body>");
-            stringBuilder.Append(NavBarHelper.NavBar("../../"));
-            stringBuilder.AppendLine("<div class='container mt-4'>");
-            stringBuilder.Append(Jumbotron(null));
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader());
 
-            stringBuilder.Append(AddHalt_001(htmlpath, htmlpath + "images\\"));
+            pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            pageBuilder.Append("<div class='container mt-4'>");
+            pageBuilder.Append(Jumbotron(null));
 
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append(AddHalt_001(htmlpath, htmlpath + "images\\"));
 
-            stringBuilder.AppendLine(HTMLHelper.Modal());
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            stringBuilder.Append("<script src='../../Scripts/script.js'></script>");
-            stringBuilder.Append("</body>");
+            pageBuilder.Append(HTMLHelper.Modal());
 
-            File.WriteAllText(htmlpath + "index.html", stringBuilder.ToString());
+            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+
+            pageBuilder.Output();
         }
 
         private static string Jumbotron(IModelPageDetails pageDetails)
@@ -54,39 +53,39 @@ namespace RailwayWebBuilder.Builders
         {
             Directory.CreateDirectory(imagePath);
 
-            StringBuilder stringBuilder = new StringBuilder();
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
 
-            stringBuilder.AppendLine($"<hr/>");
-            stringBuilder.AppendLine("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
+            pageBuilder.Append($"<hr/>");
+            pageBuilder.Append("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Rushcliffe Halt\2020-06-26\";
 
-            stringBuilder.AppendLine("<div class='col-md-8'>");
+            pageBuilder.Append("<div class='col-md-8'>");
             string youTubeLink = "https://www.youtube.com/embed/NemRaAwWhms";
 
-            stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9'>");
-            stringBuilder.AppendLine($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
+            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
             List<string> images = ImageHelper.GetAllImages(path);
-            stringBuilder.AppendLine("<div class='container mt-4'><div class='row'>");
+            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
             int count = 2;
             foreach (string layoutImage in images)
             {
                 if (images.Contains(layoutImage))
                 {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, stringBuilder, layoutImage);
+                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
                     if (count-- == 0)
                     {
                         count = 2;
-                        stringBuilder.AppendLine("</div></div>");
-                        stringBuilder.AppendLine("<div class='container mt-4'><div class='row'>");
+                        pageBuilder.Append("</div></div>");
+                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
                     }
                 }
             }
-            stringBuilder.AppendLine("</div></div>");
-            return stringBuilder.ToString();
+            pageBuilder.Append("</div></div>");
+            return pageBuilder.GetString();
         }
     }
 }

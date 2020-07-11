@@ -1,9 +1,9 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
+﻿using eWolfBootstrap.Builder;
+using RailwayWebBuilder.Configuration;
+using RailwayWebBuilder.Headers;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -15,27 +15,22 @@ namespace RailwayWebBuilder.Builders
         {
             string htmlpath = Constants.RootPath + "//" + Constants.ModelEvents + "//";
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(PageHeaderHelper.PageHeader(new ModelEventsHeader()));
-            stringBuilder.Append("<body>");
-            stringBuilder.Append(NavBarHelper.NavBar("../"));
-            stringBuilder.AppendLine("<div class='container mt-4'>");
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new ModelEventsHeader());
+
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
+            pageBuilder.Append("<div class='container mt-4'>");
 
             var ordedBlogs = modelEvents.OrderByDescending(x => x.TripDate);
-            stringBuilder.AppendLine("<div class='row mb-2'>");
+            pageBuilder.Append("<div class='row mb-2'>");
 
             foreach (IModelEvent modelEvent in ordedBlogs)
             {
-                stringBuilder.AppendLine(CreateBlog(modelEvent));
+                pageBuilder.Append(CreateBlog(modelEvent));
             }
 
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("</div>");
 
-            stringBuilder.Append("</body>");
-
-            Directory.CreateDirectory(htmlpath);
-
-            File.WriteAllText(htmlpath + "index.html", stringBuilder.ToString());
+            pageBuilder.Output();
         }
 
         private static string CreateBlog(IModelEvent blog)

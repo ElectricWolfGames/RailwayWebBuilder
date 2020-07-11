@@ -1,10 +1,9 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
-
+﻿using eWolfBootstrap.Builder;
+using RailwayWebBuilder.Configuration;
+using RailwayWebBuilder.Headers;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -16,29 +15,25 @@ namespace RailwayWebBuilder.Builders
         {
             string htmlpath = Constants.RootPath;
 
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(PageHeaderHelper.PageHeader(new HomeHeader()));
-            stringBuilder.Append("<body>");
-            stringBuilder.Append(NavBarHelper.NavBar(string.Empty));
-            stringBuilder.AppendLine("<div class='container mt-4'>");
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new HomeHeader());
+            pageBuilder.Append(NavBarHelper.NavBar(string.Empty));
+            pageBuilder.Append("<div class='container mt-4'>");
 
             IOrderedEnumerable<IBlog> ordedBlogs = blogs.OrderByDescending(x => x.Date);
 
-            stringBuilder.AppendLine(AddCarousel(ordedBlogs.ToList()));
-            stringBuilder.AppendLine("<main role='main' class='container'>");
-            stringBuilder.AppendLine("<div class='col-md-8 blog-main'>");
-            stringBuilder.AppendLine("<div class='row'>");
+            pageBuilder.Append(AddCarousel(ordedBlogs.ToList()));
+            pageBuilder.Append("<main role='main' class='container'>");
+            pageBuilder.Append("<div class='col-md-8 blog-main'>");
+            pageBuilder.Append("<div class='row'>");
 
-            stringBuilder.AppendLine(AddBlogsAsTimeline(ordedBlogs));
+            pageBuilder.Append(AddBlogsAsTimeline(ordedBlogs));
 
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            stringBuilder.Append(OtherStuff());
+            pageBuilder.Append(OtherStuff());
 
-            stringBuilder.Append("</body>");
-
-            File.WriteAllText(htmlpath + "\\index.html", stringBuilder.ToString());
+            pageBuilder.Output();
         }
 
         private static string AddBlogsAsTimeline(IOrderedEnumerable<IBlog> ordedBlogs)

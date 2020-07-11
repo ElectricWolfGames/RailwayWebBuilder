@@ -1,5 +1,6 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
+﻿using eWolfBootstrap.Builder;
+using RailwayWebBuilder.Configuration;
+using RailwayWebBuilder.Headers;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
 using System.Collections.Generic;
@@ -15,75 +16,71 @@ namespace RailwayWebBuilder.Builders
             string htmlpath = Constants.FullCatalog;
             Directory.CreateDirectory(htmlpath);
 
-            // PageBuilder pageBuilder = new PageBuilder();
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(PageHeaderHelper.PageHeader(new CatalogHeader()));
-            stringBuilder.Append("<body>");
-            stringBuilder.Append(NavBarHelper.NavBar("../"));
-            stringBuilder.AppendLine("<div class='container mt-4'>");
-            stringBuilder.Append(Jumbotron(null));
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new CatalogHeader());
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
+            pageBuilder.Append("<div class='container mt-4'>");
+            pageBuilder.Append(Jumbotron(null));
 
-            stringBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Wagons"));
-            stringBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Loco"));
-            stringBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Coach"));
+            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Wagons"));
+            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Loco"));
+            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Coach"));
 
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            stringBuilder.AppendLine(HTMLHelper.Modal());
+            pageBuilder.Append(HTMLHelper.Modal());
 
-            stringBuilder.Append("<script src='../Scripts/script.js'></script>");
-            stringBuilder.Append("</body>");
+            pageBuilder.Append("<script src='../Scripts/script.js'></script>");
 
-            File.WriteAllText(htmlpath + "index.html", stringBuilder.ToString());
+            pageBuilder.Output();
         }
 
         private static string AddDetails(string htmlpath, string imagePath, string name)
         {
             Directory.CreateDirectory(imagePath);
 
-            StringBuilder stringBuilder = new StringBuilder();
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
 
-            stringBuilder.AppendLine($"<hr/>");
+            pageBuilder.Append($"<hr/>");
 
-            stringBuilder.AppendLine($"<h2>{name}</h2>");
+            pageBuilder.Append($"<h2>{name}</h2>");
 
             string path = $@"F:\Trains\eWolfModelRailwayWeb\Data\Catalog\{name}";
             List<string> images = ImageHelper.GetAllImages(path);
 
-            stringBuilder.AppendLine("<div class='container mt-4'><div class='row'>");
+            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
             int count = 2;
             foreach (string layoutImage in images)
             {
                 if (images.Contains(layoutImage))
                 {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, stringBuilder, layoutImage);
+                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
                     if (count-- == 0)
                     {
                         count = 2;
-                        stringBuilder.AppendLine("</div></div>");
-                        stringBuilder.AppendLine("<div class='container mt-4'><div class='row'>");
+                        pageBuilder.Append("</div></div>");
+                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
                     }
                 }
             }
-            stringBuilder.AppendLine("</div></div>");
-            return stringBuilder.ToString();
+            pageBuilder.Append("</div></div>");
+            return pageBuilder.GetString();
         }
 
         private static string Jumbotron(IModelPageDetails pageDetails)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder pageBuilder = new StringBuilder();
 
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Catalog</h1>");
+            pageBuilder.Append("<div class='jumbotron'>");
+            pageBuilder.Append("<div class='row'>");
+            pageBuilder.Append("<div class='col-md-4'>");
+            pageBuilder.Append($"<h1>Catalog</h1>");
 
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            return stringBuilder.ToString();
+            return pageBuilder.ToString();
         }
     }
 }
