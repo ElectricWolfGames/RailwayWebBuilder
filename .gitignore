@@ -5,3 +5,7 @@
 /packages
 /RailwayWebBuilder/bin/Debug
 /RailwayWebBuilder/obj/Debug
+/.vs/RailwayWebBuilder
+/RailwayWebBuilderCore/bin/Debug/netcoreapp3.1
+/RailwayWebBuilderCore/obj
+/RailwayWebBuilderCore/RailwayWebBuilderCore.csproj.user
