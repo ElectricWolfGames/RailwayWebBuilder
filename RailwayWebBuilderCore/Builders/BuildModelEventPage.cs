@@ -126,6 +126,7 @@ namespace RailwayWebBuilder.Builders
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-4'>");
             stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
+            stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
             stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
 
             if (pageDetails.Layouts.Any())

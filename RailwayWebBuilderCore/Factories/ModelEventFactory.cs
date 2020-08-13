@@ -12,6 +12,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Burton Model Railex",
+                EventAddress = "The National Brewery Centre, Horninglow Street, Burton Upon Trent, DE14 1NG",
+                EventDates = "3rd November 2019",
                 Descrption = "Burton Model Railex 2019 at the National Brewery Centre.",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-11-03 BurtonModelRailex",
                 TripDate = new DateTime(2019, 11, 03),
@@ -31,6 +33,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Kettering Model Railway Exhibition",
+                EventAddress = "Greenfields Primary School, Highfield Road, Kettering, NN14 1JS",
+                EventDates = "14th September 2019",
                 Descrption = "Kettering and District Model Railway Society Annual Model Railway Exhibition",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-09-14 Kettering Model Railway Exhibition",
                 TripDate = new DateTime(2019, 09, 14),
@@ -50,6 +54,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "The Elizabethan Railway Society Exhibition",
+                EventAddress = "The Summit Centre, Pavilion Road Off Lowmoor Road, Kirkby-In-Ashfield, Nottinghamshire, NG17 7LL",
+                EventDates = "12th October 2019",
                 Descrption = "The Elizabethan Railway Society Exhibition at Kirkby-In-Ashfield.",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-12 Kirkby-In-Ashfield Model Railway Exhibition",
                 TripDate = new DateTime(2019, 10, 12),
@@ -69,6 +75,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Lichfield Model Railways",
+                EventAddress = "The Life Church, Netherstowe, Lichfield, Staffordshire, WS13 6TS",
+                EventDates = "21st September 2019",
                 Descrption = "Trent Valley Model Railway Society at The Life Church, Netherstowe, Lichfield, Staffordshire WS13 6TS",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-09-21 Lichfield Model Railways",
                 TripDate = new DateTime(2019, 09, 21),
@@ -88,11 +96,11 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Newark - Lincoln Model Rail Club Post Modernisation Exhibition",
+                EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY",
+                EventDates = "19th and 20th October 2019",
                 Descrption = "Lincoln Model Rail Club Post Modernisation Exhibition",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-19 Newark Model LincolnModelRailClub",
                 TripDate = new DateTime(2019, 10, 19),
-                EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY",
-                EventDates = "19th and 20th October 2019",
                 YouTubeLink = "https://www.youtube.com/embed/sfhv8iYXiYU",
                 ImageFolder = "20191019-Lincoln",
                 Title = "Lincoln Model Rail Club 2019",
@@ -133,6 +141,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Loughborough Model Railway Exhibition",
+                EventAddress = "LOUGHBOROUGH Grammar School, Leicester Road , Loughborough , Leicestershire, LE11 2AQ",
+                EventDates = "31st August and 1st September 2019",
                 Descrption = "Loughborough Model Railway Exhibition",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-08-31 Loughborough model railway exhibition 2019",
                 TripDate = new DateTime(2019, 08, 31),
@@ -152,6 +162,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Woodthorpe Model Railway Club",
+                EventAddress = "Sherwood Community Centre,  Mansfield Road, Sherwood, Nottingham, NG5 3FN",
+                EventDates = "26 October 2019",
                 Descrption = "Woodthorpe Model Railway Club",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-26 Woodthorpe Model Railway Club",
                 TripDate = new DateTime(2019, 10, 26),
@@ -177,6 +189,8 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Syston Model Railway Society",
+                EventAddress = "Sileby Community Centre, High ST, Sileby, Leicester. LE12 7RX",
+                EventDates = "15th February 2020",
                 Descrption = "Leicester Model Railway Show. Sileby Community Centre, High ST, Sileby, Leicester. LE12 7RX",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-15 Syston Model Railway Society",
                 TripDate = new DateTime(2020, 02, 16),
@@ -211,10 +225,11 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Ilkeston (Woodside) Model Railway Club",
+                EventAddress = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT",
+                EventDates = "23rd February 2020",
                 Descrption = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-23 Ilkeston (Woodside) Model Railway Club",
                 TripDate = new DateTime(2020, 02, 23),
-                EventAddress = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT",
                 YouTubeLink = "https://www.youtube.com/embed/K-yUlJL_O6I",
                 ImageFolder = "20200223-Ilkeston",
                 Title = "Ilkeston (Woodside) Model Railway Club",
@@ -242,11 +257,11 @@ namespace RailwayWebBuilder.Factories
             ModelEventPageDetails modelPageDetails = new ModelEventPageDetails
             {
                 Name = "Newark - Lincoln Model Rail Club General Exhibition",
+                EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY",
+                EventDates = "Saturday 29th February & Sunday 1st March 2020",
                 Descrption = "Lincoln Model Rail Club General Exhibition",
                 ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-29 NewarkLincolnModelRailClub",
                 TripDate = new DateTime(2020, 02, 29),
-                EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY",
-                EventDates = "Saturday 29th February & Sunday 1st March 2020",
                 YouTubeLink = "https://www.youtube.com/embed/gHkPSd4i8_0",
                 ImageFolder = "20200229-Newark",
                 Title = "Lincoln Model Rail Club General Exhibition 2020",
