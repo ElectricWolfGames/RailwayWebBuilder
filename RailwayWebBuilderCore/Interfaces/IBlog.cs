@@ -14,8 +14,8 @@ namespace RailwayWebBuilder.Interfaces
         string Name { get; set; }
         string Paragraph { get; set; }
 
-        string GetKeyImagePath();
-
         string GetCarouselKeyImagePath();
+
+        string GetKeyImagePath();
     }
 }

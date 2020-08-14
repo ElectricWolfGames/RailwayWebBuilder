@@ -4,7 +4,7 @@ using System;
 
 namespace RailwayWebBuilder.Data
 {
-    public class Blog : IBlog
+    public abstract class BlogBase : IBlog
     {
         public string Carousel { get; set; }
         public string CarouselText { get; set; }

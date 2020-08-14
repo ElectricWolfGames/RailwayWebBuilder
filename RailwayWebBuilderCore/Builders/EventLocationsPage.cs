@@ -18,7 +18,7 @@ namespace RailwayWebBuilder.Builders
             Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents);
             string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\";
 
-            eWolfBootstrap.Interfaces.IPageBuilder sb = new PageBuilder("Locations.html", htmlpath, new ModelEventsHeader(), "../");
+            eWolfBootstrap.Interfaces.IPageBuilder sb = new PageBuilder("locations.html", htmlpath, new ModelEventsHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));
             sb.Append("<div class='container mt-4'>");
             sb.Append(Jumbotron());
@@ -28,7 +28,6 @@ namespace RailwayWebBuilder.Builders
             string firstLocation = string.Empty;
             foreach (LocationHolder lh in locationSections)
             {
-                //firstLocation = lh.GetMapCoords();
                 firstLocation = lh.Location;
                 if (!string.IsNullOrWhiteSpace(firstLocation))
                     break;
@@ -37,11 +36,7 @@ namespace RailwayWebBuilder.Builders
             if (string.IsNullOrWhiteSpace(firstLocation))
                 return;
 
-            sb.Append("<p>*-*-*-*-*-*-*-*-*-*-*-*-*</p>");
-
             sb.Append("<div id='map'></div>");
-
-            sb.Append("<p>*-*-*-*-*-*-*-*-*-*-*-*-*</p>");
 
             sb.Append("<script>" + Environment.NewLine);
             sb.Append("function initMap() {");
@@ -53,7 +48,6 @@ namespace RailwayWebBuilder.Builders
             int count = 0;
             foreach (LocationHolder lh in locationSections)
             {
-                //string loca = lh.GetMapCoords();
                 string loc = lh.Location;
 
                 if (!string.IsNullOrWhiteSpace(loc))
@@ -64,14 +58,7 @@ namespace RailwayWebBuilder.Builders
                     sb.Append("animation: google.maps.Animation.DROP,");
                     sb.Append($"url: '{lh.FilmSiteLink}',");
                     sb.Append($"title: '{lh.FilmName}'");
-                    //sb.Append($"label: '{lh.FilmName}',");
-                    //sb.Append($"ToolTipText: '{lh.FilmName}',");
-                    //sb.Append($"IsVisible: false,");
-                    //sb.Append("ToolTipMode: MarkerTooltipMode.Always");
                     sb.Append("});" + Environment.NewLine);
-
-                    //  ToolTipText = "Test me", IsVisible = false, ToolTipMode = MarkerTooltipMode.Always
-
                     sb.Append($"google.maps.event.addListener(marker{count}, 'click', function() ");
                     sb.Append("{");
                     sb.Append($"window.location.href = marker{count}.url;");
@@ -86,9 +73,35 @@ namespace RailwayWebBuilder.Builders
             sb.Append("<script async defer src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBaZcsswaOb_5nZkYDejyxM6Y9eMpaM-uI&callback=initMap' ></script>");
             sb.Append(Environment.NewLine);
 
+            sb.Append(ListAllLocations());
+
             sb.Append("</div>");
 
             sb.Output();
+        }
+
+        private static string ListAllLocations()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<br/>");
+            sb.Append("<br/>");
+
+            LocationsService locations = ServiceLocator.Instance.GetService<LocationsService>();
+            var items = locations.Items;
+            foreach (var item in items)
+            {
+                string name = item.Name;
+                string address = item.EventAddress;
+
+                string html = $"<a href='{item.ImageFolder}/index.html' >{name}</a>";
+                sb.Append($"<h4> {html}</h4>");
+                sb.Append($"<p> {address}</p>");
+
+                sb.Append("<br/>");
+                sb.Append("<br/>");
+            }
+
+            return sb.ToString();
         }
 
         private static List<LocationHolder> GetAllLocations()
@@ -120,7 +133,7 @@ namespace RailwayWebBuilder.Builders
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-4'>");
 
-            stringBuilder.AppendLine($"<h1>Locations</h1>");
+            stringBuilder.AppendLine($"<h1>Model Event Locations</h1>");
 
             stringBuilder.AppendLine("</div>");
 

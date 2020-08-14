@@ -5,10 +5,6 @@ namespace RailwayWebBuilder.Headers
 {
     public class ModelEventsHeader : HeaderBase, IPageHeader
     {
-        public string Title { get; set; }
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-
         public ModelEventsHeader()
         {
             Title = "ModelEvents";
@@ -19,5 +15,9 @@ namespace RailwayWebBuilder.Headers
             };
             MetaDetails = "Modle railway";
         }
+
+        public List<string> Keywords { get; set; }
+        public string MetaDetails { get; set; }
+        public string Title { get; set; }
     }
 }

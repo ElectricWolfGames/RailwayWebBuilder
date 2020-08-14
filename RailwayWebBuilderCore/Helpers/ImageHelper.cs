@@ -34,22 +34,6 @@ namespace RailwayWebBuilder.Helpers
             return newFileName;
         }
 
-        private static string FixName(string name)
-        {
-            List<string> filenameParts = new List<string>();
-
-            string[] words = name.Split(' ');
-
-            foreach (var word in words)
-            {
-                string miniGropup = TextHelper.ToSentenceCase(word);
-                string[] miniwords = miniGropup.Split(' ');
-                filenameParts.AddRange(miniwords);
-            }
-            var newFileName = string.Join("-", filenameParts);
-            return newFileName;
-        }
-
         public static string CopyImageToThumb(string path, string orignalImage)
         {
             string name = Path.GetFileName(orignalImage);
@@ -87,6 +71,21 @@ namespace RailwayWebBuilder.Helpers
             return newFileName;
         }
 
+        public static List<string> GetAllImages(string path)
+        {
+            List<string> files = new List<string>();
+
+            //if (File.Exists(path))
+            {
+                var filesOnDrive = Directory.GetFiles(path, "*.jpg", SearchOption.AllDirectories);
+                foreach (string file in filesOnDrive)
+                {
+                    files.Add(file);
+                }
+            }
+            return files;
+        }
+
         /// <summary>
         /// Resize the image to the specified width and height.
         /// </summary>
@@ -119,19 +118,20 @@ namespace RailwayWebBuilder.Helpers
             return destImage;
         }
 
-        public static List<string> GetAllImages(string path)
+        private static string FixName(string name)
         {
-            List<string> files = new List<string>();
+            List<string> filenameParts = new List<string>();
 
-            //if (File.Exists(path))
+            string[] words = name.Split(' ');
+
+            foreach (var word in words)
             {
-                var filesOnDrive = Directory.GetFiles(path, "*.jpg", SearchOption.AllDirectories);
-                foreach (string file in filesOnDrive)
-                {
-                    files.Add(file);
-                }
+                string miniGropup = TextHelper.ToSentenceCase(word);
+                string[] miniwords = miniGropup.Split(' ');
+                filenameParts.AddRange(miniwords);
             }
-            return files;
+            var newFileName = string.Join("-", filenameParts);
+            return newFileName;
         }
     }
 }

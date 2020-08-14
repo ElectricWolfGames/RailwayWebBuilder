@@ -10,10 +10,6 @@ namespace RailwayWebBuilder.Headers
 
     public class StationsHeader : HeaderBase, IPageHeader
     {
-        public string Title { get; set; }
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-
         public StationsHeader()
         {
             Title = "Stations";
@@ -23,5 +19,9 @@ namespace RailwayWebBuilder.Headers
             };
             MetaDetails = "Railway Stations";
         }
+
+        public List<string> Keywords { get; set; }
+        public string MetaDetails { get; set; }
+        public string Title { get; set; }
     }
 }

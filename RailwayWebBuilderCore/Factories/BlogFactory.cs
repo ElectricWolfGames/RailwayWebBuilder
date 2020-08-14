@@ -7,43 +7,6 @@ namespace RailwayWebBuilder.Factories
 {
     public static class BlogFactory
     {
-        public static IBlog CreateSiteUploaded()
-        {
-            return new Blog
-            {
-                Name = "Site Uploaded",
-                Date = new DateTime(2020, 02, 15),
-                Paragraph = "Hello, This site is now live. It's a collection of all the photos I've taken on Model railways and heritage railways. " +
-                "I live near Nottingham so all the events are with-in travel distance from their. " +
-                "To start with I have just upload the eventsfrom 2019, " +
-                "but I will be uploading new events for 2020. Please keep checking back for more updates."
-            };
-        }
-
-        public static IBlog CreateIdea()
-        {
-            return new Blog
-            {
-                Name = "I have an idea!",
-                Date = new DateTime(2020, 01, 06),
-                Paragraph = "Hello, this all started with a simple idea, why don't I create a web site to show all my photos and group them together by loco or events." +
-                " All I need to do is learn how to create a nice web site and host it!"
-            };
-        }
-
-        public static IBlog CreateTakeALookAround()
-        {
-            return new Blog
-            {
-                Featured = true,
-                Name = "Take a look around",
-                Date = new DateTime(2020, 02, 10),
-                Paragraph = "While you are here make sure to take a look at the Model Events list, they are all the events from last year." +
-                " Showing off some amazing layouts. And I hope to be uploading more soon.",
-                Link = $"{Constants.ModelEvents}/index.html"
-            };
-        }
-
         public static IBlog Create2020313MyLayoutTrackPlans()
         {
             return new Blog
@@ -115,6 +78,43 @@ namespace RailwayWebBuilder.Factories
                 Paragraph = "Quick visit to Rushcliffe Halt ",
                 Link = "Stations/RushcliffeHalt/index.html",
                 KeyImage = @"Stations\RushcliffeHalt/images\P6260086.JPG",
+            };
+        }
+
+        public static IBlog CreateIdea()
+        {
+            return new Blog
+            {
+                Name = "I have an idea!",
+                Date = new DateTime(2020, 01, 06),
+                Paragraph = "Hello, this all started with a simple idea, why don't I create a web site to show all my photos and group them together by loco or events." +
+                " All I need to do is learn how to create a nice web site and host it!"
+            };
+        }
+
+        public static IBlog CreateSiteUploaded()
+        {
+            return new Blog
+            {
+                Name = "Site Uploaded",
+                Date = new DateTime(2020, 02, 15),
+                Paragraph = "Hello, This site is now live. It's a collection of all the photos I've taken on Model railways and heritage railways. " +
+                "I live near Nottingham so all the events are with-in travel distance from their. " +
+                "To start with I have just upload the eventsfrom 2019, " +
+                "but I will be uploading new events for 2020. Please keep checking back for more updates."
+            };
+        }
+
+        public static IBlog CreateTakeALookAround()
+        {
+            return new Blog
+            {
+                Featured = true,
+                Name = "Take a look around",
+                Date = new DateTime(2020, 02, 10),
+                Paragraph = "While you are here make sure to take a look at the Model Events list, they are all the events from last year." +
+                " Showing off some amazing layouts. And I hope to be uploading more soon.",
+                Link = $"{Constants.ModelEvents}/index.html"
             };
         }
     }

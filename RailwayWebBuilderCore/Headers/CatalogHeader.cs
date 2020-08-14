@@ -5,10 +5,6 @@ namespace RailwayWebBuilder.Headers
 {
     public class CatalogHeader : HeaderBase, IPageHeader
     {
-        public string Title { get; set; }
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-
         public CatalogHeader()
         {
             Title = "Catalog";
@@ -17,5 +13,9 @@ namespace RailwayWebBuilder.Headers
             };
             MetaDetails = "Catalog";
         }
+
+        public List<string> Keywords { get; set; }
+        public string MetaDetails { get; set; }
+        public string Title { get; set; }
     }
 }

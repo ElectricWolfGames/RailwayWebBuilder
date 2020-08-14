@@ -23,6 +23,11 @@ namespace RailwayWebBuilder.Data
         public DateTime TripDate { get; set; }
         public string YouTubeLink { get; set; }
 
+        public static IEnumerable<string> ModelEventKeywords()
+        {
+            return new string[] { "Model trains", "Model railway", "Exhibition", "Model", "Train show" };
+        }
+
         public void CopyLayoutsToKeywords()
         {
             foreach (var layout in Layouts)
@@ -34,11 +39,6 @@ namespace RailwayWebBuilder.Data
         public void Fix()
         {
             ImagePreview = ImagePreview.Replace(".jpg", ".JPG");
-        }
-
-        public static IEnumerable<string> ModelEventKeywords()
-        {
-            return new string[] { "Model trains", "Model railway", "Exhibition", "Model", "Train show" };
         }
     }
 }

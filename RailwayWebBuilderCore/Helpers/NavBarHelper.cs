@@ -17,31 +17,18 @@ namespace RailwayWebBuilder.Helpers
             stringBuilder.AppendLine("</button>");
             stringBuilder.AppendLine("<div class='collapse navbar-collapse' id='navbarsExample04'>");
             stringBuilder.AppendLine("<ul class='navbar-nav mr-auto'>");
-            stringBuilder.AppendLine("<li class='nav-item'><a class='nav-link disabled' href='#'>Locomotives</a></li>");
+            // stringBuilder.AppendLine("<li class='nav-item'><a class='nav-link disabled' href='#'>Locomotives</a></li>");
 
-            string modelEvents = $"{Constants.ModelEvents}/index.html";
-            if (offSet == "../")
-                modelEvents = $"../{Constants.ModelEvents}/index.html";
-            if (offSet == "../../")
-                modelEvents = $"../../{Constants.ModelEvents}/index.html";
-
-            string stations = $"{Constants.Stations}/RushcliffeHalt/index.html";
-            if (offSet == "../")
-                stations = $"../{Constants.Stations}/RushcliffeHalt/index.html";
-            if (offSet == "../../")
-                stations = $"../../{Constants.Stations}/RushcliffeHalt/index.html";
-
-            string myLayouts = "MyLayouts/index.html";
-            if (offSet == "../")
-                myLayouts = "../MyLayouts/index.html";
-
-            if (offSet == "../../")
-                myLayouts = "../../MyLayouts/index.html";
+            string modelEvents = $"{offSet}{Constants.ModelEvents}/index.html";
+            string modelLocations = $"{offSet}{Constants.ModelEvents}/locations.html";
+            string stations = $"{offSet}{Constants.Stations}/RushcliffeHalt/index.html";
+            string myLayouts = $"{offSet}MyLayouts/index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>My Layouts</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelLocations}'>Locations</a></li>");
             stringBuilder.AppendLine("<li class='nav-item dropdown'>");
             stringBuilder.AppendLine("<a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown04' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Model Events</a>");
             stringBuilder.AppendLine("<div class='dropdown-menu' aria-labelledby='dropdown04'>");

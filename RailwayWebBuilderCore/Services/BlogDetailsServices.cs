@@ -16,6 +16,14 @@ namespace RailwayWebBuilder.Services
             AddBlogs();
         }
 
+        internal List<IBlog> Blogs
+        {
+            get
+            {
+                return _blogs;
+            }
+        }
+
         private void AddBlogs()
         {
             _blogs.Add(BlogFactory.CreateIdea());
@@ -29,6 +37,7 @@ namespace RailwayWebBuilder.Services
             _blogs.Add(BlogFactory.Create2020626RushcliffeHaltVisit());
 
             _blogs.AddRange(GetAll());
+            _blogs.AddRange(GetAllMore());
         }
 
         private List<IBlog> GetAll()
@@ -46,12 +55,14 @@ namespace RailwayWebBuilder.Services
             return blogs;
         }
 
-        internal List<IBlog> Blogs
+        private IEnumerable<IBlog> GetAllMore()
         {
-            get
-            {
-                return _blogs;
-            }
+            IEnumerable<IBlog> blogs = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                       where t.GetInterfaces().Contains(typeof(IBlog))
+                                             && t.GetConstructor(Type.EmptyTypes) != null
+                                       select Activator.CreateInstance(t) as IBlog;
+
+            return blogs;
         }
     }
 }

@@ -2,28 +2,8 @@
 
 namespace RailwayWebBuilder.Data
 {
-    public class LayoutNames
-    {
-        public const string Myton = "Myton";
-    }
-
     public class LayoutDetails
     {
-        public string Name { get; set; }
-        public Gauges Gauge { get; set; }
-
-        public string Path { get; set; }
-
-        public string IDName
-        {
-            get
-            {
-                return Name.Replace(" ", "-");
-            }
-        }
-
-        public List<string> ImagePaths { get; set; } = new List<string>();
-
         public LayoutDetails(string name, Gauges gauge)
         {
             Name = name;
@@ -36,5 +16,24 @@ namespace RailwayWebBuilder.Data
             Gauge = gauge;
             Path = path;
         }
+
+        public Gauges Gauge { get; set; }
+
+        public string IDName
+        {
+            get
+            {
+                return Name.Replace(" ", "-");
+            }
+        }
+
+        public List<string> ImagePaths { get; set; } = new List<string>();
+        public string Name { get; set; }
+        public string Path { get; set; }
+    }
+
+    public class LayoutNames
+    {
+        public const string Myton = "Myton";
     }
 }

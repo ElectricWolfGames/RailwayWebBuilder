@@ -5,10 +5,6 @@ namespace RailwayWebBuilder.Headers
 {
     public class MyLayoutHeader : HeaderBase, IPageHeader
     {
-        public string Title { get; set; }
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-
         public MyLayoutHeader()
         {
             Title = "My Layouts";
@@ -20,5 +16,9 @@ namespace RailwayWebBuilder.Headers
             };
             MetaDetails = "Home model railway";
         }
+
+        public List<string> Keywords { get; set; }
+        public string MetaDetails { get; set; }
+        public string Title { get; set; }
     }
 }

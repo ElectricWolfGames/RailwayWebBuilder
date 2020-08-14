@@ -5,10 +5,6 @@ namespace RailwayWebBuilder.Headers
 {
     public class HomeHeader : HeaderBase, IPageHeader
     {
-        public string Title { get; set; }
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-
         public HomeHeader()
         {
             Title = "Home";
@@ -17,5 +13,9 @@ namespace RailwayWebBuilder.Headers
             Keywords.Add("Model railway");
             MetaDetails = "Modle railway";
         }
+
+        public List<string> Keywords { get; set; }
+        public string MetaDetails { get; set; }
+        public string Title { get; set; }
     }
 }
