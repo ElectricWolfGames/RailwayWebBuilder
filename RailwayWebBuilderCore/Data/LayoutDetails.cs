@@ -2,7 +2,7 @@
 
 namespace RailwayWebBuilder.Data
 {
-    public class Layouts
+    public class LayoutNames
     {
         public const string Myton = "Myton";
     }

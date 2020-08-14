@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Geocoder" Version="0.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="16.153.0" />
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0-preview.6.20305.6" />
   </ItemGroup>
 

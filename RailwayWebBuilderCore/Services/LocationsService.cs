@@ -1,0 +1,14 @@
+﻿using System.Collections.Generic;
+
+namespace RailwayWebBuilder.Services
+{
+    public class LocationsService
+    {
+        public List<Interfaces.IModelEvent> Items = new List<Interfaces.IModelEvent>();
+
+        public void AddLocation(Interfaces.IModelEvent pageDetails)
+        {
+            Items.Add(pageDetails);
+        }
+    }
+}

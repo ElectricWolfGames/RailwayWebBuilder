@@ -44,48 +44,6 @@ namespace RailwayWebBuilder.Factories
             };
         }
 
-        public static IBlog Create20200216SystonEvent()
-        {
-            return new Blog
-            {
-                Name = "Syston Model Railway Event",
-                Date = new DateTime(2020, 02, 16),
-                Paragraph = "Visted the Syston Model Railway event on the 15 feburay, lots of amazing models displays.",
-                Link = $"{Constants.ModelEvents}/20200215-Syston/index.html",
-                ModelEvent = ModelEventFactory.CreateSyston2020(),
-                Carousel = "P2157640 NewtonEast SystonModelRailway.JPG",
-                CarouselText = "Syston Model Railway Event"
-            };
-        }
-
-        public static IBlog Create202024IlkestonEvent()
-        {
-            return new Blog
-            {
-                Name = "Ilkeston (Woodside) Model Railway Club",
-                Date = new DateTime(2020, 02, 24),
-                Paragraph = "Visted the Ilkeston Model Railway Club event on the 23 feburay, very cool",
-                Link = $"{Constants.ModelEvents}/20200223-Ilkeston/index.html",
-                ModelEvent = ModelEventFactory.CreateIlkeston2020(),
-                Carousel = "P2237873 Avyn-A-Llyin Ilkeston.JPG",
-                CarouselText = "Ilkeston (Woodside) Model Railway Club"
-            };
-        }
-
-        public static IBlog Create202029NewarkEvent()
-        {
-            return new Blog
-            {
-                Name = "Lincoln Model Rail Club General Exhibition",
-                Date = new DateTime(2020, 02, 29),
-                Paragraph = "Big show at the Newark Showground, this time it's the Lincoln Model Rail Club General Exhibition.",
-                Link = $"{Constants.ModelEvents}/20200229-Newark/index.html",
-                ModelEvent = ModelEventFactory.CreateLinclon2020March(),
-                Carousel = "P2298149 DorehillST LincolnModelRailClub.Stephens LincolnModelRailClub.JPG",
-                CarouselText = "Lincoln Model Rail Club General Exhibition"
-            };
-        }
-
         public static IBlog Create2020313MyLayoutTrackPlans()
         {
             return new Blog

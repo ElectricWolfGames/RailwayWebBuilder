@@ -1,6 +1,8 @@
-﻿using RailwayWebBuilder.Factories;
-using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilder.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace RailwayWebBuilder.Services
 {
@@ -15,24 +17,22 @@ namespace RailwayWebBuilder.Services
 
         private void AddModelEvents()
         {
-            // 2019 events
-            _modelPages.Add(ModelEventFactory.CreateLinclon2019());
-            _modelPages.Add(ModelEventFactory.CreateWoodthorpe2019());
-            _modelPages.Add(ModelEventFactory.CreateLoughborough2019());
-            _modelPages.Add(ModelEventFactory.CreateLichfield2019());
-            _modelPages.Add(ModelEventFactory.CreateKettering2019());
-            _modelPages.Add(ModelEventFactory.CreateKirkby2019());
-            _modelPages.Add(ModelEventFactory.CreateBurton2019());
-
-            // 2020 Events
-            _modelPages.Add(ModelEventFactory.CreateSyston2020());
-            _modelPages.Add(ModelEventFactory.CreateIlkeston2020());
-            _modelPages.Add(ModelEventFactory.CreateLinclon2020March());
+            _modelPages.AddRange(GetAll());
 
             foreach (var pages in _modelPages)
             {
                 pages.Fix();
             }
+        }
+
+        private List<IModelEvent> GetAll()
+        {
+            var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
+                          where t.GetInterfaces().Contains(typeof(IModelEvent))
+                                && t.GetConstructor(Type.EmptyTypes) != null
+                          select Activator.CreateInstance(t) as IModelEvent;
+
+            return updates.ToList();
         }
 
         internal List<IModelEvent> Events

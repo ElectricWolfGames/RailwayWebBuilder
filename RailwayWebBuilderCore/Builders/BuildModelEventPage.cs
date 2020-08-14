@@ -2,6 +2,7 @@
 using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Interfaces;
+using RailwayWebBuilder.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,6 +35,9 @@ namespace RailwayWebBuilder.Builders
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");
             pageBuilder.Append(Jumbotron(pageDetails));
+
+            LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
+            ls.AddLocation(pageDetails);
 
             pageBuilder.Append("<div class='row'>");
 

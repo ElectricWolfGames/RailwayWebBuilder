@@ -11,7 +11,8 @@ namespace RailwayWebBuilder.Services
             _services = new Dictionary<Type, object>
             {
                 { typeof(ModelEventDetailsServices), new ModelEventDetailsServices() },
-                { typeof(BlogDetailsServices), new BlogDetailsServices() }
+                { typeof(BlogDetailsServices), new BlogDetailsServices() },
+                { typeof(LocationsService), new LocationsService() }
             };
         }
 
