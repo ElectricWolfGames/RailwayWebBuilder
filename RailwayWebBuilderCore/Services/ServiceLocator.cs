@@ -1,4 +1,5 @@
 ﻿using eWolfCommon.Services;
+using RailwayWebBuilderCore.Services;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +13,8 @@ namespace RailwayWebBuilder.Services
             {
                 { typeof(ModelEventDetailsServices), new ModelEventDetailsServices() },
                 { typeof(BlogDetailsServices), new BlogDetailsServices() },
-                { typeof(LocationsService), new LocationsService() }
+                { typeof(LocationsService), new LocationsService() },
+                { typeof(SettingService), new SettingService()}
             };
         }
 

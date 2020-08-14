@@ -1,8 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
-using RailwayWebBuilder.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RailwayWebBuilderCore.Blogs._2020
 {

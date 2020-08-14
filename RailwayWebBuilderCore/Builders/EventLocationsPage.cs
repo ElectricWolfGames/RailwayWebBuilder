@@ -3,6 +3,7 @@ using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Headers;
 using RailwayWebBuilder.Helpers;
 using RailwayWebBuilder.Services;
+using RailwayWebBuilderCore.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +15,8 @@ namespace RailwayWebBuilder.Builders
     {
         public static void Build()
         {
-            string mapId = "";
+            string mapId = SettingService.GetSetting.GoogleMapKey;
+
             // create folders
             Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents);
             string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\";
@@ -71,7 +73,7 @@ namespace RailwayWebBuilder.Builders
             sb.Append("}" + Environment.NewLine);
             sb.Append("</script>" + Environment.NewLine);
 
-            sb.Append($"<script async defer src = 'https://maps.googleapis.com/maps/api/js?key={mapId}&callback=initMap' ></script>");
+            sb.Append($"<script async defer src='https://maps.googleapis.com/maps/api/js?key={mapId}&callback=initMap' ></script>");
             sb.Append(Environment.NewLine);
 
             sb.Append(ListAllLocations());

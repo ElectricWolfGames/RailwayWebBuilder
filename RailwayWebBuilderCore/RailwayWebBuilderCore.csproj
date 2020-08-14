@@ -16,4 +16,10 @@
     <ProjectReference Include="C:\GitHub\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
     <ProjectReference Include="C:\GitHub\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
