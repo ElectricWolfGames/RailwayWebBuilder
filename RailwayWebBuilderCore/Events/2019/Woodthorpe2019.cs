@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Woodthorpe2019()
         {
             Name = "Woodthorpe Model Railway Club";
-            EventLocation = new LatitudeLongitude(52.985928, -1.143651);
-            EventAddress = "Sherwood Community Centre,  Mansfield Road, Sherwood, Nottingham, NG5 3FN";
+            Location = new SherwoodCommunityCentreSherwood();
             EventDates = "26 October 2019";
             Descrption = "Woodthorpe Model Railway Club";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-26 Woodthorpe Model Railway Club";

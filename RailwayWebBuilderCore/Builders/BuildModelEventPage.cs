@@ -132,6 +132,7 @@ namespace RailwayWebBuilder.Builders
             stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
             stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
             stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
+            stringBuilder.AppendLine($"<p'>{pageDetails.Location?.Address}</p>");
 
             if (pageDetails.Layouts.Any())
             {

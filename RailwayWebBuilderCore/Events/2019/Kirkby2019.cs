@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Kirkby2019()
         {
             Name = "The Elizabethan Railway Society Exhibition";
-            EventLocation = new LatitudeLongitude(53.104722, -1.242296);
-            EventAddress = "The Summit Centre, Pavilion Road Off Lowmoor Road, Kirkby-In-Ashfield, Nottinghamshire, NG17 7LL";
+            Location = new TheSummitCentreKirkby();
             EventDates = "12th October 2019";
             Descrption = "The Elizabethan Railway Society Exhibition at Kirkby-In-Ashfield.";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-12 Kirkby-In-Ashfield Model Railway Exhibition";

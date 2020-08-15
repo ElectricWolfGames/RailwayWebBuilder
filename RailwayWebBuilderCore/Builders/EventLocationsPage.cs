@@ -94,7 +94,7 @@ namespace RailwayWebBuilder.Builders
             foreach (var item in items)
             {
                 string name = item.Name;
-                string address = item.EventAddress;
+                string address = item.Location?.Address;
 
                 string html = $"<a href='{item.ImageFolder}/index.html' >{name}</a>";
                 sb.Append($"<h4> {html}</h4>");
@@ -115,12 +115,12 @@ namespace RailwayWebBuilder.Builders
             var items = locations.Items;
             foreach (var item in items)
             {
-                if (item.EventLocation == null)
+                if (item.Location.LatitudeLongitude == null)
                     continue;
 
                 var lh = new LocationHolder();
-                lh.Location = item.EventLocation.Location;
-                lh.FilmName = item.Name;
+                lh.Location = item.Location.LatitudeLongitude.Location;
+                lh.FilmName = item.Location.Name;
                 lh.FilmSiteLink = $"{item.ImageFolder}/index.html";
                 locationHolders.Add(lh);
             }

@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Data;
 using RailwayWebBuilder.Interfaces;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2020
@@ -10,8 +11,7 @@ namespace RailwayWebBuilderCore.Events._2020
         public Syston2020()
         {
             Name = "Syston Model Railway Society";
-            EventLocation = new LatitudeLongitude(52.730248, -1.110305);
-            EventAddress = "Sileby Community Centre, High ST, Sileby, Leicester. LE12 7RX";
+            Location = new SilebyCommunityCentre();
             EventDates = "15th February 2020";
             Descrption = "Leicester Model Railway Show. Sileby Community Centre, High ST, Sileby, Leicester. LE12 7RX";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-15 Syston Model Railway Society";

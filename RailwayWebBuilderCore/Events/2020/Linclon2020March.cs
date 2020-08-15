@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Data;
 using RailwayWebBuilder.Interfaces;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2020
@@ -10,8 +11,7 @@ namespace RailwayWebBuilderCore.Events._2020
         public Linclon2020March()
         {
             Name = "Newark - Lincoln Model Rail Club General Exhibition";
-            EventLocation = new LatitudeLongitude(53.098709, -0.768302);
-            EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY";
+            Location = new NewarkShowground();
             EventDates = "Saturday 29th February & Sunday 1st March 2020";
             Descrption = "Lincoln Model Rail Club General Exhibition";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-29 NewarkLincolnModelRailClub";

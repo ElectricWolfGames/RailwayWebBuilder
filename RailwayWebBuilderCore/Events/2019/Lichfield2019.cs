@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Lichfield2019()
         {
             Name = "Lichfield Model Railways";
-            EventLocation = new LatitudeLongitude(52.693922, -1.819607);
-            EventAddress = "The Life Church, Netherstowe, Lichfield, Staffordshire, WS13 6TS";
+            Location = new TheLifeChurchLichfield();
             EventDates = "21st September 2019";
             Descrption = "Trent Valley Model Railway Society at The Life Church, Netherstowe, Lichfield, Staffordshire WS13 6TS";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-09-21 Lichfield Model Railways";

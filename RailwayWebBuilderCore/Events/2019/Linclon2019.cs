@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Linclon2019()
         {
             Name = "Newark - Lincoln Model Rail Club Post Modernisation Exhibition";
-            EventLocation = new LatitudeLongitude(53.098664, -0.767883);
-            EventAddress = "Lady Eastwood Pavilion, Newark Showground, Drove Lane, Newark, Nottinghamshire NG24 2NY";
+            Location = new NewarkShowground();
             EventDates = "19th and 20th October 2019";
             Descrption = "Lincoln Model Rail Club Post Modernisation Exhibition";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-19 Newark Model LincolnModelRailClub";

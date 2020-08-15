@@ -2,10 +2,10 @@
 
 namespace RailwayWebBuilder.Data
 {
-    public class EventLocations : ILocations
+    abstract public class EventLocationsBase : ILocations
     {
-        public string EventAddress { get; set; }
-        public string EventPostCode { get; set; }
+        public string Address { get; set; }
+        public string PostCode { get; set; }
         public LatitudeLongitude LatitudeLongitude { get; set; }
         public string Name { get; set; }
     }

@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -7,9 +8,8 @@ namespace RailwayWebBuilderCore.Events._2019
     {
         public Burton2019()
         {
+            Location = new TheNationalBreweryCentre();
             Name = "Burton Model Railex";
-            EventLocation = new LatitudeLongitude(52.807752, -1.631799);
-            EventAddress = "The National Brewery Centre, Horninglow Street, Burton Upon Trent, DE14 1NG";
             EventDates = "3rd November 2019";
             Descrption = "Burton Model Railex 2019 at the National Brewery Centre.";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-11-03 BurtonModelRailex";

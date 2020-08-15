@@ -6,7 +6,7 @@ namespace RailwayWebBuilder.Interfaces
     {
         string Name { get; set; }
         LatitudeLongitude LatitudeLongitude { get; set; }
-        string EventAddress { get; set; }
-        string EventPostCode { get; set; }
+        string Address { get; set; }
+        string PostCode { get; set; }
     }
 }

@@ -8,9 +8,7 @@ namespace RailwayWebBuilder.Data
     public abstract class ModelEventPageDetails : HeaderBase, IModelEvent
     {
         public string Descrption { get; set; }
-        public string EventAddress { get; set; }
         public string EventDates { get; set; }
-        public LatitudeLongitude EventLocation { get; set; }
         public string ImageFolder { get; set; }
         public string ImagePreview { get; set; }
         public string ImagesPath { get; set; }
@@ -22,6 +20,7 @@ namespace RailwayWebBuilder.Data
         public string Title { get; set; }
         public DateTime TripDate { get; set; }
         public string YouTubeLink { get; set; }
+        public ILocations Location { get; set; }
 
         public static IEnumerable<string> ModelEventKeywords()
         {

@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilder.Configuration;
 using RailwayWebBuilder.Data;
 using RailwayWebBuilder.Interfaces;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2020
@@ -10,8 +11,7 @@ namespace RailwayWebBuilderCore.Events._2020
         public Ilkeston2020()
         {
             Name = "Ilkeston (Woodside) Model Railway Club";
-            EventLocation = new LatitudeLongitude(53.010025, -1.351558);
-            EventAddress = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT";
+            Location = new HeanorMinersWelfareIlkeston();
             EventDates = "23rd February 2020";
             Descrption = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-23 Ilkeston (Woodside) Model Railway Club";

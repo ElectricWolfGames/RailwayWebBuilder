@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Kettering2019()
         {
             Name = "Kettering Model Railway Exhibition";
-            EventLocation = new LatitudeLongitude(52.385545, -0.725149);
-            EventAddress = "Greenfields Primary School, Highfield Road, Kettering, NN14 1JS";
+            Location = new GreenfieldsPrimarySchoolKettering();
             EventDates = "14th September 2019";
             Descrption = "Kettering and District Model Railway Society Annual Model Railway Exhibition";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-09-14 Kettering Model Railway Exhibition";

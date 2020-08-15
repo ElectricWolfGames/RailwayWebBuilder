@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilder.Data;
+using RailwayWebBuilderCore.EventLocations;
 using System;
 
 namespace RailwayWebBuilderCore.Events._2019
@@ -8,8 +9,7 @@ namespace RailwayWebBuilderCore.Events._2019
         public Loughborough2019()
         {
             Name = "Loughborough Model Railway Exhibition";
-            EventLocation = new LatitudeLongitude(52.765786, -1.199820);
-            EventAddress = "LOUGHBOROUGH Grammar School, Leicester Road , Loughborough , Leicestershire, LE11 2AQ";
+            Location = new GrammarSchoolLoughborough();
             EventDates = "31st August and 1st September 2019";
             Descrption = "Loughborough Model Railway Exhibition";
             ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-08-31 Loughborough model railway exhibition 2019";
