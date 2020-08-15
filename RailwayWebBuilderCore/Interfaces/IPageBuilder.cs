@@ -1,4 +1,4 @@
-﻿namespace RailwayWebBuilder.Interfaces
+﻿namespace RailwayWebBuilderCore.Interfaces
 {
     public interface IPageBuilder
     {

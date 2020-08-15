@@ -1,10 +1,10 @@
-﻿using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilder.Services
+namespace RailwayWebBuilderCore.Services
 {
     public class ModelEventDetailsServices
     {

@@ -1,7 +1,7 @@
-﻿using RailwayWebBuilder.Data;
+﻿using RailwayWebBuilderCore.Data;
 using System;
 
-namespace RailwayWebBuilderCore.Blogs._2020
+namespace RailwayWebBuilderCore.Blogs.Year2020
 {
     public class SiteUpdateLocations : BlogBase
     {

@@ -1,15 +1,14 @@
-﻿using eWolfBootstrap.Builder;
-using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Headers;
-using RailwayWebBuilder.Helpers;
-using RailwayWebBuilder.Services;
+﻿using eWolfBootstrap.Builders;
+using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Headers;
+using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace RailwayWebBuilder.Builders
+namespace RailwayWebBuilderCore.Builders
 {
     public class EventLocationsPage
     {

@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace RailwayWebBuilder.Helpers
+namespace RailwayWebBuilderCore.Helpers
 {
     public static class ImageHelper
     {

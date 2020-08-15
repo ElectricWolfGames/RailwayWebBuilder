@@ -1,8 +1,8 @@
-﻿using RailwayWebBuilder.Data;
-using RailwayWebBuilderCore.EventLocations;
+﻿using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.ModelRailways.EventLocations;
 using System;
 
-namespace RailwayWebBuilderCore.Events._2019
+namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
 {
     public class Kettering2019 : ModelEventPageDetails
     {

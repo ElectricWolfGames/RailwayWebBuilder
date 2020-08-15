@@ -1,9 +1,9 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
-using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Interfaces;
 using System;
 
-namespace RailwayWebBuilder.Factories
+namespace RailwayWebBuilderCore.Factories
 {
     public static class BlogFactory
     {

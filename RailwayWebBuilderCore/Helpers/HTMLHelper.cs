@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace RailwayWebBuilder.Helpers
+namespace RailwayWebBuilderCore.Helpers
 {
     public static class HTMLHelper
     {

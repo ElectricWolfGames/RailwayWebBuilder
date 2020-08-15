@@ -1,15 +1,15 @@
-﻿using eWolfBootstrap.Builder;
-using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Helpers;
-using RailwayWebBuilder.Interfaces;
-using RailwayWebBuilder.Services;
+﻿using eWolfBootstrap.Builders;
+using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Helpers;
+using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilder.Builders
+namespace RailwayWebBuilderCore.Builders
 {
     public class BuildModelEventPage
     {

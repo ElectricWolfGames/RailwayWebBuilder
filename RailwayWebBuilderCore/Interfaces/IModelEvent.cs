@@ -1,6 +1,6 @@
 ﻿using eWolfBootstrap.Interfaces;
 
-namespace RailwayWebBuilder.Interfaces
+namespace RailwayWebBuilderCore.Interfaces
 {
     public interface IModelEvent : IPageHeader, IModelPageDetails
     {

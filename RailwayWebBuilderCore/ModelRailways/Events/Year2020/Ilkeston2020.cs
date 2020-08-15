@@ -1,10 +1,10 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Data;
-using RailwayWebBuilder.Interfaces;
-using RailwayWebBuilderCore.EventLocations;
+﻿using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.ModelRailways.EventLocations;
 using System;
 
-namespace RailwayWebBuilderCore.Events._2020
+namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
 {
     public class Ilkeston2020 : ModelEventPageDetails, IBlogger
     {

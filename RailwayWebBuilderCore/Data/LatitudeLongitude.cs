@@ -1,4 +1,4 @@
-﻿namespace RailwayWebBuilder.Data
+﻿namespace RailwayWebBuilderCore.Data
 {
     public class LatitudeLongitude
     {

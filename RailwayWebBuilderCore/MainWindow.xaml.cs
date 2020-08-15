@@ -1,5 +1,5 @@
-﻿using RailwayWebBuilder.Builders;
-using RailwayWebBuilder.Services;
+﻿using RailwayWebBuilderCore.Builders;
+using RailwayWebBuilderCore.Services;
 using System.Windows;
 
 namespace RailwayWebBuilderCore

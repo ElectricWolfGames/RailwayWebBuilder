@@ -1,4 +1,4 @@
-﻿namespace RailwayWebBuilder.Configuration
+﻿namespace RailwayWebBuilderCore.Configuration
 {
     public static class Constants
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RailwayWebBuilder.Interfaces
+namespace RailwayWebBuilderCore.Interfaces
 {
     public interface IBlog
     {

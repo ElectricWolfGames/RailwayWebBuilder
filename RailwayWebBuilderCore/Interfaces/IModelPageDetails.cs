@@ -1,8 +1,8 @@
-﻿using RailwayWebBuilder.Data;
+﻿using RailwayWebBuilderCore.Data;
 using System;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Interfaces
+namespace RailwayWebBuilderCore.Interfaces
 {
     public interface IModelPageDetails
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Data
+namespace RailwayWebBuilderCore.Data
 {
     public class LayoutDetails
     {

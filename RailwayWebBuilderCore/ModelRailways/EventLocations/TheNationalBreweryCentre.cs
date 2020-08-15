@@ -1,6 +1,6 @@
-﻿using RailwayWebBuilder.Data;
+﻿using RailwayWebBuilderCore.Data;
 
-namespace RailwayWebBuilderCore.EventLocations
+namespace RailwayWebBuilderCore.ModelRailways.EventLocations
 {
     public class TheNationalBreweryCentre : EventLocationsBase
     {

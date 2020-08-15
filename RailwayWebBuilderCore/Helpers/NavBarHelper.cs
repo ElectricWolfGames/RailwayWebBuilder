@@ -1,9 +1,9 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Services;
+﻿using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Services;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilder.Helpers
+namespace RailwayWebBuilderCore.Helpers
 {
     public static class NavBarHelper
     {

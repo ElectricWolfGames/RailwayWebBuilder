@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Services
+namespace RailwayWebBuilderCore.Services
 {
     public class LocationsService
     {

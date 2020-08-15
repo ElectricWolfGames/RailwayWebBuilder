@@ -1,8 +1,8 @@
-﻿using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Interfaces;
 using System;
 
-namespace RailwayWebBuilder.Data
+namespace RailwayWebBuilderCore.Data
 {
     public abstract class BlogBase : IBlog
     {

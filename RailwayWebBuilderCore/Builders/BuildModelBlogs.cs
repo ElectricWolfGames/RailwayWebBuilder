@@ -1,13 +1,13 @@
-﻿using eWolfBootstrap.Builder;
-using RailwayWebBuilder.Configuration;
-using RailwayWebBuilder.Headers;
-using RailwayWebBuilder.Helpers;
-using RailwayWebBuilder.Interfaces;
+﻿using eWolfBootstrap.Builders;
+using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Headers;
+using RailwayWebBuilderCore.Helpers;
+using RailwayWebBuilderCore.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilder.Builders
+namespace RailwayWebBuilderCore.Builders
 {
     public class BuildModelBlogs
     {

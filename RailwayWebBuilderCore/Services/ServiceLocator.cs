@@ -1,9 +1,8 @@
 ﻿using eWolfCommon.Services;
-using RailwayWebBuilderCore.Services;
 using System;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Services
+namespace RailwayWebBuilderCore.Services
 {
     public class ServiceLocator : ServiceLocatorBase
     {

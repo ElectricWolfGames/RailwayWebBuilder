@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilder.Services;
-using System;
+﻿using System;
 using System.Configuration;
 
 namespace RailwayWebBuilderCore.Services
@@ -42,7 +41,7 @@ namespace RailwayWebBuilderCore.Services
             try
             {
                 // Get the configuration file.
-                Configuration config =
+                var config =
                     ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
                 // Get the appSettings section.

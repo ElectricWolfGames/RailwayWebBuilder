@@ -1,7 +1,7 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Headers
+namespace RailwayWebBuilderCore.Headers
 {
     public class HeaderBase
     {

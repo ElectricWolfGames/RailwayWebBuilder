@@ -1,9 +1,9 @@
-﻿using RailwayWebBuilder.Headers;
-using RailwayWebBuilder.Interfaces;
+﻿using RailwayWebBuilderCore.Headers;
+using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilder.Data
+namespace RailwayWebBuilderCore.Data
 {
     public abstract class ModelEventPageDetails : HeaderBase, IModelEvent
     {
