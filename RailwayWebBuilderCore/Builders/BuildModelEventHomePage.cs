@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore.Builders
         {
             string htmlpath = Constants.RootPath + "//" + Constants.ModelEvents + "//";
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new ModelEventsHeader());
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new ModelEventsHeader(), "../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");

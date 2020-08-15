@@ -16,7 +16,7 @@ namespace RailwayWebBuilderCore.Builders
             string htmlpath = Constants.RushcliffeHalt;
             Directory.CreateDirectory(htmlpath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader());
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");

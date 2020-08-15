@@ -48,17 +48,20 @@ namespace RailwayWebBuilderCore.Builders
 
             foreach (IBlog blog in ordedBlogs)
             {
-                stringBuilder.AppendLine("				<li>");
-                stringBuilder.AppendLine($"					<a href='{blog.Link}'>{blog.Name}</a>");
-                stringBuilder.AppendLine($"					<a href='#' class='float-right'>{blog.Date.ToShortDateString()}</a>");
-                stringBuilder.AppendLine($"<p>{blog.Paragraph}</p>");
-
-                string keyImage = blog.GetKeyImagePath();
-                if (!string.IsNullOrWhiteSpace(keyImage))
+                if (!string.IsNullOrWhiteSpace(blog.Name))
                 {
-                    stringBuilder.AppendLine($"      <img class='rounded ' width='320px' height ='240px'src='{keyImage}'>");
+                    stringBuilder.AppendLine("				<li>");
+                    stringBuilder.AppendLine($"					<a href='{blog.Link}'>{blog.Name}</a>");
+                    stringBuilder.AppendLine($"					<a href='#' class='float-right'>{blog.Date.ToShortDateString()}</a>");
+                    stringBuilder.AppendLine($"<p>{blog.Paragraph}</p>");
+
+                    string keyImage = blog.GetKeyImagePath();
+                    if (!string.IsNullOrWhiteSpace(keyImage))
+                    {
+                        stringBuilder.AppendLine($"      <img class='rounded ' width='320px' height ='240px'src='{keyImage}'>");
+                    }
+                    stringBuilder.AppendLine("				</li>");
                 }
-                stringBuilder.AppendLine("				</li>");
             }
 
             stringBuilder.AppendLine("			</ul>");
@@ -126,13 +129,14 @@ namespace RailwayWebBuilderCore.Builders
         private static string OtherStuff()
         {
             StringBuilder blogHtml = new StringBuilder();
-            blogHtml.AppendLine("<script>");
+            /*blogHtml.AppendLine("<script>");
             blogHtml.AppendLine("Holder.addTheme('thumb', {");
             blogHtml.AppendLine("bg: '#55595c',");
             blogHtml.AppendLine("fg: '#eceeef',");
             blogHtml.AppendLine("text: 'Thumbnail'");
             blogHtml.AppendLine("});");
             blogHtml.AppendLine("</script>");
+            */
             return blogHtml.ToString();
         }
 
