@@ -9,9 +9,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders
+namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
-    public class BuildModelEventPage
+    public class ModelEventPageBuilder
     {
         public static void Build(IModelEvent pageDetails)
         {

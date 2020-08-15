@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders
+namespace RailwayWebBuilderCore.Builders.MyLayouts
 {
     public class BuildCatalogPage
     {
@@ -16,7 +16,7 @@ namespace RailwayWebBuilderCore.Builders
             string htmlpath = Constants.FullCatalog;
             Directory.CreateDirectory(htmlpath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new CatalogHeader());
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new CatalogHeader(), "../");
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
             pageBuilder.Append(Jumbotron(null));

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders
 {
-    public class BuildModelBlogs
+    public class HomePageBuilder
     {
         public static void Build(List<IBlog> blogs)
         {

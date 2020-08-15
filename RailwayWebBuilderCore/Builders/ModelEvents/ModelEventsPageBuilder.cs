@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders
+namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
-    public class BuildModelEventHomePage
+    public class ModelEventsPageBuilder
     {
         internal static void Build(List<IModelEvent> modelEvents)
         {

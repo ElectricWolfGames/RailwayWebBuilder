@@ -1,4 +1,8 @@
 ﻿using RailwayWebBuilderCore.Builders;
+using RailwayWebBuilderCore.Builders.Locations;
+using RailwayWebBuilderCore.Builders.ModelEvents;
+using RailwayWebBuilderCore.Builders.MyLayouts;
+using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Services;
 using System.Windows;
 
@@ -19,20 +23,20 @@ namespace RailwayWebBuilderCore
         {
             ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
 
-            BuildModelEventHomePage.Build(meds.Events);
+            ModelEventsPageBuilder.Build(meds.Events);
 
             foreach (var pageDetails in meds.Events)
             {
-                BuildModelEventPage.Build(pageDetails);
+                ModelEventPageBuilder.Build(pageDetails);
             }
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
             BuildStationsRushcliffeHaltPage.Build(null);
 
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
-            BuildModelBlogs.Build(blogs.Blogs);
+            HomePageBuilder.Build(blogs.Blogs);
 
-            EventLocationsPage.Build();
+            LocationsPagebuilder.Build();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders
+namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsRushcliffeHaltPage
     {
