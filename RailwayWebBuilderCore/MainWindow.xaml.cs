@@ -1,9 +1,12 @@
 ﻿using RailwayWebBuilderCore.Builders;
 using RailwayWebBuilderCore.Builders.Locations;
+using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Stations;
+using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
+using System.Diagnostics;
 using System.Windows;
 
 namespace RailwayWebBuilderCore
@@ -13,10 +16,21 @@ namespace RailwayWebBuilderCore
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string _cacheFolder = @"F:\Trains\DeletableCache\";
+
         public MainWindow()
         {
             InitializeComponent();
-            BuildSite();
+
+            DownloadServices ds = ServiceLocator.Instance.GetService<DownloadServices>();
+            ds.CacheFolder = _cacheFolder;
+
+            LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
+            ls.Init();
+
+            StandardClasses.Build();
+
+            LocosByBuiltDate.Build();
         }
 
         private void BuildSite()
@@ -37,6 +51,27 @@ namespace RailwayWebBuilderCore
             HomePageBuilder.Build(blogs.Blogs);
 
             LocationsPagebuilder.Build();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BuildSite();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            GetLocoDetails gld = new GetLocoDetails();
+            gld.Now();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = @"F:/eWolfSiteUploads/Railways/Locomotive/BuildDates.html",
+                UseShellExecute = true
+            };
+            Process.Start(psi);
         }
     }
 }

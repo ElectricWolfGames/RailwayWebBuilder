@@ -7,5 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button Content="Make Site" HorizontalAlignment="Left" Margin="59,40,0,0" VerticalAlignment="Top" Click="Button_Click" />
+        <Button Content="Get Loco Details" HorizontalAlignment="Left" Margin="59,77,0,0" VerticalAlignment="Top" Click="Button_Click_1" />
+        <Button Content="Open Site" HorizontalAlignment="Left" Margin="233,45,0,0" VerticalAlignment="Top" Click="Button_Click_2" />
     </Grid>
 </Window>

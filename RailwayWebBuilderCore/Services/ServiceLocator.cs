@@ -13,7 +13,9 @@ namespace RailwayWebBuilderCore.Services
                 { typeof(ModelEventDetailsServices), new ModelEventDetailsServices() },
                 { typeof(BlogDetailsServices), new BlogDetailsServices() },
                 { typeof(LocationsService), new LocationsService() },
-                { typeof(SettingService), new SettingService()}
+                { typeof(SettingService), new SettingService() },
+                { typeof(DownloadServices), new DownloadServices() },
+                { typeof(LocomotivesServices), new LocomotivesServices() }
             };
         }
 

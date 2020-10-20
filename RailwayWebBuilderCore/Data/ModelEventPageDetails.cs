@@ -1,4 +1,5 @@
-﻿using RailwayWebBuilderCore.Headers;
+﻿using eWolfBootstrap.Enums;
+using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -39,5 +40,7 @@ namespace RailwayWebBuilderCore.Data
         {
             ImagePreview = ImagePreview.Replace(".jpg", ".JPG");
         }
+
+        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
     }
 }
