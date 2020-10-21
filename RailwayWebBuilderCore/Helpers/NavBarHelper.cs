@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore.Helpers
 
             string modelEvents = $"{offSet}{Constants.ModelEvents}/index.html";
             string modelLocations = $"{offSet}{Constants.ModelEvents}/locations.html";
-            string stations = $"{offSet}{Constants.Stations}/RushcliffeHalt/index.html";
+            string stations = $"{offSet}{Constants.Stations}/index.html";
             string myLayouts = $"{offSet}MyLayouts/index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");

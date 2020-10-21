@@ -12,6 +12,10 @@ namespace RailwayWebBuilderCore.Headers
             Keywords = new List<string>
             {
                 "Stations",
+                "GCR",
+                "GCRN",
+                "Rushcliffe Halt",
+                "Loughborough",
             };
             MetaDetails = "Railway Stations";
         }

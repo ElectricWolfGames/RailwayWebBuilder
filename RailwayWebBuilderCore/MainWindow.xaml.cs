@@ -45,7 +45,10 @@ namespace RailwayWebBuilderCore
             }
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
-            BuildStationsRushcliffeHaltPage.Build(null);
+
+            BuildStationsHome.Build();
+            BuildStationsRushcliffeHaltPage.Build();
+            BuildStationsLoughboroughStationPage.Build();
 
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);

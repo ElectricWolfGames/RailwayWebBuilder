@@ -3,26 +3,25 @@ using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsRushcliffeHaltPage : BuildStationsBase
+    public class BuildStationsLoughboroughStationPage : BuildStationsBase
     {
         public static void Build()
         {
-            string htmlpath = Constants.RushcliffeHalt;
+            string htmlpath = Constants.LoughboroughStation;
             Directory.CreateDirectory(htmlpath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../../");
+            var pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");
             pageBuilder.Append(Jumbotron(null));
 
-            pageBuilder.Append(AddHalt_001(htmlpath, htmlpath + "images\\"));
+            AddLoughborough_001(pageBuilder, htmlpath, htmlpath + "images\\");
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
@@ -41,7 +40,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Rushcliffe Halt</h1>");
+            stringBuilder.AppendLine($"<h1>Loughborough Station</h1>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
@@ -49,28 +48,15 @@ namespace RailwayWebBuilderCore.Builders.Stations
             return stringBuilder.ToString();
         }
 
-        private static string AddHalt_001(string htmlpath, string imagePath)
+        private static void AddLoughborough_001(PageBuilder pageBuilder, string htmlpath, string imagePath)
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
-
             pageBuilder.Append($"<hr/>");
-            pageBuilder.Append("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
+            pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Rushcliffe Halt\2020-06-26\";
-
-            pageBuilder.Append("<div class='col-md-8'>");
-            string youTubeLink = "https://www.youtube.com/embed/NemRaAwWhms";
-
-            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
-            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
-
-            AddImages(htmlpath, imagePath, pageBuilder, path);
-
-            return pageBuilder.GetString();
+            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Loughborough Station\2020-10-17\";
+            pageBuilder.AddImages(htmlpath, imagePath, path);
         }
     }
 }

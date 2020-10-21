@@ -1,4 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
@@ -46,7 +47,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
-            pageBuilder.Append(HTMLHelper.Modal());
+            pageBuilder.Append(HTMLRailHelper.Modal());
 
             pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
             pageBuilder.Output();

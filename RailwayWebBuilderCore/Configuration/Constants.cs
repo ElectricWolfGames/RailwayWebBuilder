@@ -13,6 +13,9 @@
 
         public const string FullMyLayouts = RootPath + "\\" + MyLayouts + "\\";
         public const string FullCatalog = RootPath + "\\" + Catalog + "\\";
+
+        public const string Station = RootPath + "\\" + Stations + "\\";
         public const string RushcliffeHalt = RootPath + "\\" + Stations + "\\RushcliffeHalt\\";
+        public const string LoughboroughStation = RootPath + "\\" + Stations + "\\LoughboroughStation\\";
     }
 }
