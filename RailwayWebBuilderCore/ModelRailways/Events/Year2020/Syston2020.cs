@@ -37,7 +37,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Syston", "Syston Model Railway Society", "Leicester Model Railway Show" });
-            MetaDetails = Descrption;
         }
 
         public IBlog GetBlog()

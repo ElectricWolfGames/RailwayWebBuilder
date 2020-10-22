@@ -54,7 +54,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Linclon", "L&DMRC", "Lincoln Model Rail Club", "Newark Showground", "General Exhibition" });
-            MetaDetails = Descrption;
         }
 
         public IBlog GetBlog()

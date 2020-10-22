@@ -3,7 +3,7 @@ using Geocoder;
 using Microsoft.VisualStudio.Services.Common;
 using System;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Helpers
 {
     public class GeocoderHelper
     {

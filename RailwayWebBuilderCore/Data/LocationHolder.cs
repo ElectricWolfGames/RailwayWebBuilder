@@ -1,4 +1,6 @@
-﻿namespace RailwayWebBuilderCore.Headers
+﻿using RailwayWebBuilderCore.Helpers;
+
+namespace RailwayWebBuilderCore.Data
 {
     public class LocationHolder
     {

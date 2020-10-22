@@ -21,7 +21,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Lichfield", "Lichfield Model Railways", "Trent Valley Model Railway Society", "TVMRS" });
-            MetaDetails = Descrption;
         }
     }
 }

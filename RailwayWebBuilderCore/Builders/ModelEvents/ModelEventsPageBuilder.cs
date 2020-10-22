@@ -11,11 +11,17 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventsPageBuilder
     {
-        internal static void Build(List<IModelEvent> modelEvents)
+        public static void Build(List<IModelEvent> modelEvents)
         {
+            var meh = new ModelEventsHeader();
+
+            foreach (IModelEvent modelEvent in modelEvents)
+            {
+                meh.Keywords.AddRange(modelEvent.Layouts.Select(x => x.Name));
+            }
             string htmlpath = Constants.RootPath + "//" + Constants.ModelEvents + "//";
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new ModelEventsHeader(), "../");
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, meh, "../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");

@@ -21,7 +21,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Linclon", "Lincoln Model Rail Club", "Newark Showground", "Post Modernisation Exhibition" });
-            MetaDetails = Descrption;
 
             Layouts.Add(new LayoutDetails("Crimson Road", Gauges.NONE, "CrimsonRoad"));
             Layouts.Add(new LayoutDetails("Cumanavago", Gauges.NONE, "Cumanavago"));

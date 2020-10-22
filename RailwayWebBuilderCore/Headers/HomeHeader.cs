@@ -1,5 +1,4 @@
-﻿using eWolfBootstrap.Enums;
-using eWolfBootstrap.Interfaces;
+﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Headers
@@ -9,15 +8,20 @@ namespace RailwayWebBuilderCore.Headers
         public HomeHeader()
         {
             Title = "Home";
-            Keywords = new List<string>();
-            Keywords.Add("Model Trains");
-            Keywords.Add("Model railway");
-            MetaDetails = "Modle railway";
-        }
+            Keywords = new List<string>
+            {
+                "Model Trains",
+                "Model railway",
+                "N Gauge Model Railways",
+                "OO Gauge Model Railways",
+                "Hornby",
+                "Model staions",
+                "Railways",
+                "trains at home",
+                "trains",
+            };
 
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-        public string Title { get; set; }
-        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
+            Description = "Modle railway";
+        }
     }
 }

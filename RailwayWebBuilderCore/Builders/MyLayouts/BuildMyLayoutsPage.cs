@@ -1,10 +1,8 @@
 ﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -62,32 +60,15 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>I see grass! (Shelf display)</h2>");
             pageBuilder.Append("<p>Final added some grass, shrubs and fences to my Shelf display</p>");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-05-11 Hills are green\";
-            List<string> images = ImageHelper.GetAllImages(path);
 
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-            int count = 2;
-            foreach (string layoutImage in images)
-            {
-                if (images.Contains(layoutImage))
-                {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-                    }
-                }
-            }
-            pageBuilder.Append("</div></div>");
-
+            pageBuilder.AddImages(htmlpath, imagePath, path);
             return pageBuilder.GetString();
         }
 
@@ -95,7 +76,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>Home running</h2>");
@@ -103,24 +84,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>You can see I ran out of straight and had to use curve track for the sidings :)</p>");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-04-18 Running\";
-            List<string> images = ImageHelper.GetAllImages(path);
-
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-            int count = 2;
-            foreach (string layoutImage in images)
-            {
-                if (images.Contains(layoutImage))
-                {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-                    }
-                }
-            }
-            pageBuilder.Append("</div></div>");
+            pageBuilder.AddImages(htmlpath, imagePath, path);
 
             pageBuilder.Append("<div class='col-md-8'>");
             string youTubeLink = "https://www.youtube.com/embed/UizKwGgh1TA";
@@ -137,7 +101,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>It's been a while (Shelf display)</h2>");
@@ -146,24 +110,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>next will be the bridge and track along the top.</p>");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\003-HillsAndTrack\";
-            List<string> images = ImageHelper.GetAllImages(path);
+            pageBuilder.AddImages(htmlpath, imagePath, path);
 
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-            int count = 2;
-            foreach (string layoutImage in images)
-            {
-                if (images.Contains(layoutImage))
-                {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-                    }
-                }
-            }
-            pageBuilder.Append("</div></div>");
             return pageBuilder.GetString();
         }
 
@@ -171,7 +119,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>Final Plan (Shunting yard)</h2>Backdated :09/02/2020");
@@ -179,24 +127,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>But still a lot of space for some nice scenery.</p>");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\002-Layout\";
-            List<string> images = ImageHelper.GetAllImages(path);
+            pageBuilder.AddImages(htmlpath, imagePath, path);
 
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-            int count = 2;
-            foreach (string layoutImage in images)
-            {
-                if (images.Contains(layoutImage))
-                {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-                    }
-                }
-            }
-            pageBuilder.Append("</div></div>");
             return pageBuilder.GetString();
         }
 
@@ -204,7 +136,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>Layout ideas(Shunting yard)</h2>Backdated :19/01/2020");
@@ -212,25 +144,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>Here are some of them...</p>");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\001-Track Ideas\";
-            List<string> images = ImageHelper.GetAllImages(path);
+            pageBuilder.AddImages(htmlpath, imagePath, path);
 
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-            int count = 2;
-            foreach (string layoutImage in images)
-            {
-                if (images.Contains(layoutImage))
-                {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, pageBuilder, layoutImage);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
-                    }
-                }
-            }
-            pageBuilder.Append("</div></div>");
-            return pageBuilder.ToString();
+            return pageBuilder.GetString();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using eWolfBootstrap.Enums;
-using eWolfBootstrap.Interfaces;
+﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Headers
@@ -15,12 +14,7 @@ namespace RailwayWebBuilderCore.Headers
                 "Model railway",
                 "Home layout"
             };
-            MetaDetails = "Home model railway";
+            Description = "Home model railway";
         }
-
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-        public string Title { get; set; }
-        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
     }
 }

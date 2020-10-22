@@ -22,7 +22,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Kirkby-In-Ashfield", "The Elizabethan Railway Society Exhibition", "Kirkby-In-Ashfield Model Railway" });
-            MetaDetails = Descrption;
         }
     }
 }

@@ -33,7 +33,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Ilkeston", "Ilkeston (Woodside) Model Railway Club", "Ilkeston (Woodside) Model Railway", "Heanor Miners Welfare", "Heanor Model Railway" });
-            MetaDetails = Descrption;
         }
 
         public IBlog GetBlog()

@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("BuildDates.html", htmlpath, new AllLocosDetailsHeader(), "../");
 
-            pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
 
             pageBuilder.Append("<div class='row mb-2'>");

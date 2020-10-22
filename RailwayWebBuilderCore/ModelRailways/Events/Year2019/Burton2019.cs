@@ -21,7 +21,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Burton", "Burton Model Railex" });
-            MetaDetails = Descrption;
         }
     }
 }

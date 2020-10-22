@@ -1,5 +1,4 @@
-﻿using eWolfBootstrap.Enums;
-using eWolfBootstrap.Interfaces;
+﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Headers
@@ -17,12 +16,7 @@ namespace RailwayWebBuilderCore.Headers
                 "Rushcliffe Halt",
                 "Loughborough",
             };
-            MetaDetails = "Railway Stations";
+            Description = "Railway Stations";
         }
-
-        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
-        public List<string> Keywords { get; set; }
-        public string MetaDetails { get; set; }
-        public string Title { get; set; }
     }
 }
