@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class StandardClasses
+    public class StandardClassesBuilder
     {
         public static void Build()
         {

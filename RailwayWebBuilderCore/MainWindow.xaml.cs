@@ -28,9 +28,8 @@ namespace RailwayWebBuilderCore
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             ls.Init();
 
-            StandardClasses.Build();
-
-            LocosByBuiltDate.Build();
+            LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
+            ld.Build();
         }
 
         private void BuildSite()
@@ -53,7 +52,7 @@ namespace RailwayWebBuilderCore
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);
 
-            LocationsPagebuilder.Build();
+            LocationsPageBuilder.Build();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -71,7 +70,7 @@ namespace RailwayWebBuilderCore
         {
             var psi = new ProcessStartInfo
             {
-                FileName = @"F:/eWolfSiteUploads/Railways/Locomotive/BuildDates.html",
+                FileName = @"F:/eWolfSiteUploads/Railways/Locomotive/LocomotiveDetails.html",
                 UseShellExecute = true
             };
             Process.Start(psi);

@@ -35,6 +35,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, pageDetails, "../../");
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");
+
             pageBuilder.Append(Jumbotron(pageDetails));
 
             LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();

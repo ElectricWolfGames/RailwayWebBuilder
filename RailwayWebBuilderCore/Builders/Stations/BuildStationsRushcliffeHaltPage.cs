@@ -52,7 +52,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         {
             Directory.CreateDirectory(imagePath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
@@ -67,7 +67,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
-            AddImages(htmlpath, imagePath, pageBuilder, path);
+            pageBuilder.AddImages(htmlpath, imagePath, path);
 
             return pageBuilder.GetString();
         }

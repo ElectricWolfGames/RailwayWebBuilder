@@ -4,7 +4,6 @@ using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
 using System.IO;
-using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts
 {
@@ -15,11 +14,13 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             string htmlpath = Constants.FullMyLayouts;
             Directory.CreateDirectory(htmlpath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new MyLayoutHeader(), "../");
+            var pageBuilder = new PageBuilder("index.html", htmlpath, new MyLayoutHeader(), "../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Append(Jumbotron(null));
+            pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>It's now my turn, I've just started to build my layout, well it's more like 3!</p>" +
+                $"<p>Currently, my wife and I are planning to build a shunting yard, a country station with a village and a small scene (60cm,20m) to fit on top of a shelf all in oo gauge.</p>" +
+                $"<p>I hope to keep showing updates on all 3.</p>");
 
             pageBuilder.Append(AddLayoutDetails_005(htmlpath, htmlpath + "images\\"));
             pageBuilder.Append(AddLayoutDetails_004(htmlpath, htmlpath + "images\\"));
@@ -35,25 +36,6 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<script src='../Scripts/script.js'></script>");
 
             pageBuilder.Output();
-        }
-
-        private static string Jumbotron(IModelPageDetails pageDetails)
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Home layouts</h1>");
-            stringBuilder.AppendLine($"<p'>It's now my turn, I've just started to build my layout, well it's more like 3!</p>" +
-                $"<p>Currently, my wife and I are planning to build a shunting yard, a country station with a village and a small scene (60cm,20m) to fit on top of a shelf all in oo gauge.</p>" +
-                $"<p>I hope to keep showing updates on all 3.</p>");
-
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
         }
 
         private static string AddLayoutDetails_005(string htmlpath, string imagePath)

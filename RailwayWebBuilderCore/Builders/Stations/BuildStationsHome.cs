@@ -17,7 +17,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../");
 
-            pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
             pageBuilder.Append(Jumbotron(null));
 

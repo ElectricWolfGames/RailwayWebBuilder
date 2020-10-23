@@ -11,7 +11,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Locations
 {
-    public class LocationsPagebuilder
+    public class LocationsPageBuilder
     {
         public static void Build()
         {
@@ -21,10 +21,10 @@ namespace RailwayWebBuilderCore.Builders.Locations
             Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents);
             string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\";
 
-            eWolfBootstrap.Interfaces.IPageBuilder sb = new PageBuilder("locations.html", htmlpath, new ModelEventsHeader(), "../");
+            var sb = new PageBuilder("locations.html", htmlpath, new ModelEventsHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));
             sb.Append("<div class='container mt-4'>");
-            sb.Append(Jumbotron());
+            sb.Jumbotron("<h2>Locations</h2>", "Model Event Locations visted");
 
             List<LocationHolder> locationSections = GetAllLocations();
 
@@ -126,24 +126,6 @@ namespace RailwayWebBuilderCore.Builders.Locations
             }
 
             return locationHolders;
-        }
-
-        private static string Jumbotron()
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-
-            stringBuilder.AppendLine($"<h1>Model Event Locations</h1>");
-
-            stringBuilder.AppendLine("</div>");
-
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
         }
     }
 }

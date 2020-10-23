@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocosByBuiltDate
+    public class LocosByBuiltDateBuilder
     {
         public static void Build()
         {
