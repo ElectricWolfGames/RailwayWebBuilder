@@ -40,20 +40,33 @@ namespace RailwayWebBuilderCore.Enums
         [Description("BR Standard Class 9F")]
         _9F,
 
-        //[Description("Flying Scotsman")]
-        //Flying_Scotsman,
-
-        [Description("LMS Coronation Class")]
-        LMS_Coronation_Class,
-
         [Description("LMS Princess Royal Class")]
         LMS_Princess_Royal_Class,
 
+        // https://en.wikipedia.org/wiki/Locomotives_of_the_London_and_North_Eastern_Railway
         [Description("LNER Gresley Classes A1 and A3")]
         LNER_Class_A1A3,
 
         [Description("LNER Class A4")]
         LNER_Class_A4,
+
+        [Description("Peppercorn A1")]
+        LNER_Peppercorn_A1,
+
+        [Description("Peppercorn A2")]
+        LNER_Peppercorn_A2,
+
+        [Description("Thompson B1")]
+        LNER_Thompson_B1,
+
+        [Description("J72")]
+        LNER_J72,
+
+        [Description("Thompson/Peppercorn K1")]
+        LNER_Thompson_Peppercorn_K1,
+
+        [Description("Thompson L1")]
+        LNER_Thompson_L1,
 
         [Description("GWR 1500 Class")]
         GWR_1500_Class,
@@ -90,5 +103,62 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("SR Merchant Navy Class")]
         SR_Merchant_Navy_Class,
+
+        [Description("Barry Railway Class A")]
+        BarryRailwayClassA,
+
+        [Description("Barry Railway Class B")]
+        BarryRailwayClassB,
+
+        [Description("Barry Railway Class B1")]
+        BarryRailwayClassB1,
+
+        [Description("Barry Railway Class C")]
+        BarryRailwayClassC,
+
+        [Description("Barry Railway Class D")]
+        BarryRailwayClassD,
+
+        [Description("Barry Railway Class E")]
+        BarryRailwayClassE,
+
+        [Description("Barry Railway Class F")]
+        BarryRailwayClassF,
+
+        [Description("Barry Railway Class G")]
+        BarryRailwayClassG,
+
+        [Description("Barry Railway Class H")]
+        BarryRailwayClassH,
+
+        [Description("Barry Railway Class J")]
+        BarryRailwayClassJ,
+
+        [Description("Barry Railway Class L")]
+        BarryRailwayClassK,
+
+        [Description("Barry Railway Class L")]
+        BarryRailwayClassL,
+
+        [Description("LMS Ivatt Class 2 2-6-2T")]
+        LMS_Ivatt_Class_2T,
+
+        [Description("LMS Fairburn 2-6-4T")]
+        LMS_Fairburn,
+
+        [Description("LMS Ivatt Class 4")]
+        LMS_Ivatt_Class_4,
+
+        [Description("LMS Stanier Class 5 4-6-0")]
+        LMS_Stanier_Class5,
+
+        [Description("LMS Coronation Class")]
+        LMS_Coronation_Class,
+
+        [Description("LMS Ivatt Class 2 2-6-0")]
+        LMS_Ivatt_Class_2,
+
+        [Description("LMS Kitson 0-4-0ST")]
+        LMS_Kitson,
     }
 }

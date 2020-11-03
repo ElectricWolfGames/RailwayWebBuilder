@@ -1,9 +1,7 @@
 ﻿namespace RailwayWebBuilderCore.Interfaces
 {
-    public interface IPageBuilder
+    public interface IRailwayPageBuilder
     {
-        void Build(IModelEvent pageDetails);
-
-        string Jumbotron(IModelPageDetails pageDetails);
+        void Build();
     }
 }

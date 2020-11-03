@@ -1,62 +1,67 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
-using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsLoughboroughStationPage : BuildStationsBase
+    public class BuildStationsLoughboroughStationPage : BuildStationsBase, IStationssPages
     {
-        public static void Build()
+        private StationLocationsBase _stationLocations = new LoughboroughGCR();
+        public string HtmlFileName { get; } = "index.html";
+        public string HtmlPath { get; } = Constants.LoughboroughStationFolder;
+        public string LocalPath { get; } = Constants.RootPath + Constants.LoughboroughStationFolder;
+        public string PageTitle { get; } = "Loughborough Station";
+
+        public void Build()
         {
-            string htmlpath = Constants.LoughboroughStation;
-            Directory.CreateDirectory(htmlpath);
+            Directory.CreateDirectory(HtmlPath);
 
-            var pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../../");
+            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new StationsHeader(), "../../");
 
-            pageBuilder.Append(NavBarHelper.NavBar("../../"));
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Append(Jumbotron(null));
+            _pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            AddBreadCrumb(this);
 
-            AddLoughborough_001(pageBuilder, htmlpath, htmlpath + "images\\");
+            _pageBuilder.Append("<div class='container mt-4'>");
+            Jumbotron(PageTitle, _stationLocations);
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            AddLoughborough_002(HtmlPath + "images\\");
+            AddLoughborough_001(HtmlPath + "images\\");
 
-            pageBuilder.Append(HTMLRailHelper.Modal());
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
 
-            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+            _pageBuilder.Append(HTMLRailHelper.Modal());
 
-            pageBuilder.Output();
+            _pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+
+            _pageBuilder.Output();
         }
 
-        private static string Jumbotron(IModelPageDetails pageDetails)
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Loughborough Station</h1>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
-        }
-
-        private static void AddLoughborough_001(PageBuilder pageBuilder, string htmlpath, string imagePath)
+        private void AddLoughborough_001(string imagePath)
         {
             Directory.CreateDirectory(imagePath);
 
-            pageBuilder.Append($"<hr/>");
-            pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Loughborough Station\2020-10-17\";
-            pageBuilder.AddImages(htmlpath, imagePath, path);
+            _pageBuilder.AddImages(HtmlPath, imagePath, path);
+        }
+
+        private void AddLoughborough_002(string imagePath)
+        {
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Class 101 Stopping and starting, Approuching loughborough Station</h2> 31/10/2020");
+
+            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Loughborough Station\2020-11-01\";
+            _pageBuilder.AddImages(HtmlPath, imagePath, path);
         }
     }
 }

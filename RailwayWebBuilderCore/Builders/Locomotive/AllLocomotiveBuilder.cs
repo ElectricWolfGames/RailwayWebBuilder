@@ -1,9 +1,9 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
+using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System;
@@ -12,18 +12,21 @@ using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocosByBuiltDateBuilder
+    public class AllLocomotiveBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
     {
-        public static void Build()
+        public string HtmlFileName { get; } = "AllLocomotives.html";
+        public string PageTitle { get; } = "All Locomotives";
+
+        public void Build()
         {
-            string htmlpath = Constants.RootPath + "//" + Constants.Locomotive + "//";
+            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new AllLocosDetailsHeader(), "../");
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("BuildDates.html", htmlpath, new AllLocosDetailsHeader(), "../");
+            _pageBuilder.Append(NavBarHelper.NavBar("../"));
+            AddBreadCrumb(this);
 
-            pageBuilder.Append(NavBarHelper.NavBar("../"));
-            pageBuilder.Append("<div class='container mt-4'>");
+            _pageBuilder.Append("<div class='container mt-4'>");
 
-            pageBuilder.Append("<div class='row mb-2'>");
+            _pageBuilder.Append("<div class='row mb-2'>");
 
             var locos = new List<HtmlTableExtractLoco>();
 
@@ -35,7 +38,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             var th = new SortableTableHolder();
 
-            th.Header(new string[] { "Name", "Build date", "Whyte", "Total Produced" });
+            th.Header(new string[] { "Name", "Build date", "Whyte", "Total Produced", "Power Class", "Tractive Effort" });
 
             var orderedByDate = locos.OrderBy(x => x.BuildDateTime);
 
@@ -46,15 +49,18 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 locoFields.Add(loco.BuildDateTime.ToString("yyyy"));
                 locoFields.Add(loco.Whyte);
                 locoFields.Add(loco.TotalProduced.ToString());
+                locoFields.Add(loco.PowerClass.ToString());
+                locoFields.Add(loco.TractiveEffort.ToString());
+
                 th.AddRow(locoFields.ToArray());
             }
 
-            pageBuilder.Append(th.Output());
+            _pageBuilder.Append(th.Output());
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
 
-            pageBuilder.Output();
+            _pageBuilder.Output();
         }
     }
 }

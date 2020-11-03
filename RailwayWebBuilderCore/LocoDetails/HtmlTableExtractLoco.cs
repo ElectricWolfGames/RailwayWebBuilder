@@ -21,6 +21,14 @@ namespace RailwayWebBuilderCore.LocoDetails
             }
         }
 
+        public string Axleload
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Axle load");
+            }
+        }
+
         public string Name
         {
             get
@@ -116,6 +124,22 @@ namespace RailwayWebBuilderCore.LocoDetails
             get
             {
                 return _htmlTableExtract.GetDisplayText("Length");
+            }
+        }
+
+        public string PowerClass
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Power class");
+            }
+        }
+
+        public string TractiveEffort
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Tractive effort");
             }
         }
     }

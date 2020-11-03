@@ -12,10 +12,10 @@ namespace RailwayWebBuilderCore.Builders.Stations
     {
         public static void Build()
         {
-            string htmlpath = Constants.Station;
-            Directory.CreateDirectory(htmlpath);
+            string localpath = Constants.RootPath + Constants.StationFolder;
+            Directory.CreateDirectory(localpath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../");
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", localpath, new StationsHeader(), "../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");

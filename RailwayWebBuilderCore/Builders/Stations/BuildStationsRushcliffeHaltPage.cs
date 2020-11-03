@@ -1,51 +1,44 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
-using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsRushcliffeHaltPage : BuildStationsBase
+    public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationssPages
     {
-        public static void Build()
+        private StationLocationsBase _stationLocations = new RushcliffeHaltGCR();
+        public string HtmlFileName { get; } = "index.html";
+        public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
+        public string HtmlPath { get; } = Constants.RushcliffeHaltFolder;
+        public string PageTitle { get; } = "Rushcliffe Halt";
+
+        public void Build()
         {
-            string htmlpath = Constants.RushcliffeHalt;
-            Directory.CreateDirectory(htmlpath);
+            Directory.CreateDirectory(HtmlPath);
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new StationsHeader(), "../../");
+            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new StationsHeader(), "../../");
 
-            pageBuilder.Append(NavBarHelper.NavBar("../../"));
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Append(Jumbotron(null));
+            _pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            AddBreadCrumb(this);
 
-            pageBuilder.Append(AddHalt_001(htmlpath, htmlpath + "images\\"));
+            _pageBuilder.Append("<div class='container mt-4'>");
+            Jumbotron(PageTitle, _stationLocations);
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            _pageBuilder.Append(AddHalt_001(HtmlPath, HtmlPath + "images\\"));
 
-            pageBuilder.Append(HTMLRailHelper.Modal());
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
 
-            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+            _pageBuilder.Append(HTMLRailHelper.Modal());
 
-            pageBuilder.Output();
-        }
+            _pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
 
-        private static string Jumbotron(IModelPageDetails pageDetails)
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Rushcliffe Halt</h1>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
+            _pageBuilder.Output();
         }
 
         private static string AddHalt_001(string htmlpath, string imagePath)

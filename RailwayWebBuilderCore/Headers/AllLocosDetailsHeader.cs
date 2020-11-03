@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore.Headers
     {
         public AllLocosDetailsHeader()
         {
-            Title = "AllLocosDetailsHeader ";
+            Title = "Loco Details";
             Keywords = new List<string>
             {
                 "All Locos",
@@ -17,7 +17,8 @@ namespace RailwayWebBuilderCore.Headers
                 "Locomotive details",
                 "Locomotive by total built",
             };
-            Description = "Locomotive detailsa";
+            Description = "Locomotive details";
+            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.BT);
         }
     }
 }

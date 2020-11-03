@@ -28,8 +28,7 @@ namespace RailwayWebBuilderCore
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             ls.Init();
 
-            LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
-            ld.Build();
+            BuildSite();
         }
 
         private void BuildSite()
@@ -46,13 +45,18 @@ namespace RailwayWebBuilderCore
             BuildCatalogPage.Build(null);
 
             BuildStationsHome.Build();
-            BuildStationsRushcliffeHaltPage.Build();
-            BuildStationsLoughboroughStationPage.Build();
+            BuildStationsRushcliffeHaltPage b2 = new BuildStationsRushcliffeHaltPage();
+            b2.Build();
+            BuildStationsLoughboroughStationPage b = new BuildStationsLoughboroughStationPage();
+            b.Build();
 
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);
 
             LocationsPageBuilder.Build();
+
+            LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
+            ld.Build();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,7 +74,7 @@ namespace RailwayWebBuilderCore
         {
             var psi = new ProcessStartInfo
             {
-                FileName = @"F:/eWolfSiteUploads/Railways/Locomotive/LocomotiveDetails.html",
+                FileName = @"F:/eWolfSiteUploads/Railways/Locomotives/Index.html",
                 UseShellExecute = true
             };
             Process.Start(psi);

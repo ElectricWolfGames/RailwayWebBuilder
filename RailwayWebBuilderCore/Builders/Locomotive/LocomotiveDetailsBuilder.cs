@@ -1,43 +1,72 @@
 ﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
+using RailwayWebBuilderCore.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocomotiveDetailsBuilder
+    public class LocomotiveDetailsBuilder : LocomotiveDetailsBase, IRailwayPageBuilder
     {
-        public (string, string) GetPagePath
+        public LocomotiveDetailsBuilder()
         {
-            get
-            {
-                string htmlpath = Constants.RootPath + "//" + Constants.Locomotive + "//";
-                string fileName = "LocomotiveDetails.html";
-
-                (string path, string fileName) path = (htmlpath, fileName);
-                return path;
-            }
         }
+
+        public string FileName { get; } = "index.html";
+        public string Name { get; } = "Locomotive Details";
 
         public void Build()
         {
-            (string path, string fileName) = GetPagePath;
+            _pageBuilder = new PageBuilder(FileName, LocalPath, new AllLocosDetailsHeader(), "../");
 
-            var pageBuilder = new PageBuilder(fileName, path, new AllLocosDetailsHeader(), "../");
+            _pageBuilder.Append(NavBarHelper.NavBar("../"));
 
-            pageBuilder.Append(NavBarHelper.NavBar("../"));
+            _pageBuilder.Append("<div class='container mt-4'>");
+            _pageBuilder.Jumbotron("<h1>Locomotive Details</h1>", "<p>Collection of stats, details and tables comparing different stream locomotive</p>");
 
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Jumbotron("<h1>Locomotive Details</h1>", "<p>Collection of stats, details and tables comparing different stream locomotive</p>");
+            CreateAllDetailsPages();
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
 
-            pageBuilder.Append(HTMLRailHelper.Modal());
+            _pageBuilder.Append(HTMLRailHelper.Modal());
 
-            pageBuilder.Append("<script src='../Scripts/script.js'></script>");
+            _pageBuilder.Append("<script src='../Scripts/script.js'></script>");
 
-            pageBuilder.Output();
+            _pageBuilder.Output();
+        }
+
+        private void CreateAllDetailsPages()
+        {
+            var pages = GetAll();
+
+            foreach (var page in pages)
+            {
+                page.Build();
+
+                _pageBuilder.Append($"<hr/>");
+                string path = $"{page.HtmlFileName}";
+                string name = $"<h5>{page.PageTitle}</h5>";
+                _pageBuilder.Append($"<a href='{path}'>{name}</a>");
+            }
+        }
+
+        private List<ILocomotiveDetailsPages> GetAll()
+        {
+            var canBlog = from t in Assembly.GetExecutingAssembly().GetTypes()
+                          where t.GetInterfaces().Contains(typeof(ILocomotiveDetailsPages))
+                                && t.GetConstructor(Type.EmptyTypes) != null
+                          select Activator.CreateInstance(t) as ILocomotiveDetailsPages;
+
+            List<ILocomotiveDetailsPages> blogs = new List<ILocomotiveDetailsPages>();
+            foreach (var blogger in canBlog)
+            {
+                blogs.Add(blogger);
+            }
+            return blogs;
         }
     }
 }
