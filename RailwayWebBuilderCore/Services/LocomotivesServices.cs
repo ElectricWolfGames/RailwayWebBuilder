@@ -1,6 +1,8 @@
 ﻿using eWolfBootstrap.Helpers;
 using eWolfBootstrap.HtmlExtracts;
+using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -119,11 +121,47 @@ namespace RailwayWebBuilderCore.Services
 
             // https://en.wikipedia.org/wiki/Locomotives_of_the_London_and_North_Eastern_Railway
             // https://en.wikipedia.org/wiki/Locomotives_of_the_London_and_North_Eastern_Railway#Great_Central_Railway
+
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8C", Locos.GCR_Class_8C);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_1", Locos.GCR_Class_1);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_9P", Locos.GCR_Class_9P);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8F", Locos.GCR_Class_8F);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8", Locos.GCR_Class_8);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8N", Locos.GCR_Class_8N);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_9Q", Locos.GCR_Class_9Q);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_1A", Locos.GCR_Class_1A);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8G", Locos.GCR_Class_8G);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8B", Locos.GCR_Class_8B);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Classes_8D_and_8E", Locos.GCR_Classes_8D_and_8E);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_11B", Locos.GCR_Class_11B);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_11E", Locos.GCR_Class_11E);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_11F", Locos.GCR_Class_11F);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_9J", Locos.GCR_Class_9J);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8K", Locos.GCR_Class_8K);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8A", Locos.GCR_Class_8A);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_9N", Locos.GCR_Class_9N);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_9K", Locos.GCR_Class_9K);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_4", Locos.GCR_Class_4);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_5A", Locos.GCR_Class_5A);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_1B", Locos.GCR_Class_1B);
+            AddLoco("https://en.wikipedia.org/wiki/GCR_Class_8H", Locos.GCR_Class_8H);
         }
 
         private void AddLoco(string uri, Locos locos)
         {
-            _locos.Add(locos, GetTable(uri, locos));
+            HtmlTableExtract table = GetTable(uri, locos);
+
+            _locos.Add(locos, table);
+            HtmlTableExtractLoco tableLoco = Get(locos);
+
+            var loco = BuildDB(tableLoco, uri);
+        }
+
+        private LocomotiveDetails BuildDB(HtmlTableExtractLoco table, string uri)
+        {
+            var db = new LocomotiveDetails(table, uri);
+            db.Save();
+            return db;
         }
 
         private HtmlTableExtract GetLoco(Locos loco)

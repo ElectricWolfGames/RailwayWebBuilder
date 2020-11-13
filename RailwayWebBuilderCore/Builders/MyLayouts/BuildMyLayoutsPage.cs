@@ -22,11 +22,12 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                 $"<p>Currently, my wife and I are planning to build a shunting yard, a country station with a village and a small scene (60cm,20m) to fit on top of a shelf all in oo gauge.</p>" +
                 $"<p>I hope to keep showing updates on all 3.</p>");
 
-            pageBuilder.Append(AddLayoutDetails_005(htmlpath, htmlpath + "images\\"));
-            pageBuilder.Append(AddLayoutDetails_004(htmlpath, htmlpath + "images\\"));
-            pageBuilder.Append(AddLayoutDetails_003(htmlpath, htmlpath + "images\\"));
-            pageBuilder.Append(AddLayoutDetails_002(htmlpath, htmlpath + "images\\"));
-            pageBuilder.Append(AddLayoutDetails_001(htmlpath, htmlpath + "images\\"));
+            pageBuilder.Append(AddLayoutDetails_006(htmlpath, htmlpath + "images\\006\\"));
+            pageBuilder.Append(AddLayoutDetails_005(htmlpath, htmlpath + "images\\005\\"));
+            pageBuilder.Append(AddLayoutDetails_004(htmlpath, htmlpath + "images\\004\\"));
+            pageBuilder.Append(AddLayoutDetails_003(htmlpath, htmlpath + "images\\003\\"));
+            pageBuilder.Append(AddLayoutDetails_002(htmlpath, htmlpath + "images\\002\\"));
+            pageBuilder.Append(AddLayoutDetails_001(htmlpath, htmlpath + "images\\001\\"));
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
@@ -36,6 +37,31 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<script src='../Scripts/script.js'></script>");
 
             pageBuilder.Output();
+        }
+
+        private static string AddLayoutDetails_006(string htmlpath, string imagePath)
+        {
+            Directory.CreateDirectory(imagePath);
+
+            var pageBuilder = new PageBuilder();
+
+            pageBuilder.Append($"<hr/>");
+            pageBuilder.Append("<h2>Home Running, in the new house</h2>");
+            pageBuilder.Append("<p>Hello, This is the first full running day after we moved house. </p>");
+            pageBuilder.Append("<p>Photos taken other 2 days, 05 and 06 November 2020</p>");
+            pageBuilder.Append("<p>At one point we get 3 lines running, that lets use run 4 trains, thanks to DCC. Enjoy</p>");
+
+            pageBuilder.Append("<div class='col-md-8'>");
+            string youTubeLink = "https://www.youtube.com/embed/YpAjiulKqZ8";
+
+            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
+            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            pageBuilder.Append("</div>");
+
+            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-11-06 Running, New House\";
+
+            pageBuilder.AddImages(htmlpath, imagePath, path);
+            return pageBuilder.GetString();
         }
 
         private static string AddLayoutDetails_005(string htmlpath, string imagePath)

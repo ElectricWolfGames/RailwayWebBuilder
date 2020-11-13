@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RailwayWebBuilderCore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="607" Width="978">
     <Grid>
-        <Button Content="Make Site" HorizontalAlignment="Left" Margin="59,40,0,0" VerticalAlignment="Top" Click="Button_Click" />
-        <Button Content="Get Loco Details" HorizontalAlignment="Left" Margin="59,77,0,0" VerticalAlignment="Top" Click="Button_Click_1" />
-        <Button Content="Open Site" HorizontalAlignment="Left" Margin="233,45,0,0" VerticalAlignment="Top" Click="Button_Click_2" />
+        <Button Content="Make Site" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" />
+        <Button Content="Get Loco Details" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" />
+        <Button Content="Open Site" HorizontalAlignment="Left" Margin="76,10,0,0" VerticalAlignment="Top" Click="Button_Click_2" />
+        <ListView Name="List" HorizontalAlignment="Center" Height="473" Margin="0,79,0,0" VerticalAlignment="Top" Width="958">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" />
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Designer}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Axleload}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding BuildDate}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding BuildDateTime}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Whyte}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding TotalProduced}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Length}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PowerClass}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding TractiveEffort }" />
+                    <GridViewColumn DisplayMemberBinding="{Binding webSite }" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

@@ -50,6 +50,10 @@ namespace RailwayWebBuilderCore.LocoDetails
             get
             {
                 string date = _htmlTableExtract.GetDisplayText("Build date");
+                if (string.IsNullOrWhiteSpace(date))
+                {
+                    return new DateTime(1700, 1, 1);
+                }
                 string digits = new String(date.Where(Char.IsDigit).ToArray());
 
                 string year = digits.Substring(0, 4);

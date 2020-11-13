@@ -62,7 +62,7 @@ namespace RailwayWebBuilderCore.Enums
         [Description("J72")]
         LNER_J72,
 
-        [Description("Thompson/Peppercorn K1")]
+        [Description("Thompson Peppercorn K1")]
         LNER_Thompson_Peppercorn_K1,
 
         [Description("Thompson L1")]
@@ -160,5 +160,74 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("LMS Kitson 0-4-0ST")]
         LMS_Kitson,
+
+        [Description("GCR Class 8C")]
+        GCR_Class_8C,
+
+        [Description("GCR Class 1")]
+        GCR_Class_1,
+
+        [Description("GCR Class 9P")]
+        GCR_Class_9P,
+
+        [Description("GCR Class 8F")]
+        GCR_Class_8F,
+
+        [Description("GCR Class 8")]
+        GCR_Class_8,
+
+        [Description("GCR Class 8N")]
+        GCR_Class_8N,
+
+        [Description("GCR Class 9Q")]
+        GCR_Class_9Q,
+
+        [Description("GCR Class 1A")]
+        GCR_Class_1A,
+
+        [Description("GCR Class 8G")]
+        GCR_Class_8G,
+
+        [Description("GCR Class 8B")]
+        GCR_Class_8B,
+
+        [Description("GCR Classes 8D and 8E")]
+        GCR_Classes_8D_and_8E,
+
+        [Description("GCR Class 11B")]
+        GCR_Class_11B,
+
+        [Description("GCR Class 11E")]
+        GCR_Class_11E,
+
+        [Description("GCR Class 11F")]
+        GCR_Class_11F,
+
+        [Description("GCR Class 9J")]
+        GCR_Class_9J,
+
+        [Description("GCR Class 8K")]
+        GCR_Class_8K,
+
+        [Description("GCR Class 8A")]
+        GCR_Class_8A,
+
+        [Description("GCR Class 9N")]
+        GCR_Class_9N,
+
+        [Description("GCR Class 9K")]
+        GCR_Class_9K,
+
+        [Description("GCR Class 4")]
+        GCR_Class_4,
+
+        [Description("GCR Class 5A")]
+        GCR_Class_5A,
+
+        [Description("GCR Class 1B")]
+        GCR_Class_1B,
+
+        [Description("GCR Class 8H")]
+        GCR_Class_8H,
     }
 }

@@ -9,6 +9,7 @@ using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
 
+// https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 namespace RailwayWebBuilderCore
 {
     /// <summary>
@@ -24,6 +25,11 @@ namespace RailwayWebBuilderCore
 
             DownloadServices ds = ServiceLocator.Instance.GetService<DownloadServices>();
             ds.CacheFolder = _cacheFolder;
+
+            var ldb = LocomotiveDBServices.GetDBServices();
+            ldb.Init();
+
+            List.ItemsSource = ldb.FullList;
 
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             ls.Init();
