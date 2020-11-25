@@ -1,12 +1,9 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,29 +25,27 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             _pageBuilder.Append("<div class='row mb-2'>");
 
-            var locos = new List<HtmlTableExtractLoco>();
-
-            IEnumerable<Locos> values = Enum.GetValues(typeof(Locos)).Cast<Locos>();
-            foreach (Locos loc in values)
-            {
-                locos.Add(LocomotivesServices.Get(loc));
-            }
+            var ldb = LocomotiveDBServices.GetDBServices();
+            var locos = ldb.FullList;
 
             var th = new SortableTableHolder();
 
-            th.Header(new string[] { "Name", "Build date", "Whyte", "Total Produced", "Power Class", "Tractive Effort" });
+            th.Header(new string[] { "Name", "Build date", "Operators", "Whyte", "Total Produced", "Power Class", "Tractive Effort" });
 
             var orderedByDate = locos.OrderBy(x => x.BuildDateTime);
 
             foreach (var loco in orderedByDate)
             {
-                List<string> locoFields = new List<string>();
-                locoFields.Add(loco.Name);
-                locoFields.Add(loco.BuildDateTime.ToString("yyyy"));
-                locoFields.Add(loco.Whyte);
-                locoFields.Add(loco.TotalProduced.ToString());
-                locoFields.Add(loco.PowerClass.ToString());
-                locoFields.Add(loco.TractiveEffort.ToString());
+                List<string> locoFields = new List<string>
+                {
+                    loco.Name,
+                    loco.BuildDateTime.ToString("yyyy"),
+                    loco.Operators,
+                    loco.Whyte,
+                    loco.TotalProduced.ToString(),
+                    loco.PowerClass.ToString(),
+                    loco.TractiveEffort.ToString()
+                };
 
                 th.AddRow(locoFields.ToArray());
             }

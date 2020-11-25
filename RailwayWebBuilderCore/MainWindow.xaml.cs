@@ -4,12 +4,18 @@ using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Stations;
+using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
+
+// https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.itemcollection?view=net-5.0
+
+// https://www.wpf-tutorial.com/list-controls/listbox-control/
+
 namespace RailwayWebBuilderCore
 {
     /// <summary>
@@ -29,7 +35,14 @@ namespace RailwayWebBuilderCore
             var ldb = LocomotiveDBServices.GetDBServices();
             ldb.Init();
 
-            List.ItemsSource = ldb.FullList;
+            /*myList.Items.Add(ldb.FullList[0]);
+            myList.Items.Add(ldb.FullList[1]);
+            myList.Items.Add(ldb.FullList[2]);
+            */
+            myList.ItemsSource = ldb.FullList;
+
+            //List.ItemsSource = ldb.FullList;
+            // List.Items =
 
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             ls.Init();
@@ -84,6 +97,75 @@ namespace RailwayWebBuilderCore
                 UseShellExecute = true
             };
             Process.Start(psi);
+        }
+
+        private void lbTodoList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (myList.SelectedItem != null)
+                this.Title = (myList.SelectedItem as LocomotiveDetails).Name;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (myList.SelectedItem == null)
+                return;
+
+            var psi = new ProcessStartInfo
+            {
+                FileName = (myList.SelectedItem as LocomotiveDetails).WebSite,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
+
+        private void Button_Click_Save(object sender, RoutedEventArgs e)
+        {
+            var ldb = LocomotiveDBServices.GetDBServices();
+
+            foreach (var item in ldb.FullList)
+            {
+                item.Save();
+            }
+            myList.Items.Refresh();
+        }
+
+        private void Button_Click_CleanUpText(object sender, RoutedEventArgs e)
+        {
+            var ldb = LocomotiveDBServices.GetDBServices();
+
+            foreach (var item in ldb.FullList)
+            {
+                item.TractiveEffort = RemoveCharacterCodes(item.TractiveEffort);
+                item.ConsildateText();
+                item.SetDirty();
+            }
+            myList.Items.Refresh();
+        }
+
+        private string RemoveCharacterCodes(string tractiveEffort)
+        {
+            tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
+
+            return tractiveEffort;
+        }
+
+        private void AddLoco_Click(object sender, RoutedEventArgs e)
+        {
+            string url = NewUrl.Text;
+
+            LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
+            var loco = ls.CreateDB(url);
+        }
+
+        private void Button_Click_UpdateAllFromWeb(object sender, RoutedEventArgs e)
+        {
+            var ldb = LocomotiveDBServices.GetDBServices();
+
+            foreach (var item in ldb.FullList)
+            {
+                item.UpdateFromSite();
+            }
+            myList.Items.Refresh();
         }
     }
 }

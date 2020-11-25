@@ -1,12 +1,12 @@
 ﻿using RailwayWebBuilderCore.LocoDB;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace RailwayWebBuilderCore.Services
 {
     public class LocomotiveDBServices
     {
-        private List<LocomotiveDetails> _locomotiveDetails = new List<LocomotiveDetails>();
+        private ObservableCollection<LocomotiveDetails> _locomotiveDetails = new ObservableCollection<LocomotiveDetails>();
         private string _outputFolder = @"F:\Trains\LocoDB\Locomotives\";
 
         public static LocomotiveDBServices GetDBServices()
@@ -14,12 +14,17 @@ namespace RailwayWebBuilderCore.Services
             return ServiceLocator.Instance.GetService<LocomotiveDBServices>();
         }
 
-        public List<LocomotiveDetails> FullList
+        public ObservableCollection<LocomotiveDetails> FullList
         {
             get
             {
                 return _locomotiveDetails;
             }
+        }
+
+        public void Add(LocomotiveDetails locomotiveDetails)
+        {
+            _locomotiveDetails.Add(locomotiveDetails);
         }
 
         public void Init()

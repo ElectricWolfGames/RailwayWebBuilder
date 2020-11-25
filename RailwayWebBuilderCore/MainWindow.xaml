@@ -5,28 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RailwayWebBuilderCore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="607" Width="978">
-    <Grid>
-        <Button Content="Make Site" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" />
+        Title="MainWindow" Height="800" Width="1261">
+    <Grid Margin="0,0,0,0">
+        <Button Content="Create Site" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" />
         <Button Content="Get Loco Details" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" />
         <Button Content="Open Site" HorizontalAlignment="Left" Margin="76,10,0,0" VerticalAlignment="Top" Click="Button_Click_2" />
-        <ListView Name="List" HorizontalAlignment="Center" Height="473" Margin="0,79,0,0" VerticalAlignment="Top" Width="958">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Name}" />
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Designer}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Axleload}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding BuildDate}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding BuildDateTime}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Whyte}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding TotalProduced}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Length}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding PowerClass}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding TractiveEffort }" />
-                    <GridViewColumn DisplayMemberBinding="{Binding webSite }" />
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <!--
+        <SelectionMode="Extended" SelectionChanged="lbTodoList_SelectionChanged">
+        -->
+        <ListBox Name="myList" HorizontalContentAlignment="Stretch" SelectionMode="Extended" SelectionChanged="lbTodoList_SelectionChanged" Margin="0,127,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="128" />
+                            <ColumnDefinition Width="256" />
+                            <ColumnDefinition Width="256" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="250" />
+                            <ColumnDefinition Width="160" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"  Name="NameIdex" Text="{Binding Name}" />
+                        <TextBox Grid.Column="1"  Name="Name" Text="{Binding Name, Mode=TwoWay}" />
+                        <TextBox Grid.Column="2"  Name="Operators" Text="{Binding Operators, Mode=TwoWay}" />
+                        <TextBox Grid.Column="2"  Name="Class" Text="{Binding Class, Mode=TwoWay}" />
+                        <TextBox Grid.Column="3"  Name="Designer" Text="{Binding Designer, Mode=TwoWay}" />
+                        <TextBox Grid.Column="4"  Name="Axleload" Text="{Binding Axleload, Mode=TwoWay}" />
+                        <TextBox Grid.Column="5"  Name="BuildDate" Text="{Binding BuildDate, Mode=TwoWay}" />
+                        <TextBox Grid.Column="6"  Name="Whyte" Text="{Binding Whyte, Mode=TwoWay}" />
+                        <TextBox Grid.Column="7"  Name="TotalProduced" Text="{Binding TotalProduced, Mode=TwoWay}" />
+                        <TextBox Grid.Column="8"  Name="PowerClass" Text="{Binding PowerClass, Mode=TwoWay}" />
+                        <TextBox Grid.Column="9"  Name="TractiveEffort" Text="{Binding TractiveEffort, Mode=TwoWay}" />
+                        <TextBox Grid.Column="10"  Name="webSite" Text="{Binding webSite, Mode=TwoWay}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="OpenSite" HorizontalAlignment="Left" Height="18" Margin="1157,100,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3" />
+        <Button Content="CleanUpText" HorizontalAlignment="Left" Height="19" Margin="1157,34,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_CleanUpText" />
+        <Button Content="Save" HorizontalAlignment="Left" Height="19" Margin="871,20,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_Save" />
+        <TextBox Name="NewUrl" HorizontalAlignment="Left" Height="28" Margin="10,54,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="554" />
+        <Button Name ="AddLoco"  Content="Add" HorizontalAlignment="Left" Margin="569,53,0,0" VerticalAlignment="Top" Click="AddLoco_Click" />
+        <Button Content="UpdateAllFromWeb" HorizontalAlignment="Left" Height="19" Margin="1096,10,0,0" VerticalAlignment="Top" Width="137" Click="Button_Click_UpdateAllFromWeb" />
     </Grid>
 </Window>

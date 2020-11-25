@@ -24,23 +24,25 @@ namespace RailwayWebBuilderCore.Services
                 remoteUri = TidyString(remoteUri);
                 string downloadfilename = $"{CacheFolder}{name}.xml";
 
-                if (!File.Exists(downloadfilename))
-                {
-                    // check to see if he file existes
-                    string fileName = string.Empty;
-                    string myStringWebResource = null;
-                    // Create a new WebClient instance.
-                    WebClient myWebClient = new WebClient();
-                    // Concatenate the domain with the Web resource filename.
-                    myStringWebResource = remoteUri + fileName;
-                    Console.WriteLine("Downloading File \"{0}\" from \"{1}\" .......\n\n", fileName, myStringWebResource);
-                    myWebClient.Encoding = UTF8Encoding.UTF8;
-                    rawPage = myWebClient.DownloadString(myStringWebResource);
-                    File.WriteAllText(downloadfilename, rawPage);
-                }
-                else
+                if (File.Exists(downloadfilename))
                 {
                     rawPage = File.ReadAllText(downloadfilename);
+                }
+
+                // check to see if he file existes
+                string fileName = string.Empty;
+                string myStringWebResource = null;
+                // Create a new WebClient instance.
+                WebClient myWebClient = new WebClient();
+                // Concatenate the domain with the Web resource filename.
+                myStringWebResource = remoteUri + fileName;
+                Console.WriteLine("Downloading File \"{0}\" from \"{1}\" .......\n\n", fileName, myStringWebResource);
+                myWebClient.Encoding = UTF8Encoding.UTF8;
+                rawPage = myWebClient.DownloadString(myStringWebResource);
+
+                if (!string.IsNullOrWhiteSpace(name))
+                {
+                    File.WriteAllText(downloadfilename, rawPage);
                 }
             }
             catch

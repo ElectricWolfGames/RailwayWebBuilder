@@ -1,6 +1,5 @@
 ﻿using eWolfBootstrap.Helpers;
 using eWolfBootstrap.HtmlExtracts;
-using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
@@ -39,11 +38,29 @@ namespace RailwayWebBuilderCore.Services
             return value.ToString();
         }
 
+        public LocomotiveDetails CreateDB(string url)
+        {
+            HtmlTableExtract table = GetTable(url, string.Empty);
+            HtmlTableExtractLoco tableLoco = new HtmlTableExtractLoco(table);
+            var loco = BuildDB(tableLoco, url);
+
+            var ldb = LocomotiveDBServices.GetDBServices();
+            ldb.Add(loco);
+
+            return loco;
+        }
+
         public HtmlTableExtract GetTable(string uri, Locos locos)
         {
-            string file = DownloadServices.Download(uri, locos.ToString());
+            return GetTable(uri, locos.ToString());
+        }
+
+        public HtmlTableExtract GetTable(string uri, string locos)
+        {
+            string file = DownloadServices.Download(uri, locos);
 
             var table = HtmlExtractHelpers.GetTable(file, "Type and origin");
+
             return table;
         }
 

@@ -13,6 +13,30 @@ namespace RailwayWebBuilderCore.LocoDetails
             _htmlTableExtract = htmlTableExtract;
         }
 
+        public string TableName
+        {
+            get
+            {
+                return _htmlTableExtract.DisplayName;
+            }
+        }
+
+        public string Operators
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Operators");
+            }
+        }
+
+        public string Class
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Class");
+            }
+        }
+
         public string Designer
         {
             get
