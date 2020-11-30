@@ -1,12 +1,12 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
@@ -23,61 +23,22 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             AddBreadCrumb(this);
 
-            List<HtmlTableExtractLoco> locos = new List<HtmlTableExtractLoco>
+            var ldb = LocomotiveDBServices.GetDBServices();
+            ObservableCollection<LocoDB.LocomotiveDetails> locos = ldb.FullList;
+            var odredlocos = locos.OrderBy(x => x.Operators);
+
+            var groups = odredlocos.Select(x => x.Operators).Distinct();
+
+            foreach (var group in groups)
             {
-                LocomotivesServices.Get(Locos.Class7Britannia),
-                LocomotivesServices.Get(Locos.Class8DukeOfGloucester),
-                LocomotivesServices.Get(Locos._9F),
-
-                LocomotivesServices.Get(Locos.Class6Clan),
-                LocomotivesServices.Get(Locos._5MT4_6_0),
-                LocomotivesServices.Get(Locos._4MT4_6_0),
-                LocomotivesServices.Get(Locos._4MT2_6_0),
-                LocomotivesServices.Get(Locos._3MT2_6_0),
-                LocomotivesServices.Get(Locos._2MT2_6_0),
-                LocomotivesServices.Get(Locos._4MT2_6_4T),
-                LocomotivesServices.Get(Locos._3MT2_6_2T),
-                LocomotivesServices.Get(Locos._2MT2_6_2T)
-            };
-
-            CreatTable("BR standard classes", locos);
-
-            locos = new List<HtmlTableExtractLoco>
-            {
-                LocomotivesServices.Get(Locos.LMS_Ivatt_Class_2T),
-                LocomotivesServices.Get(Locos.LMS_Fairburn),
-                LocomotivesServices.Get(Locos.LMS_Ivatt_Class_4),
-                LocomotivesServices.Get(Locos.LMS_Stanier_Class5),
-                LocomotivesServices.Get(Locos.LMS_Coronation_Class),
-                LocomotivesServices.Get(Locos.LMS_Ivatt_Class_2),
-                LocomotivesServices.Get(Locos.LMS_Kitson)
-            };
-
-            CreatTable("LMS designs", locos);
-
-            locos = new List<HtmlTableExtractLoco>
-            {
-                LocomotivesServices.Get(Locos.SR_Merchant_Navy_Class),
-                LocomotivesServices.Get(Locos.SR_West_Country_and_Battle_of_Britain_classes),
-            };
-
-            CreatTable("SR designs", locos);
-
-            locos = new List<HtmlTableExtractLoco>
-            {
-                LocomotivesServices.Get(Locos.LNER_Peppercorn_A1),
-                LocomotivesServices.Get(Locos.LNER_Peppercorn_A2),
-                LocomotivesServices.Get(Locos.LNER_Thompson_B1),
-                LocomotivesServices.Get(Locos.LNER_J72),
-                LocomotivesServices.Get(Locos.LNER_Thompson_Peppercorn_K1),
-                LocomotivesServices.Get(Locos.LNER_Thompson_L1),
-            };
-            CreatTable("LNER designs", locos);
+                IEnumerable<LocoDB.LocomotiveDetails> groupLocos = odredlocos.Where(x => x.Operators == group);
+                CreatTable(group, groupLocos);
+            }
 
             _pageBuilder.Output();
         }
 
-        private void CreatTable(string title, List<HtmlTableExtractLoco> locos)
+        private void CreatTable(string title, IEnumerable<LocoDB.LocomotiveDetails> locos)
         {
             _pageBuilder.Append("<div class='container mt-4'>");
             _pageBuilder.Append("<div class='row mb-2'>");
@@ -110,14 +71,15 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 th.AddRow(locoFields.ToArray());
             }
 
-            /*            DoughnutBar dbTotalProduced = new DoughnutBar();
+            /* DoughnutBar dbTotalProduced = new DoughnutBar();
 
-                        locos = locos.OrderByDescending(x => x.TotalProduced).ToList();
+             locos = locos.OrderByDescending(x => x.TotalProduced).ToList();
 
-                        foreach (HtmlTableExtractLoco loco in locos)
-                        {
-                            dbTotalProduced.Add(loco.TotalProduced, loco.Name);
-                        }*/
+             foreach (var loco in locos)
+             {
+                 dbTotalProduced.Add(loco.TotalProduced, loco.Name);
+             }*/
+
             _pageBuilder.Append(th.Output());
             //_pageBuilder.Append(dbTotalProduced.Output());
             _pageBuilder.Append("</div>");

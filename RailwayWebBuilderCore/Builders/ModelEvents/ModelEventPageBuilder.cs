@@ -10,6 +10,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
+// https://bootsnipp.com/snippets/aMGnk
+
 namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventPageBuilder

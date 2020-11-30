@@ -1,13 +1,11 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
-using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
@@ -28,21 +26,18 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             _pageBuilder.Append("<div class='row mb-2'>");
 
-            var locos = new List<HtmlTableExtractLoco>();
+            var ldb = LocomotiveDBServices.GetDBServices();
+            ObservableCollection<LocoDB.LocomotiveDetails> locos = ldb.FullList;
 
-            IEnumerable<Locos> values = Enum.GetValues(typeof(Locos)).Cast<Locos>();
-            foreach (Locos loc in values)
-            {
-                locos.Add(LocomotivesServices.Get(loc));
-            }
+            var odredlocos = locos.Where(x => !x.Whyte.Contains("T"));
+
+            odredlocos = odredlocos.OrderBy(x => x.BuildDateTime);
 
             var th = new SortableTableHolder();
 
             th.Header(new string[] { "Name", "Whyte", "Length", "Axle Load" });
 
-            IOrderedEnumerable<HtmlTableExtractLoco> orderedByDate = locos.OrderBy(x => x.BuildDateTime);
-
-            foreach (var loco in orderedByDate)
+            foreach (var loco in odredlocos)
             {
                 if (string.IsNullOrWhiteSpace(loco.Length))
                 {
@@ -55,6 +50,9 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 locoFields.Add(loco.Axleload);
                 th.AddRow(locoFields.ToArray());
             }
+
+            // https://mdbootstrap.com/docs/jquery/javascript/charts/#radar-chart
+            // Add a line graph that show all the sizes
 
             _pageBuilder.Append(th.Output());
 
