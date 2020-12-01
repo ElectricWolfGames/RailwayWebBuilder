@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Factories;
-using RailwayWebBuilderCore.Interfaces;
+﻿using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,16 +25,6 @@ namespace RailwayWebBuilderCore.Services
 
         private void AddBlogs()
         {
-            _blogs.Add(BlogFactory.CreateIdea());
-            _blogs.Add(BlogFactory.CreateSiteUploaded());
-            _blogs.Add(BlogFactory.CreateTakeALookAround());
-            _blogs.Add(BlogFactory.Create2020313MyLayoutTrackPlans());
-            _blogs.Add(BlogFactory.Create2020319NoTrips());
-            _blogs.Add(BlogFactory.Create2020416TheHills());
-            _blogs.Add(BlogFactory.Create2020419HomeRunning());
-            _blogs.Add(BlogFactory.Create2020511WithGrass());
-            _blogs.Add(BlogFactory.Create2020626RushcliffeHaltVisit());
-
             _blogs.AddRange(GetAll());
             _blogs.AddRange(GetAllMore());
         }

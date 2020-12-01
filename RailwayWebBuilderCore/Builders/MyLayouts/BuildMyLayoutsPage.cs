@@ -18,10 +18,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>It's now my turn, I've just started to build my layout, well it's more like 3!</p>" +
-                $"<p>Currently, my wife and I are planning to build a shunting yard, a country station with a village and a small scene (60cm,20m) to fit on top of a shelf all in oo gauge.</p>" +
-                $"<p>I hope to keep showing updates on all 3.</p>");
+            pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>It's now my turn, I've just started to build my new layout</p>");
 
+            pageBuilder.Append(AddLayoutDetails_007(htmlpath, htmlpath + "images\\006\\"));
             pageBuilder.Append(AddLayoutDetails_006(htmlpath, htmlpath + "images\\006\\"));
             pageBuilder.Append(AddLayoutDetails_005(htmlpath, htmlpath + "images\\005\\"));
             pageBuilder.Append(AddLayoutDetails_004(htmlpath, htmlpath + "images\\004\\"));
@@ -37,6 +36,19 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<script src='../Scripts/script.js'></script>");
 
             pageBuilder.Output();
+        }
+
+        private static string AddLayoutDetails_007(string htmlpath, string imagePath)
+        {
+            Directory.CreateDirectory(imagePath);
+
+            var pageBuilder = new PageBuilder();
+
+            pageBuilder.Append($"<hr/>");
+            pageBuilder.Append("<h2>Everything has changed</h2>");
+            pageBuilder.Append("<p>We have moved house and are looking at building a fixed layout in the spear room, Expect more soon.</p>");
+
+            return pageBuilder.GetString();
         }
 
         private static string AddLayoutDetails_006(string htmlpath, string imagePath)
