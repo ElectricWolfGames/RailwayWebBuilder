@@ -18,6 +18,8 @@ namespace RailwayWebBuilderCore.Headers
                 "Model staions",
             };
             Description = "Model railway events pages";
+
+            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

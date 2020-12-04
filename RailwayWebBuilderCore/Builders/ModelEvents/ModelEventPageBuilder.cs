@@ -1,6 +1,7 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
@@ -10,14 +11,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-// https://bootsnipp.com/snippets/aMGnk
-
 namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventPageBuilder
     {
         public static void Build(IModelEvent pageDetails)
         {
+            pageDetails.ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
+
             pageDetails.CopyLayoutsToKeywords();
 
             Console.WriteLine(pageDetails.Name);
@@ -35,6 +36,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             string imagePath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images";
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, pageDetails, "../../");
+
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");
 
@@ -43,23 +45,13 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
             ls.AddLocation(pageDetails);
 
-            pageBuilder.Append("<div class='row'>");
-
             AddImagesByLayout(images, pageDetails, htmlpath, imagePath, pageBuilder);
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
-
-            pageBuilder.Append(HTMLRailHelper.Modal());
-
-            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
             pageBuilder.Output();
         }
 
         private static void AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath, eWolfBootstrap.Interfaces.IPageBuilder stringBuilder)
         {
-            bool any = false;
-            int count = 2;
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
                 if (!layout.ImagePaths.Any())
@@ -67,48 +59,29 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
                     continue;
                 }
 
-                stringBuilder.Append("</div>");
-                stringBuilder.Append($"<hr/><h2><a id='{layout.IDName}'> {layout.Name}</a></h2>");
-                stringBuilder.Append("<div class='row'>");
+                HTMLHelper.Gallery.AddGalleryHeader(stringBuilder, layout.IDName);
 
-                count = 2;
                 foreach (string layoutImage in layout.ImagePaths)
                 {
                     if (images.Contains(layoutImage))
                     {
-                        HTMLHelper.AddImageToPage(htmlpath, imagePath, stringBuilder, layoutImage);
-                        if (count-- == 0)
-                        {
-                            count = 2;
-                            stringBuilder.Append("</div></div>");
-                            stringBuilder.Append("<div class='container mt-4'><div class='row'>");
-                        }
-                        any = true;
+                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, stringBuilder, layoutImage);
                         images.Remove(layoutImage);
                     }
                 }
+                HTMLHelper.Gallery.AddGalleryFooter(stringBuilder);
             }
+
             if (images.Any())
             {
-                count = 2;
-                if (any)
-                {
-                    stringBuilder.Append("</div>");
-                    stringBuilder.Append("<hr/><h4>Others</h4>");
-                    stringBuilder.Append("<div class='row'>");
-                }
+                HTMLHelper.Gallery.AddGalleryHeader(stringBuilder, null);
+
                 foreach (string image in images)
                 {
-                    HTMLHelper.AddImageToPage(htmlpath, imagePath, stringBuilder, image);
-                    if (count-- == 0)
-                    {
-                        count = 2;
-                        stringBuilder.Append("</div>");
-                        stringBuilder.Append("</div>");
-                        stringBuilder.Append("<div class='container mt-4'>");
-                        stringBuilder.Append("<div class='row'>");
-                    }
+                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, stringBuilder, image);
                 }
+
+                HTMLHelper.Gallery.AddGalleryFooter(stringBuilder);
             }
         }
 

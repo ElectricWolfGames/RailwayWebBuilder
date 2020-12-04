@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore.Headers
                 "Home layout"
             };
             Description = "Home model railway";
+
+            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

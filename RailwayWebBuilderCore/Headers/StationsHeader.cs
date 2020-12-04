@@ -17,6 +17,8 @@ namespace RailwayWebBuilderCore.Headers
                 "Loughborough",
             };
             Description = "Railway Stations";
+
+            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }
