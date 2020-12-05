@@ -44,24 +44,27 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
         private void AddLoughborough_001(string imagePath)
         {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
             Directory.CreateDirectory(imagePath);
 
             _pageBuilder.Append($"<hr/>");
             _pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Loughborough Station\2020-10-17\";
-            _pageBuilder.AddImages(HtmlPath, imagePath, path);
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
 
         private void AddLoughborough_002(string imagePath)
         {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+
             Directory.CreateDirectory(imagePath);
 
             _pageBuilder.Append($"<hr/>");
             _pageBuilder.Append("<h2>Class 101 Stopping and starting, Approuching loughborough Station</h2> 31/10/2020");
 
             string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Loughborough Station\2020-11-01\";
-            _pageBuilder.AddImages(HtmlPath, imagePath, path);
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
     }
 }

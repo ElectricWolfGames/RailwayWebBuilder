@@ -41,7 +41,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Output();
         }
 
-        private static string AddHalt_001(string htmlpath, string imagePath)
+        private static string AddHalt_001(string HtmlPath, string imagePath)
         {
             Directory.CreateDirectory(imagePath);
 
@@ -60,7 +60,8 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
-            pageBuilder.AddImages(htmlpath, imagePath, path);
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
 
             return pageBuilder.GetString();
         }

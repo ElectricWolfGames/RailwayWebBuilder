@@ -166,12 +166,12 @@ namespace RailwayWebBuilderCore.Services
 
         private void AddLoco(string uri, Locos locos)
         {
-            HtmlTableExtract table = GetTable(uri, locos);
+            /*HtmlTableExtract table = GetTable(uri, locos);
 
             _locos.Add(locos, table);
             HtmlTableExtractLoco tableLoco = Get(locos);
 
-            var loco = BuildDB(tableLoco, uri);
+            var loco = BuildDB(tableLoco, uri);*/
         }
 
         private LocomotiveDetails BuildDB(HtmlTableExtractLoco table, string uri)

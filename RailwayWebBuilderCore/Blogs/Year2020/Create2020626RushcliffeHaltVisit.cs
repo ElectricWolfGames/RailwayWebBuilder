@@ -11,7 +11,7 @@ namespace RailwayWebBuilderCore.Blogs.Year2020
             Date = new DateTime(2020, 06, 26);
             Paragraph = "Quick visit to Rushcliffe Halt ";
             Link = "Stations/RushcliffeHalt/index.html";
-            KeyImage = @"Stations\RushcliffeHalt/images\P6260086.JPG";
+            KeyImage = @"Stations\RushcliffeHalt/images/P6260086.JPG";
         }
     }
 }
