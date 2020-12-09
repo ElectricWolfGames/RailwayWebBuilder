@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Location = new SilebyCommunityCentre();
             EventDates = "15th February 2020";
             Descrption = "Leicester Model Railway Show. Sileby Community Centre, High ST, Sileby, Leicester. LE12 7RX";
-            ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-15 Syston Model Railway Society";
+            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-15 Syston Model Railway Society";
             TripDate = new DateTime(2020, 02, 16);
             YouTubeLink = "https://www.youtube.com/embed/i6PBrCMCTHg";
             ImageFolder = "20200215-Syston";

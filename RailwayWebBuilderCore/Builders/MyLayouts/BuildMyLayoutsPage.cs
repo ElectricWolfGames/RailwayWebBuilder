@@ -70,7 +70,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
             pageBuilder.Append("</div>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-11-06 Running, New House\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-11-06 Running, New House\";
 
             pageBuilder.AddImages(htmlpath, imagePath, path);
             return pageBuilder.GetString();
@@ -86,7 +86,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<h2>I see grass! (Shelf display)</h2>");
             pageBuilder.Append("<p>Final added some grass, shrubs and fences to my Shelf display</p>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-05-11 Hills are green\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-05-11 Hills are green\";
 
             pageBuilder.AddImages(htmlpath, imagePath, path);
             return pageBuilder.GetString();
@@ -103,7 +103,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>Testing our trains out on the floor, lets us play with some ideas for the layout. Managed to gets some of my Dads rolling stock running as well.</p>");
             pageBuilder.Append("<p>You can see I ran out of straight and had to use curve track for the sidings :)</p>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-04-18 Running\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\2020-04-18 Running\";
             pageBuilder.AddImages(htmlpath, imagePath, path);
 
             pageBuilder.Append("<div class='col-md-8'>");
@@ -129,7 +129,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>Here are some image of my Shelf display, it's just a static scene to have a nice place to put locos on and leave them on display.</p>");
             pageBuilder.Append("<p>next will be the bridge and track along the top.</p>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\003-HillsAndTrack\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\003-HillsAndTrack\";
             pageBuilder.AddImages(htmlpath, imagePath, path);
 
             return pageBuilder.GetString();
@@ -146,7 +146,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>I've picked my final plan. It's got a main straight line for through traffic, a yard for shunting and a area for a shed.</p>");
             pageBuilder.Append("<p>But still a lot of space for some nice scenery.</p>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\002-Layout\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\002-Layout\";
             pageBuilder.AddImages(htmlpath, imagePath, path);
 
             return pageBuilder.GetString();
@@ -163,7 +163,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             pageBuilder.Append("<p>For the Shunting yard, I played around with many track layouts, just by laying track down on the surface to see how it will look.</p>");
             pageBuilder.Append("<p>Here are some of them...</p>");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\MyLayout\001-Track Ideas\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\001-Track Ideas\";
             pageBuilder.AddImages(htmlpath, imagePath, path);
 
             return pageBuilder.GetString();

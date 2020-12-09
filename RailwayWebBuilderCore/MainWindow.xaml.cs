@@ -4,6 +4,7 @@ using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Stations;
+using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
@@ -23,7 +24,7 @@ namespace RailwayWebBuilderCore
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _cacheFolder = @"F:\Trains\DeletableCache\";
+        private string _cacheFolder = Constants.DriveLetter + @"Trains\DeletableCache\";
 
         public MainWindow()
         {
@@ -93,7 +94,7 @@ namespace RailwayWebBuilderCore
         {
             var psi = new ProcessStartInfo
             {
-                FileName = @"F:/eWolfSiteUploads/Railways/Locomotives/Index.html",
+                FileName = Constants.DriveLetter + @"eWolfSiteUploads/Railways/Locomotives/Index.html",
                 UseShellExecute = true
             };
             Process.Start(psi);

@@ -50,7 +50,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append($"<hr/>");
             pageBuilder.Append("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
 
-            string path = @"F:\Trains\eWolfModelRailwayWeb\Data\Stations\Rushcliffe Halt\2020-06-26\";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rushcliffe Halt\2020-06-26\";
 
             pageBuilder.Append("<div class='col-md-8'>");
             string youTubeLink = "https://www.youtube.com/embed/NemRaAwWhms";

@@ -1,6 +1,7 @@
 ﻿using eWolfBootstrap.HtmlExtracts;
 using eWolfCommon.Helpers;
 using eWolfCommon.Interfaces;
+using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System;
@@ -16,7 +17,7 @@ namespace RailwayWebBuilderCore.LocoDB
 
         private bool _isEditing;
         private bool _isSelected;
-        private string _outputFolder = @"F:\Trains\LocoDB\Locomotives\";
+        private string _outputFolder = Constants.DriveLetter + @"Trains\LocoDB\Locomotives\";
 
         public LocomotiveDetails()
         {

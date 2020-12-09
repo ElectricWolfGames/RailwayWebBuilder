@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore.Services
     public class LocomotiveDBServices
     {
         private ObservableCollection<LocomotiveDetails> _locomotiveDetails = new ObservableCollection<LocomotiveDetails>();
-        private string _outputFolder = @"F:\Trains\LocoDB\Locomotives\";
+        private string _outputFolder = @"G:\Trains\LocoDB\Locomotives";
 
         public static LocomotiveDBServices GetDBServices()
         {

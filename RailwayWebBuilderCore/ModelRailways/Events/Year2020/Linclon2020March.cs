@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Location = new NewarkShowground();
             EventDates = "Saturday 29th February & Sunday 1st March 2020";
             Descrption = "Lincoln Model Rail Club General Exhibition";
-            ImagesPath = @"F:\Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-29 NewarkLincolnModelRailClub";
+            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-29 NewarkLincolnModelRailClub";
             TripDate = new DateTime(2020, 02, 29);
             YouTubeLink = "https://www.youtube.com/embed/gHkPSd4i8_0";
             ImageFolder = "20200229-Newark";
