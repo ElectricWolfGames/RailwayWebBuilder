@@ -70,6 +70,9 @@ namespace RailwayWebBuilderCore
             BuildStationsLoughboroughStationPage b = new BuildStationsLoughboroughStationPage();
             b.Build();
 
+            BuildStationsQuornAndWoodHouse b3 = new BuildStationsQuornAndWoodHouse();
+            b3.Build();
+
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);
 

@@ -24,6 +24,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             AddStationLoughboroughStation(pageBuilder);
 
             AddStationRushcliffeHalt(pageBuilder);
+            AddBuildStationsQuornAndWoodHouse(pageBuilder);
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
@@ -38,15 +39,23 @@ namespace RailwayWebBuilderCore.Builders.Stations
         private static void AddStationRushcliffeHalt(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
             pageBuilder.Append($"<hr/>");
-            string path = "RushcliffeHalt/index.html";
+            string path = "GCR-RushcliffeHalt/index.html";
             string name = "<h2>Rushcliffe Halt (GCRN)</h2>";
+            pageBuilder.Append($"<a href='{path}'>{name}</a>");
+        }
+
+        private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
+        {
+            pageBuilder.Append($"<hr/>");
+            string path = "GCR-QuornAndWoodhouse/index.html";
+            string name = "<h2>Quorn And Woodhouse (GCRN)</h2>";
             pageBuilder.Append($"<a href='{path}'>{name}</a>");
         }
 
         private static void AddStationLoughboroughStation(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
             pageBuilder.Append($"<hr/>");
-            string path = "LoughboroughStation/index.html";
+            string path = "GCR-LoughboroughStation/index.html";
             string name = "<h2>Loughborough Station (GCR)</h2>";
             pageBuilder.Append($"<a href='{path}'>{name}</a>");
         }

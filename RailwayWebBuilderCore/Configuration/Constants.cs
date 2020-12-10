@@ -20,5 +20,6 @@
         public const string StationFolder = Stations + @"\";
         public const string RushcliffeHaltFolder = StationFolder + @"GCR-RushcliffeHalt\";
         public const string LoughboroughStationFolder = StationFolder + @"GCR-LoughboroughStation\";
+        public const string QuornAndWoodHouseFolder = StationFolder + @"GCR-QuornAndWoodHouse\";
     }
 }

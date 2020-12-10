@@ -9,14 +9,13 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-
-    public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationssPages
+    public class BuildStationsQuornAndWoodHouse : BuildStationsBase, IStationssPages
     {
-        private StationLocationsBase _stationLocations = new RushcliffeHaltGCR();
+        private StationLocationsBase _stationLocations = new QuornWoodhouseStationGCR();
         public string HtmlFileName { get; } = "index.html";
-        public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
-        public string HtmlPath { get; } = Constants.RushcliffeHaltFolder;
-        public string PageTitle { get; } = "Rushcliffe Halt";
+        public string LocalPath { get; } = Constants.RootPath + Constants.QuornAndWoodHouseFolder;
+        public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
+        public string PageTitle { get; } = "Quorn And WoodHouse";
 
         public void Build()
         {
@@ -30,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, _stationLocations);
 
-            _pageBuilder.Append(AddHalt_001(HtmlPath, HtmlPath + "images\\"));
+            _pageBuilder.Append(AddQuorn_Gallery(HtmlPath, HtmlPath + "images\\"));
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
@@ -42,29 +41,22 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Output();
         }
 
-        private static string AddHalt_001(string HtmlPath, string imagePath)
+        private static string AddQuorn_Gallery(string HtmlPath, string imagePath)
         {
             Directory.CreateDirectory(imagePath);
 
             var pageBuilder = new PageBuilder();
 
             pageBuilder.Append($"<hr/>");
-            pageBuilder.Append("<h2>First trip to Rushcliffe Halt featuring a class 66</h2> 26/06/2020");
+            pageBuilder.Append("<h2>Gallery</h2>");
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rushcliffe Halt\2020-06-26\";
-
-            pageBuilder.Append("<div class='col-md-8'>");
-            string youTubeLink = "https://www.youtube.com/embed/NemRaAwWhms";
-
-            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
-            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            string path = Constants.DriveLetter + @"\Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery";
 
             string htmlpath = Constants.RootPath + "\\" + HtmlPath;
             pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
 
             return pageBuilder.GetString();
         }
+
     }
 }
