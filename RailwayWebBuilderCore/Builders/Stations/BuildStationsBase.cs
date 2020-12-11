@@ -1,12 +1,33 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Headers;
+using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsBase
     {
         protected PageBuilder _pageBuilder;
+
+        protected StationsHeader CreateHeader(StationLocationsBase StationLocations)
+        {
+            var header = new StationsHeader();
+            header.Title = StationLocations.ShortName;
+            return header;
+        }
+
+        protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
+        {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Gallery</h2>");
+
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
+        }
 
         public void AddBreadCrumb(IPageDetails pageDetails)
         {

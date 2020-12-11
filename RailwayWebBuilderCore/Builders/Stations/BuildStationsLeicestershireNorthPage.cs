@@ -8,14 +8,14 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsQuornAndWoodHouse : BuildStationsBase, IStationsPages
+    public class BuildStationsLeicestershireNorthPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery\PA136556 GCR QuornAndWoodhouse.JPG";
+        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Leicestershire North\Gallery\P9155635 GCR LeicesterNorth.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.QuornAndWoodHouseFolder;
-        public string PageTitle { get; } = "Quorn And WoodHouse";
-        public StationLocationsBase StationLocations { get; } = new QuornWoodhouseStationGCR();
+        public string HtmlPath { get; } = Constants.LeicestershireNorthFolder;
+        public string LocalPath { get; } = Constants.RootPath + Constants.LeicestershireNorthFolder;
+        public string PageTitle { get; } = "Leicestershire North";
+        public StationLocationsBase StationLocations { get; } = new LeicesterNorthStationGCR();
 
         public void Build()
         {
@@ -29,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Leicestershire North\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");

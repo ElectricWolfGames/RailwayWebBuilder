@@ -14,6 +14,7 @@ namespace RailwayWebBuilderCore.Data
         public LatitudeLongitude LatitudeLongitude { get; set; }
         public LocationTypes LocationType { get; set; }
         public string Name { get; set; }
+        public string ShortName { get; set; }
         public string PostCode { get; set; }
     }
 }

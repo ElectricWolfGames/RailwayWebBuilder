@@ -10,6 +10,7 @@ namespace RailwayWebBuilderCore.Stations.StationLocations
             LatitudeLongitude = new LatitudeLongitude(52.769585, -1.196141);
             Address = "Loughborough Central Station, LE11 1RW";
             PostCode = "LE11 1RW";
+            ShortName = "Loughborough Station";
         }
     }
 }

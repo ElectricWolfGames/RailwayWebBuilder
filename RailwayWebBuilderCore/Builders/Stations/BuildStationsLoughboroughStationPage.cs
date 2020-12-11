@@ -1,7 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
-using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
@@ -9,28 +8,32 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsLoughboroughStationPage : BuildStationsBase, IStationssPages
+    public class BuildStationsLoughboroughStationPage : BuildStationsBase, IStationsPages
     {
-        private StationLocationsBase _stationLocations = new LoughboroughGCR();
+        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\2020-10-17\PA210666 GCR Loughborough.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.LoughboroughStationFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.LoughboroughStationFolder;
         public string PageTitle { get; } = "Loughborough Station";
+        public StationLocationsBase StationLocations { get; } = new LoughboroughGCR();
 
         public void Build()
         {
             Directory.CreateDirectory(HtmlPath);
 
-            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new StationsHeader(), "../../");
+            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, CreateHeader(StationLocations), "../../");
 
             _pageBuilder.Append(NavBarHelper.NavBar("../../"));
             AddBreadCrumb(this);
 
             _pageBuilder.Append("<div class='container mt-4'>");
-            Jumbotron(PageTitle, _stationLocations);
+            Jumbotron(PageTitle, StationLocations);
 
             AddLoughborough_002(HtmlPath + "images\\");
             AddLoughborough_001(HtmlPath + "images\\");
+
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\Gallery";
+            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");

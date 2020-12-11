@@ -65,13 +65,17 @@ namespace RailwayWebBuilderCore
             BuildCatalogPage.Build(null);
 
             BuildStationsHome.Build();
-            BuildStationsRushcliffeHaltPage b2 = new BuildStationsRushcliffeHaltPage();
-            b2.Build();
-            BuildStationsLoughboroughStationPage b = new BuildStationsLoughboroughStationPage();
-            b.Build();
 
-            BuildStationsQuornAndWoodHouse b3 = new BuildStationsQuornAndWoodHouse();
+            var b2 = new BuildStationsRushcliffeHaltPage();
+            b2.Build();
+            var b = new BuildStationsLoughboroughStationPage();
+            b.Build();
+            var b3 = new BuildStationsQuornAndWoodHouse();
             b3.Build();
+            var b4 = new BuildStationsLeicestershireNorthPage();
+            b4.Build();
+            var b5 = new BuildStationsRothleyPage();
+            b5.Build();
 
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);

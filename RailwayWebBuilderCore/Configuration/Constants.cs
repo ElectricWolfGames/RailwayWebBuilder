@@ -4,7 +4,7 @@
     {
         public const string DriveLetter = @"G:\";
 
-        public const string RootPath = DriveLetter +@"eWolfSiteUploads\Railways\";
+        public const string RootPath = DriveLetter + @"eWolfSiteUploads\Railways\";
         public const string ModelEvents = @"ModelEvents";
         public const string StandardClasses = "StandardClasses";
 
@@ -21,5 +21,8 @@
         public const string RushcliffeHaltFolder = StationFolder + @"GCR-RushcliffeHalt\";
         public const string LoughboroughStationFolder = StationFolder + @"GCR-LoughboroughStation\";
         public const string QuornAndWoodHouseFolder = StationFolder + @"GCR-QuornAndWoodHouse\";
+
+        public const string LeicestershireNorthFolder = StationFolder + @"GCR-LeicestershireNorth\";
+        public const string RothleyFolder = StationFolder + @"GCR-Rothley\";
     }
 }

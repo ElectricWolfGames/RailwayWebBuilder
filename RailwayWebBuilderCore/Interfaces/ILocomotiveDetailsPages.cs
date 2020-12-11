@@ -1,4 +1,5 @@
 ﻿using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Data;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
@@ -6,7 +7,10 @@ namespace RailwayWebBuilderCore.Interfaces
     {
     }
 
-    public interface IStationssPages : IPageDetails
+    public interface IStationsPages : IPageDetails
     {
+        StationLocationsBase StationLocations { get; }
+
+        string HilightImage { get; }
     }
 }

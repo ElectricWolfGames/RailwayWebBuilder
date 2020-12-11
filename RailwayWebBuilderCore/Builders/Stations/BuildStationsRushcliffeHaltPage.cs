@@ -1,7 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
-using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
@@ -9,26 +8,26 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-
-    public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationssPages
+    public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationsPages
     {
-        private StationLocationsBase _stationLocations = new RushcliffeHaltGCR();
+        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rushcliffe Halt\2020-06-26\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
         public string HtmlPath { get; } = Constants.RushcliffeHaltFolder;
+        public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
         public string PageTitle { get; } = "Rushcliffe Halt";
+        public StationLocationsBase StationLocations { get; } = new RushcliffeHaltGCR();
 
         public void Build()
         {
             Directory.CreateDirectory(HtmlPath);
 
-            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new StationsHeader(), "../../");
+            _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, CreateHeader(StationLocations), "../../");
 
             _pageBuilder.Append(NavBarHelper.NavBar("../../"));
             AddBreadCrumb(this);
 
             _pageBuilder.Append("<div class='container mt-4'>");
-            Jumbotron(PageTitle, _stationLocations);
+            Jumbotron(PageTitle, StationLocations);
 
             _pageBuilder.Append(AddHalt_001(HtmlPath, HtmlPath + "images\\"));
 

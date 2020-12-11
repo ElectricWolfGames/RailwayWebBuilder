@@ -7,9 +7,10 @@ namespace RailwayWebBuilderCore.Stations.StationLocations
         public RothleyStationGCR()
         {
             Name = "Rothley Station, Great Central Railway";
-            LatitudeLongitude = new LatitudeLongitude(52.769585, -1.196141);
-            Address = "Rothley Station, LE7 7LD";
-            PostCode = "LE7 7LD";
+            LatitudeLongitude = new LatitudeLongitude(52.70459550090345, -1.1598164015656793);
+            Address = "Station Rd, Leicester LE7 7LA";
+            PostCode = "LE7 7LA";
+            ShortName = "Rothley Station";
         }
     }
 }

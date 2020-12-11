@@ -8,14 +8,14 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsQuornAndWoodHouse : BuildStationsBase, IStationsPages
+    public class BuildStationsRothleyPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery\PA136556 GCR QuornAndWoodhouse.JPG";
+        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rothley\Gallery\P7134425 GCR Rothley.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.QuornAndWoodHouseFolder;
-        public string PageTitle { get; } = "Quorn And WoodHouse";
-        public StationLocationsBase StationLocations { get; } = new QuornWoodhouseStationGCR();
+        public string HtmlPath { get; } = Constants.RothleyFolder;
+        public string LocalPath { get; } = Constants.RootPath + Constants.RothleyFolder;
+        public string PageTitle { get; } = "Rothley";
+        public StationLocationsBase StationLocations { get; } = new RothleyStationGCR();
 
         public void Build()
         {
@@ -29,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery";
+            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rothley\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
