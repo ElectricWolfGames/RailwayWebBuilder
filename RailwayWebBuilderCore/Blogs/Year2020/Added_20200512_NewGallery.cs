@@ -3,9 +3,9 @@ using System;
 
 namespace RailwayWebBuilderCore.Blogs.Year2020
 {
-    public class AddedNewGallery : BlogBase
+    public class Added_20200512_NewGallery : BlogBase
     {
-        public AddedNewGallery()
+        public Added_20200512_NewGallery()
         {
             Name = "Site update";
             Date = new DateTime(2020, 12, 05);

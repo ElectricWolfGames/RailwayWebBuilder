@@ -3,9 +3,9 @@ using System;
 
 namespace RailwayWebBuilderCore.Blogs.Year2020
 {
-    public class AddedLoughboroughStation : BlogBase
+    public class Added_20201022_LoughboroughStation : BlogBase
     {
-        public AddedLoughboroughStation()
+        public Added_20201022_LoughboroughStation()
         {
             Name = "Added Loughborough Station";
             Date = new DateTime(2020, 10, 22);
