@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsRothleyPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rothley\Gallery\P7134425 GCR Rothley.JPG";
+        public string HilightImage { get; } = @"GCR-Rothley\images\P7134422-GCR-Rothley.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.RothleyFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.RothleyFolder;

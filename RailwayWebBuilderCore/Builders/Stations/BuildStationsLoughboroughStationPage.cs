@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsLoughboroughStationPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\2020-10-17\PA210666 GCR Loughborough.JPG";
+        public string HilightImage { get; } = @"GCR-LoughboroughStation\images\PA210666-GCR-Loughborough.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.LoughboroughStationFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.LoughboroughStationFolder;

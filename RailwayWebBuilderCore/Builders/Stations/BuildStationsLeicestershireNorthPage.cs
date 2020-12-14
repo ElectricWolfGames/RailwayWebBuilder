@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsLeicestershireNorthPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Leicestershire North\Gallery\P9155635 GCR LeicesterNorth.JPG";
+        public string HilightImage { get; } = @"GCR-LeicestershireNorth\images\P7134400-GCR-Leicester-north.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.LeicestershireNorthFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.LeicestershireNorthFolder;

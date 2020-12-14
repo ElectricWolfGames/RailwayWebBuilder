@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Blogs.Year2020
             Name = "Added Loughborough Station";
             Date = new DateTime(2020, 10, 22);
             Paragraph = "Added Loughborough Station to the station pages with images.";
-            Link = "Stations/LoughboroughStation/index.html";
+            Link = "Stations/GCR-LoughboroughStation/index.html";
         }
     }
 }

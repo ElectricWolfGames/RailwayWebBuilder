@@ -23,10 +23,10 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("<div class='row mb-2'>");
 
             AddStationLoughboroughStation(pageBuilder);
-            AddStationRushcliffeHalt(pageBuilder);
             AddBuildStationsQuornAndWoodHouse(pageBuilder);
-            AddStationLeicestershireNorth(pageBuilder);
             AddStationRothley(pageBuilder);
+            AddStationLeicestershireNorth(pageBuilder);
+            AddStationRushcliffeHalt(pageBuilder);
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");

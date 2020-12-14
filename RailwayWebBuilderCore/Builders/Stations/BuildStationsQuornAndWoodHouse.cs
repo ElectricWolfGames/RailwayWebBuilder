@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsQuornAndWoodHouse : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Quorn And WoodHouse\Gallery\PA136556 GCR QuornAndWoodhouse.JPG";
+        public string HilightImage { get; } = @"GCR-QuornAndWoodHouse\images\P7134452-GCR-Quorn-and-woodhouse.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.QuornAndWoodHouseFolder;

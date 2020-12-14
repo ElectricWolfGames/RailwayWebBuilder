@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 {
     public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rushcliffe Halt\2020-06-26\P6260073.JPG";
+        public string HilightImage { get; } = @"GCR-RushcliffeHalt\images\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.RushcliffeHaltFolder;
         public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
