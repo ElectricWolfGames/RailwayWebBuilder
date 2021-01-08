@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public const string DriveLetter = @"G:\";
+        public const string DriveLetter = @"D:\";
 
         public const string RootPath = DriveLetter + @"eWolfSiteUploads\Railways\";
         public const string ModelEvents = @"ModelEvents";
