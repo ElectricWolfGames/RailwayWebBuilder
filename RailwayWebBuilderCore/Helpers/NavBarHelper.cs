@@ -54,6 +54,48 @@ namespace RailwayWebBuilderCore.Helpers
             return stringBuilder.ToString();
         }
 
+        public static string Pagination(int pageIndex, int totalPages)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("<nav aria-label='...'>");
+            stringBuilder.Append("<ul class='pagination'>");
+
+            string extra = string.Empty;
+            if (pageIndex == 0)
+                extra = " disabled";
+
+            stringBuilder.Append($"<li class='page-item {extra}'>");
+            stringBuilder.Append($"<a class='page-link' href='{GetHtmlPageName(pageIndex - 1)}' tabindex=' - 1'>Previous</a>");
+            stringBuilder.Append("</li>");
+
+            for (int i = 0; i < totalPages; i++)
+            {
+                if (pageIndex == i)
+                {
+                    stringBuilder.Append("<li class='page-item active'>");
+                    stringBuilder.Append($"<a class='page-link' href='{GetHtmlPageName(i)}'>{i} <span class='sr-only'>(current)</span></a>");
+                    stringBuilder.Append("</li>");
+                }
+                else
+                {
+                    stringBuilder.Append($"<li class='page-item'><a class='page-link' href='{GetHtmlPageName(i)}'>{i}</a></li>");
+                }
+            }
+
+            extra = string.Empty;
+            if (pageIndex == totalPages - 1)
+                extra = " disabled";
+
+            stringBuilder.Append($"<li class='page-item{extra}'>");
+            stringBuilder.Append($"<a class='page-link' href='{GetHtmlPageName(pageIndex + 1)}'>Next</a>");
+            stringBuilder.Append("</li>");
+
+            stringBuilder.Append("</ul>");
+            stringBuilder.Append("</nav>");
+
+            return stringBuilder.ToString();
+        }
+
         private static void AddAllModelEvents(StringBuilder stringBuilder, string path)
         {
             ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
@@ -65,6 +107,20 @@ namespace RailwayWebBuilderCore.Helpers
                 string eventLine = $"<a class='dropdown-item' href='{path}/{pageDetails.ImageFolder}/index.html'>{pageDetails.TripDate.ToString("yyyy-MM-dd")}-{pageDetails.Name}</a>";
                 stringBuilder.AppendLine(eventLine);
             }
+        }
+
+        private static string GetHtmlPageName(int index)
+        {
+            return $"index{GetPageName(index)}.html";
+        }
+
+        private static string GetPageName(int index)
+        {
+            string pageIndexDisplay = string.Empty;
+            if (index != 0)
+                pageIndexDisplay = index.ToString("00");
+
+            return pageIndexDisplay;
         }
     }
 }

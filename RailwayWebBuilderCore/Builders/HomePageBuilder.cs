@@ -52,7 +52,7 @@ namespace RailwayWebBuilderCore.Builders
                 {
                     stringBuilder.AppendLine("				<li>");
                     stringBuilder.AppendLine($"					<a href='{blog.Link}'>{blog.Name}</a>");
-                    stringBuilder.AppendLine($"					<a href='#' class='float-right'>{blog.Date.ToShortDateString()}</a>");
+                    stringBuilder.AppendLine($"					<a href='{blog.Link}' class='float-right'>{blog.Date.ToShortDateString()}</a>");
                     stringBuilder.AppendLine($"<p>{blog.Paragraph}</p>");
 
                     string keyImage = blog.GetKeyImagePath();
