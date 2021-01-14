@@ -65,7 +65,7 @@ namespace RailwayWebBuilderCore.Helpers
                 extra = " disabled";
 
             stringBuilder.Append($"<li class='page-item {extra}'>");
-            stringBuilder.Append($"<a class='page-link' href='{GetHtmlPageName(pageIndex - 1)}' tabindex=' - 1'>Previous</a>");
+            stringBuilder.Append($"<a class='page-link' href='{GetHtmlPageName(pageIndex - 1)}' tabindex='-1'>Previous</a>");
             stringBuilder.Append("</li>");
 
             for (int i = 0; i < totalPages; i++)
@@ -109,7 +109,7 @@ namespace RailwayWebBuilderCore.Helpers
             }
         }
 
-        private static string GetHtmlPageName(int index)
+        public static string GetHtmlPageName(int index)
         {
             return $"index{GetPageName(index)}.html";
         }

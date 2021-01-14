@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 {
     public class BuildMyLayoutsPage
     {
-        private const int DetailsPerPage = 5;
+        private const int DetailsPerPage = 4;
         private static List<ILayoutPagesDetails> _orderedDetails;
 
         public static void Build(IModelEvent pageDetails)
@@ -23,16 +23,14 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             string htmlpath = Constants.FullMyLayouts;
             Directory.CreateDirectory(htmlpath);
 
-            int totalPages = (_orderedDetails.Count / DetailsPerPage) + 1;
+            int totalPages = (_orderedDetails.Count / DetailsPerPage);
 
             int pageIndex = 0;
             while (_orderedDetails.Any())
             {
-                string pageIndexDisplay = string.Empty;
-                if (pageIndex != 00)
-                    pageIndexDisplay = pageIndex.ToString("00");
+                string pageIndexDisplay = NavBarHelper.GetHtmlPageName(pageIndex);
 
-                var pageBuilder = new PageBuilder($"index{pageIndexDisplay}.html", htmlpath, new MyLayoutHeader(), "../");
+                var pageBuilder = new PageBuilder($"{pageIndexDisplay}", htmlpath, new MyLayoutHeader(), "../");
 
                 pageBuilder.Append(NavBarHelper.NavBar("../"));
 
