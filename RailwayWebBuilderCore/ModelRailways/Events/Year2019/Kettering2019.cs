@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
             Location = new GreenfieldsPrimarySchoolKettering();
             EventDates = "14th September 2019";
             Descrption = "Kettering and District Model Railway Society Annual Model Railway Exhibition";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-09-14 Kettering Model Railway Exhibition";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2019-09-14 Kettering Model Railway Exhibition";
             TripDate = new DateTime(2019, 09, 14);
             YouTubeLink = "https://www.youtube.com/embed/DzjtAOowBKE";
             ImageFolder = "20190914-Kettering";

@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
             Location = new GrammarSchoolLoughborough();
             EventDates = "31st August and 1st September 2019";
             Descrption = "Loughborough Model Railway Exhibition";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-08-31 Loughborough model railway exhibition 2019";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2019-08-31 Loughborough model railway exhibition 2019";
             TripDate = new DateTime(2019, 08, 31);
             YouTubeLink = "https://www.youtube.com/embed/oFrYD7NMH-8";
             ImageFolder = "20190831-Loughborough";

@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             When = new DateTime(2020, 02, 09);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\002-Layout\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\002-Layout\";
             ExportImagePath = Constants.FullMyLayouts + "images\\002\\";
 
             Title = "<h2>Final Plan (Shunting yard)</h2>";

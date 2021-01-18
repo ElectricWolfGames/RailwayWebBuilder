@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Location = new HeanorMinersWelfareIlkeston();
             EventDates = "23rd February 2020";
             Descrption = "Heanor Miners Welfare, Ilkeston Road, Heanor, Derbyshire DE75 7DT";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2020-02-23 Ilkeston (Woodside) Model Railway Club";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2020-02-23 Ilkeston (Woodside) Model Railway Club";
             TripDate = new DateTime(2020, 02, 23);
             YouTubeLink = "https://www.youtube.com/embed/K-yUlJL_O6I";
             ImageFolder = "20200223-Ilkeston";

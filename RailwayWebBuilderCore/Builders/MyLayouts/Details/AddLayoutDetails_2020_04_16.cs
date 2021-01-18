@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             When = new DateTime(2020, 04, 16);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\003-HillsAndTrack\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\003-HillsAndTrack\";
             ExportImagePath = Constants.FullMyLayouts + "images\\003\\";
 
             Title = "<h2>It's been a while (Shelf display)</h2>";

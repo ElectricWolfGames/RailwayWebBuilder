@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
             Location = new TheSummitCentreKirkby();
             EventDates = "12th October 2019";
             Descrption = "The Elizabethan Railway Society Exhibition at Kirkby-In-Ashfield.";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-12 Kirkby-In-Ashfield Model Railway Exhibition";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2019-10-12 Kirkby-In-Ashfield Model Railway Exhibition";
             TripDate = new DateTime(2019, 10, 12);
             YouTubeLink = "https://www.youtube.com/embed/yP6tlbtXYxA";
             ImageFolder = "20191012-Kirkby";

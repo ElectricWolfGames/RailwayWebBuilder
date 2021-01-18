@@ -32,7 +32,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             AddLoughborough_002(HtmlPath + "images\\");
             AddLoughborough_001(HtmlPath + "images\\");
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\Gallery";
+            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
@@ -53,7 +53,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append($"<hr/>");
             _pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\2020-10-17\";
+            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2020-10-17\";
             _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
 
@@ -66,7 +66,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append($"<hr/>");
             _pageBuilder.Append("<h2>Class 101 Stopping and starting, Approuching loughborough Station</h2> 31/10/2020");
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Loughborough Station\2020-11-01\";
+            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2020-11-01\";
             _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
     }

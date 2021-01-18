@@ -29,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\Stations\GCR-Rothley\Gallery";
+            string path = Constants.RawDataPath + @"Stations\GCR-Rothley\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");

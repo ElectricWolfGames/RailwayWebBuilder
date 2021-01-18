@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
             Location = new NewarkShowground();
             EventDates = "19th and 20th October 2019";
             Descrption = "Lincoln Model Rail Club Post Modernisation Exhibition";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-10-19 Newark Model LincolnModelRailClub";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2019-10-19 Newark Model LincolnModelRailClub";
             TripDate = new DateTime(2019, 10, 19);
             YouTubeLink = "https://www.youtube.com/embed/sfhv8iYXiYU";
             ImageFolder = "20191019-Lincoln";

@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             When = new DateTime(2020, 04, 25);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\\2020-04-18 Running\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\\2020-04-18 Running\";
             ExportImagePath = Constants.FullMyLayouts + "images\\004\\";
             YouTubeLink = "UizKwGgh1TA";
 

@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2019
             Name = "Burton Model Railex";
             EventDates = "3rd November 2019";
             Descrption = "Burton Model Railex 2019 at the National Brewery Centre.";
-            ImagesPath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\ModelEvents\2019-11-03 BurtonModelRailex";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2019-11-03 BurtonModelRailex";
             TripDate = new DateTime(2019, 11, 03);
             YouTubeLink = "https://www.youtube.com/embed/gADZzAauDuU";
             ImageFolder = "20191103-Burton";

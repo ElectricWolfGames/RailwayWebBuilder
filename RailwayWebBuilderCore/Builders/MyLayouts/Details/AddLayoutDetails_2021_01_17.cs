@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             When = new DateTime(2021, 01, 17);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.DriveLetter + @"Trains\eWolfModelRailwayWeb\Data\MyLayout\2021-01-17 First Fixedlayout\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\2021-01-17 First Fixedlayout\";
             ExportImagePath = Constants.FullMyLayouts + "images\\009\\";
 
             Title = "<h2>Started our fixed layout</h2>";

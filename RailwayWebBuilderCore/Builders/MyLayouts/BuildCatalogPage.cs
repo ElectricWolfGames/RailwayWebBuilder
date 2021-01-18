@@ -46,7 +46,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
             pageBuilder.Append($"<h2>{name}</h2>");
 
-            string path = Constants.DriveLetter + $@"Trains\eWolfModelRailwayWeb\Data\Catalog\{name}";
+            string path = Constants.RawDataPath + $@"Catalog\{name}";
             List<string> images = ImageHelper.GetAllImages(path);
 
             pageBuilder.Append("<div class='container mt-4'><div class='row'>");
