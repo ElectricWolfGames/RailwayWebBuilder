@@ -62,7 +62,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
             IStationsPages stationsPages = new BuildStationsQuornAndWoodHouse();
-            string htmlPath = $@"GCR-QuornAndWoodhouse\{stationsPages.HtmlFileName}";
+            string htmlPath = $@"GCR-QuornAndWoodHouse\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 

@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             string htmlpath = Constants.FullMyLayouts;
             Directory.CreateDirectory(htmlpath);
 
-            int totalPages = (_orderedDetails.Count / DetailsPerPage);
+            int totalPages = (_orderedDetails.Count / DetailsPerPage) + 1;
 
             int pageIndex = 0;
             while (_orderedDetails.Any())

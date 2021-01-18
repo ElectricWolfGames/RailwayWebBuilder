@@ -4,6 +4,8 @@
     {
         public const string DriveLetter = @"D:\";
 
+        public const string RawDataPath = DriveLetter + @"Trains\_WebsiteData\";
+
         public const string RootPath = DriveLetter + @"eWolfSiteUploads\Railways\";
         public const string ModelEvents = @"ModelEvents";
         public const string StandardClasses = "StandardClasses";
