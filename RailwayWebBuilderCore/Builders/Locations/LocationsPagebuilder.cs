@@ -118,10 +118,12 @@ namespace RailwayWebBuilderCore.Builders.Locations
                 if (item.Location.LatitudeLongitude == null)
                     continue;
 
-                var lh = new LocationHolder();
-                lh.Location = item.Location.LatitudeLongitude.Location;
-                lh.FilmName = item.Location.Name;
-                lh.FilmSiteLink = $"{item.ImageFolder}/index.html";
+                var lh = new LocationHolder
+                {
+                    Location = item.Location.LatitudeLongitude.Location,
+                    FilmName = item.Location.Name,
+                    FilmSiteLink = $"{item.ImageFolder}/index.html"
+                };
                 locationHolders.Add(lh);
             }
 

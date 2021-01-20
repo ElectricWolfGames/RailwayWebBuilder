@@ -3,9 +3,9 @@ using System;
 
 namespace RailwayWebBuilderCore.Blogs.Year2021
 {
-    public class _2021_01_08_NewLocos : BlogBase
+    public class Blog_2021_01_08_NewLocos : BlogBase
     {
-        public _2021_01_08_NewLocos()
+        public Blog_2021_01_08_NewLocos()
         {
             Name = "New locos running";
             Date = new DateTime(2021, 01, 08);

@@ -43,11 +43,13 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 {
                     continue;
                 }
-                List<string> locoFields = new List<string>();
-                locoFields.Add(loco.Name);
-                locoFields.Add(loco.Whyte);
-                locoFields.Add(loco.Length);
-                locoFields.Add(loco.Axleload);
+                List<string> locoFields = new List<string>
+                {
+                    loco.Name,
+                    loco.Whyte,
+                    loco.Length,
+                    loco.Axleload
+                };
                 th.AddRow(locoFields.ToArray());
             }
 

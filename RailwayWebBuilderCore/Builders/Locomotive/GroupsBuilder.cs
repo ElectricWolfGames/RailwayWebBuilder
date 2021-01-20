@@ -50,12 +50,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             foreach (var loco in locos)
             {
-                if (loco.Name.Contains("LMS Fairburn 2-6-4T"))
-                {
-                    int i = 0;
-                    i++;
-                }
-
                 List<string> locoFields = new List<string>
                 {
                     loco.Name,

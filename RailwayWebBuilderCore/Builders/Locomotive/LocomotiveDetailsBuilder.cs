@@ -54,7 +54,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             }
         }
 
-        private List<ILocomotiveDetailsPages> GetAll()
+        private static List<ILocomotiveDetailsPages> GetAll()
         {
             var canBlog = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(ILocomotiveDetailsPages))

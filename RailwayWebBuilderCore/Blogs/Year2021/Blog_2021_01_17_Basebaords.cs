@@ -3,9 +3,9 @@ using System;
 
 namespace RailwayWebBuilderCore.Blogs.Year2021
 {
-    public class _2021_01_17_Basebaords : BlogBase
+    public class Blog_2021_01_17_Basebaords : BlogBase
     {
-        public _2021_01_17_Basebaords()
+        public Blog_2021_01_17_Basebaords()
         {
             Name = "New fix layout";
             Date = new DateTime(2021, 01, 17);
