@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 {
     public class BuildMyLayoutsPage
     {
-        private const int DetailsPerPage = 4;
+        private const int DetailsPerPage = 5;
         private static List<ILayoutPagesDetails> _orderedDetails;
 
         public static void Build(IModelEvent pageDetails)
@@ -35,7 +35,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                 pageBuilder.Append(NavBarHelper.NavBar("../"));
 
                 pageBuilder.Append("<div class='container mt-4'>");
-                pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>It's now our turn, I've just started to build our new layout, currently on the floor!</p>");
+                pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>Now it's our turn, We have just started to build our first layout.</br>The baseboards have arrived and are now up, And we can start thinking about track and the layout!</p>");
 
                 pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
                 for (int i = 0; i < DetailsPerPage; i++)

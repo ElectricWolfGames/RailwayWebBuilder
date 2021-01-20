@@ -58,7 +58,7 @@ namespace RailwayWebBuilderCore.Builders
                     string keyImage = blog.GetKeyImagePath();
                     if (!string.IsNullOrWhiteSpace(keyImage))
                     {
-                        stringBuilder.AppendLine($"      <img class='rounded ' width='320px' height ='240px'src='{keyImage}'>");
+                        stringBuilder.AppendLine($"      <a href='{blog.Link}'><img class='rounded ' width='320px' height ='240px'src='{keyImage}'></a>");
                     }
                     stringBuilder.AppendLine("				</li>");
                 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class AddLayoutDetails_2021_01_01 : ILayoutPagesDetails
+    public class AddLayoutDetails_2020_10_07 : ILayoutPagesDetails
     {
         public string RawImagePath { get; }
         public string ExportImagePath { get; }
@@ -13,9 +13,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
         public StringBuilder Details { get; }
         public DateTime When { get; }
 
-        public AddLayoutDetails_2021_01_01()
+        public AddLayoutDetails_2020_10_07()
         {
-            When = new DateTime(2020, 11, 07);
+            When = new DateTime(2020, 10, 07);
             Details = new StringBuilder();
 
             Title = "<h2>Everything has changed</h2>";

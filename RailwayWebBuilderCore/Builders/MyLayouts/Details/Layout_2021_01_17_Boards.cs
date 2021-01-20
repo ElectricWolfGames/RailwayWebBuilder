@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class AddLayoutDetails_2021_01_17 : ILayoutPagesDetails
+    public class Layout_2021_01_17_Boards : ILayoutPagesDetails
     {
         public string RawImagePath { get; }
         public string ExportImagePath { get; }
@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
         public StringBuilder Details { get; }
         public DateTime When { get; }
 
-        public AddLayoutDetails_2021_01_17()
+        public Layout_2021_01_17_Boards()
         {
             When = new DateTime(2021, 01, 17);
             Details = new StringBuilder();
@@ -25,6 +25,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2>Started our fixed layout</h2>";
 
             Details.Append("<p>We have our base boards and we have just finished building them in our spare bedroom.</p>");
+            Details.Append("<p>The boards are from <a href='https://www.whiterosemodelworks.co.uk/' target=blank'>White Rose Model Works</a>, Very good quality and price.</p>");
 
             YouTubeLink = "nZ64DxtbbNQ";
         }
