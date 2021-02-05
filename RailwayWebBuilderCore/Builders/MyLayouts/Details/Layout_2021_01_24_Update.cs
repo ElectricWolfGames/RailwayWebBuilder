@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class Layout_2021_01_24_Update : ILayoutPagesDetails
+    public class Layout_2021_01_24_Update_Name : ILayoutPagesDetails
     {
         public string RawImagePath { get; }
         public string ExportImagePath { get; }
@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
         public StringBuilder Details { get; }
         public DateTime When { get; }
 
-        public Layout_2021_01_24_Update()
+        public Layout_2021_01_24_Update_Name()
         {
             When = new DateTime(2021, 01, 24);
             Details = new StringBuilder();
