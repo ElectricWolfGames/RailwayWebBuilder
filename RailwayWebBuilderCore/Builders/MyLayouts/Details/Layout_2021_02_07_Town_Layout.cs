@@ -22,13 +22,14 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-02-07 Town Layout\";
             ExportImagePath = Constants.FullMyLayouts + "images\\011\\";
 
-            Title = "<h2>Change of layout and town</h2>";
+            Title = "<h2>Change of layout and town update!</h2>";
 
             Details.Append("<p>We have moved things around now,</p>");
-            Details.Append("<p>So the staion has moved, this will now be next to the Cattington Town.</p>");
-            Details.Append("<p>This lets us combine the engine depot and shunting yard together</p>");
+            Details.Append("<p>So the station has moved, this will now be next to Cattington Town.</p>");
+            Details.Append("<p>This lets us move the engine depot around and have a large shunting yard.</p>");
+            Details.Append("<p>We have also placed the village inn and a church.</p>");
 
-            YouTubeLink = "NvHYQiO52n8";
+            YouTubeLink = "g6PCwGARk78";
         }
     }
 }

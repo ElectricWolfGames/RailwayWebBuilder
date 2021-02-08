@@ -8,6 +8,7 @@
 
         public const string RootPath = DriveLetter + @"eWolfSiteUploads\Railways\";
         public const string ModelEvents = @"ModelEvents";
+        public const string Shop = @"Shop";
         public const string StandardClasses = "StandardClasses";
 
         public const string MyLayouts = "MyLayouts";

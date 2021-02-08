@@ -3,6 +3,7 @@ using RailwayWebBuilderCore.Builders.Locations;
 using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
+using RailwayWebBuilderCore.Builders.Shop;
 using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDB;
@@ -81,6 +82,8 @@ namespace RailwayWebBuilderCore
             HomePageBuilder.Build(blogs.Blogs);
 
             LocationsPageBuilder.Build();
+
+            ShopPageBuilder.Build();
 
             LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
             ld.Build();
