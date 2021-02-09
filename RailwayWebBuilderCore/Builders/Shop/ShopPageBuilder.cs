@@ -14,10 +14,10 @@ namespace RailwayWebBuilderCore.Builders.Shop
             Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.Shop);
             string htmlpath = Constants.RootPath + "\\" + Constants.Shop + "\\";
 
-            var sb = new PageBuilder("Shop.html", htmlpath, new ModelEventsHeader(), "../");
+            var sb = new PageBuilder("GCRUnification.html", htmlpath, new ShopGCRHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));
             sb.Append("<div class='container mt-4'>");
-            sb.Jumbotron("<h2>Shop</h2>", "");
+            sb.Jumbotron("<h2>Great Central Reunification</h2>", "", 6);
 
             GCR(sb, htmlpath);
 
@@ -28,7 +28,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
         public static void GCR(PageBuilder sb, string htmlpath)
         {
-            string path = Constants.RawDataPath + @"\Shop\Unification book.jpg";
+            string bookPagesPath = Constants.RawDataPath + @"\Shop\Unification book.jpg";
+            string bookFrontPath = Constants.RawDataPath + @"\Shop\2020-12-08-reunification-book.jpg";
 
             sb.Append("<h2>Great Central Reunification</h2>");
             sb.Append("<p>It's one of the most exciting projects, not only in UK railway preservation but internationally too. We're putting together two surviving halves of the Great Central Railway to create an eighteen mile heritage main line, stretching across the East Midlands.<p/>");
@@ -46,16 +47,17 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append($"<h5 class='card-header'>REUNIFICATION, THE STORY SO FAR</h5>");
             sb.Append("<div class='card-body'>");
             sb.Append($"<p class='col-md-10 card-text float-left'>{descrption}</p>");
-            sb.Append($"<p class='col-md-6 float-right'>");
-            sb.AddImage(htmlpath, htmlpath + "images", path);
+            sb.Append($"<p class='col-md-10'>");
+            sb.AddImage(htmlpath, htmlpath + "images", bookFrontPath);
+            sb.AddImage(htmlpath, htmlpath + "images", bookPagesPath);
             sb.Append($"</p>");
-
-            sb.Append("</div>");
-            sb.Append("</div>");
-            sb.Append("</div>");
-
             sb.Append("<p>Just £10, plus £2.50 postage per book <b>All proceeds to the appeal</b></p>");
             sb.Append("<p>Order now, via email to blycett.gcr@gmail.com </p>");
+
+            sb.Append("</div>");
+            sb.Append("</div>");
+            sb.Append("</div>");
+
             sb.Append("</br></br></br></br></br>");
             sb.Append("<p></p>");
             sb.Append("<p></p>");
