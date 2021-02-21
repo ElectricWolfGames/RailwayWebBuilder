@@ -25,11 +25,18 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2>Stuck done some track and updated the Church</h2>";
 
             Details.Append("<p>We have started to glue the track down, currently I don't have enought cork to finish the work.</p>");
-            Details.Append("<p>But at least I've been able to get one track on to the swing out section.</p>");
+            Details.Append("<p>But at least we have been able to make a start.</p>");
 
-            Details.Append("<p>And we have added the scenery around the church</p>");
+            Details.Append("<p>And we have added the scenery around our church</p>");
+            Details.Append("<p>Links</p>");
+            Details.Append("<a href='http://electricwolf.co.uk/Railways/Shop/GCRUnification.html'>Great Central Reunification Book</a>");
+            Details.Append("</br>");
+            Details.Append("<a href='https://www.gcrailway.co.uk/'>Great Central Site</a>");
+            Details.Append("</br>");
+            Details.Append("<a href='https://youtu.be/6GeYIyMdWP4'>Watch the bridge over the main line.</a>");
+            Details.Append("</br>");
 
-            YouTubeLink = "????????";
+            YouTubeLink = "fSNT6e1RH84";
         }
     }
 }

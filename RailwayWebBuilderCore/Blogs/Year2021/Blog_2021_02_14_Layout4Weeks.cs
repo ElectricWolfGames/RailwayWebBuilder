@@ -11,7 +11,7 @@ namespace RailwayWebBuilderCore.Blogs.Year2021
             Date = new DateTime(2021, 02, 14);
             Paragraph = "We have made a lot of progress, but still much to do.";
             Link = "MyLayouts/index.html";
-            KeyImage = @"MyLayouts\images\012\P1161510.JPG";
+            KeyImage = @"MyLayouts\images\0214\P2131846.JPG";
         }
     }
 }

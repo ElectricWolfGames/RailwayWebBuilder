@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore.Headers
     {
         public MyLayoutHeader()
         {
-            Title = "My Layouts";
+            Title = "Our Layouts";
             Keywords = new List<string>
             {
                 "Model Trains",
