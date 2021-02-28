@@ -1,19 +1,11 @@
 ﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class Layout_2021_02_21_School_And_Hills : ILayoutPagesDetails
+    public class Layout_2021_02_21_School_And_Hills : LayoutBase
     {
-        public string RawImagePath { get; }
-        public string ExportImagePath { get; }
-        public string YouTubeLink { get; }
-        public string Title { get; }
-        public StringBuilder Details { get; }
-        public DateTime When { get; }
-
         public Layout_2021_02_21_School_And_Hills()
         {
             When = new DateTime(2021, 02, 21);

@@ -1,19 +1,11 @@
 ﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class Layout_2021_01_31_Town : ILayoutPagesDetails
+    public class Layout_2021_01_31_Town : LayoutBase
     {
-        public string RawImagePath { get; }
-        public string ExportImagePath { get; }
-        public string YouTubeLink { get; }
-        public string Title { get; }
-        public StringBuilder Details { get; }
-        public DateTime When { get; }
-
         public Layout_2021_01_31_Town()
         {
             When = new DateTime(2021, 01, 31);
@@ -25,7 +17,6 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2>Updating the Town</h2>";
 
             Details.Append("<p>We have started to work on the town</p>");
-            //Details.Append("<p>And some other update around the boards before we can do anything else.</p>");
 
             YouTubeLink = "ozEH8lHAAH8";
         }

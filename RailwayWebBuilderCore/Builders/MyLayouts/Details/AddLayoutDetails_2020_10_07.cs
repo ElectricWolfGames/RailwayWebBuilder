@@ -1,18 +1,10 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-using System;
+﻿using System;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class AddLayoutDetails_2020_10_07 : ILayoutPagesDetails
+    public class AddLayoutDetails_2020_10_07 : LayoutBase
     {
-        public string RawImagePath { get; }
-        public string ExportImagePath { get; }
-        public string YouTubeLink { get; }
-        public string Title { get; }
-        public StringBuilder Details { get; }
-        public DateTime When { get; }
-
         public AddLayoutDetails_2020_10_07()
         {
             When = new DateTime(2020, 10, 07);

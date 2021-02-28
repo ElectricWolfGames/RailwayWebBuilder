@@ -1,19 +1,11 @@
 ﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class Layout_2021_02_14_StuckRails_Church : ILayoutPagesDetails
+    public class Layout_2021_02_14_StuckRails_Church : LayoutBase
     {
-        public string RawImagePath { get; }
-        public string ExportImagePath { get; }
-        public string YouTubeLink { get; }
-        public string Title { get; }
-        public StringBuilder Details { get; }
-        public DateTime When { get; }
-
         public Layout_2021_02_14_StuckRails_Church()
         {
             When = new DateTime(2021, 02, 14);
