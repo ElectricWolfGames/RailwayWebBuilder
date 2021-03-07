@@ -35,7 +35,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                 pageBuilder.Append(NavBarHelper.NavBar("../"));
 
                 pageBuilder.Append("<div class='container mt-4'>");
-                pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>Now it's our turn, We have just started to build our first layout.</br>The baseboards have arrived and are now up, And we can start thinking about track and the layout!</p>");
+
+                pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>Now it's our turn, We have just started to build our first layout." +
+                    "</br>We are Building Cattington town, and we are updatd details here everyweek.</p>");
 
                 pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
                 for (int i = 0; i < DetailsPerPage; i++)

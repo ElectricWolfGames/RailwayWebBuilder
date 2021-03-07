@@ -29,6 +29,9 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
+            AddLoughborough_004(HtmlPath + "images\\");
+            AddLoughborough_003(HtmlPath + "images\\");
+
             AddLoughborough_002(HtmlPath + "images\\");
             AddLoughborough_001(HtmlPath + "images\\");
 
@@ -54,6 +57,30 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<h2>Loughborough Station viewed from a far</h2> 17 and 18/10/2020");
 
             string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2020-10-17\";
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
+        }
+
+        private void AddLoughborough_003(string imagePath)
+        {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Loughborough Station and area</h2> 27/02/2021");
+
+            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2021-02-27\";
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
+        }
+
+        private void AddLoughborough_004(string imagePath)
+        {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Loughborough Engine depot </h2> 2021-03-06");
+
+            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2021-03-06\";
             _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
 
