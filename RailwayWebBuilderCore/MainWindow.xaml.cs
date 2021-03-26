@@ -34,20 +34,16 @@ namespace RailwayWebBuilderCore
             DownloadServices ds = ServiceLocator.Instance.GetService<DownloadServices>();
             ds.CacheFolder = _cacheFolder;
 
-            var ldb = LocomotiveDBServices.GetDBServices();
-            ldb.Init();
+            //var ldb = LocomotiveDBServices.GetDBServices();
+            //ldb.Init();
 
-            /*myList.Items.Add(ldb.FullList[0]);
-            myList.Items.Add(ldb.FullList[1]);
-            myList.Items.Add(ldb.FullList[2]);
-            */
-            myList.ItemsSource = ldb.FullList;
+            //myList.ItemsSource = ldb.FullList;
 
             //List.ItemsSource = ldb.FullList;
             // List.Items =
 
-            LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
-            ls.Init();
+            //LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
+            //ls.Init();
 
             BuildSite();
         }
@@ -104,7 +100,7 @@ namespace RailwayWebBuilderCore
         {
             var psi = new ProcessStartInfo
             {
-                FileName = Constants.DriveLetter + @"eWolfSiteUploads/Railways/Locomotives/Index.html",
+                FileName = Constants.DriveLetter + @"eWolfSiteUploads/Railways/MyLayouts/index.html",
                 UseShellExecute = true
             };
             Process.Start(psi);

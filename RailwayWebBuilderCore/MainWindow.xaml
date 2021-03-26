@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RailwayWebBuilderCore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1261">
+        Title="MainWindow" Height="600" Width="800">
     <Grid Margin="0,0,0,0">
         <Button Content="Create Site" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" />
         <Button Content="Get Loco Details" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" />
