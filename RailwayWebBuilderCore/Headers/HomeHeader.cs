@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore.Headers
             {
                 "Model Trains",
                 "Model railway",
+                "Home railway",
                 "N Gauge Model Railways",
                 "OO Gauge Model Railways",
                 "Hornby",
@@ -19,9 +20,11 @@ namespace RailwayWebBuilderCore.Headers
                 "Railways",
                 "trains at home",
                 "trains",
+                "Cattington",
+                "Cattington Railway",
             };
 
-            Description = "Modle railway";
+            Description = "Modle railways";
         }
     }
 }

@@ -36,8 +36,15 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
                 pageBuilder.Append("<div class='container mt-4'>");
 
-                pageBuilder.Jumbotron("<h1>Cattington Town</h1>", "<p'>Now it's our turn, We have just started to build our first layout." +
-                    "</br>We are Building Cattington Town, and we are updatd details here every week.</p>");
+                string imageName = "D:/Trains/_WebsiteData/Others/images/";
+                string imageHtmlName = "../Others/Images/";
+
+                pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
+                    "<p'>Now it's our turn, We have just started to build our first layout." +
+                    "</br>We are Building Cattington, and we are updatd details here every week.</p>",
+                    imageName,
+                    imageHtmlName,
+                    "CATTINGTON.png");
 
                 pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
                 for (int i = 0; i < DetailsPerPage; i++)

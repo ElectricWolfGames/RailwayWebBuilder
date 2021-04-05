@@ -12,9 +12,20 @@ namespace RailwayWebBuilderCore.Headers
             {
                 "Model Trains",
                 "Model railway",
-                "Home layout"
+                "Home layout",
+                "Cattington Town",
+                "Cattington Railway",
+                "Cattington",
+                "Cattington History",
+                "Cattington Videos",
+                "Cattington Making of",
+                "hornby",
+                "Fix layout",
+                "UK home layout",
+                "Model train display",
+                "railway model",
             };
-            Description = "Home model railway";
+            Description = "Cattington model railway";
 
             ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
