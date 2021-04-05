@@ -27,5 +27,7 @@
 
         public const string LeicestershireNorthFolder = StationFolder + @"GCR-LeicestershireNorth\";
         public const string RothleyFolder = StationFolder + @"GCR-Rothley\";
+
+        public const string ShopFolder = @"Shop\";
     }
 }

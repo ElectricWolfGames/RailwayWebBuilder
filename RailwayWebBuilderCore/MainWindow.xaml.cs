@@ -82,6 +82,7 @@ namespace RailwayWebBuilderCore
 
             LocationsPageBuilder.Build();
 
+            ShopMainPageBuilder.Build();
             ShopPageBuilder.Build();
 
             LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
