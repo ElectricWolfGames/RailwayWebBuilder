@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Details.Append("<p>We finally started to make the hill and tunnel look like a hill and tunnel!</p>");
             Details.Append("<p>And added the framework for the factory.</p>");
 
-            Details.Append("<p>And if you would like to smile, Watch some of Tommy the Tank joke on ");
+            Details.Append("<p>And if you would like to smile, Watch some of Tommy the Tank jokes on ");
             Details.Append("<a href='https://www.youtube.com/channel/UCEPVOMbHd93lzDnT4s5GXsg'>Paul's Channel</a> </p>");
 
             // _pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");

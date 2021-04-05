@@ -46,6 +46,9 @@ namespace RailwayWebBuilderCore
             //ls.Init();
 
             BuildSite();
+
+            Button_Click_2(null, null);
+            Close();
         }
 
         private void BuildSite()
