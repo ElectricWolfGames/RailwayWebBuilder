@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             string htmlpath = Constants.FullMyLayouts;
             Directory.CreateDirectory(htmlpath);
 
-            int totalPages = (_orderedDetails.Count / DetailsPerPage);
+            int totalPages = (_orderedDetails.Count(x => x.Active) / DetailsPerPage);
 
             int pageIndex = 0;
             while (_orderedDetails.Any())
@@ -47,6 +47,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                     "CATTINGTON.png");
 
                 pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
+
                 for (int i = 0; i < DetailsPerPage; i++)
                 {
                     if (_orderedDetails.Any())
@@ -104,6 +105,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
         private static void BuildDetails(PageBuilder pageBuilderMain, ILayoutPagesDetails detail)
         {
+            if (!detail.Active)
+                return;
+
             var detailBuilder = new PageBuilder();
 
             detailBuilder.Append($"<hr/>");

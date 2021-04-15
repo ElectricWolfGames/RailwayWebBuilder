@@ -5,12 +5,12 @@ namespace RailwayWebBuilderCore.Interfaces
 {
     public interface ILayoutPagesDetails
     {
-        DateTime When { get; }
-        string RawImagePath { get; }
-        string ExportImagePath { get; }
-        string YouTubeLink { get; }
-
-        string Title { get; }
+        bool Active { get; set; }
         StringBuilder Details { get; }
+        string ExportImagePath { get; }
+        string RawImagePath { get; }
+        string Title { get; }
+        DateTime When { get; }
+        string YouTubeLink { get; }
     }
 }
