@@ -15,10 +15,12 @@
         public const string Catalog = "Catalog";
         public const string Stations = "Stations";
         public const string LocomotiveName = "Locomotives";
+        public const string LocomotiveNameRef = "Ref";
 
         public const string FullMyLayouts = RootPath + MyLayouts + @"\";
         public const string FullCatalog = RootPath + Catalog + @"\";
         public const string Locomotive = LocomotiveName + @"\";
+        public const string LocomotiveRef = LocomotiveName + @"\" + LocomotiveNameRef + @"\";
 
         public const string StationFolder = Stations + @"\";
         public const string RushcliffeHaltFolder = StationFolder + @"GCR-RushcliffeHalt\";
@@ -29,5 +31,6 @@
         public const string RothleyFolder = StationFolder + @"GCR-Rothley\";
 
         public const string ShopFolder = @"Shop\";
+        public const string LocoRef = @"LocoRefs";
     }
 }

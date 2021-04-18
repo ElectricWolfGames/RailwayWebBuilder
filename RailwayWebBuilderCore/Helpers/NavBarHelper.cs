@@ -22,13 +22,13 @@ namespace RailwayWebBuilderCore.Helpers
             string modelEvents = $"{offSet}{Constants.ModelEvents}/index.html";
             string modelLocations = $"{offSet}{Constants.ModelEvents}/locations.html";
             string stations = $"{offSet}{Constants.Stations}/index.html";
-            string locomotives = $"{offSet}{Constants.LocomotiveName}/index.html";
+            string locomotives = $"{offSet}{Constants.Locomotive}LocoRef.html";
             string myLayouts = $"{offSet}MyLayouts/index.html";
             string shop = $"{offSet}Shop/index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");
-            // stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{locomotives}'>{Constants.LocomotiveName}</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{locomotives}'>Loco Ref</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Our Layouts</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelLocations}'>Locations</a></li>");

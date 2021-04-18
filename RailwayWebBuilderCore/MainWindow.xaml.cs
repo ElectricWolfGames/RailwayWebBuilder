@@ -77,6 +77,9 @@ namespace RailwayWebBuilderCore
             var b5 = new BuildStationsRothleyPage();
             b5.Build();
 
+            var lr = new LocoRefPageBuilder();
+            lr.Build();
+
             BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
             HomePageBuilder.Build(blogs.Blogs);
 
