@@ -18,18 +18,28 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string HtmlPath { get; } = Constants.LocomotiveRef;
         public string LocalPath { get; } = Constants.RootPath + Constants.LocomotiveRef;
         public string PageTitle { get; set; } = "Loco Ref Collection";
+        public string Paragraph1 { get; set; } = "";
+        public string Paragraph2 { get; set; } = "";
+        public string Paragraph3 { get; set; } = "";
         public string RawImagePath { get; set; }
         public string Title { get; set; }
 
-        private void AddBreadCrumb(ILocomotiveRefPage pageDetails)
+        public void AddPageDetails()
         {
-            _pageBuilder.Append("<nav aria-label='breadcrumb'>");
-            _pageBuilder.Append("<ol class='breadcrumb'>");
-            _pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");
-            _pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
-            _pageBuilder.Append($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
-            _pageBuilder.Append("</ol>");
-            _pageBuilder.Append("</nav>");
+            if (string.IsNullOrWhiteSpace(Paragraph1))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph1}</p>");
+
+            if (string.IsNullOrWhiteSpace(Paragraph2))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph2}</p>");
+
+            if (string.IsNullOrWhiteSpace(Paragraph3))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph3}</p>");
         }
 
         public virtual void Build()
@@ -48,6 +58,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             _pageBuilder.Append("<div class='container mt-12'>");
 
             Jumbotron(Title);
+            AddPageDetails();
 
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", RawImagePath);
 
@@ -78,6 +89,17 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Directory.CreateDirectory(imagePath);
 
             _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
+        }
+
+        private void AddBreadCrumb(ILocomotiveRefPage pageDetails)
+        {
+            _pageBuilder.Append("<nav aria-label='breadcrumb'>");
+            _pageBuilder.Append("<ol class='breadcrumb'>");
+            _pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");
+            _pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
+            _pageBuilder.Append($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
+            _pageBuilder.Append("</ol>");
+            _pageBuilder.Append("</nav>");
         }
     }
 }

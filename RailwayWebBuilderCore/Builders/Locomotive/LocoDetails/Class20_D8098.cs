@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public Class20_D8098()
         {
             Title = "D8098, Clas20, Bo-Bo";
+            Paragraph1 = "The British Rail (BR) Class 20, otherwise known as an English Electric Type 1, is a class of diesel-electric locomotive. In total, 228 locomotives in the class were built by English Electric between 1957 and 1968, the large number being in part because of the failure of other early designs in the same power range to provide reliable locomotives.";
             PageTitle = "D8098";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class20-D8098\";

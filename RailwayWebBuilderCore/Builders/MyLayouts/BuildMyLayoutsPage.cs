@@ -138,7 +138,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                                       && t.GetConstructor(Type.EmptyTypes) != null
                                 select Activator.CreateInstance(t) as ILayoutPagesDetails;
 
-            _orderedDetails = layoutDetails.OrderByDescending(x => x.When).ToList();
+            _orderedDetails = layoutDetails.Where(x => x.Active).ToList();
+            _orderedDetails = _orderedDetails.OrderByDescending(x => x.When).ToList();
         }
     }
 }
