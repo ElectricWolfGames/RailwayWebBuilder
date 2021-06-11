@@ -11,6 +11,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Repton\";
             ExportImagePath = Constants.LocoRef + "images\\Repton\\";
+            Order = 3;
         }
     }
 }

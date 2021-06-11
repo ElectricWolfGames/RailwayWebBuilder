@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\92214\";
             ExportImagePath = Constants.LocoRef + "images\\92214\\";
+            Order = 1;
         }
     }
 }

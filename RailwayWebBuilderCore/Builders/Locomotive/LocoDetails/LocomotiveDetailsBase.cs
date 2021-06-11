@@ -22,6 +22,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string Paragraph2 { get; set; } = "";
         public string Paragraph3 { get; set; } = "";
         public string RawImagePath { get; set; }
+        public int Order { get; set; }
         public string Title { get; set; }
 
         public void AddPageDetails()

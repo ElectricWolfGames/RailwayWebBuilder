@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore.Interfaces
         string Paragraph3 { get; set; }
         string RawImagePath { get; }
         string Title { get; }
+        int Order { get; set; }
 
         void Build();
     }

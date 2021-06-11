@@ -8,18 +8,18 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
     {
         public Layout_2021_05_16_Episode_17()
         {
-            Active = false;
+            Active = true;
             When = new DateTime(2021, 05, 16);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.RawDataPath + @"MyLayout\2021-05-16 Episode 17\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\2021-05-16 17 Castle\";
             ExportImagePath = Constants.FullMyLayouts + "images\\0516\\";
 
-            Title = "<h2>????????????????????</h2>";
-            Details.Append("<p>Welcome back to Cattington, We have both been ill this week, so we haven't been able to do much as we would have liked.</p>");
-            //Details.Append("<p>But we do have some progress on the hill.</p>");
+            Title = "<h2>Castle Tyson</h2>";
+            Details.Append("<p>Welcome back to Cattington,</p>");
+            Details.Append("<p>We have been busy, Added a backscene, Built a Castle, update the yard near the station and changed the layout of the shuttering area and Added some more sheep!</p>");
 
-            YouTubeLink = "???????????????";
+            YouTubeLink = "jye5SJr5-6A";
         }
     }
 }
