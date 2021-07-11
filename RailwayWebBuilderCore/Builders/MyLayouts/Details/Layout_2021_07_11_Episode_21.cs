@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Details = new StringBuilder();
 
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-07-11 21\";
-            ExportImagePath = Constants.FullMyLayouts + "images\\0721\\";
+            ExportImagePath = Constants.FullMyLayouts + "images\\0711\\";
 
             Title = "<h2>Scenery update and Tunnel entrance</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
