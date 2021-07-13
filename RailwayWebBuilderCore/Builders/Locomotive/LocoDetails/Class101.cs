@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             RawImagePath = Constants.RawDataPath + @"\Locos\Class101\";
             ExportImagePath = Constants.LocoRef + "images\\Class101\\";
             Order = 2;
+            // TODO: Add Class 101 Text
         }
     }
 }

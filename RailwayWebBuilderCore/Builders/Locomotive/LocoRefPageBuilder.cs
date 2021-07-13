@@ -19,15 +19,14 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 
         public string HtmlPath { get; } = Constants.Locomotive;
         public string LocalPath { get; } = Constants.RootPath + Constants.Locomotive;
-        public string PageTitle { get; } = "Loco Reference Collection";
+        public string PageTitle { get; } = "Locomotive Photo Reference Collection";
 
         public static void Jumbotron(PageBuilder _pageBuilder, string name)
         {
             _pageBuilder.Append("<div class='jumbotron'>");
             _pageBuilder.Append("<div class='row'>");
-            _pageBuilder.Append("<div class='col-md-4'>");
+            _pageBuilder.Append("<div class='col-md-12'>");
             _pageBuilder.Append($"<h1>{name}</h1>");
-            //_pageBuilder.Append($"<h5>{stationLocation.Address}</h5>");
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
@@ -35,27 +34,28 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 
         public void Build()
         {
-            GetLocoRefDetails();
+            PopulateLocoRefDetails();
 
             Directory.CreateDirectory(HtmlPath);
 
-            PageBuilder _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new LocoRefHeader(), "../");
+            PageBuilder pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new LocoRefHeader(), "../");
 
-            _pageBuilder.Append(NavBarHelper.NavBar("../"));
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
+            AddBreadCrumb(pageBuilder);
 
-            _pageBuilder.Append("<div class='container mt-4'>");
+            pageBuilder.Append("<div class='container mt-4'>");
 
-            Jumbotron(_pageBuilder, PageTitle);
+            Jumbotron(pageBuilder, PageTitle);
 
             foreach (var loco in _orderedDetails)
             {
-                AddLocoRef(_pageBuilder, loco);
+                AddLocoRef(pageBuilder, loco);
             }
 
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
 
-            _pageBuilder.Output();
+            pageBuilder.Output();
         }
 
         private static void AddLocoRef(PageBuilder pageBuilder, ILocomotiveRefPage loco)
@@ -63,10 +63,22 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             loco.Build();
 
             string href = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'>{loco.Title}</a>";
-            pageBuilder.Append($"<h3>{href}</h3>");
+            pageBuilder.Append($"<h5>{href}</h5>");
+
+            loco.AddImagestoHeaderPage(pageBuilder, 5);
         }
 
-        private void GetLocoRefDetails()
+        private void AddBreadCrumb(PageBuilder pageBuilder)
+        {
+            pageBuilder.Append("<nav aria-label='breadcrumb'>");
+            pageBuilder.Append("<ol class='breadcrumb'>");
+            pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");
+            pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
+            pageBuilder.Append("</ol>");
+            pageBuilder.Append("</nav>");
+        }
+
+        private void PopulateLocoRefDetails()
         {
             var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
                                 where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))

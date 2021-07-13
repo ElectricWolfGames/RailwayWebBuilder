@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             ExportImagePath = Constants.LocoRef + "images\\10119\\";
 
             Order = 2;
+            // TODO: Add Class 10 Text
         }
     }
 }

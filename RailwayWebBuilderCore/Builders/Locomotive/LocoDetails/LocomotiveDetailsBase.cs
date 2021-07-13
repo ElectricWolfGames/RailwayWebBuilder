@@ -1,9 +1,14 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Helpers;
+using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
@@ -17,30 +22,23 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string HtmlFileName { get; set; } = "LocoRef.html";
         public string HtmlPath { get; } = Constants.LocomotiveRef;
         public string LocalPath { get; } = Constants.RootPath + Constants.LocomotiveRef;
+        public int Order { get; set; }
         public string PageTitle { get; set; } = "Loco Ref Collection";
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
         public string Paragraph3 { get; set; } = "";
         public string RawImagePath { get; set; }
-        public int Order { get; set; }
         public string Title { get; set; }
 
-        public void AddPageDetails()
+        public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number)
         {
-            if (string.IsNullOrWhiteSpace(Paragraph1))
-                return;
+            string imagePath = HtmlPath + "images\\";
+            List<string> images = ImageHelper.GetAllImages(RawImagePath);
+            List<string> imageToUse = images.Take(5).ToList();
 
-            _pageBuilder.Append($"<p>{Paragraph1}</p>");
+            Directory.CreateDirectory(imagePath);
 
-            if (string.IsNullOrWhiteSpace(Paragraph2))
-                return;
-
-            _pageBuilder.Append($"<p>{Paragraph2}</p>");
-
-            if (string.IsNullOrWhiteSpace(Paragraph3))
-                return;
-
-            _pageBuilder.Append($"<p>{Paragraph3}</p>");
+            pageBuilder.AddImages(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/");
         }
 
         public virtual void Build()
@@ -58,10 +56,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
             _pageBuilder.Append("<div class='container mt-12'>");
 
-            Jumbotron(Title);
+            LocoRefPageBuilder.Jumbotron(_pageBuilder, Title);
             AddPageDetails();
 
-            Add_Gallrey(HtmlPath, HtmlPath + "images\\", RawImagePath);
+            AddGallrey(HtmlPath + "images\\", RawImagePath);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
@@ -73,25 +71,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             _pageBuilder.Output();
         }
 
-        public void Jumbotron(string name)
-        {
-            _pageBuilder.Append("<div class='jumbotron'>");
-            _pageBuilder.Append("<div class='row'>");
-            _pageBuilder.Append("<div class='col-md-12'>");
-            _pageBuilder.Append($"<h1>{name}</h1>");
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
-        }
-
-        protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
-        {
-            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
-            Directory.CreateDirectory(imagePath);
-
-            _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
-        }
-
         private void AddBreadCrumb(ILocomotiveRefPage pageDetails)
         {
             _pageBuilder.Append("<nav aria-label='breadcrumb'>");
@@ -101,6 +80,31 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             _pageBuilder.Append($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
             _pageBuilder.Append("</ol>");
             _pageBuilder.Append("</nav>");
+        }
+
+        private void AddGallrey(string imagePath, string galleryPath)
+        {
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
+        }
+
+        private void AddPageDetails()
+        {
+            if (string.IsNullOrWhiteSpace(Paragraph1))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph1}</p>");
+
+            if (string.IsNullOrWhiteSpace(Paragraph2))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph2}</p>");
+
+            if (string.IsNullOrWhiteSpace(Paragraph3))
+                return;
+
+            _pageBuilder.Append($"<p>{Paragraph3}</p>");
         }
     }
 }

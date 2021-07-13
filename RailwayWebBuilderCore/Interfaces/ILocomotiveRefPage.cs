@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Interfaces;
+using System.Text;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
@@ -16,5 +18,7 @@ namespace RailwayWebBuilderCore.Interfaces
         int Order { get; set; }
 
         void Build();
+
+        void AddImagestoHeaderPage(PageBuilder pageBuilder, int number);
     }
 }

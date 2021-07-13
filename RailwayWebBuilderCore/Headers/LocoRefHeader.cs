@@ -7,13 +7,14 @@ namespace RailwayWebBuilderCore.Headers
     {
         public LocoRefHeader()
         {
-            Title = "Loco ref";
+            Title = "Locomotive photo ref";
             Keywords = new List<string>
             {
                 "Loco",
                 "Train",
+                "Locomotive",
             };
-            Description = "Loco Reference Collection";
+            Description = "Locomotive photo Reference Collection";
 
             ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
