@@ -39,21 +39,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             _pageBuilder.Output();
         }
 
-        private void CreateAllDetailsPages()
-        {
-            var pages = GetAll();
-
-            foreach (var page in pages)
-            {
-                page.Build();
-
-                _pageBuilder.Append($"<hr/>");
-                string path = $"{page.HtmlFileName}";
-                string name = $"<h5>{page.PageTitle}</h5>";
-                _pageBuilder.Append($"<a href='{path}'>{name}</a>");
-            }
-        }
-
         private static List<ILocomotiveDetailsPages> GetAll()
         {
             var canBlog = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -67,6 +52,21 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 blogs.Add(blogger);
             }
             return blogs;
+        }
+
+        private void CreateAllDetailsPages()
+        {
+            var pages = GetAll();
+
+            foreach (var page in pages)
+            {
+                page.Build();
+
+                _pageBuilder.Append($"<hr/>");
+                string path = $"{page.HtmlFileName}";
+                string name = $"<h5>{page.PageTitle}</h5>";
+                _pageBuilder.Append($"<a href='{path}'>{name}</a>");
+            }
         }
     }
 }

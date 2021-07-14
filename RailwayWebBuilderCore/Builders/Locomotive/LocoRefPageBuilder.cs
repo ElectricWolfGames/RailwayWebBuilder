@@ -65,7 +65,8 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             string href = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'>{loco.Title}</a>";
             pageBuilder.Append($"<h5>{href}</h5>");
 
-            loco.AddImagestoHeaderPage(pageBuilder, 5);
+            string seeMore = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'><h3>See more...</h3></a>";
+            loco.AddImagestoHeaderPage(pageBuilder, 5, seeMore);
         }
 
         private void AddBreadCrumb(PageBuilder pageBuilder)

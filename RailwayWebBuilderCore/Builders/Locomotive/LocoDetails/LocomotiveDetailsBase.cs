@@ -30,15 +30,14 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string RawImagePath { get; set; }
         public string Title { get; set; }
 
-        public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number)
+        public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
         {
             string imagePath = HtmlPath + "images\\";
             List<string> images = ImageHelper.GetAllImages(RawImagePath);
             List<string> imageToUse = images.Take(5).ToList();
 
             Directory.CreateDirectory(imagePath);
-
-            pageBuilder.AddImages(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/");
+            pageBuilder.AddImagesWithSeeMore(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
         }
 
         public virtual void Build()
