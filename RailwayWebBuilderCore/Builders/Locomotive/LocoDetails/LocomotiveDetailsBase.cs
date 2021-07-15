@@ -1,6 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
-using eWolfBootstrap.Interfaces;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;

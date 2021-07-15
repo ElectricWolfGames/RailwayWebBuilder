@@ -36,9 +36,15 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
         {
             PopulateLocoRefDetails();
 
+            var pageHeader = new LocoRefHeader();
+            foreach (var loco in _orderedDetails)
+            {
+                pageHeader.Keywords.Add(loco.Title);
+            }
+
             Directory.CreateDirectory(HtmlPath);
 
-            PageBuilder pageBuilder = new PageBuilder(HtmlFileName, LocalPath, new LocoRefHeader(), "../");
+            PageBuilder pageBuilder = new(HtmlFileName, LocalPath, pageHeader, "../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             AddBreadCrumb(pageBuilder);
@@ -63,7 +69,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             loco.Build();
 
             string href = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'>{loco.Title}</a>";
-            pageBuilder.Append($"<h5>{href}</h5>");
+            pageBuilder.Append($"<h3>{href}</h3>");
 
             string seeMore = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'><h3>See more...</h3></a>";
             loco.AddImagestoHeaderPage(pageBuilder, 5, seeMore);
