@@ -18,7 +18,13 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     "Freight trains are now mostly fixed rakes of wagons, and passenger trains are mostly multiple units, neither requiring the attention of a shunting locomotive. " +
     "Consequently, a large proportion of the class has been withdrawn from mainline use and stored, scrapped, exported or sold to industrial or heritage railways.";
             Paragraph2 = "As of 2020, around 100 locomotives remained working on industrial sidings and on the main British network." +
-                "On heritage railways, they have become common, appearing on many of the preserved standard-gauge lines in Britain, with over 70 preserved including the first one built.";
+                "On heritage railways, they have become common, appearing on many of the preserved standard-gauge lines in Britain, " +
+                "with over 70 preserved including the first one built.";
+
+            Keywords.Add("British Rail");
+            Keywords.Add("diesel-electric shunting");
+            Keywords.Add("diesel shunter");
+            Keywords.Add("1952");
         }
     }
 }

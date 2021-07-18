@@ -1,5 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Interfaces;
+using System.Collections.Generic;
 using System.Text;
 
 namespace RailwayWebBuilderCore.Interfaces
@@ -9,6 +10,7 @@ namespace RailwayWebBuilderCore.Interfaces
         bool Active { get; set; }
         StringBuilder Details { get; }
         string ExportImagePath { get; }
+        List<string> Keywords { get; }
         int Order { get; set; }
         string PageTitle { get; set; }
         string Paragraph1 { get; set; }

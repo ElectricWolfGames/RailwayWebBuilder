@@ -79,8 +79,8 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
         {
             pageBuilder.Append("<nav aria-label='breadcrumb'>");
             pageBuilder.Append("<ol class='breadcrumb'>");
-            pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");
-            pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
+            pageBuilder.Append("<li class='breadcrumb-item'><a href='../index.html'>Home</a></li>");
+            pageBuilder.Append($"<li class='breadcrumb-item'><a href='LocoRef.html'>Locos</a></li>");
             pageBuilder.Append("</ol>");
             pageBuilder.Append("</nav>");
         }

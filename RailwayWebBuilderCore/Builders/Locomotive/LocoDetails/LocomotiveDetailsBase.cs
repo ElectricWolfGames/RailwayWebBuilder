@@ -29,6 +29,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string RawImagePath { get; set; }
         public string Title { get; set; }
 
+        public List<string> Keywords { get; private set; } = new List<string>();
+
         public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
         {
             string imagePath = HtmlPath + "images\\";
@@ -46,6 +48,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             var locref = new LocoRefHeader();
             locref.Title = Title;
             locref.Keywords.Add(Title);
+
+            locref.Keywords.AddRange(Keywords);
 
             _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, locref, "../../");
 
@@ -73,7 +77,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         {
             _pageBuilder.Append("<nav aria-label='breadcrumb'>");
             _pageBuilder.Append("<ol class='breadcrumb'>");
-            _pageBuilder.Append("<li class='breadcrumb-item'><a href='../../index.html'>Home</a></li>");
+            _pageBuilder.Append("<li class='breadcrumb-item'><a href='../index.html'>Home</a></li>");
             _pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
             _pageBuilder.Append($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
             _pageBuilder.Append("</ol>");
