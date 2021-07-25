@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
     {
         public Layout_2021_07_25_Episode_22()
         {
-            Active = false;
+            Active = true;
             When = new DateTime(2021, 07, 25);
             Details = new StringBuilder();
 
@@ -18,10 +18,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2></h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
 
-            //Details.Append("<p>We have been working on the corner, Where we have a retaining wall and a raised section to place building and part of a road.</p>");
-            //Details.Append("<p>And started on another terrace house for cattington village</p>");
+            Details.Append("<p>We have finished the house and changed the shunting yard (again)</p>");
 
-            YouTubeLink = "????????????";
+            YouTubeLink = "bhzS0uJ62WM";
         }
     }
 }

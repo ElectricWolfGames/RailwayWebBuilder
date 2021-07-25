@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 {
     public class BuildMyLayoutsPage
     {
-        private const int DetailsPerPage = 5;
+        private const int DetailsPerPage = 10;
         private static List<ILayoutPagesDetails> _orderedDetails;
 
         public static void Build(IModelEvent pageDetails)
