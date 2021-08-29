@@ -15,6 +15,14 @@ namespace RailwayWebBuilderCore.Services
             AddModelEvents();
         }
 
+        internal List<IModelEvent> Events
+        {
+            get
+            {
+                return _modelPages;
+            }
+        }
+
         private void AddModelEvents()
         {
             _modelPages.AddRange(GetAll());
@@ -33,14 +41,6 @@ namespace RailwayWebBuilderCore.Services
                           select Activator.CreateInstance(t) as IModelEvent;
 
             return updates.ToList();
-        }
-
-        internal List<IModelEvent> Events
-        {
-            get
-            {
-                return _modelPages;
-            }
         }
     }
 }

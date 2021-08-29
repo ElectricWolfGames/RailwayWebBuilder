@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore.Data
         public LocationTypes LocationType { get; set; }
         public string Name { get; set; }
 
+        public string PostCode { get; set; }
+
         public string ShortName
         {
             get
@@ -23,7 +25,5 @@ namespace RailwayWebBuilderCore.Data
             }
             set { }
         }
-
-        public string PostCode { get; set; }
     }
 }

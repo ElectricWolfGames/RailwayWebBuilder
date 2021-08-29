@@ -20,6 +20,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string ExportImagePath { get; set; }
         public string HtmlFileName { get; set; } = "LocoRef.html";
         public string HtmlPath { get; } = Constants.LocomotiveRef;
+        public List<string> Keywords { get; private set; } = new List<string>();
         public string LocalPath { get; } = Constants.RootPath + Constants.LocomotiveRef;
         public int Order { get; set; }
         public string PageTitle { get; set; } = "Loco Ref Collection";
@@ -28,8 +29,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string Paragraph3 { get; set; } = "";
         public string RawImagePath { get; set; }
         public string Title { get; set; }
-
-        public List<string> Keywords { get; private set; } = new List<string>();
 
         public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
         {

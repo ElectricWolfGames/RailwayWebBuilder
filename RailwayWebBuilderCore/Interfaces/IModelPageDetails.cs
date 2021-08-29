@@ -15,10 +15,9 @@ namespace RailwayWebBuilderCore.Interfaces
         string ImagesPath { get; set; }
         List<string> ImagesToExclude { get; set; }
         List<LayoutDetails> Layouts { get; set; }
+        ILocations Location { get; set; }
         string Name { get; set; }
         DateTime TripDate { get; set; }
         string YouTubeLink { get; set; }
-
-        ILocations Location { get; set; }
     }
 }

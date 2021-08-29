@@ -38,10 +38,24 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Output();
         }
 
+        private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
+        {
+            IStationsPages stationsPages = new BuildStationsQuornAndWoodHouse();
+            string htmlPath = $@"GCR-QuornAndWoodHouse\{stationsPages.HtmlFileName}";
+            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
+        }
+
         private static void AddStationLeicestershireNorth(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
             IStationsPages stationsPages = new BuildStationsLeicestershireNorthPage();
             string htmlPath = $@"GCR-LeicestershireNorth\{stationsPages.HtmlFileName}";
+            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
+        }
+
+        private static void AddStationLoughboroughStation(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
+        {
+            IStationsPages stationsPages = new BuildStationsLoughboroughStationPage();
+            string htmlPath = $@"GCR-LoughboroughStation\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
@@ -57,35 +71,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             IStationsPages stationsPages = new BuildStationsRushcliffeHaltPage();
             string htmlPath = $@"GCR-RushcliffeHalt\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
-        }
-
-        private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
-        {
-            IStationsPages stationsPages = new BuildStationsQuornAndWoodHouse();
-            string htmlPath = $@"GCR-QuornAndWoodHouse\{stationsPages.HtmlFileName}";
-            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
-        }
-
-        private static void AddStationLoughboroughStation(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
-        {
-            IStationsPages stationsPages = new BuildStationsLoughboroughStationPage();
-            string htmlPath = $@"GCR-LoughboroughStation\{stationsPages.HtmlFileName}";
-            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
-        }
-
-        private static string Jumbotron(IModelPageDetails pageDetails)
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
-            stringBuilder.AppendLine($"<h1>Stations</h1>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
         }
 
         private static string CreateCard(IStationsPages stationsPages, string path)
@@ -104,6 +89,21 @@ namespace RailwayWebBuilderCore.Builders.Stations
             blogHtml.AppendLine("</div>");
 
             return blogHtml.ToString();
+        }
+
+        private static string Jumbotron(IModelPageDetails pageDetails)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("<div class='jumbotron'>");
+            stringBuilder.AppendLine("<div class='row'>");
+            stringBuilder.AppendLine("<div class='col-md-4'>");
+            stringBuilder.AppendLine($"<h1>Stations</h1>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+
+            return stringBuilder.ToString();
         }
     }
 }

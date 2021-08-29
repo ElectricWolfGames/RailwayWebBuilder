@@ -6,20 +6,6 @@ namespace RailwayWebBuilderCore.LocoDetails
 {
     public class GetLocoDetails
     {
-        public void Now()
-        {
-            // 9F
-            string site = "https://en.wikipedia.org/wiki/BR_Standard_Class_9F";
-
-            string file = DownloadServices.Download(site, "Loco9f");
-
-            var table = GetTable(file, "Type and origin");
-            string name = table.GetDisplayText("Designer");
-            string Builddate = table.GetDisplayText("Build date");
-
-            Console.WriteLine(name);
-        }
-
         public HtmlTableExtract GetTable(string file, string section)
         {
             HtmlTableExtract hte = new HtmlTableExtract();
@@ -49,6 +35,20 @@ namespace RailwayWebBuilderCore.LocoDetails
             }
 
             return hte;
+        }
+
+        public void Now()
+        {
+            // 9F
+            string site = "https://en.wikipedia.org/wiki/BR_Standard_Class_9F";
+
+            string file = DownloadServices.Download(site, "Loco9f");
+
+            var table = GetTable(file, "Type and origin");
+            string name = table.GetDisplayText("Designer");
+            string Builddate = table.GetDisplayText("Build date");
+
+            Console.WriteLine(name);
         }
     }
 }

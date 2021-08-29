@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore.Interfaces
         LatitudeLongitude LatitudeLongitude { get; set; }
         LocationTypes LocationType { get; set; }
         string Name { get; set; }
-        string ShortName { get; set; }
         string PostCode { get; set; }
+        string ShortName { get; set; }
     }
 }

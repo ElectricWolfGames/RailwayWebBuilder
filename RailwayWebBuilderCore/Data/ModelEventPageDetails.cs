@@ -10,16 +10,17 @@ namespace RailwayWebBuilderCore.Data
     {
         public string Descrption { get; set; }
         public string EventDates { get; set; }
+        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
         public string ImageFolder { get; set; }
         public string ImagePreview { get; set; }
         public string ImagesPath { get; set; }
         public List<string> ImagesToExclude { get; set; }
         public List<LayoutDetails> Layouts { get; set; } = new List<LayoutDetails>();
+        public ILocations Location { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
         public DateTime TripDate { get; set; }
         public string YouTubeLink { get; set; }
-        public ILocations Location { get; set; }
 
         public static IEnumerable<string> ModelEventKeywords()
         {
@@ -38,7 +39,5 @@ namespace RailwayWebBuilderCore.Data
         {
             ImagePreview = ImagePreview.Replace(".jpg", ".JPG");
         }
-
-        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
     }
 }

@@ -13,51 +13,11 @@ namespace RailwayWebBuilderCore.LocoDetails
             _htmlTableExtract = htmlTableExtract;
         }
 
-        public string TableName
-        {
-            get
-            {
-                return _htmlTableExtract.DisplayName;
-            }
-        }
-
-        public string Operators
-        {
-            get
-            {
-                return _htmlTableExtract.GetDisplayText("Operators");
-            }
-        }
-
-        public string Class
-        {
-            get
-            {
-                return _htmlTableExtract.GetDisplayText("Class");
-            }
-        }
-
-        public string Designer
-        {
-            get
-            {
-                return _htmlTableExtract.GetDisplayText("Designer");
-            }
-        }
-
         public string Axleload
         {
             get
             {
                 return _htmlTableExtract.GetDisplayText("Axle load");
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return _htmlTableExtract.Name;
             }
         }
 
@@ -131,19 +91,19 @@ namespace RailwayWebBuilderCore.LocoDetails
             }
         }
 
-        public string Whyte
+        public string Class
         {
             get
             {
-                return _htmlTableExtract.GetDisplayText("Whyte");
+                return _htmlTableExtract.GetDisplayText("Class");
             }
         }
 
-        public int TotalProduced
+        public string Designer
         {
             get
             {
-                return _htmlTableExtract.GetIntDisplayText("Total produced");
+                return _htmlTableExtract.GetDisplayText("Designer");
             }
         }
 
@@ -155,6 +115,22 @@ namespace RailwayWebBuilderCore.LocoDetails
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                return _htmlTableExtract.Name;
+            }
+        }
+
+        public string Operators
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Operators");
+            }
+        }
+
         public string PowerClass
         {
             get
@@ -163,11 +139,35 @@ namespace RailwayWebBuilderCore.LocoDetails
             }
         }
 
+        public string TableName
+        {
+            get
+            {
+                return _htmlTableExtract.DisplayName;
+            }
+        }
+
+        public int TotalProduced
+        {
+            get
+            {
+                return _htmlTableExtract.GetIntDisplayText("Total produced");
+            }
+        }
+
         public string TractiveEffort
         {
             get
             {
                 return _htmlTableExtract.GetDisplayText("Tractive effort");
+            }
+        }
+
+        public string Whyte
+        {
+            get
+            {
+                return _htmlTableExtract.GetDisplayText("Whyte");
             }
         }
     }

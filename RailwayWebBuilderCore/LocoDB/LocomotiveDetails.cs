@@ -36,10 +36,10 @@ namespace RailwayWebBuilderCore.LocoDB
         public string BuildDate { get; set; }
         public DateTime BuildDateTime { get; set; }
         public string Builder { get; set; } = MISSING;
+        public string Class { get; set; } = MISSING;
         public string Cylinders { get; set; } = MISSING;
         public string Designer { get; set; }
         public string Disposition { get; set; } = MISSING;
-        public string Class { get; set; } = MISSING;
 
         public string GetFileName
         {

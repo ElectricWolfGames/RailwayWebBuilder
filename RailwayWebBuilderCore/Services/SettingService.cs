@@ -5,8 +5,6 @@ namespace RailwayWebBuilderCore.Services
 {
     public class SettingService
     {
-        public string GoogleMapKey { get; private set; }
-
         public SettingService()
         {
             ReadAllSettings();
@@ -21,20 +19,7 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private string ReadSetting(string key)
-        {
-            try
-            {
-                var appSettings = ConfigurationManager.AppSettings;
-                string result = appSettings[key] ?? "Not Found";
-                return result;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error reading app settings");
-            }
-            return null;
-        }
+        public string GoogleMapKey { get; private set; }
 
         private void ReadAllSettings()
         {
@@ -70,6 +55,21 @@ namespace RailwayWebBuilderCore.Services
                 Console.WriteLine("Exception raised: {0}",
                     e.Message);
             }
+        }
+
+        private string ReadSetting(string key)
+        {
+            try
+            {
+                var appSettings = ConfigurationManager.AppSettings;
+                string result = appSettings[key] ?? "Not Found";
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error reading app settings");
+            }
+            return null;
         }
     }
 }

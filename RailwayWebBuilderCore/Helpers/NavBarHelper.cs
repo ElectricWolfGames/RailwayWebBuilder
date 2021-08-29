@@ -7,6 +7,11 @@ namespace RailwayWebBuilderCore.Helpers
 {
     public static class NavBarHelper
     {
+        public static string GetHtmlPageName(int index)
+        {
+            return $"index{GetPageName(index)}.html";
+        }
+
         public static string NavBar(string offSet)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -109,11 +114,6 @@ namespace RailwayWebBuilderCore.Helpers
                 string eventLine = $"<a class='dropdown-item' href='{path}/{pageDetails.ImageFolder}/index.html'>{pageDetails.TripDate.ToString("yyyy-MM-dd")}-{pageDetails.Name}</a>";
                 stringBuilder.AppendLine(eventLine);
             }
-        }
-
-        public static string GetHtmlPageName(int index)
-        {
-            return $"index{GetPageName(index)}.html";
         }
 
         private static string GetPageName(int index)

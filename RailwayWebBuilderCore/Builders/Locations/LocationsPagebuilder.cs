@@ -83,6 +83,29 @@ namespace RailwayWebBuilderCore.Builders.Locations
             sb.Output();
         }
 
+        private static List<LocationHolder> GetAllLocations()
+        {
+            List<LocationHolder> locationHolders = new List<LocationHolder>();
+
+            LocationsService locations = ServiceLocator.Instance.GetService<LocationsService>();
+            var items = locations.Items;
+            foreach (var item in items)
+            {
+                if (item.Location.LatitudeLongitude == null)
+                    continue;
+
+                var lh = new LocationHolder
+                {
+                    Location = item.Location.LatitudeLongitude.Location,
+                    FilmName = item.Location.Name,
+                    FilmSiteLink = $"{item.ImageFolder}/index.html"
+                };
+                locationHolders.Add(lh);
+            }
+
+            return locationHolders;
+        }
+
         private static string ListAllLocations()
         {
             StringBuilder sb = new StringBuilder();
@@ -105,29 +128,6 @@ namespace RailwayWebBuilderCore.Builders.Locations
             }
 
             return sb.ToString();
-        }
-
-        private static List<LocationHolder> GetAllLocations()
-        {
-            List<LocationHolder> locationHolders = new List<LocationHolder>();
-
-            LocationsService locations = ServiceLocator.Instance.GetService<LocationsService>();
-            var items = locations.Items;
-            foreach (var item in items)
-            {
-                if (item.Location.LatitudeLongitude == null)
-                    continue;
-
-                var lh = new LocationHolder
-                {
-                    Location = item.Location.LatitudeLongitude.Location,
-                    FilmName = item.Location.Name,
-                    FilmSiteLink = $"{item.ImageFolder}/index.html"
-                };
-                locationHolders.Add(lh);
-            }
-
-            return locationHolders;
         }
     }
 }

@@ -11,24 +11,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
     {
         protected PageBuilder _pageBuilder;
 
-        protected StationsHeader CreateHeader(StationLocationsBase StationLocations)
-        {
-            var header = new StationsHeader();
-            header.Title = StationLocations.ShortName;
-            return header;
-        }
-
-        protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
-        {
-            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
-            Directory.CreateDirectory(imagePath);
-
-            _pageBuilder.Append($"<hr/>");
-            _pageBuilder.Append("<h2>Gallery</h2>");
-
-            _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
-        }
-
         public void AddBreadCrumb(IPageDetails pageDetails)
         {
             _pageBuilder.Append("<nav aria-label='breadcrumb'>");
@@ -50,6 +32,24 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
+        }
+
+        protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
+        {
+            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            Directory.CreateDirectory(imagePath);
+
+            _pageBuilder.Append($"<hr/>");
+            _pageBuilder.Append("<h2>Gallery</h2>");
+
+            _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
+        }
+
+        protected StationsHeader CreateHeader(StationLocationsBase StationLocations)
+        {
+            var header = new StationsHeader();
+            header.Title = StationLocations.ShortName;
+            return header;
         }
     }
 }

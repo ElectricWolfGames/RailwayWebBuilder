@@ -51,6 +51,14 @@ namespace RailwayWebBuilderCore
             Close();
         }
 
+        private void AddLoco_Click(object sender, RoutedEventArgs e)
+        {
+            string url = NewUrl.Text;
+
+            LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
+            var loco = ls.CreateDB(url);
+        }
+
         private void BuildSite()
         {
             ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
@@ -113,12 +121,6 @@ namespace RailwayWebBuilderCore
             Process.Start(psi);
         }
 
-        private void lbTodoList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (myList.SelectedItem != null)
-                this.Title = (myList.SelectedItem as LocomotiveDetails).Name;
-        }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             if (myList.SelectedItem == null)
@@ -130,17 +132,6 @@ namespace RailwayWebBuilderCore
                 UseShellExecute = true
             };
             Process.Start(psi);
-        }
-
-        private void Button_Click_Save(object sender, RoutedEventArgs e)
-        {
-            var ldb = LocomotiveDBServices.GetDBServices();
-
-            foreach (var item in ldb.FullList)
-            {
-                item.Save();
-            }
-            myList.Items.Refresh();
         }
 
         private void Button_Click_CleanUpText(object sender, RoutedEventArgs e)
@@ -156,19 +147,15 @@ namespace RailwayWebBuilderCore
             myList.Items.Refresh();
         }
 
-        private string RemoveCharacterCodes(string tractiveEffort)
+        private void Button_Click_Save(object sender, RoutedEventArgs e)
         {
-            tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
+            var ldb = LocomotiveDBServices.GetDBServices();
 
-            return tractiveEffort;
-        }
-
-        private void AddLoco_Click(object sender, RoutedEventArgs e)
-        {
-            string url = NewUrl.Text;
-
-            LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
-            var loco = ls.CreateDB(url);
+            foreach (var item in ldb.FullList)
+            {
+                item.Save();
+            }
+            myList.Items.Refresh();
         }
 
         private void Button_Click_UpdateAllFromWeb(object sender, RoutedEventArgs e)
@@ -180,6 +167,19 @@ namespace RailwayWebBuilderCore
                 item.UpdateFromSite();
             }
             myList.Items.Refresh();
+        }
+
+        private void lbTodoList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (myList.SelectedItem != null)
+                this.Title = (myList.SelectedItem as LocomotiveDetails).Name;
+        }
+
+        private string RemoveCharacterCodes(string tractiveEffort)
+        {
+            tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
+
+            return tractiveEffort;
         }
     }
 }
