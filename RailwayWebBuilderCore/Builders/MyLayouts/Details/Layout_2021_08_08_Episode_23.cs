@@ -22,9 +22,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Details.Append("<p>And we have a new loco, It's a DMU 110, our first diesel</p>");
 
             Details.Append("<p>Hornby R2297A class 110 3 car Calder Vale DMU in BR green.</p>");
-            Details.Append("<p>Picked up from the Emporium at GCR loughborough Station.</p>");
+            Details.Append("<p>Picked up from the Emporium at GCR Loughborough Station.</p>");
 
-            YouTubeLink = "??";
+            YouTubeLink = "71ocMjS2hi4";
         }
     }
 }
