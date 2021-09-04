@@ -15,10 +15,14 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-09-05 25\";
             ExportImagePath = Constants.FullMyLayouts + "images\\0909\\";
 
-            Title = "<h2>Update 25!</h2>";
+            Title = "<h2>Bridge and Track</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
 
-            YouTubeLink = "?????";
+            Details.Append("<p>We have been doing a little more work on the bridge sections</p>");
+            Details.Append("<p>Redone the track around Long Whiskers</p>");
+            Details.Append("<p>And updated the layout around the shunting yard</p>");
+
+            YouTubeLink = "UDDy0oma4nQ";
         }
     }
 }
