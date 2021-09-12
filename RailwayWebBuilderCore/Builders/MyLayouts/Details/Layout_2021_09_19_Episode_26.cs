@@ -1,19 +1,19 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using System;
+﻿using System;
 using System.Text;
+using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
-    public class Layout_2021_09_05_Episode_25 : LayoutBase
+    public class Layout_2021_09_19_Episode_26 : LayoutBase
     {
-        public Layout_2021_09_05_Episode_25()
+        public Layout_2021_09_19_Episode_26()
         {
-            Active = true;
-            When = new DateTime(2021, 09, 05);
+            Active = false;
+            When = new DateTime(2021, 09, 19);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.RawDataPath + @"MyLayout\2021-09-05 25\";
-            ExportImagePath = Constants.FullMyLayouts + "images\\0905\\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\2021-09-19 26\";
+            ExportImagePath = Constants.FullMyLayouts + "images\\0919\\";
 
             Title = "<h2>Bridge and Track</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");

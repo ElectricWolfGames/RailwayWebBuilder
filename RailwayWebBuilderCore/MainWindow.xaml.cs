@@ -1,16 +1,17 @@
-﻿using RailwayWebBuilderCore.Builders;
+﻿using System.Diagnostics;
+using System.Windows;
+using RailwayWebBuilderCore.Builders;
 using RailwayWebBuilderCore.Builders.Locations;
 using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Shop;
 using RailwayWebBuilderCore.Builders.Stations;
+using RailwayWebBuilderCore.Builders.StockVideos;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
-using System.Diagnostics;
-using System.Windows;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -95,6 +96,9 @@ namespace RailwayWebBuilderCore
 
             ShopMainPageBuilder.Build();
             ShopPageBuilder.Build();
+
+            var bsv = new BuildStockVideos();
+            bsv.Build();
 
             LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
             ld.Build();
