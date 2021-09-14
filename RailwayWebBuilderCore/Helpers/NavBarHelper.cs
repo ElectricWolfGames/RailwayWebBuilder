@@ -30,7 +30,7 @@ namespace RailwayWebBuilderCore.Helpers
             string locomotives = $"{offSet}{Constants.Locomotive}LocoRef.html";
             string myLayouts = $"{offSet}MyLayouts/index.html";
             string shop = $"{offSet}Shop/index.html";
-            string stockVideos = $"{offSet}{Constants.StockVideos}/index.html";
+            string stockVideos = $"{offSet}{Constants.StockVideos}index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");
@@ -38,7 +38,7 @@ namespace RailwayWebBuilderCore.Helpers
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Our Layouts</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelLocations}'>Locations</a></li>");
-            //TODO: add stock videos - stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>StockVideos</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>Stock Videos</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{shop}'>Shop</a></li>");
             stringBuilder.AppendLine("<li class='nav-item dropdown'>");
             stringBuilder.AppendLine("<a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown04' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Model Events</a>");

@@ -2,6 +2,11 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
+    // TODO Add 68067,0-6-0,Austerity
+    // TODO: Need to add Class25
+    // TODO: Need to add Class50
+    // TODO: Need to add Class55
+
     public class _45305 : LocomotiveDetailsBase
     {
         public _45305()

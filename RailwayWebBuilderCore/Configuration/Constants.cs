@@ -33,6 +33,6 @@
         public const string ShopFolder = @"Shop\";
         public const string LocoRef = @"LocoRefs";
 
-        public const string StockVideos = @"StockVideos";
+        public const string StockVideos = @"StockVideos\";
     }
 }

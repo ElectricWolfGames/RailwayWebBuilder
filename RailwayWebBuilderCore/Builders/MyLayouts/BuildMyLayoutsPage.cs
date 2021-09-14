@@ -41,7 +41,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
                 pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
                     "<p'>Now it's our turn, We have just started to build our first layout." +
-                    "</br>We are Building Cattington, and we are updatd details here every week.</p>",
+                    "</br>We are Building Cattington, and we are updatd details here every week or so.</p>",
                     imageName,
                     imageHtmlName,
                     "CATTINGTON.png");

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.Interfaces;
@@ -13,6 +14,15 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
         protected PageBuilder _pageBuilder;
 
         public string LocalPath { get; } = Constants.RootPath + Constants.StockVideos;
+        public List<StockDetails> _details = new List<StockDetails>();
+
+        public BuildStockVideos()
+        {
+            _details.Add(new StockDetails("Track", "lA5ZaVXsrm8"));
+            _details.Add(new StockDetails("Coach Side view", "5NM2irNrvYg"));
+            _details.Add(new StockDetails("Track sideview", "eAPh41TyYoM"));
+            _details.Add(new StockDetails("6990,WitherslackHall ", "Zx-_ZqAK1TI"));
+        }
 
         public void Build()
         {
@@ -25,7 +35,32 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _pageBuilder.Append(Jumbotron());
             _pageBuilder.Append("<div class='row mb-2'>");
 
+            _pageBuilder.Append("<div class='container mt-4'>");
+            _pageBuilder.Append("<p>Free to use clips for anything you like.</p>");
+            _pageBuilder.Append("<p>More to follow.</p>");
+            _pageBuilder.Append("</br>");
+            _pageBuilder.Append("<div class='row mb-2'>");
+
+            foreach (var detail in _details)
+            {
+                string youTubeLink = $"https://www.youtube.com/embed/{detail.YouTubeLink}";
+                _pageBuilder.Append(AddYoutubePreview(youTubeLink));
+            }
+
             _pageBuilder.Output();
+        }
+
+        private static string AddYoutubePreview(string youTubeLink)
+        {
+            var pageBuilder = new PageBuilder();
+
+            pageBuilder.Append("<div class='col-md-6'>");
+            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
+            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            pageBuilder.Append("</div>");
+            pageBuilder.Append("</div>");
+
+            return pageBuilder.GetString();
         }
 
         protected IPageHeader CreateHeader()
@@ -41,14 +76,26 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
 
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
+            stringBuilder.AppendLine("<div class='col-md-8'>");
             stringBuilder.AppendLine("<h1>Stock Videos</h1>");
-            stringBuilder.AppendLine("<h3>Free to use B-Roll clips taken around the railway</h3>");
+            stringBuilder.AppendLine("<h3>Free to use B-Roll clips taken around the railways</h3>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
         }
+    }
+
+    public class StockDetails
+    {
+        public StockDetails(string name, string youtubeLink)
+        {
+            Name = name;
+            YouTubeLink = youtubeLink;
+        }
+
+        public string Name { get; set; }
+        public string YouTubeLink { get; set; }
     }
 }
