@@ -33,13 +33,13 @@ namespace RailwayWebBuilderCore.Helpers
             string stockVideos = $"{offSet}{Constants.StockVideos}index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Cattington</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{shop}'>Shop</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{locomotives}'>Loco Ref</a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Our Layouts</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>Stock Videos</a></li>");
+            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelLocations}'>Locations</a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>Stock Videos</a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{shop}'>Shop</a></li>");
             stringBuilder.AppendLine("<li class='nav-item dropdown'>");
             stringBuilder.AppendLine("<a class='nav-link dropdown-toggle' href='http://example.com' id='dropdown04' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Model Events</a>");
             stringBuilder.AppendLine("<div class='dropdown-menu' aria-labelledby='dropdown04'>");
