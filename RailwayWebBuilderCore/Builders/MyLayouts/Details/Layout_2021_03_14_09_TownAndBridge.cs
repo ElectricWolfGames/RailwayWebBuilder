@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-03-14 09 Town and Bridge\";
             ExportImagePath = Constants.FullMyLayouts + "images\\0314\\";
 
-            Title = "<h2>Town and Bridge</h2>";
+            Title = "<h2>09: Town and Bridge</h2>";
             Details.Append("<p>Welcome to cattington town, we have been updating the town with extra details, a village sign post, seating for the pub.</p>");
             Details.Append("<p>And also after a bit of re-design we are now going to have a second station along the main line.</p>");
             Details.Append("<p>We are going to call this new station Long Wishkers</p>");

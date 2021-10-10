@@ -30,11 +30,13 @@ namespace RailwayWebBuilderCore.Helpers
             string locomotives = $"{offSet}{Constants.Locomotive}LocoRef.html";
             string myLayouts = $"{offSet}MyLayouts/index.html";
             string shop = $"{offSet}Shop/index.html";
+            string auctions = $"{offSet}Shop/GCRAuctions.html";
             string stockVideos = $"{offSet}{Constants.StockVideos}index.html";
 
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Cattington</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{shop}'>Shop</a></li>");
+            //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{auctions}'>Auctions</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{locomotives}'>Loco Ref</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>Stock Videos</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");

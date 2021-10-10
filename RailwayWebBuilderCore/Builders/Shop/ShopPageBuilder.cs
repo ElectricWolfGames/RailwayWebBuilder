@@ -63,18 +63,6 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append("<p></p>");
             sb.Append("<p></p>");
 
-            /*
-             *   blogHtml.AppendLine("<div class='col-md-6'>");
-            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-            blogHtml.AppendLine($"<h5 class='card-header'>{blog.Title}</h5>");
-            blogHtml.AppendLine("<div class='card-body'>");
-            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
-            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-
-             */
         }
     }
 }

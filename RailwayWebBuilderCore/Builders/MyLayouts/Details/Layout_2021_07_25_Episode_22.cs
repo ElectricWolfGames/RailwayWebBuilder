@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-07-25 22\";
             ExportImagePath = Constants.FullMyLayouts + "images\\0725\\";
 
-            Title = "<h2></h2>";
+            Title = "<h2>22: House and Track</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
 
             Details.Append("<p>We have finished the house and changed the shunting yard (again)</p>");

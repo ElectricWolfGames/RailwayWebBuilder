@@ -1,14 +1,14 @@
-﻿using eWolfBootstrap.Builders;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {

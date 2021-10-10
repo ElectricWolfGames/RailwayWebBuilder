@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-03-21 10 New Loco\";
             ExportImagePath = Constants.FullMyLayouts + "images\\0321\\";
 
-            Title = "<h2>New Loco!</h2>";
+            Title = "<h2>10: New Loco!</h2>";
             Details.Append("<p>Welcome back to Cattington, We have a new locomotive - Streamlined LMS Coronation Class - King George VI </p>");
             Details.Append("<p>We've built a farm/vicars house just over the railway line with, a bridge to access it.</p>");
             Details.Append("<p>And updated all the sidings</p>");

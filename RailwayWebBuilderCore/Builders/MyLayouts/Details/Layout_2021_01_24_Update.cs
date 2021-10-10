@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-01-24 Update\";
             ExportImagePath = Constants.FullMyLayouts + "images\\010\\";
 
-            Title = "<h2>Name and update</h2>";
+            Title = "<h2>02: Name and update</h2>";
 
             Details.Append("<p>We have named our layout - watch to find out...</p>");
             Details.Append("<p>And some other update around the boards before we can do anything else.</p>");

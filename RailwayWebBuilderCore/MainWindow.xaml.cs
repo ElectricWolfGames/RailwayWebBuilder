@@ -96,6 +96,7 @@ namespace RailwayWebBuilderCore
 
             ShopMainPageBuilder.Build();
             ShopPageBuilder.Build();
+            AuctionsBuilder.Build();
 
             var bsv = new BuildStockVideos();
             bsv.Build();

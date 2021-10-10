@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             RawImagePath = Constants.RawDataPath + @"MyLayout\2021-02-07 Town Layout\";
             ExportImagePath = Constants.FullMyLayouts + "images\\011\\";
 
-            Title = "<h2>Change of layout and town update!</h2>";
+            Title = "<h2>04: Change of layout and town update!</h2>";
 
             Details.Append("<p>We have moved things around now,</p>");
             Details.Append("<p>So the station has moved, this will now be next to Cattington Town.</p>");
