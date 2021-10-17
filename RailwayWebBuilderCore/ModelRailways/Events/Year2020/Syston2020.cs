@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Title = "Syston Model Railway Society 2020";
             ImagePreview = "P2157640-Newton-east-Syston-model-railway-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Cumanavago", Gauges.O_Gauge));
+            Layouts.Add(new LayoutDetails("Cumanavago", Gauges.OO_Gauge));
             Layouts.Add(new LayoutDetails("Lisworth Bay", Gauges.N_Gauge, "01 Lisworth Bay"));
             Layouts.Add(new LayoutDetails("Southgate DMU", Gauges.OO_Gauge, "02 Southgate Dmu"));
             Layouts.Add(new LayoutDetails("Newtown East", Gauges.OO_Gauge, "03 Newton East"));

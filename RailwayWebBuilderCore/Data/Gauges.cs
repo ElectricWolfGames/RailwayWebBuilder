@@ -13,6 +13,7 @@
         Dublo3Rail,
         Mixed_Gauge,
         H0mNarrowGauge,
-        N_Gauge_Continental
+        N_Gauge_Continental,
+        O165_Gauge
     }
 }

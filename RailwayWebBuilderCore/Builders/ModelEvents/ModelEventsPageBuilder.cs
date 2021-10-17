@@ -26,7 +26,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             pageBuilder.Append(NavBarHelper.NavBar("../"));
             pageBuilder.Append("<div class='container mt-4'>");
 
-            pageBuilder.Jumbotron("<h1>Model Railway Exhibitions</h1>", "<p>Most events are currently CANCELLED due to the current National crisis</p>");
+            pageBuilder.Jumbotron("<h1>Model Railway Exhibitions</h1>", "<p></p>",8 );
 
             var ordedBlogs = modelEvents.OrderByDescending(x => x.TripDate);
             pageBuilder.Append("<div class='row mb-2'>");

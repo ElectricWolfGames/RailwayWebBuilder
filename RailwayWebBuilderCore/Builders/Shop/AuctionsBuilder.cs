@@ -49,13 +49,13 @@ namespace RailwayWebBuilderCore.Builders.Shop
 "LE11 1SL</br>" +"</h4>");
             sb.Append("</div>");
 
-
             sb.Append("</br>");
             sb.Append("<p>Please include with your bid, your name, postal address and contact telephone number.</p>");
+            sb.Append("<h2>The latests Bid is at £201!</h2>");
             sb.Append("<p>The best bid received by midday on the 31st of January 2022 will receive the print - with free collection to be arranged at Loughborough Central station or by delivery to a UK address via courier at additional cost.</p>");
             
 
-            sb.Append("<p>We will be showing the print on the friends stand (Loubgbourgh station platform No1) </p>");
+            sb.Append("<p>We will be showing the print on the friends stand (Loughborough station platform No1) </p>");
             sb.Append("<p>At the <a href='https://www.gcrailway.co.uk/special-events/last-hurrah-of-the-season/'>Last Hurrah</a> on the November 20th & 21st ");
             sb.Append("and The Winter Gala - January 28th, 29th & 30th</p>");
             sb.Append("<p>Thank you for your support.</p>");

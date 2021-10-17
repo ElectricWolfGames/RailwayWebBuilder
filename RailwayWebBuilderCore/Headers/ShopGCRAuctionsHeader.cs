@@ -12,6 +12,9 @@ namespace RailwayWebBuilderCore.Headers
             {
                 "Auctions",
                 "Train Painting",
+                "LMS Princess Coronation Class No. 46229 Duchess Of Hamilton",
+                "Terence Cuneo",
+                "46229 Duchess Of Hamilton",
             };
             Description = "GCR Reunification Auctions";
 
