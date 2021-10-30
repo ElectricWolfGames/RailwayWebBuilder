@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
         protected PageBuilder _pageBuilder;
 
         public string LocalPath { get; } = Constants.RootPath + Constants.StockVideos;
-        public List<StockDetails> _details = new List<StockDetails>();
+        public readonly List<StockDetails> _details = new List<StockDetails>();
 
         public BuildStockVideos()
         {
@@ -22,6 +22,11 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _details.Add(new StockDetails("Coach Side view", "5NM2irNrvYg"));
             _details.Add(new StockDetails("Track sideview", "eAPh41TyYoM"));
             _details.Add(new StockDetails("6990,WitherslackHall ", "Zx-_ZqAK1TI"));
+            _details.Add(new StockDetails("Track view + Class37 pass by", "7OWQgH0Za3s"));
+            _details.Add(new StockDetails("Wagons track side", "Pvhp1jDcllM"));
+            
+            _details.Add(new StockDetails("45305 LMSClass5 Moving forward", "p2GGh4cQZtc"));
+            _details.Add(new StockDetails("45305 LMSClass5 Passing by", "vzfs_tQgDBE"));
         }
 
         public void Build()

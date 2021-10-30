@@ -32,7 +32,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             AddLoughborough_004(HtmlPath + "images\\");
             AddLoughborough_003(HtmlPath + "images\\");
 
-            AddLoughborough_002(HtmlPath + "images\\");
             AddLoughborough_001(HtmlPath + "images\\");
 
             string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\Gallery";
@@ -60,18 +59,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
         }
 
-        private void AddLoughborough_002(string imagePath)
-        {
-            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
-
-            Directory.CreateDirectory(imagePath);
-
-            _pageBuilder.Append($"<hr/>");
-            _pageBuilder.Append("<h2>Class 101 Stopping and starting, Approuching loughborough Station</h2> 31/10/2020");
-
-            string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\2020-11-01\";
-            _pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
-        }
+      
 
         private void AddLoughborough_003(string imagePath)
         {
