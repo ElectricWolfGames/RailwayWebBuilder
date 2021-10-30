@@ -42,6 +42,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
         public virtual void Build()
         {
+            // TODO: order pics by date and group them 
             Directory.CreateDirectory(LocalPath);
 
             var locref = new LocoRefHeader();

@@ -11,6 +11,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
+    //TODO: Update iamges so we get 3 large images, then 2 rows of small images.
     public class LocoRefPageBuilder
     {
         private List<ILocomotiveRefPage> _orderedDetails;
