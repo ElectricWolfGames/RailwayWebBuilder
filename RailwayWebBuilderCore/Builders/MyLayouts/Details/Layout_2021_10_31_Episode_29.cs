@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             Details.Append("<p>Picked up a few bargains from the Emporium at GCR Loughborough Station.</p>");
             
-            YouTubeLink = "???";
+            YouTubeLink = "THsunzYamdo";
         }
     }
 }

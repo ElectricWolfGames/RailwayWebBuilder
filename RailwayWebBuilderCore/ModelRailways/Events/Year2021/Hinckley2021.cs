@@ -6,7 +6,7 @@ using System;
 
 namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
 {
-    /*public class Hinckley2021 : ModelEventPageDetails, IBlogger
+    public class Hinckley2021 : ModelEventPageDetails, IBlogger
     {
         public Hinckley2021()
         {
@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             YouTubeLink = "https://www.youtube.com/embed/????????";
             ImageFolder = "20211031-Hinckley";
             Title = "Hinckley Model Railway Show 2021";
-            ImagePreview = "PA105301-2021-10-10-Kirkby-in-ashfield-North-road-thumb.JPG?";
+            ImagePreview = "PA305806-2021-10-30-Hinckley-model-show-thumb.JPG";
 
             //Layouts.Add(new LayoutDetails("Sutton-in-Ashfield Town", Gauges.OO_Gauge, "Sutton-in-Ashfield Town"));
 
@@ -41,5 +41,5 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
                 ModelEvent = this,
             };
         }
-    }*/
+    }
 }
