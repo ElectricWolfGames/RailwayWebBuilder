@@ -14,14 +14,21 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             Location = new TheForrayanCentreHinckley();
             EventDates = "30th October 2021";
             Descrption = "Hinckley Model Railway Show at Hinckley, Leicestershire .";
-            ImagesPath = Constants.RawDataPath + @"ModelEvents\2021-10-31 Hinckley Model Railway Show";
-            TripDate = new DateTime(2021, 10, 31);
-            YouTubeLink = "https://www.youtube.com/embed/????????";
-            ImageFolder = "20211031-Hinckley";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2021-10-30 Hinckley Model Railway Show";
+            TripDate = new DateTime(2021, 10, 30);
+            YouTubeLink = "https://www.youtube.com/embed/GYXOvy2pk6w";
+            ImageFolder = "20211030-Hinckley";
             Title = "Hinckley Model Railway Show 2021";
             ImagePreview = "PA305806-2021-10-30-Hinckley-model-show-thumb.JPG";
 
-            //Layouts.Add(new LayoutDetails("Sutton-in-Ashfield Town", Gauges.OO_Gauge, "Sutton-in-Ashfield Town"));
+            Layouts.Add(new LayoutDetails("Buxworth", Gauges.O_Gauge, "01 Buxworth"));
+            Layouts.Add(new LayoutDetails("The Electric Tram", Gauges.N_Gauge, "07 The Electric Tram"));
+            Layouts.Add(new LayoutDetails("Robinson Heath", Gauges.N_Gauge, "09 Robinson Heath"));
+            Layouts.Add(new LayoutDetails("Canal Park and Station", Gauges.OO_Gauge, "10 Canal Park and Station"));
+            Layouts.Add(new LayoutDetails("Badgers Hollow", Gauges.OO_Gauge, "15 Badgers Hollow"));
+            Layouts.Add(new LayoutDetails("Magna Park", Gauges.OO_Gauge, "17 Magna Park"));
+            Layouts.Add(new LayoutDetails("St Ruth", Gauges.N_Gauge, "18 St. Ruth"));
+
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
@@ -35,9 +42,9 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             return new Blog
             {
                 Name = "Hinckley Model Railway Show 2021",
-                Date = new DateTime(2021, 10, 31),
+                Date = new DateTime(2021, 10, 30),
                 Paragraph = "Visted the The Hinckley Model Railway Show on the 30th October, lots of amazing models displays.",
-                Link = $"{Constants.ModelEvents}/20211031-Hinckley/index.html",
+                Link = $"{Constants.ModelEvents}/20211030-Hinckley/index.html",
                 ModelEvent = this,
             };
         }
