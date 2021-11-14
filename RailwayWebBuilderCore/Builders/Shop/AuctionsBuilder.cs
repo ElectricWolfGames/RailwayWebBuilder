@@ -51,7 +51,7 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             sb.Append("</br>");
             sb.Append("<p>Please include with your bid, your name, postal address and contact telephone number.</p>");
-            sb.Append("<h2>The latests Bid is at £1000!</h2>");
+            sb.Append("<h2>The latests Bid is at £1001!</h2>");
             sb.Append("<p>The best bid received by midday on the 31st of January 2022 will receive the print - with free collection to be arranged at Loughborough Central station or by delivery to a UK address via courier at additional cost.</p>");
             
 
