@@ -31,6 +31,9 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             _pageBuilder.Append(AddHalt_001(HtmlPath, HtmlPath + "images\\"));
 
+            string path = Constants.RawDataPath + @"Stations\GCR-Rushcliffe Halt\Gallery";
+            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
+
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
 
@@ -60,9 +63,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
-            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
-            pageBuilder.AddImages(htmlpath, htmlpath + "images", path);
-
+            
             return pageBuilder.GetString();
         }
     }

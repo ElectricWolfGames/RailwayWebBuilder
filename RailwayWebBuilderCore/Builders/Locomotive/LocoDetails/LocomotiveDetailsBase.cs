@@ -34,8 +34,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         {
             string imagePath = HtmlPath + "images\\";
             List<string> images = ImageHelper.GetAllImages(RawImagePath);
-            List<string> imageToUse = images.Take(5).ToList();
 
+            images = images.OrderByDescending(x => x).ToList();
+            List<string> imageToUse = images.Take(5).ToList();
+            
             Directory.CreateDirectory(imagePath);
             pageBuilder.AddImagesWithSeeMore(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
         }
@@ -62,7 +64,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             AddPageDetails();
 
             AddGallrey(HtmlPath + "images\\", RawImagePath);
-
+            
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
 
@@ -88,7 +90,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         {
             Directory.CreateDirectory(imagePath);
 
-            _pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
+            _pageBuilder.AddImagesGroupedByDate(LocalPath, LocalPath + "images", galleryPath);
         }
 
         private void AddPageDetails()

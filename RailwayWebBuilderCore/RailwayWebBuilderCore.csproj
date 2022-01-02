@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Builders\MyLayouts\Details\D2022\" />
     <Folder Include="Factories\" />
   </ItemGroup>
 

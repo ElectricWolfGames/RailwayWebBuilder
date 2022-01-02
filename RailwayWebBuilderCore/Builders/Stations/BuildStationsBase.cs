@@ -42,7 +42,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append($"<hr/>");
             _pageBuilder.Append("<h2>Gallery</h2>");
 
-            _pageBuilder.AddImages(htmlpath, htmlpath + "images", galleryPath);
+            _pageBuilder.AddImagesGroupedByDate(htmlpath, htmlpath + "images", galleryPath);
         }
 
         protected StationsHeader CreateHeader(StationLocationsBase StationLocations)
