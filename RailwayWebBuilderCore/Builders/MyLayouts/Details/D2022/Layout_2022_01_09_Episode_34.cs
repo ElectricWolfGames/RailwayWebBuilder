@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RailwayWebBuilderCore.Configuration;
+using System;
 using System.Text;
-using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
     {
         public Layout_2022_01_09_Episode_34()
         {
-            Active = false;
+            Active = true;
             When = new DateTime(2022, 01, 09);
             Details = new StringBuilder();
 
@@ -18,10 +18,10 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2>34: Happy New Year!</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
 
-            Details.Append("<p>We have a new Loco, Some new rolling stock</p>");
-            Details.Append("<p>And we have been adding some ballast</p>");
+            Details.Append("<p>We have clean-up some old locos</p>");
+            Details.Append("<p>And we have some new livestock.</p>");
 
-            YouTubeLink = "missing";
+            YouTubeLink = "B-Pv3PvYkw0";
         }
     }
 }

@@ -29,7 +29,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             Layouts.Add(new LayoutDetails("Magna Park", Gauges.OO_Gauge, "17 Magna Park"));
             Layouts.Add(new LayoutDetails("St Ruth", Gauges.N_Gauge, "18 St. Ruth"));
 
-
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
                 "The Forrayan Centre",

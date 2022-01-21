@@ -29,7 +29,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            
             string path = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
@@ -42,7 +41,5 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             _pageBuilder.Output();
         }
-
-       
     }
 }

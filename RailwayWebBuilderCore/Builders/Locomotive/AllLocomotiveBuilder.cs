@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using eWolfBootstrap.Builders;
+﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Chats;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {

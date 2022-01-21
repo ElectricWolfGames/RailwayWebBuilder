@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore.Data
 {
-    abstract public class StationLocationsBase : ILocations
+    public abstract class StationLocationsBase : ILocations
     {
         public StationLocationsBase()
         {

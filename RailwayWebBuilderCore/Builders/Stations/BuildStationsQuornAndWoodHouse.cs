@@ -41,6 +41,5 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             _pageBuilder.Output();
         }
-
     }
 }

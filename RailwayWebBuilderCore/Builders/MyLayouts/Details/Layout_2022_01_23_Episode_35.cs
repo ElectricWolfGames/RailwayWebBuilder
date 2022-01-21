@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RailwayWebBuilderCore.Configuration;
+using System;
 using System.Text;
-using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
@@ -8,19 +8,18 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
     {
         public Layout_2022_01_23_Episode_35()
         {
-            Active = false;
+            Active = true;
             When = new DateTime(2022, 01, 23);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.RawDataPath + @"MyLayout\2022-01-23 34\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\2022-01-23 35\";
             ExportImagePath = Constants.FullMyLayouts + "images\\220123\\";
 
-            Title = "<h2>35: One year old</h2>";
+            Title = "<h2>35: Room Tour</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
-            Details.Append("<p>We have a new Loco, Some new rolling stock</p>");
-            Details.Append("<p>And we have been adding some ballast</p>");
-
-            YouTubeLink = "missing";
+            Details.Append("<p>As Cattington is now one year old, we are going to do a full room tour.</p>");
+            
+            YouTubeLink = "dMpE5xa2-IA";
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RailwayWebBuilderCore.Configuration;
+using System;
 using System.Text;
-using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Details.Append("<p>Welcome back to Cattington,</p>");
 
             Details.Append("<p>Picked up a few bargains from the Emporium at GCR Loughborough Station.</p>");
-            
+
             YouTubeLink = "THsunzYamdo";
         }
     }

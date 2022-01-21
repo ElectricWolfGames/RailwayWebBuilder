@@ -62,7 +62,6 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append("<p></p>");
             sb.Append("<p></p>");
             sb.Append("<p></p>");
-
         }
     }
 }

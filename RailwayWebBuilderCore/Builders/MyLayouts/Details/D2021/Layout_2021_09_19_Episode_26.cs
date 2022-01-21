@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RailwayWebBuilderCore.Configuration;
+using System;
 using System.Text;
-using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {

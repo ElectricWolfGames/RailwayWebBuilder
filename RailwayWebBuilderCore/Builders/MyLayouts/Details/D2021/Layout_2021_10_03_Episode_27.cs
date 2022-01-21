@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RailwayWebBuilderCore.Configuration;
+using System;
 using System.Text;
-using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             Details.Append("<p>We have been adding the garden to the top part of Long Whiskers</p>");
             Details.Append("<p>Also started work on the industrial building for the back ground</p>");
-            
+
             YouTubeLink = "lWV-22vfTqw";
         }
     }

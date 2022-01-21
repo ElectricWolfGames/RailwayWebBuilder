@@ -63,7 +63,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
-            
             return pageBuilder.GetString();
         }
     }

@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore.Data
 {
-    abstract public class EventLocationsBase : ILocations
+    public abstract class EventLocationsBase : ILocations
     {
         public EventLocationsBase()
         {

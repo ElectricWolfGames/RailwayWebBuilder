@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using eWolfBootstrap.Builders;
+﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
@@ -37,14 +37,14 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
             images = images.OrderByDescending(x => x).ToList();
             List<string> imageToUse = images.Take(5).ToList();
-            
+
             Directory.CreateDirectory(imagePath);
             pageBuilder.AddImagesWithSeeMore(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
         }
 
         public virtual void Build()
         {
-            // TODO: order pics by date and group them 
+            // TODO: order pics by date and group them
             Directory.CreateDirectory(LocalPath);
 
             var locref = new LocoRefHeader();
@@ -64,7 +64,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             AddPageDetails();
 
             AddGallrey(HtmlPath + "images\\", RawImagePath);
-            
+
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
 

@@ -1,20 +1,18 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using eWolfBootstrap.Builders;
+﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Interfaces;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.StockVideos
 {
     public class BuildStockVideos
     {
-        protected PageBuilder _pageBuilder;
-
-        public string LocalPath { get; } = Constants.RootPath + Constants.StockVideos;
         public readonly List<StockDetails> _details = new List<StockDetails>();
+        protected PageBuilder _pageBuilder;
 
         public BuildStockVideos()
         {
@@ -24,10 +22,12 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _details.Add(new StockDetails("6990,WitherslackHall ", "Zx-_ZqAK1TI"));
             _details.Add(new StockDetails("Track view + Class37 pass by", "7OWQgH0Za3s"));
             _details.Add(new StockDetails("Wagons track side", "Pvhp1jDcllM"));
-            
+
             _details.Add(new StockDetails("45305 LMSClass5 Moving forward", "p2GGh4cQZtc"));
             _details.Add(new StockDetails("45305 LMSClass5 Passing by", "vzfs_tQgDBE"));
         }
+
+        public string LocalPath { get; } = Constants.RootPath + Constants.StockVideos;
 
         public void Build()
         {
@@ -55,6 +55,13 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _pageBuilder.Output();
         }
 
+        protected IPageHeader CreateHeader()
+        {
+            var header = new LocoRefHeader();
+            header.Title = "StoveVideos";
+            return header;
+        }
+
         private static string AddYoutubePreview(string youTubeLink)
         {
             var pageBuilder = new PageBuilder();
@@ -66,13 +73,6 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             pageBuilder.Append("</div>");
 
             return pageBuilder.GetString();
-        }
-
-        protected IPageHeader CreateHeader()
-        {
-            var header = new LocoRefHeader();
-            header.Title = "StoveVideos";
-            return header;
         }
 
         private string Jumbotron()
