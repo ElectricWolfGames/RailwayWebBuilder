@@ -1,15 +1,6 @@
-﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
-namespace RailwayWebBuilderCore.Builders.Locomotive
+﻿namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocomotiveDetailsBuilder : LocomotiveDetailsBase, IRailwayPageBuilder
+    /*public class LocomotiveDetailsBuilder : LocomotiveDetailsBase, IRailwayPageBuilder
     {
         public LocomotiveDetailsBuilder()
         {
@@ -68,5 +59,5 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 _pageBuilder.Append($"<a href='{path}'>{name}</a>");
             }
         }
-    }
+    }*/
 }

@@ -1,6 +1,5 @@
 ﻿using RailwayWebBuilderCore.Builders;
 using RailwayWebBuilderCore.Builders.Locations;
-using RailwayWebBuilderCore.Builders.Locomotive;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Shop;
@@ -101,8 +100,8 @@ namespace RailwayWebBuilderCore
             var bsv = new BuildStockVideos();
             bsv.Build();
 
-            LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
-            ld.Build();
+            //LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
+            //ld.Build();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

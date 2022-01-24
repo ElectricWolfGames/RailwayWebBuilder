@@ -1,16 +1,6 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.Services;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-
-namespace RailwayWebBuilderCore.Builders.Locomotive
+﻿namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class GroupsBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
+    /*public class GroupsBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
     {
         public string HtmlFileName { get; } = "Groups.html";
         public string PageTitle { get; } = "Groups";
@@ -65,19 +55,19 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
                 th.AddRow(locoFields.ToArray());
             }
 
-            /* DoughnutBar dbTotalProduced = new DoughnutBar();
-
-             locos = locos.OrderByDescending(x => x.TotalProduced).ToList();
-
-             foreach (var loco in locos)
-             {
-                 dbTotalProduced.Add(loco.TotalProduced, loco.Name);
-             }*/
+             //DoughnutBar dbTotalProduced = new DoughnutBar();
+             //
+             //locos = locos.OrderByDescending(x => x.TotalProduced).ToList();
+             //
+             //foreach (var loco in locos)
+             //{
+             //    dbTotalProduced.Add(loco.TotalProduced, loco.Name);
+             //}
 
             _pageBuilder.Append(th.Output());
             //_pageBuilder.Append(dbTotalProduced.Output());
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
         }
-    }
+    }*/
 }

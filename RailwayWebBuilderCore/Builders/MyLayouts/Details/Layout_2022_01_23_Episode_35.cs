@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Title = "<h2>35: Room Tour</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
             Details.Append("<p>As Cattington is now one year old, we are going to do a full room tour.</p>");
-            
+
             YouTubeLink = "dMpE5xa2-IA";
         }
     }

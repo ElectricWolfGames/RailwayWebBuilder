@@ -4,7 +4,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
     // TODO: Need to add Class25
     // TODO: Need to add Class50
-    // TODO: Need to add Class55
 
     public class _45305 : LocomotiveDetailsBase
     {

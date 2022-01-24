@@ -1,16 +1,6 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Chats;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.Services;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-
-namespace RailwayWebBuilderCore.Builders.Locomotive
+﻿namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocosBySizeBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
+    /*public class LocosBySizeBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
     {
         public string HtmlFileName { get; } = "BySize.html";
         public string PageTitle { get; } = "Loco by size";
@@ -63,5 +53,5 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             _pageBuilder.Output();
         }
-    }
+    }*/
 }

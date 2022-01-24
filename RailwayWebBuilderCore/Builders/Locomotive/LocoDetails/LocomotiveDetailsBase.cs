@@ -5,6 +5,7 @@ using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,15 +37,17 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             List<string> images = ImageHelper.GetAllImages(RawImagePath);
 
             images = images.OrderByDescending(x => x).ToList();
-            List<string> imageToUse = images.Take(5).ToList();
+
+            List<string> imageToUse = SelectImages(3, images);// images.Take(3).ToList();
+
+            List<string> imageToUseSmall = SelectImages(5, images);
 
             Directory.CreateDirectory(imagePath);
-            pageBuilder.AddImagesWithSeeMore(imageToUse, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
+            pageBuilder.AddImagesWithSeeMore(imageToUse, imageToUseSmall, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
         }
 
         public virtual void Build()
         {
-            // TODO: order pics by date and group them
             Directory.CreateDirectory(LocalPath);
 
             var locref = new LocoRefHeader();
@@ -109,6 +112,19 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 return;
 
             _pageBuilder.Append($"<p>{Paragraph3}</p>");
+        }
+
+        private List<string> SelectImages(int count, List<string> images)
+        {
+            List<string> imageToUse = new List<string>();
+
+            for (int i = 0; i < count; i++)
+            {
+                var ran = new Random();
+                int r = ran.Next(images.Count);
+                imageToUse.Add(images[r]);
+            }
+            return imageToUse;
         }
     }
 }
