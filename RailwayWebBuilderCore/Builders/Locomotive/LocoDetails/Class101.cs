@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     {
         public Class101()
         {
-            Title = "101, Clas101, Bo-Bo";
+            Title = "101, Class 101, Bo-Bo";
             PageTitle = "Class101";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class101\";

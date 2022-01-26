@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     {
         public Class33_D6535()
         {
-            Title = "D6535, Class33";
+            Title = "D6535, Class 33";
             PageTitle = "D6535";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class33-D6535\";
@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Keywords.Add("British Rail Class 33");
             Keywords.Add("BRCW Type 3");
             Keywords.Add("Crompton");
-            Keywords.Add("Class33");
+            Keywords.Add("Class 33");
             Keywords.Add("D6535");
         }
     }
