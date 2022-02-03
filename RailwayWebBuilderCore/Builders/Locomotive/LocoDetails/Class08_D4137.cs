@@ -23,6 +23,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Keywords.Add("British Rail");
             Keywords.Add("diesel-electric shunting");
             Keywords.Add("diesel shunter");
+            Keywords.Add("Class 08");
             Keywords.Add("1952");
         }
     }

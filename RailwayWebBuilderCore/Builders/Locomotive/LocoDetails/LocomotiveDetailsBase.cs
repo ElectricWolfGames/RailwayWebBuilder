@@ -16,6 +16,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
     {
         private PageBuilder _pageBuilder;
+
         public bool Active { get; set; } = true;
         public StringBuilder Details { get; set; }
         public string ExportImagePath { get; set; }
@@ -23,6 +24,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string HtmlPath { get; } = Constants.LocomotiveRef;
         public List<string> Keywords { get; private set; } = new List<string>();
         public string LocalPath { get; } = Constants.RootPath + Constants.LocomotiveRef;
+        public ILocomotiveSpecifications LocomotiveSpecifications { get; set; }
         public int Order { get; set; }
         public string PageTitle { get; set; } = "Loco Ref Collection";
         public string Paragraph1 { get; set; } = "";
@@ -55,6 +57,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             locref.Keywords.Add(Title);
 
             locref.Keywords.AddRange(Keywords);
+            locref.Keywords.Add("Photos");
+            locref.Keywords.Add($"Photos of {Keywords[0]}");
+            locref.Keywords.Add("Images");
+            locref.Keywords.Add("reference");
 
             _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, locref, "../../");
 

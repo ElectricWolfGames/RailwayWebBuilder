@@ -1,4 +1,5 @@
-﻿using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore.Builders.Locomotive.LocomotiveSpecifications;
+using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
@@ -6,6 +7,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     {
         public _92134()
         {
+            LocomotiveSpecifications = new LocomotiveSpecification_9F();
+
             Title = "92134, Class9F, 2-10-0";
             Paragraph1 = "The British Railways BR Standard Class 9F 2-10-0 is a class of steam locomotive designed for British Railways by Robert Riddles. " +
                 "The Class 9F was the last in a series of standardised locomotive classes designed for British Railways during the 1950s, " +

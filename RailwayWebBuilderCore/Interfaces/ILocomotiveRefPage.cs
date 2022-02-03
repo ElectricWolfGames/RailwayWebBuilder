@@ -18,6 +18,9 @@ namespace RailwayWebBuilderCore.Interfaces
         string RawImagePath { get; }
         string Title { get; }
 
+        ILocomotiveSpecifications LocomotiveSpecifications { get; }
+
+
         void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
 
         void Build();

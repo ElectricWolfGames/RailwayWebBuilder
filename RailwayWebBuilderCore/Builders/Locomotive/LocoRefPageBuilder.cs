@@ -11,6 +11,9 @@ using System.Reflection;
 
 namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
+    /// <summary>
+    /// TODO: aded loco ref 63601
+    /// </summary>
     public class LocoRefPageBuilder
     {
         private List<ILocomotiveRefPage> _orderedDetails;
@@ -51,6 +54,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 
             pageBuilder.Append("<div class='container mt-4'>");
 
+            //TODO: Photo Ref - can we add an index with grouping by type.
             Jumbotron(pageBuilder, PageTitle);
 
             foreach (var loco in _orderedDetails)
