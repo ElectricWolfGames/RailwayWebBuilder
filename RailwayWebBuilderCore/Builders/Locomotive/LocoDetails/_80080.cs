@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Builders.Locomotive.LocomotiveSpecifications;
-using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
@@ -28,11 +27,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Order = 1;
 
             Keywords.Add("British Railways BR Standard");
-            
+
             Keywords.Add("Robert Riddles");
             Keywords.Add("Standard Class 4 tank");
             Keywords.Add("80080");
         }
     }
-
 }

@@ -33,5 +33,4 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Keywords.Add("Great Central");
         }
     }
-
 }
