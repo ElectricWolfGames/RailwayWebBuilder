@@ -14,6 +14,7 @@
         Mixed_Gauge,
         H0mNarrowGauge,
         N_Gauge_Continental,
-        O165_Gauge
+        O165_Gauge,
+        TTE_Gauge,
     }
 }

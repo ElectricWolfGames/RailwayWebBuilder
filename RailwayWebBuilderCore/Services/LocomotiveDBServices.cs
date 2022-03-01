@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore.Services
     public class LocomotiveDBServices
     {
         private ObservableCollection<LocomotiveDetails> _locomotiveDetails = new ObservableCollection<LocomotiveDetails>();
-        private string _outputFolder = @"D:\Trains\LocoDB\Locomotives";
+        private string _outputFolder = Configuration.Constants.DriveLetter + @"Trains\LocoDB\Locomotives";
 
         public ObservableCollection<LocomotiveDetails> FullList
         {

@@ -27,7 +27,7 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             pb.Append("<div class='container mt-4'>");
 
-            string imageName = "D:/Trains/_WebsiteData/Others/images/";
+            string imageName = Constants.DriveLetter + "Trains/_WebsiteData/Others/images/";
             string imageHtmlName = "../Others/images/";
 
             pb.JumbotronWithImage("<h1>Karl and Debbie Trains Shop</h1>",

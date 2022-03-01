@@ -3,7 +3,7 @@
     public static class Constants
     {
         public const string Catalog = "Catalog";
-        public const string DriveLetter = @"D:\";
+        public const string DriveLetter = @"E:\";
 
         public const string FullCatalog = RootPath + Catalog + @"\";
         public const string FullMyLayouts = RootPath + MyLayouts + @"\";
