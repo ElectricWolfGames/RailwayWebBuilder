@@ -103,6 +103,9 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             sb.Append("<p>Thanks to another kind donation, now we have two new lots to be auctioned with all proceeds going to the same cause.</p>");
 
+            sb.Append("<p>Since promoting the auction in good faith, the possibility the builders plate may be a replica has been raised with us.</p>");
+            sb.Append("<p>Should you wish to see the plates in person, please email below.</p>");
+
             sb.Append("<h2>Lot A</h2>");
             sb.Append("<p>First is a locomotive shed plate, 36C. We don’t know which locomotive it was removed from, " +
                 "but the code relates to Frodingham near Scunthorpe, a sub shed of 36A Doncaster. Bids should start at £150 for this lot.</p>");
