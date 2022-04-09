@@ -16,5 +16,8 @@
         N_Gauge_Continental,
         O165_Gauge,
         TTE_Gauge,
+        _16mm,
+        _3mm,
+        _45mm,
     }
 }
