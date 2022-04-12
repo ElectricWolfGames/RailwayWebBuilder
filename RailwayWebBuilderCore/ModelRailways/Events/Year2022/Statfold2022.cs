@@ -16,10 +16,10 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             Descrption = "Statfold Model Railway Event";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2022-04-09 Statfold Model Railway Event";
             TripDate = new DateTime(2022, 04, 07);
-            YouTubeLink = "????";
+            YouTubeLink = "https://www.youtube.com/embed/8giNIWlU7Wo";
             ImageFolder = "20220409-Statfold";
             Title = "Statfold Model Railway Event";
-            ImagePreview = "P2266927-2022-02-26-Netherwood-sidings-thumb.JPG";
+            ImagePreview = "P4097587-thumb.JPG";
 
             Layouts.Add(new LayoutDetails("Appleton Dene", Gauges.O_Gauge, "Appleton Dene"));
             Layouts.Add(new LayoutDetails("Arley", Gauges.OO_Gauge, "Arley"));
@@ -28,11 +28,11 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Caroline Concrete", Gauges.O_Gauge, "Caroline Concrete"));
             Layouts.Add(new LayoutDetails("Coleford", Gauges.OO9_Gauge, "Coleford"));
             Layouts.Add(new LayoutDetails("Cregwir", Gauges.OO_Gauge, "Cregwir"));
-            Layouts.Add(new LayoutDetails("Duxberry", Gauges.OO_Gauge, "Duxberry"));
+            Layouts.Add(new LayoutDetails("Duxbury", Gauges.OO_Gauge, "Duxbury"));
             Layouts.Add(new LayoutDetails("Fairlie Syniad Da", Gauges.OO9_Gauge, "Fairlie Syniad Da"));
             Layouts.Add(new LayoutDetails("Grenstad", Gauges.N_Gauge, "Grenstad"));
             Layouts.Add(new LayoutDetails("Gresty Bridge", Gauges.OO_Gauge, "Gresty Bridge"));
-            Layouts.Add(new LayoutDetails("Hackworth (Jutland St)", Gauges.OO_Gauge, "Hackworth (Jutland St)"));
+            Layouts.Add(new LayoutDetails("Hackworth (Jutland St)", Gauges.OO_Gauge, "HackWorth"));
             Layouts.Add(new LayoutDetails("Halland", Gauges._45mm, "Halland"));
             Layouts.Add(new LayoutDetails("Hambleden Valley", Gauges.OO_Gauge, "Hambleden Valley"));
             Layouts.Add(new LayoutDetails("Heanor South", Gauges.OO_Gauge, "Heanor South"));
@@ -66,7 +66,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             return new Blog
             {
                 Name = "Statfold Model Railway Event",
-                Date = new DateTime(2022, 02, 26),
+                Date = new DateTime(2022, 04, 09),
                 Paragraph = "Visted the The Statfold Model Railway Event on the 9th, 10th April, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20220409-Statfold/index.html",
                 ModelEvent = this,
