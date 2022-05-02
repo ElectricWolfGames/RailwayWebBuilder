@@ -108,7 +108,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             sb.Append("<h2>Lot A</h2>");
             sb.Append("<p>First is a locomotive shed plate, 36C. We don’t know which locomotive it was removed from, " +
-                "but the code relates to Frodingham near Scunthorpe, a sub shed of 36A Doncaster. Bids should start at £150 for this lot.</p>");
+                "but the code relates to Frodingham near Scunthorpe, a sub shed of 36A Doncaster. <strong>We are now open to any offers for this lot.</strong></p>");
+            sb.Append("<p>We can't be 100% they are original!</p>");
             sb.Append("<div class='col-md-8'>");
             sb.AddImageCenter(htmlpath, htmlpath + "images", imageName);
             sb.Append("</div>");
@@ -117,7 +118,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append("<h2>Lot B</h2>");
             sb.Append("<p>The second is a locomotive builders plate; a distinctive diamond from the North British Locomotive Company. " +
                 "Dated 1947, number 26094.This is from London & North Eastern Railway 'B1' class 4-6-0 No 1193, " +
-                "subsequently British Railways No 61193, built May 1947, withdrawn September 1962. Bids should also start at £150 for this lot.</p>");
+                "subsequently British Railways No 61193, built May 1947, withdrawn September 1962. <strong>We are now open to any offers for this lot.</strong></p>");
+            sb.Append("<p>We can't be 100% they are original!</p>");
 
             sb.Append("<div class='col-md-8'>");
             sb.AddImageCenter(htmlpath, htmlpath + "images", imageName2);
@@ -144,8 +146,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             sb.Append("<p>Please include with your bid, your name, postal address and contact telephone number. And the LOT you are bidding on.</p>");
 
-            sb.Append("<p>We will be showing the plates on the friends stand (Loughborough station platform No1) </p>");
-            sb.Append("<p>At the <a href='https://www.gcrailway.co.uk/Railways-At-Work-Gala/'>Railways at Work Gala</a> on the November 19th and 20th March 2022</p>");
+            //sb.Append("<p>We will be showing the plates on the friends stand (Loughborough station platform No1) </p>");
+            //sb.Append("<p>At the <a href='https://www.gcrailway.co.uk/Railways-At-Work-Gala/'>Railways at Work Gala</a> on the November 19th and 20th March 2022</p>");
 
             sb.Append("<p>Thank you for your support.</p>");
 
