@@ -11,8 +11,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
     {
         public static void Build()
         {
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.Shop);
-            string htmlpath = Constants.RootPath + "\\" + Constants.Shop + "\\";
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.Shop);
+            string htmlpath = Constants._aRootPath + "\\" + Constants.Shop + "\\";
 
             var sb = new PageBuilder("GCRUnification.html", htmlpath, new ShopGCRHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));

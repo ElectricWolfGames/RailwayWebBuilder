@@ -27,7 +27,7 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _details.Add(new StockDetails("45305 LMSClass5 Passing by", "vzfs_tQgDBE"));
         }
 
-        public string LocalPath { get; } = Constants.RootPath + Constants.StockVideos;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.StockVideos;
 
         public void Build()
         {

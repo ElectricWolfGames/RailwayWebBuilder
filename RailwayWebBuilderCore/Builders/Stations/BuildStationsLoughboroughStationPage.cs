@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         public string HilightImage { get; } = @"GCR-LoughboroughStation\images\PA210666-GCR-Loughborough.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.LoughboroughStationFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.LoughboroughStationFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.LoughboroughStationFolder;
         public string PageTitle { get; } = "Loughborough Station";
         public StationLocationsBase StationLocations { get; } = new LoughboroughGCR();
 

@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         public string HilightImage { get; } = @"GCR-LeicestershireNorth\images\P7134400-GCR-Leicester-north.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.LeicestershireNorthFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.LeicestershireNorthFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.LeicestershireNorthFolder;
         public string PageTitle { get; } = "Leicestershire North";
         public StationLocationsBase StationLocations { get; } = new LeicesterNorthStationGCR();
 

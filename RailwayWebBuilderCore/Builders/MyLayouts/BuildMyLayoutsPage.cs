@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
                 pageBuilder.Append("<div class='container mt-4'>");
 
-                string imageName = Constants.DriveLetter + "Trains/_WebsiteData/Others/images/";
+                string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
                 string imageHtmlName = "../Others/images/";
 
                 pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",

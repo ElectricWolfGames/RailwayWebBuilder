@@ -26,7 +26,7 @@ namespace RailwayWebBuilderCore.Helpers
 
             string modelEvents = $"{offSet}{Constants.ModelEvents}/index.html";
             string modelLocations = $"{offSet}{Constants.ModelEvents}/locations.html";
-            string stations = $"{offSet}{Constants.Stations}/index.html";
+            string stations = $"{offSet}Stations/index.html";
             string locomotives = $"{offSet}{Constants.Locomotive}LocoRef.html";
             string myLayouts = $"{offSet}MyLayouts/index.html";
             string shop = $"{offSet}Shop/index.html";

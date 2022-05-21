@@ -27,12 +27,12 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             AddImageToLayouts(pageDetails, images);
 
             // create folders
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents);
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder);
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images");
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents);
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder);
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images");
 
-            string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + "\\";
-            string imagePath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images";
+            string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + "\\";
+            string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images";
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, pageDetails, "../../");
 

@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string HtmlFileName { get; set; } = "LocoRef.html";
         public string HtmlPath { get; } = Constants.LocomotiveRef;
         public List<string> Keywords { get; private set; } = new List<string>();
-        public string LocalPath { get; } = Constants.RootPath + Constants.LocomotiveRef;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.LocomotiveRef;
         public ILocomotiveSpecifications LocomotiveSpecifications { get; set; }
         public int Order { get; set; }
         public string PageTitle { get; set; } = "Loco Ref Collection";
@@ -45,7 +45,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             List<string> imageToUseSmall = SelectImages(5, images);
 
             Directory.CreateDirectory(imagePath);
-            pageBuilder.AddImagesWithSeeMore(imageToUse, imageToUseSmall, LocalPath, LocalPath + "images", RawImagePath, Constants.LocomotiveNameRef + @"/", seeMore);
+            pageBuilder.AddImagesWithSeeMore(imageToUse, imageToUseSmall, LocalPath, LocalPath + "images", RawImagePath, "Ref" + @"/", seeMore);
         }
 
         public virtual void Build()

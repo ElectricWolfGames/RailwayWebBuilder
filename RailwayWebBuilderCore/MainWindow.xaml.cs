@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilderCore.Builders;
+using RailwayWebBuilderCore.Builders.GCR;
 using RailwayWebBuilderCore.Builders.Locations;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
@@ -25,7 +26,7 @@ namespace RailwayWebBuilderCore
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _cacheFolder = Constants.DriveLetter + @"Trains\DeletableCache\";
+        private string _cacheFolder = Constants._aaDriveLetter + @"Trains\DeletableCache\";
 
         public MainWindow()
         {
@@ -96,6 +97,7 @@ namespace RailwayWebBuilderCore
             ShopMainPageBuilder.Build();
             ShopPageBuilder.Build();
             AuctionsBuilder.Build();
+            GateHouse.Build();
 
             var bsv = new BuildStockVideos();
             bsv.Build();
@@ -119,7 +121,7 @@ namespace RailwayWebBuilderCore
         {
             var psi = new ProcessStartInfo
             {
-                FileName = Constants.DriveLetter + @"eWolfSiteUploads/Railways/MyLayouts/index.html",
+                FileName = Constants._aaDriveLetter + @"eWolfSiteUploads/Railways/MyLayouts/index.html",
                 UseShellExecute = true
             };
             Process.Start(psi);

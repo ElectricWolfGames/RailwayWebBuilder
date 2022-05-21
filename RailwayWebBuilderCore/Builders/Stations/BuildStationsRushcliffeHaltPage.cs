@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         public string HilightImage { get; } = @"GCR-RushcliffeHalt\images\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.RushcliffeHaltFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.RushcliffeHaltFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.RushcliffeHaltFolder;
         public string PageTitle { get; } = "Rushcliffe Halt";
         public StationLocationsBase StationLocations { get; } = new RushcliffeHaltGCR();
 

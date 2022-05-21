@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
         public string HilightImage { get; } = @"GCR-QuornAndWoodHouse\images\P7134452-GCR-Quorn-and-woodhouse.JPG";
         public string HtmlFileName { get; } = "index.html";
         public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
-        public string LocalPath { get; } = Constants.RootPath + Constants.QuornAndWoodHouseFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.QuornAndWoodHouseFolder;
         public string PageTitle { get; } = "Quorn And WoodHouse";
         public StationLocationsBase StationLocations { get; } = new QuornWoodhouseStationGCR();
 

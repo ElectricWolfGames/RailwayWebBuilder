@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             {
                 meh.Keywords.AddRange(modelEvent.Layouts.Select(x => x.Name));
             }
-            string htmlpath = Constants.RootPath + "//" + Constants.ModelEvents + "//";
+            string htmlpath = Constants._aRootPath + "//" + Constants.ModelEvents + "//";
 
             var pageBuilder = new PageBuilder("index.html", htmlpath, meh, "../");
 

@@ -18,8 +18,8 @@ namespace RailwayWebBuilderCore.Builders.Locations
             string mapId = SettingService.GetSetting.GoogleMapKey;
 
             // create folders
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.ModelEvents);
-            string htmlpath = Constants.RootPath + "\\" + Constants.ModelEvents + "\\";
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents);
+            string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\";
 
             var sb = new PageBuilder("locations.html", htmlpath, new ModelEventsHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));

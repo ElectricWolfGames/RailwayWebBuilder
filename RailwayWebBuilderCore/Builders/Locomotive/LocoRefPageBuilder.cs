@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
         public string HtmlFileName { get; } = "LocoRef.html";
 
         public string HtmlPath { get; } = Constants.Locomotive;
-        public string LocalPath { get; } = Constants.RootPath + Constants.Locomotive;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.Locomotive;
         public string PageTitle { get; } = "Locomotive Photo Reference Collection";
 
         public static void Jumbotron(PageBuilder _pageBuilder, string name)
@@ -72,10 +72,10 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
         {
             loco.Build();
 
-            string href = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'>{loco.Title}</a>";
+            string href = $"<a href='Ref/{loco.PageTitle}.html'>{loco.Title}</a>";
             pageBuilder.Append($"<h3>{href}</h3>");
 
-            string seeMore = $"<a href='{Constants.LocomotiveNameRef}/{loco.PageTitle}.html'><h3>See more...</h3></a>";
+            string seeMore = $"<a href='Ref/{loco.PageTitle}.html'><h3>See more...</h3></a>";
             loco.AddImagestoHeaderPage(pageBuilder, 5, seeMore);
         }
 

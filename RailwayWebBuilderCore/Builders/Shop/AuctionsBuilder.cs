@@ -2,7 +2,6 @@
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
-
 using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Shop
@@ -13,8 +12,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
     {
         public static void Build()
         {
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.Shop);
-            string htmlpath = Constants.RootPath + "\\" + Constants.Shop + "\\";
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.Shop);
+            string htmlpath = Constants._aRootPath + "\\" + Constants.Shop + "\\";
 
             var sb = new PageBuilder("GCRAuctions.html", htmlpath, new ShopGCRAuctionsHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));
@@ -92,7 +91,7 @@ namespace RailwayWebBuilderCore.Builders.Shop
         {
             sb.Append("<h2>Locomotive shed plate and Locomotive builders plate</h2>");
 
-            string htmlpath = Constants.RootPath + "\\" + Constants.Shop + "\\";
+            string htmlpath = Constants._aRootPath + "\\" + Constants.Shop + "\\";
 
             string imageName = Constants.RawDataPath + @"\Shop\Images\Locomotive shed.jpg";
             string imageName2 = Constants.RawDataPath + @"\Shop\Images\Locomotive builders.jpg";
@@ -167,7 +166,7 @@ namespace RailwayWebBuilderCore.Builders.Shop
 {
 Directory.CreateDirectory(imagePath);
 
-string LocalPath = Constants.RootPath + Constants.Shop + "\\";
+string LocalPath = Constants._aRootPath + Constants.Shop + "\\";
 pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
 }
 

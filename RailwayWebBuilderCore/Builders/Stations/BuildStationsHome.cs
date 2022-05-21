@@ -12,7 +12,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
     {
         public static void Build()
         {
-            string localpath = Constants.RootPath + Constants.StationFolder;
+            string localpath = Constants._aRootPath + Constants._StationFolder;
             Directory.CreateDirectory(localpath);
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", localpath, new StationsHeader(), "../");

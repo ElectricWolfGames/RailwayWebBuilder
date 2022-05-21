@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
             RawImagePath = Constants.RawDataPath + @"MyLayout\2022-05-01 42\";
             ExportImagePath = Constants.FullMyLayouts + "images\\220501\\";
 
-            Title = "<h2>40: New rolling stock</h2>";
+            Title = "<h2>42: New rolling stock</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
             Details.Append("<p>We visited Rocket Railways </p>");
             Details.Append("<a href='https://www.rocketrailways.co.uk/'>https://www.rocketrailways.co.uk/</a>");

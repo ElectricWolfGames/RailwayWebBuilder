@@ -17,7 +17,7 @@ namespace RailwayWebBuilderCore.LocoDB
 
         private bool _isEditing;
         private bool _isSelected;
-        private string _outputFolder = Constants.DriveLetter + @"Trains\LocoDB\Locomotives\";
+        private string _outputFolder = Constants._aaDriveLetter + @"Trains\LocoDB\Locomotives\";
 
         public LocomotiveDetails()
         {

@@ -19,15 +19,15 @@ namespace RailwayWebBuilderCore.Builders.Shop
         {
             GetLayoutDetails();
 
-            Directory.CreateDirectory(Constants.RootPath + "\\" + Constants.Shop);
-            string htmlpath = Constants.RootPath + "\\" + Constants.Shop + "\\";
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.Shop);
+            string htmlpath = Constants._aRootPath + "\\" + Constants.Shop + "\\";
 
             var pb = new PageBuilder("index.html", htmlpath, new ShopHeader(), "../");
             pb.Append(NavBarHelper.NavBar("../"));
 
             pb.Append("<div class='container mt-4'>");
 
-            string imageName = Constants.DriveLetter + "Trains/_WebsiteData/Others/images/";
+            string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
             string imageHtmlName = "../Others/images/";
 
             pb.JumbotronWithImage("<h1>Karl and Debbie Trains Shop</h1>",
@@ -49,7 +49,7 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
         private static void AddAllProducts(PageBuilder pb)
         {
-            string htmlpath = Constants.RootPath + "\\" + Constants.ShopFolder;
+            string htmlpath = Constants._aRootPath + "\\" + Constants.ShopFolder;
             Directory.CreateDirectory(htmlpath + "images\\");
 
             string path = Constants.RawDataPath + @"Shop\Products\";

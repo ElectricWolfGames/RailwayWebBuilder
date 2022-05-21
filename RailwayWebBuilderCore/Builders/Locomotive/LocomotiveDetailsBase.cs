@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
         protected PageBuilder _pageBuilder;
 
         public string HtmlPath { get; } = Constants.Locomotive;
-        public string LocalPath { get; } = Constants.RootPath + Constants.Locomotive;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.Locomotive;
 
         public void AddBreadCrumb(IPageDetails pageDetails)
         {

@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders
     {
         public static void Build(List<IBlog> blogs)
         {
-            string htmlpath = Constants.RootPath;
+            string htmlpath = Constants._aRootPath;
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new HomeHeader());
             pageBuilder.Append(NavBarHelper.NavBar(string.Empty));

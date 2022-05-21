@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
         protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
         {
-            string htmlpath = Constants.RootPath + "\\" + HtmlPath;
+            string htmlpath = Constants._aRootPath + "\\" + HtmlPath;
             Directory.CreateDirectory(imagePath);
 
             _pageBuilder.Append($"<hr/>");
