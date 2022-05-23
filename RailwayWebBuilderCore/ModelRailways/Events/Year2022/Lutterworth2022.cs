@@ -16,7 +16,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             Descrption = "Lutterworth Railway Society Event";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2022-05-21 Lutterworth";
             TripDate = new DateTime(2022, 05, 21);
-            YouTubeLink = "https://www.youtube.com/embed/???";
+            YouTubeLink = "https://www.youtube.com/embed/FNbWud340d4";
             ImageFolder = "20220521-Lutterworth";
             Title = "Lutterworth Railway Society Event";
             ImagePreview = "P5218659-thumb.JPG";
