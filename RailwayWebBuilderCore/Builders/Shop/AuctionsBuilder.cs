@@ -2,11 +2,11 @@
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
+using System;
 using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Shop
 {
-
     // shorturl.at/xIN26
     public class AuctionsBuilder
     {
@@ -20,7 +20,8 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append("<div class='container mt-4'>");
             sb.Jumbotron("<h2>Friends of The Great Central Mainline: Auctions</h2>", "", 8);
 
-            Plates(sb);
+            SectionNoAuction(sb);
+            //Plates(sb);
 
             /*sb.Append("<h2>Cuneo Picture Auction</h2>");
             string imageName = Constants.RawDataPath + @"\Shop\Images\Cuneo Picture Auction.jpg";
@@ -87,6 +88,14 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Output();
         }
 
+        private static void AddGallrey(PageBuilder pageBuilder, string imagePath, string galleryPath)
+        {
+            Directory.CreateDirectory(imagePath);
+
+            string LocalPath = Constants._aRootPath + Constants.Shop + "\\";
+            pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
+        }
+
         private static void Plates(PageBuilder sb)
         {
             sb.Append("<h2>Locomotive shed plate and Locomotive builders plate</h2>");
@@ -95,7 +104,6 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             string imageName = Constants.RawDataPath + @"\Shop\Images\Locomotive shed.jpg";
             string imageName2 = Constants.RawDataPath + @"\Shop\Images\Locomotive builders.jpg";
-
 
             sb.Append("<p>Back in October a member of the Friends stand team kindly donated a signed print by famous railway artist Terence Cuneo. " +
                 "It was duly auctioned and thanks to a very generous bidder raised one thousand pounds for the Reunification fund.</p>");
@@ -140,7 +148,6 @@ namespace RailwayWebBuilderCore.Builders.Shop
                     "LE11 1SL</br>" + "</h4>");
             sb.Append("</div>");
 
-
             sb.Append("</br></br>");
 
             sb.Append("<p>Please include with your bid, your name, postal address and contact telephone number. And the LOT you are bidding on.</p>");
@@ -157,18 +164,12 @@ namespace RailwayWebBuilderCore.Builders.Shop
 
             sb.Append("</br></br>");
             sb.Append("</br></br>");
-
         }
 
-
-
-        private static void AddGallrey(PageBuilder pageBuilder, string imagePath, string galleryPath)
-{
-Directory.CreateDirectory(imagePath);
-
-string LocalPath = Constants._aRootPath + Constants.Shop + "\\";
-pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
-}
+        private static void SectionNoAuction(PageBuilder sb)
+        {
+            sb.Append("<h2>We don't have any Auctions at this time.</h2>");
+        }
 
         /*private static string CuneoPictureAuction()
         {
@@ -190,7 +191,6 @@ pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
             "At 36 inches across and 29 inches tall you’ll need a good sized wall to hang it from but it will definitely be a conversation starter. " +
             "We’re selling the print by auction with every penny going to the Reunification project.</p>");
         sb.Append("</br></br>");
-
 
         sb.Append("<p>Bids should start at £100, please submit your best offer via email to <strong>gcr.friends.auctions@gmail.com</strong></p>");
         sb.Append("<p>or by post to</p>");
@@ -224,25 +224,21 @@ pageBuilder.AddImages(LocalPath, LocalPath + "images", galleryPath);
 
         sb.Append("</br>");
         sb.Append("</div>");
-
         }*/
     }
 }
 
 /*
- * I suggest the following text for the next auction which I’ll send to George with two pictures as well. 
+ * I suggest the following text for the next auction which I’ll send to George with two pictures as well.
 Karl will you be able to fill in the blank about where the plates can be seen?
 And Barry can you fill in the blank about the event where they will be on display?
 I hope they are more portable than the painting!
 
 I’ve had a brief scout on line and plates like this have sold for £200 in auction,
-so starting at £150 seems fair to me. 
+so starting at £150 seems fair to me.
 
 Cheers
 Tom
-
-
-
 
 AUCTION SUCCESS AND NEW LOTS TO BID ON!
 
@@ -250,7 +246,7 @@ Back in October a member of the Friends stand team kindly donated a signed print
 It was duly auctioned and thanks to a very generous bidder raised one thousand pounds for the Reunification fund.
 
 Thanks to another kind donation, now we have two new lots to be auctioned with all proceeds going to the same cause.
-First is a locomotive shed plate, 36C. We don’t know which locomotive it was removed from, but the code relates to Frodingham near Scunthorpe, a sub shed of 36A Doncaster. 
+First is a locomotive shed plate, 36C. We don’t know which locomotive it was removed from, but the code relates to Frodingham near Scunthorpe, a sub shed of 36A Doncaster.
 Bids should start at £150 for this lot.
 
 The second is a locomotive builders plate; a distinctive diamond from the North British Locomotive Company.
@@ -258,8 +254,8 @@ Dated 1947, number 26094. This is from London & North Eastern Railway "B1" class
 subsequently British Railways No 61193, built May 1947, withdrawn September 1962.
 Bids should also start at £150 for this lot.
 
-You see both items and make a bid at this website… XXX and they will be on display at XXX event on the Friends of the Great Central Main Line website. 
+You see both items and make a bid at this website… XXX and they will be on display at XXX event on the Friends of the Great Central Main Line website.
 
-The auction will close at the end of 30th June 2022 with the highest bidder(s) notified immediately so the items can be collected. 
+The auction will close at the end of 30th June 2022 with the highest bidder(s) notified immediately so the items can be collected.
 Once again, thank you for your support and good luck bidding.
  */

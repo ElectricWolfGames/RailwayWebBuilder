@@ -25,6 +25,10 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
 
             _details.Add(new StockDetails("45305 LMSClass5 Moving forward", "p2GGh4cQZtc"));
             _details.Add(new StockDetails("45305 LMSClass5 Passing by", "vzfs_tQgDBE"));
+
+            // TODO: add the rolling stock videos:
+            _details.Add(new StockDetails("Inside Carriage : View of scenery", "OhpYS11B0dE"));
+            _details.Add(new StockDetails("Inside Carriage (Angled): View of scenery", "O8rTGdee4JA"));
         }
 
         public string LocalPath { get; } = Constants._aRootPath + Constants.StockVideos;

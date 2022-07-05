@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore.Helpers
             //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{modelEvents}'>Model Events <span class='sr-only'>(current)</span></a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{myLayouts}'>Cattington</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{shop}'>Shop</a></li>");
-            stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{auctions}'>Auctions</a></li>");
+            //stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{auctions}'>Auctions</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{locomotives}'>Loco Ref</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stockVideos}'>Stock Videos</a></li>");
             stringBuilder.AppendLine($"<li class='nav-item active'><a class='nav-link' href='{stations}'>Stations</a></li>");

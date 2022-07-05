@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
     {
         public Layout_2022_06_26_Episode_46()
         {
-            Active = true;
+            Active = false;
             When = new DateTime(2022, 06, 26);
             Details = new StringBuilder();
 
