@@ -17,7 +17,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
 
             Title = "<h2>36: Hut, Track and People</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
-            Details.Append("<p>We show what it hidding under the hut,</p>");
+            Details.Append("<p>We show what is hiding under the hut,</p>");
             Details.Append("<p>Some track changes and more little people.</p>");
 
             YouTubeLink = "NeNTe8YAMHk";

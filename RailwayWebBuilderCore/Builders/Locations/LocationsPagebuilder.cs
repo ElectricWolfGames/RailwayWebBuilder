@@ -24,7 +24,7 @@ namespace RailwayWebBuilderCore.Builders.Locations
             var sb = new PageBuilder("locations.html", htmlpath, new ModelEventsHeader(), "../");
             sb.Append(NavBarHelper.NavBar("../"));
             sb.Append("<div class='container mt-4'>");
-            sb.Jumbotron("<h2>Locations</h2>", "Model Event Locations visted");
+            sb.Jumbotron("<h2>Locations</h2>", "Model Event Locations visited");
 
             List<LocationHolder> locationSections = GetAllLocations();
 
