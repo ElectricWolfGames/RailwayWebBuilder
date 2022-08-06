@@ -50,10 +50,16 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
             _pageBuilder.Append("</br>");
             _pageBuilder.Append("<div class='row mb-2'>");
 
+            bool other = false;
             foreach (var detail in _details)
             {
                 string youTubeLink = $"https://www.youtube.com/embed/{detail.YouTubeLink}";
                 _pageBuilder.Append(AddYoutubePreview(youTubeLink));
+                other = !other;
+                if (other == false)
+                {
+                    _pageBuilder.Append("</br>");
+                }
             }
 
             _pageBuilder.Output();
