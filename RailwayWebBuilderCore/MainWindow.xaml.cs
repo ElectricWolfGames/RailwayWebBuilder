@@ -1,5 +1,4 @@
 ﻿using RailwayWebBuilderCore.Builders;
-using RailwayWebBuilderCore.Builders.GCR;
 using RailwayWebBuilderCore.Builders.Locations;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
@@ -85,6 +84,8 @@ namespace RailwayWebBuilderCore
             b4.Build();
             var b5 = new BuildStationsRothleyPage();
             b5.Build();
+            var b6 = new BuildA60BridgePage();
+            b6.Build();
 
             var lr = new LocoRefPageBuilder();
             lr.Build();
@@ -97,7 +98,6 @@ namespace RailwayWebBuilderCore
             ShopMainPageBuilder.Build();
             ShopPageBuilder.Build();
             AuctionsBuilder.Build();
-            GateHouse.Build();
 
             var bsv = new BuildStockVideos();
             bsv.Build();

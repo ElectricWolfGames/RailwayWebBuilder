@@ -27,6 +27,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             AddStationRothley(pageBuilder);
             AddStationLeicestershireNorth(pageBuilder);
             AddStationRushcliffeHalt(pageBuilder);
+            AddA60(pageBuilder);
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
@@ -36,6 +37,13 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
 
             pageBuilder.Output();
+        }
+
+        private static void AddA60(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
+        {
+            IStationsPages stationsPages = new BuildA60BridgePage();
+            string htmlPath = $@"GCR-A60Bridge\{stationsPages.HtmlFileName}";
+            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)

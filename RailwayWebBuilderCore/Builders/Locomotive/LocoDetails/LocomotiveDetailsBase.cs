@@ -42,10 +42,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
             List<string> imageToUse = SelectImages(3, images);// images.Take(3).ToList();
 
-            List<string> imageToUseSmall = SelectImages(5, images);
+            //List<string> imageToUseSmall = SelectImages(5, images);
 
             Directory.CreateDirectory(imagePath);
-            pageBuilder.AddImagesWithSeeMore(imageToUse, imageToUseSmall, LocalPath, LocalPath + "images", RawImagePath, "Ref" + @"/", seeMore);
+            pageBuilder.AddImagesWithSeeMore(imageToUse, new List<string>(), LocalPath, LocalPath + "images", RawImagePath, "Ref" + @"/", seeMore);
         }
 
         public virtual void Build()

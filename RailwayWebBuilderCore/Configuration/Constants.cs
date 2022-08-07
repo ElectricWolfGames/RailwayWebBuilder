@@ -6,6 +6,7 @@
         public const string _aRootPath = _aaDriveLetter + @"eWolfSiteUploads\Railways\";
         public const string _LocomotiveName = "Locomotives";
         public const string _StationFolder = "Stations" + @"\";
+        public const string A60StationFolder = _StationFolder + @"GCR-A60Bridge\";
         public const string FullCatalog = _aRootPath + "Catalog" + @"\";
         public const string FullMyLayouts = _aRootPath + MyLayouts + @"\";
         public const string GCR = @"GCR";

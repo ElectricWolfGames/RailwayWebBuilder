@@ -4,16 +4,16 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
 {
-    public class Layout_2022_08_08_Episode_46 : LayoutBase
+    public class Layout_2022_08_07_Episode_46 : LayoutBase
     {
-        public Layout_2022_08_08_Episode_46()
+        public Layout_2022_08_07_Episode_46()
         {
             Active = true;
-            When = new DateTime(2022, 08, 08);
+            When = new DateTime(2022, 08, 07);
             Details = new StringBuilder();
 
-            RawImagePath = Constants.RawDataPath + @"MyLayout\2022-08-08 46\";
-            ExportImagePath = Constants.FullMyLayouts + "images\\220808\\";
+            RawImagePath = Constants.RawDataPath + @"MyLayout\2022-08-07 46\";
+            ExportImagePath = Constants.FullMyLayouts + "images\\220807\\";
 
             Title = "<h2>46: New Loco and Factory update!</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
