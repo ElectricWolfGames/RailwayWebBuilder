@@ -46,7 +46,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             {
                 Name = "The Elizabethan Railway Society Exhibition",
                 Date = new DateTime(2021, 10, 10),
-                Paragraph = "Visted the The Elizabethan Railway Society Exhibition event on the 10th October, lots of amazing models displays.",
+                Paragraph = "Visited the The Elizabethan Railway Society Exhibition event on the 10th October, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20211010-Kirkby/index.html",
                 ModelEvent = this,
             };

@@ -46,7 +46,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Shaken & Not Stirred", Gauges.NONE));
             Layouts.Add(new LayoutDetails("Spilsby", Gauges.NONE, "Spilsby"));
             Layouts.Add(new LayoutDetails("Stamford East", Gauges.N_Gauge, "Stamford East"));
-            Layouts.Add(new LayoutDetails("The Power Station", Gauges.N_Gauge, "The Power Station"));
+            Layouts.Add(new LayoutDetails(LayoutNames.ThePowerStation, Gauges.N_Gauge, "The Power Station"));
             Layouts.Add(new LayoutDetails("Thorncliffe", Gauges.OO_Gauge, "Thorncliffe"));
             Layouts.Add(new LayoutDetails("Welby Lane", Gauges.NONE, "Welby Lane"));
             Layouts.Add(new LayoutDetails("Worlds Way", Gauges.OO_Gauge, "Worlds Way"));

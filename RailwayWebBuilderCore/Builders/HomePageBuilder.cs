@@ -137,6 +137,8 @@ namespace RailwayWebBuilderCore.Builders
             blogHtml.AppendLine("});");
             blogHtml.AppendLine("</script>");
             */
+            blogHtml.Append(@"<a href='GCR\Quorn.html'>Quorn</a>");
+            blogHtml.Append("</br></br></br></br></br>");
             return blogHtml.ToString();
         }
     }

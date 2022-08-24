@@ -67,7 +67,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             {
                 Name = "Statfold Model Railway Event",
                 Date = new DateTime(2022, 04, 09),
-                Paragraph = "Visted the The Statfold Model Railway Event on the 9th, 10th April, lots of amazing models displays.",
+                Paragraph = "Visited the The Statfold Model Railway Event on the 9th, 10th April, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20220409-Statfold/index.html",
                 ModelEvent = this,
             };

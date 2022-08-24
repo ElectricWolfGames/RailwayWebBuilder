@@ -42,7 +42,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2021
             {
                 Name = "Hinckley Model Railway Show 2021",
                 Date = new DateTime(2021, 10, 30),
-                Paragraph = "Visted the The Hinckley Model Railway Show on the 30th October, lots of amazing models displays.",
+                Paragraph = "Visited the The Hinckley Model Railway Show on the 30th October, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20211030-Hinckley/index.html",
                 ModelEvent = this,
             };

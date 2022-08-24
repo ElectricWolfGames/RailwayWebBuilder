@@ -19,5 +19,8 @@
         _16mm,
         _3mm,
         _45mm,
+        P4Gauge,
+        G_Gauge,
+        Multigauge
     }
 }

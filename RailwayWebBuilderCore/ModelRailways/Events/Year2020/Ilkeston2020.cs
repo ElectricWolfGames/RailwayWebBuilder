@@ -22,7 +22,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             ImagePreview = "P2237873-Avyn-A-Llyin-Ilkeston-thumb.JPG";
 
             Layouts.Add(new LayoutDetails("Thomas the Tank Layout", Gauges.OO_Gauge));
-            Layouts.Add(new LayoutDetails("Neuburg", Gauges.HO_Gauge, "02 Neuburg"));
+            Layouts.Add(new LayoutDetails(LayoutNames.Neuburg, Gauges.HO_Gauge, "02 Neuburg"));
             Layouts.Add(new LayoutDetails("Avyn-A-Llyin", Gauges.OO9_Gauge, "03 Avyn-A-Llyin"));
             Layouts.Add(new LayoutDetails("Rothbury", Gauges.OO_Gauge, "04 Rothbury"));
             Layouts.Add(new LayoutDetails("Brookfield N (USA Based)", Gauges.NONE, "06 Brookfield N"));
@@ -41,7 +41,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             {
                 Name = "Ilkeston (Woodside) Model Railway Club",
                 Date = new DateTime(2020, 02, 24),
-                Paragraph = "Visted the Ilkeston Model Railway Club event on the 23 feburay, very cool",
+                Paragraph = "Visited the Ilkeston Model Railway Club event on the 23 feburay, very cool",
                 Link = $"{Constants.ModelEvents}/20200223-Ilkeston/index.html",
                 ModelEvent = this,
                 Carousel = "P2237873 Avyn-A-Llyin Ilkeston.JPG",

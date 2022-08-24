@@ -44,7 +44,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             {
                 Name = "Nottingham Model Railway Society Exhibition",
                 Date = new DateTime(2022, 02, 26),
-                Paragraph = "Visted the The Nottingham Model Railway Society Exhibition event on the 26th, 27th February, lots of amazing models displays.",
+                Paragraph = "Visited the The Nottingham Model Railway Society Exhibition event on the 26th, 27th February, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20220226-Clifton/index.html",
                 ModelEvent = this,
             };

@@ -28,7 +28,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Netherwood Sidings", Gauges.O_Gauge, "04 Netherwood Sidings"));
             Layouts.Add(new LayoutDetails("Tudwich Road Sidings", Gauges.O_Gauge, "05 Tudwick Road Sidings"));
             Layouts.Add(new LayoutDetails(LayoutNames.Myton, Gauges.OO_Gauge, "06 Myton"));
-            Layouts.Add(new LayoutDetails("Power Station", Gauges.N_Gauge, "07 Power Station"));
+            Layouts.Add(new LayoutDetails(LayoutNames.ThePowerStation, Gauges.N_Gauge, "07 Power Station"));
             Layouts.Add(new LayoutDetails("Heath Green", Gauges.OO_Gauge, "08 Heath Green"));
             Layouts.Add(new LayoutDetails("Tennis Court Sidings", Gauges.N_Gauge, "09 Tennis Court Sidings"));
             Layouts.Add(new LayoutDetails("Karolina Falls", Gauges.On30_Gauge, "10 Karolina Falls"));
@@ -45,7 +45,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             {
                 Name = "Syston Model Railway Event",
                 Date = new DateTime(2020, 02, 16),
-                Paragraph = "Visted the Syston Model Railway event on the 15 feburay, lots of amazing models displays.",
+                Paragraph = "Visited the Syston Model Railway event on the 15 feburay, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20200215-Syston/index.html",
                 ModelEvent = this,
                 Carousel = "P2157640 NewtonEast SystonModelRailway.JPG",

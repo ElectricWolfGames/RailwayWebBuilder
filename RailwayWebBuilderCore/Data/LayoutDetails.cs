@@ -31,9 +31,4 @@ namespace RailwayWebBuilderCore.Data
         public string Name { get; set; }
         public string Path { get; set; }
     }
-
-    public class LayoutNames
-    {
-        public const string Myton = "Myton";
-    }
 }
