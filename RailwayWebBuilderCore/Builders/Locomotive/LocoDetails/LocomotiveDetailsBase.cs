@@ -13,6 +13,14 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
+    public enum StockTypes
+    {
+        SteamLoco,
+        Diesel,
+        Wagon,
+        Coach
+    }
+
     public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
     {
         private PageBuilder _pageBuilder;
@@ -26,11 +34,13 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string LocalPath { get; } = Constants._aRootPath + Constants.LocomotiveRef;
         public ILocomotiveSpecifications LocomotiveSpecifications { get; set; }
         public int Order { get; set; }
+        public List<string> OtherRunningNumbers { get; private set; } = new List<string>();
         public string PageTitle { get; set; } = "Loco Ref Collection";
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
         public string Paragraph3 { get; set; } = "";
         public string RawImagePath { get; set; }
+        public StockTypes StockType { get; set; }
         public string Title { get; set; }
 
         public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
@@ -58,7 +68,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
             locref.Keywords.AddRange(Keywords);
             locref.Keywords.Add("Photos");
-            locref.Keywords.Add($"Photos of {Keywords[0]}");
+            if (Keywords.Count > 0)
+                locref.Keywords.Add($"Photos of {Keywords[0]}");
             locref.Keywords.Add("Images");
             locref.Keywords.Add("reference");
 

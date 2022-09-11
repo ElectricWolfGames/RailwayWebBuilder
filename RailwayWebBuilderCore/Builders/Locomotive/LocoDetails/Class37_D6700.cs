@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class37_37714 : LocomotiveDetailsBase
+    public class Class37_D6700 : LocomotiveDetailsBase
     {
-        public Class37_37714()
+        public Class37_D6700()
         {
-            Title = "37714, Class 37";
-            PageTitle = "37714";
+            Title = "D6700, Class 37";
+            PageTitle = "D6700";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class37-37714\";
-            ExportImagePath = Constants.LocoRef + "images\\37714\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class37-D6700\";
+            ExportImagePath = Constants.LocoRef + "images\\D6700\\";
             Order = 2;
             StockType = StockTypes.Diesel;
 
@@ -26,7 +26,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Keywords.Add("British Rail");
             Keywords.Add("British Rail Class 37");
             Keywords.Add("Class 37");
-            Keywords.Add("37714");
             Keywords.Add("English Electric Type 3");
             Keywords.Add("tractors");
         }

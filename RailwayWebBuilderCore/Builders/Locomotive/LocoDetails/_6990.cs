@@ -16,6 +16,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "The LMS Stanier Class 5 4-6-0 and LNER Thompson Class B1 both drew heavily on design features of the Hall Class. " +
                 "After nationalisation in 1948, British Railways gave them the power classification 5MT.";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("Charles Collett");
             Keywords.Add("classification 5MT");

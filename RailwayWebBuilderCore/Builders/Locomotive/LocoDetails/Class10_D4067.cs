@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class10_10119 : LocomotiveDetailsBase
+    public class Class10_D4067 : LocomotiveDetailsBase
     {
-        public Class10_10119()
+        public Class10_D4067()
         {
-            Title = "10119, Class 10, 0-6-0";
-            PageTitle = "10119";
+            Title = "D4067, Class 10, 0-6-0, Margaret Ethel-Thomas Alfred Naylor";
+            PageTitle = "D4067";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class10-10119\";
-            ExportImagePath = Constants.LocoRef + "images\\10119\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class10-D4067\";
+            ExportImagePath = Constants.LocoRef + "images\\D4067\\";
 
             Order = 2;
             StockType = StockTypes.Diesel;

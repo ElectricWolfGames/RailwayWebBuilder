@@ -24,7 +24,7 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
         {
             Directory.CreateDirectory(LocalPath);
 
-            _pageBuilder = new PageBuilder("index.html", LocalPath, CreateHeader(), "../");
+            _pageBuilder = new PageBuilder("Table.html", LocalPath, CreateHeader(), "../");
 
             _pageBuilder.Append(NavBarHelper.NavBar("../"));
             _pageBuilder.Append("<div class='container mt-4'>");

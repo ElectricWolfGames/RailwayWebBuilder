@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class08_D4137 : LocomotiveDetailsBase
+    public class Class08_08706 : LocomotiveDetailsBase
     {
-        public Class08_D4137()
+        public Class08_08706()
         {
-            Title = "D4137, Class 08, 0-6-0";
-            PageTitle = "D4137";
+            Title = "08706, Class 08, 0-6-0";
+            PageTitle = "08706";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class08-D4137\";
-            ExportImagePath = Constants.LocoRef + "images\\D4137\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class08-08706\";
+            ExportImagePath = Constants.LocoRef + "images\\08706\\";
             Order = 2;
             StockType = StockTypes.Diesel;
 
@@ -20,12 +20,12 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     "Freight trains are now mostly fixed rakes of wagons, and passenger trains are mostly multiple units, neither requiring the attention of a shunting locomotive. " +
     "Consequently, a large proportion of the class has been withdrawn from mainline use and stored, scrapped, exported or sold to industrial or heritage railways.";
             Paragraph2 = "As of 2020, around 100 locomotives remained working on industrial sidings and on the main British network." +
-                "On heritage railways, they have become common, appearing on many of the preserved standard-gauge lines in Britain, with over 70 preserved including the first one built.";
+                "On heritage railways, they have become common, appearing on many of the preserved standard-gauge lines in Britain, " +
+                "with over 70 preserved including the first one built.";
 
             Keywords.Add("British Rail");
             Keywords.Add("diesel-electric shunting");
             Keywords.Add("diesel shunter");
-            Keywords.Add("Class 08");
             Keywords.Add("1952");
         }
     }

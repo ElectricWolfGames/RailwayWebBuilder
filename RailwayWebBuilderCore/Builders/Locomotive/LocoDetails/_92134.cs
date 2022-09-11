@@ -24,6 +24,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             RawImagePath = Constants.RawDataPath + @"\Locos\92134\";
             ExportImagePath = Constants.LocoRef + "images\\92134\\";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("British Railways BR Standard");
             Keywords.Add("Photo collection");

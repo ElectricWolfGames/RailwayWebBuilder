@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class33_D6535 : LocomotiveDetailsBase
+    public class Class33_D6508 : LocomotiveDetailsBase
     {
-        public Class33_D6535()
+        public Class33_D6508()
         {
-            Title = "D6535, Class 33";
-            PageTitle = "D6535";
+            Title = "D6508, Class 33";
+            PageTitle = "D6508";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class33-D6535\";
-            ExportImagePath = Constants.LocoRef + "images\\D6535\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class33-D6508\";
+            ExportImagePath = Constants.LocoRef + "images\\D6508\\";
             Order = 2;
             StockType = StockTypes.Diesel;
 
@@ -23,7 +23,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Keywords.Add("BRCW Type 3");
             Keywords.Add("Crompton");
             Keywords.Add("Class 33");
-            Keywords.Add("D6535");
         }
     }
 }

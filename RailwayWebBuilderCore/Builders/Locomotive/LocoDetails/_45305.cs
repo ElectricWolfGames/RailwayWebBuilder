@@ -23,6 +23,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "it has carried the name Alderman A.E. Draper, though it never carried this in service. " +
                 "It was named after Albert Draper, the man who rescued the locomotive in his own scrapyard.";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("London Midland and Scottish Railway");
             Keywords.Add("Black Five");

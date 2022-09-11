@@ -18,6 +18,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "double-headed by underpowered 0-6-0s supplemented by disappointing Garratts and Fowler 7F 0-8-0s. The 8F design incorporated the" +
                 "two-cylinder arrangement of the Black Fives.They were initially classified 7F, but this was later changed to the more familiar 8F.";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("London Midland and Scottish Railway");
             Keywords.Add("class 8F");

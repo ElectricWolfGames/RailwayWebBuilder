@@ -14,6 +14,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Paragraph1 = "The BR Standard Class 2 2-6-0 is a class of steam locomotive, one of the British Railways Standard classes of the 1950s. They were physically the smallest of the Standard classes";
             Paragraph2 = "65 were built";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("BR Standard Class 2");
             Keywords.Add("class 2");

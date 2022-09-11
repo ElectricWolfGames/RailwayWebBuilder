@@ -15,6 +15,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Paragraph2 = "The LMS Ivatt Class 2 was designed by H.G. (George) Ivatt for work on secondary and branch line duties. " +
                 "Locomotives of this class were often referred to as a 'Mickey Mouse'. It is a 2-6-0 'Mogul', rated 2MT by BR following nationalisation";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("Ivatt 2MT");
             Keywords.Add("Mogul");

@@ -19,6 +19,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "(Previously know for a time as 'Robert'). " +
                 "Withdrawn circa 1982. Arrived at the GCR in 2007. ";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("J94");
             Keywords.Add("LNER");

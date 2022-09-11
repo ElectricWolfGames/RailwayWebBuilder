@@ -17,6 +17,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "welding in the construction process, and to use steel fireboxes, which meant that components could be more easily constructed under wartime " +
                 "austerity and post-war economy";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("34072, Battle of Britain, 257 Squadron");
             Keywords.Add("257 Squadron");

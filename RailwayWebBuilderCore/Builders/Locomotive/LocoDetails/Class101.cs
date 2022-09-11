@@ -12,6 +12,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             RawImagePath = Constants.RawDataPath + @"\Locos\Class101\";
             ExportImagePath = Constants.LocoRef + "images\\Class101\\";
             Order = 2;
+            StockType = StockTypes.Diesel;
+
             Paragraph1 = "The British Rail Classes 101 and 102 diesel mechanical multiple units were built by Metro-Cammell " +
                 "at Washwood Heath in Birmingham, England from 1956 to 1959, following construction of a series of prototype units. " +
                 "These classes proved to be some of the most successful and longest-lived of BR's First Generation DMUs, second in " +

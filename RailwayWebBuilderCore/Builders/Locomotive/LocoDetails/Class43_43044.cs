@@ -12,6 +12,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             RawImagePath = Constants.RawDataPath + @"\Locos\Class43-43044\";
             ExportImagePath = Constants.LocoRef + "images\\43044\\";
             Order = 2;
+            StockType = StockTypes.Diesel;
+
             Paragraph1 = "";
             Paragraph2 = "";
             Paragraph3 = "";

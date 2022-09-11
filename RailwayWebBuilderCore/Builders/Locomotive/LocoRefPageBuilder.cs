@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     /// <summary>
     /// TODO: aded loco ref 63601
+    /// TODO: aded loco ref 12083, Class31-D5830
     /// </summary>
     public class LocoRefPageBuilder
     {

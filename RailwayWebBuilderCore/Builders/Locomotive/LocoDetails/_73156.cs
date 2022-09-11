@@ -17,6 +17,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "Construction of the Black Fives had started in 1934 and continued past nationalisation to 1951. " +
                 "A new set of 'standard' locomotives was to be built by British Railways, based on LMS designs and incorporating modern ideas.";
             Order = 1;
+            StockType = StockTypes.SteamLoco;
 
             Keywords.Add("BR Standard Class 5");
             Keywords.Add("class 5");
