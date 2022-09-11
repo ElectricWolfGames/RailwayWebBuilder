@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class101 : LocomotiveDetailsBase
+    public class Class101_50203 : LocomotiveDetailsBase
     {
-        public Class101()
+        public Class101_50203()
         {
-            Title = "101, Class 101, Bo-Bo";
-            PageTitle = "Class101";
+            Title = "50203 Class 101, Bo-Bo";
+            PageTitle = "Class101 50203";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class101\";
-            ExportImagePath = Constants.LocoRef + "images\\Class101\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class101-50203\";
+            ExportImagePath = Constants.LocoRef + "images\\Class101-50203\\";
             Order = 2;
             StockType = StockTypes.Diesel;
 
