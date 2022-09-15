@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         {
             //LocomotiveSpecifications = new LocomotiveSpecification_9F();
 
-            Title = "80080, British Railways Standard Class 4 tank, 2-6-4T";
+            Title = "80080, BR Standard Class 4 tank, 2-6-4T";
             Paragraph1 = "The British Railways Standard Class 4 tank is a class of steam locomotive, " +
                 "one of the BR standard classes built during the 1950s. They were used primarily on commuter and outer suburban services. " +
                 "They were capable of reaching speeds of 75 mph (113 km/h).";

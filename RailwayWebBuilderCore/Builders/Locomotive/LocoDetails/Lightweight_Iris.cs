@@ -6,8 +6,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
     {
         public Lightweight_Iris()
         {
-            Title = "Lightweight-Iris M79900";
-            PageTitle = "Lightweight-Iris M79900";
+            Title = "M79900 Lightweight-Iris";
+            PageTitle = "M79900 Lightweight-Iris";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Lightweight-Iris\";
             ExportImagePath = Constants.LocoRef + "images\\Lightweight-Iris\\";
