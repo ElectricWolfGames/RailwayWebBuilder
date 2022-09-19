@@ -8,7 +8,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsRushcliffeHaltPage : BuildStationsBase, IStationsPages
+    public class GCR_RushcliffeHaltPage : BuildStationsBase, IStationsPages
     {
         public string HilightImage { get; } = @"GCR-RushcliffeHalt\images\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";

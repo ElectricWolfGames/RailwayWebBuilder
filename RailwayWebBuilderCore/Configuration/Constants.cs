@@ -16,6 +16,7 @@
         public const string LocomotiveRef = _LocomotiveName + @"\" + "Ref" + @"\";
         public const string LocoRef = @"LocoRefs";
         public const string LoughboroughStationFolder = _StationFolder + @"GCR-LoughboroughStation\";
+        public const string MainlineLoughboroughStationFolder = _StationFolder + @"Mainline-LoughboroughStation\";
         public const string ModelEvents = @"ModelEvents";
         public const string MyLayouts = "MyLayouts";
         public const string QuornAndWoodHouseFolder = _StationFolder + @"GCR-QuornAndWoodHouse\";

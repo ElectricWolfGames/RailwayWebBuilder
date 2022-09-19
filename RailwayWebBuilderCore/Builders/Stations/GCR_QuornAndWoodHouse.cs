@@ -8,14 +8,14 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsRothleyPage : BuildStationsBase, IStationsPages
+    public class GCR_QuornAndWoodHouse : BuildStationsBase, IStationsPages
     {
-        public string HilightImage { get; } = @"GCR-Rothley\images\P7134422-GCR-Rothley.JPG";
+        public string HilightImage { get; } = @"GCR-QuornAndWoodHouse\images\P7134452-GCR-Quorn-and-woodhouse.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.RothleyFolder;
-        public string LocalPath { get; } = Constants._aRootPath + Constants.RothleyFolder;
-        public string PageTitle { get; } = "Rothley";
-        public StationLocationsBase StationLocations { get; } = new RothleyStationGCR();
+        public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.QuornAndWoodHouseFolder;
+        public string PageTitle { get; } = "Quorn And WoodHouse";
+        public StationLocationsBase StationLocations { get; } = new QuornWoodhouseStationGCR();
 
         public void Build()
         {
@@ -29,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.RawDataPath + @"Stations\GCR-Rothley\Gallery";
+            string path = Constants.RawDataPath + @"Stations\GCR-Quorn And WoodHouse\Gallery";
             Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");

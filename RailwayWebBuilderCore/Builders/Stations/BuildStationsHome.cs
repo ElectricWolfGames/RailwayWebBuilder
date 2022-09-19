@@ -28,6 +28,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             AddStationLeicestershireNorth(pageBuilder);
             AddStationRushcliffeHalt(pageBuilder);
             AddA60(pageBuilder);
+            AddMainlineLoughboroughStation(pageBuilder);
 
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
@@ -41,42 +42,49 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
         private static void AddA60(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildA60BridgePage();
+            IStationsPages stationsPages = new GCR_A60BridgePage();
             string htmlPath = $@"GCR-A60Bridge\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddBuildStationsQuornAndWoodHouse(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildStationsQuornAndWoodHouse();
+            IStationsPages stationsPages = new GCR_QuornAndWoodHouse();
             string htmlPath = $@"GCR-QuornAndWoodHouse\{stationsPages.HtmlFileName}";
+            pageBuilder.Append(CreateCard(stationsPages, htmlPath));
+        }
+
+        private static void AddMainlineLoughboroughStation(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
+        {
+            IStationsPages stationsPages = new Mainline_LoughboroughStation();
+            string htmlPath = $@"Mainline-LoughboroughStation\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddStationLeicestershireNorth(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildStationsLeicestershireNorthPage();
+            IStationsPages stationsPages = new GCR_LeicestershireNorthPage();
             string htmlPath = $@"GCR-LeicestershireNorth\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddStationLoughboroughStation(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildStationsLoughboroughStationPage();
+            IStationsPages stationsPages = new GCR_LoughboroughStationPage();
             string htmlPath = $@"GCR-LoughboroughStation\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddStationRothley(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildStationsRothleyPage();
+            IStationsPages stationsPages = new GCR_RothleyPage();
             string htmlPath = $@"GCR-Rothley\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }
 
         private static void AddStationRushcliffeHalt(eWolfBootstrap.Interfaces.IPageBuilder pageBuilder)
         {
-            IStationsPages stationsPages = new BuildStationsRushcliffeHaltPage();
+            IStationsPages stationsPages = new GCR_RushcliffeHaltPage();
             string htmlPath = $@"GCR-RushcliffeHalt\{stationsPages.HtmlFileName}";
             pageBuilder.Append(CreateCard(stationsPages, htmlPath));
         }

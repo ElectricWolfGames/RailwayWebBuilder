@@ -74,18 +74,20 @@ namespace RailwayWebBuilderCore
 
             BuildStationsHome.Build();
 
-            var b2 = new BuildStationsRushcliffeHaltPage();
+            var b2 = new GCR_RushcliffeHaltPage();
             b2.Build();
-            var b = new BuildStationsLoughboroughStationPage();
+            var b = new GCR_LoughboroughStationPage();
             b.Build();
-            var b3 = new BuildStationsQuornAndWoodHouse();
+            var b3 = new GCR_QuornAndWoodHouse();
             b3.Build();
-            var b4 = new BuildStationsLeicestershireNorthPage();
+            var b4 = new GCR_LeicestershireNorthPage();
             b4.Build();
-            var b5 = new BuildStationsRothleyPage();
+            var b5 = new GCR_RothleyPage();
             b5.Build();
-            var b6 = new BuildA60BridgePage();
+            var b6 = new GCR_A60BridgePage();
             b6.Build();
+            var b7 = new Mainline_LoughboroughStation();
+            b7.Build();
 
             var lr = new LocoRefPageBuilder();
             lr.Build();
