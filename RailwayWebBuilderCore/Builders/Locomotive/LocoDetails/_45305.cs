@@ -2,8 +2,6 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    // Add the table of stats to each page, example data from wiki
-
     public class _45305 : LocomotiveDetailsBase
     {
         public _45305()
