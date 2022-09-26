@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilderCore.Builders.ModelEvents
+namespace RailwayWebBuilderCore.Builders.Locomotive
 {
     /// <summary>
     /// TODO: aded loco ref 63601
@@ -119,6 +119,9 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 
         private static void AddLocoRef(PageBuilder pageBuilder, ILocomotiveRefPage loco)
         {
+            if (loco.Title == null)
+                return;
+
             loco.Build();
 
             string href = $"<a href='Ref/{loco.PageTitle}.html'>{loco.Title}</a>";

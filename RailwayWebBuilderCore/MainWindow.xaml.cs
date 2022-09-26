@@ -11,6 +11,8 @@ using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
+using RailwayWebBuilderCore.Builders.GCR;
+using RailwayWebBuilderCore.Builders.Locomotive;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
+using RailwayWebBuilderCore.Builders.MyLayouts.Details;
 
-namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
+namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2020
 {
     public class AddLayoutDetails_2020_10_07 : LayoutBase
     {

@@ -8,6 +8,7 @@ namespace RailwayWebBuilderCore.Interfaces
     public interface ILocomotiveRefPage
     {
         bool Active { get; set; }
+        string Built { get; }
         StringBuilder Details { get; }
         string ExportImagePath { get; }
         List<string> Keywords { get; }
@@ -20,6 +21,7 @@ namespace RailwayWebBuilderCore.Interfaces
         string RawImagePath { get; }
         StockTypes StockType { get; }
         string Title { get; }
+        string Wheelbase { get; }
 
         void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
 

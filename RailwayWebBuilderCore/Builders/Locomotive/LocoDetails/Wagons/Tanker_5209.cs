@@ -2,7 +2,7 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
 {
-    public class Tanker_5209 : LocomotiveDetailsBase
+    public partial class Tanker_5209 : LocomotiveDetailsBase
     {
         public Tanker_5209()
         {
@@ -12,6 +12,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             RawImagePath = Constants.RawDataPath + @"\Locos\_Wagons\5209\";
             ExportImagePath = Constants.LocoRef + "images\\5209\\";
             Paragraph1 = "Tank, 24T Tank Built by Norbrit Pickering 1964, Wheelbase 15ft, TOPS TSV";
+            Built = "Norbrit Pickering";
+            Wheelbase = "15ft";
             Order = 1;
             StockType = StockTypes.Wagon;
             OtherRunningNumbers.Add("109");
@@ -19,7 +21,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             OtherRunningNumbers.Add("45209");
 
             Keywords.Add("Norbrit Pickering");
-            Keywords.Add("Tanker");
             Keywords.Add("5209");
         }
     }

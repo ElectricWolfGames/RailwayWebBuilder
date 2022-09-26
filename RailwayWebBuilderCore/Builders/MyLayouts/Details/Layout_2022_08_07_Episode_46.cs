@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Configuration;
 using System;
 using System.Text;
+using RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022;
 
-namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
+namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {
     public class Layout_2022_08_07_Episode_46 : LayoutBase
     {

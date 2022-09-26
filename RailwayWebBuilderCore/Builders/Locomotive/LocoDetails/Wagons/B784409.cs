@@ -12,6 +12,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             RawImagePath = Constants.RawDataPath + @"\Locos\_Wagons\B784409\";
             ExportImagePath = Constants.LocoRef + "images\\B784409\\";
             Paragraph1 = "12T, Built in Derby, Type Vanwide, Wheelbase 10ft, TOPS VEB";
+            Built = "Derby";
+            Wheelbase = "10ft";
             Order = 1;
             StockType = StockTypes.Wagon;
             OtherRunningNumbers.Add("230097");

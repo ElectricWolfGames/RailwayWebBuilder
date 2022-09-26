@@ -7,8 +7,9 @@ using RailwayWebBuilderCore.Helpers;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using RailwayWebBuilderCore.Builders.StockVideos;
 
-namespace RailwayWebBuilderCore.Builders.StockVideos
+namespace RailwayWebBuilderCore.Builders.GCR
 {
     public class Table
     {

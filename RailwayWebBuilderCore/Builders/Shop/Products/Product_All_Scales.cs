@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.Builders.Shop;
 
-namespace RailwayWebBuilderCore.Builders.Shop
+namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_All_Scales : IProduct
     {

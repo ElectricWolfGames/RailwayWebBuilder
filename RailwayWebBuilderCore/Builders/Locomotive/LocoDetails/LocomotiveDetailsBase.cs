@@ -1,6 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
-using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
@@ -26,6 +25,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         private PageBuilder _pageBuilder;
 
         public bool Active { get; set; } = true;
+        public string Built { get; set; }
         public StringBuilder Details { get; set; }
         public string ExportImagePath { get; set; }
         public string HtmlFileName { get; set; } = "LocoRef.html";
@@ -42,6 +42,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string RawImagePath { get; set; }
         public StockTypes StockType { get; set; }
         public string Title { get; set; }
+        public string Wheelbase { get; set; }
 
         public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
         {
