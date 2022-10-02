@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
@@ -28,6 +30,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         public string Built { get; set; }
         public StringBuilder Details { get; set; }
         public string ExportImagePath { get; set; }
+        public string FindTags { get; set; }
         public string HtmlFileName { get; set; } = "LocoRef.html";
         public string HtmlPath { get; } = Constants.LocomotiveRef;
         public List<string> Keywords { get; private set; } = new List<string>();
@@ -94,6 +97,25 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             _pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
 
             _pageBuilder.Output();
+        }
+
+        public virtual void GrabImages()
+        {
+            if (string.IsNullOrWhiteSpace(FindTags))
+                return;
+
+            string lookInFolders = "E:\\Trains\\Photos - Main\\2022\\2022-09-30 Autumn Gala\\";
+
+            var filesOnDrive = Directory.GetFiles(lookInFolders, $"*{FindTags}*.JPG", SearchOption.AllDirectories);
+            foreach (string file in filesOnDrive)
+            {
+                string newPath = $"{RawImagePath}\\{Path.GetFileName(file)}";
+
+                if (!File.Exists(newPath))
+                {
+                    File.Copy(file, newPath);
+                }
+            }
         }
 
         private void AddBreadCrumb(ILocomotiveRefPage pageDetails)

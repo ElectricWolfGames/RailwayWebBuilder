@@ -18,6 +18,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "A new set of 'standard' locomotives was to be built by British Railways, based on LMS designs and incorporating modern ideas.";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "73156,BRStandardClass5,4-6-0";
 
             Keywords.Add("BR Standard Class 5");
             Keywords.Add("class 5");

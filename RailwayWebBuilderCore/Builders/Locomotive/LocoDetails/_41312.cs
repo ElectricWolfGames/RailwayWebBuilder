@@ -25,6 +25,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "when it was withdrawn from service.";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "41312,LMSIvattClass2,2-6-2T";
 
             Keywords.Add("Bath Green Park");
             Keywords.Add("Leamington Spa");

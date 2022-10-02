@@ -122,6 +122,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             if (loco.Title == null)
                 return;
 
+            loco.GrabImages();
+
             loco.Build();
 
             string href = $"<a href='Ref/{loco.PageTitle}.html'>{loco.Title}</a>";

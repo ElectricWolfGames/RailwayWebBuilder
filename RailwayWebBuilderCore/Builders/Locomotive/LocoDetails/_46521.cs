@@ -16,6 +16,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "Locomotives of this class were often referred to as a 'Mickey Mouse'. It is a 2-6-0 'Mogul', rated 2MT by BR following nationalisation";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "46521,2-6-0,LMSClass2";
 
             Keywords.Add("Ivatt 2MT");
             Keywords.Add("Mogul");

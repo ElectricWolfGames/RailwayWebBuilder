@@ -15,6 +15,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             Paragraph2 = "65 were built";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "78018,BRStandardClass2,2-6-0";
 
             Keywords.Add("BR Standard Class 2");
             Keywords.Add("class 2");

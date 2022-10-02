@@ -14,6 +14,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
             Order = 2;
             StockType = StockTypes.Diesel;
+            FindTags = "M79900,Lightweight,Iris";
 
             Keywords.Add("Lightweight Iris");
         }

@@ -25,6 +25,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             ExportImagePath = Constants.LocoRef + "images\\92214\\";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "92214,LeicesterCity,Class9F,2-10-0";
 
             Keywords.Add("British Railways BR Standard");
             Keywords.Add("Photo collection");

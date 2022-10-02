@@ -11,6 +11,7 @@ namespace RailwayWebBuilderCore.Interfaces
         string Built { get; }
         StringBuilder Details { get; }
         string ExportImagePath { get; }
+        string FindTags { get; }
         List<string> Keywords { get; }
         ILocomotiveSpecifications LocomotiveSpecifications { get; }
         int Order { get; set; }
@@ -26,5 +27,7 @@ namespace RailwayWebBuilderCore.Interfaces
         void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
 
         void Build();
+
+        void GrabImages();
     }
 }
