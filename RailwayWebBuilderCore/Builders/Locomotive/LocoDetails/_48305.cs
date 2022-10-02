@@ -19,6 +19,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "two-cylinder arrangement of the Black Fives.They were initially classified 7F, but this was later changed to the more familiar 8F.";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "48305,2-8-0,LMSClass8F";
 
             Keywords.Add("London Midland and Scottish Railway");
             Keywords.Add("class 8F");

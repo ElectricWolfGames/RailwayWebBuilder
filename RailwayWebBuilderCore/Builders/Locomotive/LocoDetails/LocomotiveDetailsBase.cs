@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Windows.Shapes;
 using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
@@ -104,7 +103,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             if (string.IsNullOrWhiteSpace(FindTags))
                 return;
 
-            string lookInFolders = "E:\\Trains\\Photos - Main\\2022\\2022-09-30 Autumn Gala\\";
+            string lookInFolders = "E:\\Trains\\Photos - Main\\2022\\";
 
             var filesOnDrive = Directory.GetFiles(lookInFolders, $"*{FindTags}*.JPG", SearchOption.AllDirectories);
             foreach (string file in filesOnDrive)

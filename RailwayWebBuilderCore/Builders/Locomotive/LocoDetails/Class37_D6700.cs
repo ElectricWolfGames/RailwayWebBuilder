@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             ExportImagePath = Constants.LocoRef + "images\\D6700\\";
             Order = 2;
             StockType = StockTypes.Diesel;
+            FindTags = "D6700,Class37";
 
             Paragraph1 = "The British Rail Class 37 is a diesel-electric locomotive. Also known as the English Electric Type 3," +
                 "the class was ordered as part of the British Rail modernisation plan. They were numbered in two series, " +
