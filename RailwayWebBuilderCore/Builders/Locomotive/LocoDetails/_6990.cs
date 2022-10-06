@@ -17,6 +17,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "After nationalisation in 1948, British Railways gave them the power classification 5MT.";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "6990,WitherslackHall";
 
             Keywords.Add("Charles Collett");
             Keywords.Add("classification 5MT");

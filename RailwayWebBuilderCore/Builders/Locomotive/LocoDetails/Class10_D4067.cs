@@ -11,6 +11,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class10-D4067\";
             ExportImagePath = Constants.LocoRef + "images\\D4067\\";
+            FindTags = "D4067,Class10";
 
             Order = 2;
             StockType = StockTypes.Diesel;

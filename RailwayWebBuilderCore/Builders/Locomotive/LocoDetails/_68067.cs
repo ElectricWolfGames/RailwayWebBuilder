@@ -20,6 +20,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "Withdrawn circa 1982. Arrived at the GCR in 2007. ";
             Order = 1;
             StockType = StockTypes.SteamLoco;
+            FindTags = "68067,0-6-0,Austerity";
 
             Keywords.Add("J94");
             Keywords.Add("LNER");
