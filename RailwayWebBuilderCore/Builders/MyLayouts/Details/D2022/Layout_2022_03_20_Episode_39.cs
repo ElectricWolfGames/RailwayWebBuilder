@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
             Title = "<h2>39: Embankment Update</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
             Details.Append("<p>We have been working on the embankment</p>");
-            
+
             YouTubeLink = "mY6EoKLYSvk";
         }
     }

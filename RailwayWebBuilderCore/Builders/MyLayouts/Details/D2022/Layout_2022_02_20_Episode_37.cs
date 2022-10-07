@@ -23,5 +23,4 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2022
             YouTubeLink = "l-5hfa1Drao";
         }
     }
-
 }
