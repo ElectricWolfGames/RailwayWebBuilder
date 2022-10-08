@@ -10,6 +10,14 @@ namespace RailwayWebBuilderCore.Data
             Gauge = gauge;
         }
 
+        public LayoutDetails(string name, Gauges gauge, bool setPath)
+        {
+            Name = name;
+            Gauge = gauge;
+            if (setPath)
+                Path = Name;
+        }
+
         public LayoutDetails(string name, Gauges gauge, string path)
         {
             Name = name;

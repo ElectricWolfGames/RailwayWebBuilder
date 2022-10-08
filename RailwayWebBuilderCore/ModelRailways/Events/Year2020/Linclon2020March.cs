@@ -38,7 +38,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Hollington Quarry", Gauges.OO9_Gauge));
             Layouts.Add(new LayoutDetails("Kleine Rundfahrt", Gauges.N_Gauge_Continental, "Kleine Rundfahrt"));
             Layouts.Add(new LayoutDetails("Kozel Cement", Gauges.HO_Gauge));
-            Layouts.Add(new LayoutDetails("Norman Colliery", Gauges.O_Gauge, "Norman Colliery"));
+            Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, "Norman Colliery"));
             Layouts.Add(new LayoutDetails("Northallerton", Gauges.N_Gauge, "Northallerton"));
             Layouts.Add(new LayoutDetails("Obervaz", Gauges.H0mNarrowGauge, "Obervaz"));
             Layouts.Add(new LayoutDetails("Roberts Road", Gauges.N_Gauge, "Roberts Road"));

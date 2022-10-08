@@ -51,7 +51,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Thomas Quarry", Gauges.OO9_Gauge, "22 Thomas Quarry"));
             Layouts.Add(new LayoutDetails("Undermilk Wood", Gauges.OO9_Gauge, "21 Undermilk Wood"));
             Layouts.Add(new LayoutDetails("Harton Gill", Gauges.P4Gauge, "30 Harton Gill"));
-            Layouts.Add(new LayoutDetails("Norman Colliery", Gauges.O_Gauge, "27 Norman Colliery"));
+            Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, "27 Norman Colliery"));
             Layouts.Add(new LayoutDetails("Vintage O Gauge", Gauges.O_Gauge, "06 Vintage O Gauge"));
             Layouts.Add(new LayoutDetails("Garton Bahn", Gauges.G_Gauge, "23 Garton Bahn"));
 
