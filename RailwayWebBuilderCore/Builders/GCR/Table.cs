@@ -1,13 +1,10 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Interfaces;
 using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Data.GCR;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using RailwayWebBuilderCore.Builders.StockVideos;
 
 namespace RailwayWebBuilderCore.Builders.GCR
 {

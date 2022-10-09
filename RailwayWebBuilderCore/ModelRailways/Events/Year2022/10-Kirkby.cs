@@ -16,20 +16,20 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             Descrption = "The Elizabethan Railway Society Exhibition at Kirkby-In-Ashfield.";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2022-10-08 Kirkby-In-Ashfield Model Railway Exhibition";
             TripDate = new DateTime(2022, 10, 08);
-            YouTubeLink = "";
+            YouTubeLink = "https://www.youtube.com/embed/CnT0kyIlDQY";
             ImageFolder = "20221008-Kirkby";
             Title = "The Elizabethan Railway Society Exhibition 2022";
-            ImagePreview = "PA105301-2021-10-08-Kirkby-in-ashfield-North-road-thumb.JPG";
+            ImagePreview = "PA081440-2022-10-08-Oscarton-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Ambleside", Gauges.OO_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Ambleside, Gauges.OO_Gauge, true));
             Layouts.Add(new LayoutDetails("St Michaels Vale", Gauges.N_Gauge, true));
             Layouts.Add(new LayoutDetails("Brunshafen", Gauges.HO_Gauge, true));
-            Layouts.Add(new LayoutDetails("Brittannia Mills", Gauges.OO_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.BrittanniaMills, Gauges.OO_Gauge, true));
             Layouts.Add(new LayoutDetails("Sheffield Victoria", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("Burgedorf", Gauges.HO_Gauge, true));
+            Layouts.Add(new LayoutDetails("Burgedorf", Gauges.HOe_Gauge, true));
             Layouts.Add(new LayoutDetails("Elmfield", Gauges.N_Gauge, true));
             Layouts.Add(new LayoutDetails("Oscarton", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("BrassingDale", Gauges.OO_Gauge, true));
+            Layouts.Add(new LayoutDetails("Brassingdale", Gauges.OO_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, true));
 
             Keywords.AddRange(ModelEventKeywords());
@@ -45,8 +45,8 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             {
                 Name = "The Elizabethan Railway Society Exhibition",
                 Date = new DateTime(2022, 10, 08),
-                Paragraph = "Visited the The Elizabethan Railway Society Exhibition event on the 08th October, lots of amazing models displays.",
-                Link = $"{Constants.ModelEvents}/20211010-Kirkby/index.html",
+                Paragraph = "Visited The Elizabethan Railway Society Exhibition event on the 08th October, Fantastic People, Amazing layouts",
+                Link = $"{Constants.ModelEvents}/20221008-Kirkby/index.html",
                 ModelEvent = this,
             };
         }

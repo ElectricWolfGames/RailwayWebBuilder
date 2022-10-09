@@ -2,7 +2,6 @@
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
-using System;
 using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Shop

@@ -5,6 +5,7 @@
         N_Gauge,
         OO_Gauge,
         HO_Gauge,
+        HOe_Gauge,
         O_Gauge,
         EM_Gauge,
         On30_Gauge,

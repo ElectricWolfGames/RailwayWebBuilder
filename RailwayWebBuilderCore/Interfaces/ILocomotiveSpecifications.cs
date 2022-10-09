@@ -2,9 +2,9 @@
 {
     public interface ILocomotiveSpecifications
     {
-        string Designer { get; }
         string Builder { get; }
         string BuildRange { get; }
+        string Designer { get; }
         int TotalProduced { get; }
     }
 }
