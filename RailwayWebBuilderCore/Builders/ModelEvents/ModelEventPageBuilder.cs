@@ -49,6 +49,26 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             pageBuilder.Output();
         }
 
+        private static string AddDescription(Data.LayoutDetails layoutDetails)
+        {
+            ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
+            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.Name);
+
+            if (layout == null)
+                return String.Empty;
+
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("<div class='row'>");
+            stringBuilder.AppendLine("<div class='col-md-12'>");
+
+            stringBuilder.AppendLine(layout.Description);
+            stringBuilder.AppendLine("</br></br>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            return stringBuilder.ToString();
+        }
+
         private static void AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath, eWolfBootstrap.Interfaces.IPageBuilder stringBuilder)
         {
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
@@ -59,6 +79,8 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
                 }
 
                 HTMLHelper.Gallery.AddGalleryHeader(stringBuilder, layout.IDName);
+
+                stringBuilder.Append(AddDescription(layout));
 
                 foreach (string layoutImage in layout.ImagePaths)
                 {

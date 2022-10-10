@@ -22,14 +22,14 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2022
             ImagePreview = "PA081440-2022-10-08-Oscarton-thumb.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNames.Ambleside, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails("St Michaels Vale", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("Brunshafen", Gauges.HO_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.StMichaelsVale, Gauges.N_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Brunshafen, Gauges.HO_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.BrittanniaMills, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails("Sheffield Victoria", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("Burgedorf", Gauges.HOe_Gauge, true));
-            Layouts.Add(new LayoutDetails("Elmfield", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("Oscarton", Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails("Brassingdale", Gauges.OO_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.SheffieldVictoria, Gauges.N_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Burgedorf, Gauges.HOe_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Elmfield, Gauges.N_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Oscarton, Gauges.N_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNames.Brassingdale, Gauges.OO_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, true));
 
             Keywords.AddRange(ModelEventKeywords());

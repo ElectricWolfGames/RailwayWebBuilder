@@ -2,7 +2,16 @@
 
 namespace RailwayWebBuilderCore.ModelRailways.Layouts
 {
-    internal class LayoutBase
+    internal interface ILayoutBase
+    {
+        string Description { get; set; }
+        Gauges Gauge { get; set; }
+        string Group { get; set; }
+        string Name { get; set; }
+        string Owner { get; set; }
+    }
+
+    internal class LayoutBase : ILayoutBase
     {
         public string Description { get; set; }
         public Gauges Gauge { get; set; }
