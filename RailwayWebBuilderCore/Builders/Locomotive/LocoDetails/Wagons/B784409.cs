@@ -17,6 +17,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             Order = 1;
             StockType = StockTypes.Wagon;
             OtherRunningNumbers.Add("230097");
+            FindTags = "230097";
 
             Keywords.Add("Vanwide");
             Keywords.Add("B784409");

@@ -112,6 +112,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
                 if (!File.Exists(newPath))
                 {
+                    Directory.CreateDirectory(RawImagePath);
                     File.Copy(file, newPath);
                 }
             }

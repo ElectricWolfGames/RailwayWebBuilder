@@ -23,6 +23,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "The Class 37s are known to some railway enthusiasts as 'tractors', a nickname given due to the similarities between the class's engine and a tractor's";
             Paragraph3 = "";
 
+            FindTags = "37714";
+
             Keywords.Add("British Rail");
             Keywords.Add("British Rail Class 37");
             Keywords.Add("Class 37");
