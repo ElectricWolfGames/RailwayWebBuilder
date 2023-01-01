@@ -1,7 +1,8 @@
 ﻿using RailwayWebBuilderCore.Data;
 using System;
+using RailwayWebBuilderCore.Blogs.Year2021;
 
-namespace RailwayWebBuilderCore.Blogs.Year2021
+namespace RailwayWebBuilderCore.Blogs.Year2022
 {
     public class Blog_2022_01_23_RoomTour : BlogBase
     {
