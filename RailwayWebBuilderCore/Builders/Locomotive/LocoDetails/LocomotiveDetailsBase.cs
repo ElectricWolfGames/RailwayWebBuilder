@@ -103,7 +103,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             if (string.IsNullOrWhiteSpace(FindTags))
                 return;
 
-            string lookInFolders = "E:\\Trains\\Photos - Main\\2022\\";
+            string lookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
 
             var filesOnDrive = Directory.GetFiles(lookInFolders, $"*{FindTags}*.JPG", SearchOption.AllDirectories);
             foreach (string file in filesOnDrive)
