@@ -106,11 +106,14 @@ namespace RailwayWebBuilderCore
             var bsv = new BuildStockVideos();
             bsv.Build();
 
-            var table = new Table();
-            table.Build();
+            //var table = new Table();
+            //table.Build();
 
-            var gcrshop = new GCRShop();
-            gcrshop.Build();
+            //var gcrshop = new GCRShop();
+            //gcrshop.Build();
+
+            var gcrttd = new GCRTextToDonate();
+            gcrttd.Build();
 
             //LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
             //ld.Build();
