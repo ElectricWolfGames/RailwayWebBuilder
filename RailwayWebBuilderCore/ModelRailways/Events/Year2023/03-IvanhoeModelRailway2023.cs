@@ -17,10 +17,10 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Descrption = "Ivanhoe Model Railway Society at Mountsorrel.";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-03-11 Ivanhoe Model Railway Society";
             TripDate = new DateTime(2023, 03, 11);
-            YouTubeLink = "https://www.youtube.com/embed/????";
+            YouTubeLink = "https://www.youtube.com/embed/qkNti83ufYA";
             ImageFolder = "20230311-Mountsorrel";
             Title = "Ivanhoe Model Railway Society 2023";
-            ImagePreview = "????.JPG";
+            ImagePreview = "IMG_3172-2023-03-11-Eu-Depot.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNames.Bankwood, Gauges.OO_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.BearCreek, Gauges.N_Gauge, true));
@@ -41,7 +41,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNames.Ullapool, Gauges.O_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.WhealKist, Gauges.OO9_Narrow_Gauge, true));
             Layouts.Add(new LayoutDetails(LayoutNames.LondonRoad, Gauges.OO_Gauge, true));
-            
+
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
                 "Ivanhoe Model Railway Society"
