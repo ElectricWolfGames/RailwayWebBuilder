@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             Details.Append("<p>And I've update the layout so the inner and outer trains have a link between them.</p>");
 
-            YouTubeLink = "https://youtu.be/nQIU-XTothY";
+            YouTubeLink = "nQIU-XTothY";
         }
     }
 }

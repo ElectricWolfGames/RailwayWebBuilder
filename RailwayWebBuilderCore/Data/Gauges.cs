@@ -10,6 +10,7 @@
         EM_Gauge,
         On30_Gauge,
         OO9_Gauge,
+        OO9_Narrow_Gauge,
         NONE,
         Dublo3Rail,
         Mixed_Gauge,
