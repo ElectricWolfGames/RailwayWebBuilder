@@ -9,7 +9,9 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
             Name = LayoutNames.Ambleside;
             Gauge = Gauges.OO_Gauge;
             Owner = "The Elizabethan Railway Society";
-            Description = "Pre-grouping through station serving two branch lines. if the Kendal and Windermere Railway company had fullfilled their plans, then Amblerside would have been a junction between Keswick and Penrith.";
+            Description = "Pre-grouping through station serving two branch lines. If the Kendal and Windermere Railway " +
+                "company had fulfilled their plans, then Ambleside would have been a junction between Keswick and " +
+                "Penrith.";
         }
     }
 }

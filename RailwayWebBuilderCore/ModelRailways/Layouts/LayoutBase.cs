@@ -14,9 +14,9 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
     internal class LayoutBase : ILayoutBase
     {
         public string Description { get; set; }
-        public Gauges Gauge { get; set; }
+        public Gauges Gauge { get; set; }// can remove this
         public string Group { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }// remove this with enums
         public string Owner { get; set; }
     }
 }
