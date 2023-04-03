@@ -21,17 +21,17 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Title = "Statfold Model Railway Event";
             ImagePreview = "IMG_3383-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails(LayoutNames.MelinLlechi, Gauges.SM32, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Birchwood, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.DevilsBridge, Gauges.OO9_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.DorehillStStevens, Gauges.OO9_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.FallMill, Gauges.OO9_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.FortWhiting, Gauges.OO9_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.NatfordTMD, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.HamptonEnd, Gauges.G_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Spilsby, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.SuttonBankTMD, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.TurtleBay, Gauges.OO9_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MelinLlechi));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Birchwood));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DevilsBridge));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DorehillStStevens));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.FallMill));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.FortWhiting));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NatfordTMD));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HamptonEnd));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Spilsby));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TurtleBay));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

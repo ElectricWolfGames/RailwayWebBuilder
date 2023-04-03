@@ -1,10 +1,32 @@
 ﻿using eWolfCommon.Helpers;
 using Geocoder;
 using Microsoft.VisualStudio.Services.Common;
+using RailwayWebBuilderCore.Attributes;
+using RailwayWebBuilderCore.Data;
 using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
 
 namespace RailwayWebBuilderCore.Helpers
 {
+    public static class ItemHelper
+    {
+        public static (string, Gauges) GetEnumDescription(System.Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionGaugeAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionGaugeAttribute), false) as DescriptionGaugeAttribute[];
+
+            if (attributes != null && attributes.Any())
+            {
+                return (attributes.First().Description, attributes.First().Gauge);
+            }
+
+            return (value.ToString(), Gauges.NONE);
+        }
+    }
+
     public class GeocoderHelper
     {
         private static GeocoderHelper _instance;

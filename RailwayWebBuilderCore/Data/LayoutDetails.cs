@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RailwayWebBuilderCore.Helpers;
+using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Data
 {
@@ -8,6 +9,15 @@ namespace RailwayWebBuilderCore.Data
         {
             Name = name;
             Gauge = gauge;
+        }
+
+        public LayoutDetails(LayoutNamesEnums name)
+        {
+            var (a, b) = ItemHelper.GetEnumDescription(name);
+            Name = a;
+            Gauge = b;
+
+            Path = Name;
         }
 
         public LayoutDetails(string name, Gauges gauge, bool setPath)

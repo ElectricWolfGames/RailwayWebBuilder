@@ -31,7 +31,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Croft Mill Wharf", Gauges.O_Gauge, "Croft Mill Wharf"));
             Layouts.Add(new LayoutDetails("Croft SPA", Gauges.N_Gauge, "Croft SPA"));
             Layouts.Add(new LayoutDetails("Cumanavago", Gauges.OO_Gauge));
-            Layouts.Add(new LayoutDetails("Dorehill ST. Stephens", Gauges.OO_Gauge, "Dorehill ST. Stephens"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DorehillStStevens));
             Layouts.Add(new LayoutDetails("Emsworth", Gauges.OO_Gauge, "Emsworth"));
             Layouts.Add(new LayoutDetails("Glenellen Castle", Gauges.N_Gauge, "Glenellen Castle"));
             Layouts.Add(new LayoutDetails("Hartley Poole", Gauges.N_Gauge, "Hartley Poole"));
