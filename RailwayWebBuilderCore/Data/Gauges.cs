@@ -23,6 +23,7 @@
         _45mm,
         P4Gauge,
         G_Gauge,
-        Multigauge
+        Multigauge,
+        SM32,
     }
 }

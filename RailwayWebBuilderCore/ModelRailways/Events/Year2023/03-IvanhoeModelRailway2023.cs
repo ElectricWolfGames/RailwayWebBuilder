@@ -3,7 +3,6 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.ModelRailways.EventLocations;
 using System;
-using System.Windows.Controls;
 
 namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
 {
