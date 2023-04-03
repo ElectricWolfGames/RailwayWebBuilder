@@ -41,6 +41,63 @@ namespace RailwayWebBuilderCore.Data
         SuttonBankTMD,
 
         [DescriptionGauge("Turtle Bay", Gauges.OO9_Gauge)]
-        TurtleBay
+        TurtleBay,
+
+        [DescriptionGauge("Bankwood", Gauges.OO9_Gauge)]
+        Bankwood,
+
+        [DescriptionGauge("Bear Creek", Gauges.N_Gauge)]
+        BearCreek,
+
+        [DescriptionGauge("Boghampton", Gauges.OO_Gauge)]
+        Boghampton,
+
+        [DescriptionGauge("Burdock", Gauges.N_Gauge)]
+        Burdock,
+
+        [DescriptionGauge("Carriage and Wagon", Gauges.OO_Gauge)]
+        CarriageandWagon,
+
+        [DescriptionGauge("Eu Depot", Gauges.O_Gauge)]
+        EuDepot,
+
+        [DescriptionGauge("Garden Halt", Gauges.O165_Gauge)]
+        GardenHalt,
+
+        [DescriptionGauge("Heanor South", Gauges.OO_Gauge)]
+        HeanorSouth,
+
+        [DescriptionGauge("Hopeless", Gauges.N_Gauge)]
+        Hopeless,
+
+        [DescriptionGauge("Knot Littlefield", Gauges.N_Gauge)]
+        KnotLittlefield,
+
+        [DescriptionGauge("Lionel Vintage Collection", Gauges.O_Gauge)]
+        LionelVintageCollection,
+
+        [DescriptionGauge("LymebrookYard", Gauges.N_Gauge)]
+        LymebrookYard,
+
+        [DescriptionGauge("Millfield Yard", Gauges.N_Gauge)]
+        MillfieldYard,
+
+        [DescriptionGauge("Buggleskelly Models", Gauges.OO_Gauge)]
+        BuggleskellyModels,
+
+        [DescriptionGauge("Silverton", Gauges.N_Gauge)]
+        Silverton,
+
+        [DescriptionGauge("Tan-Y-Fron", Gauges.OO9_Gauge)]
+        TanYFron,
+
+        [DescriptionGauge("Ullapool", Gauges.O_Gauge)]
+        Ullapool,
+
+        [DescriptionGauge("Wheal Kist", Gauges.OO9_Narrow_Gauge)]
+        WhealKist,
+
+        [DescriptionGauge("London Road", Gauges.OO_Gauge)]
+        LondonRoad,
     }
 }

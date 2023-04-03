@@ -21,25 +21,25 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Title = "Ivanhoe Model Railway Society 2023";
             ImagePreview = "IMG_3172-2023-03-11-Eu-Depot.JPG";
 
-            Layouts.Add(new LayoutDetails(LayoutNames.Bankwood, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.BearCreek, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Boghampton, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Burdock, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.CarriageandWagon, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.EuDepot, Gauges.O_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.GardenHalt, Gauges.O165_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.HeanorSouth, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Hopeless, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.KnotLittlefield, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.LionelVintageCollection, Gauges.O_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.LymebrookYard, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.MillfieldYard, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.BuggleskellyModels, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Silverton, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.TanYFron, Gauges.OO9_Narrow_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Ullapool, Gauges.O_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.WhealKist, Gauges.OO9_Narrow_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.LondonRoad, Gauges.OO_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bankwood));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BearCreek));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Boghampton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Burdock));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CarriageandWagon));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.EuDepot));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.GardenHalt));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HeanorSouth));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Hopeless));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.KnotLittlefield));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LionelVintageCollection));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LymebrookYard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MillfieldYard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BuggleskellyModels));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Silverton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanYFron));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ullapool));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WhealKist));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LondonRoad));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
