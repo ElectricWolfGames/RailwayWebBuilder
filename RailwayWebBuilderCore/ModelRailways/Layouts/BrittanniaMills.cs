@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
     {
         public BrittanniaMills()
         {
-            Name = LayoutNames.BrittanniaMills;
+            Name = LayoutNamesEnums.BrittanniaMills;
             Gauge = Gauges.OO_Gauge;
             Owner = "Jay Sanders";
             Description = "Brittannia Mills were built in 1902 for Samuel Bourne & Co. Ltd., in Netherfield east of " +

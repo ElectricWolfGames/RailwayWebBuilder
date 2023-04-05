@@ -52,7 +52,7 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
         private static string AddDescription(Data.LayoutDetails layoutDetails)
         {
             ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
-            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.Name);
+            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
 
             if (layout == null)
                 return String.Empty;

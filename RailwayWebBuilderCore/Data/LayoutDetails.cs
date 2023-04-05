@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore.Data
 
         public LayoutDetails(LayoutNamesEnums name)
         {
+            NameEnum = name;
             var (a, b) = ItemHelper.GetEnumDescription(name);
             Name = a;
             Gauge = b;
@@ -47,6 +48,7 @@ namespace RailwayWebBuilderCore.Data
 
         public List<string> ImagePaths { get; set; } = new List<string>();
         public string Name { get; set; }
+        public LayoutNamesEnums NameEnum { get; set; }
         public string Path { get; set; }
     }
 }

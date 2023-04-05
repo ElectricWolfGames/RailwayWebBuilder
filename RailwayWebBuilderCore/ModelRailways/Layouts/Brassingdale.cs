@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
     {
         public Brassingdale()
         {
-            Name = LayoutNames.Brassingdale;
+            Name = LayoutNamesEnums.Brassingdale;
             Gauge = Gauges.N_Gauge;
             Owner = "Roger Wright";
             Description = "Brassingdale is a fictitious location somewhere between Brassington and Wirksworth in Derbyshire. " +

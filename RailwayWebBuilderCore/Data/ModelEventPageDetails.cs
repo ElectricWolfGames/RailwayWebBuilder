@@ -10,7 +10,6 @@ namespace RailwayWebBuilderCore.Data
     {
         public string Descrption { get; set; }
         public string EventDates { get; set; }
-        public List<BootstrapOptions> ExtraIncludes { get; set; } = new List<BootstrapOptions>();
         public string ImageFolder { get; set; }
         public string ImagePreview { get; set; }
         public string ImagesPath { get; set; }
@@ -18,7 +17,6 @@ namespace RailwayWebBuilderCore.Data
         public List<LayoutDetails> Layouts { get; set; } = new List<LayoutDetails>();
         public ILocations Location { get; set; }
         public string Name { get; set; }
-        public string Title { get; set; }
         public DateTime TripDate { get; set; }
         public string YouTubeLink { get; set; }
 

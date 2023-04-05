@@ -99,5 +99,29 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("London Road", Gauges.OO_Gauge)]
         LondonRoad,
+
+        [DescriptionGauge("Burgedorf", Gauges.HOe_Gauge)]
+        Burgedorf,
+
+        [DescriptionGauge("StMichaelsVale", Gauges.N_Gauge)]
+        StMichaelsVale,
+
+        [DescriptionGauge("SheffieldVictoria", Gauges.N_Gauge)]
+        SheffieldVictoria,
+
+        [DescriptionGauge("Brassingdale", Gauges.N_Gauge)]
+        Brassingdale,
+
+        [DescriptionGauge("Oscarton", Gauges.N_Gauge)]
+        Oscarton,
+
+        [DescriptionGauge("NormanColliery", Gauges.O_Gauge)]
+        NormanColliery,
+
+        [DescriptionGauge("Brunshafen", Gauges.HO_Gauge)]
+        Brunshafen,
+
+        [DescriptionGauge("Elmfield", Gauges.N_Gauge)]
+        Elmfield,
     }
 }
