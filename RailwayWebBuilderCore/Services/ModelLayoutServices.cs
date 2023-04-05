@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.ModelRailways;
 using RailwayWebBuilderCore.ModelRailways.Layouts;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class ModelLayoutServices
     {
-        private List<ILayoutBase> _modelLayout = new List<ILayoutBase>();
+        private readonly List<ILayoutBase> _modelLayout = new();
 
         public ModelLayoutServices()
         {
@@ -24,12 +25,7 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private void AddModelLayouts()
-        {
-            _modelLayout.AddRange(GetAll());
-        }
-
-        private List<ILayoutBase> GetAll()
+        private static List<ILayoutBase> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(ILayoutBase))
@@ -37,6 +33,11 @@ namespace RailwayWebBuilderCore.Services
                           select Activator.CreateInstance(t) as ILayoutBase;
 
             return updates.ToList();
+        }
+
+        private void AddModelLayouts()
+        {
+            _modelLayout.AddRange(GetAll());
         }
     }
 }
