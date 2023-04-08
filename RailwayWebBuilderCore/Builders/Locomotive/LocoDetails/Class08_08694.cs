@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             RawImagePath = Constants.RawDataPath + @"\Locos\Class08-08694\";
             ExportImagePath = Constants.LocoRef + "images\\08694\\";
 
-            FindTags = "08694";
+            FindTags = "08694,Class08";
         }
     }
 }

@@ -15,6 +15,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             ExportImagePath = Constants.LocoRef + "images\\D8154\\";
             Order = 2;
             StockType = StockTypes.Diesel;
+            FindTags = "D8154,Class20 ";
 
             Keywords.Add("British Rail");
             Keywords.Add("English Electric Type 1");

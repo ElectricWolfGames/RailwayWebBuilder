@@ -2,15 +2,15 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public class Class37_37714 : LocomotiveDetailsBase
+    public class Class37_37009 : LocomotiveDetailsBase
     {
-        public Class37_37714()
+        public Class37_37009()
         {
-            Title = "37714, Class 37";
-            PageTitle = "37714";
+            Title = "37009, Class 37";
+            PageTitle = "37009";
             HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class37-37714\";
-            ExportImagePath = Constants.LocoRef + "images\\37714\\";
+            RawImagePath = Constants.RawDataPath + @"\Locos\Class37-37009\";
+            ExportImagePath = Constants.LocoRef + "images\\37009\\";
             Order = 2;
             StockType = StockTypes.Diesel;
 
@@ -23,12 +23,12 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
                 "The Class 37s are known to some railway enthusiasts as 'tractors', a nickname given due to the similarities between the class's engine and a tractor's";
             Paragraph3 = "";
 
-            FindTags = "37714,Class37";
+            FindTags = "37009,Class37";
 
             Keywords.Add("British Rail");
             Keywords.Add("British Rail Class 37");
             Keywords.Add("Class 37");
-            Keywords.Add("37714");
+
             Keywords.Add("English Electric Type 3");
             Keywords.Add("tractors");
         }
