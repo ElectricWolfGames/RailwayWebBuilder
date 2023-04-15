@@ -6,6 +6,7 @@
         {
             Order = 2;
             StockType = StockTypes.Diesel;
+            Class = "Class 08";
 
             Paragraph1 = "The British Rail Class 08 is a class of diesel-electric shunting locomotive builtby British Railways (BR). " +
     "As the standard BR general-purpose diesel shunter, the class became a familiar sight at major stations and freight yards. " +

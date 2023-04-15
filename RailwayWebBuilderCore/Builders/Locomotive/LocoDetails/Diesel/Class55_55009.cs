@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class55_55009()
         {
             Title = "55009, Class 55 Alycidon";
+            Class = "Class 55";
             PageTitle = "55009";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class55-55009\";

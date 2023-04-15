@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class25_D5185()
         {
             Title = "D5185, Class 25, SulzerType2";
+            Class = "Class 25";
             PageTitle = "D5185";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class25-D5185\";

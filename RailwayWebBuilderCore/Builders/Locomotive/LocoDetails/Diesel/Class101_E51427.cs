@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class101_E51427()
         {
             Title = "E51427 Class 101, Bo-Bo";
+            Class = "Class 101";
             PageTitle = "Class101 E51427";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class101-E51427\";

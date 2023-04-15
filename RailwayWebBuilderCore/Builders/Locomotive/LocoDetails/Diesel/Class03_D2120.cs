@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class03_D2120()
         {
             Title = "D2120, Class 03, 0-6-0";
+            Class = "Class 03";
             PageTitle = "D2120";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class03-D2120\";

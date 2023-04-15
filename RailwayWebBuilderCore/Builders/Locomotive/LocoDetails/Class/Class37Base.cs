@@ -6,6 +6,7 @@
         {
             Order = 2;
             StockType = StockTypes.Diesel;
+            Class = "Class 37";
 
             Paragraph1 = "The British Rail Class 37 is a diesel-electric locomotive. Also known as the English Electric Type 3," +
                 "the class was ordered as part of the British Rail modernisation plan. They were numbered in two series, " +

@@ -9,6 +9,7 @@ namespace RailwayWebBuilderCore.Interfaces
     {
         bool Active { get; set; }
         string Built { get; }
+        string Class { get; }
         StringBuilder Details { get; }
         string ExportImagePath { get; }
         string FindTags { get; }

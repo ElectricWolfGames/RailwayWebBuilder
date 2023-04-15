@@ -18,7 +18,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
         SteamLoco,
         Diesel,
         Wagon,
-        Coach
+        Coach,
+        Electric,
     }
 
     public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
@@ -27,6 +28,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 
         public bool Active { get; set; } = true;
         public string Built { get; set; }
+        public string Class { get; set; }
         public StringBuilder Details { get; set; }
         public string ExportImagePath { get; set; }
         public string FindTags { get; set; }

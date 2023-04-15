@@ -7,6 +7,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class10_D4067()
         {
             Title = "D4067, Class 10, 0-6-0, Margaret Ethel-Thomas Alfred Naylor";
+            Class = "Class 10";
+
             PageTitle = "D4067";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class10-D4067\";

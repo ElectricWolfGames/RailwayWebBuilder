@@ -1,4 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
+using RailwayWebBuilderCore.Blogs.Year2020;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
@@ -57,63 +58,85 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             pageBuilder.Append("<div class='container mt-4'>");
 
-            //TODO: Photo Ref - can we add an index with grouping by type.
             Jumbotron(pageBuilder, PageTitle);
 
-            var streams = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.SteamLoco);
+            pageBuilder.Append("<a href='SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
+            pageBuilder.Append("<a href='DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
+            pageBuilder.Append("<a href='WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
+            pageBuilder.Append("<a href='CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
 
-            pageBuilder.Append("<h2>Steam</h2>");
-            pageBuilder.Append("<us>");
+            var streams = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.SteamLoco);
+            var diesels = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Diesel);
+            var wagons = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Wagon);
+            var coach = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Coach);
 
-            foreach (var loco in streams)
-            {
-                AddLocoRef(pageBuilder, loco);
-            }
-            pageBuilder.Append("</us>");
-            pageBuilder.Append("<br>");
+            diesels = diesels.OrderBy(x => x.Class);
 
-            var diesel = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Diesel);
+            CreateTypePage("SteamList.html", streams);
 
-            pageBuilder.Append("<h2>Diesel</h2>");
-            pageBuilder.Append("<us>");
+            CreateTypePage("DieselList.html", diesels);
 
-            foreach (var loco in diesel)
-            {
-                AddLocoRef(pageBuilder, loco);
-            }
-            pageBuilder.Append("</us>");
-            pageBuilder.Append("<br>");
+            CreateTypePage("WagonsList.html", wagons);
 
-            var wagons = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Wagon);
+            CreateTypePage("CoachesList.html", coach);
 
-            pageBuilder.Append("<h2>Wagons</h2>");
-            pageBuilder.Append("<us>");
+            // create a new page for each type :
 
-            foreach (var loco in wagons)
-            {
-                AddLocoRef(pageBuilder, loco);
-            }
-            pageBuilder.Append("</us>");
-            pageBuilder.Append("<br>");
+            /*
+                        var streams = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.SteamLoco);
 
-            var coach = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Coach);
+                        pageBuilder.Append("<h2>Steam</h2>");
+                        pageBuilder.Append("<us>");
 
-            pageBuilder.Append("<h2>Coaches</h2>");
-            pageBuilder.Append("<us>");
+                        foreach (var loco in streams)
+                        {
+                            AddLocoRef(pageBuilder, loco);
+                        }
+                        pageBuilder.Append("</us>");
+                        pageBuilder.Append("<br>");
 
-            foreach (var loco in coach)
-            {
-                AddLocoRef(pageBuilder, loco);
-            }
-            pageBuilder.Append("</us>");
-            pageBuilder.Append("<br>");
+                        var diesel = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Diesel);
 
-            pageBuilder.Append("<br>");
-            pageBuilder.Append("<br>");
-            pageBuilder.Append("<br>");
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+                        pageBuilder.Append("<h2>Diesel</h2>");
+                        pageBuilder.Append("<us>");
 
+                        foreach (var loco in diesel)
+                        {
+                            AddLocoRef(pageBuilder, loco);
+                        }
+                        pageBuilder.Append("</us>");
+                        pageBuilder.Append("<br>");
+
+                        var wagons = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Wagon);
+
+                        pageBuilder.Append("<h2>Wagons</h2>");
+                        pageBuilder.Append("<us>");
+
+                        foreach (var loco in wagons)
+                        {
+                            AddLocoRef(pageBuilder, loco);
+                        }
+                        pageBuilder.Append("</us>");
+                        pageBuilder.Append("<br>");
+
+                        var coach = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Coach);
+
+                        pageBuilder.Append("<h2>Coaches</h2>");
+                        pageBuilder.Append("<us>");
+
+                        foreach (var loco in coach)
+                        {
+                            AddLocoRef(pageBuilder, loco);
+                        }
+                        pageBuilder.Append("</us>");
+                        pageBuilder.Append("<br>");
+
+                        pageBuilder.Append("<br>");
+                        pageBuilder.Append("<br>");
+                        pageBuilder.Append("<br>");
+                        pageBuilder.Append("</div>");
+                        pageBuilder.Append("</div>");
+            */
             pageBuilder.Output();
         }
 
@@ -143,6 +166,56 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             pageBuilder.Append($"<li class='breadcrumb-item'><a href='LocoRef.html'>Locos</a></li>");
             pageBuilder.Append("</ol>");
             pageBuilder.Append("</nav>");
+        }
+
+        private void CreateTypePage(string fileName, IEnumerable<ILocomotiveRefPage> locoTypes)
+        {
+            var pageHeader = new LocoRefHeader();
+            foreach (var loco in _orderedDetails)
+            {
+                pageHeader.Keywords.Add(loco.Title);
+            }
+
+            PageBuilder pageBuilder = new(fileName, LocalPath, pageHeader, "../");
+
+            pageBuilder.Append(NavBarHelper.NavBar("../"));
+            AddBreadCrumb(pageBuilder);
+
+            pageBuilder.Append("<div class='container mt-4'>");
+
+            Jumbotron(pageBuilder, PageTitle);
+
+            if (fileName.Contains("Steam"))
+                pageBuilder.Append("<a href='SteamList.html' class='btn btn-info btn-lg'><h1>Steam</h1></a>");
+            else
+                pageBuilder.Append("<a href='SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
+
+            if (fileName.Contains("Diesel"))
+                pageBuilder.Append("<a href='DieselList.html' class='btn btn-info btn-lg'><h1>Diesel</h1></a>");
+            else
+                pageBuilder.Append("<a href='DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
+
+            if (fileName.Contains("Wagon"))
+                pageBuilder.Append("<a href='WagonsList.html' class='btn btn-info btn-lg'><h1>Wagons</h1></a>");
+            else
+                pageBuilder.Append("<a href='WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
+
+            if (fileName.Contains("Coach"))
+                pageBuilder.Append("<a href='CoachesList.html' class='btn btn-info btn-lg'><h1>Coaches</h1></a>");
+            else
+                pageBuilder.Append("<a href='CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
+
+            pageBuilder.Append("<h2></h2>");
+            pageBuilder.Append("<us>");
+
+            foreach (var loco in locoTypes)
+            {
+                AddLocoRef(pageBuilder, loco);
+            }
+            pageBuilder.Append("</us>");
+            pageBuilder.Append("<br>");
+
+            pageBuilder.Output();
         }
 
         private void PopulateLocoRefDetails()

@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
         public Class43_43044()
         {
             Title = "43044, Class 43";
+            Class = "Class 43";
             PageTitle = "43044";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class43-43044\";
