@@ -117,6 +117,11 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             var filesOnDrive = Directory.GetFiles(lookInFolders, $"*{FindTags}*.JPG", SearchOption.AllDirectories);
             foreach (string file in filesOnDrive)
             {
+                if (file.ToLower().Contains("edit"))
+                {
+                    continue;
+                }
+
                 string newPath = $"{RawImagePath}\\{Path.GetFileName(file)}";
 
                 if (!File.Exists(newPath))
