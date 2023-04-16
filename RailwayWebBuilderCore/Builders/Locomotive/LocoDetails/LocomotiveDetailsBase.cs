@@ -86,6 +86,13 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
             _pageBuilder.Append("<div class='container mt-12'>");
 
             LocoRefPageBuilder.Jumbotron(_pageBuilder, Title);
+
+            _pageBuilder.Append("<a href='../SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
+            _pageBuilder.Append("<a href='../DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
+            _pageBuilder.Append("<a href='../WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
+            _pageBuilder.Append("<a href='../CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
+            _pageBuilder.Append("</br></br></br>");
+
             AddPageDetails();
 
             AddGallrey(HtmlPath + "images\\", RawImagePath);

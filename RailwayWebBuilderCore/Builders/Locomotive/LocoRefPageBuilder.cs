@@ -1,5 +1,4 @@
 ﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Blogs.Year2020;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
@@ -80,63 +79,6 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             CreateTypePage("CoachesList.html", coach);
 
-            // create a new page for each type :
-
-            /*
-                        var streams = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.SteamLoco);
-
-                        pageBuilder.Append("<h2>Steam</h2>");
-                        pageBuilder.Append("<us>");
-
-                        foreach (var loco in streams)
-                        {
-                            AddLocoRef(pageBuilder, loco);
-                        }
-                        pageBuilder.Append("</us>");
-                        pageBuilder.Append("<br>");
-
-                        var diesel = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Diesel);
-
-                        pageBuilder.Append("<h2>Diesel</h2>");
-                        pageBuilder.Append("<us>");
-
-                        foreach (var loco in diesel)
-                        {
-                            AddLocoRef(pageBuilder, loco);
-                        }
-                        pageBuilder.Append("</us>");
-                        pageBuilder.Append("<br>");
-
-                        var wagons = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Wagon);
-
-                        pageBuilder.Append("<h2>Wagons</h2>");
-                        pageBuilder.Append("<us>");
-
-                        foreach (var loco in wagons)
-                        {
-                            AddLocoRef(pageBuilder, loco);
-                        }
-                        pageBuilder.Append("</us>");
-                        pageBuilder.Append("<br>");
-
-                        var coach = _orderedDetails.Where(x => x.StockType == Locomotive.LocoDetails.StockTypes.Coach);
-
-                        pageBuilder.Append("<h2>Coaches</h2>");
-                        pageBuilder.Append("<us>");
-
-                        foreach (var loco in coach)
-                        {
-                            AddLocoRef(pageBuilder, loco);
-                        }
-                        pageBuilder.Append("</us>");
-                        pageBuilder.Append("<br>");
-
-                        pageBuilder.Append("<br>");
-                        pageBuilder.Append("<br>");
-                        pageBuilder.Append("<br>");
-                        pageBuilder.Append("</div>");
-                        pageBuilder.Append("</div>");
-            */
             pageBuilder.Output();
         }
 
