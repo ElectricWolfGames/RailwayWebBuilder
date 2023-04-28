@@ -2,6 +2,17 @@
 
 namespace RailwayWebBuilderCore.ModelRailways.EventLocations
 {
+    public class RootsatThorpeFarm : EventLocationsBase
+    {
+        public RootsatThorpeFarm()
+        {
+            Name = "Roots at Thorpe Farm";
+            LatitudeLongitude = new LatitudeLongitude(52.6765225, -1.06075956);
+            Address = "Roots at Thorpe Farm, Barkby Thorpe, Leicester, Leicestershire LE7 3QE";
+            PostCode = "LE7 3QE";
+        }
+    }
+
     public class TheSummitCentreKirkby : EventLocationsBase
     {
         public TheSummitCentreKirkby()

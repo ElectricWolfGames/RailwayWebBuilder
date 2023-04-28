@@ -115,7 +115,7 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Oscarton", Gauges.N_Gauge)]
         Oscarton,
 
-        [DescriptionGauge("NormanColliery", Gauges.O_Gauge)]
+        [DescriptionGauge("Norman Colliery", Gauges.O_Gauge)]
         NormanColliery,
 
         [DescriptionGauge("Brunshafen", Gauges.HO_Gauge)]
@@ -123,5 +123,32 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Elmfield", Gauges.N_Gauge)]
         Elmfield,
+
+        [DescriptionGauge("Neuberg", Gauges.HO_Gauge)]
+        Neuberg,
+
+        [DescriptionGauge("Axmouth", Gauges.OO_Gauge)]
+        Axmouth,
+
+        [DescriptionGauge("Martini", Gauges.N_Gauge)]
+        Martini,
+
+        [DescriptionGauge("Seen Better Days", Gauges.NONE)]
+        SeenBetterDays,
+
+        [DescriptionGauge("Brookfield", Gauges.N_Gauge)]
+        Brookfield,
+
+        [DescriptionGauge("Cook End", Gauges.O_Gauge)]
+        CookEnd,
+
+        [DescriptionGauge("Bregenbach", Gauges.N_Gauge)]
+        Bregenbach,
+
+        [DescriptionGauge("LinwoodLane ", Gauges.OO_Gauge)]
+        LinwoodLane,
+
+        [DescriptionGauge("Tamaro ", Gauges.N_Gauge)]
+        Tamaro,
     }
 }
