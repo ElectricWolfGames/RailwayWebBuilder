@@ -16,12 +16,12 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Descrption = "Syston Model Railway Society";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-04-29 Syston Model Railway Society";
             TripDate = new DateTime(2023, 04, 29);
-            YouTubeLink = "https://www.youtube.com/embed/????";
+            YouTubeLink = "https://www.youtube.com/embed/YInvka3Bhbg";
             ImageFolder = "20230429-Syston";
             Title = "Syston Model Railway Society";
-            ImagePreview = "IMG_3383-thumb.JPG";
+            ImagePreview = "IMG_3725-2023-04-29-Neuburg-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Neuberg));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Neuburg));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Axmouth));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Martini));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.NormanColliery));

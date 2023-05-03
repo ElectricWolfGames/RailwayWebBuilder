@@ -124,8 +124,8 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Elmfield", Gauges.N_Gauge)]
         Elmfield,
 
-        [DescriptionGauge("Neuberg", Gauges.HO_Gauge)]
-        Neuberg,
+        [DescriptionGauge("Neuburg", Gauges.HO_Gauge)]
+        Neuburg,
 
         [DescriptionGauge("Axmouth", Gauges.OO_Gauge)]
         Axmouth,
@@ -133,7 +133,7 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Martini", Gauges.N_Gauge)]
         Martini,
 
-        [DescriptionGauge("Seen Better Days", Gauges.NONE)]
+        [DescriptionGauge("Seen Better Days", Gauges.T_Gauge)]
         SeenBetterDays,
 
         [DescriptionGauge("Brookfield", Gauges.N_Gauge)]
@@ -145,10 +145,10 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Bregenbach", Gauges.N_Gauge)]
         Bregenbach,
 
-        [DescriptionGauge("LinwoodLane ", Gauges.OO_Gauge)]
+        [DescriptionGauge("Linwood Lane", Gauges.OO_Gauge)]
         LinwoodLane,
 
-        [DescriptionGauge("Tamaro ", Gauges.N_Gauge)]
+        [DescriptionGauge("Tamaro", Gauges.N_Gauge)]
         Tamaro,
     }
 }
