@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Brittannia Mills", Gauges.OO_Gauge)]
         BrittanniaMills,
 
-        [DescriptionGauge("MelinLlechi", Gauges.SM32)]
+        [DescriptionGauge("Melin Llechi", Gauges.SM32)]
         MelinLlechi,
 
         [DescriptionGauge("Birchwood", Gauges.OO_Gauge)]
@@ -150,5 +150,20 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Tamaro", Gauges.N_Gauge)]
         Tamaro,
+
+        [DescriptionGauge("Hackworth", Gauges.NONE)]
+        Hackworth,
+
+        [DescriptionGauge("Tytton Hall Yard", Gauges.NONE)]
+        TyttonHallYard,
+
+        [DescriptionGauge("Byway MPD", Gauges.NONE)]
+        BywayMPD,
+
+        [DescriptionGauge("Fairlie Syniad Da", Gauges.NONE)]
+        FairlieSyniadDa,
+
+        [DescriptionGauge("Re United Biscuits", Gauges.NONE)]
+        ReUnitedBiscuits
     }
 }
