@@ -16,6 +16,9 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Birchwood", Gauges.OO_Gauge)]
         Birchwood,
 
+        [DescriptionGauge("Brookthorpe", Gauges.N_Gauge)]
+        Brookthorpe,
+
         [DescriptionGauge("Devils Bridge", Gauges.OO9_Gauge)]
         DevilsBridge,
 
@@ -27,6 +30,12 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Fort Whiting", Gauges.OO9_Gauge)]
         FortWhiting,
+
+        [DescriptionGauge("James Street", Gauges.N_Gauge)]
+        JamesStreet,
+
+        [DescriptionGauge("Fredstone Lane", Gauges.N_Gauge)]
+        FredstoneLane,
 
         [DescriptionGauge("Natford TMD", Gauges.OO_Gauge)]
         NatfordTMD,
@@ -164,6 +173,78 @@ namespace RailwayWebBuilderCore.Data
         FairlieSyniadDa,
 
         [DescriptionGauge("Re United Biscuits", Gauges.NONE)]
-        ReUnitedBiscuits
+        ReUnitedBiscuits,
+
+        [DescriptionGauge("Power Station", Gauges.N_Gauge)]
+        ThePowerStation,
+
+        [DescriptionGauge("Uppingham", Gauges._3mm)]
+        Uppingham,
+
+        [DescriptionGauge("Purgatory Peak", Gauges.On30_Gauge)]
+        PurgatoryPeak,
+
+        [DescriptionGauge("Ayleett End", Gauges.OO_Gauge)]
+        AyleettEnd,
+
+        [DescriptionGauge("Blaendare Road", Gauges.OO_Gauge)]
+        BlaendareRoad,
+
+        [DescriptionGauge("Britannia Mill", Gauges.OO_Gauge)]
+        BritanniaMill,
+
+        [DescriptionGauge("Dilhorn Colliery", Gauges.OO_Gauge)]
+        DilhornColliery,
+
+        [DescriptionGauge("Franton Mill", Gauges.OO_Gauge)]
+        FrantonMill,
+
+        [DescriptionGauge("Holland Beck", Gauges.OO_Gauge)]
+        HollandBeck,
+
+        [DescriptionGauge("Kettle Lane", Gauges.OO_Gauge)]
+        KettleLane,
+
+        [DescriptionGauge("No Place", Gauges.OO_Gauge)]
+        NoPlace,
+
+        [DescriptionGauge("Passage Lane TMD", Gauges.OO_Gauge)]
+        PassageLaneTMD,
+
+        [DescriptionGauge("Pedwardine Forest", Gauges.OO_Gauge)]
+        PedwardineForest,
+
+        [DescriptionGauge("Pencoed", Gauges.OO_Gauge)]
+        Pencoed,
+
+        [DescriptionGauge("Penna Lane TMD", Gauges.OO_Gauge)]
+        PennaLaneTMD,
+
+        [DescriptionGauge("Southgates Dmu", Gauges.OO_Gauge)]
+        SouthgatesDmu,
+
+        [DescriptionGauge("South Wigston (Now and Then)", Gauges.OO_Gauge)]
+        SouthWigston,
+
+        [DescriptionGauge("Tremawn", Gauges.OO_Gauge)]
+        Tremawn,
+
+        [DescriptionGauge("St Johns", Gauges.OO_Gauge)]
+        StJohns,
+
+        [DescriptionGauge("Thomas Quarry", Gauges.OO9_Gauge)]
+        ThomasQuarry,
+
+        [DescriptionGauge("Undermilk Wood", Gauges.OO9_Gauge)]
+        UndermilkWood,
+
+        [DescriptionGauge("Harton Gill", Gauges.P4Gauge)]
+        HartonGill,
+
+        [DescriptionGauge("Vintage O Gauge", Gauges.O_Gauge)]
+        VintageOGauge,
+
+        [DescriptionGauge("Garton Bahn", Gauges.G_Gauge)]
+        GartonBahn,
     }
 }
