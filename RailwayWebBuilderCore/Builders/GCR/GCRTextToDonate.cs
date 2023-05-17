@@ -23,6 +23,7 @@ namespace RailwayWebBuilderCore.Builders.GCR
 
         public void Build()
         {
+            return;
             Directory.CreateDirectory(LocalPath);
 
             List<DonateAmount> donateAmounts = LoadDonations();
