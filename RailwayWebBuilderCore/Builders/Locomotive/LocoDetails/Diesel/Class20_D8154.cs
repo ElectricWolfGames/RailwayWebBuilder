@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
 {
     public class Class20_D8154 : LocomotiveDetailsBase
     {
-        public Class20_D8154()
+        public Class20_D8154() // TODO Add base class20
         {
             Title = "D8154, Class 20, Bo-Bo";
             Class = "Class 20";
@@ -18,6 +18,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
             Order = 2;
             StockType = StockTypes.Diesel;
             FindTags = "D8154,Class20 ";
+
+            // TODO Add loco notes
 
             Keywords.Add("British Rail");
             Keywords.Add("English Electric Type 1");

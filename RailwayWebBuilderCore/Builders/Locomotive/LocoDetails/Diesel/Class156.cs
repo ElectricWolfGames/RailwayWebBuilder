@@ -14,6 +14,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
             ExportImagePath = Constants.LocoRef + "images\\Class156\\";
             Order = 2;
             StockType = StockTypes.Diesel;
+
+            // TODO Add loco notes
         }
     }
 }

@@ -19,6 +19,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
             StockType = StockTypes.Diesel;
             FindTags = "D8098,Class20";
 
+            // TODO Add loco notes
+
             Keywords.Add("British Rail");
             Keywords.Add("English Electric Type 1");
             Keywords.Add("Choppers");

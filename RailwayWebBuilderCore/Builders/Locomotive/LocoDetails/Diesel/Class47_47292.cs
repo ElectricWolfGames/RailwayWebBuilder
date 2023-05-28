@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
             Order = 2;
             StockType = StockTypes.Diesel;
 
+            // TODO Add loco notes
+
             Keywords.Add("British Rail");
             Keywords.Add("British Rail Class 47");
             Keywords.Add("Class 47");
