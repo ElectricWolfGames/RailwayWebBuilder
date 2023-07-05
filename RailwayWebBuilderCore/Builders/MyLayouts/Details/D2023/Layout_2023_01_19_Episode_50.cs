@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
+namespace RailwayWebBuilderCore.Builders.MyLayouts.Details.D2023
 {
     public class Layout_2023_01_19_Episode_50 : LayoutBase
     {
