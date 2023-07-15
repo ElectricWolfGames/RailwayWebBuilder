@@ -112,6 +112,10 @@ namespace RailwayWebBuilderCore
             //var gcrshop = new GCRShop();
             //gcrshop.Build();
 
+            var gcrshop = new GCRGuidedWalk();
+            gcrshop.Build();
+
+
             var gcrttd = new GCRTextToDonate();
             gcrttd.Build();
 

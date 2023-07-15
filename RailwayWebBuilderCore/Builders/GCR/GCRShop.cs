@@ -8,6 +8,8 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.GCR
 {
+
+
     public class GCRShop
     {
         protected PageBuilder _pageBuilder;
