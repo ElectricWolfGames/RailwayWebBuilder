@@ -10,6 +10,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
         {
             Active = true;
             When = new DateTime(2023, 07, 09);
+            EpisodeNumber = 55;
+
             Details = new StringBuilder();
 
             RawImagePath = Constants.RawDataPath + @"MyLayout\2023-07-09 55\";
@@ -20,7 +22,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             Details.Append("<p>More work on the track near long whiskers</p>");
             Details.Append("<p>And 2 Warships make a guest appearance</p>");
-            
+
             Details.Append("</br>");
 
             YouTubeLink = "SvpLNzBvhx8";

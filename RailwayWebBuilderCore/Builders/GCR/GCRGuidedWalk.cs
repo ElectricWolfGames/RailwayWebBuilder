@@ -51,10 +51,10 @@ namespace RailwayWebBuilderCore.Builders.GCR
 
             _pageBuilder.StartTextCenter();
             _pageBuilder.Append("The Friends of the Great Central Main Line would like to show you around the locations of the Reunification project." +
-                "This guided walk will take you to 3 locations.");
+                " This guided walk will take you to 3 locations.");
             
             _pageBuilder.Append("</br></br>");
-            _pageBuilder.Append("The 2 miles walk will take you to the main line, where you can get to see the mainline bridge we completed years ago, and you will have a chance to see the chord connecting GCR to the mainline.");
+            _pageBuilder.Append("The 2 mile walk will take you to the main line, where you can get to see the mainline bridge we completed years ago, and you will have a chance to see the chord connecting GCR to the mainline.");
 
             _pageBuilder.Append("</br></br>");
             _pageBuilder.Append("After that we will take a walk back to where we started and then follow the canal around, this will give us our second location The Canal Bridge, and then last of all, we will walk over to Preci spark to see where the Factory flyover will happen.");
@@ -63,7 +63,24 @@ namespace RailwayWebBuilderCore.Builders.GCR
             _pageBuilder.Append("While anyone can take this walk alone, We are giving you a chance to walk with 2 or 3 people who work on the FoGCML Stand and will be able to answer a lot of your questions. As well as a short talk at each location.");
 
             _pageBuilder.Append("</br></br>");
-            _pageBuilder.Append("If you would like to join us one evening please email <strong>KarlGillott@GoogleMail.com</strong> to arrange a day. We are currently taking bookings for (DATES TO FOLLOW) and (DATES TO FOLLOW) with a 5 pm Start.");
+            _pageBuilder.Append("If you would like to join us one evening please email <strong>KarlGillott@GoogleMail.com</strong> to arrange a day. We are currently taking bookings for below with a 5 pm Start.");
+
+            _pageBuilder.Append("</br></br>");
+            _pageBuilder.Append("Tuesday ??  = 8 Spaces Left</br>");
+            _pageBuilder.Append("Wednesday ??  = 8 Spaces Left</br></br>");
+
+            // TODO Add note about where the money is going
+
+            /*_pageBuilder.Append("</br></br>");
+            _pageBuilder.Append("<table>");
+            _pageBuilder.Append("<tr>");
+            _pageBuilder.Append("<th></th> <th>Tuesday ?? </th><th> wednesday??</th>");
+            _pageBuilder.Append("</tr>");
+            _pageBuilder.Append("<tr>"); 
+            _pageBuilder.Append("<th>Spaces</th> <th>8</th><th>8</th>");
+            _pageBuilder.Append("</tr>");
+            _pageBuilder.Append("</table>");*/
+            _pageBuilder.Append("(Dates to be confirm after we have the go ahead)");
 
             _pageBuilder.Append("</br></br>");
 

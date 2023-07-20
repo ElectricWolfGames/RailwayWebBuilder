@@ -12,5 +12,7 @@ namespace RailwayWebBuilderCore.Interfaces
         string Title { get; }
         DateTime When { get; }
         string YouTubeLink { get; }
+
+        int EpisodeNumber { get; }
     }
 }
