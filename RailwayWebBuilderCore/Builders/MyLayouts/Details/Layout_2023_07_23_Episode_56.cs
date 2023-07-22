@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
             Details.Append("<p>More work on the track near long whiskers and the fiddle Yard.</p>");
             Details.Append("<p>This week we have 3 guest locos, 4MT and 5MT</p>");
             Details.Append("<ul>");
-            Details.Append("<li>31-115k Standard Class 4MT 75075 BR Black Late Crest  (Weathered) Bachmann CLub</li>");
+            Details.Append("<li>31-115k Standard Class 4MT 75075 BR Black Late Crest  (Weathered) Bachmann club</li>");
             Details.Append("<li>31-108 Standard Class 4MT 75063 BR Lined Black E/Emblem BR18 Tender Weathered</li>");
             Details.Append("<li>32-509 Standard Class 5MT 73109 BR Black Early Emblem</li>");
             Details.Append("</ul>");
@@ -39,7 +39,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
                 Name = $"Cattington Update {EpisodeNumber}",
                 Date = When,
                 Link = "MyLayouts/index.html",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4107-thumb.JPG",
+                Paragraph = "Small Coaches and Standard Class 4MT and 5MT",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4167-Cattington-thumb.JPG",
             };
         }
     }
