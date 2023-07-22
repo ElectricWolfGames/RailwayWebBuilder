@@ -14,17 +14,22 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             InitDatedPaths();
 
-            Title = "<h2>56: Br Days!</h2>";
+            Title = "<h2>56: Small Coaches and Standard Class 4MT and 5MT</h2>";
             Details.Append("<p>Welcome back to Cattington,</p>");
 
             Details.Append("<p>More work on the track near long whiskers and the fiddle Yard.</p>");
-            Details.Append("<p>This weeks Guset locos are 2 Standard MT4, and a Standard 5MT</p>");
-            Details.Append("<p></p>");
-            Details.Append("<p></p>");
+            Details.Append("<p>This week we have 3 guest locos, 4MT and 5MT</p>");
+            Details.Append("<ul>");
+            Details.Append("<li>31-115k Standard Class 4MT 75075 BR Black Late Crest  (Weathered) Bachmann CLub</li>");
+            Details.Append("<li>31-108 Standard Class 4MT 75063 BR Lined Black E/Emblem BR18 Tender Weathered</li>");
+            Details.Append("<li>32-509 Standard Class 5MT 73109 BR Black Early Emblem</li>");
+            Details.Append("</ul>");
+
+            Details.Append("<p>We also show some more small 4 wheel Coaches (Hornby)</p>");
 
             Details.Append("</br>");
 
-            YouTubeLink = "";
+            YouTubeLink = "kXDVM__zz3g";
         }
 
         public IBlog GetBlog()
