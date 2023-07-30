@@ -13,7 +13,6 @@
             Paragraph2 = "The class is officially the fastest diesel locomotive in the world," +
                 "with an absolute maximum speed of 148.5 mph (239.0 km/h), and a regular service speed of 125 mph (201 km/h)." +
                 "The record run was led by 43102 (43302) and trailed by 43159.";
-
         }
     }
 }

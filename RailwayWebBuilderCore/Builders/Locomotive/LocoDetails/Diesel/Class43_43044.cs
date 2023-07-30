@@ -1,10 +1,9 @@
 ﻿using RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Class;
 using RailwayWebBuilderCore.Configuration;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
 {
-    public class Class43_43044: Class43
+    public class Class43_43044 : Class43
     {
         public Class43_43044() : base()
         {

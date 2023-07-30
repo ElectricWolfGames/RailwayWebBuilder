@@ -13,6 +13,9 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             ExportImagePath = Constants.LocoRef + "images\\5209\\";
             Paragraph1 = "Tank, 24T Tank Built by Norbrit Pickering 1964, Wheelbase 15ft, TOPS TSV";
             Built = "Norbrit Pickering";
+
+            FindTags = "5209,Tank";
+
             Wheelbase = "15ft";
             Order = 1;
             StockType = StockTypes.Wagon;

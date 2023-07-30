@@ -29,4 +29,29 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Wagons
             Keywords.Add("Tanker");
         }
     }
+
+    public class Tanker_3711 : LocomotiveDetailsBase
+    {
+        public Tanker_3711()
+        {
+            Title = "Tanker 3711";
+            PageTitle = "3711";
+            HtmlFileName = $"{PageTitle}.html";
+            RawImagePath = Constants.RawDataPath + @"\Locos\_Wagons\3711\";
+            ExportImagePath = Constants.LocoRef + "images\\3711\\";
+            Paragraph1 = "Tank, 22T Wheelbase 15ft, TOPS TRV";
+            Built = "Hurst Nelson 1959";
+            Order = 1;
+            Wheelbase = "15ft";
+            StockType = StockTypes.Wagon;
+
+            FindTags = "3711,Tank,Wagon";
+
+            OtherRunningNumbers.Add("43711");
+            OtherRunningNumbers.Add("ADB 999045");
+            OtherRunningNumbers.Add("061209");
+
+            Keywords.Add("Tanker");
+        }
+    }
 }
