@@ -2,7 +2,6 @@
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Coaches
 {
-
     public class E14064 : LocomotiveDetailsBase
     {
         public E14064()
