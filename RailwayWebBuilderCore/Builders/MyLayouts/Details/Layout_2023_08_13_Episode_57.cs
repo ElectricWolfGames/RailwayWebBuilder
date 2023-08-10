@@ -29,7 +29,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 
             Details.Append("</br>");
 
-            YouTubeLink = "";
+            YouTubeLink = "zKQkH6KLHY4";
         }
 
         public IBlog GetBlog()
@@ -39,8 +39,8 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
                 Name = $"Cattington Update {EpisodeNumber}",
                 Date = When,
                 Link = "MyLayouts/index.html",
-                Paragraph = "Class 52",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4167-Cattington-thumb.JPG",
+                Paragraph = "Westerns and more wagons",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4254-2023-08-13-Cattington-thumb.JPG",
             };
         }
     }
