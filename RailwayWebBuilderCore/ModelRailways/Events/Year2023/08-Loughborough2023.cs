@@ -53,7 +53,6 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CookEnd));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WolfLowe));
 
-
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
                 "Loughborough",
