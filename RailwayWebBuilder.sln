@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E865377B-8EA8-4ABC-ABE2-27B58AA74E74}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eWolfCommon", "..\..\GitHub\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj", "{3D84C703-D062-4E0B-9740-7F01D48DF943}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eWolfBootstrap", "..\..\GitHub\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj", "{D39DEF3A-291A-412E-81FB-B0362B3D8BF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{C2E451BC-62FA-474D-8D3A-433DF8A35D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsDetailsCreator", "Helpers\EventsDetailsCreator\EventsDetailsCreator.csproj", "{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,10 @@ Global
 		{D39DEF3A-291A-412E-81FB-B0362B3D8BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D39DEF3A-291A-412E-81FB-B0362B3D8BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D39DEF3A-291A-412E-81FB-B0362B3D8BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3D84C703-D062-4E0B-9740-7F01D48DF943} = {E865377B-8EA8-4ABC-ABE2-27B58AA74E74}
 		{D39DEF3A-291A-412E-81FB-B0362B3D8BF6} = {E865377B-8EA8-4ABC-ABE2-27B58AA74E74}
+		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38} = {C2E451BC-62FA-474D-8D3A-433DF8A35D0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D12E519-7A61-4A7D-AE8F-4BFB2E5B44D3}

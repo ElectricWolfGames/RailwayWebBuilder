@@ -151,9 +151,6 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Cook End", Gauges.O_Gauge)]
         CookEnd,
 
-        [DescriptionGauge("Bregenbach", Gauges.N_Gauge)]
-        Bregenbach,
-
         [DescriptionGauge("Linwood Lane", Gauges.OO_Gauge)]
         LinwoodLane,
 
@@ -246,5 +243,86 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Garton Bahn", Gauges.G_Gauge)]
         GartonBahn,
+
+        [DescriptionGauge("Ribblehead Layout", Gauges.T_Gauge)]
+        RibbleheadLayout,
+
+        [DescriptionGauge("Ilfracombe East", Gauges.OO9_Gauge)]
+        IlfracombeEast,
+
+        [DescriptionGauge("Barnwood", Gauges.N_Gauge)]
+        Barnwood,
+
+        [DescriptionGauge("Hartley Poole Too", Gauges.N_Gauge)]
+        HartleyPooleToo,
+
+        [DescriptionGauge("Newvadden Parkway", Gauges.N_Gauge)]
+        NewvaddenParkway,
+
+        [DescriptionGauge("Oakwood Lane", Gauges.N_Gauge)]
+        OakwoodLane,
+
+        [DescriptionGauge("ST Ruth", Gauges.N_Gauge)]
+        STRuth,
+
+        [DescriptionGauge("Kleine Rundfahrt", Gauges.N_Gauge)]
+        KleineRundfahrt,
+
+        [DescriptionGauge("Ishinaka", Gauges.N_Gauge)]
+        Ishinaka,
+
+        [DescriptionGauge("Atherley Narrows", Gauges.HO_Gauge)]
+        AtherleyNarrows,
+
+        [DescriptionGauge("San Clemente", Gauges.HO_Gauge)]
+        SanClemente,
+
+        [DescriptionGauge("Wolfstatt", Gauges.HO_Gauge)]
+        Wolfstatt,
+
+        [DescriptionGauge("Glenmore Parva", Gauges.OO_Gauge)]
+        GlenmoreParva,
+
+        [DescriptionGauge("Hackworth (Trafalgar Terrace)", Gauges.OO_Gauge)]
+        HackworthTrafalgarTerrace,
+
+        [DescriptionGauge("Hillton. T.M.D and M.o.d", Gauges.OO_Gauge)]
+        HilltonTMDandMod,
+
+        [DescriptionGauge("Illie Town", Gauges.OO_Gauge)]
+        IllieTown,
+
+        [DescriptionGauge("Loughborough Midland", Gauges.OO_Gauge)]
+        LoughboroughMidland,
+
+        [DescriptionGauge("Myton", Gauges.OO_Gauge)]
+        Myton,
+
+        [DescriptionGauge("Smallwood", Gauges.OO_Gauge)]
+        Smallwood,
+
+        [DescriptionGauge("Southgate Park", Gauges.OO_Gauge)]
+        SouthgatePark,
+
+        [DescriptionGauge("Thorncliffe", Gauges.OO_Gauge)]
+        Thorncliffe,
+
+        [DescriptionGauge("Charnwood", Gauges.O_Gauge)]
+        Charnwood,
+
+        [DescriptionGauge("Newchapel Junction", Gauges.O_Gauge)]
+        NewchapelJunction,
+
+        [DescriptionGauge("Wolf Lowe", Gauges.O_Gauge)]
+        WolfLowe,
+
+        [DescriptionGauge("Burton on Trent", Gauges.N_Gauge)]
+        BurtononTrent,
+
+        [DescriptionGauge("Rockcliffe", Gauges.N_Gauge)]
+        Rockcliffe,
+
+        [DescriptionGauge("Bregenbach Im Schwarzald", Gauges.N_Gauge)]
+        BregenbachImSchwarzald,
     }
 }

@@ -28,7 +28,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SeenBetterDays));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brookfield));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CookEnd));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bregenbach));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BregenbachImSchwarzald));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.LinwoodLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Birchwood));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Tamaro));

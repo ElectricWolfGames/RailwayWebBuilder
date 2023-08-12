@@ -35,7 +35,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
     {
         public Bregenbach()
         {
-            Name = LayoutNamesEnums.Bregenbach;
+            Name = LayoutNamesEnums.BregenbachImSchwarzald;
 
             Owner = "";
             Description = "Bregenbach represents a small wayside industry on a fictional cross-country line in the Black Forest in Germany. The Bregtalbahn in reality ran from Donaueschingen on the </br></br>" +
