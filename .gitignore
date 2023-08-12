@@ -12,3 +12,5 @@
 /RailwayWebBuilderCore/App.config
 /RailwayWebBuilderCore/bin/Debug/net5.0-windows
 /.vs/ProjectEvaluation
+/Helpers/EventsDetailsCreator/bin/Debug/net7.0
+/Helpers/EventsDetailsCreator/obj
