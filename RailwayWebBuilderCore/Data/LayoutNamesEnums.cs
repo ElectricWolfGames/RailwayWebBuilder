@@ -157,9 +157,6 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Tamaro", Gauges.N_Gauge)]
         Tamaro,
 
-        [DescriptionGauge("Hackworth", Gauges.NONE)]
-        Hackworth,
-
         [DescriptionGauge("Tytton Hall Yard", Gauges.NONE)]
         TyttonHallYard,
 
@@ -308,7 +305,7 @@ namespace RailwayWebBuilderCore.Data
         Thorncliffe,
 
         [DescriptionGauge("Charnwood forest", Gauges.O_Gauge)]
-        Charnwood,
+        CharnwoodForest,
 
         [DescriptionGauge("Newchapel Junction", Gauges.O_Gauge)]
         NewchapelJunction,

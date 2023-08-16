@@ -48,7 +48,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Smallwood));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgatePark));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Thorncliffe));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Charnwood));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CharnwoodForest));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.NewchapelJunction));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CookEnd));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WolfLowe));
