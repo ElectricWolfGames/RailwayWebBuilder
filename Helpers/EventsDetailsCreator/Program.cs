@@ -32,6 +32,7 @@ namespace bha
 
         private static void ListAllLayoyts(List<string> allNames)
         {
+
             Console.WriteLine();
             Console.WriteLine();
             foreach (string name in allNames)
@@ -43,6 +44,8 @@ namespace bha
 
         private static List<string> ShowEnums(string names, string enumGauge)
         {
+            string path = "E:\\Trains\\Photos - Main\\2023\\2023-08-12 Soar Vally Model Railway Club\\Videos";
+
             List<string> allNames = new List<string>();
 
             string[] parts = names.Split(',');
@@ -52,6 +55,9 @@ namespace bha
                 Console.WriteLine($"[DescriptionGauge(\"{part}\", {enumGauge})]");
                 Console.WriteLine($"{WithoutSpaces(part)},");
                 allNames.Add(WithoutSpaces(part));
+
+
+                Directory.CreateDirectory($"{path}\\{part}");
                 Console.WriteLine();
             }
             return allNames;
