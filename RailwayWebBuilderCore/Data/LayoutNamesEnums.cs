@@ -307,7 +307,7 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Thorncliffe", Gauges.OO_Gauge)]
         Thorncliffe,
 
-        [DescriptionGauge("Charnwood", Gauges.O_Gauge)]
+        [DescriptionGauge("Charnwood forest", Gauges.O_Gauge)]
         Charnwood,
 
         [DescriptionGauge("Newchapel Junction", Gauges.O_Gauge)]
@@ -324,5 +324,8 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Bregenbach Im Schwarzald", Gauges.N_Gauge)]
         BregenbachImSchwarzald,
+
+        [DescriptionGauge("Roofers Lane", Gauges.N_Gauge)]
+        RoofersLane,
     }
 }

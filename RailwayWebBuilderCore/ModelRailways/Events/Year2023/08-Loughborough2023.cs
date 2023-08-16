@@ -12,15 +12,15 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
         {
             Name = "Soar Valley Model Railway Club annual exhibition";
             Location = new GrammarSchoolLoughborough();
-            EventDates = "20th and 21st August 2023";
+            EventDates = "12th and 13st August 2023";
             Descrption = "Loughborough Model Railway Exhibition, Soar Valley Model Railway Club annual exhibition";
-            ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-08-12 Loughborough model railway exhibition 2023";
+            ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-08-12 Loughborough model railway exhibition";
             TripDate = new DateTime(2023, 08, 12);
 
-            YouTubeLink = "https://www.youtube.com/embed/?????????????";
+            YouTubeLink = "https://www.youtube.com/embed/X7ncKuT-0Oo";
             ImageFolder = "20230812-Loughborough";
             Title = "Soar Valley Model Railway Club 2023";
-            ImagePreview = "P8210480-thumb.JPG";
+            ImagePreview = "IMG_4349-2023-08-12-Soar-vally-model-show-thumb.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.RibbleheadLayout));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.IlfracombeEast));
@@ -52,6 +52,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.NewchapelJunction));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CookEnd));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WolfLowe));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RoofersLane));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
@@ -65,7 +66,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             {
                 Name = "Soar Valley Model Railway Club",
                 Date = new DateTime(2023, 08, 15),
-                Paragraph = "We visited the Loughborough Model Railway Exhibition event on the 12th, 13th August 2022, lots of amazing models displays.",
+                Paragraph = "We visited the Loughborough Model Railway Exhibition event on the 12th, 13th August 2023, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20230812-Loughborough/index.html",
                 ModelEvent = this,
             };
