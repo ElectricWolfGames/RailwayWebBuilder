@@ -121,7 +121,7 @@ namespace RailwayWebBuilderCore.Builders.GCR
 
             _pageBuilder.Append("</br>");
             _pageBuilder.StartTextCenter();
-            _pageBuilder.Append("We think the walk will take 90 minutes giving about 10 minutes at each location for talks and a chance to take pictures and look around. But it's also ok if it takes longer.\r\n\r\nWe will return back to the starting point of the walk, but it's ok if you wish to leave us at any point along the route.");
+            _pageBuilder.Append("We think the walk will take 90 minutes giving about 10 minutes at each location for talks and a chance to take pictures and look around. But it's also ok if it takes longer.  We will return back to the starting point of the walk, but it's ok if you wish to leave us at any point along the route.");
             _pageBuilder.EndTextCenter();
             _pageBuilder.Append("</br>");
 
