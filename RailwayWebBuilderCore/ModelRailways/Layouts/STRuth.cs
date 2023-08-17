@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.STRuth;
             Owner = "Midland Group 2mm";
-            Description = "St. Ruth, built by the Midland Area Group,\r\nis a 2mm Finescale terminus to fiddle\r\nyard layout set in the mid 1960s and\r\nmodelled loosely on Penzance. Operation\r\nis based on a 24 hour weekday period\r\nduring September taken from the relevant\r\ntimetables but with some adjustment to\r\nallow for available stock and track\r\nconfiguration differences.";
+            Description = "St. Ruth, built by the Midland Area Group, is a 2mm Finescale terminus to fiddle yard layout set in the mid 1960s and modelled loosely on Penzance. Operation is based on a 24 hour weekday period during September taken from the relevant timetables but with some adjustment to allow for available stock and track configuration differences.";
         }
     }
 
