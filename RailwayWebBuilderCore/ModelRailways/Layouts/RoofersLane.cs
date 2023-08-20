@@ -11,5 +11,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
             Description = "N Gauge exhibition layout which demonstrates how much scope there is for 'Bringing to Life' a detailed small layout, but still retaining a very high degree of interesting aspects. Including buildings and a variety of trains. It is a fictitious layout.";
         }
     }
-
 }

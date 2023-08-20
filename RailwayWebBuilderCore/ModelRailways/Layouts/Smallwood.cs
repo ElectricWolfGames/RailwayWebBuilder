@@ -12,5 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "At a slightly lower level below the station are the remains of another station that now serve as exchange sidings for several local industrial concerns. These sidings would only just see out the 1970's becoming part of the town's bypass road. The layout has been built as a test bed for a much larger layout based in the same blue diesel era.";
         }
     }
-
 }

@@ -12,5 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "This is a layout for watching trains pass by many marshalled to prototype length representing many private operators as well as OBB (Austrian state : railway). Block trains, multi model, wagon load freight, regional, and international express traffic can all be seen, — several double headed rakes are to be spotted. All of this is controlled by our home developed Wi-Fi system using smart phones and a gauge master prodigy.";
         }
     }
-
 }

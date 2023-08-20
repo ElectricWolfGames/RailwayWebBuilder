@@ -12,6 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "The main line and the branch enter from a fifteen road transverser which uses modified Kato extender tracks for alignment and power. At the rear a tram track links the station and the Samurai Heritage Village.";
         }
     }
-
-
 }

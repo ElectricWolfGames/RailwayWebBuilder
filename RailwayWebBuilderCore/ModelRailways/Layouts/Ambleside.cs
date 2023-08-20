@@ -13,5 +13,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "Penrith.";
         }
     }
-
 }

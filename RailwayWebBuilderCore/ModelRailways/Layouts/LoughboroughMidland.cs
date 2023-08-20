@@ -12,6 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "The layout after many years on the exhibition circuit was refurbished in 2021-22 by members of the lvanhoe M.R.S. as a tribute to Dave Tooley, who originally built the model but sadly passed away in 2020.";
         }
     }
-
-
 }

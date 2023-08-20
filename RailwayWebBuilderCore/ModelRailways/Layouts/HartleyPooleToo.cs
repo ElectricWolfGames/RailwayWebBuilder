@@ -13,5 +13,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "  Against the scenic break board runs a high level shuttle for a diesel railcar. The line appears from off- stage on the west and runs along an embankment, behind the power station, over an arched viaduct to a high level halt at the east end. A detached’ siding serves a gunpowder store. In the foreground is a river scene with naval craft and bankside railway tracks for militia.";
         }
     }
-
 }

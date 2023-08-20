@@ -12,6 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "The layout recreates the operation of a busy railway in its heyday with frequent arrivals and departures from the terminus station Newchapel Junction. The locomotives vary from express passenger and heavy freight engines to small tank engines of both SR and GWR origin.";
         }
     }
-
-
 }

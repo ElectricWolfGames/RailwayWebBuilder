@@ -12,5 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "  After a campaign by local residents for better rail links the Welsh Assembly along with Network Rail re-instated the branch and passenger services to the South Wales mainline. EWS then built a Traction Maintenance Depot on the the site of the old goods yard and a DMU stabling and signing on point. Passenger trains provide services to South Wales and the West of England. The MoD facility dispatches and receives trains from all parts of the MoD network.";
         }
     }
-
 }

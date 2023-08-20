@@ -13,5 +13,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "  In addition, there are a number of locomotives, railcars and other items of rolling stock, representing developments which might have happened if closure had not taken place in 1935.";
         }
     }
-
 }

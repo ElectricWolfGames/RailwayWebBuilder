@@ -12,5 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "It is based on the Settle to Carlisle Railway and is located at Ribblehead Station with part of the Quarry and crossing the Ribblehead Viaduct (Main Feature) and ending up at Blea Moor tunnel with working siding still in use today at Blea Moor Signal Box.";
         }
     }
-
 }

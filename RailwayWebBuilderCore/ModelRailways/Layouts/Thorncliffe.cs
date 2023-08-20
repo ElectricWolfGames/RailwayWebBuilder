@@ -11,5 +11,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
             Description = "The scene presented is in the BR Sectorisation period (1988-92) and set in the northern suburbs of Sheffield. The station is of a minimalist type showing a reopened line and single platform on the long-closed ex-GC line between Sheffield & Barnsley. Services are provided by the last of the first generation multiple units and the ‘new’ sprinters and these operate under computer control.";
         }
     }
-
 }

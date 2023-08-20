@@ -12,6 +12,4 @@ namespace RailwayWebBuilderCore.ModelRailways.Layouts
                 "Kleine Rundfahrt is set in the Thuringia region of the former East Germany, the layout features stock from both DB and DR companies. The numerous transport museums in the area run excursions featuring preserved items";
         }
     }
-
-
 }
