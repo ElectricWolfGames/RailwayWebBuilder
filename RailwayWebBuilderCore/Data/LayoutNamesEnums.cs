@@ -324,5 +324,44 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Roofers Lane", Gauges.N_Gauge)]
         RoofersLane,
+
+        // not sure about the below gauges
+        [DescriptionGauge("Little Burton", Gauges.OO_Gauge)]
+        LittleBurton,
+
+        [DescriptionGauge("Pipeyard", Gauges.OO_Gauge)]
+        Pipeyard,
+
+        [DescriptionGauge("Bishopston", Gauges.OO_Gauge)]
+        Bishopston,
+
+        [DescriptionGauge("Bottom of the Barrel", Gauges.OO_Gauge)]
+        BottomoftheBarrel,
+
+        [DescriptionGauge("Riddle to Old Town", Gauges.OO_Gauge)]
+        RiddletoOldTown,
+
+        [DescriptionGauge("Dragons Lair", Gauges.OO_Gauge)]
+        DragonsLair,
+
+        [DescriptionGauge("Thomas", Gauges.OO_Gauge)]
+        Thomas,
+
+        [DescriptionGauge("Effingborough", Gauges.OO_Gauge)]
+        Effingborough,
+
+        [DescriptionGauge("Hackworth Jutland Street", Gauges.OO_Gauge)]
+        HackworthJutlandStreet,
+
+        [DescriptionGauge("Marmagne", Gauges.OO_Gauge)]
+        Marmagne,
+
+        [DescriptionGauge("Baykolands", Gauges.OO_Gauge)]
+        Baykolands,
+
+        [DescriptionGauge("Ella Road", Gauges.OO_Gauge)]
+        EllaRoad,
+
+
     }
 }

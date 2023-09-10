@@ -9,16 +9,16 @@ namespace bha
 
             List<string> allNames = new List<string>();
 
-            string names = "Ribblehead Layout";
+            /*string names = "Ribblehead Layout";
             allNames.AddRange(ShowEnums(names, "Gauges.T_Gauge"));
 
             names = "Ilfracombe East";
             allNames.AddRange(ShowEnums(names, "Gauges.OO9_Gauge"));
+            */
+            string names = "Little Burton,Pipeyard,Bishopston,Bottom of the Barrel,Riddle to Old Town,Dragons Lair,Thomas,Effingborough,Hackworth Jutland Street,Marmagne,Baykolands,Ella Road";
+            allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
 
-            names = "Barnwood,Brookfield,Burton on Trent,Hartley Poole Too,Newvadden Parkway,Oakwood Lane,Rockcliffe,ST Ruth,Bregenbach Im Schwarzald,Kleine Rundfahrt,Ishinaka";
-            allNames.AddRange(ShowEnums(names, "Gauges.N_Gauge"));
-
-            names = "Atherley Narrows,San Clemente,Wolfstatt";
+            /*names = "Atherley Narrows,San Clemente,Wolfstatt";
             allNames.AddRange(ShowEnums(names, "Gauges.HO_Gauge"));
 
             names = "Glenmore Parva,Hackworth (Trafalgar Terrace),Hillton. T.M.D and M.o.d,Illie Town,Linwood Lane,Loughborough Midland,Myton,Smallwood,Southgate Park,Thorncliffe";
@@ -26,7 +26,7 @@ namespace bha
 
             names = "Charnwood,Newchapel Junction,Cook End,Wolf Lowe";
             allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
-
+            */
             ListAllLayoyts(allNames);
         }
 
