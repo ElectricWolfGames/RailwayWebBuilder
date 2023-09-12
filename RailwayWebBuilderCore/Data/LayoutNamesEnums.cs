@@ -344,8 +344,11 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Dragons Lair", Gauges.OO_Gauge)]
         DragonsLair,
 
-        [DescriptionGauge("Thomas", Gauges.OO_Gauge)]
-        Thomas,
+        [DescriptionGauge("Ravens Ravine", Gauges.OO_Gauge)]
+        RavensRavine,
+
+        [DescriptionGauge("Port William Trebarwith Quarry", Gauges.OO_Gauge)]
+        PortWilliamTrebarwithQuarry,
 
         [DescriptionGauge("Effingborough", Gauges.OO_Gauge)]
         Effingborough,

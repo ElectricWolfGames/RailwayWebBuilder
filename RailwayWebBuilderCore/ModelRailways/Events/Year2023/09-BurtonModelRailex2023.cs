@@ -17,24 +17,23 @@ namespace RailwayWebBuilderCore.ModelRailways.Events.Year2023
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-09-10 Burton Railway Society";
             TripDate = new DateTime(2023, 09, 10);
 
-            YouTubeLink = "https://www.youtube.com/embed/?????";
+            YouTubeLink = "https://www.youtube.com/embed/1VueA8HdUQ8";
             ImageFolder = "20230910-Burton";
             Title = "Burton Model Railex 2023";
-            ImagePreview = "?-thumb.JPG";
+            ImagePreview = "IMG_4729-Jutland-Street-thumb.JPG";
 
 
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LittleBurton));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Pipeyard));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bishopston));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BottomoftheBarrel));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RiddletoOldTown));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DragonsLair));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Thomas));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Effingborough));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HackworthJutlandStreet));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Marmagne));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Baykolands));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.EllaRoad));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HackworthJutlandStreet));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LittleBurton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Marmagne));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Pipeyard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RavensRavine));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PortWilliamTrebarwithQuarry));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RiddletoOldTown));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
