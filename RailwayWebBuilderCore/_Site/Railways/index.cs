@@ -1,39 +1,49 @@
 ﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
+using eWolfBootstrap.SiteBuilder;
+using eWolfBootstrap.SiteBuilder.Attributes;
+using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders
+namespace RailwayWebBuilderCore._Site.Railways
 {
-    public class HomePageBuilder
+    [PageTitle("index2.html")]
+    [Navigation(NavigationTypes.Main, 2)]
+    public class Index : PageDetails
     {
-        public static void Build(List<IBlog> blogs)
+        public Index()
         {
-            string htmlpath = Constants._aRootPath;
+            WebPage = new WebPage(this);
+            DisplayTitle = "";
+            MenuTitle = "Railways";
+        }
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new HomeHeader());
-            pageBuilder.Append(NavBarHelper.NavBar(string.Empty));
-            pageBuilder.Append("<div class='container mt-4'>");
+        public override void CreatePage()
+        {
+            WebPage.AddHeader(this);
+            WebPage.AddNavigation(NavigationTypes.Main);
+            WebPage.StartBody();
 
+            WebPage.Append("<div class='container mt-4'>");
 
-            IOrderedEnumerable<IBlog> ordedBlogs = blogs.OrderByDescending(x => x.Date);
-            pageBuilder.Append(AddCarousel(ordedBlogs.ToList()));
-            pageBuilder.Append("<main role='main' class='container'>");
-            pageBuilder.Append("<div class='col-md-8 blog-main'>");
-            pageBuilder.Append("<div class='row'>");
+            BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
 
-            pageBuilder.Append(AddBlogsAsTimeline(ordedBlogs));
+            IOrderedEnumerable<IBlog> ordedBlogs = blogs.Blogs.OrderByDescending(x => x.Date);
+            WebPage.Append(AddCarousel(ordedBlogs.ToList()));
+            WebPage.Append("<main role='main' class='container'>");
+            WebPage.Append("<div class='col-md-8 blog-main'>");
+            WebPage.Append("<div class='row'>");
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            WebPage.Append(AddBlogsAsTimeline(ordedBlogs));
 
-            pageBuilder.Append(OtherStuff());
+            WebPage.Append("</div>");
+            WebPage.Append("</div>");
 
-            pageBuilder.Output();
+            WebPage.EndBody();
+            WebPage.Output();
         }
 
         private static string AddBlogsAsTimeline(IOrderedEnumerable<IBlog> ordedBlogs)
@@ -124,22 +134,6 @@ namespace RailwayWebBuilderCore.Builders
             carouselHtml.AppendLine("");
             carouselHtml.AppendLine("<br/><br/>");
             return carouselHtml.ToString();
-        }
-
-        private static string OtherStuff()
-        {
-            StringBuilder blogHtml = new StringBuilder();
-            /*blogHtml.AppendLine("<script>");
-            blogHtml.AppendLine("Holder.addTheme('thumb', {");
-            blogHtml.AppendLine("bg: '#55595c',");
-            blogHtml.AppendLine("fg: '#eceeef',");
-            blogHtml.AppendLine("text: 'Thumbnail'");
-            blogHtml.AppendLine("});");
-            blogHtml.AppendLine("</script>");
-            */
-            blogHtml.Append(@"<a href='GCR\Quorn.html'>Quorn</a>");
-            blogHtml.Append("</br></br></br></br></br>");
-            return blogHtml.ToString();
         }
     }
 }

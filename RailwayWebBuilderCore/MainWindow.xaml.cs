@@ -13,6 +13,10 @@ using System.Diagnostics;
 using System.Windows;
 using RailwayWebBuilderCore.Builders.GCR;
 using RailwayWebBuilderCore.Builders.Locomotive;
+using eWolfBootstrap.SiteBuilder;
+using eWolfBootstrap.SiteBuilder.Interfaces;
+using System.Reflection;
+using RailwayWebBuilderCore.SiteDetails;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -28,6 +32,8 @@ namespace RailwayWebBuilderCore
     public partial class MainWindow : Window
     {
         private string _cacheFolder = Constants._aaDriveLetter + @"Trains\DeletableCache\";
+
+        private readonly BuildSite _buildSite = new BuildSite();
 
         public MainWindow()
         {
@@ -49,8 +55,21 @@ namespace RailwayWebBuilderCore
 
             BuildSite();
 
-            Button_Click_2(null, null);
+            //Button_Click_2(null, null);
+
+
+            _buildSite.WebSiteRootAddress = @"E:\eWolfSiteUploads";
+
+            SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new SiteHeader());
+            SiteBuilderServiceLocator.Instance.InjectService<IBuildSite>(_buildSite);
+            SiteBuilderServiceLocator.Instance.InjectService<INavigationBuilder>(new NavigationBuilder());
+
+            _buildSite.PreProcess(Assembly.GetExecutingAssembly());
+            _buildSite.Create();
+            _buildSite.OpenHomePage();
+
             Close();
+
         }
 
         private void AddLoco_Click(object sender, RoutedEventArgs e)
