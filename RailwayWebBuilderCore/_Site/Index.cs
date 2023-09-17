@@ -1,12 +1,6 @@
-﻿using eWolfBootstrap.SiteBuilder.Attributes;
+﻿using eWolfBootstrap.SiteBuilder;
+using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using eWolfBootstrap.SiteBuilder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 
 namespace RailwayWebBuilderCore._Site
 {

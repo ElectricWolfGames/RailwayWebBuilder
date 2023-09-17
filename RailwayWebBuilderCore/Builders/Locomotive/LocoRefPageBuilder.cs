@@ -11,12 +11,6 @@ using System.Reflection;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    /// <summary>
-    /// TODO: aded loco ref 63601
-    /// TODO: aded loco ref 12083,
-    /// Class31-D5830
-    /// 82306
-    /// </summary>
     public class LocoRefPageBuilder
     {
         private List<ILocomotiveRefPage> _orderedDetails;
@@ -89,7 +83,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
 
             loco.GrabImages();
 
-            loco.Build();
+            loco.BuildOldVersion();
 
             string href = $"<a href='Ref/{loco.PageTitle}.html'>{loco.Title}</a>";
             pageBuilder.Append($"<li>{href}</li>");

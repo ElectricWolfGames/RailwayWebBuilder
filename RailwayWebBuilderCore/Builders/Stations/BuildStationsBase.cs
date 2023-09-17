@@ -34,7 +34,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("</div>");
         }
 
-        protected void Add_Gallrey(string HtmlPath, string imagePath, string galleryPath)
+        protected void Add_Gallery(string HtmlPath, string imagePath, string galleryPath)
         {
             string htmlpath = Constants._aRootPath + "\\" + HtmlPath;
             Directory.CreateDirectory(imagePath);

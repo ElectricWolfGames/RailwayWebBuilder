@@ -1,5 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.SiteBuilder;
+﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore.Interfaces;
@@ -10,21 +9,21 @@ using System.Text;
 
 namespace RailwayWebBuilderCore._Site.Railways
 {
-    [PageTitle("index2.html")]
-    [Navigation(NavigationTypes.Main, 2)]
+    [PageTitle("index.html")]
+    [Navigation(NavigationTypes.Main, 1)]
     public class Index : PageDetails
     {
         public Index()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "";
-            MenuTitle = "Railways";
+            MenuTitle = "Home";
         }
 
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main);
+            WebPage.AddNavigation(NavigationTypes.Main, @"../");
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-4'>");

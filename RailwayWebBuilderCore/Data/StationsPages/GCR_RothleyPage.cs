@@ -1,4 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
@@ -6,16 +8,16 @@ using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
 
-namespace RailwayWebBuilderCore.Builders.Stations
+namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class Mainline_LoughboroughStation : BuildStationsBase, IStationsPages
+    public class GCR_RothleyPageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
-        public string HilightImage { get; } = @"Mainline-LoughboroughStation\images\P9070773-2022-09-07-Loughborough-station.JPG";
+        public string HilightImage { get; } = @"GCR-Rothley\images\P7134422-GCR-Rothley.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.MainlineLoughboroughStationFolder;
-        public string LocalPath { get; } = Constants._aRootPath + Constants.MainlineLoughboroughStationFolder;
-        public string PageTitle { get; } = "Mainline Loughborough Station";
-        public StationLocationsBase StationLocations { get; } = new Mainline_LoughboroughAddress();
+        public string HtmlPath { get; } = Constants.RothleyFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.RothleyFolder;
+        public string PageTitle { get; } = "Rothley";
+        public StationLocationsBase StationLocations { get; } = new RothleyStationGCR();
 
         public void Build()
         {
@@ -29,8 +31,8 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.RawDataPath + @"Stations\Mainline-LoughboroughStation\Gallery\";
-            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
+            string path = Constants.RawDataPath + @"Stations\GCR-Rothley\Gallery";
+            Add_Gallery(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");

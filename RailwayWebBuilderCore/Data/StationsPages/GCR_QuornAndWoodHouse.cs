@@ -1,4 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
@@ -6,16 +8,16 @@ using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
 
-namespace RailwayWebBuilderCore.Builders.Stations
+namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_LeicestershireNorthPage : BuildStationsBase, IStationsPages
+    public class GCR_QuornAndWoodHouseOld : BuildStationsBase, IStationsPages, IPageDetails
     {
-        public string HilightImage { get; } = @"GCR-LeicestershireNorth\images\P7134400-GCR-Leicester-north.JPG";
+        public string HilightImage { get; } = @"GCR-QuornAndWoodHouse\images\P7134452-GCR-Quorn-and-woodhouse.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.LeicestershireNorthFolder;
-        public string LocalPath { get; } = Constants._aRootPath + Constants.LeicestershireNorthFolder;
-        public string PageTitle { get; } = "Leicestershire North";
-        public StationLocationsBase StationLocations { get; } = new LeicesterNorthStationGCR();
+        public string HtmlPath { get; } = Constants.QuornAndWoodHouseFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.QuornAndWoodHouseFolder;
+        public string PageTitle { get; } = "Quorn And WoodHouse";
+        public StationLocationsBase StationLocations { get; } = new QuornWoodhouseStationGCR();
 
         public void Build()
         {
@@ -29,8 +31,8 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.RawDataPath + @"Stations\GCR-Leicestershire North\Gallery";
-            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
+            string path = Constants.RawDataPath + @"Stations\GCR-Quorn And WoodHouse\Gallery";
+            Add_Gallery(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");

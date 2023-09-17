@@ -1,4 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
@@ -6,9 +8,9 @@ using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
 
-namespace RailwayWebBuilderCore.Builders.Stations
+namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_RushcliffeHaltPage : BuildStationsBase, IStationsPages
+    public class GCR_RushcliffeHaltPageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
         public string HilightImage { get; } = @"GCR-RushcliffeHalt\images\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -32,7 +34,7 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append(AddHalt_001(HtmlPath, HtmlPath + "images\\"));
 
             string path = Constants.RawDataPath + @"Stations\GCR-Rushcliffe Halt\Gallery";
-            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
+            Add_Gallery(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");

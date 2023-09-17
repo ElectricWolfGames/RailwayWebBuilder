@@ -3,9 +3,11 @@ using RailwayWebBuilderCore.Data;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
-    public interface IStationsPages : IPageDetails
+    public interface IStationsPages
     {
         string HilightImage { get; }
         StationLocationsBase StationLocations { get; }
+
+        public string HtmlFileName { get; }
     }
 }

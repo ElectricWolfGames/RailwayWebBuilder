@@ -1,4 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Interfaces;
+using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
@@ -6,16 +8,16 @@ using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
 
-namespace RailwayWebBuilderCore.Builders.Stations
+namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_RothleyPage : BuildStationsBase, IStationsPages
+    public class GCR_A60BridgePageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
-        public string HilightImage { get; } = @"GCR-Rothley\images\P7134422-GCR-Rothley.JPG";
+        public string HilightImage { get; } = @"GCR-A60Bridge\images\P8070154-2022-08-07-A60Bridge326.JPG";
         public string HtmlFileName { get; } = "index.html";
-        public string HtmlPath { get; } = Constants.RothleyFolder;
-        public string LocalPath { get; } = Constants._aRootPath + Constants.RothleyFolder;
-        public string PageTitle { get; } = "Rothley";
-        public StationLocationsBase StationLocations { get; } = new RothleyStationGCR();
+        public string HtmlPath { get; } = Constants.A60StationFolder;
+        public string LocalPath { get; } = Constants._aRootPath + Constants.A60StationFolder;
+        public string PageTitle { get; } = "A60 Bridge";
+        public StationLocationsBase StationLocations { get; } = new LoughboroughA60Bridge();
 
         public void Build()
         {
@@ -29,8 +31,8 @@ namespace RailwayWebBuilderCore.Builders.Stations
             _pageBuilder.Append("<div class='container mt-4'>");
             Jumbotron(PageTitle, StationLocations);
 
-            string path = Constants.RawDataPath + @"Stations\GCR-Rothley\Gallery";
-            Add_Gallrey(HtmlPath, HtmlPath + "images\\", path);
+            string path = Constants.RawDataPath + @"Stations\GCR A60 Bridge\Gallery";
+            Add_Gallery(HtmlPath, HtmlPath + "images\\", path);
 
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");

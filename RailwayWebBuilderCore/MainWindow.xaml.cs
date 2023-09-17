@@ -17,6 +17,9 @@ using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
 using RailwayWebBuilderCore.SiteDetails;
+using RailwayWebBuilderCore.Data.StationsPages;
+using RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation;
+using RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -53,7 +56,7 @@ namespace RailwayWebBuilderCore
             //LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             //ls.Init();
 
-            BuildSite();
+            //BuildSite();
 
             //Button_Click_2(null, null);
 
@@ -93,23 +96,9 @@ namespace RailwayWebBuilderCore
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
 
-            BuildStationsHome.Build();
+            //BuildStationsHome.Build();
 
-            var b2 = new GCR_RushcliffeHaltPage();
-            b2.Build();
-            var b = new GCR_LoughboroughStationPage();
-            b.Build();
-            var b3 = new GCR_QuornAndWoodHouse();
-            b3.Build();
-            var b4 = new GCR_LeicestershireNorthPage();
-            b4.Build();
-            var b5 = new GCR_RothleyPage();
-            b5.Build();
-            var b6 = new GCR_A60BridgePage();
-            b6.Build();
-            var b7 = new Mainline_LoughboroughStation();
-            b7.Build();
-
+            
             var lr = new LocoRefPageBuilder();
             lr.Build();
 

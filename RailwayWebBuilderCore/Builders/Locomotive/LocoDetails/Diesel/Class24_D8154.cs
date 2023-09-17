@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
 {
     public class Class24_D5054 : LocomotiveDetailsBase
     {
-        public Class24_D5054() 
+        public Class24_D5054()
         {
             Title = "D5054, Class 24, Bo-Bo";
             Class = "Class 20";
