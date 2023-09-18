@@ -20,6 +20,9 @@
 
   <ItemGroup>
     <Folder Include="Factories\" />
+    <Folder Include="_Site\Railways\ModelEvents\" />
+    <Folder Include="_Site\Railways\Shop\" />
+    <Folder Include="_Site\Railways\StockVideos\" />
   </ItemGroup>
 
   <ItemGroup>

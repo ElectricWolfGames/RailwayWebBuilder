@@ -67,28 +67,6 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             }
         }
 
-        public static void BuildOld(IModelEvent pageDetails)
-        {
-            string htmlpath = Constants.FullMyLayouts;
-            Directory.CreateDirectory(htmlpath);
-
-            var pageBuilder = new PageBuilder("index.html", htmlpath, new MyLayoutHeader(), "../");
-
-            pageBuilder.Append(NavBarHelper.NavBar("../"));
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Jumbotron("<h1>Home layouts</h1>", "<p'>It's now our turn, I've just started to build our new layout, currently on the floor!</p>");
-
-            GetLayoutDetails();
-
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
-
-            pageBuilder.Append(HTMLRailHelper.Modal());
-
-            pageBuilder.Append("<script src='../Scripts/script.js'></script>");
-
-            pageBuilder.Output();
-        }
 
         private static string AddYoutubePreview(string youTubeLink)
         {
