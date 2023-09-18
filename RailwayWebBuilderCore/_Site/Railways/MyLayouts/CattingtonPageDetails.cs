@@ -21,8 +21,8 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
         public CattingtonPageDetails()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "bah2";
-            MenuTitle = "bah3";
+            DisplayTitle = "Cattington";
+            MenuTitle = "Cattington";
             DontShowNavigation = true;
             DontBuildPage = true;
         }

@@ -12,6 +12,7 @@ using System.Reflection;
 namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
 {
     // Todo: Need to click on the image in the gallary to naviage to the next.
+    // TODO: Update the discription for cattington.
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
     internal class CattingtonPageBuiler : PageDetails
