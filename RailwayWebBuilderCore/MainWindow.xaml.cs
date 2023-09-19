@@ -5,7 +5,6 @@ using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Shop;
 using RailwayWebBuilderCore.Builders.StockVideos;
 using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.LocoDB;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
@@ -17,6 +16,7 @@ using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
 
 using RailwayWebBuilderCore._SiteData;
+
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -74,10 +74,10 @@ namespace RailwayWebBuilderCore
 
         private void AddLoco_Click(object sender, RoutedEventArgs e)
         {
-            string url = NewUrl.Text;
+            /*string url = NewUrl.Text;
 
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
-            var loco = ls.CreateDB(url);
+            var loco = ls.CreateDB(url);*/
         }
 
         private void BuildSite()
@@ -127,7 +127,7 @@ namespace RailwayWebBuilderCore
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (myList.SelectedItem == null)
+            /*if (myList.SelectedItem == null)
                 return;
 
             var psi = new ProcessStartInfo
@@ -135,12 +135,12 @@ namespace RailwayWebBuilderCore
                 FileName = (myList.SelectedItem as LocomotiveDetails).WebSite,
                 UseShellExecute = true
             };
-            Process.Start(psi);
+            Process.Start(psi);*/
         }
 
         private void Button_Click_CleanUpText(object sender, RoutedEventArgs e)
         {
-            var ldb = LocomotiveDBServices.GetDBServices();
+            /*var ldb = LocomotiveDBServices.GetDBServices();
 
             foreach (var item in ldb.FullList)
             {
@@ -148,35 +148,35 @@ namespace RailwayWebBuilderCore
                 item.ConsildateText();
                 item.SetDirty();
             }
-            myList.Items.Refresh();
+            myList.Items.Refresh();*/
         }
 
         private void Button_Click_Save(object sender, RoutedEventArgs e)
         {
-            var ldb = LocomotiveDBServices.GetDBServices();
+            /*var ldb = LocomotiveDBServices.GetDBServices();
 
             foreach (var item in ldb.FullList)
             {
                 item.Save();
             }
-            myList.Items.Refresh();
+            myList.Items.Refresh();*/
         }
 
         private void Button_Click_UpdateAllFromWeb(object sender, RoutedEventArgs e)
         {
-            var ldb = LocomotiveDBServices.GetDBServices();
+            /*var ldb = LocomotiveDBServices.GetDBServices();
 
             foreach (var item in ldb.FullList)
             {
                 item.UpdateFromSite();
             }
-            myList.Items.Refresh();
+            myList.Items.Refresh();*/
         }
 
         private void lbTodoList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            if (myList.SelectedItem != null)
-                this.Title = (myList.SelectedItem as LocomotiveDetails).Name;
+            /*if (myList.SelectedItem != null)
+                this.Title = (myList.SelectedItem as LocomotiveDetails).Name;*/
         }
 
         private string RemoveCharacterCodes(string tractiveEffort)

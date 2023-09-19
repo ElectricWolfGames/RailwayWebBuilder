@@ -1,12 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using System.IO;
-using System.Text;
-
-/*
+﻿/*
 namespace RailwayWebBuilderCore.KeepForNow
 {
     public class Table

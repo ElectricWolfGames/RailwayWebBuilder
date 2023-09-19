@@ -1,15 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-/*namespace RailwayWebBuilderCore.KeepForNow
+﻿/*namespace RailwayWebBuilderCore.KeepForNow
 {
     public class GCRTextToDonate
     {

@@ -1,14 +1,5 @@
-﻿using eWolfBootstrap.Helpers;
-using eWolfBootstrap.HtmlExtracts;
-using RailwayWebBuilderCore.Enums;
-using RailwayWebBuilderCore.LocoDB;
-using RailwayWebBuilderCore.LocoDetails;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Reflection;
-
-namespace RailwayWebBuilderCore.Services
+﻿/*
+namespace RailwayWebBuilderCore.KeepForNow
 {
     public class LocomotivesServices
     {
@@ -19,7 +10,7 @@ namespace RailwayWebBuilderCore.Services
             LocomotivesServices ls = ServiceLocator.Instance.GetService<LocomotivesServices>();
             var hte = ls.GetLoco(loco);
 
-            hte.Name = GetEnumDescription((Locos)loco);
+            hte.Name = GetEnumDescription(loco);
             //hte.Name = loco.ToString();
             return new HtmlTableExtractLoco(hte);
         }
@@ -166,12 +157,6 @@ namespace RailwayWebBuilderCore.Services
 
         private void AddLoco(string uri, Locos locos)
         {
-            /*HtmlTableExtract table = GetTable(uri, locos);
-
-            _locos.Add(locos, table);
-            HtmlTableExtractLoco tableLoco = Get(locos);
-
-            var loco = BuildDB(tableLoco, uri);*/
         }
 
         private LocomotiveDetails BuildDB(HtmlTableExtractLoco table, string uri)
@@ -186,4 +171,4 @@ namespace RailwayWebBuilderCore.Services
             return _locos[loco];
         }
     }
-}
+}*/

@@ -1,14 +1,5 @@
-﻿using eWolfBootstrap.HtmlExtracts;
-using eWolfCommon.Helpers;
-using eWolfCommon.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.LocoDetails;
-using RailwayWebBuilderCore.Services;
-using System;
-using System.ComponentModel;
-using System.IO;
-
-namespace RailwayWebBuilderCore.LocoDB
+﻿/*
+namespace RailwayWebBuilderCore.KeepForNow
 {
     [Serializable]
     public class LocomotiveDetails : ISaveable
@@ -132,7 +123,7 @@ namespace RailwayWebBuilderCore.LocoDB
         {
             Directory.CreateDirectory(_outputFolder);
 
-            ReadWriteFileHelper.WriteToXmlFile<LocomotiveDetails>(_outputFolder + GetFileName, this);
+            ReadWriteFileHelper.WriteToXmlFile(_outputFolder + GetFileName, this);
         }
 
         public void SetDirty()
@@ -183,4 +174,4 @@ namespace RailwayWebBuilderCore.LocoDB
             WebSite = url;
         }
     }
-}
+}*/

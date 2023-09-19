@@ -15,8 +15,8 @@ namespace RailwayWebBuilderCore.Services
                 { typeof(LocationsService), new LocationsService() },
                 { typeof(SettingService), new SettingService() },
                 { typeof(DownloadServices), new DownloadServices() },
-                { typeof(LocomotivesServices), new LocomotivesServices() },
-                { typeof(LocomotiveDBServices), new LocomotiveDBServices() },
+                //{ typeof(LocomotivesServices), new LocomotivesServices() },
+                //{ typeof(LocomotiveDBServices), new LocomotiveDBServices() },
                 { typeof(ModelLayoutServices), new ModelLayoutServices() }
             };
         }

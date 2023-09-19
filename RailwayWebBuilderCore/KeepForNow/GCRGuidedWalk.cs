@@ -1,12 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using System.IO;
-using System.Text;
-
-/*namespace RailwayWebBuilderCore.KeepForNow
+﻿/*namespace RailwayWebBuilderCore.KeepForNow
 {
     public class GCRGuidedWalk
     {
@@ -82,8 +74,6 @@ using System.Text;
             _pageBuilder.Append("</br>");
             _pageBuilder.Append("</br>");
 
-
-
             _pageBuilder.Append("<div class='col-md-12'>");
 
             _pageBuilder.Append("</br>");
@@ -134,10 +124,6 @@ using System.Text;
             //_pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</br>");
-
-
-
-
         }
         private void ImageCard(string imageName, string title)
         {
@@ -150,7 +136,6 @@ using System.Text;
             _pageBuilder.Append("</div>");
             _pageBuilder.Append("</div>");
         }
-
 
         private string Jumbotron()
         {
@@ -167,6 +152,5 @@ using System.Text;
 
             return stringBuilder.ToString();
         }
-
     }
 }*/
