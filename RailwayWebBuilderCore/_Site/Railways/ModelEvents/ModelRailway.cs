@@ -91,10 +91,12 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private void CreatModelLayoutPage(IModelEvent modelEvent)
         {
-            ModelRailwayPageDetails cattingtonPageDetails = new ModelRailwayPageDetails();
-            cattingtonPageDetails.ModelEvent = modelEvent;
+            ModelRailwayPageDetails cattingtonPageDetails = new ModelRailwayPageDetails
+            {
+                ModelEvent = modelEvent,
 
-            cattingtonPageDetails.MenuTitle = "index";
+                MenuTitle = "index"
+            };
 
             // need to sort out folder
             cattingtonPageDetails.CreatePage();

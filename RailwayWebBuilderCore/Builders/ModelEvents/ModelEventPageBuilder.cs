@@ -14,37 +14,37 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventPageBuilder
     {
-        public static void Build(IModelEvent pageDetails)
+        public static void Build(IModelEvent modelEvent)
         {
-            pageDetails.ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
+            modelEvent.ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
 
-            pageDetails.CopyLayoutsToKeywords();
+            modelEvent.CopyLayoutsToKeywords();
 
-            Console.WriteLine(pageDetails.Name);
+            Console.WriteLine(modelEvent.Name);
 
-            List<string> images = ImageHelper.GetAllImages(pageDetails.ImagesPath);
+            List<string> images = ImageHelper.GetAllImages(modelEvent.ImagesPath);
 
-            AddImageToLayouts(pageDetails, images);
+            AddImageToLayouts(modelEvent, images);
 
             // create folders
             Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents);
-            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder);
-            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images");
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + modelEvent.ImageFolder);
+            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + modelEvent.ImageFolder + @"\images");
 
-            string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + "\\";
-            string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + pageDetails.ImageFolder + @"\images";
+            string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + modelEvent.ImageFolder + "\\";
+            string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + modelEvent.ImageFolder + @"\images";
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, pageDetails, "../../");
+            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, modelEvent, "../../");
 
             pageBuilder.Append(NavBarHelper.NavBar("../../"));
             pageBuilder.Append("<div class='container mt-4'>");
 
-            pageBuilder.Append(Jumbotron(pageDetails));
+            pageBuilder.Append(Jumbotron(modelEvent));
 
             LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
-            ls.AddLocation(pageDetails);
+            ls.AddLocation(modelEvent);
 
-            AddImagesByLayout(images, pageDetails, htmlpath, imagePath, pageBuilder);
+            AddImagesByLayout(images, modelEvent, htmlpath, imagePath, pageBuilder);
 
             pageBuilder.Output();
         }
