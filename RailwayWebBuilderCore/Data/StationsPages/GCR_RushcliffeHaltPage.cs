@@ -10,7 +10,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_RushcliffeHaltPageOld : BuildStationsBase, IStationsPages, IPageDetails
+    /*public class GCR_RushcliffeHaltPageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
         public string HilightImage { get; } = @"GCR-RushcliffeHalt\images\P6260073.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -65,5 +65,5 @@ namespace RailwayWebBuilderCore.Data.StationsPages
 
             return pageBuilder.GetString();
         }
-    }
+    }*/
 }

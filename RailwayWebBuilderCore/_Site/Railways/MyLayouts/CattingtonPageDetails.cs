@@ -34,7 +34,7 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-12'>");

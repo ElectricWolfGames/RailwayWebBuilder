@@ -1,7 +1,7 @@
 ﻿using RailwayWebBuilderCore.Data;
 using System;
 
-namespace RailwayWebBuilderCore.Blogs.Year2021
+namespace RailwayWebBuilderCore._SiteData.Blogs.Year2021
 {
     public class Blog_2021_02_14_Layout4Weeks : BlogBase
     {

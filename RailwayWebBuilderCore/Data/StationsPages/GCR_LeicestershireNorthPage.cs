@@ -10,7 +10,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_LeicestershireNorthPageOLD : BuildStationsBase, IStationsPages,IPageDetails
+    /*public class GCR_LeicestershireNorthPageOLD : BuildStationsBase, IStationsPages,IPageDetails
     {
         public string HilightImage { get; } = @"GCR-LeicestershireNorth\images\P7134400-GCR-Leicester-north.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -43,5 +43,5 @@ namespace RailwayWebBuilderCore.Data.StationsPages
 
             _pageBuilder.Output();
         }
-    }
+    }*/
 }

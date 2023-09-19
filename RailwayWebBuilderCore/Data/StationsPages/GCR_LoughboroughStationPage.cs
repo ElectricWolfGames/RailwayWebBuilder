@@ -10,7 +10,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_LoughboroughStationPageOLD : BuildStationsBase, IStationsPages,IPageDetails
+    /*public class GCR_LoughboroughStationPageOLD : BuildStationsBase, IStationsPages,IPageDetails
     {
         public string HilightImage { get; } = @"GCR-LoughboroughStation\images\PA210666-GCR-Loughborough.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -43,5 +43,5 @@ namespace RailwayWebBuilderCore.Data.StationsPages
 
             _pageBuilder.Output();
         }
-    }
+    }*/
 }

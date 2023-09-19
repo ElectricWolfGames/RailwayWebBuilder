@@ -1,7 +1,7 @@
 ﻿using RailwayWebBuilderCore.Data;
 using System;
 
-namespace RailwayWebBuilderCore.Blogs.Year2023
+namespace RailwayWebBuilderCore._SiteData.Blogs.Year2023
 {
     public class Blog_2023_05_28_Cattington53 : BlogBase
     {

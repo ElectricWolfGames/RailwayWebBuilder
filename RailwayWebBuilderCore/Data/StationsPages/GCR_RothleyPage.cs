@@ -10,7 +10,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_RothleyPageOld : BuildStationsBase, IStationsPages, IPageDetails
+    /*public class GCR_RothleyPageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
         public string HilightImage { get; } = @"GCR-Rothley\images\P7134422-GCR-Rothley.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -43,5 +43,5 @@ namespace RailwayWebBuilderCore.Data.StationsPages
 
             _pageBuilder.Output();
         }
-    }
+    }*/
 }

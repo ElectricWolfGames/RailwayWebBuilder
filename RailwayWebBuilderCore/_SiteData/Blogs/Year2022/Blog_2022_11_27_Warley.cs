@@ -1,8 +1,7 @@
 ﻿using RailwayWebBuilderCore.Data;
 using System;
-using RailwayWebBuilderCore.Blogs.Year2021;
 
-namespace RailwayWebBuilderCore.Blogs.Year2022
+namespace RailwayWebBuilderCore._SiteData.Blogs.Year2022
 {
     public class Blog_2022_11_29_Warley : BlogBase
     {

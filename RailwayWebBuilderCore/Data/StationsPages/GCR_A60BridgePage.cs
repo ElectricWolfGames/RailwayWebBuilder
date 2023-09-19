@@ -10,7 +10,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Data.StationsPages
 {
-    public class GCR_A60BridgePageOld : BuildStationsBase, IStationsPages, IPageDetails
+    /*public class GCR_A60BridgePageOld : BuildStationsBase, IStationsPages, IPageDetails
     {
         public string HilightImage { get; } = @"GCR-A60Bridge\images\P8070154-2022-08-07-A60Bridge326.JPG";
         public string HtmlFileName { get; } = "index.html";
@@ -43,5 +43,5 @@ namespace RailwayWebBuilderCore.Data.StationsPages
 
             _pageBuilder.Output();
         }
-    }
+    }*/
 }

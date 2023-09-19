@@ -1,6 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
-using eWolfBootstrap.Interfaces;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
@@ -39,7 +38,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             WebPage.Append("<div class='container mt-12'>");
 
-
             WebPage.HtmlPath = Constants.ModelEvents + "\\" + ModelEvent.ImageFolder;
             WebPage.HtmlTitle = $"index.html";
 
@@ -71,9 +69,8 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             AddImagesByLayout(images, ModelEvent, htmlpath, imagePath, pageBuilder);
 
-
             WebPage.Append(pageBuilder.GetString());
-            // Show event details 
+            // Show event details
 
             WebPage.Append("</div>");
             WebPage.Append(HTMLRailHelper.Modal());
@@ -82,6 +79,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             WebPage.EndBody();
             WebPage.Output();
         }
+
         private static string AddDescription(Data.LayoutDetails layoutDetails)
         {
             ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
@@ -139,6 +137,33 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             }
         }
 
+        private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
+        {
+            foreach (string imageName in images)
+            {
+                foreach (Data.LayoutDetails layout in pageDetails.Layouts)
+                {
+                    if (layout.Path != null && imageName.Contains(layout.Path))
+                    {
+                        layout.ImagePaths.Add(imageName);
+                    }
+                }
+            }
+        }
+
+        private static string AddYoutubePreview(string youTubeLink)
+        {
+            var pageBuilder = new HTMLBuilder();
+
+            pageBuilder.Text("<div class='col-md-8'>");
+            pageBuilder.Text("<div class='embed-responsive embed-responsive-16by9'>");
+            pageBuilder.Text($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            pageBuilder.Text("</div>");
+            pageBuilder.Text("</div>");
+
+            return pageBuilder.Output();
+        }
+
         private static string Jumbotron(IModelPageDetails pageDetails)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -188,33 +213,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
-        }
-
-        private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
-        {
-            foreach (string imageName in images)
-            {
-                foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-                {
-                    if (layout.Path != null && imageName.Contains(layout.Path))
-                    {
-                        layout.ImagePaths.Add(imageName);
-                    }
-                }
-            }
-        }
-
-        private static string AddYoutubePreview(string youTubeLink)
-        {
-            var pageBuilder = new HTMLBuilder();
-
-            pageBuilder.Text("<div class='col-md-8'>");
-            pageBuilder.Text("<div class='embed-responsive embed-responsive-16by9'>");
-            pageBuilder.Text($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            pageBuilder.Text("</div>");
-            pageBuilder.Text("</div>");
-
-            return pageBuilder.Output();
         }
 
         private string BuildDetails(ILayoutPagesDetails detail)

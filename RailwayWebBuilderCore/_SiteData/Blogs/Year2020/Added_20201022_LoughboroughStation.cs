@@ -1,7 +1,7 @@
 ﻿using RailwayWebBuilderCore.Data;
 using System;
 
-namespace RailwayWebBuilderCore.Blogs.Year2020
+namespace RailwayWebBuilderCore._SiteData.Blogs.Year2020
 {
     public class Added_20201022_LoughboroughStation : BlogBase
     {

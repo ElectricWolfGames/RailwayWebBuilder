@@ -2,18 +2,11 @@
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
-using RailwayWebBuilderCore._Site.Railways.MyLayouts;
-using RailwayWebBuilderCore.Builders.Locomotive.LocoDetails;
-using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 
 namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
@@ -42,16 +35,13 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             string htmlpath = Constants._aRootPath + "//" + Constants.ModelEvents + "//";
 
-
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
-
             WebPage.Append("<div class='container mt-12'>");
 
             WebPage.Append(LocoRef.CreateHero(this));
-
 
             var ordedBlogs = meds.Events.OrderByDescending(x => x.TripDate);
             WebPage.Append("<div class='row mb-2'>");
