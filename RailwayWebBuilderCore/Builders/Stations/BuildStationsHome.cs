@@ -1,8 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge;
-using RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation;
 using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Data.StationsPages;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
@@ -25,7 +22,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Append(Jumbotron(null));
             pageBuilder.Append("<div class='row mb-2'>");
 
-            
             pageBuilder.Append("</div>");
             pageBuilder.Append("</div>");
 
@@ -36,8 +32,6 @@ namespace RailwayWebBuilderCore.Builders.Stations
             pageBuilder.Output();
         }
 
-        
-        
         private static string CreateCard(IStationsPages stationsPages, string path)
         {
             StringBuilder blogHtml = new StringBuilder();

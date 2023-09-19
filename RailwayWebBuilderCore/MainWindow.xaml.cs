@@ -3,7 +3,6 @@ using RailwayWebBuilderCore.Builders.Locations;
 using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
 using RailwayWebBuilderCore.Builders.Shop;
-using RailwayWebBuilderCore.Builders.Stations;
 using RailwayWebBuilderCore.Builders.StockVideos;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDB;
@@ -11,15 +10,13 @@ using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
-using RailwayWebBuilderCore.Builders.GCR;
+
 using RailwayWebBuilderCore.Builders.Locomotive;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
-using RailwayWebBuilderCore.SiteDetails;
-using RailwayWebBuilderCore.Data.StationsPages;
-using RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation;
-using RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge;
+
+using RailwayWebBuilderCore._SiteData;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -63,7 +60,7 @@ namespace RailwayWebBuilderCore
 
             _buildSite.WebSiteRootAddress = @"E:\eWolfSiteUploads";
 
-            SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new SiteHeader());
+            SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new RailwaySiteHeader());
             SiteBuilderServiceLocator.Instance.InjectService<IBuildSite>(_buildSite);
             SiteBuilderServiceLocator.Instance.InjectService<INavigationBuilder>(new NavigationBuilder());
 
@@ -102,33 +99,9 @@ namespace RailwayWebBuilderCore
             var lr = new LocoRefPageBuilder();
             lr.Build();
 
-            BlogDetailsServices blogs = ServiceLocator.Instance.GetService<BlogDetailsServices>();
-            HomePageBuilder.Build(blogs.Blogs);
-
-            LocationsPageBuilder.Build();
-
-            ShopMainPageBuilder.Build();
-            ShopPageBuilder.Build();
-            AuctionsBuilder.Build();
-
             var bsv = new BuildStockVideos();
             bsv.Build();
 
-            //var table = new Table();
-            //table.Build();
-
-            //var gcrshop = new GCRShop();
-            //gcrshop.Build();
-
-            var gcrshop = new GCRGuidedWalk();
-            gcrshop.Build();
-
-
-            var gcrttd = new GCRTextToDonate();
-            gcrttd.Build();
-
-            //LocomotiveDetailsBuilder ld = new LocomotiveDetailsBuilder();
-            //ld.Build();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

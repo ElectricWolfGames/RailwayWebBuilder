@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
 namespace RailwayWebBuilderCore.Builders
 {
     public class HomePageBuilder
@@ -129,17 +130,9 @@ namespace RailwayWebBuilderCore.Builders
         private static string OtherStuff()
         {
             StringBuilder blogHtml = new StringBuilder();
-            /*blogHtml.AppendLine("<script>");
-            blogHtml.AppendLine("Holder.addTheme('thumb', {");
-            blogHtml.AppendLine("bg: '#55595c',");
-            blogHtml.AppendLine("fg: '#eceeef',");
-            blogHtml.AppendLine("text: 'Thumbnail'");
-            blogHtml.AppendLine("});");
-            blogHtml.AppendLine("</script>");
-            */
             blogHtml.Append(@"<a href='GCR\Quorn.html'>Quorn</a>");
             blogHtml.Append("</br></br></br></br></br>");
             return blogHtml.ToString();
         }
     }
-}
+}*/
