@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="SiteDetails\" />
     <Folder Include="_Site\Railways\Shop\" />
     <Folder Include="_Site\Railways\StockVideos\" />
   </ItemGroup>

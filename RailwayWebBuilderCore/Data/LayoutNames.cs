@@ -2,6 +2,9 @@
 
 namespace RailwayWebBuilderCore.Data
 {
+    /// <summary>
+    ///  TODO: remove this class
+    /// </summary>
     public class LayoutNames
     {
         public const string Ambleside = "Ambleside";
