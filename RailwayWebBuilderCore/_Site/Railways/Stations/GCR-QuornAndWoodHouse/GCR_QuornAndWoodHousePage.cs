@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_QuornAndWoodHouse
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class GCR_QuornAndWoodHousePage : PageDetails, IStationsPages
     {
         public GCR_QuornAndWoodHousePage()

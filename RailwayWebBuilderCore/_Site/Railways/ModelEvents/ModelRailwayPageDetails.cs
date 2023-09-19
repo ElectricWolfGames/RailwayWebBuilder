@@ -17,6 +17,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 {
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
+    [AddGallery()]
     public class ModelRailwayPageDetails : PageDetails
     {
         public IModelEvent ModelEvent;

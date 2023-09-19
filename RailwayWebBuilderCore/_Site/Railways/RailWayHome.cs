@@ -11,9 +11,9 @@ namespace RailwayWebBuilderCore._Site.Railways
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
-    public class Index : PageDetails
+    public class RailWayHome : PageDetails
     {
-        public Index()
+        public RailWayHome()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "";

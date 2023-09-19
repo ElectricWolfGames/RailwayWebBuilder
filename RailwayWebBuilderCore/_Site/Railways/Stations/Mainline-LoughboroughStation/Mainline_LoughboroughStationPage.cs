@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.Mainline_LoughboroughSta
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class Mainline_LoughboroughStationPage : PageDetails, IStationsPages
     {
         public Mainline_LoughboroughStationPage()

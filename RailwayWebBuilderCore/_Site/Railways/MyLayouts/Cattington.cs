@@ -15,6 +15,7 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
     // TODO: Update the discription for cattington.
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+   
     internal class CattingtonPageBuiler : PageDetails
     {
         private const int DetailsPerPage = 10;

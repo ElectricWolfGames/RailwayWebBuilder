@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class GCR_A60BridgePage : PageDetails, IStationsPages
     {
         public GCR_A60BridgePage()

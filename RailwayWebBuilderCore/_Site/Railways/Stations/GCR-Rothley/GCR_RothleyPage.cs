@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_Rothley
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class GCR_RothleyPage : PageDetails, IStationsPages
     {
         public GCR_RothleyPage()

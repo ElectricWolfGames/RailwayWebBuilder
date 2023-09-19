@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_LeicestershireNorth
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class GCR_LeicestershireNorthPage : PageDetails, IStationsPages
     {
         public GCR_LeicestershireNorthPage()

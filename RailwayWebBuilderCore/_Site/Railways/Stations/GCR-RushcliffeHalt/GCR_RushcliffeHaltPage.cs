@@ -12,6 +12,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_RushcliffeHalt
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 1)]
+    [AddGallery()]
     public class GCR_RushcliffeHaltPage : PageDetails, IStationsPages
     {
         public GCR_RushcliffeHaltPage()

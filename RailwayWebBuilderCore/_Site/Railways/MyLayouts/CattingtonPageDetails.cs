@@ -13,6 +13,7 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
 {
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
+    [AddGallery()]
     public class CattingtonPageDetails : PageDetails
     {
         public List<ILayoutPagesDetails> LayoutDetails;
@@ -68,9 +69,14 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
             WebPage.Append(HTMLRailHelper.Modal());
             WebPage.Append("<script src='../Scripts/script.js'></script>");
 
+
+            // WebPage.Append(AddScript());
+
             WebPage.EndBody();
             WebPage.Output();
         }
+
+        
 
         private static string AddYoutubePreview(string youTubeLink)
         {
