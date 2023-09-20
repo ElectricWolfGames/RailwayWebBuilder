@@ -1,5 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Builders.Locomotive.LocoDetails;
+using RailwayWebBuilderCore.Enums;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,5 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
@@ -58,10 +59,10 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             pageBuilder.Append("<a href='WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
             pageBuilder.Append("<a href='CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
 
-            var streams = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.SteamLoco);
-            var diesels = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Diesel);
-            var wagons = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Wagon);
-            var coach = _orderedDetails.Where(x => x.StockType == LocoDetails.StockTypes.Coach);
+            var streams = _orderedDetails.Where(x => x.StockType == StockTypes.SteamLoco);
+            var diesels = _orderedDetails.Where(x => x.StockType == StockTypes.Diesel);
+            var wagons = _orderedDetails.Where(x => x.StockType == StockTypes.Wagon);
+            var coach = _orderedDetails.Where(x => x.StockType == StockTypes.Coach);
 
             diesels = diesels.OrderBy(x => x.Class);
 

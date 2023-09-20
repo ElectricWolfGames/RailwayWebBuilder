@@ -1,4 +1,5 @@
 ﻿using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Diesel
 {

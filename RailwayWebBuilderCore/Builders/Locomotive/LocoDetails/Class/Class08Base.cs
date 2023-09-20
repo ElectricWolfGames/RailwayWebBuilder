@@ -1,4 +1,6 @@
-﻿namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Class
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Class
 {
     public class Class08Base : LocomotiveDetailsBase
     {

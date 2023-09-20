@@ -1,6 +1,7 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;

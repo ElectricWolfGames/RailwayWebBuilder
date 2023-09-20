@@ -1,5 +1,6 @@
 ﻿using RailwayWebBuilderCore.Builders.Locomotive.LocomotiveSpecifications;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails.Steam
 {
