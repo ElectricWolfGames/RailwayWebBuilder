@@ -84,7 +84,7 @@ namespace RailwayWebBuilderCore.Helpers
                 // geocode the location of the White House
                 loc = _geocodeService.GeocodeLocation(locationName);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Console.WriteLine("Failed to parse location for " + locationName);
                 return string.Empty;

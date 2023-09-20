@@ -65,7 +65,7 @@ namespace RailwayWebBuilderCore.Services
                 string result = appSettings[key] ?? "Not Found";
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Error reading app settings");
             }

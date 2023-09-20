@@ -55,7 +55,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_QuornAndWoodHouse
 
         private static string CreateGallery()
         {
-            PageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new HTMLBuilder();
             string htmlpath = Constants._aRootPath + Constants.QuornAndWoodHouseFolder;
             string imagePath = $"{htmlpath}images";
 
@@ -64,7 +64,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_QuornAndWoodHouse
             pageBuilder.Text("<h2>Gallery</h2>");
             string galleryPath = Constants.RawDataPath + @"Stations\GCR-Quorn And WoodHouse\Gallery";
             pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
-            return pageBuilder.GetOutput();
+            return pageBuilder.Output();
         }
     }
 }

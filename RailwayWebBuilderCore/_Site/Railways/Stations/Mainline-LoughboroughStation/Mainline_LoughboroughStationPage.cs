@@ -55,7 +55,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.Mainline_LoughboroughSta
 
         private static string CreateGallery()
         {
-            PageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new HTMLBuilder();
             string htmlpath = Constants._aRootPath + Constants.MainlineLoughboroughStationFolder;
             string imagePath = $"{htmlpath}images";
 
@@ -64,7 +64,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.Mainline_LoughboroughSta
             pageBuilder.Text("<h2>Gallery</h2>");
             string galleryPath = Constants.RawDataPath + @"Stations\Mainline-LoughboroughStation\Gallery";
             pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
-            return pageBuilder.GetOutput();
+            return pageBuilder.Output();
         }
     }
 }

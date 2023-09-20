@@ -55,7 +55,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_RushcliffeHalt
 
         private static string CreateGallery()
         {
-            PageBuilder pageBuilder = new PageBuilder();
+            var pageBuilder = new HTMLBuilder();
             string htmlpath = Constants._aRootPath + Constants.RushcliffeHaltFolder;
             string imagePath = $"{htmlpath}images";
 
@@ -64,7 +64,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_RushcliffeHalt
             pageBuilder.Text("<h2>Gallery</h2>");
             string galleryPath = Constants.RawDataPath + @"Stations\GCR-Rushcliffe Halt\\Gallery";
             pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
-            return pageBuilder.GetOutput();
+            return pageBuilder.Output();
         }
     }
 }

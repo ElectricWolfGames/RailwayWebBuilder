@@ -33,8 +33,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
                 meh.Keywords.AddRange(modelEvent.Layouts.Select(x => x.Name));
             }
 
-            string htmlpath = Constants._aRootPath + "//" + Constants.ModelEvents + "//";
-
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
