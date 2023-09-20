@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_I_Love_08_Scales : IProduct
@@ -9,4 +8,4 @@ namespace RailwayWebBuilderCore.Builders.Shop.Products
         public string Title { get; set; } = "I LOVE 08s, MUG";
         public string URL { get; set; } = "https://teespring.com/i-love-08s?tsmac=store&tsmic=karl-and-debbie-trains&pid=659&cid=102910";
     }
-}
+}*/

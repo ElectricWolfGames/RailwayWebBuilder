@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilderCore.Builders.Shop
+namespace RailwayWebBuilderCore.KeepForNow.Shop
 {
     public class ShopMainPageBuilder
     {

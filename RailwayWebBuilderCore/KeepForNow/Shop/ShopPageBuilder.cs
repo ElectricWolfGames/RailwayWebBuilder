@@ -1,10 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-
-using System.IO;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop
 {
     public class ShopPageBuilder
@@ -64,4 +58,4 @@ namespace RailwayWebBuilderCore.Builders.Shop
             sb.Append("<p></p>");
         }
     }
-}
+}*/

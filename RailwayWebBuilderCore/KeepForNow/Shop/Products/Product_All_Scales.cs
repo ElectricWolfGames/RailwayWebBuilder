@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_All_Scales : IProduct
@@ -9,4 +8,4 @@ namespace RailwayWebBuilderCore.Builders.Shop.Products
         public string Title { get; set; } = "All scales cost the same amount, MUG";
         public string URL { get; set; } = "https://teespring.com/all-scales-cost-the-same-amoun?tsmac=store&tsmic=karl-and-debbie-trains&pid=659&cid=102910";
     }
-}
+}*/

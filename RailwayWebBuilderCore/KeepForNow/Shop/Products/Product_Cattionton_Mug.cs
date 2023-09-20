@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_Cattionton_Mug : IProduct
@@ -9,4 +8,4 @@ namespace RailwayWebBuilderCore.Builders.Shop.Products
         public string Title { get; set; } = "Cattington Railway sign Mug";
         public string URL { get; set; } = "https://teespring.com/cattington-railway-sign-mug?tsmac=store&tsmic=karl-and-debbie-trains&pid=659&cid=102910";
     }
-}
+}*/

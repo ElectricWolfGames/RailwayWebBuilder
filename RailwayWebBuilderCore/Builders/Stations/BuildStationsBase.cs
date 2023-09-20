@@ -7,7 +7,7 @@ using System.IO;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsBase
+    /*public class BuildStationsBase
     {
         protected PageBuilder _pageBuilder;
 
@@ -51,5 +51,5 @@ namespace RailwayWebBuilderCore.Builders.Stations
             header.Title = StationLocations.ShortName;
             return header;
         }
-    }
+    }*/
 }

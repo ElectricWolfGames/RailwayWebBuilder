@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_BRMaths : IProduct
@@ -9,4 +8,4 @@ namespace RailwayWebBuilderCore.Builders.Shop.Products
         public string Title { get; set; } = "BR maths Mug";
         public string URL { get; set; } = "https://teespring.com/new-br-maths?tsmac=store&tsmic=karl-and-debbie-trains&pid=659&cid=102910";
     }
-}
+}*/

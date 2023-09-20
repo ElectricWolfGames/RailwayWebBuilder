@@ -1,9 +1,5 @@
-﻿using RailwayWebBuilderCore.Builders;
-using RailwayWebBuilderCore.Builders.Locations;
-using RailwayWebBuilderCore.Builders.ModelEvents;
+﻿using RailwayWebBuilderCore.Builders.ModelEvents;
 using RailwayWebBuilderCore.Builders.MyLayouts;
-using RailwayWebBuilderCore.Builders.Shop;
-using RailwayWebBuilderCore.Builders.StockVideos;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
@@ -93,15 +89,8 @@ namespace RailwayWebBuilderCore
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
 
-            //BuildStationsHome.Build();
-
-            
             var lr = new LocoRefPageBuilder();
             lr.Build();
-
-            var bsv = new BuildStockVideos();
-            bsv.Build();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

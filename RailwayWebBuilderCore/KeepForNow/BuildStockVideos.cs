@@ -1,15 +1,6 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
-namespace RailwayWebBuilderCore.Builders.StockVideos
+﻿namespace RailwayWebBuilderCore.KeepForNow
 {
-    public class BuildStockVideos
+    /*public class BuildStockVideos
     {
         public readonly List<StockDetails> _details = new List<StockDetails>();
         protected PageBuilder _pageBuilder;
@@ -114,5 +105,5 @@ namespace RailwayWebBuilderCore.Builders.StockVideos
 
         public string Name { get; set; }
         public string YouTubeLink { get; set; }
-    }
+    }*/
 }

@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Interfaces;
-
+﻿/*
 namespace RailwayWebBuilderCore.Builders.Shop.Products
 {
     public class Product_Cattington_Facemask : IProduct
@@ -9,4 +8,4 @@ namespace RailwayWebBuilderCore.Builders.Shop.Products
         public string Title { get; set; } = "Cattington Face mask";
         public string URL { get; set; } = "https://teespring.com/cattington?tsmac=store&tsmic=karl-and-debbie-trains&pid=1026&cid=104065";
     }
-}
+}*/
