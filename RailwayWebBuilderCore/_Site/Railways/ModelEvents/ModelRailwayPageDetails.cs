@@ -58,8 +58,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + "\\";
             string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images";
 
-            //eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, ModelEvent, "../../../");
-
             WebPage.Append("<div class='container mt-4'>");
 
             WebPage.Append(Jumbotron(ModelEvent));
@@ -68,10 +66,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             ls.AddLocation(ModelEvent);
 
             WebPage.Append(AddImagesByLayout(images, ModelEvent, htmlpath, imagePath));
-
-            //WebPage.Append(pageBuilder.GetString());
-            // Show event details
-
             WebPage.Append("</div>");
             WebPage.Append(HTMLRailHelper.Modal());
             WebPage.Append("<script src='../Scripts/script.js'></script>");
