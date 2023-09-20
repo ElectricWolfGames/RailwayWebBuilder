@@ -1,12 +1,9 @@
-﻿using RailwayWebBuilderCore.Builders.ModelEvents;
-using RailwayWebBuilderCore.Builders.MyLayouts;
-using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
 
-using RailwayWebBuilderCore.Builders.Locomotive;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
@@ -76,7 +73,7 @@ namespace RailwayWebBuilderCore
             var loco = ls.CreateDB(url);*/
         }
 
-        private void BuildSite()
+        /*private void BuildSite()
         {
             ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
 
@@ -89,11 +86,11 @@ namespace RailwayWebBuilderCore
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
 
-        }
+        }*/
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BuildSite();
+          
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

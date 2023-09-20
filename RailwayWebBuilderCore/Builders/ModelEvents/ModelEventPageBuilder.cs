@@ -10,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore.Builders.ModelEvents
+/*namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventPageBuilder
     {
@@ -171,4 +171,4 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             return stringBuilder.ToString();
         }
     }
-}
+}*/

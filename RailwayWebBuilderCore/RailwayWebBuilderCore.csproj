@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Builders\Locomotive\LocoDetails\" />
     <Folder Include="Builders\StockVideos\" />
     <Folder Include="SiteDetails\" />
     <Folder Include="_Site\Railways\Shop\" />

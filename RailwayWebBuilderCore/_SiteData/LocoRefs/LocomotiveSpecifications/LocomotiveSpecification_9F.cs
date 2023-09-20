@@ -1,6 +1,6 @@
 ﻿using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore.Builders.Locomotive.LocomotiveSpecifications
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.LocomotiveSpecifications
 {
     public class LocomotiveSpecification_9F : ILocomotiveSpecifications
     {

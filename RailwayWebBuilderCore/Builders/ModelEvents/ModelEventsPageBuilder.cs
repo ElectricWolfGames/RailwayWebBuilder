@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
 namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventsPageBuilder
@@ -60,4 +61,4 @@ namespace RailwayWebBuilderCore.Builders.ModelEvents
             return blogHtml.ToString();
         }
     }
-}
+}*/

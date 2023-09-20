@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Builders.Locomotive;
-using RailwayWebBuilderCore.Enums;
+﻿using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Class
 {

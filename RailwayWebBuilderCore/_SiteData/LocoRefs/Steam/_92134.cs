@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore.Builders.Locomotive;
-using RailwayWebBuilderCore.Builders.Locomotive.LocomotiveSpecifications;
+﻿using RailwayWebBuilderCore._SiteData.LocoRefs.LocomotiveSpecifications;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
 
