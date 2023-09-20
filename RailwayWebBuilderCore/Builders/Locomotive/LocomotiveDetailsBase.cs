@@ -4,7 +4,7 @@ using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive
 {
-    public class LocomotiveDetailsBase
+    /*public class LocomotiveDetailsBase
     {
         protected PageBuilder _pageBuilder;
 
@@ -21,5 +21,5 @@ namespace RailwayWebBuilderCore.Builders.Locomotive
             _pageBuilder.Append("</ol>");
             _pageBuilder.Append("</nav>");
         }
-    }
+    }*/
 }
