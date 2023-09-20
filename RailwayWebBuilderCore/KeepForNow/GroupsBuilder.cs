@@ -1,4 +1,4 @@
-﻿namespace RailwayWebBuilderCore.Builders.Locomotive
+﻿namespace RailwayWebBuilderCore.KeepForNow
 {
     /*public class GroupsBuilder : LocomotiveDetailsBase, ILocomotiveDetailsPages
     {

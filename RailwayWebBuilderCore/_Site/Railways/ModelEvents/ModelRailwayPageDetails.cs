@@ -45,7 +45,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
             WebPage.SetDontBuild = false;
 
-            // ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY); ?
 
             ModelEvent.CopyLayoutsToKeywords();
             List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
@@ -59,18 +58,18 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + "\\";
             string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images";
 
-            eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, ModelEvent, "../../../");
+            //eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, ModelEvent, "../../../");
 
-            pageBuilder.Append("<div class='container mt-4'>");
+            WebPage.Append("<div class='container mt-4'>");
 
-            pageBuilder.Append(Jumbotron(ModelEvent));
+            WebPage.Append(Jumbotron(ModelEvent));
 
             LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
             ls.AddLocation(ModelEvent);
 
-            AddImagesByLayout(images, ModelEvent, htmlpath, imagePath, pageBuilder);
+            WebPage.Append(AddImagesByLayout(images, ModelEvent, htmlpath, imagePath));
 
-            WebPage.Append(pageBuilder.GetString());
+            //WebPage.Append(pageBuilder.GetString());
             // Show event details
 
             WebPage.Append("</div>");
@@ -101,8 +100,10 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             return stringBuilder.ToString();
         }
 
-        private static void AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath, eWolfBootstrap.Interfaces.IPageBuilder stringBuilder)
+        private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
         {
+            HTMLBuilder htmBuilder = new HTMLBuilder();
+
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
                 if (!layout.ImagePaths.Any())
@@ -110,32 +111,35 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
                     continue;
                 }
 
-                HTMLHelper.Gallery.AddGalleryHeader(stringBuilder, layout.IDName);
+                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
 
-                stringBuilder.Append(AddDescription(layout));
+                htmBuilder.Text(AddDescription(layout));
 
                 foreach (string layoutImage in layout.ImagePaths)
                 {
                     if (images.Contains(layoutImage))
                     {
-                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, stringBuilder, layoutImage);
+                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
                         images.Remove(layoutImage);
                     }
                 }
-                HTMLHelper.Gallery.AddGalleryFooter(stringBuilder);
+                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
+
             }
 
             if (images.Any())
             {
-                HTMLHelper.Gallery.AddGalleryHeader(stringBuilder, null);
+                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
 
                 foreach (string image in images)
                 {
-                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, stringBuilder, image);
+                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
                 }
 
-                HTMLHelper.Gallery.AddGalleryFooter(stringBuilder);
+                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
             }
+
+            return htmBuilder.Output();
         }
 
         private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)

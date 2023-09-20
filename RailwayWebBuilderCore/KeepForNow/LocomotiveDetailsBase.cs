@@ -2,7 +2,7 @@
 using eWolfBootstrap.Interfaces;
 using RailwayWebBuilderCore.Configuration;
 
-namespace RailwayWebBuilderCore.Builders.Locomotive
+namespace RailwayWebBuilderCore.KeepForNow
 {
     /*public class LocomotiveDetailsBase
     {

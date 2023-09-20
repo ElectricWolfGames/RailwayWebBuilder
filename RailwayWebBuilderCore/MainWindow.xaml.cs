@@ -89,8 +89,6 @@ namespace RailwayWebBuilderCore
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
 
-            var lr = new LocoRefPageBuilder();
-            lr.Build();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

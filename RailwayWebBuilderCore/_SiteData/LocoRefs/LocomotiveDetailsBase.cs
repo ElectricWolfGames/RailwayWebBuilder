@@ -103,7 +103,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
             _pageBuilder.Append("<div class='container mt-12'>");
 
-            LocoRefPageBuilder.Jumbotron(_pageBuilder, Title);
+            Jumbotron(_pageBuilder, Title);
 
             _pageBuilder.Append("<a href='../SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
             _pageBuilder.Append("<a href='../DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
@@ -123,6 +123,17 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             _pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
 
             _pageBuilder.Output();
+        }
+
+        public static void Jumbotron(PageBuilder _pageBuilder, string name)
+        {
+            _pageBuilder.Append("<div class='jumbotron'>");
+            _pageBuilder.Append("<div class='row'>");
+            _pageBuilder.Append("<div class='col-md-12'>");
+            _pageBuilder.Append($"<h1>{name}</h1>");
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
+            _pageBuilder.Append("</div>");
         }
 
         public virtual void GrabImages()
