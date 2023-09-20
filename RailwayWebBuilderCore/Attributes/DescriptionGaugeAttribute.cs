@@ -1,5 +1,5 @@
-﻿using System;
-using RailwayWebBuilderCore.Data;
+﻿using RailwayWebBuilderCore.Data;
+using System;
 
 namespace RailwayWebBuilderCore.Attributes
 {

@@ -1,16 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Helpers;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.Services;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-/*namespace RailwayWebBuilderCore.Builders.ModelEvents
+﻿/*namespace RailwayWebBuilderCore.Builders.ModelEvents
 {
     public class ModelEventPageBuilder
     {

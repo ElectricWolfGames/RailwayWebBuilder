@@ -17,7 +17,6 @@ namespace RailwayWebBuilderCore.Headers
                 "46229 Duchess Of Hamilton",
             };
             Description = "GCR Reunification Auctions";
-
         }
     }
 }

@@ -7,12 +7,11 @@ namespace RailwayWebBuilderCore.Interfaces
     {
         bool Active { get; set; }
         StringBuilder Details { get; }
+        int EpisodeNumber { get; }
         string ExportImagePath { get; }
         string RawImagePath { get; }
         string Title { get; }
         DateTime When { get; }
         string YouTubeLink { get; }
-
-        int EpisodeNumber { get; }
     }
 }

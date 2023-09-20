@@ -45,7 +45,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
             WebPage.SetDontBuild = false;
 
-
             ModelEvent.CopyLayoutsToKeywords();
             List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
             AddImageToLayouts(ModelEvent, images);
@@ -92,48 +91,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
             return stringBuilder.ToString();
-        }
-
-        private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
-        {
-            HTMLBuilder htmBuilder = new HTMLBuilder();
-
-            foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-            {
-                if (!layout.ImagePaths.Any())
-                {
-                    continue;
-                }
-
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
-
-                htmBuilder.Text(AddDescription(layout));
-
-                foreach (string layoutImage in layout.ImagePaths)
-                {
-                    if (images.Contains(layoutImage))
-                    {
-                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
-                        images.Remove(layoutImage);
-                    }
-                }
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-
-            }
-
-            if (images.Any())
-            {
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
-
-                foreach (string image in images)
-                {
-                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
-                }
-
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-            }
-
-            return htmBuilder.Output();
         }
 
         private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
@@ -212,6 +169,47 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
+        }
+
+        private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
+        {
+            HTMLBuilder htmBuilder = new HTMLBuilder();
+
+            foreach (Data.LayoutDetails layout in pageDetails.Layouts)
+            {
+                if (!layout.ImagePaths.Any())
+                {
+                    continue;
+                }
+
+                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
+
+                htmBuilder.Text(AddDescription(layout));
+
+                foreach (string layoutImage in layout.ImagePaths)
+                {
+                    if (images.Contains(layoutImage))
+                    {
+                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
+                        images.Remove(layoutImage);
+                    }
+                }
+                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
+            }
+
+            if (images.Any())
+            {
+                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
+
+                foreach (string image in images)
+                {
+                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
+                }
+
+                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
+            }
+
+            return htmBuilder.Output();
         }
 
         private string BuildDetails(ILayoutPagesDetails detail)

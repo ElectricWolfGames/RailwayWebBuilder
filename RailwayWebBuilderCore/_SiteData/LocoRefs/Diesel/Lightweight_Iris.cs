@@ -1,5 +1,4 @@
-﻿ 
-using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel

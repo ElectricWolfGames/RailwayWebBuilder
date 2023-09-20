@@ -67,7 +67,6 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             }
         }
 
-
         private static string AddYoutubePreview(string youTubeLink)
         {
             var pageBuilder = new PageBuilder();

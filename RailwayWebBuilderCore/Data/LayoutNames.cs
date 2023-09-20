@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace RailwayWebBuilderCore.Data
+﻿namespace RailwayWebBuilderCore.Data
 {
     /// <summary>
     ///  TODO: remove this class

@@ -1,13 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-/*
+﻿/*
 namespace RailwayWebBuilderCore.Builders
 {
     public class HomePageBuilder
@@ -19,7 +10,6 @@ namespace RailwayWebBuilderCore.Builders
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new HomeHeader());
             pageBuilder.Append(NavBarHelper.NavBar(string.Empty));
             pageBuilder.Append("<div class='container mt-4'>");
-
 
             IOrderedEnumerable<IBlog> ordedBlogs = blogs.OrderByDescending(x => x.Date);
             pageBuilder.Append(AddCarousel(ordedBlogs.ToList()));

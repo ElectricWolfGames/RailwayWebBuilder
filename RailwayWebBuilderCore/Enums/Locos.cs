@@ -2,7 +2,6 @@
 
 namespace RailwayWebBuilderCore.Enums
 {
-
     public enum Locos
     {
         [Description("Class 7 Britannia")]

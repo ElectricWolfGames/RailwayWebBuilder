@@ -1,6 +1,6 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
- 
+
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
@@ -40,6 +40,17 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         public StockTypes StockType { get; set; }
         public string Title { get; set; }
         public string Wheelbase { get; set; }
+
+        public static void Jumbotron(PageBuilder _pageBuilder, string name)
+        {
+            _pageBuilder.Text("<div class='jumbotron'>");
+            _pageBuilder.Text("<div class='row'>");
+            _pageBuilder.Text("<div class='col-md-12'>");
+            _pageBuilder.Text($"<h1>{name}</h1>");
+            _pageBuilder.Text("</div>");
+            _pageBuilder.Text("</div>");
+            _pageBuilder.Text("</div>");
+        }
 
         public void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore)
         {
@@ -123,17 +134,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             _pageBuilder.Text("<script src='../../Scripts/script.js'></script>");
 
             _pageBuilder.Output();
-        }
-
-        public static void Jumbotron(PageBuilder _pageBuilder, string name)
-        {
-            _pageBuilder.Text("<div class='jumbotron'>");
-            _pageBuilder.Text("<div class='row'>");
-            _pageBuilder.Text("<div class='col-md-12'>");
-            _pageBuilder.Text($"<h1>{name}</h1>");
-            _pageBuilder.Text("</div>");
-            _pageBuilder.Text("</div>");
-            _pageBuilder.Text("</div>");
         }
 
         public virtual void GrabImages()

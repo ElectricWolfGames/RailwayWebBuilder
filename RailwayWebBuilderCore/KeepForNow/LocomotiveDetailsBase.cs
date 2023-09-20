@@ -1,8 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
-using RailwayWebBuilderCore.Configuration;
-
-namespace RailwayWebBuilderCore.KeepForNow
+﻿namespace RailwayWebBuilderCore.KeepForNow
 {
     /*public class LocomotiveDetailsBase
     {

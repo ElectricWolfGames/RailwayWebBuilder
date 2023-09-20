@@ -364,7 +364,5 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Ella Road", Gauges.OO_Gauge)]
         EllaRoad,
-
-
     }
 }

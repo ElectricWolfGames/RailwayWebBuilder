@@ -1,7 +1,6 @@
 ﻿using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Interfaces;
 using System;
-using static System.Net.WebRequestMethods;
 
 namespace RailwayWebBuilderCore.Builders.MyLayouts.Details
 {

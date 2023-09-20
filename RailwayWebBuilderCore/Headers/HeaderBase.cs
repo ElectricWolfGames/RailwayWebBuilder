@@ -1,5 +1,4 @@
-﻿using eWolfBootstrap.Enums;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Headers
 {

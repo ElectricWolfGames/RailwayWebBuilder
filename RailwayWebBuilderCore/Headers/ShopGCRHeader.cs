@@ -13,8 +13,6 @@ namespace RailwayWebBuilderCore.Headers
                 "Reunification",
             };
             Description = "GCR Reunification Shop";
-
-            
         }
     }
 }

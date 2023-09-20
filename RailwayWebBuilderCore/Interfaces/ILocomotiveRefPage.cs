@@ -27,8 +27,9 @@ namespace RailwayWebBuilderCore.Interfaces
 
         void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
 
-        void BuildOldVersion();
         void Build();
+
+        void BuildOldVersion();
 
         void GrabImages();
     }
