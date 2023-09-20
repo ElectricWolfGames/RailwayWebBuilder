@@ -69,14 +69,9 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
             WebPage.Append(HTMLRailHelper.Modal());
             WebPage.Append("<script src='../Scripts/script.js'></script>");
 
-
-            // WebPage.Append(AddScript());
-
             WebPage.EndBody();
             WebPage.Output();
         }
-
-        
 
         private static string AddYoutubePreview(string youTubeLink)
         {
@@ -127,8 +122,7 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
 
             HTMLBuilder pageBuilder = new HTMLBuilder();
             pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
-                "<p'>Now it's our turn, We have just started to build our first layout." +
-                "</br>We are Building Cattington, and we are updatd details here every week or so.</p>",
+                "<p'>This is our first layout, Hope you enjoy it.</p>",
                 imageName,
                 imageHtmlName,
                 "CATTINGTON.png");
