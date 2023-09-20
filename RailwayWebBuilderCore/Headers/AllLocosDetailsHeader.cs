@@ -18,7 +18,6 @@ namespace RailwayWebBuilderCore.Headers
                 "Locomotive by total built",
             };
             Description = "Locomotive details";
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.BT);
         }
     }
 }

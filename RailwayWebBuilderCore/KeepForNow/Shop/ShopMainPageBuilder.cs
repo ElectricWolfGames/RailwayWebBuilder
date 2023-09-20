@@ -23,9 +23,9 @@ namespace RailwayWebBuilderCore.KeepForNow.Shop
             string htmlpath = Constants._aRootPath + "\\" + Constants.Shop + "\\";
 
             var pb = new PageBuilder("index.html", htmlpath, new ShopHeader(), "../");
-            pb.Append(NavBarHelper.NavBar("../"));
+            pb.Text(NavBarHelper.NavBar("../"));
 
-            pb.Append("<div class='container mt-4'>");
+            pb.Text("<div class='container mt-4'>");
 
             string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
             string imageHtmlName = "../Others/images/";
@@ -36,13 +36,13 @@ namespace RailwayWebBuilderCore.KeepForNow.Shop
                    imageHtmlName,
                    "CATTINGTON.png");
 
-            pb.Append("<div class='container mt-4'>");
-            pb.Append("<div class='row mb-2'>");
+            pb.Text("<div class='container mt-4'>");
+            pb.Text("<div class='row mb-2'>");
 
             AddAllProducts(pb);
 
-            pb.Append("</div>");
-            pb.Append("</div>");
+            pb.Text("</div>");
+            pb.Text("</div>");
 
             pb.Output();
         }
@@ -63,19 +63,19 @@ namespace RailwayWebBuilderCore.KeepForNow.Shop
 
         private static void CreateProduct(PageBuilder pb, IProduct product)
         {
-            pb.Append("<div class='col-md-6'>");
-            pb.Append("<div class='card border-dark mb-6'>");
-            pb.Append($"<h5 class='card-header'>{product.Title}</h5>");
-            pb.Append("<div class='card-body'>");
-            pb.Append($"      <a href='{product.URL}' target='_blank'>" +
+            pb.Text("<div class='col-md-6'>");
+            pb.Text("<div class='card border-dark mb-6'>");
+            pb.Text($"<h5 class='card-header'>{product.Title}</h5>");
+            pb.Text("<div class='card-body'>");
+            pb.Text($"      <a href='{product.URL}' target='_blank'>" +
                 $"<img class='rounded float-right' width='214px' height ='214px'src='images\\{product.Image}'></a>");
 
-            pb.Append($"<p class='col-md-6 card-text float-left'>{product.Descrption}</p>");
-            pb.Append($"<p class='col-md-6 card-text float-left'><a href='{product.URL}'  target='_blank'>Take a look</a></p>");
+            pb.Text($"<p class='col-md-6 card-text float-left'>{product.Descrption}</p>");
+            pb.Text($"<p class='col-md-6 card-text float-left'><a href='{product.URL}'  target='_blank'>Take a look</a></p>");
 
-            pb.Append("</div>");
-            pb.Append("</div>");
-            pb.Append("</div>");
+            pb.Text("</div>");
+            pb.Text("</div>");
+            pb.Text("</div>");
         }
 
         private static void GetLayoutDetails()

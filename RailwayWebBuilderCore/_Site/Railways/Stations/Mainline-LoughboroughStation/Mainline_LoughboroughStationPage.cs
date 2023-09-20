@@ -60,8 +60,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.Mainline_LoughboroughSta
             string imagePath = $"{htmlpath}images";
 
             Directory.CreateDirectory(imagePath);
-            pageBuilder.Append($"<hr/>");
-            pageBuilder.Append("<h2>Gallery</h2>");
+            pageBuilder.Text($"<hr/>");
+            pageBuilder.Text("<h2>Gallery</h2>");
             string galleryPath = Constants.RawDataPath + @"Stations\Mainline-LoughboroughStation\Gallery";
             pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
             return pageBuilder.GetOutput();

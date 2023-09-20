@@ -32,9 +32,9 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
                 var pageBuilder = new PageBuilder($"{pageIndexDisplay}", htmlpath, new MyLayoutHeader(), "../");
 
-                pageBuilder.Append(NavBarHelper.NavBar("../"));
+                pageBuilder.Text(NavBarHelper.NavBar("../"));
 
-                pageBuilder.Append("<div class='container mt-4'>");
+                pageBuilder.Text("<div class='container mt-4'>");
 
                 string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
                 string imageHtmlName = "../Others/images/";
@@ -46,7 +46,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                     imageHtmlName,
                     "CATTINGTON.png");
 
-                pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
+                pageBuilder.Text(NavBarHelper.Pagination(pageIndex, totalPages));
 
                 for (int i = 0; i < DetailsPerPage; i++)
                 {
@@ -56,10 +56,10 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                         _orderedDetails.RemoveAt(0);
                     }
                 }
-                pageBuilder.Append(NavBarHelper.Pagination(pageIndex, totalPages));
-                pageBuilder.Append("</div>");
-                pageBuilder.Append(HTMLRailHelper.Modal());
-                pageBuilder.Append("<script src='../Scripts/script.js'></script>");
+                pageBuilder.Text(NavBarHelper.Pagination(pageIndex, totalPages));
+                pageBuilder.Text("</div>");
+                pageBuilder.Text(HTMLRailHelper.Modal());
+                pageBuilder.Text("<script src='../Scripts/script.js'></script>");
 
                 pageBuilder.Output();
 
@@ -72,11 +72,11 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
         {
             var pageBuilder = new PageBuilder();
 
-            pageBuilder.Append("<div class='col-md-8'>");
-            pageBuilder.Append("<div class='embed-responsive embed-responsive-16by9'>");
-            pageBuilder.Append($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            pageBuilder.Text("<div class='col-md-8'>");
+            pageBuilder.Text("<div class='embed-responsive embed-responsive-16by9'>");
+            pageBuilder.Text($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            pageBuilder.Text("</div>");
+            pageBuilder.Text("</div>");
 
             return pageBuilder.GetString();
         }
@@ -88,16 +88,16 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
             var detailBuilder = new PageBuilder();
 
-            detailBuilder.Append($"<hr/>");
-            detailBuilder.Append(detail.Title);
-            detailBuilder.Append(detail.When.ToShortDateString());
+            detailBuilder.Text($"<hr/>");
+            detailBuilder.Text(detail.Title);
+            detailBuilder.Text(detail.When.ToShortDateString());
 
-            detailBuilder.Append(detail.Details.ToString());
+            detailBuilder.Text(detail.Details.ToString());
 
             if (!string.IsNullOrWhiteSpace(detail.YouTubeLink))
             {
                 string youTubeLink = $"https://www.youtube.com/embed/{detail.YouTubeLink}";
-                detailBuilder.Append(AddYoutubePreview(youTubeLink));
+                detailBuilder.Text(AddYoutubePreview(youTubeLink));
             }
 
             if (!string.IsNullOrWhiteSpace(detail.ExportImagePath))
@@ -106,7 +106,7 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                 detailBuilder.AddImages(Constants.FullMyLayouts, detail.ExportImagePath, detail.RawImagePath);
             }
 
-            pageBuilderMain.Append(detailBuilder.GetString());
+            pageBuilderMain.Text(detailBuilder.GetString());
         }
 
         private static void GetLayoutDetails()

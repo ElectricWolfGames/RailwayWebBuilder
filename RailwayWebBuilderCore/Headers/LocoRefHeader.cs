@@ -15,8 +15,6 @@ namespace RailwayWebBuilderCore.Headers
                 "Locomotive",
             };
             Description = "Locomotive photo Reference Collection";
-
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace RailwayWebBuilderCore.Headers
             };
             Description = "Model railway events pages";
 
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

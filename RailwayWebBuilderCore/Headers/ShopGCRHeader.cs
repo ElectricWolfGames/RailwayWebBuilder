@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Headers
             };
             Description = "GCR Reunification Shop";
 
-            //ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
+            
         }
     }
 }

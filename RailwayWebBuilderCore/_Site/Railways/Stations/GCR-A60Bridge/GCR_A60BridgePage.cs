@@ -60,8 +60,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge
             string imagePath = $"{htmlpath}images";
 
             Directory.CreateDirectory(imagePath);
-            pageBuilder.Append($"<hr/>");
-            pageBuilder.Append("<h2>Gallery</h2>");
+            pageBuilder.Text($"<hr/>");
+            pageBuilder.Text("<h2>Gallery</h2>");
             string galleryPath = Constants.RawDataPath + @"Stations\GCR A60 Bridge\Gallery";
             pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
             return pageBuilder.GetOutput();

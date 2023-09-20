@@ -18,20 +18,20 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
             Directory.CreateDirectory(htmlpath);
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", htmlpath, new CatalogHeader(), "../");
-            pageBuilder.Append(NavBarHelper.NavBar("../"));
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Append(Jumbotron(null));
+            pageBuilder.Text(NavBarHelper.NavBar("../"));
+            pageBuilder.Text("<div class='container mt-4'>");
+            pageBuilder.Text(Jumbotron(null));
 
-            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Wagons"));
-            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Loco"));
-            pageBuilder.Append(AddDetails(htmlpath, htmlpath + "images\\", "Coach"));
+            pageBuilder.Text(AddDetails(htmlpath, htmlpath + "images\\", "Wagons"));
+            pageBuilder.Text(AddDetails(htmlpath, htmlpath + "images\\", "Loco"));
+            pageBuilder.Text(AddDetails(htmlpath, htmlpath + "images\\", "Coach"));
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            pageBuilder.Text("</div>");
+            pageBuilder.Text("</div>");
 
-            pageBuilder.Append(HTMLRailHelper.Modal());
+            pageBuilder.Text(HTMLRailHelper.Modal());
 
-            pageBuilder.Append("<script src='../Scripts/script.js'></script>");
+            pageBuilder.Text("<script src='../Scripts/script.js'></script>");
 
             pageBuilder.Output();
         }
@@ -42,14 +42,14 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder();
 
-            pageBuilder.Append($"<hr/>");
+            pageBuilder.Text($"<hr/>");
 
-            pageBuilder.Append($"<h2>{name}</h2>");
+            pageBuilder.Text($"<h2>{name}</h2>");
 
             string path = Constants.RawDataPath + $@"Catalog\{name}";
             List<string> images = ImageHelper.GetAllImages(path);
 
-            pageBuilder.Append("<div class='container mt-4'><div class='row'>");
+            pageBuilder.Text("<div class='container mt-4'><div class='row'>");
             int count = 2;
             foreach (string layoutImage in images)
             {
@@ -59,12 +59,12 @@ namespace RailwayWebBuilderCore.Builders.MyLayouts
                     if (count-- == 0)
                     {
                         count = 2;
-                        pageBuilder.Append("</div></div>");
-                        pageBuilder.Append("<div class='container mt-4'><div class='row'>");
+                        pageBuilder.Text("</div></div>");
+                        pageBuilder.Text("<div class='container mt-4'><div class='row'>");
                     }
                 }
             }
-            pageBuilder.Append("</div></div>");
+            pageBuilder.Text("</div></div>");
             return pageBuilder.GetString();
         }
 

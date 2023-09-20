@@ -18,7 +18,6 @@ namespace RailwayWebBuilderCore.Headers
             };
             Description = "GCR Reunification Auctions";
 
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

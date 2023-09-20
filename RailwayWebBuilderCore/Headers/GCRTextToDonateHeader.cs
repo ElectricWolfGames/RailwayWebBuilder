@@ -13,8 +13,6 @@ namespace RailwayWebBuilderCore.Headers
                 "Reunification",
             };
             Description = "Text To Donate";
-
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.CHART);
         }
     }
 }

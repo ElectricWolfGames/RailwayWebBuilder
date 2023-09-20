@@ -26,8 +26,6 @@ namespace RailwayWebBuilderCore.Headers
                 "railway model",
             };
             Description = "Cattington model railway";
-
-            ExtraIncludes.Add(eWolfBootstrap.Enums.BootstrapOptions.GALLERY);
         }
     }
 }

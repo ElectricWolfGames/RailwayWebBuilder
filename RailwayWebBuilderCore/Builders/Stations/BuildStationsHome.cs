@@ -17,17 +17,17 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             eWolfBootstrap.Interfaces.IPageBuilder pageBuilder = new PageBuilder("index.html", localpath, new StationsHeader(), "../");
 
-            pageBuilder.Append(NavBarHelper.NavBar("../"));
-            pageBuilder.Append("<div class='container mt-4'>");
-            pageBuilder.Append(Jumbotron(null));
-            pageBuilder.Append("<div class='row mb-2'>");
+            pageBuilder.Text(NavBarHelper.NavBar("../"));
+            pageBuilder.Text("<div class='container mt-4'>");
+            pageBuilder.Text(Jumbotron(null));
+            pageBuilder.Text("<div class='row mb-2'>");
 
-            pageBuilder.Append("</div>");
-            pageBuilder.Append("</div>");
+            pageBuilder.Text("</div>");
+            pageBuilder.Text("</div>");
 
-            pageBuilder.Append(HTMLRailHelper.Modal());
+            pageBuilder.Text(HTMLRailHelper.Modal());
 
-            pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+            pageBuilder.Text("<script src='../../Scripts/script.js'></script>");
 
             pageBuilder.Output();
         }

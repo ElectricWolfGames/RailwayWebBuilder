@@ -98,42 +98,42 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
             _pageBuilder = new PageBuilder(HtmlFileName, LocalPath, locref, "../../");
 
-            _pageBuilder.Append(NavBarHelper.NavBar("../../"));
+            _pageBuilder.Text(NavBarHelper.NavBar("../../"));
             AddBreadCrumb(this);
 
-            _pageBuilder.Append("<div class='container mt-12'>");
+            _pageBuilder.Text("<div class='container mt-12'>");
 
             Jumbotron(_pageBuilder, Title);
 
-            _pageBuilder.Append("<a href='../SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
-            _pageBuilder.Append("<a href='../DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
-            _pageBuilder.Append("<a href='../WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
-            _pageBuilder.Append("<a href='../CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
-            _pageBuilder.Append("</br></br></br>");
+            _pageBuilder.Text("<a href='../SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
+            _pageBuilder.Text("<a href='../DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
+            _pageBuilder.Text("<a href='../WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
+            _pageBuilder.Text("<a href='../CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
+            _pageBuilder.Text("</br></br></br>");
 
             AddPageDetails();
 
             AddGallrey(HtmlPath + "images\\", RawImagePath);
 
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
+            _pageBuilder.Text("</div>");
+            _pageBuilder.Text("</div>");
 
-            _pageBuilder.Append(HTMLRailHelper.Modal());
+            _pageBuilder.Text(HTMLRailHelper.Modal());
 
-            _pageBuilder.Append("<script src='../../Scripts/script.js'></script>");
+            _pageBuilder.Text("<script src='../../Scripts/script.js'></script>");
 
             _pageBuilder.Output();
         }
 
         public static void Jumbotron(PageBuilder _pageBuilder, string name)
         {
-            _pageBuilder.Append("<div class='jumbotron'>");
-            _pageBuilder.Append("<div class='row'>");
-            _pageBuilder.Append("<div class='col-md-12'>");
-            _pageBuilder.Append($"<h1>{name}</h1>");
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
-            _pageBuilder.Append("</div>");
+            _pageBuilder.Text("<div class='jumbotron'>");
+            _pageBuilder.Text("<div class='row'>");
+            _pageBuilder.Text("<div class='col-md-12'>");
+            _pageBuilder.Text($"<h1>{name}</h1>");
+            _pageBuilder.Text("</div>");
+            _pageBuilder.Text("</div>");
+            _pageBuilder.Text("</div>");
         }
 
         public virtual void GrabImages()
@@ -163,13 +163,13 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         private void AddBreadCrumb(ILocomotiveRefPage pageDetails)
         {
-            _pageBuilder.Append("<nav aria-label='breadcrumb'>");
-            _pageBuilder.Append("<ol class='breadcrumb'>");
-            _pageBuilder.Append("<li class='breadcrumb-item'><a href='../index.html'>Home</a></li>");
-            _pageBuilder.Append($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
-            _pageBuilder.Append($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
-            _pageBuilder.Append("</ol>");
-            _pageBuilder.Append("</nav>");
+            _pageBuilder.Text("<nav aria-label='breadcrumb'>");
+            _pageBuilder.Text("<ol class='breadcrumb'>");
+            _pageBuilder.Text("<li class='breadcrumb-item'><a href='../index.html'>Home</a></li>");
+            _pageBuilder.Text($"<li class='breadcrumb-item'><a href='../LocoRef.html'>Locos</a></li>");
+            _pageBuilder.Text($"<li class='breadcrumb-item active' aria-current='page'>{pageDetails.PageTitle}</li>");
+            _pageBuilder.Text("</ol>");
+            _pageBuilder.Text("</nav>");
         }
 
         private void AddGallrey(string imagePath, string galleryPath)
@@ -184,17 +184,17 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             if (string.IsNullOrWhiteSpace(Paragraph1))
                 return;
 
-            _pageBuilder.Append($"<p>{Paragraph1}</p>");
+            _pageBuilder.Text($"<p>{Paragraph1}</p>");
 
             if (string.IsNullOrWhiteSpace(Paragraph2))
                 return;
 
-            _pageBuilder.Append($"<p>{Paragraph2}</p>");
+            _pageBuilder.Text($"<p>{Paragraph2}</p>");
 
             if (string.IsNullOrWhiteSpace(Paragraph3))
                 return;
 
-            _pageBuilder.Append($"<p>{Paragraph3}</p>");
+            _pageBuilder.Text($"<p>{Paragraph3}</p>");
         }
 
         private List<string> SelectImages(int count, List<string> images)
