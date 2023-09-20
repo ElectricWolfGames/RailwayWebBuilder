@@ -1,11 +1,11 @@
-﻿using eWolfBootstrap.SiteBuilder;
+﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RailwayWebBuilderCore._Site.Railways
 {
@@ -47,37 +47,37 @@ namespace RailwayWebBuilderCore._Site.Railways
 
         private static string AddBlogsAsTimeline(IOrderedEnumerable<IBlog> ordedBlogs)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            var stringBuilder = new HTMLBuilder();
 
-            stringBuilder.AppendLine("<div class='container mt-5 mb-5'>");
-            stringBuilder.AppendLine("	<div class='row'>");
-            stringBuilder.AppendLine("		<div class='col-md-8 offset-md-3'>");
-            stringBuilder.AppendLine("			<h4>Latest Updates</h4>");
-            stringBuilder.AppendLine("			<ul class='timeline'>");
+            stringBuilder.Text("<div class='container mt-5 mb-5'>");
+            stringBuilder.Text("	<div class='row'>");
+            stringBuilder.Text("		<div class='col-md-8 offset-md-3'>");
+            stringBuilder.Text("			<h4>Latest Updates</h4>");
+            stringBuilder.Text("			<ul class='timeline'>");
 
             foreach (IBlog blog in ordedBlogs)
             {
                 if (!string.IsNullOrWhiteSpace(blog.Name))
                 {
-                    stringBuilder.AppendLine("				<li>");
-                    stringBuilder.AppendLine($"					<a href='{blog.Link}'>{blog.Name}</a>");
-                    stringBuilder.AppendLine($"					<a href='{blog.Link}' class='float-right'>{blog.Date.ToShortDateString()}</a>");
-                    stringBuilder.AppendLine($"<p>{blog.Paragraph}</p>");
+                    stringBuilder.Text("				<li>");
+                    stringBuilder.Text($"					<a href='{blog.Link}'>{blog.Name}</a>");
+                    stringBuilder.Text($"					<a href='{blog.Link}' class='float-right'>{blog.Date.ToShortDateString()}</a>");
+                    stringBuilder.Text($"<p>{blog.Paragraph}</p>");
 
                     string keyImage = blog.GetKeyImagePath();
                     if (!string.IsNullOrWhiteSpace(keyImage))
                     {
-                        stringBuilder.AppendLine($"      <a href='{blog.Link}'><img class='rounded ' width='320px' height ='240px'src='{keyImage}'></a>");
+                        stringBuilder.Text($"      <a href='{blog.Link}'><img class='rounded ' width='320px' height ='240px'src='{keyImage}'></a>");
                     }
-                    stringBuilder.AppendLine("				</li>");
+                    stringBuilder.Text("				</li>");
                 }
             }
 
-            stringBuilder.AppendLine("			</ul>");
-            stringBuilder.AppendLine("		</div>");
-            stringBuilder.AppendLine("	</div>");
-            stringBuilder.AppendLine("</div>");
-            return stringBuilder.ToString();
+            stringBuilder.Text("			</ul>");
+            stringBuilder.Text("		</div>");
+            stringBuilder.Text("	</div>");
+            stringBuilder.Text("</div>");
+            return stringBuilder.Output();
         }
 
         private static string AddCarousel(List<IBlog> blogs)
@@ -85,54 +85,54 @@ namespace RailwayWebBuilderCore._Site.Railways
             var carouselList = blogs.Where(x => !string.IsNullOrWhiteSpace(x.Carousel));
 
             var count = carouselList.Count();
-            StringBuilder carouselHtml = new StringBuilder();
+            var carouselHtml = new HTMLBuilder();
 
-            carouselHtml.AppendLine("<div id='carouselExampleIndicators' class='carousel slide' data-ride='carousel'>");
-            carouselHtml.AppendLine("<ol class='carousel-indicators'>");
+            carouselHtml.Text("<div id='carouselExampleIndicators' class='carousel slide' data-ride='carousel'>");
+            carouselHtml.Text("<ol class='carousel-indicators'>");
             int index = 0;
             foreach (var item in carouselList)
             {
                 if (index == 0)
-                    carouselHtml.AppendLine($"<li data-target='#carouselExampleIndicators' data-slide-to='{index}' class='active'></li>");
+                    carouselHtml.Text($"<li data-target='#carouselExampleIndicators' data-slide-to='{index}' class='active'></li>");
                 else
-                    carouselHtml.AppendLine($"<li data-target='#carouselExampleIndicators' data-slide-to='{index}'></li>");
+                    carouselHtml.Text($"<li data-target='#carouselExampleIndicators' data-slide-to='{index}'></li>");
                 index++;
             }
 
-            carouselHtml.AppendLine("</ol>");
-            carouselHtml.AppendLine("<div class='carousel-inner'>");
+            carouselHtml.Text("</ol>");
+            carouselHtml.Text("<div class='carousel-inner'>");
 
             index = 0;
             foreach (var item in carouselList)
             {
                 if (index == 0)
-                    carouselHtml.AppendLine("<div class='carousel-item active'>");
+                    carouselHtml.Text("<div class='carousel-item active'>");
                 else
-                    carouselHtml.AppendLine("<div class='carousel-item'>");
+                    carouselHtml.Text("<div class='carousel-item'>");
                 index++;
 
                 string keyImage = item.GetCarouselKeyImagePath();
 
-                carouselHtml.AppendLine($"<a href='{item.Link}'><img class='d-block w-100' src='{keyImage}' alt='First slide'></a>");
-                carouselHtml.AppendLine("<div class='carousel-caption d-none d-md-block'");
-                carouselHtml.AppendLine($"<h5>{item.CarouselText}</h5>");
-                carouselHtml.AppendLine("</div>");
+                carouselHtml.Text($"<a href='{item.Link}'><img class='d-block w-100' src='{keyImage}' alt='First slide'></a>");
+                carouselHtml.Text("<div class='carousel-caption d-none d-md-block'");
+                carouselHtml.Text($"<h5>{item.CarouselText}</h5>");
+                carouselHtml.Text("</div>");
 
-                carouselHtml.AppendLine("</div>");
+                carouselHtml.Text("</div>");
             }
-            carouselHtml.AppendLine("</div>");
-            carouselHtml.AppendLine("<a class='carousel-control-prev' href='#carouselExampleIndicators' role='button' data-slide='prev'>");
-            carouselHtml.AppendLine("  <span class='carousel-control-prev-icon' aria-hidden='true'></span>");
-            carouselHtml.AppendLine("  <span class='sr-only'>Previous</span>");
-            carouselHtml.AppendLine("</a>");
-            carouselHtml.AppendLine("<a class='carousel-control-next' href='#carouselExampleIndicators' role='button' data-slide='next'>");
-            carouselHtml.AppendLine("  <span class='carousel-control-next-icon' aria-hidden='true'></span>");
-            carouselHtml.AppendLine("  <span class='sr-only'>Next</span>");
-            carouselHtml.AppendLine("</a>");
-            carouselHtml.AppendLine("</div>");
-            carouselHtml.AppendLine("");
-            carouselHtml.AppendLine("<br/><br/>");
-            return carouselHtml.ToString();
+            carouselHtml.Text("</div>");
+            carouselHtml.Text("<a class='carousel-control-prev' href='#carouselExampleIndicators' role='button' data-slide='prev'>");
+            carouselHtml.Text("  <span class='carousel-control-prev-icon' aria-hidden='true'></span>");
+            carouselHtml.Text("  <span class='sr-only'>Previous</span>");
+            carouselHtml.Text("</a>");
+            carouselHtml.Text("<a class='carousel-control-next' href='#carouselExampleIndicators' role='button' data-slide='next'>");
+            carouselHtml.Text("  <span class='carousel-control-next-icon' aria-hidden='true'></span>");
+            carouselHtml.Text("  <span class='sr-only'>Next</span>");
+            carouselHtml.Text("</a>");
+            carouselHtml.Text("</div>");
+            carouselHtml.Text("");
+            carouselHtml.Text("<br/><br/>");
+            return carouselHtml.Output();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore.Builders.Locomotive.LocoDetails;
+using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 {

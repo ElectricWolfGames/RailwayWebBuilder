@@ -13,14 +13,7 @@ using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore.Builders.Locomotive.LocoDetails
 {
-    public enum StockTypes
-    {
-        SteamLoco,
-        Diesel,
-        Wagon,
-        Coach,
-        Electric,
-    }
+   
 
     public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
     {
