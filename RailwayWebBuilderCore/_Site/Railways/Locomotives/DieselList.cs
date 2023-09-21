@@ -15,6 +15,16 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             DisplayTitle = "Locomotive Photo Reference Collection";
             MenuTitle = "DieselList";
             DontShowNavigation = true;
+
+            Keywords.AddRange(
+                new string[]
+                {
+                    "Model Railway",
+                    "model trains",
+                    "trains",
+                    "Diesel",
+                });
+            //TODO: Add all diesel types here!
         }
 
         public override void CreatePage()

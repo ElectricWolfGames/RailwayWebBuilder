@@ -18,6 +18,19 @@ namespace RailwayWebBuilderCore._Site.Railways
             WebPage = new WebPage(this);
             DisplayTitle = "";
             MenuTitle = "Home";
+
+            Keywords.AddRange(
+                new string[]
+                {
+                    "Model Railway",
+                    "model trains",
+                    "trains",
+                    "Hornby",
+                    "OO Scale",
+                    "OO Gauge",
+                    "hertiage railway",
+                    "model layout",
+                });
         }
 
         public override void CreatePage()

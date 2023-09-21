@@ -20,6 +20,16 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage = new WebPage(this);
             DisplayTitle = "Locomotive Photo Reference Collection";
             MenuTitle = "LocoRef";
+
+            Keywords.AddRange(
+                new string[]
+                {
+                    "Model Railway",
+                    "model trains",
+                    "trains",
+                    "Hornby",
+                    "hertiage railway",
+                });
         }
 
         public static string CreateGroups(PageDetails pageDetails, string offSet)
