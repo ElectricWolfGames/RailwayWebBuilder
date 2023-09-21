@@ -2,10 +2,10 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData.StationLocations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.Stations.StationLocations;
 using System.IO;
 
 namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge

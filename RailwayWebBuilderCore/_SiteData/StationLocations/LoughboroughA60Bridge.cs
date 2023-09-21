@@ -1,6 +1,6 @@
 ﻿using RailwayWebBuilderCore.Data;
 
-namespace RailwayWebBuilderCore.Stations.StationLocations
+namespace RailwayWebBuilderCore._SiteData.StationLocations
 {
     public class LoughboroughA60Bridge : StationLocationsBase
     {

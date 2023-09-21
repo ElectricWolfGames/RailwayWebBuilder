@@ -1,13 +1,10 @@
 ﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.LocoDetails;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
 using System.Windows;
-
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
-
 using RailwayWebBuilderCore._SiteData;
 
 
@@ -95,8 +92,7 @@ namespace RailwayWebBuilderCore
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            GetLocoDetails gld = new GetLocoDetails();
-            gld.Now();
+           
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
