@@ -7,11 +7,11 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilderCore.Helpers
+namespace RailwayWebBuilderCore.KeepForNow
 {
     public static class ItemHelper
     {
-        public static (string, Gauges) GetEnumDescription(System.Enum value)
+        public static (string, Gauges) GetEnumDescription(Enum value)
         {
             FieldInfo fi = value.GetType().GetField(value.ToString());
 
@@ -26,7 +26,7 @@ namespace RailwayWebBuilderCore.Helpers
         }
     }
 
-    public class GeocoderHelper
+    /*public class GeocoderHelper
     {
         private static GeocoderHelper _instance;
         private readonly GeocoderStore _geocoderStore;
@@ -66,13 +66,13 @@ namespace RailwayWebBuilderCore.Helpers
         {
             // check to see if that name is a in the cahce already.
             string locat = string.Empty;
-            /*if (_geocoderStore.TryGetLocation(locationName, out locat))
-            {
-                return locat;
-            }
-            if (cacheOnly)
-                return locat;
-            */
+            //if (_geocoderStore.TryGetLocation(locationName, out locat))
+            //{
+            //    return locat;
+            //}
+            //if (cacheOnly)
+            //    return locat;
+            
             Location loc = new Location
             {
                 Latitude = 20,
@@ -99,7 +99,7 @@ namespace RailwayWebBuilderCore.Helpers
 
         private void Save()
         {
-            ReadWriteFileHelper.WriteToXmlFile<GeocoderStore>(Filename, _geocoderStore, false);
+            ReadWriteFileHelper.WriteToXmlFile(Filename, _geocoderStore, false);
         }
     }
 
@@ -119,5 +119,5 @@ namespace RailwayWebBuilderCore.Helpers
         {
             return _cache.TryGetValue(locationName, out loc);
         }
-    }
+    }*/
 }

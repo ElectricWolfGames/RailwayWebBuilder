@@ -1,8 +1,6 @@
-﻿using RailwayWebBuilderCore.Helpers;
-
-namespace RailwayWebBuilderCore.Data
+﻿namespace RailwayWebBuilderCore.KeepForNow
 {
-    public class LocationHolder
+    /*public class LocationHolder
     {
         private string _filmName;
 
@@ -20,5 +18,5 @@ namespace RailwayWebBuilderCore.Data
         {
             return GeocoderHelper.Instance.GetLatitudeAndLongitudeString(Location, false);
         }
-    }
+    }*/
 }
