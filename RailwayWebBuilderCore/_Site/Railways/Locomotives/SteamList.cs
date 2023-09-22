@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             DisplayTitle = "Locomotive Photo Reference Collection";
             MenuTitle = "SteamList";
             DontShowNavigation = true;
+
+            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.SteamLoco));
         }
 
         public override void CreatePage()

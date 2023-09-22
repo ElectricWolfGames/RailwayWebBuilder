@@ -105,6 +105,21 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             return pageBuilder.Output();
         }
 
+        internal static string[] GetKeywords(StockTypes steamLoco)
+        {
+            List<ILocomotiveRefPage> locorefTypes;
+
+            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
+                                      && t.GetConstructor(Type.EmptyTypes) != null
+                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
+
+            locorefTypes = layoutDetails.OrderBy(x => x.Title).ToList();
+            locorefTypes = locorefTypes.OrderBy(x => x.Order).ToList();
+
+            return locorefTypes.Select(x => x.Title).ToArray();
+        }
+
         private static void AddLocoRef(HTMLBuilder pageBuilder, ILocomotiveRefPage loco)
         {
             if (loco.Title == null)

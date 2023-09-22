@@ -16,15 +16,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             MenuTitle = "DieselList";
             DontShowNavigation = true;
 
-            Keywords.AddRange(
-                new string[]
-                {
-                    "Model Railway",
-                    "model trains",
-                    "trains",
-                    "Diesel",
-                });
-            //TODO: Add all diesel types here!
+            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Diesel));
         }
 
         public override void CreatePage()

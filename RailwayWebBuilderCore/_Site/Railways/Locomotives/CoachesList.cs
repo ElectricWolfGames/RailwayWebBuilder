@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             DisplayTitle = "Locomotive Photo Reference Collection";
             MenuTitle = "CoachesList";
             DontShowNavigation = true;
+
+            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Coach));
         }
 
         public override void CreatePage()

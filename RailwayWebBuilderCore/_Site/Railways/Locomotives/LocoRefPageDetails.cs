@@ -2,10 +2,10 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore._Site.Railways.Locomotives;
+using RailwayWebBuilderCore._SiteData.LocoRefs;
 using System.IO;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs
+namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 {
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
@@ -26,11 +26,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         {
             string imagePath = $"{LocomotiveDetailsBase.LocalPath}\\images";
             Directory.CreateDirectory(imagePath);
-            PageBuilder pageBuilder = new PageBuilder();
+            HTMLBuilder pageBuilder = new HTMLBuilder();
 
             pageBuilder.AddImagesGroupedByDate(LocomotiveDetailsBase.LocalPath, LocomotiveDetailsBase.LocalPath + "images", LocomotiveDetailsBase.RawImagePath);
 
-            return pageBuilder.GetOutput();
+            return pageBuilder.Output();
         }
 
         public string CreateHero()
@@ -42,6 +42,12 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         public override void CreatePage()
         {
+            Keywords.AddRange(LocomotiveDetailsBase.Keywords);
+            Keywords.Add("Loco ref");
+            Keywords.Add("Locomotive photo");
+            Keywords.Add("Locomotive pic");
+            Keywords.Add("engine pic");
+
             DisplayTitle = LocomotiveDetailsBase.PageTitle;
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../../");

@@ -15,6 +15,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             DisplayTitle = "Locomotive Photo Reference Collection";
             MenuTitle = "WagonsList";
             DontShowNavigation = true;
+
+            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Wagon));
         }
 
         public override void CreatePage()
