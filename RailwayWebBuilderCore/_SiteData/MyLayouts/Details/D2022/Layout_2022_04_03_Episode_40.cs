@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore._SiteData.MyLayouts.Details;
-using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore.Configuration;
 using System;
 using System.Text;
 

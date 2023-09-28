@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using RailwayWebBuilderCore._SiteData.MyLayouts.Details;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details.D2020
 {
