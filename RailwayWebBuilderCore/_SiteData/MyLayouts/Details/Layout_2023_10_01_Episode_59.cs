@@ -4,7 +4,7 @@ using System;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 {
-    /*
+    
     public class Layout_2023_10_01_Episode_59 : LayoutBase, IBlogger
     {
         public Layout_2023_10_01_Episode_59()
@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 
             InitDatedPaths();
 
-            Title = "<h2>59: ?</h2>";
+            Title = "<h2>59: New Tool, New Wagons and Class 28s</h2>";
             Details.Append("<p>Hello and welcome back to Karl and Debbie trains, And we have another Cattington model railway layout update for you.</p>");
             Details.Append("</br>");
             Details.Append("<p>This time we have a new tool to show you - a track tester. Some new ocean wagons and some guest loco's</p>");
@@ -32,7 +32,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
             Details.Append("</br>");
             Details.Append("</br>");
             Details.Append("<p>Thank you for watching, Take care</p>");
-            YouTubeLink = "";
+            YouTubeLink = "GYRzipZfIqI";
         }
 
         public IBlog GetBlog()
@@ -42,10 +42,9 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
                 Name = $"Cattington Update {EpisodeNumber}",
                 Date = When,
                 Link = "MyLayouts/index.html",
-                Paragraph = "Something",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4595-thumb.JPG",
+                Paragraph = "New Tool, New Wagons and Class 28s",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_4765-Cattington-thumb.JPG",
             };
         }
     }
-    */
 }
