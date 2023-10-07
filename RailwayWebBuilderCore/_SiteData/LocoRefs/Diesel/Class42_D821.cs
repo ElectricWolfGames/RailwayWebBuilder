@@ -1,27 +1,23 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
+﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Class;
+using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class42_D821 : LocomotiveDetailsBase
+    public class Class42_D821 : Class42Base
     {
         public Class42_D821()
         {
-            Title = "D821, Class 42, Warship";
-            Class = "Class 42";
+            Title = "D821, Class 42, Warship, GreyHound";
+       
             PageTitle = "D821";
             HtmlFileName = $"{PageTitle}.html";
             RawImagePath = Constants.RawDataPath + @"\Locos\Class42_D821\";
             ExportImagePath = Constants.LocoRef + "images\\D821\\";
-            StockType = StockTypes.Diesel;
+            
             FindTags = "D821";
 
-            Paragraph1 = "";// TODO Add loco notes
-            Paragraph2 = "";
-            Paragraph3 = "";
-
             Keywords.Add(Title);
-            Keywords.Add("D821");
+            Keywords.Add(PageTitle);
         }
     }
 }
