@@ -69,6 +69,8 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         public void Build()
         {
+            return;
+
             Directory.CreateDirectory(LocalPath);
 
             var locref = new LocoRefHeader();
@@ -84,7 +86,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
             //_pageBuilder = new PageBuilder(HtmlFileName, LocalPath, locref, "../../");
 
-            LocoRefPageDetails pageDetails = new LocoRefPageDetails();
+            LocoRefPageDetailsOLDTOGO pageDetails = new LocoRefPageDetailsOLDTOGO();
             pageDetails.MenuTitle = Title;
             pageDetails.LocomotiveDetailsBase = this;
             pageDetails.CreatePage();

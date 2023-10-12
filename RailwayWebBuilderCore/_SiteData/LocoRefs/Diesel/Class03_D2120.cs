@@ -3,7 +3,8 @@ using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class03_D2120 : LocomotiveDetailsBase
+
+    /*public class Class03_D2120 : LocomotiveDetailsBase
     {
         public Class03_D2120()
         {
@@ -23,5 +24,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             Keywords.Add("diesel-electric shunting");
             Keywords.Add("diesel shunter");
         }
-    }
+    }*/
 }

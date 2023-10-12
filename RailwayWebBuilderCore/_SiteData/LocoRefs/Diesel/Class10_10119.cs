@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class10_10119 : LocomotiveDetailsBase
+    /*public class Class10_10119 : LocomotiveDetailsBase
     {
         public Class10_10119()
         {
@@ -26,5 +26,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             Keywords.Add("diesel shunter");
             Keywords.Add("Class 10");
         }
-    }
+    }*/
 }

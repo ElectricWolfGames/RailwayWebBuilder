@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class08_08694 : Class08Base
+    /*public class Class08_08694 : Class08Base
     {
         public Class08_08694() : base()
         {
@@ -15,5 +15,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             FindTags = "08694,Class08";
         }
-    }
+    }*/
 }

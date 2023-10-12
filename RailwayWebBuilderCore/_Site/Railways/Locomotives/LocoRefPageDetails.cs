@@ -2,96 +2,80 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore._SiteData.LocoRefs;
+using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
+using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Helpers;
+using RailwayWebBuilderCore.Interfaces;
+using System.Dynamic;
 using System.IO;
 
 namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 {
+
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
+    [AddGallery()]
     public class LocoRefPageDetails : PageDetails
     {
+
+        public string LocoNumber { get; set; }
+        public DieselClassBase DieselClassBase { get; set; }
+        
+        public string GalleryPath { get; set; }
+
         public LocoRefPageDetails()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "bah2";
-            MenuTitle = "bah3";
+            DisplayTitle = "Loco ref";
+            MenuTitle = "Loco Ref";
             DontShowNavigation = true;
             DontBuildPage = true;
         }
 
-        public LocomotiveDetailsBase LocomotiveDetailsBase { get; set; }
-
-        public string CreateGallary()
-        {
-            string imagePath = $"{LocomotiveDetailsBase.LocalPath}\\images";
-            Directory.CreateDirectory(imagePath);
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-
-            pageBuilder.AddImagesGroupedByDate(LocomotiveDetailsBase.LocalPath, LocomotiveDetailsBase.LocalPath + "images", LocomotiveDetailsBase.RawImagePath);
-
-            return pageBuilder.Output();
-        }
-
-        public string CreateHero()
-        {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-            pageBuilder.Jumbotron(LocomotiveDetailsBase.Title, LocomotiveDetailsBase.Class);
-            return pageBuilder.Output();
-        }
-
         public override void CreatePage()
         {
-            Keywords.AddRange(LocomotiveDetailsBase.Keywords);
-            Keywords.Add("Loco ref");
-            Keywords.Add("Locomotive photo");
-            Keywords.Add("Locomotive pic");
-            Keywords.Add("engine pic");
-
-            DisplayTitle = LocomotiveDetailsBase.PageTitle;
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-12'>");
 
-            WebPage.Append(CreateHero());
+            WebPage.Append(LocoRef.CreateHero(this));
+            WebPage.Append(LocoRef.CreateGroups(this, "..//"));
 
-            MenuTitle = LocomotiveDetailsBase.StockType.ToString();
-            WebPage.Append(LocoRef.CreateGroups(this, "../"));
+            WebPage.Append($"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>");
+            WebPage.Append($"<p>{DieselClassBase.Paragraph1}</p>");
+            WebPage.Append($"<p>{DieselClassBase.Paragraph2}</p>");
 
-            WebPage.HtmlPath = LocomotiveDetailsBase.HtmlPath;
-            WebPage.HtmlTitle = $"{LocomotiveDetailsBase.PageTitle}.html";
+            WebPage.Append(CreateGallery());
+
+            WebPage.HtmlPath = "Locomotives\\Ref";
+            WebPage.HtmlTitle = $"{LocoNumber}.html";
+
             WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
             WebPage.SetDontBuild = false;
-
-            WebPage.Append(CreateLocoDetails());
-            WebPage.Append(CreateGallary());
-
+  
             WebPage.Append("</div>");
+            WebPage.Append(HTMLRailHelper.Modal());
+            WebPage.Append("<script src='../Scripts/script.js'></script>");
 
             WebPage.EndBody();
             WebPage.Output();
         }
 
-        private string CreateLocoDetails()
+        private string CreateGallery()
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            var pageBuilder = new HTMLBuilder();
+            string htmlpath = Constants._aRootPath + @"\\Locomotives\\Ref\\";
+            string imagePath = $"{htmlpath}images";
 
-            pageBuilder.NewLine();
-
-            if (!string.IsNullOrWhiteSpace(LocomotiveDetailsBase.Paragraph1))
-                pageBuilder.Text($"<p>{LocomotiveDetailsBase.Paragraph1}</p>");
-
-            if (!string.IsNullOrWhiteSpace(LocomotiveDetailsBase.Paragraph2))
-                pageBuilder.Text($"<p>{LocomotiveDetailsBase.Paragraph2}</p>");
-
-            if (!string.IsNullOrWhiteSpace(LocomotiveDetailsBase.Paragraph3))
-                pageBuilder.Text($"<p>{LocomotiveDetailsBase.Paragraph3}</p>");
-
-            pageBuilder.NewLine();
-
+            Directory.CreateDirectory(imagePath);
+            pageBuilder.Text($"<hr/>");
+            pageBuilder.Text("<h2>Gallery</h2>");
+            pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, GalleryPath);
             return pageBuilder.Output();
         }
+
+
     }
 }

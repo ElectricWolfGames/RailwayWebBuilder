@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Configuration;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class08_13101 : Class08Base
+    /*public class Class08_13101 : Class08Base
     {
         public Class08_13101() : base()
         {
@@ -14,5 +14,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ExportImagePath = Constants.LocoRef + "images\\13101\\";
             FindTags = "13101,Clas08";
         }
-    }
+    }*/
 }
