@@ -1,7 +1,4 @@
-﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Class;
-using RailwayWebBuilderCore.Configuration;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     /*public class Class08_08114 : Class08Base
     {

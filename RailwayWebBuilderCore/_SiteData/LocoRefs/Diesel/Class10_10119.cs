@@ -1,7 +1,4 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     /*public class Class10_10119 : LocomotiveDetailsBase
     {

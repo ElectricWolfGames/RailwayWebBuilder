@@ -12,7 +12,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Class
             Paragraph1 = "";// TODO Add loco notes
             Paragraph2 = "";
             Paragraph3 = "";
-
         }
     }
 }

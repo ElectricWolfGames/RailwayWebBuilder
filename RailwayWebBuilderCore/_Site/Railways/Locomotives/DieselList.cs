@@ -1,11 +1,9 @@
 ﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Interfaces;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
-using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +45,16 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.EndBody();
             WebPage.Output();
         }
+
+        private static IEnumerable<IDieselClass> GetLocoRefDetails()
+        {
+            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                where t.GetInterfaces().Contains(typeof(IDieselClass))
+                                      && t.GetConstructor(Type.EmptyTypes) != null
+                                select Activator.CreateInstance(t) as IDieselClass;
+            return layoutDetails;
+        }
+
         private string CreateDesselList()
         {
             HTMLBuilder pageBuilder = new HTMLBuilder();
@@ -58,15 +66,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
                 dieselClass.PreviewLocos(pageBuilder, WebPage);
             }
             return pageBuilder.Output();
-        }
-
-        private static IEnumerable<IDieselClass> GetLocoRefDetails()
-        {
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(IDieselClass))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as IDieselClass;
-            return layoutDetails;
         }
     }
 }

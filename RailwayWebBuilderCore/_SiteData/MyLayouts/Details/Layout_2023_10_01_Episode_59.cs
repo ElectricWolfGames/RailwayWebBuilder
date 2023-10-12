@@ -4,7 +4,6 @@ using System;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 {
-    
     public class Layout_2023_10_01_Episode_59 : LayoutBase, IBlogger
     {
         public Layout_2023_10_01_Episode_59()

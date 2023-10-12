@@ -4,15 +4,6 @@
     {
         string Number { get; set; }
     }
-    public class LocoDetails: ILocoDetails
-    {
-        public string Number { get; set; }
-
-        public LocoDetails(string number)
-        {
-                Number = number;
-        }
-    }
 
     public class DieselClass08 : DieselClassBase
     {
@@ -40,5 +31,15 @@
                 new LocoDetails("D3690"),
                 new LocoDetails("D4137") });
         }
+    }
+
+    public class LocoDetails : ILocoDetails
+    {
+        public LocoDetails(string number)
+        {
+            Number = number;
+        }
+
+        public string Number { get; set; }
     }
 }

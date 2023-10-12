@@ -1,9 +1,7 @@
 ﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
-using Microsoft.VisualStudio.Services.ExternalEvent;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
-using RailwayWebBuilderCore._Site.Railways.MyLayouts;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Interfaces;
 using System;
@@ -12,39 +10,32 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Web;
-using System.Windows.Shapes;
-using System.Xml.Linq;
 using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-
-
     public class DieselClassBase : IDieselClass
     {
-        const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
+        private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
 
         public string ClassName { get; set; }
+        public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
         public string Paragraph3 { get; set; } = "";
 
+        public List<string> GetAllImages(string tag)
+        {
+            UpdateImageStock(tag);
+
+            string rawPath = GetRawImagePath(tag);
+            List<string> images = ImageHelper.GetAllImages(rawPath);
+            return images;
+        }
+
         public string GetRawImagePath(string locoNo)
         {
             return Constants.RawDataPath + @$"\Locos\{ClassName.Replace(" ", "")}-{locoNo}\";
-        }
-
-        public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
-
-        private static IEnumerable<ILocomotiveRefPage> GetLocomotiveDetailsBases()
-        {
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
-
-            return layoutDetails;
         }
 
         public void PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage)
@@ -69,6 +60,37 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             pageBuilder.Text("</div>");
         }
 
+        // TO USED NEXT
+        private static string CreateCard(string imagePath, string path, string locoNumber)
+        {
+            StringBuilder blogHtml = new StringBuilder();
+
+            path += $"{locoNumber}.html";
+
+            blogHtml.AppendLine("<div class='col-md-6'>");
+            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
+            blogHtml.AppendLine($"<h5 class='card-header'>{locoNumber}</h5>");
+            blogHtml.AppendLine("<div class='card-body'>");
+            blogHtml.AppendLine($"      <img class='rounded float-right' width='214px' height ='160px'src='{imagePath}'>");
+            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'></p>");
+            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
+            blogHtml.AppendLine("</div>");
+            blogHtml.AppendLine("</div>");
+            blogHtml.AppendLine("</div>");
+
+            return blogHtml.ToString();
+        }
+
+        private static IEnumerable<ILocomotiveRefPage> GetLocomotiveDetailsBases()
+        {
+            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
+                                      && t.GetConstructor(Type.EmptyTypes) != null
+                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
+
+            return layoutDetails;
+        }
+
         private void CreateLocorefPage(string number, DieselClassBase dieselClassBase, WebPage webPage)
         {
             LocoRefPageDetails pageDetails = new LocoRefPageDetails();
@@ -77,15 +99,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             pageDetails.LocoNumber = number;
             pageDetails.GalleryPath = GetRawImagePath(number);
             pageDetails.CreatePage();
-        }
-
-        public List<string> GetAllImages(string tag)
-        {
-            UpdateImageStock(tag);
-
-            string rawPath = GetRawImagePath(tag);
-            List<string> images = ImageHelper.GetAllImages(rawPath);
-            return images;
         }
 
         private void UpdateImageStock(string tag)
@@ -111,27 +124,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
                     File.Copy(file, newPath);
                 }
             }
-        }
-
-        // TO USED NEXT
-        private static string CreateCard(string imagePath, string path, string locoNumber)
-        {
-            StringBuilder blogHtml = new StringBuilder();
-
-            path += $"{locoNumber}.html";
-
-            blogHtml.AppendLine("<div class='col-md-6'>");
-            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-            blogHtml.AppendLine($"<h5 class='card-header'>{locoNumber}</h5>");
-            blogHtml.AppendLine("<div class='card-body'>");
-            blogHtml.AppendLine($"      <img class='rounded float-right' width='214px' height ='160px'src='{imagePath}'>");
-            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'></p>");
-            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-
-            return blogHtml.ToString();
         }
     }
 }
