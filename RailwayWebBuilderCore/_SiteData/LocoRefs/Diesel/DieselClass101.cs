@@ -1,4 +1,6 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass101 : DieselClassBase
     {
@@ -6,6 +8,8 @@
         public DieselClass101()
         {
             ClassName = "Class 101";
+            StockType = StockTypes.Diesel;
+
             Paragraph1 = "The British Rail Classes 101 and 102 diesel mechanical multiple units were built by Metro-Cammell " +
                 "at Washwood Heath in Birmingham, England from 1956 to 1959, following construction of a series of prototype units. " +
                 "These classes proved to be some of the most successful and longest-lived of BR's First Generation DMUs, second in " +

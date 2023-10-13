@@ -1,10 +1,14 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass17 : DieselClassBase
     {
         public DieselClass17()
         {
             ClassName = "Class 17";
+            StockType = StockTypes.Diesel;
+
 
             Paragraph1 = "The British Rail Class 17 (also known as the Clayton Type 1) was a class of 117 Bo-Bo " +
                 "diesel-electric locomotives built 1962–1965 by Clayton Equipment Company and their sub-contractor Beyer, Peacock & Co., " +

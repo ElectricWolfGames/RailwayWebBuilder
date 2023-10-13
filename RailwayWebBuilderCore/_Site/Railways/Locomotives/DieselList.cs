@@ -37,7 +37,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append(LocoRef.CreateHero(this));
             WebPage.Append(LocoRef.CreateGroups(this, ""));
-            WebPage.Append(CreateDesselList());
+            //WebPage.Append(CreateDesselList());
 
             WebPage.Append("</div>");
             WebPage.Append("</div>");
@@ -52,6 +52,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
                                 where t.GetInterfaces().Contains(typeof(IDieselClass))
                                       && t.GetConstructor(Type.EmptyTypes) != null
                                 select Activator.CreateInstance(t) as IDieselClass;
+
+            layoutDetails = layoutDetails.Where(x => x.StockType == StockTypes.Diesel);
             return layoutDetails;
         }
 

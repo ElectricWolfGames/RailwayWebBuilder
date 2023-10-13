@@ -1,4 +1,6 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass42 : DieselClassBase
     {
@@ -6,6 +8,7 @@
         {
             // TODO : Add Class 42 paragraphs
             ClassName = "Class 42";
+            StockType = StockTypes.Diesel;
 
             Paragraph1 = "";
             Paragraph2 = "";

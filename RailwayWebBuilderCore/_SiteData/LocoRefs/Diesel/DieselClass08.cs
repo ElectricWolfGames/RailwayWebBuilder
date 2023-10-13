@@ -1,10 +1,14 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass08 : DieselClassBase
     {
         public DieselClass08()
         {
             ClassName = "Class 08";
+            StockType = StockTypes.Diesel;
+
             Paragraph1 = "The British Rail Class 08 is a class of diesel-electric shunting locomotive builtby British Railways (BR). " +
 "As the standard BR general-purpose diesel shunter, the class became a familiar sight at major stations and freight yards. " +
 "Since their introduction in 1952 however, the nature of rail traffic in Britain has changed considerably. " +

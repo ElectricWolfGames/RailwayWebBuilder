@@ -1,10 +1,14 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass25 : DieselClassBase
     {
         public DieselClass25()
         {
             ClassName = "Class 25";
+            StockType = StockTypes.Diesel;
+
             Paragraph1 = "The British Rail Class 25 diesel locomotives, also known as Sulzer Type 2 were a class of 327 locomotives built " +
                 "between 1961 and 1967 for British Rail. They were numbered in two series, D5151-D5299 and D7500-D7677";
             Paragraph2 = "The Class 24 locomotives were the precursor of the Class 25 design but after the delivery of their first few units " +

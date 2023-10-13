@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             DontBuildPage = true;
         }
 
-        public DieselClassBase DieselClassBase { get; set; }
+        public IDieselClass DieselClassBase { get; set; }
         public string GalleryPath { get; set; }
         public string LocoNumber { get; set; }
 

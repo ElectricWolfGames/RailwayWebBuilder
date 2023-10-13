@@ -1,10 +1,13 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿using RailwayWebBuilderCore.Enums;
+
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
     public class DieselClass37 : DieselClassBase
     {
         public DieselClass37()
         {
             ClassName = "Class 37";
+            StockType = StockTypes.Diesel;
 
             Paragraph1 = "The British Rail Class 37 is a diesel-electric locomotive. Also known as the English Electric Type 3," +
                            "the class was ordered as part of the British Rail modernisation plan. They were numbered in two series, " +
