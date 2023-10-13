@@ -1,0 +1,19 @@
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+{
+    public class DieselClass47 : DieselClassBase
+    {
+        public DieselClass47()
+        {
+            ClassName = "Class 47";
+
+            Paragraph1 = "";
+            Paragraph2 = "";
+            Paragraph3 = "";
+
+            LocoNumbers.AddRange(new[] {
+                new LocoDetails("1705"),
+                new LocoDetails("47292"),
+                });
+        }
+    }
+}
