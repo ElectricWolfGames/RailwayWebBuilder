@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
     public interface IDieselClass
     {
         string ClassName { get; set; }
+        List<string> Keywords { get; }
         List<ILocoDetails> LocoNumbers { get; set; }
         string Paragraph1 { get; set; }
         string Paragraph2 { get; set; }

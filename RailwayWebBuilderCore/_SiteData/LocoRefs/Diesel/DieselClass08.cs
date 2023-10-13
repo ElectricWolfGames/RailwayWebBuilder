@@ -1,10 +1,5 @@
 ﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public interface ILocoDetails
-    {
-        string Number { get; set; }
-    }
-
     public class DieselClass08 : DieselClassBase
     {
         public DieselClass08()
@@ -31,15 +26,5 @@
                 new LocoDetails("D3690"),
                 new LocoDetails("D4137") });
         }
-    }
-
-    public class LocoDetails : ILocoDetails
-    {
-        public LocoDetails(string number)
-        {
-            Number = number;
-        }
-
-        public string Number { get; set; }
     }
 }

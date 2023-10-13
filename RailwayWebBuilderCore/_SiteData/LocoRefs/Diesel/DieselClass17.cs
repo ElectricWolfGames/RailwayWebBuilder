@@ -1,21 +1,10 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class17_D8568 : LocomotiveDetailsBase
+    public class DieselClass17 : DieselClassBase
     {
-        public Class17_D8568()
+        public DieselClass17()
         {
-            Title = "D8568, Class 17, Bo-Bo";
-            Class = "Class 17";
-            PageTitle = "D8568";
-            HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class17-D8568\";
-            ExportImagePath = Constants.LocoRef + "images\\D8568\\";
-            Order = 2;
-            StockType = StockTypes.Diesel;
-            FindTags = "D8568,Class17";
+            ClassName = "Class 17";
 
             Paragraph1 = "The British Rail Class 17 (also known as the Clayton Type 1) was a class of 117 Bo-Bo " +
                 "diesel-electric locomotives built 1962–1965 by Clayton Equipment Company and their sub-contractor Beyer, Peacock & Co., " +
@@ -40,6 +29,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             Keywords.Add("Class 27");
             Keywords.Add("D8568");
             Keywords.Add("Paxman 6ZHXL six-cylinder horizontal engines");
+
+            LocoNumbers.AddRange(new[]
+            {
+                new LocoDetails("D8568"),
+                });
         }
     }
 }

@@ -1,22 +1,10 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class Class25_D5185 : LocomotiveDetailsBase
+    public class DieselClass25 : DieselClassBase
     {
-        public Class25_D5185()
+        public DieselClass25()
         {
-            Title = "D5185, Class 25, SulzerType2";
-            Class = "Class 25";
-            PageTitle = "D5185";
-            HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\Class25-D5185\";
-            ExportImagePath = Constants.LocoRef + "images\\D5185\\";
-            Order = 2;
-            StockType = StockTypes.Diesel;
-            FindTags = "D5185,Class25";
-
+            ClassName = "Class 25";
             Paragraph1 = "The British Rail Class 25 diesel locomotives, also known as Sulzer Type 2 were a class of 327 locomotives built " +
                 "between 1961 and 1967 for British Rail. They were numbered in two series, D5151-D5299 and D7500-D7677";
             Paragraph2 = "The Class 24 locomotives were the precursor of the Class 25 design but after the delivery of their first few units " +
@@ -36,6 +24,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             Keywords.Add("Class 23");
             Keywords.Add("D5185");
             Keywords.Add("Sulzer six-cylinder engine ");
+
+            LocoNumbers.AddRange(new[]
+            {
+                new LocoDetails("D5185"),
+                });
         }
     }
 }

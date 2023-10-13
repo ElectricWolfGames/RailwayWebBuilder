@@ -19,6 +19,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
 
         public string ClassName { get; set; }
+        public List<string> Keywords { get; private set; } = new List<string>();
         public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
