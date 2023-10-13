@@ -68,13 +68,13 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             path += $"{locoNumber}.html";
 
-            blogHtml.AppendLine("<div class='col-md-6'>");
+            blogHtml.AppendLine("<div class='col-md-4'>");
             blogHtml.AppendLine("<div class='card border-dark mb-3'>");
             blogHtml.AppendLine($"<h5 class='card-header'>{locoNumber}</h5>");
             blogHtml.AppendLine("<div class='card-body'>");
             blogHtml.AppendLine($"      <img class='rounded float-right' width='214px' height ='160px'src='{imagePath}'>");
-            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'></p>");
-            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
+            blogHtml.AppendLine($"<p class='col-md-4 card-text float-left'></p>");
+//            blogHtml.AppendLine($"<p class='col-md-2 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
             blogHtml.AppendLine("</div>");
             blogHtml.AppendLine("</div>");
             blogHtml.AppendLine("</div>");
