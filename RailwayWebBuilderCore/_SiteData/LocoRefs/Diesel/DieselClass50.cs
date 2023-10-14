@@ -23,7 +23,10 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             LocoNumbers.AddRange(new[] {
                 new LocoDetails("50017"),
+                new LocoDetails("50035", "Ark Royal"),
                 });
         }
     }
+
+
 }

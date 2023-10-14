@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
     {
         public SteamGWR5700()
         {
-            ClassName = "GWR5700 Pannier";
+            ClassName = "GWR 5700 Pannier";
             StockType = StockTypes.SteamLoco;
 
             Paragraph1 = "";
