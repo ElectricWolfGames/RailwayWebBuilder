@@ -1,9 +1,6 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
 {
-    public class B881987 : LocomotiveDetailsBase
+    /*public class B881987 : LocomotiveDetailsBase
     {
         public B881987()
         {
@@ -19,5 +16,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
             StockType = StockTypes.Wagon;
             FindTags = "B881987";
         }
-    }
+    }*/
 }

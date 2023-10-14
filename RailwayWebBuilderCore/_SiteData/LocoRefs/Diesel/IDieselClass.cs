@@ -18,6 +18,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
         List<string> GetAllImages(string tag);
 
-        void PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage);
+        int PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage);
     }
 }

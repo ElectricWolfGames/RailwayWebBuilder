@@ -1,9 +1,6 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
 {
-    public class DB461074 : LocomotiveDetailsBase
+    /*public class DB461074 : LocomotiveDetailsBase
     {
         public DB461074()
         {
@@ -24,5 +21,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
 
             Keywords.Add("DB461074");
         }
-    }
+    }*/
 }

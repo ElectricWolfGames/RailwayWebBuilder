@@ -39,12 +39,15 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             return Constants.RawDataPath + @$"\Locos\{ClassName.Replace(" ", "")}-{locoNo}\";
         }
 
-        public void PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage)
+        public int PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage)
         {
+            int count = 0;
             pageBuilder.Text("<div class='row'>");
             foreach (var tag in LocoNumbers)
             {
                 var images = GetAllImages(tag.Number);
+                count += images.Count();
+
                 if (!images.Any())
                     continue;
 
@@ -62,6 +65,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
                 pageBuilder.Text(CreateCard(newPathThumb, "Ref\\", tag.Number));
             }
             pageBuilder.Text("</div>");
+            return count;
         }
 
         private static string CreateCard(string imagePath, string path, string locoNumber)

@@ -1,9 +1,6 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
 {
-    public class OAA_100036 : LocomotiveDetailsBase
+    /*public class OAA_100036 : LocomotiveDetailsBase
     {
         public OAA_100036()
         {
@@ -20,5 +17,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
 
             Keywords.Add("OAA");
         }
-    }
+    }*/
 }
