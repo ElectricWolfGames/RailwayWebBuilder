@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.Services.Profile;
-using RailwayWebBuilderCore._Site.Railways.Locomotives;
-using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
+﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
@@ -8,11 +6,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
     public class SteamBRStandard9F : SteamClassBase, ILocomotiveSpecifications
     {
-        public string Builder => "BR Crewe Works(198), BR Swindon Works(53)";
-        public string BuildRange => "January 1954 – March 1960";
-        public string Designer => "Robert Riddles";
-        public int TotalProduced => 251;
-
         public SteamBRStandard9F()
         {
             ClassName = "BR Standard 9F";
@@ -39,5 +32,10 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
                 new LocoDetails("92214"),
                 });
         }
+
+        public string Builder => "BR Crewe Works(198), BR Swindon Works(53)";
+        public string BuildRange => "January 1954 – March 1960";
+        public string Designer => "Robert Riddles";
+        public int TotalProduced => 251;
     }
 }

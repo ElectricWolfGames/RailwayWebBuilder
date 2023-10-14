@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             LocoNumbers.AddRange(new[]
             {
-                new LocoDetails("D5054"),
+                new LocoDetails("D5054", "Phil Southern"),
                 });
         }
     }

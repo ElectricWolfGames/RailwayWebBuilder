@@ -5,7 +5,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
     public class SteamBRStandard2 : SteamClassBase
     {
-        
         public SteamBRStandard2()
         {
             ClassName = "BR Standard 2";

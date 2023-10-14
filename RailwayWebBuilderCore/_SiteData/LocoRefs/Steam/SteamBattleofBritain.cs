@@ -5,7 +5,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
     public class SteamBattleofBritain : SteamClassBase
     {
-
         public SteamBattleofBritain()
         {
             ClassName = "Battle of Britain";

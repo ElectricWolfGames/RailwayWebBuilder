@@ -5,7 +5,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
     public class SteamWestCountryClass : SteamClassBase
     {
-
         public SteamWestCountryClass()
         {
             ClassName = "West Country Class";

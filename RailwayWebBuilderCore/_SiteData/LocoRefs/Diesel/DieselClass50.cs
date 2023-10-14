@@ -27,6 +27,4 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
                 });
         }
     }
-
-
 }

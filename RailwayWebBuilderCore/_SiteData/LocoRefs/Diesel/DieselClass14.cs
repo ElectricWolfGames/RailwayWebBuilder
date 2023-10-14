@@ -9,7 +9,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ClassName = "Class 14";
             StockType = StockTypes.Diesel;
 
-
             Paragraph1 = "";
             Paragraph2 = "";
             Paragraph3 = "";

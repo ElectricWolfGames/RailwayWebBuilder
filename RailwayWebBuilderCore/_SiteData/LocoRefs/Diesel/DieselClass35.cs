@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         public DieselClass35()
         {
             ClassName = "Class 35";
-            //ClassDisplayName = "Class 35: Hymek";
+            ClassDisplayName = "Class 35: Hymek";
             StockType = StockTypes.Diesel;
 
             Paragraph1 = "";
@@ -22,6 +22,4 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
                 });
         }
     }
-
-
 }

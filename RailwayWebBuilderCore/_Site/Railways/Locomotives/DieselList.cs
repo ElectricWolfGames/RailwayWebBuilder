@@ -64,7 +64,11 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             foreach (var dieselClass in dieselList)
             {
-                pageBuilder.Title(dieselClass.ClassName);
+                string title = dieselClass.ClassName;
+                if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
+                    title = dieselClass.ClassDisplayName;
+
+                pageBuilder.Title(title);
                 dieselClass.PreviewLocos(pageBuilder, WebPage);
             }
             return pageBuilder.Output();

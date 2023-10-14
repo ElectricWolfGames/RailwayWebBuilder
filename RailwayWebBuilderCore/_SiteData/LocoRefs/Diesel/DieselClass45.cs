@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         public DieselClass45()
         {
             ClassName = "Class 45";
+            ClassDisplayName = "Class 45: Peak";
             StockType = StockTypes.Diesel;
 
             Paragraph1 = "The British Rail Class 45 or Sulzer Type 4 were diesel locomotives built by British Railways' Derby and Crewe Works between 1960 and 1962. Along with the similar Class 44 and 46 locomotives, they became known as Peaks.";

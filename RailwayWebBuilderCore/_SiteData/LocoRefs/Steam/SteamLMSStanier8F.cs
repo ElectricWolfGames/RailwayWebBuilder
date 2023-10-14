@@ -3,9 +3,9 @@ using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
-    public class SteamLMSStanier8FClass : SteamClassBase
+    public class SteamLMSStanier8F : SteamClassBase
     {
-        public SteamLMSStanier8FClass()
+        public SteamLMSStanier8F()
         {
             ClassName = "LMS Stanier 8F Class";
             StockType = StockTypes.SteamLoco;
@@ -17,7 +17,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
                 "double-headed by underpowered 0-6-0s supplemented by disappointing Garratts and Fowler 7F 0-8-0s. The 8F design incorporated the" +
                 "two-cylinder arrangement of the Black Fives.They were initially classified 7F, but this was later changed to the more familiar 8F.";
 
-
             Keywords.Add("London Midland and Scottish Railway");
             Keywords.Add("class 8F");
             Keywords.Add("hauling heavy freight");
@@ -25,6 +24,8 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
             LocoNumbers.AddRange(new[]
             {
                 new LocoDetails("48305"),
+                new LocoDetails("48773"),
+                new LocoDetails("600", "GORDON"),
                 });
         }
     }

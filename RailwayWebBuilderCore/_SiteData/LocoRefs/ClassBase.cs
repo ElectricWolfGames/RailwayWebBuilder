@@ -18,6 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
         public StockTypes StockType { get; set; } = StockTypes.Diesel;
         public string ClassName { get; set; }
+        public  string ClassDisplayName { get; set; }
         public List<string> Keywords { get; private set; } = new List<string>();
         public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
         public string Paragraph1 { get; set; } = "";

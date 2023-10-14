@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         public DieselClass55()
         {
             ClassName = "Class 55";
+            ClassDisplayName = "Class 55: Deltic";
             StockType = StockTypes.Diesel;
 
             Paragraph1 = "The British Rail Class 55, also known as a Deltic, is a class of diesel locomotive built in 1961 and 1962 by English Electric for British Railways. " +

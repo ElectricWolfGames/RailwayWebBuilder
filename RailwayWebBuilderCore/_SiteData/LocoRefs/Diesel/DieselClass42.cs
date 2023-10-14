@@ -8,6 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         {
             // TODO : Add Class 42 paragraphs
             ClassName = "Class 42";
+            ClassDisplayName = "Class 42: Warships";
             StockType = StockTypes.Diesel;
 
             Paragraph1 = "";
