@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
     {
         public SteamClassJ94()
         {
-            ClassName = "LNER J27, NER Class P3";
+            ClassName = "LNER J94";
             StockType = StockTypes.SteamLoco;
 
             Paragraph1 = "The LNER had had trials with one in November 1945 and bought 75 of them in 1946, " +
@@ -27,6 +27,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
             LocoNumbers.AddRange(new[]
             {
                 new LocoDetails("68067"),
+                new LocoDetails("No72"),
                 });
         }
     }
