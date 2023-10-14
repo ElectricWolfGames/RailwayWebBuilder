@@ -1,18 +1,15 @@
-﻿using RailwayWebBuilderCore.Configuration;
+﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
-    public class _60007 : LocomotiveDetailsBase
+    public class SteamClassA4 : SteamClassBase
     {
-        public _60007()
+        public SteamClassA4()
         {
-            Title = "60007, LNER Class A4 Sir Nigel Gresley, 4-6-2";
-            PageTitle = "60007";
-            Class = "Class A4";
-            HtmlFileName = $"{PageTitle}.html";
-            RawImagePath = Constants.RawDataPath + @"\Locos\60007\";
-            ExportImagePath = Constants.LocoRef + "images\\60007\\";
+            ClassName = "Class A4";
+            StockType = StockTypes.SteamLoco;
+
             Paragraph1 = "The Class A4 is a class of streamlined 4-6-2 steam locomotive designed by Nigel Gresley " +
                 "for the London and North Eastern Railway in 1935. Their streamlined design gave them high-speed capability as well as making " +
                 "them instantly recognisable, and one of the class, 4468 Mallard, holds the world record as the fastest steam locomotive. " +
@@ -21,9 +18,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
                 "the early 1960s when they were replaced by Deltic diesel locomotives; they themselves proving to be worthy successors to the A4s. " +
                 "Several A4s saw out their remaining days until 1966 in Scotland, particularly on the Aberdeen – Glasgow express trains, " +
                 "for which they were used to improve the timing from 3.5 to 3 hours.";
-            Order = 1;
-            FindTags = "60007";
-            StockType = StockTypes.SteamLoco;
+
+            LocoNumbers.AddRange(new[]
+            {
+                new LocoDetails("60007"),
+                });
         }
     }
 }
