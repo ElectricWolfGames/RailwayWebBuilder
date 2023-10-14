@@ -2,20 +2,18 @@
 using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
+using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
-using RailwayWebBuilderCore.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using Path = System.IO.Path;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
-    public class ClassBase: IDieselClass
+    public class ClassBase : IDieselClass
     {
         private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
         public StockTypes StockType { get; set; } = StockTypes.Diesel;
@@ -49,7 +47,10 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
                 if (!images.Any())
                     continue;
 
-                var image = images.First();
+                string image = images.First();
+                var showImages = images.Where(x => x.Contains("Show"));
+                if (showImages.Any())
+                    image = showImages.First();
 
                 string finalPath = "E:\\eWolfSiteUploads\\Railways\\Locomotives\\Ref\\images\\";
                 (string newPath, string newPathThumb) = HTMLHelper.CopyImageUploads(finalPath, image);
@@ -62,7 +63,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             pageBuilder.Text("</div>");
         }
 
-        // TO USED NEXT
         private static string CreateCard(string imagePath, string path, string locoNumber)
         {
             StringBuilder blogHtml = new StringBuilder();
@@ -75,7 +75,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             blogHtml.AppendLine("<div class='card-body'>");
             blogHtml.AppendLine($"      <a href='{path}'><img class='rounded float-right' width='214px' height ='160px'src='{imagePath}'></a>");
             blogHtml.AppendLine($"<p class='col-md-4 card-text float-left'></p>");
-//            blogHtml.AppendLine($"<p class='col-md-2 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
+            //            blogHtml.AppendLine($"<p class='col-md-2 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
             blogHtml.AppendLine("</div>");
             blogHtml.AppendLine("</div>");
             blogHtml.AppendLine("</div>");
