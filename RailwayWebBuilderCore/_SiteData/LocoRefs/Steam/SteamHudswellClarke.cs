@@ -1,7 +1,5 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
-using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Enums;
-using System.Windows.Documents;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {

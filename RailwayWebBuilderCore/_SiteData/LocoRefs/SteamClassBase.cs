@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
     {
         public override string GetRawImagePath(string locoNo)
         {
-            return Constants.RawDataPath + @$"\Locos\{locoNo}\";
+            return Constants.RawDataPath + @$"\Locos\_Steam\{locoNo}\";
         }
     }
 }

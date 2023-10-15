@@ -1,13 +1,7 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.SiteBuilder;
+﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 {
@@ -46,7 +40,5 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.EndBody();
             WebPage.Output();
         }
-
-
     }
 }

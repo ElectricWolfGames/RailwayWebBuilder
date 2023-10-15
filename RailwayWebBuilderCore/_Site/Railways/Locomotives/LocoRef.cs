@@ -70,50 +70,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             return pageBuilder.Output();
         }
 
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
-            WebPage.StartBody();
-
-            WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.Append(CreateHero(this));
-            WebPage.Append(CreateGroups(this, ""));
-
-            WebPage.Append("</div>");
-
-            WebPage.EndBody();
-            WebPage.Output();
-        }
-
-
-        internal static string[] GetKeywords(StockTypes steamLoco)
-        {
-            List<ILocomotiveRefPage> locorefTypes;
-
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
-
-            locorefTypes = layoutDetails.OrderBy(x => x.Title).ToList();
-            locorefTypes = locorefTypes.OrderBy(x => x.Order).ToList();
-
-            return locorefTypes.Select(x => x.Title).ToArray();
-        }
-
-
-        private static IEnumerable<IDieselClass> GetLocoRefDetails(StockTypes stockTypes)
-        {
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(IDieselClass))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as IDieselClass;
-
-            layoutDetails = layoutDetails.Where(x => x.StockType == stockTypes);
-            return layoutDetails;
-        }
         public static string CreatelItemList(WebPage webPage, StockTypes stockTypes)
         {
             HTMLBuilder pageBuilder = new HTMLBuilder();
@@ -136,5 +92,47 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             return pageBuilder.Output();
         }
 
+        public override void CreatePage()
+        {
+            WebPage.AddHeader(this);
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+            WebPage.StartBody();
+
+            WebPage.Append("<div class='container mt-12'>");
+
+            WebPage.Append(CreateHero(this));
+            WebPage.Append(CreateGroups(this, ""));
+
+            WebPage.Append("</div>");
+
+            WebPage.EndBody();
+            WebPage.Output();
+        }
+
+        internal static string[] GetKeywords(StockTypes steamLoco)
+        {
+            List<ILocomotiveRefPage> locorefTypes;
+
+            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
+                                      && t.GetConstructor(Type.EmptyTypes) != null
+                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
+
+            locorefTypes = layoutDetails.OrderBy(x => x.Title).ToList();
+            locorefTypes = locorefTypes.OrderBy(x => x.Order).ToList();
+
+            return locorefTypes.Select(x => x.Title).ToArray();
+        }
+
+        private static IEnumerable<IDieselClass> GetLocoRefDetails(StockTypes stockTypes)
+        {
+            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
+                                where t.GetInterfaces().Contains(typeof(IDieselClass))
+                                      && t.GetConstructor(Type.EmptyTypes) != null
+                                select Activator.CreateInstance(t) as IDieselClass;
+
+            layoutDetails = layoutDetails.Where(x => x.StockType == stockTypes);
+            return layoutDetails;
+        }
     }
 }

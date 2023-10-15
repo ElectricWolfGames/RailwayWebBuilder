@@ -41,7 +41,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.Append(LocoRef.CreateHero(this));
             WebPage.Append(LocoRef.CreateGroups(this, "..//"));
 
-
             WebPage.Append($"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>");
             WebPage.Append($"<p>{DieselClassBase.Paragraph1}</p>");
             WebPage.Append($"<p>{DieselClassBase.Paragraph2}</p>");

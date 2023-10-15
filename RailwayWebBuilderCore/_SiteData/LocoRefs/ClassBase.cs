@@ -16,14 +16,14 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
     public class ClassBase : IDieselClass
     {
         private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
-        public StockTypes StockType { get; set; } = StockTypes.Diesel;
+        public string ClassDisplayName { get; set; }
         public string ClassName { get; set; }
-        public  string ClassDisplayName { get; set; }
         public List<string> Keywords { get; private set; } = new List<string>();
         public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
         public string Paragraph3 { get; set; } = "";
+        public StockTypes StockType { get; set; } = StockTypes.Diesel;
 
         public List<string> GetAllImages(string tag)
         {
@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         public virtual string GetRawImagePath(string locoNo)
         {
-            return Constants.RawDataPath + @$"\Locos\{ClassName.Replace(" ", "")}-{locoNo}\";
+            return Constants.RawDataPath + @$"\Locos\_Diesel\{ClassName.Replace(" ", "")}-{locoNo}\";
         }
 
         public int PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage)
@@ -87,7 +87,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
             return blogHtml.ToString();
         }
-
 
         private void CreateLocorefPage(string number, ClassBase dieselClassBase, WebPage webPage)
         {

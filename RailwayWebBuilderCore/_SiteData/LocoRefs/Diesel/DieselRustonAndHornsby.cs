@@ -1,10 +1,7 @@
-﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
+﻿using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-
-
     public class DieselRustonAndHornsby : DieselClassBase
     {
         public DieselRustonAndHornsby()

@@ -1,19 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Helpers;
-using RailwayWebBuilderCore._Site.Railways.Locomotives;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Enums;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using Path = System.IO.Path;
-
-namespace RailwayWebBuilderCore._SiteData.LocoRefs
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
     /*public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
     {
@@ -70,7 +55,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         public void Build()
         {
             return;
-
         }
 
         public virtual void BuildOldVersion()
