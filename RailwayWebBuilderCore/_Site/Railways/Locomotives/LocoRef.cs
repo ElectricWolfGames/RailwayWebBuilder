@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
@@ -86,24 +87,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.Output();
         }
 
-        internal static string CreateStockList(StockTypes stockType)
-        {
-            var items = GetLocoRefDetails(stockType);
-
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-
-            pageBuilder.Text("<h2></h2>");
-            pageBuilder.Text("<us>");
-
-            foreach (var loco in items)
-            {
-                AddLocoRef(pageBuilder, loco);
-            }
-            pageBuilder.Text("</us>");
-            pageBuilder.Text("<br>");
-
-            return pageBuilder.Output();
-        }
 
         internal static string[] GetKeywords(StockTypes steamLoco)
         {
@@ -120,32 +103,38 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             return locorefTypes.Select(x => x.Title).ToArray();
         }
 
-        private static void AddLocoRef(HTMLBuilder pageBuilder, ILocomotiveRefPage loco)
+
+        private static IEnumerable<IDieselClass> GetLocoRefDetails(StockTypes stockTypes)
         {
-            if (loco.Title == null)
-                return;
-
-            loco.GrabImages();
-
-            loco.Build();
-
-            string href = $"<a href='Ref/{loco.PageTitle}.html'>{loco.Title}</a>";
-            pageBuilder.Text($"<li>{href}</li>");
-        }
-
-        private static List<ILocomotiveRefPage> GetLocoRefDetails(StockTypes locoStockType)
-        {
-            List<ILocomotiveRefPage> locorefTypes;
-
             var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
+                                where t.GetInterfaces().Contains(typeof(IDieselClass))
                                       && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
+                                select Activator.CreateInstance(t) as IDieselClass;
 
-            locorefTypes = layoutDetails.OrderBy(x => x.Title).ToList();
-            locorefTypes = locorefTypes.OrderBy(x => x.Order).ToList();
-
-            return locorefTypes.Where(x => x.StockType == locoStockType).ToList();
+            layoutDetails = layoutDetails.Where(x => x.StockType == stockTypes);
+            return layoutDetails;
         }
+        public static string CreatelItemList(WebPage webPage, StockTypes stockTypes)
+        {
+            HTMLBuilder pageBuilder = new HTMLBuilder();
+            var dieselList = GetLocoRefDetails(stockTypes);
+
+            foreach (var dieselClass in dieselList)
+            {
+                HTMLBuilder pageBuilderTemp = new HTMLBuilder();
+                string title = dieselClass.ClassName;
+                if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
+                    title = dieselClass.ClassDisplayName;
+                pageBuilderTemp.Title(title);
+
+                int count = dieselClass.PreviewLocos(pageBuilderTemp, webPage);
+                if (count != 0)
+                {
+                    pageBuilder.Text(pageBuilderTemp.Output());
+                }
+            }
+            return pageBuilder.Output();
+        }
+
     }
 }

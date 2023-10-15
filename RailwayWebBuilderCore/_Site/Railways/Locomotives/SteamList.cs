@@ -37,7 +37,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append(LocoRef.CreateHero(this));
             WebPage.Append(LocoRef.CreateGroups(this, ""));
-            WebPage.Append(CreateDesselList());
+            WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.SteamLoco));
 
             WebPage.Append("</div>");
 
@@ -47,37 +47,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.Output();
         }
 
-        private static IEnumerable<IDieselClass> GetLocoRefDetails()
-        {
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(IDieselClass))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as IDieselClass;
 
-            layoutDetails = layoutDetails.Where(x => x.StockType == StockTypes.SteamLoco);
-            return layoutDetails;
-        }
-
-        private string CreateDesselList()
-        {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-            var dieselList = GetLocoRefDetails();
-
-            foreach (var dieselClass in dieselList)
-            {
-                HTMLBuilder pageBuilderTemp = new HTMLBuilder();
-                string title = dieselClass.ClassName;
-                if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
-                    title = dieselClass.ClassDisplayName;
-                pageBuilderTemp.Title(title);
-
-                int count = dieselClass.PreviewLocos(pageBuilderTemp, WebPage);
-                if (count != 0)
-                {
-                    pageBuilder.Text(pageBuilderTemp.Output());
-                }
-            }
-            return pageBuilder.Output();
-        }
     }
 }

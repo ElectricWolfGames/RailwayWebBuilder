@@ -29,6 +29,9 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
         public override void CreatePage()
         {
+            DisplayTitle = $"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>";
+            MenuTitle = $"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>";
+
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
@@ -37,6 +40,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append(LocoRef.CreateHero(this));
             WebPage.Append(LocoRef.CreateGroups(this, "..//"));
+
 
             WebPage.Append($"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>");
             WebPage.Append($"<p>{DieselClassBase.Paragraph1}</p>");

@@ -15,7 +15,7 @@ using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
-    public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
+    /*public abstract class LocomotiveDetailsBase : ILocomotiveRefPage
     {
         private PageBuilder _pageBuilder;
 
@@ -71,27 +71,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         {
             return;
 
-            Directory.CreateDirectory(LocalPath);
-
-            var locref = new LocoRefHeader();
-            locref.Title = Title;
-            locref.Keywords.Add(Title);
-
-            locref.Keywords.AddRange(Keywords);
-            locref.Keywords.Add("Photos");
-            if (Keywords.Count > 0)
-                locref.Keywords.Add($"Photos of {Keywords[0]}");
-            locref.Keywords.Add("Images");
-            locref.Keywords.Add("reference");
-
-            //_pageBuilder = new PageBuilder(HtmlFileName, LocalPath, locref, "../../");
-
-            LocoRefPageDetailsOLDTOGO pageDetails = new LocoRefPageDetailsOLDTOGO();
-            pageDetails.MenuTitle = Title;
-            pageDetails.LocomotiveDetailsBase = this;
-            pageDetails.CreatePage();
-
-            //_pageBuilder.Output();
         }
 
         public virtual void BuildOldVersion()
@@ -211,5 +190,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             }
             return imageToUse;
         }
-    }
+    }*/
 }
