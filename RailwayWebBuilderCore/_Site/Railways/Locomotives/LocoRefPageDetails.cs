@@ -33,13 +33,13 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             MenuTitle = $"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>";
 
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-12'>");
 
             WebPage.Append(LocoRef.CreateHero(this));
-            WebPage.Append(LocoRef.CreateGroups(this, "..//"));
+            WebPage.Append(LocoRef.CreateGroups(this, "../"));
 
             WebPage.Append($"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>");
             WebPage.Append($"<p>{DieselClassBase.Paragraph1}</p>");
