@@ -62,6 +62,8 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
                 var filename = Path.GetFileName(newPath);
                 CreateLocorefPage(tag.Number, this, webPage);
 
+                newPathThumb = newPathThumb.Replace("E:\\eWolfSiteUploads\\Railways\\Locomotives\\", "");
+
                 pageBuilder.Text(CreateCard(newPathThumb, "Ref\\", tag.Number));
             }
             pageBuilder.Text("</div>");

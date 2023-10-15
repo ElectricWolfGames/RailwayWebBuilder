@@ -29,8 +29,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
         public override void CreatePage()
         {
-            DisplayTitle = $"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>";
-            MenuTitle = $"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>";
+            DisplayTitle = $"{DieselClassBase.ClassName}: {LocoNumber}";
+            MenuTitle = $"{DieselClassBase.ClassName}: {LocoNumber}";
 
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
