@@ -96,6 +96,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             pageDetails.DieselClassBase = dieselClassBase;
             pageDetails.MenuTitle = number;
             pageDetails.LocoNumber = number;
+            pageDetails.WebPage.HtmlPath = webPage.HtmlPath+"\\Ref";
             pageDetails.GalleryPath = GetRawImagePath(number);
             pageDetails.CreatePage();
         }

@@ -25,8 +25,8 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
         public ModelRailwayPageDetails()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "bah";
-            MenuTitle = "hab";
+            DisplayTitle = "To update later";
+            MenuTitle = "To update later";
             DontShowNavigation = true;
             DontBuildPage = true;
         }

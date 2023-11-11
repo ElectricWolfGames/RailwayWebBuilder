@@ -55,7 +55,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append("</div>");
             WebPage.Append(HTMLRailHelper.Modal());
-            WebPage.Append("<script src='../Scripts/script.js'></script>");
+            WebPage.Append("<script src='../../Scripts/script.js'></script>");
 
             WebPage.EndBody();
             WebPage.Output();
