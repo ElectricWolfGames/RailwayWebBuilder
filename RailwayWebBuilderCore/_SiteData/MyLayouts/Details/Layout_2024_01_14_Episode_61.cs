@@ -17,14 +17,13 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
             Title = "<h2>61: New Loco and more wagons</h2>";
             Details.Append("<p>Hello and welcome back to Karl and Debbie trains, And we have another Cattington model railway layout update for you.</p>");
             Details.Append("</br>");
-            Details.Append("<p>This time we have 6 9F on the layout to take a look at.</p>");
+            Details.Append("<p>We have picked up a new Class 03: Bachmann 31-361B D2028</p>");
+            Details.Append("<p>And a selection of new wagons</p>");
+            Details.Append("<p>also some extra items for the layout</p>");
 
             Details.Append("</br>");
-            Details.Append("</br>");
-            Details.Append("</br>");
-            Details.Append("</br>");
             Details.Append("<p>Thank you for watching, Take care</p>");
-            YouTubeLink = "";
+            YouTubeLink = "FU3RNhmX_Hg";
         }
 
         public IBlog GetBlog()
