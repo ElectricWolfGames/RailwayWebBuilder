@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
             Details.Append("<p>Hello and welcome back to Karl and Debbie trains, And we have another Cattington model railway layout update for you.</p>");
             Details.Append("</br>");
             Details.Append("<p>This time we have 6 9F on the layout to take a look at.</p>");
-            
+
             Details.Append("</br>");
             Details.Append("<ul>");
             Details.Append("<li>R3987 Late BR Class 9F 92194 (Hornby)</li>");
