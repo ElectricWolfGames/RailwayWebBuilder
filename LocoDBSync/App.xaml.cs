@@ -10,5 +10,4 @@ namespace LocoDBSync
     public partial class App : Application
     {
     }
-
 }

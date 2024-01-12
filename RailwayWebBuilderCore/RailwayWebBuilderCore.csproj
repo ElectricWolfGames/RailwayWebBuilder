@@ -25,6 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\GitHub\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
     <ProjectReference Include="..\..\..\GitHub\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
   </ItemGroup>
