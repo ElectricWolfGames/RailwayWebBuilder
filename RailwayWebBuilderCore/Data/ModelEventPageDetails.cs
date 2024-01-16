@@ -34,8 +34,8 @@ namespace RailwayWebBuilderCore.Data
 
         public void Fix()
         {
-            if (ImagePreview != null)
-                ImagePreview = ImagePreview.Replace(".jpg", ".JPG");
+           // if (ImagePreview != null)
+            //    ImagePreview = ImagePreview.Replace(".jpg", ".JPG");
         }
     }
 }

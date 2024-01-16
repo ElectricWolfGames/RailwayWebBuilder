@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             YouTubeLink = "https://www.youtube.com/embed/26L2peFd8og";
             ImageFolder = "20190921-Lichfield";
             Title = "Lichfield Model Railways 2019";
-            ImagePreview = "P9215780-thumb.jpg";
+            ImagePreview = "P9215780-thumb.JPG";
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Lichfield", "Lichfield Model Railways", "Trent Valley Model Railway Society", "TVMRS" });

@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             YouTubeLink = "https://www.youtube.com/embed/oFrYD7NMH-8";
             ImageFolder = "20190831-Loughborough";
             Title = "Loughborough Model Railway Exhibition 2019";
-            ImagePreview = "P8315301-thumb.jpg";
+            ImagePreview = "P8315301-thumb.JPG";
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Loughborough", "Loughborough Model Railway Exhibition", });

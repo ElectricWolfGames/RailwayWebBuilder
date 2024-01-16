@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             YouTubeLink = "https://www.youtube.com/embed/DzjtAOowBKE";
             ImageFolder = "20190914-Kettering";
             Title = "Kettering Model Railway Exhibition 2019";
-            ImagePreview = "P9145561-thumb.jpg";
+            ImagePreview = "P9145561-thumb.JPG";
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Kettering", "Kettering Model Railway Exhibition", });

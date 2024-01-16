@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             YouTubeLink = "https://www.youtube.com/embed/yP6tlbtXYxA";
             ImageFolder = "20191012-Kirkby";
             Title = "The Elizabethan Railway Society Exhibition 2019";
-            ImagePreview = "PA126400-Willen-end-Kirkby-In-Ashfield-thumb.jpg";
+            ImagePreview = "PA126400-Willen-end-Kirkby-In-Ashfield-thumb.JPG";
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Kirkby-In-Ashfield", "The Elizabethan Railway Society Exhibition", "Kirkby-In-Ashfield Model Railway" });

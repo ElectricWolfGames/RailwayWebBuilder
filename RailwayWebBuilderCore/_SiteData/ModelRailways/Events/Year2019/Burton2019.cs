@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             YouTubeLink = "https://www.youtube.com/embed/gADZzAauDuU";
             ImageFolder = "20191103-Burton";
             Title = "Burton Model Railex 2019";
-            ImagePreview = "PB037041-Burton-model-railex-thumb.jpg";
+            ImagePreview = "PB037041-Burton-model-railex-thumb.JPG";
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Burton", "Burton Model Railex" });
