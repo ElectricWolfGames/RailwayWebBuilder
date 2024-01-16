@@ -15,4 +15,7 @@
 /Helpers/EventsDetailsCreator/bin/Debug/net7.0
 /Helpers/EventsDetailsCreator/obj
 /RailwayWebBuilderCore/bin/Debug/net6.0-windows
-/LocoDBSync/obj
+/LocoDBSync/obj/
+/LocoDBSync/bin/Debug/net8.0
+
+/LocoDBSync/bin/Debug/net8.0-windows

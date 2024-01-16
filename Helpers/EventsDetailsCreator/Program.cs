@@ -9,13 +9,13 @@ namespace bha
 
             List<string> allNames = new List<string>();
 
-            /*string names = "Ribblehead Layout";
-            allNames.AddRange(ShowEnums(names, "Gauges.T_Gauge"));
-
+            string names = "Burdock,Silverton,Doe Lea,Train Spotting";
+            allNames.AddRange(ShowEnums(names, "Gauges.N_Gauge"));
+            /*
             names = "Ilfracombe East";
             allNames.AddRange(ShowEnums(names, "Gauges.OO9_Gauge"));
             */
-            string names = "Little Burton,Pipeyard,Bishopston,Bottom of the Barrel,Riddle to Old Town,Dragons Lair,Thomas,Effingborough,Hackworth Jutland Street,Marmagne,Baykolands,Ella Road";
+            names = "Ella Road,Shovel Head Halt,Dunsfold Road";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
 
             /*names = "Atherley Narrows,San Clemente,Wolfstatt";
@@ -23,10 +23,10 @@ namespace bha
 
             names = "Glenmore Parva,Hackworth (Trafalgar Terrace),Hillton. T.M.D and M.o.d,Illie Town,Linwood Lane,Loughborough Midland,Myton,Smallwood,Southgate Park,Thorncliffe";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
-
-            names = "Charnwood,Newchapel Junction,Cook End,Wolf Lowe";
-            allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
             */
+            names = "Templegate Wagon Works";
+            allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
+            
             ListAllLayoyts(allNames);
         }
 
@@ -44,7 +44,7 @@ namespace bha
 
         private static List<string> ShowEnums(string names, string enumGauge)
         {
-            string path = "E:\\Trains\\Photos - Main\\2023\\2023-08-12 Soar Vally Model Railway Club\\Videos";
+            string path = "E:\\Trains\\Photos - Main\\2024\\2024-01-13 Birstall - Syston Model Railway\\Clips";
 
             List<string> allNames = new List<string>();
 
@@ -57,8 +57,8 @@ namespace bha
                 allNames.Add(WithoutSpaces(part));
 
 
-                Directory.CreateDirectory($"{path}\\{part}");
-                Console.WriteLine();
+                //Directory.CreateDirectory($"{path}\\{part}");
+                //Console.WriteLine();
             }
             return allNames;
         }
