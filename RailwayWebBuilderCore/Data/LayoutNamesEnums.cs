@@ -364,5 +364,17 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Ella Road", Gauges.OO_Gauge)]
         EllaRoad,
+
+        [DescriptionGauge("Doe Lea", Gauges.N_Gauge)]
+        DoeLea,
+        [DescriptionGauge("Train Spotting", Gauges.N_Gauge)]
+        TrainSpotting,
+        [DescriptionGauge("Shovel Head Halt", Gauges.OO_Gauge)]
+        ShovelHeadHalt,
+        [DescriptionGauge("Dunsfold Road", Gauges.OO_Gauge)]
+        DunsfoldRoad,
+        [DescriptionGauge("Templegate Wagon Works", Gauges.O_Gauge)]
+        TemplegateWagonWorks,
+
     }
 }
