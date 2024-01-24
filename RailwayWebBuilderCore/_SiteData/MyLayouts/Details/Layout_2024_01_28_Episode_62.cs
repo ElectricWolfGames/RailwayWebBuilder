@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 
             Details.Append("</br>");
             Details.Append("<p>Thank you for watching, Take care</p>");
-            YouTubeLink = "";
+            YouTubeLink = "Wi4SWrfwcxQ";
         }
 
         public IBlog GetBlog()
