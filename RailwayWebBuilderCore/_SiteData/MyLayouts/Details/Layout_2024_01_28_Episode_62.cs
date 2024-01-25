@@ -34,7 +34,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
                 Date = When,
                 Link = "MyLayouts/index.html",
                 Paragraph = "Full layout tour",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_5289-thumb.JPG",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_5305-thumb.JPG",
             };
         }
     }
