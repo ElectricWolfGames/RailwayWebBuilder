@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
     public class ClassBase : IDieselClass
     {
-        private const string LookInFolders = "E:\\Trains\\Photos - Main\\2023\\";
+        private const string LookInFolders = "E:\\Trains\\Photos - Main\\2024\\";
         public string ClassDisplayName { get; set; }
         public string ClassName { get; set; }
         public List<string> Keywords { get; private set; } = new List<string>();
@@ -27,6 +27,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         public List<string> GetAllImages(string tag)
         {
+            if (tag == "48305")
+            {
+                int i= 0;
+                i++;
+            }
             UpdateImageStock(tag);
 
             string rawPath = GetRawImagePath(tag);
