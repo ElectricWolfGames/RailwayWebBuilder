@@ -81,7 +81,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             ModelRailwayPageDetails cattingtonPageDetails = new ModelRailwayPageDetails
             {
                 ModelEvent = modelEvent,
-
+                DisplayTitle = modelEvent.Title,
                 MenuTitle = "index"
             };
 

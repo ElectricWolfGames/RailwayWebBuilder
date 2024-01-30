@@ -33,7 +33,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, @"../");
             WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
             WebPage.StartBody();
 

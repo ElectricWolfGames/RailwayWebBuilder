@@ -6,11 +6,11 @@ namespace RailwayWebBuilderCore._SiteData
 {
     internal class RailwaySiteHeader : IPageHeaderDetails
     {
-        public string Output(PageDetails pageDetails)
+        public string Output(PageDetails pageDetails, string extraOffSet = "")
         {
             StringBuilder _stringBuilder = new StringBuilder();
 
-            var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", ""));
+            var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", ""))+extraOffSet;
             _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
             _stringBuilder.Append("	<head>");
             AddSiteTracker(_stringBuilder);

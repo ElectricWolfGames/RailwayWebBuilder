@@ -59,7 +59,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts
                 pageBuilder.Text(NavBarHelper.Pagination(pageIndex, totalPages));
                 pageBuilder.Text("</div>");
                 pageBuilder.Text(HTMLRailHelper.Modal());
-                pageBuilder.Text("<script src='../Scripts/script.js'></script>");
+                pageBuilder.Text("<script src='../../Scripts/script.js'></script>");
 
                 pageBuilder.Output();
 
