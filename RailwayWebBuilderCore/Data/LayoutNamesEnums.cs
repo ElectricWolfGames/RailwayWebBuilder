@@ -367,14 +367,59 @@ namespace RailwayWebBuilderCore.Data
 
         [DescriptionGauge("Doe Lea", Gauges.N_Gauge)]
         DoeLea,
+
         [DescriptionGauge("Train Spotting", Gauges.N_Gauge)]
         TrainSpotting,
+
         [DescriptionGauge("Shovel Head Halt", Gauges.OO_Gauge)]
         ShovelHeadHalt,
+
         [DescriptionGauge("Dunsfold Road", Gauges.OO_Gauge)]
         DunsfoldRoad,
+
         [DescriptionGauge("Templegate Wagon Works", Gauges.O_Gauge)]
         TemplegateWagonWorks,
 
+        [DescriptionGauge("Bank", Gauges.N_Gauge)]
+        Bank,
+
+        [DescriptionGauge("Claremont", Gauges.N_Gauge)]
+        Claremont,
+
+        [DescriptionGauge("Just Four", Gauges.N_Gauge)]
+        JustFour,
+
+        [DescriptionGauge("New Dalby Research Division", Gauges.N_Gauge)]
+        NewDalbyResearchDivision,
+
+        [DescriptionGauge("Welby Lane", Gauges.OO_Gauge)]
+        WelbyLane,
+
+        [DescriptionGauge("Granby Lane", Gauges.OO_Gauge)]
+        GranbyLane,
+
+        [DescriptionGauge("Cumanavago", Gauges.OO_Gauge)]
+        Cumanavago,
+
+        [DescriptionGauge("Burch Green", Gauges.OO_Gauge)]
+        BurchGreen,
+
+        [DescriptionGauge("Arnold Lane", Gauges.OO_Gauge)]
+        ArnoldLane,
+
+        [DescriptionGauge("Hillport Goods", Gauges.O_Gauge)]
+        HillportGoods,
+
+        [DescriptionGauge("Croft Mill Yard", Gauges.O_Gauge)]
+        CroftMillYard,
+
+        [DescriptionGauge("ShawbridgeJunction", Gauges.NONE)]
+        ShawbridgeJunction,
+
+        [DescriptionGauge("Torcy", Gauges.HO_Gauge)]
+        Torcy,
+
+        [DescriptionGauge("Westwick", Gauges.NONE)]
+        Westwick
     }
 }

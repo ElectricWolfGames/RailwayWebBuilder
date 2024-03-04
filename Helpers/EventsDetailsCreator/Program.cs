@@ -9,13 +9,13 @@ namespace bha
 
             List<string> allNames = new List<string>();
 
-            string names = "Burdock,Silverton,Doe Lea,Train Spotting";
+            string names = "Bank,Claremont,Just Four,New Dalby Research Divisio,Oscarton";
             allNames.AddRange(ShowEnums(names, "Gauges.N_Gauge"));
             /*
             names = "Ilfracombe East";
             allNames.AddRange(ShowEnums(names, "Gauges.OO9_Gauge"));
             */
-            names = "Ella Road,Shovel Head Halt,Dunsfold Road";
+            names = "Welby Lane,Linwood Lane,Granby Lane,Cumanavago,Burch Green,Arnold Lane";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
 
             /*names = "Atherley Narrows,San Clemente,Wolfstatt";
@@ -24,7 +24,7 @@ namespace bha
             names = "Glenmore Parva,Hackworth (Trafalgar Terrace),Hillton. T.M.D and M.o.d,Illie Town,Linwood Lane,Loughborough Midland,Myton,Smallwood,Southgate Park,Thorncliffe";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
             */
-            names = "Templegate Wagon Works";
+            names = "Hillport Goods,Croft Mill Yard";
             allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
             
             ListAllLayoyts(allNames);
