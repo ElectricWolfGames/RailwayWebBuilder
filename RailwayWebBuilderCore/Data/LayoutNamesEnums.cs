@@ -410,16 +410,19 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Hillport Goods", Gauges.O_Gauge)]
         HillportGoods,
 
-        [DescriptionGauge("Croft Mill Yard", Gauges.O_Gauge)]
-        CroftMillYard,
+        [DescriptionGauge("Croft Mill Wharf", Gauges.O_Gauge)]
+        CroftMillWharf,
 
-        [DescriptionGauge("ShawbridgeJunction", Gauges.NONE)]
+        [DescriptionGauge("Shawbridge Junction", Gauges.N_Gauge)]
         ShawbridgeJunction,
 
         [DescriptionGauge("Torcy", Gauges.HO_Gauge)]
         Torcy,
 
-        [DescriptionGauge("Westwick", Gauges.NONE)]
-        Westwick
+        [DescriptionGauge("Westwick", Gauges.N_Gauge)]
+        Westwick,
+
+        [DescriptionGauge("The Sidings", Gauges.OO9_Gauge)]
+        TheSidings
     }
 }

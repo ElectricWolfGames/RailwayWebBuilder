@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
     {
         public CroftMillYard()
         {
-            Name = LayoutNamesEnums.CroftMillYard;
+            Name = LayoutNamesEnums.CroftMillWharf;
             Owner = "Ian Atkinson";
             Description = ""; // TODO Needs description
         }

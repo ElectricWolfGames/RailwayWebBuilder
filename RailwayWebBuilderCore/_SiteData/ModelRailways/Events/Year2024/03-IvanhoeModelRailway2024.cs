@@ -16,10 +16,10 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Descrption = "Ivanhoe Model Railway Society at Mountsorrel.";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2024-03-09 Ivanhoe Model Railway Society";
             TripDate = new DateTime(2024, 03, 09);
-            YouTubeLink = "?????????????";
+            YouTubeLink = "https://www.youtube.com/embed/vMfDTv50Aa0";
             ImageFolder = "20240309-Mountsorrel";
             Title = "Ivanhoe Model Railway Society 2024";
-            ImagePreview = ".JPG";
+            ImagePreview = "IMG_5431-thumb.JPG";
 
 
 
@@ -27,7 +27,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bank));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BurchGreen));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Claremont));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroftMillYard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroftMillWharf));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cumanavago));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.GranbyLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.HillportGoods));
@@ -41,6 +41,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.LionelVintageCollection));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WelbyLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Westwick));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheSidings));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
