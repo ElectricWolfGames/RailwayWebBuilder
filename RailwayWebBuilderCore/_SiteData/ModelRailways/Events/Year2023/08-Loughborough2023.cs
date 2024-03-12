@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2023
             YouTubeLink = "https://www.youtube.com/embed/X7ncKuT-0Oo";
             ImageFolder = "20230812-Loughborough";
             Title = "Soar Valley Model Railway Club 2023";
-            ImagePreview = "IMG_4349-2023-08-12-Soar-vally-model-show-thumb.JPG";
+            ImagePreview = "IMG_4349-Soar-vally-model-show-Smallwood-thumb.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.RibbleheadLayout));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.IlfracombeEast));

@@ -19,8 +19,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             YouTubeLink = "https://www.youtube.com/embed/vMfDTv50Aa0";
             ImageFolder = "20240309-Mountsorrel";
             Title = "Ivanhoe Model Railway Society 2024";
-            ImagePreview = "IMG_5431-thumb.JPG";
-
+            ImagePreview = "IMG_5431-Hillport-Goods-thumb.JPG";
 
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.ArnoldLane));
