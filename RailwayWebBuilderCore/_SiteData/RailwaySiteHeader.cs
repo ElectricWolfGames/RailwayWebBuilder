@@ -13,7 +13,7 @@ namespace RailwayWebBuilderCore._SiteData
             var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", ""))+extraOffSet;
             _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
             _stringBuilder.Append("	<head>");
-            AddSiteTracker(_stringBuilder);
+            //AddSiteTracker(_stringBuilder);
             _stringBuilder.AppendLine($"<meta charset='UTF-8'>");
             _stringBuilder.AppendLine($"<title>{pageDetails.DisplayTitle}</title>");
             _stringBuilder.AppendLine($"<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
