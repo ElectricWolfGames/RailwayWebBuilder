@@ -16,6 +16,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             LocoNumbers.AddRange(new[] {
                 new LocoDetails("1705", "SparrowHawk"),
                 new LocoDetails("47292"),
+                new LocoDetails("47761"),
                 });
         }
     }
