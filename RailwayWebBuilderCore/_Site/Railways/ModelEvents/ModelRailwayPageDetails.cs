@@ -126,7 +126,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-4'>");
+            stringBuilder.AppendLine("<div class='col-md-12'>");
             stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
             stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
             stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
@@ -155,18 +155,21 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             }
 
             stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("<div class='col-md-6'>");
+
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
             if (!string.IsNullOrWhiteSpace(pageDetails.YouTubeLink))
             {
+                stringBuilder.AppendLine("<div class='row'>");
+                stringBuilder.AppendLine("<div class='col-md-12'>");
+
                 stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9'>");
                 stringBuilder.AppendLine($"<iframe src='{pageDetails.YouTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
                 stringBuilder.AppendLine("</div>");
+
+                stringBuilder.AppendLine("</div>");
+                stringBuilder.AppendLine("</div>");
             }
-
-            stringBuilder.AppendLine("</div>");
-
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
         }
