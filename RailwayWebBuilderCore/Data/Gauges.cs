@@ -25,6 +25,7 @@
         G_Gauge,
         Multigauge,
         SM32,
-        T_Gauge
+        T_Gauge,
+        TT120_Gauge
     }
 }

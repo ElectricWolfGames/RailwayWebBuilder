@@ -423,6 +423,42 @@ namespace RailwayWebBuilderCore.Data
         Westwick,
 
         [DescriptionGauge("The Sidings", Gauges.OO9_Gauge)]
-        TheSidings
+        TheSidings,
+
+        [DescriptionGauge("Ashtown", Gauges.N_Gauge)]
+        Ashtown,
+
+        [DescriptionGauge("Boxworks Wharf", Gauges.OO9_Gauge)]
+        BoxworksWharf,
+
+        [DescriptionGauge("Bregstadt", Gauges.TT120_Gauge)]
+        Bregstadt,
+
+        [DescriptionGauge("Bridges", Gauges.OO9_Gauge)]
+        Bridges,
+
+        [DescriptionGauge("Denton Sidings", Gauges.O_Gauge)]
+        DentonSidings,
+
+        [DescriptionGauge("Harbourne St Mary", Gauges.O_Gauge)]
+        HarbourneStMary,
+
+        [DescriptionGauge("Hawton Lane", Gauges.OO_Gauge)]
+        HawtonLane,
+
+        [DescriptionGauge("Littlepoint Wharf", Gauges.OO_Gauge)]
+        LittlePointWharf,
+
+        [DescriptionGauge("Newton Folly", Gauges.OO_Gauge)]
+        NewtonFolly,
+
+        [DescriptionGauge("Blue Heron", Gauges.HO_Gauge)]
+        BlueHeron,
+
+        [DescriptionGauge("Victoria", Gauges.EM_Gauge)]
+        Victoria,
+
+        [DescriptionGauge("Limby Fields", Gauges.OO_Gauge)]
+        LimbyFields
     }
 }

@@ -1,4 +1,7 @@
-﻿/*namespace RailwayWebBuilderCore.KeepForNow
+﻿/*using eWolfBootstrap.Builders;
+using System;
+
+namespace RailwayWebBuilderCore.KeepForNow
 {
     public class GCRTextToDonate
     {
@@ -12,7 +15,7 @@
 
         public void Build()
         {
-            return;
+            
             Directory.CreateDirectory(LocalPath);
 
             List<DonateAmount> donateAmounts = LoadDonations();
