@@ -17,7 +17,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
             Title = "<h2>66: 2 Guest locos</h2>";
             Details.Append("<p>Hello and welcome back to Karl and Debbie trains, And we have another Cattington model railway layout update for you.</p>");
             Details.Append("</br>");
-            Details.Append("<p>We 2 guest loco to show you. </p>");
+            Details.Append("<p>The 2 guest loco to show you. </p>");
             Details.Append("<p>31-138 Class D11/2 62682 Haystoun of Bucklaw</p>");
             Details.Append("<p>31-004A Robinson Class 04 63601</p>");
             Details.Append("<p>And we have some small updates around the layout</p>");
