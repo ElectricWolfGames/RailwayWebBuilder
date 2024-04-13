@@ -459,6 +459,100 @@ namespace RailwayWebBuilderCore.Data
         Victoria,
 
         [DescriptionGauge("Limby Fields", Gauges.OO_Gauge)]
-        LimbyFields
+        LimbyFields,
+
+        // ----
+        [DescriptionGauge("Lawrie's Mechanical Marvels Ncma Modular Railway", Gauges.OO_Gauge)]
+        LawriesMechanicalMarvelsNcmaModularRailway,
+
+        [DescriptionGauge("Ashgate", Gauges.OO9_Gauge)]
+        Ashgate,
+
+        [DescriptionGauge("Bad Durkheim Betriebshof", Gauges.N_Gauge)]
+        BadDurkheimBetriebshof,
+
+        [DescriptionGauge("Beckwick", Gauges.OO_Gauge)]
+        Beckwick,
+
+        [DescriptionGauge("Beddgelert Junction", Gauges.OO9_Gauge)]
+        BeddgelertJunction,
+
+        [DescriptionGauge("Borth Aberdovey & Ynyslas Railway", Gauges._32mm_Gauge)]
+        BorthAberdovey_YnyslasRailway,
+
+        [DescriptionGauge("Breydon", Gauges.OO_Gauge)]
+        Breydon,
+
+        [DescriptionGauge("Buxton Railex", Gauges.NONE)]
+        BuxtonRailex,
+
+        [DescriptionGauge("Corrish", Gauges.OO9_Gauge)]
+        Corrish,
+
+        [DescriptionGauge("Dawlish Warren", Gauges.N_Gauge)]
+        DawlishWarren,
+
+        [DescriptionGauge("Derwent Railway", Gauges._9mm)]
+        DerwentRailway,
+
+        [DescriptionGauge("Fair T'middlin", Gauges.OO_Gauge)]
+        FairTmiddlin,
+
+        [DescriptionGauge("Fenn Street Yard", Gauges.O_Gauge)]
+        FennStreetYard,
+
+        [DescriptionGauge("Glenadam Distillery", Gauges.OO_Gauge)]
+        GlenadamDistillery,
+
+        [DescriptionGauge("Hodgemead", Gauges.OO9_Gauge)]
+        Hodgemead,
+
+        [DescriptionGauge("Hornby Magazine's New Layout", Gauges.TT120_Gauge)]
+        HornbyMagazinesNewLayout,
+
+        [DescriptionGauge("Lapping Works", Gauges.O_Gauge)]
+        LappingWorks,
+
+        [DescriptionGauge("Leigh St George", Gauges.N_Gauge)]
+        LeighStGeorge,
+
+        [DescriptionGauge("Nant GWRtheyrn", Gauges.OO9_Gauge)]
+        NantGWRtheyrn,
+
+        [DescriptionGauge("Oakhurst Town", Gauges._33mm_Gauge)]
+        OakhurstTown,
+
+        [DescriptionGauge("Port Dinorwic", Gauges.OO_Gauge)]
+        PortDinorwic,
+
+        
+        [DescriptionGauge("Ruston and Hornsby, Sheaf Ironworks", Gauges.OO_Gauge)]
+        RustonandHornsby_SheafIronworks,
+
+        
+        [DescriptionGauge("St Etienne-En-Caux", Gauges.HOe_Gauge)]
+        StEtienne_En_Caux,
+
+        [DescriptionGauge("St Philips", Gauges.OO_Gauge)]
+        StPhilips,
+
+        [DescriptionGauge("Stanley Midland", Gauges._45mm)]
+        StanleyMidland,
+
+        [DescriptionGauge("The Charnwood Branch", Gauges.O_Gauge)]
+        TheCharnwoodBranch,
+
+        [DescriptionGauge("The End of the Estate", Gauges.O_Gauge)]
+        TheEndoftheEstate,
+
+        [DescriptionGauge("Torreycombe", Gauges.OO_Gauge)]
+        Torreycombe,
+
+        [DescriptionGauge("West Coast Cement", Gauges.OO_Gauge)]
+        WestCoastCement,
+
+
+
+
     }
 }

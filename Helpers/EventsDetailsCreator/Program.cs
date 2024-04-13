@@ -1,5 +1,5 @@
 ﻿
-namespace bha
+namespace LayoutHelper
 {
     public static class programm
     {
@@ -7,27 +7,37 @@ namespace bha
         {
             Console.WriteLine("Hello, World!");
 
+
+            var layoutList = new LayoutListParse();
+            layoutList.Parse();
+            layoutList.CreateFolders(@"E:\\Trains\\Photos - Main\\2024\\2024-04-13 Statfold's Model Railway Exhibition");
+
+
+            /*
+
+
+
             List<string> allNames = new List<string>();
 
             string names = "Bank,Claremont,Just Four,New Dalby Research Divisio,Oscarton";
             allNames.AddRange(ShowEnums(names, "Gauges.N_Gauge"));
-            /*
+            
             names = "Ilfracombe East";
             allNames.AddRange(ShowEnums(names, "Gauges.OO9_Gauge"));
-            */
+            
             names = "Welby Lane,Linwood Lane,Granby Lane,Cumanavago,Burch Green,Arnold Lane";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
 
-            /*names = "Atherley Narrows,San Clemente,Wolfstatt";
+            names = "Atherley Narrows,San Clemente,Wolfstatt";
             allNames.AddRange(ShowEnums(names, "Gauges.HO_Gauge"));
 
             names = "Glenmore Parva,Hackworth (Trafalgar Terrace),Hillton. T.M.D and M.o.d,Illie Town,Linwood Lane,Loughborough Midland,Myton,Smallwood,Southgate Park,Thorncliffe";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
-            */
+            
             names = "Hillport Goods,Croft Mill Yard";
             allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
             
-            ListAllLayoyts(allNames);
+            ListAllLayoyts(allNames);*/
         }
 
         private static void ListAllLayoyts(List<string> allNames)
