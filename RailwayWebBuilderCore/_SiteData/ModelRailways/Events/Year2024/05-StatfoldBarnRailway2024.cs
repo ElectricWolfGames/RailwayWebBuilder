@@ -60,7 +60,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             return new Blog
             {
                 Name = "Statfold Model Railway Event 2024",
-                Date = new DateTime(2024, 04, 13),
+                Date = new DateTime(2024, 04, 16),
                 Paragraph = "Visited Statfold's Model Railway Exhibition ",
                 Link = $"{Constants.ModelEvents}/20240413-Statfold/index.html",
                 ModelEvent = this,

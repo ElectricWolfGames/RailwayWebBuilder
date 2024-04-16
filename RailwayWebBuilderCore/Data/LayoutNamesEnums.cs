@@ -495,7 +495,7 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Derwent Road", Gauges._9mm)]
         DerwentRoad,
 
-        [DescriptionGauge("Fair T'middlin", Gauges.OO_Gauge)]
+        [DescriptionGauge("Fair Tmiddlin", Gauges.OO_Gauge)]
         FairTmiddlin,
 
         [DescriptionGauge("Fenn Street Yard", Gauges.O_Gauge)]
