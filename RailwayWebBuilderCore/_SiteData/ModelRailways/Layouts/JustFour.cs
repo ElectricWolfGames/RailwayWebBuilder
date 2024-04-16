@@ -2,7 +2,7 @@
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class JustFour  : LayoutBase
+    internal class JustFour : LayoutBase
     {
         public JustFour()
         {
@@ -11,5 +11,4 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
             Description = ""; // TODO Needs description
         }
     }
-
 }

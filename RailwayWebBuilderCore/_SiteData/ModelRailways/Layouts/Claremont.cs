@@ -11,5 +11,4 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
             Description = ""; // TODO Needs description
         }
     }
-
 }
