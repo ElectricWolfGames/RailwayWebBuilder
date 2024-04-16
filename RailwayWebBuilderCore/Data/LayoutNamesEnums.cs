@@ -492,8 +492,8 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Dawlish Warren", Gauges.N_Gauge)]
         DawlishWarren,
 
-        [DescriptionGauge("Derwent Railway", Gauges._9mm)]
-        DerwentRailway,
+        [DescriptionGauge("Derwent Road", Gauges._9mm)]
+        DerwentRoad,
 
         [DescriptionGauge("Fair T'middlin", Gauges.OO_Gauge)]
         FairTmiddlin,
@@ -525,16 +525,16 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Port Dinorwic", Gauges.OO_Gauge)]
         PortDinorwic,
 
-        
+        [DescriptionGauge("Quarry End", Gauges.OO9_Gauge)]
+        QuarryEnd,
+
+
         [DescriptionGauge("Ruston and Hornsby, Sheaf Ironworks", Gauges.OO_Gauge)]
         RustonandHornsby_SheafIronworks,
 
         
         [DescriptionGauge("St Etienne-En-Caux", Gauges.HOe_Gauge)]
         StEtienne_En_Caux,
-
-        [DescriptionGauge("St Philips", Gauges.OO_Gauge)]
-        StPhilips,
 
         [DescriptionGauge("Stanley Midland", Gauges._45mm)]
         StanleyMidland,
@@ -551,8 +551,10 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("West Coast Cement", Gauges.OO_Gauge)]
         WestCoastCement,
 
+        [DescriptionGauge("Bristol St Philips", Gauges.OO_Gauge)]
+        BristolStPhilips,
 
-
-
+        [DescriptionGauge("Titfield Station", Gauges.OO_Gauge)]
+        TitfieldStation
     }
 }
