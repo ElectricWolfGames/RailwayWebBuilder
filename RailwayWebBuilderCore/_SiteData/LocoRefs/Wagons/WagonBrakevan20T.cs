@@ -15,6 +15,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
             LocoNumbers.AddRange(new[]
             {
                 new LocoDetails("B954546" ),
+                new LocoDetails("B950690" ),
                 });
         }
     }

@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
         {
             WebPage = new WebPage(this);
             DisplayTitle = "Locomotive Photo Reference Collection";
-            MenuTitle = "LocoRef";
+            MenuTitle = "Loco Photos";
 
             Keywords.AddRange(
                 new string[]

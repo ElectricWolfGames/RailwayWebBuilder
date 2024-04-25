@@ -21,6 +21,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
             {
                 new LocoDetails("B783082" ),
                 new LocoDetails("B784409" ),
+                new LocoDetails("B783082" ),
                 });
         }
     }
