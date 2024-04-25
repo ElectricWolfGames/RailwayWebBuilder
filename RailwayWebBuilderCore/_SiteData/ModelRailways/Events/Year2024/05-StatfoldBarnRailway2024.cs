@@ -25,28 +25,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
            
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Beckwick));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BeddgelertJunction));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BorthAberdovey_YnyslasRailway));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Breydon));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BristolStPhilips));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DerwentRoad));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.FairTmiddlin));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.FennStreetYard));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.GlenadamDistillery));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NantGWRtheyrn));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.OakhurstTown));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PortDinorwic));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.QuarryEnd));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RoofersLane));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RustonandHornsby_SheafIronworks));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SanClemente));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
-
-            
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheCharnwoodBranch));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TitfieldStation));
-            
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Torreycombe));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WestCoastCement));
             
 
             Keywords.AddRange(ModelEventKeywords());

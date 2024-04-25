@@ -7,40 +7,44 @@ namespace LayoutHelper
 
         private List<string> _layoutsRaw = new List<string>()
         {
-"Lawrie's Mechanical Marvels Ncma Modular Railway - OO Gauge",
-"Ashgate - OO9 Gauge",
-"Bad Durkheim Betriebshof - N Gauge",
+"Making Tracks The Final Frontier - OO Gauge",
+"Blair Atholl Towards Drumochter - OO Gauge",
+"Newvaddon Parkway - N Gauge",
+"Patrick Lane Flask Terminal - O Gauge",
+"Allerby - O Gauge",
+"Twelvemil Bridge - TT:120 Scale",
+"Natford TMD - OO Gauge",
+"Fairlie Syniad Da - OO9 Gauge",
+"Dagnell End - OO Gauge",
+"Bristol Templecombe Road Shed - O Gauge",
+"Northbridge - OO Gauge",
+"Dobson Bridge - Gauge 1",
 "Beckwick - OO Gauge",
-"Beddgelert Junction - OO9 Gauge",
-"Borth Aberdovey & Ynyslas Railway - 32mm Gauge",
-"Breydon - OO Gauge",
-"Buxton Railex - Demo",
-"Corrish - OO9 Gauge",
-"Dawlish Warren - N Gauge",
-"Derwent Railway - 9mm Gauge",
-"Fair T'middlin - OO Gauge",
-"Fenn Street Yard - O Gauge",
-"Glenadam Distillery - OO Gauge",
-"Granby Lane - OO Gauge",
-"Hodgemead - OO9 Gauge",
-"Hornby Magazine's New Layout - TT:120",
-"Lapping Works - O Gauge",
-"Leigh St George - N Gauge",
-"Nant GWRtheyrn - OO9 Gauge",
-"Oakhurst Town - 33mm Gauge",
-"Port Dinorwic - OO/009 Gauge",
-"Roofers Lane - OO Gauge",
-"Ruston and Hornsby, Sheaf Ironworks - OO Gauge",
-"San Clemente - HO Gauge",
-"Shovel Head Halt - OO Gauge",
-"St Etienne-En-Caux - HOe Gauge",
-"St Philips -OO Gauge",
-"Stanley Midland - 45mm Gauge - Live Stream",
-"The Charnwood Branch - O Gauge",
-"The End of the Estate - O Gauge",
-"Torreycombe - OO Gauge",
-"West Coast Cement - OO Gauge",
-
+"Scarlington - N Gauge",
+"Rumbling Bridge - OO Gauge",
+"Sparkel (German) - HO Gauge",
+"Old Elm Park - O Gauge",
+"Ruston and Hornsby Sheaf Ironworks - OO Gauge",
+"Kinlochloggen - N Gauge",
+"Norman Colliery - O Gauge",
+"Bury, Thorn and Son - O Gauge",
+"Gresten (Austria) - HOe Gauge",
+"Stodmarsh - O Gauge",
+"San Clemente (America) - HO Gauge",
+"Hallard - OO Gauge",
+"Mothecombe - OO Gauge",
+"Fordon Hill Railway - N Gauge",
+"Fence Houses - OO Gauge",
+"Grindley Brook - O Gauge",
+"Little Ashton - N Gauge",
+"Melin Llechi - 16mm Gauge",
+"I'ad That - OO Gauge",
+"Providence Colliery - OO Gauge",
+"Beijiao (China) - HO Gauge",
+"St Fayre Rhianne - HOm Gauge",
+"Fairport Wharf - OO Gauge",
+"Dublington Goods Station - OO Gauge",
+"Inglenook Shunting - OO Gauge",
         };
 
         public LayoutListParse()
@@ -72,12 +76,8 @@ namespace LayoutHelper
             {
                 Console.WriteLine($"Layouts.Add(new LayoutDetails(LayoutNamesEnums.{WithoutSpaces(item.Name)}));");
                 Directory.CreateDirectory($"{path}\\Images\\{item.Name}");
-                Directory.CreateDirectory($"{path}\\Clips\\{ item.Name}");
-
-
+                Directory.CreateDirectory($"{path}\\Clips\\{item.Name}");
             }
-
-
         }
 
         private static string WithoutSpaces(string name)
@@ -90,6 +90,7 @@ namespace LayoutHelper
             name = name.Replace(".", "");
             name = name.Replace("&", "_");
             name = name.Replace(",", "_");
+            name = name.Replace(":", "-");
             return name;
         }
 

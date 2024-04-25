@@ -555,6 +555,109 @@ namespace RailwayWebBuilderCore.Data
         BristolStPhilips,
 
         [DescriptionGauge("Titfield Station", Gauges.OO_Gauge)]
-        TitfieldStation
+        TitfieldStation,
+
+
+
+        [DescriptionGauge("Making Tracks The Final Frontier", Gauges.OO_Gauge)]
+        MakingTracksTheFinalFrontier,
+
+        [DescriptionGauge("Blair Atholl Towards Drumochter", Gauges.OO_Gauge)]
+        BlairAthollTowardsDrumochter,
+
+        [DescriptionGauge("Newvaddon Parkway", Gauges.N_Gauge)]
+        NewvaddonParkway,
+
+        [DescriptionGauge("Patrick Lane Flask Terminal", Gauges.O_Gauge)]
+        PatrickLaneFlaskTerminal,
+
+        [DescriptionGauge("Allerby", Gauges.O_Gauge)]
+        Allerby,
+
+        [DescriptionGauge("Twelvemil Bridge", Gauges.TT120_Gauge)]
+        TwelvemilBridge,
+
+        [DescriptionGauge("Dagnell End", Gauges.OO_Gauge)]
+        DagnellEnd,
+
+        [DescriptionGauge("82g Bristol Templecombe Road Shed", Gauges.O_Gauge)]
+        BristolTemplecombeRoadShed,
+
+        [DescriptionGauge("Northbridge", Gauges.OO_Gauge)]
+        Northbridge,
+
+        [DescriptionGauge("Dobson Bridge", Gauges.Gauge1)]
+        DobsonBridge,
+
+        [DescriptionGauge("Scarlington", Gauges.N_Gauge)]
+        Scarlington,
+
+        [DescriptionGauge("Rumbling Bridge", Gauges.OO_Gauge)]
+        RumblingBridge,
+
+        [DescriptionGauge("Sparkel (German)", Gauges.O_Gauge)]
+        SparkelGerman,
+
+        [DescriptionGauge("Old Elm Park", Gauges.O_Gauge)]
+        OldElmPark,
+
+        [DescriptionGauge("Ruston and Hornsby Sheaf Ironworks", Gauges.OO_Gauge)]
+        RustonandHornsbySheafIronworks,
+
+        [DescriptionGauge("Kinlochloggen", Gauges.N_Gauge)]
+        Kinlochloggen,
+
+        [DescriptionGauge("Bury, Thorn and Son", Gauges.O_Gauge)]
+        Bury_ThornandSon,
+
+        [DescriptionGauge("Gresten (Austria)", Gauges.HOe_Gauge)]
+        GrestenAustria,
+
+        [DescriptionGauge("Stodmarsh", Gauges.O_Gauge)]
+        Stodmarsh,
+
+        [DescriptionGauge("San Clemente (America)", Gauges.O_Gauge)]
+        SanClementeAmerica,
+
+        [DescriptionGauge("Hallard", Gauges.OO_Gauge)]
+        Hallard,
+
+        [DescriptionGauge("Mothecombe", Gauges.OO_Gauge)]
+        Mothecombe,
+
+        [DescriptionGauge("Fordon Hill Railway", Gauges.N_Gauge)]
+        FordonHillRailway,
+
+        [DescriptionGauge("Fence Houses", Gauges.OO_Gauge)]
+        FenceHouses,
+
+        [DescriptionGauge("Grindley Brook", Gauges.O_Gauge)]
+        GrindleyBrook,
+
+        [DescriptionGauge("Little Ashton", Gauges.N_Gauge)]
+        LittleAshton,
+
+        [DescriptionGauge("I'ad That", Gauges.OO_Gauge)]
+        IadThat,
+
+        [DescriptionGauge("Providence Colliery", Gauges.OO_Gauge)]
+        ProvidenceColliery,
+
+        [DescriptionGauge("Beijiao (China)", Gauges.O_Gauge)]
+        BeijiaoChina,
+
+        [DescriptionGauge("St Fayre Rhianne", Gauges.HOm_Gauge)]
+        StFayreRhianne,
+
+        [DescriptionGauge("Fairport Wharf", Gauges.OO_Gauge)]
+        FairportWharf,
+
+        [DescriptionGauge("Dublington Goods Station", Gauges.OO_Gauge)]
+        DublingtonGoodsStation,
+
+        [DescriptionGauge("Inglenook Shunting", Gauges.OO_Gauge)]
+        InglenookShunting,
+
+
     }
 }

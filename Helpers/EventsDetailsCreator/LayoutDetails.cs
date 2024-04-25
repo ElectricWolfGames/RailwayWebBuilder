@@ -72,6 +72,23 @@ namespace LayoutHelper
                 return;
             }
 
+            if (raw.Contains("Gauge 1"))
+            {
+                Gauge = "Gauges.Gauge1";
+                return;
+            }
+            if (raw.Contains("16mm Gauge"))
+            {
+                Gauge = "Gauges._16mm";
+                return;
+            }
+            //"HOm Gauge"
+            if (raw.Contains("HOm Gauge"))
+            {
+                Gauge = "Gauges.HOm_Gauge";
+                return;
+            }
+
             int i = 0;
             i++;
         }

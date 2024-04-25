@@ -30,5 +30,7 @@
         _32mm_Gauge,
         _33mm_Gauge,
         _9mm,
+        Gauge1,
+        HOm_Gauge,
     }
 }

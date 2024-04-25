@@ -7,11 +7,11 @@ namespace LayoutHelper
         {
             Console.WriteLine("Hello, World!");
 
-
+            
             var layoutList = new LayoutListParse();
             layoutList.Parse();
-            layoutList.CreateFolders(@"E:\\Trains\\Photos - Main\\2024\\2024-04-13 Statfold's Model Railway Exhibition");
-
+            layoutList.CreateFolders(@"E:\Trains\Photos - Main\2024\2024-04-27 Key Model World\");
+            
 
             /*
 
