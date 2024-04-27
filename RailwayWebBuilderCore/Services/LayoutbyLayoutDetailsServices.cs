@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore.Services
             AddModelEvents();
         }
 
-        internal List<ILayoutByLayout> Events
+        internal List<ILayoutByLayout> Layouts
         {
             get
             {
@@ -26,8 +26,6 @@ namespace RailwayWebBuilderCore.Services
         private void AddModelEvents()
         {
             _modelPages.AddRange(GetAll());
-
-            
         }
 
         private List<ILayoutByLayout> GetAll()

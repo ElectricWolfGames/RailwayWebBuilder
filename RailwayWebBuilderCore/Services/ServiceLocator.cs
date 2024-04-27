@@ -11,6 +11,7 @@ namespace RailwayWebBuilderCore.Services
             _services = new Dictionary<Type, object>
             {
                 { typeof(ModelEventDetailsServices), new ModelEventDetailsServices() },
+                { typeof(LayoutbyLayoutDetailsServices), new LayoutbyLayoutDetailsServices() },
                 { typeof(BlogDetailsServices), new BlogDetailsServices() },
                 { typeof(LocationsService), new LocationsService() },
                 { typeof(SettingService), new SettingService() },

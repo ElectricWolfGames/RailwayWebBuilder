@@ -4,10 +4,13 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
+using RailwayWebBuilderCore.KeepForNow;
 using RailwayWebBuilderCore.Services;
 using System;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Linq;
 
 namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 {
@@ -62,7 +65,23 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private void CreaetLayoutByLayoutReport()
         {
+            var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+
+            string path = "E:\\Trains\\Photos - Main\\2024 Layouts\\_TempLayoutDetails\\";
             
+            foreach (var layout in layoutDetails.Layouts)
+            {
+                var sb = new StringBuilder();
+
+                var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
+
+                sb.AppendLine($"{gauge}: {name}");
+                sb.AppendLine(layout.Owner);
+                sb.AppendLine();
+                sb.AppendLine(layout.Description);
+
+                File.WriteAllText($"{path}{name}.txt", sb.ToString());
+            }
         }
 
         private static string CreateBlog(IModelEvent blog)
