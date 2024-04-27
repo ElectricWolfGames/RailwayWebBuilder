@@ -253,9 +253,6 @@ namespace RailwayWebBuilderCore.Data
         [DescriptionGauge("Hartley Poole Too", Gauges.N_Gauge)]
         HartleyPooleToo,
 
-        [DescriptionGauge("Newvadden Parkway", Gauges.N_Gauge)]
-        NewvaddenParkway,
-
         [DescriptionGauge("Oakwood Lane", Gauges.N_Gauge)]
         OakwoodLane,
 

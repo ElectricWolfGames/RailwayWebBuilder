@@ -28,7 +28,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brookfield));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BurtononTrent));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.HartleyPooleToo));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NewvaddenParkway));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NewvaddonParkway));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.OakwoodLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Rockcliffe));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.STRuth));

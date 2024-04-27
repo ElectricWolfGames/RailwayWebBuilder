@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class ModelEventDetailsServices
     {
-        private List<IModelEvent> _modelPages = new List<IModelEvent>();
+        private List<IModelEvent> _layoutByLayoutDetails = new List<IModelEvent>();
 
         public ModelEventDetailsServices()
         {
@@ -19,15 +19,15 @@ namespace RailwayWebBuilderCore.Services
         {
             get
             {
-                return _modelPages;
+                return _layoutByLayoutDetails;
             }
         }
 
         private void AddModelEvents()
         {
-            _modelPages.AddRange(GetAll());
+            _layoutByLayoutDetails.AddRange(GetAll());
 
-            foreach (var pages in _modelPages)
+            foreach (var pages in _layoutByLayoutDetails)
             {
                 pages.Fix();
             }

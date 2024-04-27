@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Burdock : LayoutBase
+    internal class Burdock : LayoutBase, ILayoutByLayout
     {
         public Burdock()
         {

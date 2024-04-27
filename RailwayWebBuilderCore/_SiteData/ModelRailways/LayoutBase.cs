@@ -8,5 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways
         public string Group { get; set; }
         public LayoutNamesEnums Name { get; set; }
         public string Owner { get; set; }
+
+        public string LayoutByLayoutVideo { get; set; }
     }
 }

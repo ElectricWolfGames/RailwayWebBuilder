@@ -5,6 +5,7 @@ using RailwayWebBuilderCore._Site.Railways.Locomotives;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
+using System;
 using System.Linq;
 using System.Text;
 
@@ -55,6 +56,13 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             WebPage.EndBody();
             WebPage.Output();
+
+            CreaetLayoutByLayoutReport();
+        }
+
+        private void CreaetLayoutByLayoutReport()
+        {
+            
         }
 
         private static string CreateBlog(IModelEvent blog)
