@@ -19,3 +19,5 @@
 /LocoDBSync/bin/Debug/net8.0
 
 /LocoDBSync/bin/Debug/net8.0-windows
+/Helpers/ThumbnailCreator/obj
+/Helpers/ThumbnailCreator/bin/Debug/net8.0-windows
