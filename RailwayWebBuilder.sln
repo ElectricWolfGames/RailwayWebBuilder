@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThumbnailCreator", "Helpers\ThumbnailCreator\ThumbnailCreator.csproj", "{09CAEC28-9D9C-4023-9747-C08F324FE9D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CAEC28-9D9C-4023-9747-C08F324FE9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CAEC28-9D9C-4023-9747-C08F324FE9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CAEC28-9D9C-4023-9747-C08F324FE9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CAEC28-9D9C-4023-9747-C08F324FE9D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{3D84C703-D062-4E0B-9740-7F01D48DF943} = {E865377B-8EA8-4ABC-ABE2-27B58AA74E74}
 		{D39DEF3A-291A-412E-81FB-B0362B3D8BF6} = {E865377B-8EA8-4ABC-ABE2-27B58AA74E74}
 		{B2C5AB51-3AF5-487A-A0E1-04B60B348D38} = {C2E451BC-62FA-474D-8D3A-433DF8A35D0F}
+		{09CAEC28-9D9C-4023-9747-C08F324FE9D1} = {C2E451BC-62FA-474D-8D3A-433DF8A35D0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D12E519-7A61-4A7D-AE8F-4BFB2E5B44D3}
