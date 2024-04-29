@@ -67,18 +67,25 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
         {
             var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
 
-            string path = "E:\\Trains\\Photos - Main\\2024 Layouts\\_TempLayoutDetails\\";
             
             foreach (var layout in layoutDetails.Layouts)
             {
                 var sb = new StringBuilder();
 
                 var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
+                var gaugeName = ItemHelper.GetEnumGaugeDescription(gauge);
 
-                sb.AppendLine($"{gauge}: {name}");
-                sb.AppendLine(layout.Owner);
+                string path = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
+                Directory.CreateDirectory(path);
+
+                sb.AppendLine($"{name}: {gaugeName}");
+                //sb.AppendLine(layout.Owner);
                 sb.AppendLine();
                 sb.AppendLine(layout.Description);
+
+                sb.AppendLine();
+                sb.AppendLine("Layout by Layout play list");
+                sb.AppendLine("https://www.youtube.com/playlist?list=PLNf9gBDTdAH3BotcuiAryGVHXleFvGgco");
 
                 File.WriteAllText($"{path}{name}.txt", sb.ToString());
             }

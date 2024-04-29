@@ -45,7 +45,7 @@ namespace CustomXaml
             typeof(FontFamily),
             typeof(OutlinedText),
             new FrameworkPropertyMetadata(
-                new FontFamily("Arial"),
+                new FontFamily("Fugaz One"), // Arial
                 FrameworkPropertyMetadataOptions.AffectsRender,
                 new PropertyChangedCallback(OnOutlineTextInvalidated),
                 null
