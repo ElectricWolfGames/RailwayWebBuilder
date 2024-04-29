@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         KeyDown="Window_KeyDown"   
         xmlns:customControls="clr-namespace:CustomXaml"
-        Title="MainWindow" Height="597" Width="800">
-    <Grid Height="600">
-        <customControls:OutlinedText x:Name="TextContent" Fill="#FFF10B" FontSize="80"     
-            Bold="True" Stroke="Black" StrokeThickness="1" Text="Arnold Lane" Margin="58,112,0,0" 
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid Height="1080">
+        <customControls:OutlinedText x:Name="TextContent" Fill="#FFF10B" FontSize="150"     
+            Bold="True" Stroke="Black" StrokeThickness="4" Text="Arnold Lane" Margin="58,112,0,0" 
             HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="Auto" />
-        <customControls:OutlinedText x:Name="TextContent2" Fill="#FFFFFF" FontSize="60"     
-            Bold="True" Stroke="Black" StrokeThickness="1" Text="OO Gauge" Margin="58,223,0,0" 
+        <customControls:OutlinedText x:Name="TextContent2" Fill="#FFFFFF" FontSize="90"     
+            Bold="True" Stroke="Black" StrokeThickness="2" Text="OO Gauge" Margin="58,289,0,0" 
             HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="Auto" />
         <RadioButton Content="" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="771,559,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="" HorizontalAlignment="Left" Margin="1901,1039,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore.Services
             AddModelEvents();
         }
 
-        internal List<ILayoutByLayout> Layouts
+        public List<ILayoutByLayout> Layouts
         {
             get
             {

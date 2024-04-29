@@ -4,7 +4,7 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData.StationLocations;
 using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Data; using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System.IO;
 

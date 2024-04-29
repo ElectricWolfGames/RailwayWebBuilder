@@ -1,5 +1,5 @@
 ﻿using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Data; using RailwayWebBuilderCore.Enums;
 using System;
 
 namespace RailwayWebBuilderCore._SiteData.Blogs.Year2020

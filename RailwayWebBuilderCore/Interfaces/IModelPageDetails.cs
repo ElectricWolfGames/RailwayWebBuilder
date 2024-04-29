@@ -1,4 +1,4 @@
-﻿using RailwayWebBuilderCore.Data;
+﻿using RailwayWebBuilderCore.Data; using RailwayWebBuilderCore.Enums;
 using System;
 using System.Collections.Generic;
 

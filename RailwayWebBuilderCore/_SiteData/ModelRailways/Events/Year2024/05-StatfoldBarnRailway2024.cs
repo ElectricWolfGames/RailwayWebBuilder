@@ -1,7 +1,7 @@
 ﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
-using RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
 
@@ -22,7 +22,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Title = "Statfold Model Railway Event 2024";
             ImagePreview = "IMG_5993-Glenadam-Distillery-thumb.JPG";
 
-           
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Beckwick));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BeddgelertJunction));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BorthAberdovey_YnyslasRailway));
@@ -41,13 +40,11 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SanClemente));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
 
-
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheCharnwoodBranch));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.TitfieldStation));
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Torreycombe));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WestCoastCement));
-
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

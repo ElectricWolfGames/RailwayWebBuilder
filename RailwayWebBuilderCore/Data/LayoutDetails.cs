@@ -1,4 +1,5 @@
-﻿using RailwayWebBuilderCore.KeepForNow;
+﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.KeepForNow;
 using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Data

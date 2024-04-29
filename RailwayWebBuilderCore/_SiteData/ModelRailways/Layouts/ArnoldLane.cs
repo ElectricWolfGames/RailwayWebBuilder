@@ -1,4 +1,4 @@
-﻿using RailwayWebBuilderCore.Data;
+﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
@@ -12,7 +12,5 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
             Description = ""; // TODO Needs description
             LayoutByLayoutVideo = "https://youtu.be/2KdK28yvDqs";
         }
-
-        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
 
@@ -20,7 +21,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImageFolder = "20240309-Mountsorrel";
             Title = "Ivanhoe Model Railway Society 2024";
             ImagePreview = "IMG_5431-Hillport-Goods-thumb.JPG";
-
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.ArnoldLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bank));

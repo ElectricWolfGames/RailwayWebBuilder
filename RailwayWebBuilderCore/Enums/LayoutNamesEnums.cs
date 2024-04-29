@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilderCore.Attributes;
+using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore.Data
+namespace RailwayWebBuilderCore.Enums
 {
     public enum LayoutNamesEnums
     {

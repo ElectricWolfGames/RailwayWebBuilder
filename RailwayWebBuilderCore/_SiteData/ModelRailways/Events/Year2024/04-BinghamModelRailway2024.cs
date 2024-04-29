@@ -1,10 +1,9 @@
-﻿using Geocoder;
-using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
+﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
-using System.Xml.Linq;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
 {
@@ -22,7 +21,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImageFolder = "20240406-Cotgrave";
             Title = "Bingham Model Railway Show 2024";
             ImagePreview = "IMG_5837-Doe-Lea-thumb.JPG";
-
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ashtown));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BoxworksWharf));

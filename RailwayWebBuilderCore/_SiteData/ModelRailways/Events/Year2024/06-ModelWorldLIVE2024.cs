@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
 
@@ -20,7 +21,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImageFolder = "20240427-ModelLive";
             Title = "Model World LIVE 2024";
             ImagePreview = "IMG_5993-Glenadam-Distillery-thumb.JPG";
-
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.MakingTracksTheFinalFrontier));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BlairAthollTowardsDrumochter));
@@ -60,7 +60,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.FairportWharf));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.DublingtonGoodsStation));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.InglenookShunting));
-
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

@@ -1,4 +1,4 @@
-﻿using RailwayWebBuilderCore.Data;
+﻿using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
