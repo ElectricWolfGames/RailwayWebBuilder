@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using System.Windows.Interop;
-using System.Windows;
 using System.Reflection.Metadata;
 using System.Xml.Linq;
 
@@ -28,11 +27,6 @@ namespace ThumbnailCreator
         public MainWindow()
         {
             InitializeComponent();
-            
-            
-            //Visual visualWindowContent = (Visual)this.Content;
-            
-            //CreateBitmapFromVisual(visualWindowContent, file);
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -41,7 +35,7 @@ namespace ThumbnailCreator
             {
                 //Set scrollviewer's Content property as UI element to capture full 
                 // content
-                string file = "E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\Arnold Lane.png";
+                string file = "E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\Arnold Lane\\Text.png";
                 UIElement element = this.Content as UIElement;
                 Uri path = new Uri(file);
                 CaptureScreen(element, path);
@@ -52,14 +46,14 @@ namespace ThumbnailCreator
         {
             try
             {
-                double Height, renderHeight, Width, renderWidth;
+                double height, renderHeight, width, renderWidth;
 
-                Height = renderHeight = source.RenderSize.Height;
-                Width = renderWidth = source.RenderSize.Width;
+                height = renderHeight = source.RenderSize.Height;
+                width = renderWidth = source.RenderSize.Width;
 
                 //Specification for target bitmap like width/height pixel etc.
                 RenderTargetBitmap renderTarget = new
-                RenderTargetBitmap((int)renderWidth, (int)renderHeight, 96, 96,
+                RenderTargetBitmap((int)renderWidth, (int)renderHeight, 0, 0,
                 PixelFormats.Pbgra32);
                 //creates Visual Brush of UIElement
                 VisualBrush visualBrush = new VisualBrush(source);
@@ -70,7 +64,7 @@ namespace ThumbnailCreator
                 {
                     //draws image of element
                     drawingContext.DrawRectangle(visualBrush, null, new
-                    Rect(new Point(0, 0), new Point(Width, Height)));
+                    Rect(new Point(0, 0), new Point(width, height)));
                 }
                 //renders image
                 renderTarget.Render(drawingVisual);
@@ -94,4 +88,4 @@ namespace ThumbnailCreator
     }
 
 
-}
+    }

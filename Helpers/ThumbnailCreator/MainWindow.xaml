@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThumbnailCreator"
         mc:Ignorable="d"
-        KeyDown="Window_KeyDown"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="196,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
+        KeyDown="Window_KeyDown"   
+        xmlns:customControls="clr-namespace:CustomXaml"
+        Title="MainWindow" Height="597" Width="800">
+    <Grid Height="600">
+        <customControls:OutlinedText x:Name="TextContent" Fill="#FFF10B" FontSize="80"     
+            Bold="True" Stroke="Black" StrokeThickness="1" Text="Arnold Lane" Margin="58,112,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="Auto" />
+        <customControls:OutlinedText x:Name="TextContent2" Fill="#FFFFFF" FontSize="60"     
+            Bold="True" Stroke="Black" StrokeThickness="1" Text="OO Gauge" Margin="58,223,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="Auto" />
+        <RadioButton Content="" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="" HorizontalAlignment="Left" Margin="771,559,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
