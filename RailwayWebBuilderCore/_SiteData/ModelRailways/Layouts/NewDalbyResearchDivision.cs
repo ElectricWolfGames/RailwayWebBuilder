@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
             Name = LayoutNamesEnums.NewDalbyResearchDivision;
             Owner = "Andrew Porter";
             Description = ""; // TODO Needs description
-            LayoutByLayoutVideo = "";
+            LayoutByLayoutVideo = "https://youtu.be/Kcrtbzv7rd4";
         }
     }
 }

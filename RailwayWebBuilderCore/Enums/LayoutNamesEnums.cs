@@ -302,7 +302,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Thorncliffe", Gauges.OO_Gauge)]
         Thorncliffe,
 
-        [DescriptionGauge("Charnwood forest", Gauges.O_Gauge)]
+        [DescriptionGauge("Charnwood Forest", Gauges.O_Gauge)]
         CharnwoodForest,
 
         [DescriptionGauge("Newchapel Junction", Gauges.O_Gauge)]

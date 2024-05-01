@@ -78,13 +78,13 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
                 string path = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
                 Directory.CreateDirectory(path);
 
-                sb.AppendLine($"{name}: {gaugeName}");
+                sb.AppendLine($"{name}: {gaugeName}: Model Railway");
                 //sb.AppendLine(layout.Owner);
                 sb.AppendLine();
                 sb.AppendLine(layout.Description);
 
                 sb.AppendLine();
-                sb.AppendLine("Layout by Layout play list");
+                sb.AppendLine("Layout by Layout playlist");
                 sb.AppendLine("https://www.youtube.com/playlist?list=PLNf9gBDTdAH3BotcuiAryGVHXleFvGgco");
 
                 File.WriteAllText($"{path}{name}.txt", sb.ToString());
