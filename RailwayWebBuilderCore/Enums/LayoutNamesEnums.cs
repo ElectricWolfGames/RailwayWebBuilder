@@ -1,5 +1,4 @@
 ﻿using RailwayWebBuilderCore.Attributes;
-using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore.Enums
 {
@@ -526,11 +525,9 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Quarry End", Gauges.OO9_Gauge)]
         QuarryEnd,
 
-
         [DescriptionGauge("Ruston and Hornsby, Sheaf Ironworks", Gauges.OO_Gauge)]
         RustonandHornsby_SheafIronworks,
 
-        
         [DescriptionGauge("St Etienne-En-Caux", Gauges.HOe_Gauge)]
         StEtienne_En_Caux,
 
@@ -554,8 +551,6 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Titfield Station", Gauges.OO_Gauge)]
         TitfieldStation,
-
-
 
         [DescriptionGauge("Making Tracks The Final Frontier", Gauges.OO_Gauge)]
         MakingTracksTheFinalFrontier,
@@ -655,7 +650,5 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Inglenook Shunting", Gauges.OO_Gauge)]
         InglenookShunting,
-
-
     }
 }

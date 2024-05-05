@@ -10,7 +10,7 @@ namespace RailwayWebBuilderCore._SiteData
         {
             StringBuilder _stringBuilder = new StringBuilder();
 
-            var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", ""))+extraOffSet;
+            var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", "")) + extraOffSet;
             _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
             _stringBuilder.Append("	<head>");
             //AddSiteTracker(_stringBuilder);

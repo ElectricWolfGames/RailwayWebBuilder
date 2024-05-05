@@ -15,7 +15,6 @@ namespace RailwayWebBuilderCore.KeepForNow
 
         public void Build()
         {
-            
             Directory.CreateDirectory(LocalPath);
 
             List<DonateAmount> donateAmounts = LoadDonations();

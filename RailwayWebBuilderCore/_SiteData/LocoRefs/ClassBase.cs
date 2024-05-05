@@ -25,17 +25,18 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         public string Paragraph3 { get; set; } = "";
         public StockTypes StockType { get; set; } = StockTypes.Diesel;
 
-        public List<string> GetAllImages(string tag)
+        public List<string> GetAllImages(string tag, List<string> ignore)
         {
             if (tag == "48305")
             {
-                int i= 0;
+                int i = 0;
                 i++;
             }
-            UpdateImageStock(tag);
+            UpdateImageStock(tag, ignore);
 
             string rawPath = GetRawImagePath(tag);
             List<string> images = ImageHelper.GetAllImages(rawPath);
+
             return images;
         }
 
@@ -50,7 +51,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             pageBuilder.Text("<div class='row'>");
             foreach (var tag in LocoNumbers)
             {
-                var images = GetAllImages(tag.Number);
+                var images = GetAllImages(tag.Number, tag.Ignore);
                 count += images.Count();
 
                 if (!images.Any())
@@ -101,27 +102,65 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
             pageDetails.DieselClassBase = dieselClassBase;
             pageDetails.MenuTitle = number;
             pageDetails.LocoNumber = number;
-            pageDetails.WebPage.HtmlPath = webPage.HtmlPath+"\\Ref";
+            pageDetails.WebPage.HtmlPath = webPage.HtmlPath + "\\Ref";
             pageDetails.GalleryPath = GetRawImagePath(number);
             pageDetails.CreatePage();
         }
 
-        private void UpdateImageStock(string tag)
+        private void UpdateImageStock(string tag, List<string> ignore)
         {
             if (string.IsNullOrWhiteSpace(tag))
                 return;
 
             string rawPath = GetRawImagePath(tag);
 
+            /*
+             * if (ignore.Any())
+            {
+                List<string> toRemove = new List<string>();
+                foreach (var ignoreTemp in ignore)
+                {
+                    if (string.IsNullOrEmpty(ignoreTemp))
+                        continue;
+
+                    foreach (var imageTemp in files)
+                    {
+                        if (imageTemp.Contains(ignoreTemp))
+                        {
+                            toRemove.Add(imageTemp);
+                        }
+                    }
+                }
+                files = files.Except(toRemove).ToList();
+            }
+             */
+
             var filesOnDrive = Directory.GetFiles(LookInFolders, $"*{tag}*.JPG", SearchOption.AllDirectories);
             foreach (string file in filesOnDrive)
             {
+                bool skip = false;
                 if (file.ToLower().Contains("edit"))
                 {
                     continue;
                 }
 
                 string newPath = $"{rawPath}\\{Path.GetFileName(file)}";
+
+                foreach (var ignoreTemp in ignore)
+                {
+                    if (!string.IsNullOrWhiteSpace(ignoreTemp))
+                    {
+                        if (file.Contains(ignoreTemp))
+                        {
+                            skip = true;
+                        }
+                    }
+                }
+
+                if (skip)
+                {
+                    continue;
+                }
 
                 if (!File.Exists(newPath))
                 {

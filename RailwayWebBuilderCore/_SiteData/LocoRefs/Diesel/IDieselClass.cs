@@ -16,7 +16,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         string Paragraph3 { get; set; }
         StockTypes StockType { get; set; }
 
-        List<string> GetAllImages(string tag);
+        List<string> GetAllImages(string tag, List<string> ignore);
 
         int PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage);
     }

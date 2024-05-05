@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 
             LocoNumbers.AddRange(new[]
             {
-                new LocoDetails("926", "Repton"),
+                new LocoDetails("926", "Repton", "_F5A0926.JPG"),
                 });
         }
     }

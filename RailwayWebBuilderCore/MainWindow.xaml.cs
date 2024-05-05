@@ -1,12 +1,11 @@
-﻿using RailwayWebBuilderCore.Configuration;
+﻿using eWolfBootstrap.SiteBuilder;
+using eWolfBootstrap.SiteBuilder.Interfaces;
+using RailwayWebBuilderCore._SiteData;
+using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Services;
 using System.Diagnostics;
-using System.Windows;
-using eWolfBootstrap.SiteBuilder;
-using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
-using RailwayWebBuilderCore._SiteData;
-
+using System.Windows;
 
 // https://stackoverflow.com/questions/14588336/wpf-listview-editing-listviewitem
 
@@ -21,9 +20,8 @@ namespace RailwayWebBuilderCore
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _cacheFolder = Constants._aaDriveLetter + @"Trains\DeletableCache\";
-
         private readonly BuildSite _buildSite = new BuildSite();
+        private string _cacheFolder = Constants._aaDriveLetter + @"Trains\DeletableCache\";
 
         public MainWindow()
         {
@@ -47,7 +45,6 @@ namespace RailwayWebBuilderCore
 
             //Button_Click_2(null, null);
 
-
             _buildSite.WebSiteRootAddress = @"E:\eWolfSiteUploads";
 
             SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new RailwaySiteHeader());
@@ -59,7 +56,6 @@ namespace RailwayWebBuilderCore
             _buildSite.OpenHomePage();
 
             Close();
-
         }
 
         private void AddLoco_Click(object sender, RoutedEventArgs e)
@@ -82,17 +78,14 @@ namespace RailwayWebBuilderCore
             }
             BuildMyLayoutsPage.Build(null);
             BuildCatalogPage.Build(null);
-
         }*/
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

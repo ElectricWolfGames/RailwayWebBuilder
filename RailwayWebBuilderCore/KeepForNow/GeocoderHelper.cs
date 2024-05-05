@@ -1,7 +1,4 @@
-﻿using eWolfCommon.Helpers;
-using Geocoder;
-using Microsoft.VisualStudio.Services.Common;
-using RailwayWebBuilderCore.Attributes;
+﻿using RailwayWebBuilderCore.Attributes;
 using RailwayWebBuilderCore.Enums;
 using System;
 using System.Linq;
@@ -11,18 +8,6 @@ namespace RailwayWebBuilderCore.KeepForNow
 {
     public static class ItemHelper
     {
-        public static string GetEnumGaugeDescription(Gauges value) 
-        {
-            FieldInfo fi = value.GetType().GetField(value.ToString());
-
-            DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
-
-            if (attributes != null && attributes.Any())
-            {
-                return attributes.First().Description;
-            }
-            return "";
-        }
         public static (string, Gauges) GetEnumDescription(Enum value)
         {
             FieldInfo fi = value.GetType().GetField(value.ToString());
@@ -35,6 +20,19 @@ namespace RailwayWebBuilderCore.KeepForNow
             }
 
             return (value.ToString(), Gauges.NONE);
+        }
+
+        public static string GetEnumGaugeDescription(Gauges value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+
+            if (attributes != null && attributes.Any())
+            {
+                return attributes.First().Description;
+            }
+            return "";
         }
     }
 
@@ -84,7 +82,7 @@ namespace RailwayWebBuilderCore.KeepForNow
             //}
             //if (cacheOnly)
             //    return locat;
-            
+
             Location loc = new Location
             {
                 Latitude = 20,
