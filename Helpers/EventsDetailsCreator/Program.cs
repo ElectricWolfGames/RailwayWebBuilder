@@ -10,7 +10,7 @@ namespace LayoutHelper
             
             var layoutList = new LayoutListParse();
             layoutList.Parse();
-            layoutList.CreateFolders(@"E:\Trains\Photos - Main\2024\2024-04-27 Key Model World\");
+            layoutList.CreateFolders(@"E:\Trains\Photos - Main\2024\2024-05-11 Thorpe - Syston Model Railway\");
             
 
             /*

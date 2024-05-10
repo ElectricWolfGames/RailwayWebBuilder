@@ -650,5 +650,42 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Inglenook Shunting", Gauges.OO_Gauge)]
         InglenookShunting,
+
+        [DescriptionGauge("Oldmarket", Gauges.OO_Gauge)]
+        Oldmarket,
+
+        //[DescriptionGauge("St. Johns", Gauges.OO_Gauge)]
+        //StJohns,
+
+        [DescriptionGauge("Pheonix Junction", Gauges.OO_Gauge)]
+        PheonixJunction,
+
+        [DescriptionGauge("The Hot Track", Gauges.OO_Gauge)]
+        TheHotTrack,
+
+        [DescriptionGauge("Cunanavago", Gauges.OO_Gauge)]
+        Cunanavago,
+
+        [DescriptionGauge("Fourgig East", Gauges.O_Gauge)]
+        FourgigEast,
+
+        //[DescriptionGauge("Bregstadt", Gauges.TT120_Gauge)]
+        //Bregstadt,
+
+        [DescriptionGauge("North Road", Gauges.N_Gauge)]
+        NorthRoad,
+
+        [DescriptionGauge("Eyemouth", Gauges.N_Gauge)]
+        Eyemouth,
+
+        //[DescriptionGauge("Bishopston", Gauges.OO_Gauge)]
+        //Bishopston,
+
+        [DescriptionGauge("Jones of Taunton", Gauges.N_Gauge)]
+        JonesofTaunton,
+
+        //[DescriptionGauge("Glenmore Parva", Gauges.OO_Gauge)]
+        //GlenmoreParva,
+
     }
 }
