@@ -684,8 +684,10 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Jones of Taunton", Gauges.N_Gauge)]
         JonesofTaunton,
 
-        //[DescriptionGauge("Glenmore Parva", Gauges.OO_Gauge)]
-        //GlenmoreParva,
+        [DescriptionGauge("Upton Whent", Gauges.OO_Gauge)]
+        UptonWhent,
 
+        [DescriptionGauge("Willevie", Gauges.OO9_Gauge)]
+        Willevie,
     }
 }

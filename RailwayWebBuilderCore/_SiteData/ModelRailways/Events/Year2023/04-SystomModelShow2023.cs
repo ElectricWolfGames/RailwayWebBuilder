@@ -12,7 +12,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2023
         public SystomModelShow2023()
         {
             Name = "Syston Model Railway Society";
-            Location = new RootsatThorpeFarm();
+            Location = new RootsatThorpeFarmThorpe();
             EventDates = "29th/30th April 2023";
             Descrption = "Syston Model Railway Society";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2023-04-29 Syston Model Railway Society";

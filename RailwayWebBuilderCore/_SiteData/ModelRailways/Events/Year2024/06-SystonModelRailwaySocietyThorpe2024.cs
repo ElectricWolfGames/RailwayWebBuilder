@@ -23,18 +23,19 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Title = "Syston Model Railway Society Thorpe 2024";
             ImagePreview = "vlcsnap-2024-01-16-16h39m48s461.jpg";
 
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Oldmarket));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StJohns));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PheonixJunction));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheHotTrack));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cunanavago));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.FourgigEast));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BottomoftheBarrel));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bregstadt));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NorthRoad));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cunanavago));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Eyemouth));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bishopston));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.JonesofTaunton));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.GlenmoreParva));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.JonesofTaunton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NorthRoad));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PheonixJunction));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StJohns));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheHotTrack));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Victoria));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.UptonWhent));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Willevie));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
