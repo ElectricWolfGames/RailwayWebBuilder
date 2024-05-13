@@ -187,7 +187,10 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
                 HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
 
-                htmBuilder.Text(AddDescription(layout));
+                htmBuilder.TextNewLine(AddDescription(layout));
+
+                htmBuilder.Text("</div>");
+                htmBuilder.Text("<div class='row'>");
 
                 foreach (string layoutImage in layout.ImagePaths)
                 {

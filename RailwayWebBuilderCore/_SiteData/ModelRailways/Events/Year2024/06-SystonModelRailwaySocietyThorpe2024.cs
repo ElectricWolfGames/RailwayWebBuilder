@@ -18,10 +18,10 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2024-05-11 Syston Model Railway";
             TripDate = new DateTime(2024, 05, 11);
 
-            YouTubeLink = "";
+            YouTubeLink = "https://youtu.be/iEEByqP7wW8";
             ImageFolder = "20240511-Thorpe";
             Title = "Syston Model Railway Society Thorpe 2024";
-            ImagePreview = "vlcsnap-2024-01-16-16h39m48s461.jpg";
+            ImagePreview = "IMG_6237-Pheonix-Junction.jpg";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BottomoftheBarrel));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bregstadt));
