@@ -9,6 +9,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ClassName = "Class 08";
             StockType = StockTypes.Diesel;
 
+            PowerType = "Diesel-electric";
+            Builder = "British Railways,Crewe Works,Darlington Works,Derby Works,Doncaster Works,Horwich Works";
+            BuildDate = "1952–1962";
+            TotalProduced = 996;
+
             Paragraph1 = "The British Rail Class 08 is a class of diesel-electric shunting locomotive builtby British Railways (BR). " +
 "As the standard BR general-purpose diesel shunter, the class became a familiar sight at major stations and freight yards. " +
 "Since their introduction in 1952 however, the nature of rail traffic in Britain has changed considerably. " +

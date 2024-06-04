@@ -10,6 +10,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ClassDisplayName = "Class 55: Deltic";
             StockType = StockTypes.Diesel;
 
+            PowerType = "Diesel-electric";
+            Builder = "English Electric at Vulcan Foundry";
+            BuildDate = "1961-1962";
+            TotalProduced = 22;
+
             Paragraph1 = "The British Rail Class 55, also known as a Deltic, is a class of diesel locomotive built in 1961 and 1962 by English Electric for British Railways. " +
                             "They were designed for the high-speed express passenger services on the East Coast Main Line (ECML) between Edinburgh and London King's Cross. " +
                             "They gained the name 'Deltic' from the prototype locomotive, DP1 Deltic (the running number DP1 was never carried), " +

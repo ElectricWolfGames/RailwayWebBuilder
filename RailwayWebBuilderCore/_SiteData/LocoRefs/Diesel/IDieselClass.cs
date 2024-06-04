@@ -11,6 +11,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
         string ClassName { get; set; }
         List<string> Keywords { get; }
         List<ILocoDetails> LocoNumbers { get; set; }
+        string Overview { get; set; }
         string Paragraph1 { get; set; }
         string Paragraph2 { get; set; }
         string Paragraph3 { get; set; }

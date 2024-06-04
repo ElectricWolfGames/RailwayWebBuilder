@@ -13,17 +13,22 @@ using Path = System.IO.Path;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
-    public class ClassBase : IDieselClass
+    public class ClassBase : IDieselClass, ITypeAndOrigin
     {
         private const string LookInFolders = "E:\\Trains\\Photos - Main\\2024\\";
+        public string BuildDate { get; set; } = string.Empty;
+        public string Builder { get; set; } = string.Empty;
         public string ClassDisplayName { get; set; }
         public string ClassName { get; set; }
         public List<string> Keywords { get; private set; } = new List<string>();
         public List<ILocoDetails> LocoNumbers { get; set; } = new List<ILocoDetails>();
+        public string Overview { get; set; } = "";
         public string Paragraph1 { get; set; } = "";
         public string Paragraph2 { get; set; } = "";
-        public string Paragraph3 { get; set; } = "";
+        public string Paragraph3 { get; set; } = string.Empty;
+        public string PowerType { get; set; } = string.Empty;
         public StockTypes StockType { get; set; } = StockTypes.Diesel;
+        public int TotalProduced { get; set; } = 0;
 
         public List<string> GetAllImages(string tag, List<string> ignore)
         {
