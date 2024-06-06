@@ -9,6 +9,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ClassName = "Class 37";
             StockType = StockTypes.Diesel;
 
+            PowerType = "Diesel-electric";
+            Builder = "English Electric at Vulcan Foundry and Robert Stephenson and Hawthorns";
+            BuildDate = "1960–1965";
+            TotalProduced = 309;
+
             Paragraph1 = "The British Rail Class 37 is a diesel-electric locomotive. Also known as the English Electric Type 3," +
                            "the class was ordered as part of the British Rail modernisation plan. They were numbered in two series, " +
                            "D6600–D6608 and D6700–D6999";
