@@ -10,6 +10,11 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             ClassName = "Class 101";
             StockType = StockTypes.Diesel;
 
+            PowerType = "Diesel";
+            Builder = "";
+            BuildDate = "1956–1960";
+            TotalProduced = 527;
+
             Paragraph1 = "The British Rail Classes 101 and 102 diesel mechanical multiple units were built by Metro-Cammell " +
                 "at Washwood Heath in Birmingham, England from 1956 to 1959, following construction of a series of prototype units. " +
                 "These classes proved to be some of the most successful and longest-lived of BR's First Generation DMUs, second in " +
