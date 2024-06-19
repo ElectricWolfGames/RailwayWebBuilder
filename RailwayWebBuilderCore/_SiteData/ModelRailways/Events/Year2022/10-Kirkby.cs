@@ -22,16 +22,16 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Title = "The Elizabethan Railway Society Exhibition 2022";
             ImagePreview = "PA081440-2022-10-08-Oscarton-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails(LayoutNames.Ambleside, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.StMichaelsVale, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Brunshafen, Gauges.HO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.BrittanniaMills, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.SheffieldVictoria, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Burgedorf, Gauges.HOe_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Elmfield, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Oscarton, Gauges.N_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.Brassingdale, Gauges.OO_Gauge, true));
-            Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, true));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ambleside));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StMichaelsVale));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brunshafen));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittanniaMills));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SheffieldVictoria));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Burgedorf));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Elmfield));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Oscarton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brassingdale));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NormanColliery));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

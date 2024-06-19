@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.HillportGoods;
             Owner = "Stephen Farmer";
-            Description = ""; // TODO Needs description
+            Description = ""; // TODO HillportGoods Needs description
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.CroftMillWharf;
             Owner = "Ian Atkinson";
-            Description = ""; // TODO Needs description
+            Description = ""; // TODO CroftMillWharf Needs description
             LayoutByLayoutVideo = "";
         }
     }

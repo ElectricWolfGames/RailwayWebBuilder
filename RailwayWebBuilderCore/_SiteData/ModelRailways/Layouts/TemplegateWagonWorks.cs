@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.TemplegateWagonWorks;
             Owner = "Dave Tailby";
-            Description = ""; // TODO Needs description
+            Description = ""; // TODO TemplegateWagonWorks Needs description
         }
     }
 }

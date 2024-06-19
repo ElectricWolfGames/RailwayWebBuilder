@@ -28,8 +28,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Newtown East", Gauges.OO_Gauge, "03 Newton East"));
             Layouts.Add(new LayoutDetails("Netherwood Sidings", Gauges.O_Gauge, "04 Netherwood Sidings"));
             Layouts.Add(new LayoutDetails("Tudwich Road Sidings", Gauges.O_Gauge, "05 Tudwick Road Sidings"));
-            Layouts.Add(new LayoutDetails(LayoutNames.Myton, Gauges.OO_Gauge, "06 Myton"));
-            Layouts.Add(new LayoutDetails(LayoutNames.ThePowerStation, Gauges.N_Gauge, "07 Power Station"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Myton));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ThePowerStation));
             Layouts.Add(new LayoutDetails("Heath Green", Gauges.OO_Gauge, "08 Heath Green"));
             Layouts.Add(new LayoutDetails("Tennis Court Sidings", Gauges.N_Gauge, "09 Tennis Court Sidings"));
             Layouts.Add(new LayoutDetails("Karolina Falls", Gauges.On30_Gauge, "10 Karolina Falls"));

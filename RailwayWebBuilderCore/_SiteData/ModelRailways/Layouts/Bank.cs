@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Bank;
             Owner = "Carl White";
-            Description = ""; // TODO Needs description
+            Description = ""; // TODO Bank Needs description
         }
     }
 }

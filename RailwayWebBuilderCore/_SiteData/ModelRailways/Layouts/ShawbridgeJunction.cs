@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.ShawbridgeJunction;
             Owner = "The Elizabethan Society";
-            Description = ""; // TODO Needs description
+            Description = ""; // TODO ShawbridgeJunction Needs description
             LayoutByLayoutVideo = "";
         }
     }

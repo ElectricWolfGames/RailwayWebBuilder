@@ -1,23 +1,10 @@
-﻿using System.IO;
-using System.Text;
+﻿using RailwayWebBuilderCore.KeepForNow;
+using RailwayWebBuilderCore.Services;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System;
-using System.Linq;
-using System.Windows.Media.Imaging;
-using System.Windows.Interop;
-using System.Reflection.Metadata;
-using System.Xml.Linq;
-using RailwayWebBuilderCore.Services;
-using RailwayWebBuilderCore.KeepForNow;
 
 namespace ThumbnailCreator
 {
@@ -29,47 +16,6 @@ namespace ThumbnailCreator
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.P)
-            {
-                string file = "E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\Arnold Lane\\Text.png";
-                UIElement element = this.Content as UIElement;
-                Uri path = new Uri(file);
-                CaptureScreen(element, path);
-            }
-            if (e.Key == Key.A)
-            {
-                CreateForAllLayouts();
-            }
-
-        }
-
-        private void CreateForAllLayouts()
-        {
-            var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
-            foreach (var layout in layoutDetails.Layouts)
-            {
-                var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
-                TextContent.Text = name;
-
-                var gaugeText = ItemHelper.GetEnumGaugeDescription(gauge);
-                TextContent2.Text = gaugeText;
-
-
-                TextContent.InvalidateVisual();
-                TextContent2.InvalidateVisual();
-                TextContent.UpdateLayout();
-                TextContent2.UpdateLayout();
-
-                string file = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
-                Directory.CreateDirectory(file);
-                UIElement element = this.Content as UIElement;
-                Uri path = new Uri(file+"Text.png");
-                CaptureScreen(element, path);
-            }
         }
 
         public void CaptureScreen(UIElement source, Uri destination)
@@ -115,7 +61,43 @@ namespace ThumbnailCreator
             }
         }
 
-    }
+        private void CreateForAllLayouts()
+        {
+            var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            foreach (var layout in layoutDetails.Layouts)
+            {
+                var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
+                TextContent.Text = name;
 
+                var gaugeText = ItemHelper.GetEnumGaugeDescription(gauge);
+                TextContent2.Text = gaugeText;
 
+                TextContent.InvalidateVisual();
+                TextContent2.InvalidateVisual();
+                TextContent.UpdateLayout();
+                TextContent2.UpdateLayout();
+
+                string file = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
+                Directory.CreateDirectory(file);
+                UIElement element = this.Content as UIElement;
+                Uri path = new Uri(file + "Text.png");
+                CaptureScreen(element, path);
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.P)
+            {
+                string file = "E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\Arnold Lane\\Text.png";
+                UIElement element = this.Content as UIElement;
+                Uri path = new Uri(file);
+                CaptureScreen(element, path);
+            }
+            if (e.Key == Key.A)
+            {
+                CreateForAllLayouts();
+            }
+        }
     }
+}

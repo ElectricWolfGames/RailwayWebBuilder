@@ -23,7 +23,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
             ImagePreview = "P2237873-Avyn-A-Llyin-Ilkeston-thumb.JPG";
 
             Layouts.Add(new LayoutDetails("Thomas the Tank Layout", Gauges.OO_Gauge));
-            Layouts.Add(new LayoutDetails(LayoutNames.Neuburg, Gauges.HO_Gauge, "02 Neuburg"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Neuburg));
             Layouts.Add(new LayoutDetails("Avyn-A-Llyin", Gauges.OO9_Gauge, "03 Avyn-A-Llyin"));
             Layouts.Add(new LayoutDetails("Rothbury", Gauges.OO_Gauge, "04 Rothbury"));
             Layouts.Add(new LayoutDetails("Brookfield N (USA Based)", Gauges.NONE, "06 Brookfield N"));

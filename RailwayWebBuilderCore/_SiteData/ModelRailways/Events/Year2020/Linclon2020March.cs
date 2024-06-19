@@ -39,7 +39,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Hollington Quarry", Gauges.OO9_Gauge));
             Layouts.Add(new LayoutDetails("Kleine Rundfahrt", Gauges.N_Gauge_Continental, "Kleine Rundfahrt"));
             Layouts.Add(new LayoutDetails("Kozel Cement", Gauges.HO_Gauge));
-            Layouts.Add(new LayoutDetails(LayoutNames.NormanColliery, Gauges.O_Gauge, "Norman Colliery"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NormanColliery));
             Layouts.Add(new LayoutDetails("Northallerton", Gauges.N_Gauge, "Northallerton"));
             Layouts.Add(new LayoutDetails("Obervaz", Gauges.H0mNarrowGauge, "Obervaz"));
             Layouts.Add(new LayoutDetails("Roberts Road", Gauges.N_Gauge, "Roberts Road"));
@@ -47,11 +47,11 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Shaken & Not Stirred", Gauges.NONE));
             Layouts.Add(new LayoutDetails("Spilsby", Gauges.NONE, "Spilsby"));
             Layouts.Add(new LayoutDetails("Stamford East", Gauges.N_Gauge, "Stamford East"));
-            Layouts.Add(new LayoutDetails(LayoutNames.ThePowerStation, Gauges.N_Gauge, "The Power Station"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ThePowerStation));
             Layouts.Add(new LayoutDetails("Thorncliffe", Gauges.OO_Gauge, "Thorncliffe"));
-            Layouts.Add(new LayoutDetails("Welby Lane", Gauges.NONE, "Welby Lane"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WelbyLane));
             Layouts.Add(new LayoutDetails("Worlds Way", Gauges.OO_Gauge, "Worlds Way"));
-            Layouts.Add(new LayoutDetails(LayoutNames.Myton, Gauges.OO_Gauge, "Myton"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Myton));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Linclon", "L&DMRC", "Lincoln Model Rail Club", "Newark Showground", "General Exhibition" });
