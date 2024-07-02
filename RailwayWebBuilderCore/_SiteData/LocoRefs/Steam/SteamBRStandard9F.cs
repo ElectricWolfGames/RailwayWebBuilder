@@ -4,12 +4,15 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {
-    public class SteamBRStandard9F : SteamClassBase, ILocomotiveSpecifications
+    public class SteamBRStandard9F : SteamClassBase
     {
         public SteamBRStandard9F()
         {
             ClassName = "BR Standard 9F";
             StockType = StockTypes.SteamLoco;
+
+            Builder = "BR Crewe Works(198), BR Swindon Works(53)";
+            TotalProduced = 251;
 
             Paragraph1 = "The British Railways BR Standard Class 9F 2-10-0 is a class of steam locomotive designed for British Railways by Robert Riddles. " +
                 "The Class 9F was the last in a series of standardised locomotive classes designed for British Railways during the 1950s, " +
@@ -32,10 +35,5 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
                 new LocoDetails("92214"),
                 });
         }
-
-        public string Builder => "BR Crewe Works(198), BR Swindon Works(53)";
-        public string BuildRange => "January 1954 – March 1960";
-        public string Designer => "Robert Riddles";
-        public int TotalProduced => 251;
     }
 }
