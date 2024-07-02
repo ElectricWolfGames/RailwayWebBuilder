@@ -86,6 +86,21 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
             return pageBuilder.Output();
         }
 
+        private static string CreateHero()
+        {
+            string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
+            string imageHtmlName = "../Others/images/";
+
+            HTMLBuilder pageBuilder = new HTMLBuilder();
+            pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
+                "<p'>This is our first layout, Hope you enjoy it.</p>",
+                imageName,
+                imageHtmlName,
+                "CATTINGTON.png");
+
+            return pageBuilder.Output();
+        }
+
         private string BuildDetails(ILayoutPagesDetails detail)
         {
             HTMLBuilder pageBuilder = new HTMLBuilder();
@@ -107,25 +122,8 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
             if (!string.IsNullOrWhiteSpace(detail.ExportImagePath))
             {
                 Directory.CreateDirectory(detail.ExportImagePath);
-                var pb = new PageBuilder();
-                pb.AddImages(Constants.FullMyLayouts, detail.ExportImagePath, detail.RawImagePath);
-                pageBuilder.Text(pb.GetOutput());
+                pageBuilder.AddImagesGroupedByDate(Constants.FullMyLayouts, detail.ExportImagePath, detail.RawImagePath);
             }
-
-            return pageBuilder.Output();
-        }
-
-        private string CreateHero()
-        {
-            string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
-            string imageHtmlName = "../Others/images/";
-
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-            pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
-                "<p'>This is our first layout, Hope you enjoy it.</p>",
-                imageName,
-                imageHtmlName,
-                "CATTINGTON.png");
 
             return pageBuilder.Output();
         }

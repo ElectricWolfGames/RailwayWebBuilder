@@ -8,7 +8,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore.Builders.Stations
 {
-    public class BuildStationsHomeOld
+    /*public class BuildStationsHomeOld
     {
         public static void Build()
         {
@@ -64,5 +64,5 @@ namespace RailwayWebBuilderCore.Builders.Stations
 
             return stringBuilder.ToString();
         }
-    }
+    }*/
 }

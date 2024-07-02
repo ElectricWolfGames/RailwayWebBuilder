@@ -10,7 +10,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts
 {
-    public class BuildCatalogPage
+    /*public class BuildCatalogPage
     {
         public static void Build(IModelEvent pageDetails)
         {
@@ -83,5 +83,5 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts
 
             return pageBuilder.ToString();
         }
-    }
+    }*/
 }

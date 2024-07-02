@@ -25,7 +25,7 @@ namespace RailwayWebBuilderCore.Interfaces
         string Title { get; }
         string Wheelbase { get; }
 
-        void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
+        //void AddImagestoHeaderPage(PageBuilder pageBuilder, int number, string seeMore);
 
         void Build();
 

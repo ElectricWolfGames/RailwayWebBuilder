@@ -11,7 +11,7 @@ using System.Reflection;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts
 {
-    public class BuildMyLayoutsPage
+    /*public class BuildMyLayoutsPage
     {
         private const int DetailsPerPage = 10;
         private static List<ILayoutPagesDetails> _orderedDetails;
@@ -118,5 +118,5 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts
             _orderedDetails = layoutDetails.Where(x => x.Active).ToList();
             _orderedDetails = _orderedDetails.OrderByDescending(x => x.When).ToList();
         }
-    }
+    }*/
 }

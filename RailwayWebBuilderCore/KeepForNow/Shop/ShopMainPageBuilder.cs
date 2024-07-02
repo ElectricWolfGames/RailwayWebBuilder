@@ -11,7 +11,7 @@ using System.Reflection;
 
 namespace RailwayWebBuilderCore.KeepForNow.Shop
 {
-    public class ShopMainPageBuilder
+    /*public class ShopMainPageBuilder
     {
         private static List<IProduct> _products;
 
@@ -87,5 +87,5 @@ namespace RailwayWebBuilderCore.KeepForNow.Shop
 
             _products = layoutDetails.ToList();
         }
-    }
+    }*/
 }

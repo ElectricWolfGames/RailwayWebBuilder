@@ -278,7 +278,7 @@ namespace CustomXaml
             if (Italic == true) fontStyle = FontStyles.Italic;
 
             // Create the formatted text based on the properties set.
-            FormattedText formattedText = new FormattedText(
+            FormattedText formattedText = new(
                 Text,
                 CultureInfo.GetCultureInfo("en-us"),
                 FlowDirection.LeftToRight,

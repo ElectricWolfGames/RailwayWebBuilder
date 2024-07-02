@@ -107,19 +107,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             }
         }
 
-        private static string AddYoutubePreview(string youTubeLink)
-        {
-            var pageBuilder = new HTMLBuilder();
-
-            pageBuilder.Text("<div class='col-md-8'>");
-            pageBuilder.Text("<div class='embed-responsive embed-responsive-16by9'>");
-            pageBuilder.Text($"<iframe src='{youTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            pageBuilder.Text("</div>");
-            pageBuilder.Text("</div>");
-
-            return pageBuilder.Output();
-        }
-
         private static string Jumbotron(IModelPageDetails pageDetails)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -216,51 +203,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             }
 
             return htmBuilder.Output();
-        }
-
-        private string BuildDetails(ILayoutPagesDetails detail)
-        {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-
-            if (!detail.Active)
-                return "";
-
-            pageBuilder.Text($"<hr/>");
-            pageBuilder.Text(detail.Title);
-            pageBuilder.Text(detail.When.ToShortDateString());
-            pageBuilder.Text(detail.Details.ToString());
-
-            if (!string.IsNullOrWhiteSpace(detail.YouTubeLink))
-            {
-                string youTubeLink = $"https://www.youtube.com/embed/{detail.YouTubeLink}";
-                pageBuilder.Text(AddYoutubePreview(youTubeLink));
-            }
-
-            if (!string.IsNullOrWhiteSpace(detail.ExportImagePath))
-            {
-                Directory.CreateDirectory(detail.ExportImagePath);
-                var pb = new PageBuilder();
-                pb.AddImages(Constants.FullMyLayouts, detail.ExportImagePath, detail.RawImagePath);
-                pageBuilder.Text(pb.GetOutput());
-            }
-
-            return pageBuilder.Output();
-        }
-
-        private string CreateHero()
-        {
-            string imageName = Constants._aaDriveLetter + "Trains/_WebsiteData/Others/images/";
-            string imageHtmlName = "../Others/images/";
-
-            HTMLBuilder pageBuilder = new HTMLBuilder();
-            pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
-                "<p'>Now it's our turn, We have just started to build our first layout." +
-                "</br>We are Building Cattington, and we are updatd details here every week or so.</p>",
-                imageName,
-                imageHtmlName,
-                "CATTINGTON.png");
-
-            return pageBuilder.Output();
         }
     }
 }
