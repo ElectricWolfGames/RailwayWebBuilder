@@ -1,14 +1,16 @@
-﻿using RailwayWebBuilderCore.Interfaces;
+﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Reflection;
 
 namespace RailwayWebBuilderCore.Services
 {
     public class LayoutbyLayoutDetailsServices
     {
-        private List<ILayoutByLayout> _modelPages = new List<ILayoutByLayout>();
+        private List<ILayoutByLayout> _layouts = new List<ILayoutByLayout>();
 
         public LayoutbyLayoutDetailsServices()
         {
@@ -19,13 +21,18 @@ namespace RailwayWebBuilderCore.Services
         {
             get
             {
-                return _modelPages;
+                return _layouts;
             }
+        }
+
+        internal ILayoutByLayout FindLayout(LayoutNamesEnums nameEnum)
+        {
+            return _layouts.FirstOrDefault(x => x.Name == nameEnum);
         }
 
         private void AddModelEvents()
         {
-            _modelPages.AddRange(GetAll());
+            _layouts.AddRange(GetAll());
         }
 
         private List<ILayoutByLayout> GetAll()

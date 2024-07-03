@@ -163,6 +163,8 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
         {
+            LayoutbyLayoutDetailsServices lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+
             HTMLBuilder htmBuilder = new HTMLBuilder();
 
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
@@ -179,11 +181,16 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
                 htmBuilder.Text("</div>");
                 htmBuilder.Text("<div class='row'>");
 
+                var lbl = lbls.FindLayout(layout.NameEnum);
+
                 foreach (string layoutImage in layout.ImagePaths)
                 {
                     if (images.Contains(layoutImage))
                     {
-                        HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
+                        ImagesPair ip = HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
+                        if (lbl != null)
+                            lbl.Images.Add(ip);
+
                         images.Remove(layoutImage);
                     }
                 }

@@ -1,12 +1,15 @@
-﻿using RailwayWebBuilderCore.Enums;
+﻿using eWolfBootstrap.Helpers;
+using RailwayWebBuilderCore.Enums;
+using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
     public interface ILayoutByLayout
     {
-        public string Description { get; set; }
-        public string LayoutByLayoutVideo { get; set; }
-        public LayoutNamesEnums Name { get; set; }
-        public string Owner { get; set; }
+        string Description { get; set; }
+        List<ImagesPair> Images { get; set; }
+        string LayoutByLayoutVideo { get; set; }
+        LayoutNamesEnums Name { get; set; }
+        string Owner { get; set; }
     }
 }
