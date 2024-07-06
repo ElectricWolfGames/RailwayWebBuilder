@@ -3,6 +3,7 @@ using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
@@ -16,8 +17,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
     [AddGallery()]
     public class LayoutByLayoutPageDetails : PageDetails
     {
-        public ILayoutByLayout LayoutByLayoutDetails;
         public LayoutDetails LayoutDetails;
+        internal ILayoutBase LayoutByLayoutDetails;
 
         public LayoutByLayoutPageDetails()
         {

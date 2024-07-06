@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
+using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
@@ -24,7 +25,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
         public override void CreatePage()
         {
-            var lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
             var meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
 
             var meh = new ModelEventsHeader();
@@ -37,14 +38,16 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             WebPage.Append(LocoRef.CreateHero(this));
 
-            var ordedBlogs = lbls.Layouts.OrderByDescending(x => x.Name);
+            var layoutsList = lbls.Layouts;
+            var ordedBlogs = layoutsList.OrderBy(x => x.Name).ToList();
+
             WebPage.Append("<div class='row mb-2'>");
 
-            foreach (ILayoutByLayout modelEvent in ordedBlogs)
+            foreach (ILayoutBase layouts in ordedBlogs)
             {
-                WebPage.Append(CreateBlog(modelEvent));
+                WebPage.Append(CreateBlog(layouts));
 
-                CreatModelLayoutPage(modelEvent);
+                CreatModelLayoutPage(layouts);
             }
 
             WebPage.Append("</div>");
@@ -54,7 +57,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Output();
         }
 
-        private static string CreateBlog(ILayoutByLayout layout)
+        private static string CreateBlog(ILayoutBase layout)
         {
             if (layout.Images.Count == 0)
                 return string.Empty;
@@ -92,7 +95,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             return sb.ToString();
         }
 
-        private void CreatModelLayoutPage(ILayoutByLayout layout)
+        private void CreatModelLayoutPage(ILayoutBase layout)
         {
             LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
 

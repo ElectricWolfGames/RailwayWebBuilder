@@ -163,7 +163,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
         {
-            LayoutbyLayoutDetailsServices lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
 
             HTMLBuilder htmBuilder = new HTMLBuilder();
 
