@@ -6,9 +6,12 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
+using System;
 using System.Text;
+using System.Windows.Controls;
 
 namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 {
@@ -18,6 +21,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
     public class LayoutByLayoutPageDetails : PageDetails
     {
         public LayoutDetails LayoutDetails;
+        public LayoutNamesEnums Post;
+        public LayoutNamesEnums Pre;
         internal ILayoutBase LayoutByLayoutDetails;
 
         public LayoutByLayoutPageDetails()
@@ -51,6 +56,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             */
             WebPage.Append("<div class='container mt-4'>");
+
+            WebPage.Append(NavButtons());
 
             WebPage.Append(Jumbotron());
 
@@ -89,6 +96,26 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
+        }
+
+        private string NavButtons()
+        {
+            StringBuilder sb = new();
+
+            sb.AppendLine("<Table width ='100%'>");
+            sb.AppendLine("  <tr>");
+            sb.AppendLine("    <td width ='40%'>");
+            sb.AppendLine($"<h5>{Pre}</h5>");
+            sb.AppendLine("    </td>");
+            sb.AppendLine("    <td width ='20%'>");
+            sb.AppendLine("    </td>");
+            sb.AppendLine("    <td width ='40%'>");
+            sb.AppendLine($"<h5>{Post}</h5>");
+            sb.AppendLine("    </td>");
+            sb.AppendLine("  </tr>");
+            sb.AppendLine("</Table>");
+
+            return sb.ToString();
         }
     }
 }

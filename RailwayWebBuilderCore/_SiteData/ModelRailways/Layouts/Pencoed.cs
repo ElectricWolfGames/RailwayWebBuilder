@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Pencoed;
             Owner = "";
-            Description = "";  // TODO Pencoed Needs description 
+            Description = "";  // TODO Pencoed Needs description
         }
     }
 }

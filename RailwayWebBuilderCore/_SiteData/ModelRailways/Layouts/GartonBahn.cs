@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.GartonBahn;
             Owner = "";
-            Description = "";  // TODO GartonBahn Needs description 
+            Description = "";  // TODO GartonBahn Needs description
         }
     }
 }

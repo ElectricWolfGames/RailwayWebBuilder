@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.TheCharnwoodBranch;
             Owner = "";
-            Description = "";  // TODO TheCharnwoodBranch Needs description 
+            Description = "";  // TODO TheCharnwoodBranch Needs description
         }
     }
 }

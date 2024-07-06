@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.RiddletoOldTown;
             Owner = "";
-            Description = "";  // TODO RiddletoOldTown Needs description 
+            Description = "";  // TODO RiddletoOldTown Needs description
         }
     }
 }

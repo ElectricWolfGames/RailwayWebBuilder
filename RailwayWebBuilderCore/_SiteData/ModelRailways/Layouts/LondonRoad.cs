@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.LondonRoad;
             Owner = "";
-            Description = "";  // TODO LondonRoad Needs description 
+            Description = "";  // TODO LondonRoad Needs description
         }
     }
 }

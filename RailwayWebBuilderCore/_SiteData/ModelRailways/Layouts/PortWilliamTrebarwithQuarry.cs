@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.PortWilliamTrebarwithQuarry;
             Owner = "";
-            Description = "";  // TODO PortWilliamTrebarwithQuarry Needs description 
+            Description = "";  // TODO PortWilliamTrebarwithQuarry Needs description
         }
     }
 }

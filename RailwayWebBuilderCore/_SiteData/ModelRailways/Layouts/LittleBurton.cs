@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.LittleBurton;
             Owner = "";
-            Description = "";  // TODO LittleBurton Needs description 
+            Description = "";  // TODO LittleBurton Needs description
         }
     }
 }

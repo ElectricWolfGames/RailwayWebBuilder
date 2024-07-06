@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Pipeyard;
             Owner = "";
-            Description = "";  // TODO Pipeyard Needs description 
+            Description = "";  // TODO Pipeyard Needs description
         }
     }
 }

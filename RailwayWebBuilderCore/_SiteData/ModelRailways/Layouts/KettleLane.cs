@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.KettleLane;
             Owner = "";
-            Description = "";  // TODO KettleLane Needs description 
+            Description = "";  // TODO KettleLane Needs description
         }
     }
 }

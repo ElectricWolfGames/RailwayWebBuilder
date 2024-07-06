@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.WhealKist;
             Owner = "";
-            Description = "";  // TODO WhealKist Needs description 
+            Description = "";  // TODO WhealKist Needs description
         }
     }
 }

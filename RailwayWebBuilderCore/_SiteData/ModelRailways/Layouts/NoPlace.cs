@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.NoPlace;
             Owner = "";
-            Description = "";  // TODO NoPlace Needs description 
+            Description = "";  // TODO NoPlace Needs description
         }
     }
 }

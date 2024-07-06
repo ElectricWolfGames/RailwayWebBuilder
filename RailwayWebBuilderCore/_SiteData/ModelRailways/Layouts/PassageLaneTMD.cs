@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.PassageLaneTMD;
             Owner = "";
-            Description = "";  // TODO PassageLaneTMD Needs description 
+            Description = "";  // TODO PassageLaneTMD Needs description
         }
     }
 }

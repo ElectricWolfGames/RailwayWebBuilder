@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Marmagne;
             Owner = "";
-            Description = "";  // TODO Marmagne Needs description 
+            Description = "";  // TODO Marmagne Needs description
         }
     }
 }

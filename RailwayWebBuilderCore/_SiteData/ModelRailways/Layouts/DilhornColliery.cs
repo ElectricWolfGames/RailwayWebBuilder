@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.DilhornColliery;
             Owner = "";
-            Description = "";  // TODO DilhornColliery Needs description 
+            Description = "";  // TODO DilhornColliery Needs description
         }
     }
 }

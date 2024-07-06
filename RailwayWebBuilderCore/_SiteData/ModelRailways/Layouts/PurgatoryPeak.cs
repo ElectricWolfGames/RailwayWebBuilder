@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.PurgatoryPeak;
             Owner = "";
-            Description = "";  // TODO PurgatoryPeak Needs description 
+            Description = "";  // TODO PurgatoryPeak Needs description
         }
     }
 }

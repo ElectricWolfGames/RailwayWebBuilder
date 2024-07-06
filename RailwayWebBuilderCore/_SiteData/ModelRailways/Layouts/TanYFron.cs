@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.TanYFron;
             Owner = "";
-            Description = "";  // TODO TanYFron Needs description 
+            Description = "";  // TODO TanYFron Needs description
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.ThomasQuarry;
             Owner = "";
-            Description = "";  // TODO ThomasQuarry Needs description 
+            Description = "";  // TODO ThomasQuarry Needs description
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.FredstoneLane;
             Owner = "";
-            Description = "";  // TODO FredstoneLane Needs description 
+            Description = "";  // TODO FredstoneLane Needs description
         }
     }
 }

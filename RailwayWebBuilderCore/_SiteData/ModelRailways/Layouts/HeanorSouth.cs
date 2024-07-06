@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.HeanorSouth;
             Owner = "";
-            Description = "";  // TODO HeanorSouth Needs description 
+            Description = "";  // TODO HeanorSouth Needs description
         }
     }
 }

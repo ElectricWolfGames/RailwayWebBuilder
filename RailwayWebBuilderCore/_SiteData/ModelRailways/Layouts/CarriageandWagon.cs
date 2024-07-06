@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.CarriageandWagon;
             Owner = "";
-            Description = "";  // TODO CarriageandWagon Needs description 
+            Description = "";  // TODO CarriageandWagon Needs description
         }
     }
 }

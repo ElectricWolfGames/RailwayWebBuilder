@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Ullapool;
             Owner = "";
-            Description = "";  // TODO Ullapool Needs description 
+            Description = "";  // TODO Ullapool Needs description
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Effingborough;
             Owner = "";
-            Description = "";  // TODO Effingborough Needs description 
+            Description = "";  // TODO Effingborough Needs description
         }
     }
 }

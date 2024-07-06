@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Uppingham;
             Owner = "";
-            Description = "";  // TODO Uppingham Needs description 
+            Description = "";  // TODO Uppingham Needs description
         }
     }
 }

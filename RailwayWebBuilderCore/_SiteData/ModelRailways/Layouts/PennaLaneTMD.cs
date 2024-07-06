@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.PennaLaneTMD;
             Owner = "";
-            Description = "";  // TODO PennaLaneTMD Needs description 
+            Description = "";  // TODO PennaLaneTMD Needs description
         }
     }
 }

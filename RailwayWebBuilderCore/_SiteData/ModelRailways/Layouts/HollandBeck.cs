@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.HollandBeck;
             Owner = "";
-            Description = "";  // TODO HollandBeck Needs description 
+            Description = "";  // TODO HollandBeck Needs description
         }
     }
 }

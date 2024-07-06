@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Tremawn;
             Owner = "";
-            Description = "";  // TODO Tremawn Needs description 
+            Description = "";  // TODO Tremawn Needs description
         }
     }
 }

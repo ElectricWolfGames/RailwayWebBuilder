@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.TheSidings;
             Owner = "";
-            Description = "";  // TODO TheSidings Needs description 
+            Description = "";  // TODO TheSidings Needs description
         }
     }
 }

@@ -4,6 +4,9 @@ namespace RailwayWebBuilderCore.Enums
 {
     public enum LayoutNamesEnums
     {
+        [DescriptionGauge("None", Gauges.OO_Gauge)]
+        None,
+
         [DescriptionGauge("Ambleside", Gauges.OO_Gauge)]
         Ambleside,
 

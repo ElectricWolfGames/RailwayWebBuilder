@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.FrantonMill;
             Owner = "";
-            Description = "";  // TODO FrantonMill Needs description 
+            Description = "";  // TODO FrantonMill Needs description
         }
     }
 }

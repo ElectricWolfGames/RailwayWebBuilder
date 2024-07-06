@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.HackworthJutlandStreet;
             Owner = "";
-            Description = "";  // TODO HackworthJutlandStreet Needs description 
+            Description = "";  // TODO HackworthJutlandStreet Needs description
         }
     }
 }

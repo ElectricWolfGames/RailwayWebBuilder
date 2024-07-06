@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.DevilsBridge;
             Owner = "";
-            Description = "";  // TODO DevilsBridge Needs description 
+            Description = "";  // TODO DevilsBridge Needs description
         }
     }
 }

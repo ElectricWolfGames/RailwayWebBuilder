@@ -4,8 +4,8 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
 using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
 using System.Linq;
 using System.Text;
@@ -43,11 +43,25 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             WebPage.Append("<div class='row mb-2'>");
 
-            foreach (ILayoutBase layouts in ordedBlogs)
+            for (int index = 0; index < ordedBlogs.Count; index++)
             {
-                WebPage.Append(CreateBlog(layouts));
+                LayoutNamesEnums pre = LayoutNamesEnums.None;
+                if (index > 1)
+                    pre = ordedBlogs[index - 1].Name;
 
-                CreatModelLayoutPage(layouts);
+                LayoutNamesEnums post = LayoutNamesEnums.None;
+                if (index < ordedBlogs.Count - 1)
+                    post = ordedBlogs[index + 1].Name;
+
+                ILayoutBase layout = ordedBlogs[index];
+                if (layout.Name == LayoutNamesEnums.None)
+                    continue;
+
+                if (layout.Images.Count > 2)
+                {
+                    WebPage.Append(CreateBlog(layout));
+                    CreatModelLayoutPage(layout, pre, post);
+                }
             }
 
             WebPage.Append("</div>");
@@ -80,6 +94,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 sb.AppendLine("  <tr>");
                 sb.AppendLine("    <td width ='214px'>");
                 sb.AppendLine($"<h5>{layoutDetails.GaugeName}</h5>");
+                sb.AppendLine($"<h5>{layout.Images.Count}</h5>");
                 sb.AppendLine("    </td>");
                 sb.AppendLine("    <td>");
                 sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
@@ -95,7 +110,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             return sb.ToString();
         }
 
-        private void CreatModelLayoutPage(ILayoutBase layout)
+        private void CreatModelLayoutPage(ILayoutBase layout, LayoutNamesEnums pre, LayoutNamesEnums post)
         {
             LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
 
@@ -104,7 +119,9 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 LayoutByLayoutDetails = layout,
                 DisplayTitle = layoutDetails.Name,
                 MenuTitle = layout.Name.ToString(),
-                LayoutDetails = layoutDetails
+                LayoutDetails = layoutDetails,
+                Pre = pre,
+                Post = post
             };
 
             // need to sort out folder
