@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
+using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Interfaces;
 using RailwayWebBuilderCore.Services;
@@ -23,7 +24,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
         public override void CreatePage()
         {
-            LayoutbyLayoutDetailsServices lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            var lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            var meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
 
             var meh = new ModelEventsHeader();
 
@@ -52,36 +54,57 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Output();
         }
 
-        private static string CreateBlog(ILayoutByLayout blog)
+        private static string CreateBlog(ILayoutByLayout layout)
         {
-            StringBuilder blogHtml = new StringBuilder();
+            if (layout.Images.Count == 0)
+                return string.Empty;
 
-            blogHtml.AppendLine("<div class='col-md-6'>");
-            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-            blogHtml.AppendLine($"<h5 class='card-header'>{blog.Name}</h5>");
-            blogHtml.AppendLine("<div class='card-body'>");
-            //blogHtml.AppendLine($"<h6>{blog.TripDate.ToShortDateString()}</h6>");
-            //blogHtml.AppendLine($"      <a href='{blog.ImageFolder}/index.html'><img class='rounded float-right' width='214px' height ='160px'src='{blog.ImageFolder}\\images\\{blog.ImagePreview}'></a>");
-            //blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
-            //blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
+            StringBuilder sb = new();
 
-            return blogHtml.ToString();
+            LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
+
+            sb.AppendLine("<div class='col-md-6'>");
+            sb.AppendLine("<div class='card border-dark mb-3'>");
+            sb.AppendLine($"<h5 class='card-header'>{layoutDetails.Name}</h5>");
+            sb.AppendLine("<div class='card-body'>");
+            if (layout.Images.Count > 0)
+            {
+                var filaname = layout.Images[0].Filename;
+                var filanameThumb = layout.Images[0].FilenameThumb;
+                var folder = $"../ModelEvents/{layout.Images[0].Folder}/";
+
+                sb.AppendLine("<Table>");
+                sb.AppendLine("  <tr>");
+                sb.AppendLine("    <td width ='214px'>");
+                sb.AppendLine($"<h5>{layoutDetails.GaugeName}</h5>");
+                sb.AppendLine("    </td>");
+                sb.AppendLine("    <td>");
+                sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
+                sb.AppendLine("    </td>");
+                sb.AppendLine("  </tr>");
+                sb.AppendLine("</Table>");
+            }
+
+            sb.AppendLine("</div>");
+            sb.AppendLine("</div>");
+            sb.AppendLine("</div>");
+
+            return sb.ToString();
         }
 
-        private void CreatModelLayoutPage(ILayoutByLayout modelEvent)
+        private void CreatModelLayoutPage(ILayoutByLayout layout)
         {
-            /*ModelRailwayPageDetails cattingtonPageDetails = new ModelRailwayPageDetails
+            LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
+
+            LayoutByLayoutPageDetails cattingtonPageDetails = new LayoutByLayoutPageDetails
             {
-                ModelEvent = modelEvent,
-                DisplayTitle = modelEvent.Title,
-                MenuTitle = "index"
+                layoutDetails = layout,
+                DisplayTitle = layoutDetails.Name,
+                MenuTitle = layout.Name.ToString()
             };
 
             // need to sort out folder
-            cattingtonPageDetails.CreatePage();*/
+            cattingtonPageDetails.CreatePage();
         }
     }
 }

@@ -11,6 +11,7 @@
         public const string FullMyLayouts = _aRootPath + MyLayouts + @"\";
         public const string GCR = @"GCR";
         public const string GCRFolder = @"GCR\";
+        public const string LayoutByLayout = @"LayoutByLayout";
         public const string LeicestershireNorthFolder = _StationFolder + @"GCR-LeicestershireNorth\";
         public const string Locomotive = _LocomotiveName + @"\";
         public const string LocomotiveRef = _LocomotiveName + @"\" + "Ref" + @"\";

@@ -18,6 +18,7 @@ namespace RailwayWebBuilderCore.Data
             var (a, b) = ItemHelper.GetEnumDescription(name);
             Name = a;
             Gauge = b;
+            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
 
             Path = Name;
         }
@@ -26,6 +27,8 @@ namespace RailwayWebBuilderCore.Data
         {
             Name = name;
             Gauge = gauge;
+            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
+
             if (setPath)
                 Path = Name;
         }
@@ -34,10 +37,12 @@ namespace RailwayWebBuilderCore.Data
         {
             Name = name;
             Gauge = gauge;
+            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
             Path = path;
         }
 
-        public Gauges Gauge { get; set; }
+        public Gauges Gauge { get; private set; }
+        public string GaugeName { get; private set; }
 
         public string IDName
         {
@@ -49,7 +54,7 @@ namespace RailwayWebBuilderCore.Data
 
         public List<string> ImagePaths { get; set; } = new List<string>();
         public string Name { get; set; }
-        public LayoutNamesEnums NameEnum { get; set; }
-        public string Path { get; set; }
+        public LayoutNamesEnums NameEnum { get; private set; }
+        public string Path { get; private set; }
     }
 }
