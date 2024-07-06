@@ -1,16 +1,12 @@
 ﻿using eWolfBootstrap.Builders;
-
 using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore.Configuration;
+using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
-using RailwayWebBuilderCore.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
@@ -20,7 +16,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
     [AddGallery()]
     public class LayoutByLayoutPageDetails : PageDetails
     {
-        public ILayoutByLayout layoutDetails;
+        public ILayoutByLayout LayoutByLayoutDetails;
+        public LayoutDetails LayoutDetails;
 
         public LayoutByLayoutPageDetails()
         {
@@ -54,12 +51,12 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             */
             WebPage.Append("<div class='container mt-4'>");
 
-            WebPage.Append(Jumbotron(layoutDetails));
+            WebPage.Append(Jumbotron());
 
             HTMLBuilder htmBuilder = new HTMLBuilder();
 
             HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
-            foreach (var lp in layoutDetails.Images)
+            foreach (var lp in LayoutByLayoutDetails.Images)
             {
                 string folder = $"../{Constants.ModelEvents}/{lp.Folder}/";
 
@@ -77,102 +74,18 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Output();
         }
 
-        private static string AddDescription(Data.LayoutDetails layoutDetails)
-        {
-            ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
-            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
-
-            if (layout == null)
-                return String.Empty;
-
-            StringBuilder stringBuilder = new StringBuilder();
-
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-
-            stringBuilder.AppendLine(layout.Description);
-            stringBuilder.AppendLine("</br></br>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            return stringBuilder.ToString();
-        }
-
-        private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
-        {
-            foreach (string imageName in images)
-            {
-                foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-                {
-                    if (layout.Path != null && imageName.Contains(layout.Path))
-                    {
-                        layout.ImagePaths.Add(imageName);
-                    }
-                }
-            }
-        }
-
-        private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
-        {
-            LayoutbyLayoutDetailsServices lbls = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
-
-            HTMLBuilder htmBuilder = new HTMLBuilder();
-
-            foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-            {
-                if (!layout.ImagePaths.Any())
-                {
-                    continue;
-                }
-
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
-
-                htmBuilder.TextNewLine(AddDescription(layout));
-
-                htmBuilder.Text("</div>");
-                htmBuilder.Text("<div class='row'>");
-
-                var lbl = lbls.FindLayout(layout.NameEnum);
-
-                foreach (string layoutImage in layout.ImagePaths)
-                {
-                    if (images.Contains(layoutImage))
-                    {
-                        ImagesPair ip = HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
-                        if (lbl != null)
-                        {
-                            lbl.Images.Add(ip);
-                        }
-
-                        images.Remove(layoutImage);
-                    }
-                }
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-            }
-
-            if (images.Any())
-            {
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
-
-                foreach (string image in images)
-                {
-                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
-                }
-
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-            }
-
-            return htmBuilder.Output();
-        }
-
-        private string Jumbotron(ILayoutByLayout pageDetails)
+        private string Jumbotron()
         {
             StringBuilder stringBuilder = new();
 
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<h1>{DisplayTitle}</h1>");
-            stringBuilder.AppendLine($"<p'>{pageDetails.Description}</p>");
+            stringBuilder.AppendLine($"<h1>{DisplayTitle} </h1>");
+            stringBuilder.AppendLine($"<h3>{LayoutDetails.GaugeName}</h3>");
+            stringBuilder.AppendLine("<div class='col-md-12'>");
+            stringBuilder.AppendLine($"<p'>{LayoutByLayoutDetails.Description}</p>");
+            stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
         }

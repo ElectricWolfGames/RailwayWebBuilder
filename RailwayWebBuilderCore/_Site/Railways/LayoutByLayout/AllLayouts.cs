@@ -98,9 +98,10 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             LayoutByLayoutPageDetails cattingtonPageDetails = new LayoutByLayoutPageDetails
             {
-                layoutDetails = layout,
+                LayoutByLayoutDetails = layout,
                 DisplayTitle = layoutDetails.Name,
-                MenuTitle = layout.Name.ToString()
+                MenuTitle = layout.Name.ToString(),
+                LayoutDetails = layoutDetails
             };
 
             // need to sort out folder
