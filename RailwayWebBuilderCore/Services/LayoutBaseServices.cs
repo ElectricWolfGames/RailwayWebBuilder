@@ -1,4 +1,5 @@
-﻿using RailwayWebBuilderCore._SiteData.ModelRailways;
+﻿using RailwayWebBuilderCore._Site.Railways.ModelEvents;
+using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Enums;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,22 @@ namespace RailwayWebBuilderCore.Services
                 File.AppendAllText("e:\\temp\\list.txt", nameEnum.ToString() + "\n\r");
                 int i = 0;
                 i++;
+
+                var path = @"E:\Projects\eWolfModelRailwayWeb\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
+                string filedata = "using RailwayWebBuilderCore.Enums;\r\n\r\n" +
+                    "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts\r\n" +
+                    "{\r\n" +
+                    $"    internal class {nameEnum} : LayoutBase\r\n" +
+                    "    {\r\n" +
+                    $"        public {nameEnum}()\r\n" +
+                    "        {\r\n" +
+                    $"            Name = LayoutNamesEnums.{nameEnum};\r\n" +
+                    "            Owner = \"\";\r\n" +
+                    $"            Description = \"\";  // TODO {nameEnum} Needs description \r\n" +
+                    "        }\r\n" +
+                    "    }\r\n" +
+                    "}";
+                File.WriteAllText(path + nameEnum + ".cs", filedata);
             }
 
             return layoutBase;
