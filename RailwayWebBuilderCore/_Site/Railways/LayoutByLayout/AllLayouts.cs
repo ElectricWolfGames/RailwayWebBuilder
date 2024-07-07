@@ -7,6 +7,8 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Services;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -39,15 +41,13 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Append(LocoRef.CreateHero(this));
 
             var layoutsList = lbls.Layouts;
-            var ordedBlogs = layoutsList.OrderBy(x => x.Name).ToList();
+            List<ILayoutBase> ordedBlogs = layoutsList.OrderBy(x => x.Name).ToList();
 
             WebPage.Append("<div class='row mb-2'>");
 
             for (int index = 0; index < ordedBlogs.Count; index++)
             {
-                LayoutNamesEnums pre = LayoutNamesEnums.None;
-                if (index > 1)
-                    pre = ordedBlogs[index - 1].Name;
+                LayoutNamesEnums pre = FindPrevouseWithImages(ordedBlogs, index);
 
                 LayoutNamesEnums post = LayoutNamesEnums.None;
                 if (index < ordedBlogs.Count - 1)
@@ -93,6 +93,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 sb.AppendLine("<Table>");
                 sb.AppendLine("  <tr>");
                 sb.AppendLine("    <td width ='214px'>");
+
                 sb.AppendLine($"<h5>{layoutDetails.GaugeName}</h5>");
                 sb.AppendLine($"<h5>{layout.Images.Count}</h5>");
                 sb.AppendLine("    </td>");
@@ -126,6 +127,20 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             // need to sort out folder
             cattingtonPageDetails.CreatePage();
+        }
+
+        private LayoutNamesEnums FindPrevouseWithImages(List<ILayoutBase> ordedBlogs, int index)
+        {
+            while (true)
+            {
+                if (index == 0)
+                    return LayoutNamesEnums.None;
+
+                index--;
+                var item = ordedBlogs[index--];
+                if (item.Images.Count > 0)
+                    return item.Name;
+            }
         }
     }
 }

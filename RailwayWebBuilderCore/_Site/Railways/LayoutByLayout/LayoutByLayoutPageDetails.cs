@@ -61,7 +61,23 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             WebPage.Append(Jumbotron());
 
-            HTMLBuilder htmBuilder = new HTMLBuilder();
+            WebPage.Append(AddImages());
+            if (LayoutByLayoutDetails.Images.Count > 6)
+            {
+                WebPage.Append(NavButtons());
+            }
+
+            WebPage.Append("</div>");
+            WebPage.Append(HTMLRailHelper.Modal());
+            WebPage.Append("<script src='../Scripts/script.js'></script>");
+
+            WebPage.EndBody();
+            WebPage.Output();
+        }
+
+        private string AddImages()
+        {
+            HTMLBuilder htmBuilder = new();
 
             HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
             foreach (var lp in LayoutByLayoutDetails.Images)
@@ -71,15 +87,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 HTMLHelper.AddImageToGallery(folder, lp, htmBuilder);
             }
             HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-
-            WebPage.Append(htmBuilder.Output());
-
-            WebPage.Append("</div>");
-            WebPage.Append(HTMLRailHelper.Modal());
-            WebPage.Append("<script src='../Scripts/script.js'></script>");
-
-            WebPage.EndBody();
-            WebPage.Output();
+            return htmBuilder.Output();
         }
 
         private string Jumbotron()
@@ -94,6 +102,9 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             stringBuilder.AppendLine("<div class='col-md-12'>");
             stringBuilder.AppendLine($"<p'>{LayoutByLayoutDetails.Description}</p>");
             stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
 
             return stringBuilder.ToString();
         }
@@ -102,19 +113,28 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
         {
             StringBuilder sb = new();
 
+            var preDetails = new LayoutDetails(Pre);
+            string preButton = $"<a href='{preDetails.NameEnum}.html' class='btn btn-info btn-lg'><h1>{preDetails.Name}</h1></a>";
+
+            var PostDetails = new LayoutDetails(Post);
+            string postButton = $"<a href='{PostDetails.NameEnum}.html' class='float-right btn btn-info btn-lg'><h1>{PostDetails.Name}</h1></a>";
+
             sb.AppendLine("<Table width ='100%'>");
             sb.AppendLine("  <tr>");
             sb.AppendLine("    <td width ='40%'>");
-            sb.AppendLine($"<h5>{Pre}</h5>");
+            if (Pre != LayoutNamesEnums.None)
+                sb.AppendLine($"{preButton}");
             sb.AppendLine("    </td>");
             sb.AppendLine("    <td width ='20%'>");
             sb.AppendLine("    </td>");
             sb.AppendLine("    <td width ='40%'>");
-            sb.AppendLine($"<h5>{Post}</h5>");
+            if (Post != LayoutNamesEnums.None)
+                sb.AppendLine($"{postButton}");
             sb.AppendLine("    </td>");
             sb.AppendLine("  </tr>");
             sb.AppendLine("</Table>");
-
+            sb.AppendLine("<br/>");
+            sb.AppendLine("<br/>");
             return sb.ToString();
         }
     }
