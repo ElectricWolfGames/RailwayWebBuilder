@@ -7,7 +7,6 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Headers;
 using RailwayWebBuilderCore.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,21 +40,20 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Append(LocoRef.CreateHero(this));
 
             var layoutsList = lbls.Layouts;
-            List<ILayoutBase> ordedBlogs = layoutsList.OrderBy(x => x.Name).ToList();
+            List<ILayoutBase> ordedBlogs = layoutsList.OrderBy(x => x.Name.ToString()).ToList();
 
             WebPage.Append("<div class='row mb-2'>");
 
             for (int index = 0; index < ordedBlogs.Count; index++)
             {
-                LayoutNamesEnums pre = FindPrevouseWithImages(ordedBlogs, index);
-
-                LayoutNamesEnums post = LayoutNamesEnums.None;
-                if (index < ordedBlogs.Count - 1)
-                    post = ordedBlogs[index + 1].Name;
-
                 ILayoutBase layout = ordedBlogs[index];
+
                 if (layout.Name == LayoutNamesEnums.None)
                     continue;
+
+                LayoutNamesEnums pre = FindPreviousWithImages(ordedBlogs, index);
+
+                LayoutNamesEnums post = FindNextWithImages(ordedBlogs, index);
 
                 if (layout.Images.Count > 2)
                 {
@@ -82,7 +80,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             sb.AppendLine("<div class='col-md-6'>");
             sb.AppendLine("<div class='card border-dark mb-3'>");
-            sb.AppendLine($"<h5 class='card-header'>{layoutDetails.Name}</h5>");
+            sb.AppendLine($"<h5 class='card-header'><a href='{layout.Name}.html'>{layoutDetails.Name}</a></h5>");
             sb.AppendLine("<div class='card-body'>");
             if (layout.Images.Count > 0)
             {
@@ -94,8 +92,8 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 sb.AppendLine("  <tr>");
                 sb.AppendLine("    <td width ='214px'>");
 
-                sb.AppendLine($"<h5>{layoutDetails.GaugeName}</h5>");
-                sb.AppendLine($"<h5>{layout.Images.Count}</h5>");
+                sb.AppendLine($"<h5><a href='{layout.Name}.html'>{layoutDetails.GaugeName}</a></h5>");
+
                 sb.AppendLine("    </td>");
                 sb.AppendLine("    <td>");
                 sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
@@ -129,7 +127,23 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             cattingtonPageDetails.CreatePage();
         }
 
-        private LayoutNamesEnums FindPrevouseWithImages(List<ILayoutBase> ordedBlogs, int index)
+        private LayoutNamesEnums FindNextWithImages(List<ILayoutBase> ordedBlogs, int index)
+        {
+            while (true)
+            {
+                if (index == ordedBlogs.Count - 1)
+                    return LayoutNamesEnums.None;
+
+                index++;
+                var item = ordedBlogs[index];
+                if (item.Name == LayoutNamesEnums.None)
+                    continue;
+                if (item.Images.Count > 2)
+                    return item.Name;
+            }
+        }
+
+        private LayoutNamesEnums FindPreviousWithImages(List<ILayoutBase> ordedBlogs, int index)
         {
             while (true)
             {
@@ -137,8 +151,11 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                     return LayoutNamesEnums.None;
 
                 index--;
-                var item = ordedBlogs[index--];
-                if (item.Images.Count > 0)
+                var item = ordedBlogs[index];
+                if (item.Name == LayoutNamesEnums.None)
+                    continue;
+
+                if (item.Images.Count > 2)
                     return item.Name;
             }
         }
