@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             YouTubeLink = "https://www.youtube.com/embed/iEEByqP7wW8";
             ImageFolder = "20240511-Thorpe";
             Title = "Syston Model Railway Society Thorpe 2024";
-            ImagePreview = "IMG_6237-Pheonix-Junction.JPG";
+            ImagePreview = "IMG_6237-Pheonix-Junction-thumb.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BottomoftheBarrel));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Bregstadt));

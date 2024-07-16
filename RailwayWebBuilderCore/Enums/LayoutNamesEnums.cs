@@ -692,5 +692,32 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Willevie", Gauges.OO9_Gauge)]
         Willevie,
+
+        [DescriptionGauge("Falcon Road", Gauges.O_Gauge)]
+        FalconRoad,
+
+        [DescriptionGauge("Padsbridge", Gauges.OO_Gauge)]
+        Padsbridge,
+
+        [DescriptionGauge("Cowley Yard", Gauges.O_Gauge)]
+        CowleyYard,
+
+        [DescriptionGauge("Coal Hill West", Gauges.N_Gauge)]
+        CoalHillWest,
+
+        [DescriptionGauge("Boston & Maine", Gauges.N_Gauge)]
+        Boston_Maine,
+
+        [DescriptionGauge("Wadsley Bridge", Gauges.O_Gauge)]
+        WadsleyBridge,
+
+        [DescriptionGauge("Goodley Lane TMD", Gauges.OO_Gauge)]
+        GoodleyLaneTMD,
+
+        [DescriptionGauge("Brinkley Town", Gauges.OO_Gauge)]
+        BrinkleyTown,
+
+        [DescriptionGauge("Little Calumet", Gauges.O_Gauge)]
+        LittleCalumet,
     }
 }
