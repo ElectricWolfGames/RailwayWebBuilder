@@ -36,6 +36,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
                 new LocoDetails("55009"),
                 new LocoDetails("55013"),
                 new LocoDetails("55019"),
+                new LocoDetails("D9015"),
                 });
         }
     }
