@@ -29,6 +29,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
             LocoNumbers.AddRange(new[]
             {
                 new LocoDetails("45305", "Alderman A E Draper"),
+                new LocoDetails("45428", "Eric Treacy"),
                 });
         }
     }
