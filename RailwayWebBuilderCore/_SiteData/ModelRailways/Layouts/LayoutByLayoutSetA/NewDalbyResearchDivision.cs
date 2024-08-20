@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class NewDalbyResearchDivision : LayoutBase, ILayoutByLayout
+    internal class NewDalbyResearchDivision : LayoutBase, ILayoutByLayoutSetA
     {
         public NewDalbyResearchDivision()
         {

@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class CroftMillYard : LayoutBase, ILayoutByLayout
+    internal class CroftMillYard : LayoutBase, ILayoutByLayoutSetA
     {
         public CroftMillYard()
         {

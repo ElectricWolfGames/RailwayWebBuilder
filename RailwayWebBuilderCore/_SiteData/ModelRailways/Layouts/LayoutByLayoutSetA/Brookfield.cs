@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Brookfield : LayoutBase, ILayoutByLayout
+    internal class Brookfield : LayoutBase, ILayoutByLayoutSetA
     {
         public Brookfield()
         {

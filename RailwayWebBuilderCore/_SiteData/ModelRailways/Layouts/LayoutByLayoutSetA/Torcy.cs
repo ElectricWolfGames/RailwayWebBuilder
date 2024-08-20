@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Torcy : LayoutBase, ILayoutByLayout
+    internal class Torcy : LayoutBase, ILayoutByLayoutSetA
     {
         public Torcy()
         {

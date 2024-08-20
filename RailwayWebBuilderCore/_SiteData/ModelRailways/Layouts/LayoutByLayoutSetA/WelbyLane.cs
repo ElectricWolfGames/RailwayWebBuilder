@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class WelbyLane : LayoutBase, ILayoutByLayout
+    internal class WelbyLane : LayoutBase, ILayoutByLayoutSetA
     {
         public WelbyLane()
         {

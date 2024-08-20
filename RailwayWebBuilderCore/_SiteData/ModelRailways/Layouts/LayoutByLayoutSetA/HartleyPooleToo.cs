@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class HartleyPooleToo : LayoutBase, ILayoutByLayout
+    internal class HartleyPooleToo : LayoutBase, ILayoutByLayoutSetA
     {
         public HartleyPooleToo()
         {

@@ -1,9 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA
 {
-    internal class ArnoldLane : LayoutBase, ILayoutByLayout
+    internal class ArnoldLane : LayoutBase, ILayoutByLayoutSetA
     {
         public ArnoldLane()
         {

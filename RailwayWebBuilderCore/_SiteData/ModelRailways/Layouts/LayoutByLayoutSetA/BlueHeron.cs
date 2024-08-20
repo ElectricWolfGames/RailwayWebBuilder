@@ -1,9 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA
 {
-    internal class BlueHeron : LayoutBase, ILayoutByLayout
+    internal class BlueHeron : LayoutBase, ILayoutByLayoutSetA
     {
         public BlueHeron()
         {

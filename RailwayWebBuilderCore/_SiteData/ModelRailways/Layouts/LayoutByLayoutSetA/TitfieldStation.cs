@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class TitfieldStation : LayoutBase, ILayoutByLayout
+    internal class TitfieldStation : LayoutBase, ILayoutByLayoutSetA
     {
         public TitfieldStation()
         {

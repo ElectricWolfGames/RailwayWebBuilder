@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class SuttonBankTMD : LayoutBase, ILayoutByLayout
+    internal class SuttonBankTMD : LayoutBase, ILayoutByLayoutSetA
     {
         public SuttonBankTMD()
         {

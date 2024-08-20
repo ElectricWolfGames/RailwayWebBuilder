@@ -28,9 +28,8 @@ namespace ThumbnailCreator
                 width = renderWidth = source.RenderSize.Width;
 
                 //Specification for target bitmap like width/height pixel etc.
-                RenderTargetBitmap renderTarget = new
-((int)renderWidth, (int)renderHeight, 0, 0,
-                PixelFormats.Pbgra32);
+                RenderTargetBitmap renderTarget = new((int)renderWidth, (int)renderHeight, 0, 0,
+                    PixelFormats.Pbgra32);
                 //creates Visual Brush of UIElement
                 VisualBrush visualBrush = new(source);
 

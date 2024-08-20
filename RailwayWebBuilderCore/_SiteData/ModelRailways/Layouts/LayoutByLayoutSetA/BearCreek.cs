@@ -1,9 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA
 {
-    internal class BearCreek : LayoutBase, ILayoutByLayout
+    internal class BearCreek : LayoutBase, ILayoutByLayoutSetA
     {
         public BearCreek()
         {

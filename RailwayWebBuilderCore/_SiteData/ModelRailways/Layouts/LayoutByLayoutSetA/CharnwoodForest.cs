@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class CharnwoodForest : LayoutBase, ILayoutByLayout
+    internal class CharnwoodForest : LayoutBase, ILayoutByLayoutSetA
     {
         public CharnwoodForest()
         {

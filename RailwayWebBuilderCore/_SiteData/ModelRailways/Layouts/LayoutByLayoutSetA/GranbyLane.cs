@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class GranbyLane : LayoutBase, ILayoutByLayout
+    internal class GranbyLane : LayoutBase, ILayoutByLayoutSetA
     {
         public GranbyLane()
         {
