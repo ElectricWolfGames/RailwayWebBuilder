@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class NorthRoad : LayoutBase
+    internal class NorthRoad : LayoutBase, ILayoutByLayout
     {
         public NorthRoad()
         {

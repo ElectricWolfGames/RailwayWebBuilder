@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Victoria : LayoutBase
+    internal class Victoria : LayoutBase, ILayoutByLayout
     {
         public Victoria()
         {

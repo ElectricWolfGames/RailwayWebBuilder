@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Birchwood : LayoutBase
+    internal class Birchwood : LayoutBase, ILayoutByLayout
     {
         public Birchwood()
         {

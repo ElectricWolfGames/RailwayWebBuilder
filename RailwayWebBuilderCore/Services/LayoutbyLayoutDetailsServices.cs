@@ -9,14 +9,14 @@ namespace RailwayWebBuilderCore.Services
 {
     public class LayoutbyLayoutDetailsServices
     {
-        private List<ILayoutByLayoutSetA> _layouts = new List<ILayoutByLayoutSetA>();
+        private List<ILayoutByLayout> _layouts = new List<ILayoutByLayout>();
 
         public LayoutbyLayoutDetailsServices()
         {
             AddModelEvents();
         }
 
-        public List<ILayoutByLayoutSetA> Layouts
+        public List<ILayoutByLayout> Layouts
         {
             get
             {
@@ -24,7 +24,7 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        internal ILayoutByLayoutSetA FindLayout(LayoutNamesEnums nameEnum)
+        internal ILayoutByLayout FindLayout(LayoutNamesEnums nameEnum)
         {
             return _layouts.FirstOrDefault(x => x.Name == nameEnum);
         }
@@ -34,12 +34,12 @@ namespace RailwayWebBuilderCore.Services
             _layouts.AddRange(GetAll());
         }
 
-        private List<ILayoutByLayoutSetA> GetAll()
+        private List<ILayoutByLayout> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
-                          where t.GetInterfaces().Contains(typeof(ILayoutByLayoutSetA))
+                          where t.GetInterfaces().Contains(typeof(ILayoutByLayout))
                                 && t.GetConstructor(Type.EmptyTypes) != null
-                          select Activator.CreateInstance(t) as ILayoutByLayoutSetA;
+                          select Activator.CreateInstance(t) as ILayoutByLayout;
 
             return updates.ToList();
         }

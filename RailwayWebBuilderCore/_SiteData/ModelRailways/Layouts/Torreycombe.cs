@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Torreycombe : LayoutBase
+    internal class Torreycombe : LayoutBase, ILayoutByLayout
     {
         public Torreycombe()
         {

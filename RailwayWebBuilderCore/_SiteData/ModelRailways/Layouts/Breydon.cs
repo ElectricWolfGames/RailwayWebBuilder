@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Breydon : LayoutBase
+    internal class Breydon : LayoutBase, ILayoutByLayout
     {
         public Breydon()
         {

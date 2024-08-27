@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Eyemouth : LayoutBase
+    internal class Eyemouth : LayoutBase, ILayoutByLayout
     {
         public Eyemouth()
         {

@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Oscarton : LayoutBase
+    internal class Oscarton : LayoutBase, ILayoutByLayout
     {
         public Oscarton()
         {

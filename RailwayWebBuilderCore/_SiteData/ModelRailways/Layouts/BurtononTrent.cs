@@ -1,8 +1,9 @@
 ﻿using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class BurtononTrent : LayoutBase
+    internal class BurtononTrent : LayoutBase, ILayoutByLayout
     {
         public BurtononTrent()
         {
