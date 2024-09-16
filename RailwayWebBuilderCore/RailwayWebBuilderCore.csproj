@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Builders\StockVideos\" />
+    <Folder Include="_SiteData\ModelRailways\Layouts\LayoutByLayoutSetB\" />
     <Folder Include="_Site\Railways\Shop\" />
     <Folder Include="_Site\Railways\StockVideos\" />
   </ItemGroup>

@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class CarriageandWagon : LayoutBase, ILayoutByLayout
+    internal class CarriageandWagon : LayoutBase
     {
         public CarriageandWagon()
         {
