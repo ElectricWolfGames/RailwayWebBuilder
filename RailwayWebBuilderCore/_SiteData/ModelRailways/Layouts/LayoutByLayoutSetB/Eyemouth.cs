@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Eyemouth : LayoutBase, ILayoutByLayout
+    internal class Eyemouth : LayoutBase, ILayoutByLayoutSetB
     {
         public Eyemouth()
         {

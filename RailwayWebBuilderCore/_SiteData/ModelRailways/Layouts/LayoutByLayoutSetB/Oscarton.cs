@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Oscarton : LayoutBase, ILayoutByLayout
+    internal class Oscarton : LayoutBase, ILayoutByLayoutSetB
     {
         public Oscarton()
         {

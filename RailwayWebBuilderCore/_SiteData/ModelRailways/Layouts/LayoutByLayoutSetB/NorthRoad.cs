@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class NorthRoad : LayoutBase, ILayoutByLayout
+    internal class NorthRoad : LayoutBase, ILayoutByLayoutSetB
     {
         public NorthRoad()
         {

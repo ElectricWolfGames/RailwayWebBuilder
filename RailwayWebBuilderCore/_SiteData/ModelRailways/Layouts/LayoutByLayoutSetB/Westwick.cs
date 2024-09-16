@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Westwick : LayoutBase, ILayoutByLayout
+    internal class Westwick : LayoutBase, ILayoutByLayoutSetB
     {
         public Westwick()
         {

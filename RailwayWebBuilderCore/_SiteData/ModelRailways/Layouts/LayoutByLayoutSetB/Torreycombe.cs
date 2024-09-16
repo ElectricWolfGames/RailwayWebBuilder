@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Torreycombe : LayoutBase, ILayoutByLayout
+    internal class Torreycombe : LayoutBase, ILayoutByLayoutSetB
     {
         public Torreycombe()
         {

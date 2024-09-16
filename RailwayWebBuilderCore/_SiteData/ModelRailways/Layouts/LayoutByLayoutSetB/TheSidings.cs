@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class TheSidings : LayoutBase, ILayoutByLayout
+    internal class TheSidings : LayoutBase, ILayoutByLayoutSetB
     {
         public TheSidings()
         {

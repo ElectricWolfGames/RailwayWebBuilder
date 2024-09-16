@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Victoria : LayoutBase, ILayoutByLayout
+    internal class Victoria : LayoutBase, ILayoutByLayoutSetB
     {
         public Victoria()
         {

@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Birchwood : LayoutBase, ILayoutByLayout
+    internal class Birchwood : LayoutBase, ILayoutByLayoutSetB
     {
         public Birchwood()
         {

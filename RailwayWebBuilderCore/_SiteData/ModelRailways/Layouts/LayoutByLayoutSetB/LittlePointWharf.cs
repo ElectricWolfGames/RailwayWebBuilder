@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class LittlePointWharf : LayoutBase, ILayoutByLayout
+    internal class LittlePointWharf : LayoutBase, ILayoutByLayoutSetB
     {
         public LittlePointWharf()
         {

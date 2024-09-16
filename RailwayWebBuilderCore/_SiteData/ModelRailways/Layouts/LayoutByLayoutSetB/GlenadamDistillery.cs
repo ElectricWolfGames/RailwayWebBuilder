@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class GlenadamDistillery : LayoutBase, ILayoutByLayout
+    internal class GlenadamDistillery : LayoutBase, ILayoutByLayoutSetB
     {
         public GlenadamDistillery()
         {

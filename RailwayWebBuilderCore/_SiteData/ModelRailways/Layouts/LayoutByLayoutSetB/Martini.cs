@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Martini : LayoutBase, ILayoutByLayout
+    internal class Martini : LayoutBase, ILayoutByLayoutSetB
     {
         public Martini()
         {

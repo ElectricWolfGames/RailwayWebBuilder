@@ -3,7 +3,7 @@ using RailwayWebBuilderCore.Interfaces;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class Breydon : LayoutBase, ILayoutByLayout
+    internal class Breydon : LayoutBase, ILayoutByLayoutSetB
     {
         public Breydon()
         {
