@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.WadsleyBridge;
             Owner = "";
-            Description = "";  // TODO WadsleyBridge Needs description 
+            Description = "";  // TODO WadsleyBridge Needs description
         }
     }
 }

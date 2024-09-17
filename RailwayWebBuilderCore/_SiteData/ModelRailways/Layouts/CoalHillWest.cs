@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.CoalHillWest;
             Owner = "";
-            Description = "";  // TODO CoalHillWest Needs description 
+            Description = "";  // TODO CoalHillWest Needs description
         }
     }
 }
