@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.RustonandHornsby_SheafIronworks;
             Owner = "";
-            Description = "Ruston & Hornsby were general engineers and engine builders. locomotive and\r\nboiler manufacturers. By WWII while the Lincoln Boultham works were pro-\r\nduring narrow and standard gauge locomotives, the sheaf ironworks on the\r\nwaterside were producing a huge range of engines. from small stationary\r\nengines through to large marine engines. primarily for minesweepers, land-\r\ning craft, patrol boats, and submarines. Ruston & Hornsby were also\r\nequipped for the production of all the Matilda, Cavalier, and Crusader Tanks.\r\nThe layout depicts a part of the Ruston & Hornsby Sheaf Ironworks in Lin-\r\ncoln during the early 1940s, where the mainline railway from Lincoln\r\nbrought supplies in & out.";
+            Description = "Ruston & Hornsby were general engineers and engine builders. locomotive andboiler manufacturers. By WWII while the Lincoln Boultham works were pro-during narrow and standard gauge locomotives, the sheaf ironworks on thewaterside were producing a huge range of engines. from small stationaryengines through to large marine engines. primarily for minesweepers, land-ing craft, patrol boats, and submarines. Ruston & Hornsby were alsoequipped for the production of all the Matilda, Cavalier, and Crusader Tanks.The layout depicts a part of the Ruston & Hornsby Sheaf Ironworks in Lin-coln during the early 1940s, where the mainline railway from Lincolnbrought supplies in & out.";
         }
     }
 }

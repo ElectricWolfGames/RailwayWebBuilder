@@ -37,18 +37,18 @@ namespace RailwayWebBuilderCore.Services
                 i++;
 
                 var path = @"E:\Projects\eWolfModelRailwayWeb\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
-                string filedata = "using RailwayWebBuilderCore.Enums;\r\n\r\n" +
-                    "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts\r\n" +
-                    "{\r\n" +
-                    $"    internal class {nameEnum} : LayoutBase\r\n" +
-                    "    {\r\n" +
-                    $"        public {nameEnum}()\r\n" +
-                    "        {\r\n" +
-                    $"            Name = LayoutNamesEnums.{nameEnum};\r\n" +
-                    "            Owner = \"\";\r\n" +
-                    $"            Description = \"\";  // TODO {nameEnum} Needs description \r\n" +
-                    "        }\r\n" +
-                    "    }\r\n" +
+                string filedata = "using RailwayWebBuilderCore.Enums;" +
+                    "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts" +
+                    "{" +
+                    $"    internal class {nameEnum} : LayoutBase" +
+                    "    {" +
+                    $"        public {nameEnum}()" +
+                    "        {" +
+                    $"            Name = LayoutNamesEnums.{nameEnum};" +
+                    "            Owner = \"\";" +
+                    $"            Description = \"\";  // TODO {nameEnum} Needs description " +
+                    "        }" +
+                    "    }" +
                     "}";
                 File.WriteAllText(path + nameEnum + ".cs", filedata);
             }

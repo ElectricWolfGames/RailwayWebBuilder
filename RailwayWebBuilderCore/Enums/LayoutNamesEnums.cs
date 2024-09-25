@@ -325,7 +325,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Roofers Lane", Gauges.N_Gauge)]
         RoofersLane,
 
-        // not sure about the below gauges
         [DescriptionGauge("Little Burton", Gauges.OO_Gauge)]
         LittleBurton,
 
@@ -657,9 +656,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Oldmarket", Gauges.OO_Gauge)]
         Oldmarket,
 
-        //[DescriptionGauge("St. Johns", Gauges.OO_Gauge)]
-        //StJohns,
-
         [DescriptionGauge("Pheonix Junction", Gauges.OO_Gauge)]
         PheonixJunction,
 
@@ -672,17 +668,11 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Fourgig East", Gauges.O_Gauge)]
         FourgigEast,
 
-        //[DescriptionGauge("Bregstadt", Gauges.TT120_Gauge)]
-        //Bregstadt,
-
         [DescriptionGauge("North Road", Gauges.N_Gauge)]
         NorthRoad,
 
         [DescriptionGauge("Eyemouth", Gauges.N_Gauge)]
         Eyemouth,
-
-        //[DescriptionGauge("Bishopston", Gauges.OO_Gauge)]
-        //Bishopston,
 
         [DescriptionGauge("Jones of Taunton", Gauges.N_Gauge)]
         JonesofTaunton,
@@ -719,5 +709,131 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Little Calumet", Gauges.O_Gauge)]
         LittleCalumet,
+
+        [DescriptionGauge("Birmingham Moor St", Gauges.Unknown)]
+        BirminghamMoorSt,
+
+        [DescriptionGauge("Bregenbach Im Schwarzwald", Gauges.Unknown)]
+        BregenbachImSchwarzwald,
+
+        [DescriptionGauge("Burlish Road", Gauges.Unknown)]
+        BurlishRoad,
+
+        [DescriptionGauge("Callaton", Gauges.Unknown)]
+        Callaton,
+
+        [DescriptionGauge("Calstock Halton Quay", Gauges.Unknown)]
+        CalstockHaltonQuay,
+
+        [DescriptionGauge("Campbells Quarry", Gauges.Unknown)]
+        CampbellsQuarry,
+
+        [DescriptionGauge("Con Yard", Gauges.Unknown)]
+        ConYard,
+
+        [DescriptionGauge("Crimson RD", Gauges.Unknown)]
+        CrimsonRD,
+
+        [DescriptionGauge("Edenbridge Town", Gauges.Unknown)]
+        EdenbridgeTown,
+
+        [DescriptionGauge("Grange Lane", Gauges.Unknown)]
+        GrangeLane,
+
+        [DescriptionGauge("Hogsmead on Sodor", Gauges.Unknown)]
+        HogsmeadonSodor,
+
+        [DescriptionGauge("Industrivej", Gauges.Unknown)]
+        Industrivej,
+
+        [DescriptionGauge("Kaninchenbau", Gauges.Unknown)]
+        Kaninchenbau,
+
+        [DescriptionGauge("Kinlochewe", Gauges.Unknown)]
+        Kinlochewe,
+
+        [DescriptionGauge("Lisworth Bay", Gauges.Unknown)]
+        LisworthBay,
+
+        [DescriptionGauge("Little Aire", Gauges.Unknown)]
+        LittleAire,
+
+        [DescriptionGauge("Llanfair Caereinion", Gauges.Unknown)]
+        LlanfairCaereinion,
+
+        [DescriptionGauge("Loft City Central", Gauges.Unknown)]
+        LoftCityCentral,
+
+        [DescriptionGauge("Lottenbirge", Gauges.Unknown)]
+        Lottenbirge,
+
+        [DescriptionGauge("Macclesfield Hibel RD", Gauges.Unknown)]
+        MacclesfieldHibelRD,
+
+        [DescriptionGauge("Meyrick RD", Gauges.Unknown)]
+        MeyrickRD,
+
+        [DescriptionGauge("New Dalby", Gauges.Unknown)]
+        NewDalby,
+
+        [DescriptionGauge("Newchapel JCT", Gauges.Unknown)]
+        NewchapelJCT,
+
+        [DescriptionGauge("Oil Drum Lane", Gauges.Unknown)]
+        OilDrumLane,
+
+        [DescriptionGauge("Plas Brondanw", Gauges.Unknown)]
+        PlasBrondanw,
+
+        [DescriptionGauge("Plaster Mill", Gauges.Unknown)]
+        PlasterMill,
+
+        [DescriptionGauge("Port William", Gauges.Unknown)]
+        PortWilliam,
+
+        [DescriptionGauge("Portsea", Gauges.Unknown)]
+        Portsea,
+
+        [DescriptionGauge("Redbridge Wharf", Gauges.Unknown)]
+        RedbridgeWharf,
+
+        [DescriptionGauge("Redwick Halt", Gauges.Unknown)]
+        RedwickHalt,
+
+        [DescriptionGauge("Sheperdswell", Gauges.Unknown)]
+        Sheperdswell,
+
+        [DescriptionGauge("Splott", Gauges.Unknown)]
+        Splott,
+
+        [DescriptionGauge("ST Johns", Gauges.Unknown)]
+        STJohns,
+
+        [DescriptionGauge("ST Seeb", Gauges.Unknown)]
+        STSeeb,
+
+        [DescriptionGauge("Swiss Pass", Gauges.Unknown)]
+        SwissPass,
+
+        [DescriptionGauge("Tan Y Coed", Gauges.Unknown)]
+        TanYCoed,
+
+        [DescriptionGauge("The Pipe Works", Gauges.Unknown)]
+        ThePipeWorks,
+
+        [DescriptionGauge("Tregurra Dries", Gauges.Unknown)]
+        TregurraDries,
+
+        [DescriptionGauge("Tremoy Junction", Gauges.Unknown)]
+        TremoyJunction,
+
+        [DescriptionGauge("Westmoor JCT", Gauges.Unknown)]
+        WestmoorJCT,
+
+        [DescriptionGauge("Willowbrook Marsh", Gauges.Unknown)]
+        WillowbrookMarsh,
+
+        [DescriptionGauge("Whithorn", Gauges.Unknown)]
+        Whithorn,
     }
 }

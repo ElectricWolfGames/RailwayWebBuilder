@@ -93,5 +93,8 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("HOm gauge")]
         HOm_Gauge,
+
+        [Description("Unknown")]
+        Unknown,
     }
 }

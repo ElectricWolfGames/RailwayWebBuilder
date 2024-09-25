@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.BadDurkheimBetriebshof;
             Owner = "";
-            Description = "Bad Durkheim Betriebshof is a small German layout based on a typical en-\r\ngine shed and depot around the Rhine, part of a much larger layout build of\r\na much larger layout build by out vice president he hope you enjoy it";
+            Description = "Bad Durkheim Betriebshof is a small German layout based on a typical en-gine shed and depot around the Rhine, part of a much larger layout build ofa much larger layout build by out vice president he hope you enjoy it";
         }
     }
 }
