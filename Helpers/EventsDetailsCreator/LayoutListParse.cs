@@ -2,6 +2,7 @@
 using System.Numerics;
 using System.Reflection.PortableExecutable;
 using System;
+using System.Xml.Linq;
 
 namespace LayoutHelper
 {
@@ -27,16 +28,29 @@ namespace LayoutHelper
         {
         }
 
+        internal void AddNames(string names)
+        {
+            string[] ns = names.Split(',');
+            _layoutsRaw = ns.ToList();
+
+            foreach (string s in _layoutsRaw)
+            {
+                LayoutDetails layoutDetails = new LayoutDetails();
+                layoutDetails.Name = s;
+                _layoutDetails.Add(layoutDetails);
+            }
+        }
+
         internal void CreateFolders(string path)
         {
             // Show Enums
-            foreach (var item in _layoutDetails)
+            /*foreach (var item in _layoutDetails)
             {
                 Console.WriteLine($"[DescriptionGauge(\"{item.Name}\", {item.Gauge})]");
                 Console.WriteLine($"{WithoutSpaces(item.Name)},");
                 //allNames.Add(WithoutSpaces(item.Name));
                 Console.WriteLine();
-            }
+            }*/
 
             Directory.CreateDirectory($"{path}\\Images");
             Directory.CreateDirectory($"{path}\\Clips");
@@ -47,9 +61,10 @@ namespace LayoutHelper
             Console.WriteLine();
             foreach (var item in _layoutDetails)
             {
-                Console.WriteLine($"Layouts.Add(new LayoutDetails(LayoutNamesEnums.{WithoutSpaces(item.Name)}));");
+                //Console.WriteLine($"Layouts.Add(new LayoutDetails(LayoutNamesEnums.{WithoutSpaces(item.Name)}));");
                 Directory.CreateDirectory($"{path}\\Images\\{item.Name}");
                 Directory.CreateDirectory($"{path}\\Clips\\{item.Name}");
+                Directory.CreateDirectory($"{path}\\Layouts\\{item.Name}");
             }
         }
 

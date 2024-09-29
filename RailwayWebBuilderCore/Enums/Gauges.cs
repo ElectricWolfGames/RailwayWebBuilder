@@ -62,7 +62,7 @@ namespace RailwayWebBuilderCore.Enums
         _45mm,
 
         [Description("P4 gauge")]
-        P4Gauge,
+        P4_Gauge,
 
         [Description("G gauge")]
         G_Gauge,
@@ -96,5 +96,11 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("Unknown")]
         Unknown,
+
+        [Description("7mm")]
+        _7mm,
+
+        [Description("2mm")]
+        _2mm,
     }
 }

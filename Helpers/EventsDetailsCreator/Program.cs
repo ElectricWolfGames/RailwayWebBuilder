@@ -6,14 +6,17 @@
         {
             Console.WriteLine("Hello, World!");
 
-            List<string> allNames = new List<string>();
-            string names = "Atherley Narrows,Birmingham Moor St,Bottom of the Barrel,Bregenbach Im Schwarzwald,Burlish Road,Callaton,Calstock Halton Quay,Campbells Quarry,Con Yard,Crimson RD,Edenbridge Town,Fredstone Lane,Grange Lane,Hogsmead on Sodor,Industrivej,Kaninchenbau,Kinlochewe,Lisworth Bay,Little Aire,Llanfair Caereinion,Loft City Central,Lottenbirge,Macclesfield Hibel RD,Meyrick RD,New Dalby,Newchapel JCT,Norman Colliery,Oil Drum Lane,Plas Brondanw,Plaster Mill,Port William,Portsea,Redbridge Wharf,Redwick Halt,San Clemente,Scarlington,Sheperdswell,Spilsby,Splott,ST Johns,ST Seeb,Swiss Pass,Tan Y Coed,The Pipe Works,Tregurra Dries,Tremoy Junction,Westmoor JCT,Willowbrook Marsh,Whithorn";
-            allNames.AddRange(ShowEnums(names, "Gauges.Unknown"));
+            NameItemsAfterFolders.Now(@"E:\Trains\Photos - Main\2024\2024-09-28 Stafford Railway Circle\");
 
-            /*var layoutList = new LayoutListParse();
-            layoutList.Parse();
-            layoutList.CreateFolders(@"E:\Trains\Photos - Main\2024\2024-07-14\");
-            */
+            //List<string> allNames = new List<string>();
+            //string names = "Atherley Narrows,Birmingham Moor St,Bottom of the Barrel,Bregenbach Im Schwarzwald,Burlish Road,Callaton,Calstock Halton Quay,Campbells Quarry,Con Yard,Crimson RD,Edenbridge Town,Fredstone Lane,Grange Lane,Hogsmead on Sodor,Industrivej,Kaninchenbau,Kinlochewe,Lisworth Bay,Little Aire,Llanfair Caereinion,Loft City Central,Lottenbirge,Macclesfield Hibel RD,Meyrick RD,New Dalby,Newchapel JCT,Norman Colliery,Oil Drum Lane,Plas Brondanw,Plaster Mill,Port William,Portsea,Redbridge Wharf,Redwick Halt,San Clemente,Scarlington,Sheperdswell,Spilsby,Splott,ST Johns,ST Seeb,Swiss Pass,Tan Y Coed,The Pipe Works,Tregurra Dries,Tremoy Junction,Westmoor JCT,Willowbrook Marsh,Whithorn";
+            //allNames.AddRange(ShowEnums(names, "Gauges.Unknown"));
+
+            //var layoutList = new LayoutListParse();
+            //layoutList.Parse();
+            //layoutList.AddNames("Atherley Narrows,Birmingham Moor St,Bottom of the Barrel,Bregenbach Im Schwarzwald,Burlish Road,Callaton,Calstock Halton Quay,Campbells Quarry,Con Yard,Crimson RD,Edenbridge Town,Fredstone Lane,Grange Lane,Hogsmead on Sodor,Industrivej,Kaninchenbau,Kinlochewe,Lisworth Bay,Little Aire,Llanfair Caereinion,Loft City Central,Lottenbirge,Macclesfield Hibel RD,Meyrick RD,New Dalby,Newchapel JCT,Norman Colliery,Oil Drum Lane,Plas Brondanw,Plaster Mill,Port William,Portsea,Redbridge Wharf,Redwick Halt,San Clemente,Scarlington,Sheperdswell,Spilsby,Splott,ST Johns,ST Seeb,Swiss Pass,Tan Y Coed,The Pipe Works,Tregurra Dries,Tremoy Junction,Westmoor JCT,Willowbrook Marsh,Whithorn");
+            //layoutList.CreateFolders(@"E:\Trains\Photos - Main\2024\2024-09-28 Stafford Railway Circle\");
+
             /*
 
             List<string> allNames = new List<string>();

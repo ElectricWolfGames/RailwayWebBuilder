@@ -32,7 +32,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2023
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.NewvaddonParkway));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.OakwoodLane));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Rockcliffe));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.STRuth));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StRuth));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BregenbachImSchwarzald));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.KleineRundfahrt));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ishinaka));
