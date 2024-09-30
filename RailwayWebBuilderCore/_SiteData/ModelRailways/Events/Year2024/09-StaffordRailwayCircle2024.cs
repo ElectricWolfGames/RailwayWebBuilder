@@ -19,7 +19,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2024-09-28 StaffordRailwayCircle";
             TripDate = new DateTime(2024, 09, 28);
 
-            YouTubeLink = "https://youtu.be/9p3IBUISavk";
+            YouTubeLink = "https://www.youtube.com/embed/9p3IBUISavk";
             ImageFolder = "20240928-StaffordRailwayCircle";
             Title = "Stafford Railway Circle 2024";
             ImagePreview = "IMG_7235-Con-Yard-thumb.JPG";
