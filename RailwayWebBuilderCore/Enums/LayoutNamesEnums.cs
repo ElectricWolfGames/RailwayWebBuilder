@@ -829,5 +829,26 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("7mm Narrow Gauge Association", Gauges._7mm)]
         Narrow7mmGaugeAssociation,
+
+        [DescriptionGauge("Borrington by the Sea", Gauges.O_Gauge)]
+        BorringtonByTheSea,
+
+        [DescriptionGauge("Rumbow Edge", Gauges.O165_Gauge)]
+        RumbowEdge,
+
+        [DescriptionGauge("Sellraintal", Gauges.N_Gauge)]
+        Sellraintal,
+
+        [DescriptionGauge("Broadwater Junction", Gauges.N_Gauge)]
+        BroadwaterJunction,
+
+        [DescriptionGauge("Gravelly Oak", Gauges.N_Gauge)]
+        GravellyOak,
+
+        [DescriptionGauge("Clayton End Signalman", Gauges.OO_Gauge)]
+        ClaytonEndSignalman,
+
+        [DescriptionGauge("Weekend Yard", Gauges.O_Gauge)]
+        WeekendYard,
     }
 }

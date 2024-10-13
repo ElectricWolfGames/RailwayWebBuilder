@@ -46,7 +46,7 @@ namespace RailwayWebBuilderCore.Enums
         [Description("N gauge continental")]
         N_Gauge_Continental,
 
-        [Description("O165 gauge")]
+        [Description("O-16.5 gauge")]
         O165_Gauge,
 
         [Description("TTE gauge")]
