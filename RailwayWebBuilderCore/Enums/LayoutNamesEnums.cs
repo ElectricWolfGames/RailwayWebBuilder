@@ -187,9 +187,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Blaendare Road", Gauges.OO_Gauge)]
         BlaendareRoad,
 
-        [DescriptionGauge("Britannia Mill", Gauges.OO_Gauge)]
-        BritanniaMill,
-
         [DescriptionGauge("Dilhorn Colliery", Gauges.OO_Gauge)]
         DilhornColliery,
 
@@ -850,5 +847,32 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Weekend Yard", Gauges.O_Gauge)]
         WeekendYard,
+
+        [DescriptionGauge("Northfields", Gauges.N_Gauge)]
+        Northfields,
+
+        [DescriptionGauge("Meden Vale", Gauges.N_Gauge)]
+        MedenVale,
+
+        [DescriptionGauge("Birds Folly", Gauges.OO9_Gauge)]
+        BirdsFolly,
+
+        [DescriptionGauge("Sutton-In-Ashfield", Gauges.OO_Gauge)]
+        SuttonInAshfield,
+
+        [DescriptionGauge("Llanforen Shed", Gauges.OO_Gauge)]
+        LlanforenShed,
+
+        [DescriptionGauge("Britannia Mill", Gauges.OO_Gauge)]
+        BritanniaMills,
+
+        [DescriptionGauge("Kirkby-In-Ashfield", Gauges.OO_Gauge)]
+        KirkbyInAshfield,
+
+        [DescriptionGauge("Hindlow", Gauges.OO_Gauge)]
+        Hindlow,
+
+        [DescriptionGauge("Knowles Hill Colliery", Gauges.OO_Gauge)]
+        KnowlesHillColliery,
     }
 }

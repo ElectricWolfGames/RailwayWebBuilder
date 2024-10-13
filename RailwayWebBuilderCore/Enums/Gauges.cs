@@ -102,5 +102,8 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("2mm")]
         _2mm,
+
+        [Description("TT3_Gauge")]
+        TT3_Gauge,
     }
 }

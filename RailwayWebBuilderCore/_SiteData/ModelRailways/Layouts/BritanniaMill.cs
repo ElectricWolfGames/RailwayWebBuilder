@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
     {
         public BritanniaMill()
         {
-            Name = LayoutNamesEnums.BritanniaMill;
+            Name = LayoutNamesEnums.BritanniaMills;
             Owner = "";
             Description = "";  // TODO BritanniaMill Needs description
         }

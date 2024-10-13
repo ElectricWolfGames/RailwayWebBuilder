@@ -32,7 +32,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.PurgatoryPeak));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.AyleettEnd));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BlaendareRoad));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BritanniaMill));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BritanniaMills));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.DilhornColliery));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.DorehillStStevens));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.FrantonMill));
