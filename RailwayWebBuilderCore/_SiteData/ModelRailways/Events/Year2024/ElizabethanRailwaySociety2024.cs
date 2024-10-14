@@ -28,7 +28,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonInAshfield));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.LlanforenShed));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.HeanorSouth));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BritanniaMills));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.KirkbyInAshfield));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Hindlow));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.KnowlesHillColliery));

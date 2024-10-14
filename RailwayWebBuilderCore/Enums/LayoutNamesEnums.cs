@@ -10,8 +10,8 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Ambleside", Gauges.OO_Gauge)]
         Ambleside,
 
-        [DescriptionGauge("Brittannia Mills", Gauges.OO_Gauge)]
-        BrittanniaMills,
+        [DescriptionGauge("Brittania Mills", Gauges.OO_Gauge)]
+        BrittaniaMills,
 
         [DescriptionGauge("Melin Llechi", Gauges.SM32)]
         MelinLlechi,
@@ -175,7 +175,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Power Station", Gauges.N_Gauge)]
         ThePowerStation,
 
-        [DescriptionGauge("Uppingham", Gauges._3mm)]
+        [DescriptionGauge("Uppingham", Gauges.EM_Gauge)]
         Uppingham,
 
         [DescriptionGauge("Purgatory Peak", Gauges.On30_Gauge)]
@@ -862,9 +862,6 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Llanforen Shed", Gauges.OO_Gauge)]
         LlanforenShed,
-
-        [DescriptionGauge("Britannia Mill", Gauges.OO_Gauge)]
-        BritanniaMills,
 
         [DescriptionGauge("Kirkby-In-Ashfield", Gauges.OO_Gauge)]
         KirkbyInAshfield,

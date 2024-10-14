@@ -25,7 +25,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ambleside));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.StMichaelsVale));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brunshafen));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittanniaMills));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SheffieldVictoria));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Burgedorf));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Elmfield));

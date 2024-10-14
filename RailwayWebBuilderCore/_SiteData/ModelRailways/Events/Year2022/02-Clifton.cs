@@ -28,7 +28,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Hazelby Ballast Loader", Gauges.N_Gauge, "Hazelby Ballast Loader"));
             Layouts.Add(new LayoutDetails("Welby Lane RTC", Gauges.OO_Gauge, "Welby Lane RTC"));
             Layouts.Add(new LayoutDetails("Junesdale", Gauges.OO_Gauge, "Junesdale"));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittanniaMills));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
             Layouts.Add(new LayoutDetails("Hollington Quarry", Gauges.OO9_Gauge, "Hollington Quarry"));
             Layouts.Add(new LayoutDetails("East Midlands Fremo Group", Gauges.HO_Gauge, "East Midlands Fremo Group"));
 

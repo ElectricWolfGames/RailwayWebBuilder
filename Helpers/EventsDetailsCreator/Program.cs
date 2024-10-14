@@ -6,7 +6,8 @@
         {
             Console.WriteLine("Hello, World!");
 
-            //NameItemsAfterFolders.Now(@"E:\Trains\Photos - Main\2024\2024-10-12 Warley at Statfold\");
+            NameItemsAfterFolders.Now(@"E:\Trains\Photos - Main\2024\2024-10-12 The Elizabethan Railway Society\");
+            return;
 
             //List<string> allNames = new List<string>();
             //string names = "Atherley Narrows,Birmingham Moor St,Bottom of the Barrel,Bregenbach Im Schwarzwald,Burlish Road,Callaton,Calstock Halton Quay,Campbells Quarry,Con Yard,Crimson RD,Edenbridge Town,Fredstone Lane,Grange Lane,Hogsmead on Sodor,Industrivej,Kaninchenbau,Kinlochewe,Lisworth Bay,Little Aire,Llanfair Caereinion,Loft City Central,Lottenbirge,Macclesfield Hibel RD,Meyrick RD,New Dalby,Newchapel JCT,Norman Colliery,Oil Drum Lane,Plas Brondanw,Plaster Mill,Port William,Portsea,Redbridge Wharf,Redwick Halt,San Clemente,Scarlington,Sheperdswell,Spilsby,Splott,ST Johns,ST Seeb,Swiss Pass,Tan Y Coed,The Pipe Works,Tregurra Dries,Tremoy Junction,Westmoor JCT,Willowbrook Marsh,Whithorn";
@@ -52,7 +53,7 @@
 
         private static List<string> ShowEnums(string names, string enumGauge)
         {
-            string path = "E:\\Trains\\Photos - Main\\2024\\2024-01-13 Birstall - Syston Model Railway\\Clips";
+            string path = "E:\\Trains\\Photos - Main\\2024\\2024-10-12 The Elizabethan Railway Society\\Images";
 
             List<string> allNames = new List<string>();
 
@@ -64,8 +65,8 @@
                 Console.WriteLine($"{WithoutSpaces(part)},");
                 allNames.Add(WithoutSpaces(part));
 
-                //Directory.CreateDirectory($"{path}\\{part}");
-                //Console.WriteLine();
+                Directory.CreateDirectory($"{path}\\{part}");
+                Console.WriteLine();
             }
             return allNames;
         }
