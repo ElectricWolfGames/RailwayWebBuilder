@@ -18,7 +18,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2024-10-13 Elizabethan";
             TripDate = new DateTime(2024, 10, 13);
 
-            YouTubeLink = "https://www.youtube.com/embed/";
+            YouTubeLink = "https://www.youtube.com/embed/Ns-rvS0okZU";
             ImageFolder = "20241013-Elizabethan";
             Title = "The Elizabethan Railway Society 2024";
             ImagePreview = "-thumb.JPG";
