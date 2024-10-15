@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
             YouTubeLink = "https://www.youtube.com/embed/Ns-rvS0okZU";
             ImageFolder = "20241013-Elizabethan";
             Title = "The Elizabethan Railway Society 2024";
-            ImagePreview = "-thumb.JPG";
+            ImagePreview = "IMG_7498-Heanor-South-thumb.JPG";
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Northfields));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.MedenVale));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BirdsFolly));
