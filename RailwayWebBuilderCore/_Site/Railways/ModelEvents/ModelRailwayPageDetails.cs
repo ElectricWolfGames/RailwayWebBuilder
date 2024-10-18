@@ -182,7 +182,6 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
                 htmBuilder.Text("<div class='row'>");
 
                 var lbl = lbls.FindLayout(layout.NameEnum);
-
                 foreach (string layoutImage in layout.ImagePaths)
                 {
                     if (images.Contains(layoutImage))
