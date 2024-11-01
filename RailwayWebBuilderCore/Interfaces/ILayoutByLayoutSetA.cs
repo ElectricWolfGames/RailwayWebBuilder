@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RailwayWebBuilderCore.Interfaces
 {
-    public interface ILayoutByLayout
+    public interface ILayoutByLayoutSetA
     {
         string Description { get; set; }
         List<ImagesPair> Images { get; set; }

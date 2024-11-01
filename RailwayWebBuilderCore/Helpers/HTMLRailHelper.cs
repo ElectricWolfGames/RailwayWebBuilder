@@ -6,7 +6,7 @@ namespace RailwayWebBuilderCore.Helpers
     {
         public static string Modal()
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
 
             stringBuilder.AppendLine("<div id='ShowImage' class='modal fade' tabindex='-1' role='dialog'>");
             stringBuilder.AppendLine("<div class='modal-dialog  modal-lg' role='document'>");
@@ -19,7 +19,6 @@ namespace RailwayWebBuilderCore.Helpers
             stringBuilder.AppendLine("<image name='message-image' style='width:100%' class='rounded mx-auto d-block'></image>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("<div class='modal-footer'>");
-            // stringBuilder.AppendLine("<p>     $nbsp;</p>");
             stringBuilder.AppendLine("<p>     </p>");
             stringBuilder.AppendLine("<button type='button' class='btn btn-success' data-dismiss='modal'>Close</button>");
             stringBuilder.AppendLine("</div>");

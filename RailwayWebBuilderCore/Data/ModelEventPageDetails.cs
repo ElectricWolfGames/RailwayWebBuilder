@@ -7,7 +7,7 @@ namespace RailwayWebBuilderCore.Data
 {
     public abstract class ModelEventPageDetails : HeaderBase, IModelEvent
     {
-        public string Descrption { get; set; } // TODO: fix typo Descrption
+        public string Descrption { get; set; }
         public string EventDates { get; set; }
         public string ImageFolder { get; set; }
         public string ImagePreview { get; set; }
