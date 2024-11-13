@@ -1,6 +1,6 @@
 ﻿namespace LayoutHelper
 {
-    public static class programm
+    public static class Programm
     {
         public static void Main(params string[] args)
         {
