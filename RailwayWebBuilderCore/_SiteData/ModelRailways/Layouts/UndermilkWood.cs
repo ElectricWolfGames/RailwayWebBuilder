@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.UndermilkWood;
             Owner = "";
-            Description = "";  // TODO UndermilkWood Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.RavensRavine;
             Owner = "";
-            Description = "";  // TODO RavensRavine Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.TrainSpotting;
             Owner = "";
-            Description = "";  // TODO TrainSpotting Needs description
+            Description = "";
         }
     }
 }

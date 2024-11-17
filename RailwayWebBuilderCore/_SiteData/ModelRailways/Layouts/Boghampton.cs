@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Boghampton;
             Owner = "";
-            Description = "";  // TODO Boghampton Needs description
+            Description = "";
         }
     }
 }

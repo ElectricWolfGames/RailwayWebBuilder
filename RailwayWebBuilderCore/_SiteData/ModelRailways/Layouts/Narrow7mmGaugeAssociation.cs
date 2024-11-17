@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Narrow7mmGaugeAssociation;
             Owner = "";
-            Description = "";  // TODO Narrow7mmGaugeAssociation Needs description
+            Description = "";
         }
     }
 }

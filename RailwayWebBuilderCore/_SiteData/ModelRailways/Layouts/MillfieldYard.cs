@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.MillfieldYard;
             Owner = "";
-            Description = "";  // TODO MillfieldYard Needs description
+            Description = "";
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSe
         {
             Name = LayoutNamesEnums.BearCreek;
             Owner = "";
-            Description = ""; // TODO
+            Description = "";
             LayoutByLayoutVideo = "https://youtu.be/q-iGJ-WBEos";
         }
     }

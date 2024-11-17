@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.SouthWigston;
             Owner = "";
-            Description = "";  // TODO SouthWigston Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.SouthgatesDmu;
             Owner = "";
-            Description = "";  // TODO SouthgatesDmu Needs description
+            Description = "";
         }
     }
 }

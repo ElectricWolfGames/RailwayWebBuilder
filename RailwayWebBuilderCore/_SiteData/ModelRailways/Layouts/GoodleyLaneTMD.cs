@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.GoodleyLaneTMD;
             Owner = "";
-            Description = "";  // TODO GoodleyLaneTMD Needs description
+            Description = "";
         }
     }
 }

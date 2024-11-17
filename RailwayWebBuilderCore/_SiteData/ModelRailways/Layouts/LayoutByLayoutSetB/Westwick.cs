@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Westwick;
             Owner = "Westwick MRC";
-            Description = ""; // TODO Westwick Needs description
+            Description = "";
         }
     }
 }

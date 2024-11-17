@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Bishopston;
             Owner = "";
-            Description = "";  // TODO Bishopston Needs description
+            Description = "";
         }
     }
 }

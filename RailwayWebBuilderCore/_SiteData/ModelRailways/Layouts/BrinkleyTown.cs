@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.BrinkleyTown;
             Owner = "";
-            Description = "";  // TODO BrinkleyTown Needs description
+            Description = "";
         }
     }
 }

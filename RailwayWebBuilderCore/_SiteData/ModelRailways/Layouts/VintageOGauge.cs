@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.VintageOGauge;
             Owner = "";
-            Description = "";  // TODO VintageOGauge Needs description
+            Description = "";
         }
     }
 }

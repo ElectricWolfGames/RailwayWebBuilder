@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.WillowbrookMarsh;
             Owner = "";
-            Description = "";  // TODO WillowbrookMarsh Needs description
+            Description = "";
         }
     }
 }

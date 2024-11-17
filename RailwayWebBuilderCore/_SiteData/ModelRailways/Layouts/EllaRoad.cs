@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.EllaRoad;
             Owner = "";
-            Description = "";  // TODO EllaRoad Needs description
+            Description = "";
         }
     }
 }

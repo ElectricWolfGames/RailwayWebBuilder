@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Bankwood;
             Owner = "";
-            Description = "";  // TODO Bankwood Needs description
+            Description = "";
         }
     }
 }

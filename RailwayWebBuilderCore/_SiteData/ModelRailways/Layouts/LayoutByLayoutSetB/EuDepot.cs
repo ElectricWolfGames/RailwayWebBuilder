@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.EuDepot;
             Owner = "";
-            Description = "";  // TODO EuDepot Needs description
+            Description = "";
         }
     }
 }

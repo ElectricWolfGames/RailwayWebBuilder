@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.ShovelHeadHalt;
             Owner = "";
-            Description = "";  // TODO ShovelHeadHalt Needs description
+            Description = "";
         }
     }
 }

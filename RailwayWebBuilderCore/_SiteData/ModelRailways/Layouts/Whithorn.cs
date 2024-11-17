@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Whithorn;
             Owner = "";
-            Description = "";  // TODO Whithorn Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.CowleyYard;
             Owner = "";
-            Description = "";  // TODO CowleyYard Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.AyleettEnd;
             Owner = "";
-            Description = "";  // TODO AyleettEnd Needs description
+            Description = "";
         }
     }
 }

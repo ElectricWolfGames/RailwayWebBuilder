@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Brookthorpe;
             Owner = "";
-            Description = "";  // TODO Brookthorpe Needs description
+            Description = "";
         }
     }
 }

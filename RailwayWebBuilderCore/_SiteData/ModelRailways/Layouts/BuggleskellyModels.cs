@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.BuggleskellyModels;
             Owner = "";
-            Description = "";  // TODO BuggleskellyModels Needs description
+            Description = "";
         }
     }
 }

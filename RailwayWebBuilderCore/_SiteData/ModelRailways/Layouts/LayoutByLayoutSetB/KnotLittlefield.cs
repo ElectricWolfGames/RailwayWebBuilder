@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.KnotLittlefield;
             Owner = "";
-            Description = "";  // TODO KnotLittlefield Needs description
+            Description = "";
         }
     }
 }

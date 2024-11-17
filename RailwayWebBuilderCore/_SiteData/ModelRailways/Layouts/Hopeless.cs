@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Hopeless;
             Owner = "";
-            Description = "";  // TODO Hopeless Needs description
+            Description = "";
         }
     }
 }

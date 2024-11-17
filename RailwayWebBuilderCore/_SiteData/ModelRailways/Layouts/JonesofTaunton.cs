@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.JonesofTaunton;
             Owner = "";
-            Description = "";  // TODO JonesofTaunton Needs description
+            Description = "";
         }
     }
 }

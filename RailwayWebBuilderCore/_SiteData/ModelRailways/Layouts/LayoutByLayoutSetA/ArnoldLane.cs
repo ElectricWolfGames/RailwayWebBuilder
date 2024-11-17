@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSe
         {
             Name = LayoutNamesEnums.ArnoldLane;
             Owner = "Pauline Mckenna";
-            Description = ""; // TODO ArnoldLane Needs description
+            Description = "";
             LayoutByLayoutVideo = "https://youtu.be/2KdK28yvDqs";
         }
     }

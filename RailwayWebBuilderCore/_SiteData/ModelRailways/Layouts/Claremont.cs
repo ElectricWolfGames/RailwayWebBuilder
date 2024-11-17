@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Claremont;
             Owner = "Peter Latham";
-            Description = ""; // TODO Claremont Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.LittleCalumet;
             Owner = "";
-            Description = "";  // TODO LittleCalumet Needs description
+            Description = "";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.BlaendareRoad;
             Owner = "";
-            Description = "";  // TODO BlaendareRoad Needs description
+            Description = "";
         }
     }
 }

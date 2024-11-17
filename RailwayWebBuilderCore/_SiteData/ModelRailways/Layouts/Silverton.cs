@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.Silverton;
             Owner = "";
-            Description = "";  // TODO Silverton Needs description
+            Description = "";
         }
     }
 }

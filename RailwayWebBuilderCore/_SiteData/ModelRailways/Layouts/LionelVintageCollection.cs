@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.LionelVintageCollection;
             Owner = "";
-            Description = "";  // TODO LionelVintageCollection Needs description
+            Description = "";
         }
     }
 }

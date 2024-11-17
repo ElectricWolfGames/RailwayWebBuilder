@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.GardenHalt;
             Owner = "";
-            Description = "";  // TODO GardenHalt Needs description
+            Description = "";
         }
     }
 }
