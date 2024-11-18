@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class LocationsService
     {
-        public List<Interfaces.IModelEvent> Items = new List<Interfaces.IModelEvent>();
+        public List<Interfaces.IModelEvent> Items = new();
 
         public void AddLocation(Interfaces.IModelEvent pageDetails)
         {

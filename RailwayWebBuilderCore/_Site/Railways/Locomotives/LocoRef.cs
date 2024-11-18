@@ -35,7 +35,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
         public static string CreateGroups(PageDetails pageDetails, string offSet)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
 
             if (pageDetails.MenuTitle.Contains("Steam"))
                 pageBuilder.Text($"<a href='{offSet}SteamList.html' class='btn btn-info btn-lg'><h1>Steam</h1></a>");
@@ -65,19 +65,19 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
         public static string CreateHero(PageDetails pageDetails)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
             pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
             return pageBuilder.Output();
         }
 
         public static string CreatelItemList(WebPage webPage, StockTypes stockTypes)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
             var dieselList = GetLocoRefDetails(stockTypes);
 
             foreach (var dieselClass in dieselList)
             {
-                HTMLBuilder pageBuilderTemp = new HTMLBuilder();
+                HTMLBuilder pageBuilderTemp = new();
                 string title = dieselClass.ClassName;
                 if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
                     title = dieselClass.ClassDisplayName;

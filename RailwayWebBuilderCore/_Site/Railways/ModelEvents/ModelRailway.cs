@@ -62,26 +62,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             CreaetLayoutByLayoutReport();
         }
 
-        private static string CreateBlog(IModelEvent blog)
-        {
-            StringBuilder blogHtml = new StringBuilder();
-
-            blogHtml.AppendLine("<div class='col-md-6'>");
-            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-            blogHtml.AppendLine($"<h5 class='card-header'>{blog.Title}</h5>");
-            blogHtml.AppendLine("<div class='card-body'>");
-            blogHtml.AppendLine($"<h6>{blog.TripDate.ToShortDateString()}</h6>");
-            blogHtml.AppendLine($"      <a href='{blog.ImageFolder}/index.html'><img class='rounded float-right' width='214px' height ='160px'src='{blog.ImageFolder}\\images\\{blog.ImagePreview}'></a>");
-            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
-            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-
-            return blogHtml.ToString();
-        }
-
-        private void CreaetLayoutByLayoutReport()
+        private static void CreaetLayoutByLayoutReport()
         {
             var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
 
@@ -108,9 +89,28 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             }
         }
 
-        private void CreatModelLayoutPage(IModelEvent modelEvent)
+        private static string CreateBlog(IModelEvent blog)
         {
-            ModelRailwayPageDetails cattingtonPageDetails = new ModelRailwayPageDetails
+            StringBuilder blogHtml = new();
+
+            blogHtml.AppendLine("<div class='col-md-6'>");
+            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
+            blogHtml.AppendLine($"<h5 class='card-header'>{blog.Title}</h5>");
+            blogHtml.AppendLine("<div class='card-body'>");
+            blogHtml.AppendLine($"<h6>{blog.TripDate.ToShortDateString()}</h6>");
+            blogHtml.AppendLine($"      <a href='{blog.ImageFolder}/index.html'><img class='rounded float-right' width='214px' height ='160px'src='{blog.ImageFolder}\\images\\{blog.ImagePreview}'></a>");
+            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
+            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
+            blogHtml.AppendLine("</div>");
+            blogHtml.AppendLine("</div>");
+            blogHtml.AppendLine("</div>");
+
+            return blogHtml.ToString();
+        }
+
+        private static void CreatModelLayoutPage(IModelEvent modelEvent)
+        {
+            ModelRailwayPageDetails cattingtonPageDetails = new()
             {
                 ModelEvent = modelEvent,
                 DisplayTitle = modelEvent.Title,

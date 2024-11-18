@@ -9,7 +9,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class LayoutbyLayoutDetailsServices
     {
-        private List<ILayoutByLayout> _layouts = new List<ILayoutByLayout>();
+        private List<ILayoutByLayout> _layouts = new();
 
         public LayoutbyLayoutDetailsServices()
         {
@@ -34,7 +34,7 @@ namespace RailwayWebBuilderCore.Services
             _layouts.AddRange(GetAll());
         }
 
-        private List<ILayoutByLayout> GetAll()
+        private static List<ILayoutByLayout> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(ILayoutByLayout))

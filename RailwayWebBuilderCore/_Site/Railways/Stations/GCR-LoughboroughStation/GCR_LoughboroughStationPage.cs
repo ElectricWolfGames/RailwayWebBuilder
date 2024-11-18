@@ -37,7 +37,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation
 
         public static string CreateStationHero(PageDetails pageDetails)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
 
             pageBuilder.Text("<div class='jumbotron'>");
             pageBuilder.Text("<div class='row'>");

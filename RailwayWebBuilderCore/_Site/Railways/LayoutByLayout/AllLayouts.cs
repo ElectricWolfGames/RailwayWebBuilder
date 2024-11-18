@@ -77,7 +77,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             StringBuilder sb = new();
 
-            LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
+            LayoutDetails layoutDetails = new(layout.Name);
 
             sb.AppendLine("<div class='col-md-6'>");
             sb.AppendLine("<div class='card border-dark mb-3'>");
@@ -110,11 +110,11 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             return sb.ToString();
         }
 
-        private void CreatModelLayoutPage(ILayoutBase layout, LayoutNamesEnums pre, LayoutNamesEnums post)
+        private static void CreatModelLayoutPage(ILayoutBase layout, LayoutNamesEnums pre, LayoutNamesEnums post)
         {
-            LayoutDetails layoutDetails = new LayoutDetails(layout.Name);
+            LayoutDetails layoutDetails = new(layout.Name);
 
-            LayoutByLayoutPageDetails cattingtonPageDetails = new LayoutByLayoutPageDetails
+            LayoutByLayoutPageDetails cattingtonPageDetails = new()
             {
                 LayoutByLayoutDetails = layout,
                 DisplayTitle = layoutDetails.Name,
@@ -128,7 +128,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             cattingtonPageDetails.CreatePage();
         }
 
-        private LayoutNamesEnums FindNextWithImages(List<ILayoutBase> ordedBlogs, int index)
+        private static LayoutNamesEnums FindNextWithImages(List<ILayoutBase> ordedBlogs, int index)
         {
             while (true)
             {
@@ -144,7 +144,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             }
         }
 
-        private LayoutNamesEnums FindPreviousWithImages(List<ILayoutBase> ordedBlogs, int index)
+        private static LayoutNamesEnums FindPreviousWithImages(List<ILayoutBase> ordedBlogs, int index)
         {
             while (true)
             {

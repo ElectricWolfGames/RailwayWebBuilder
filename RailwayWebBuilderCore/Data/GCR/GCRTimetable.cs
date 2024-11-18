@@ -4,13 +4,13 @@ namespace RailwayWebBuilderCore.Data.GCR
 {
     public class GCRTimetable
     {
-        public List<GCRTimetableStation> TimetableStation = new List<GCRTimetableStation>();
+        public List<GCRTimetableStation> TimetableStation = new();
     }
 
     public class GCRTimetableStation
     {
-        public List<string> DownLine = new List<string>();
-        public List<string> UpLine = new List<string>();
+        public List<string> DownLine = new();
+        public List<string> UpLine = new();
         public string Name { get; set; }
     }
 }

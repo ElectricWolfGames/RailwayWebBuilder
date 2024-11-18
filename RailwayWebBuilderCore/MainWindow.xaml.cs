@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly BuildSite _buildSite = new BuildSite();
+        private readonly BuildSite _buildSite = new();
         private string _cacheFolder = Constants._aaDriveLetter + @"Trains\DeletableCache\";
 
         public MainWindow()
@@ -152,7 +152,7 @@ namespace RailwayWebBuilderCore
                 this.Title = (myList.SelectedItem as LocomotiveDetails).Name;*/
         }
 
-        private string RemoveCharacterCodes(string tractiveEffort)
+        private static string RemoveCharacterCodes(string tractiveEffort)
         {
             tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
 

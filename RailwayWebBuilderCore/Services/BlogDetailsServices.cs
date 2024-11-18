@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class BlogDetailsServices
     {
-        private List<IBlog> _blogs = new List<IBlog>();
+        private List<IBlog> _blogs = new();
 
         public BlogDetailsServices()
         {
@@ -29,14 +29,14 @@ namespace RailwayWebBuilderCore.Services
             _blogs.AddRange(GetAllMore());
         }
 
-        private List<IBlog> GetAll()
+        private static List<IBlog> GetAll()
         {
             var canBlog = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(IBlogger))
                                 && t.GetConstructor(Type.EmptyTypes) != null
                           select Activator.CreateInstance(t) as IBlogger;
 
-            List<IBlog> blogs = new List<IBlog>();
+            List<IBlog> blogs = new();
             foreach (var blogger in canBlog)
             {
                 blogs.Add(blogger.GetBlog());
@@ -44,7 +44,7 @@ namespace RailwayWebBuilderCore.Services
             return blogs;
         }
 
-        private IEnumerable<IBlog> GetAllMore()
+        private static IEnumerable<IBlog> GetAllMore()
         {
             IEnumerable<IBlog> blogs = from t in Assembly.GetExecutingAssembly().GetTypes()
                                        where t.GetInterfaces().Contains(typeof(IBlog))

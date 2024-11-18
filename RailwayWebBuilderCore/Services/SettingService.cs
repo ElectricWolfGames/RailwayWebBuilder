@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore.Services
 
         public string GoogleMapKey { get; private set; }
 
-        private void ReadAllSettings()
+        private static void ReadAllSettings()
         {
             try
             {
@@ -57,7 +57,7 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private string ReadSetting(string key)
+        private static string ReadSetting(string key)
         {
             try
             {

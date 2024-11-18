@@ -83,7 +83,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         private static string CreateCard(string imagePath, string path, string locoNumber)
         {
-            StringBuilder blogHtml = new StringBuilder();
+            StringBuilder blogHtml = new();
 
             path += $"{locoNumber}.html";
 
@@ -103,7 +103,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 
         private void CreateLocorefPage(string number, ClassBase dieselClassBase, WebPage webPage)
         {
-            LocoRefPageDetails pageDetails = new LocoRefPageDetails();
+            LocoRefPageDetails pageDetails = new();
             pageDetails.DieselClassBase = dieselClassBase;
             pageDetails.MenuTitle = number;
             pageDetails.LocoNumber = number;

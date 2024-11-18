@@ -8,7 +8,7 @@ namespace RailwayWebBuilderCore.Services
 {
     public class ModelEventDetailsServices
     {
-        private List<IModelEvent> _modelEventDetails = new List<IModelEvent>();
+        private List<IModelEvent> _modelEventDetails = new();
 
         public ModelEventDetailsServices()
         {
@@ -33,7 +33,7 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private List<IModelEvent> GetAll()
+        private static List<IModelEvent> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(IModelEvent))

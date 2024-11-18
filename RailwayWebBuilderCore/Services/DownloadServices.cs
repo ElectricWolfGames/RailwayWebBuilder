@@ -33,7 +33,7 @@ namespace RailwayWebBuilderCore.Services
                 string fileName = string.Empty;
                 string myStringWebResource = null;
                 // Create a new WebClient instance.
-                WebClient myWebClient = new WebClient();
+                WebClient myWebClient = new();
                 // Concatenate the domain with the Web resource filename.
                 myStringWebResource = remoteUri + fileName;
                 Console.WriteLine("Downloading File \"{0}\" from \"{1}\" .......\n\n", fileName, myStringWebResource);
@@ -53,7 +53,7 @@ namespace RailwayWebBuilderCore.Services
             return rawPage;
         }
 
-        private string TidyString(string remoteUri)
+        private static string TidyString(string remoteUri)
         {
             remoteUri = remoteUri.Replace("http:", "https:");
             return remoteUri.TrimEnd('/');

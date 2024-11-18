@@ -12,7 +12,7 @@ namespace RailwayWebBuilderCore.Services
 {
     internal class LayoutBaseServices
     {
-        private List<ILayoutBase> _layouts = new List<ILayoutBase>();
+        private List<ILayoutBase> _layouts = new();
 
         internal LayoutBaseServices()
         {
@@ -61,7 +61,7 @@ namespace RailwayWebBuilderCore.Services
             _layouts.AddRange(GetAll());
         }
 
-        private List<ILayoutBase> GetAll()
+        private static List<ILayoutBase> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
                           where t.GetInterfaces().Contains(typeof(ILayoutBase))

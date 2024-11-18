@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore._Site.Railways.GCR
 
         public static string CreateHero(PageDetails pageDetails)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
             pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
             return pageBuilder.Output();
         }

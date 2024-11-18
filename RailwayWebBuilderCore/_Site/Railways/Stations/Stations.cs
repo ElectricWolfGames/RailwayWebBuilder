@@ -27,7 +27,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations
 
         public static string CreateHero(PageDetails pageDetails)
         {
-            HTMLBuilder pageBuilder = new HTMLBuilder();
+            HTMLBuilder pageBuilder = new();
             pageBuilder.Jumbotron(pageDetails.DisplayTitle, "");
             return pageBuilder.Output();
         }
@@ -111,7 +111,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations
 
         private static string CreateCard(IStationsPages stationsPages, string path)
         {
-            StringBuilder blogHtml = new StringBuilder();
+            StringBuilder blogHtml = new();
 
             blogHtml.AppendLine("<div class='col-md-6'>");
             blogHtml.AppendLine("<div class='card border-dark mb-3'>");

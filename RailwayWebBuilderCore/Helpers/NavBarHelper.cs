@@ -14,7 +14,7 @@ namespace RailwayWebBuilderCore.Helpers
 
         public static string NavBar(string offSet)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             stringBuilder.AppendLine("<nav class='navbar navbar-expand-md navbar-dark bg-dark'>");
             stringBuilder.AppendLine($"<a class='navbar-brand' href='{offSet}index.html'>Home</a>");
             stringBuilder.AppendLine("<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample04' aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation'>");
@@ -67,7 +67,7 @@ namespace RailwayWebBuilderCore.Helpers
 
         public static string Pagination(int pageIndex, int totalPages)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             stringBuilder.Append("<nav aria-label='...'>");
             stringBuilder.Append("<ul class='pagination'>");
 

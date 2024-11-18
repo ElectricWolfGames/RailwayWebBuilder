@@ -81,7 +81,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             if (layout == null)
                 return String.Empty;
 
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
 
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-12'>");
@@ -109,7 +109,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private static string Jumbotron(IModelPageDetails pageDetails)
         {
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
 
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
@@ -122,13 +122,13 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             if (pageDetails.Layouts.Any())
             {
                 // add the extra details.
-                StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new();
                 sb.Append("<p class='font-weight-bold'>");
                 sb.Append("Featuring layouts.");
                 sb.Append("</p>");
                 sb.Append("<p>");
 
-                List<string> names = new List<string>();
+                List<string> names = new();
                 foreach (Data.LayoutDetails layout in pageDetails.Layouts)
                 {
                     if (layout.ImagePaths.Any())
@@ -161,11 +161,11 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             return stringBuilder.ToString();
         }
 
-        private string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
+        private static string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
         {
             var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
 
-            HTMLBuilder htmBuilder = new HTMLBuilder();
+            HTMLBuilder htmBuilder = new();
 
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
