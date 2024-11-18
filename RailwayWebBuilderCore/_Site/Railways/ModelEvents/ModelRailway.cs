@@ -40,6 +40,7 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
             WebPage.Append("<div class='container mt-12'>");
 
+            WebPage.Append("</br>");
             WebPage.Append(LocoRef.CreateHero(this));
 
             var ordedBlogs = meds.Events.OrderByDescending(x => x.TripDate);

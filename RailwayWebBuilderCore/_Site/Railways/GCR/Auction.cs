@@ -1,22 +1,28 @@
-﻿using eWolfBootstrap.SiteBuilder;
+﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore.Enums;
+using RailwayWebBuilderCore._Site.Railways.Locomotives;
 
-namespace RailwayWebBuilderCore._Site.Railways.Locomotives
+namespace RailwayWebBuilderCore._Site.Railways.GCR
 {
-    [PageTitle("WagonsList.html")]
-    [Navigation(NavigationTypes.Main, 2)]
-    public class WagonsList : PageDetails
+    [PageTitle("index.html")]
+    [Navigation(NavigationTypes.Main, 1)]
+    internal class Auction : PageDetails
     {
-        public WagonsList()
+        public Auction()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Locomotive Photo Reference Collection";
-            MenuTitle = "WagonsList";
+            DisplayTitle = "Auction";
+            MenuTitle = "Auction";
             DontShowNavigation = true;
+        }
 
-            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Wagon));
+        public static string CreateHero(PageDetails pageDetails)
+        {
+            HTMLBuilder pageBuilder = new HTMLBuilder();
+            pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
+            return pageBuilder.Output();
         }
 
         public override void CreatePage()
@@ -26,16 +32,10 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.Append("<div class='container mt-12'>");
-
             WebPage.Append("</br>");
             WebPage.Append(LocoRef.CreateHero(this));
-            WebPage.Append(LocoRef.CreateGroups(this, ""));
-            WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.Wagon));
 
             WebPage.Append("</div>");
-
             WebPage.Append("</div>");
 
             WebPage.EndBody();

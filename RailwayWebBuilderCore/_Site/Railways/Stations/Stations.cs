@@ -40,6 +40,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations
 
             WebPage.Append("<div class='container mt-12'>");
 
+            WebPage.Append("</br>");
             WebPage.Append(CreateHero(this));
 
             WebPage.Append("<div class='row mb-2'>");

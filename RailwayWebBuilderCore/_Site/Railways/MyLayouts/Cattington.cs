@@ -51,6 +51,21 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
             CreateCattingtonPage(startIndex, totalPages, pageIndex++);
         }
 
+        private static void CreateCattingtonPage(int startIndex, int endIndex, int pageIndex)
+        {
+            CattingtonPageDetails cattingtonPageDetails = new()
+            {
+                LayoutDetails = _orderedDetails,
+
+                MenuTitle = "index",
+                StartIndex = startIndex,
+                EndIndex = endIndex,
+                PageIndex = pageIndex
+            };
+
+            cattingtonPageDetails.CreatePage();
+        }
+
         private static void GetLayoutDetails()
         {
             var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -60,19 +75,6 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
 
             _orderedDetails = layoutDetails.Where(x => x.Active).ToList();
             _orderedDetails = _orderedDetails.OrderByDescending(x => x.When).ToList();
-        }
-
-        private void CreateCattingtonPage(int startIndex, int endIndex, int pageIndex)
-        {
-            CattingtonPageDetails cattingtonPageDetails = new CattingtonPageDetails();
-            cattingtonPageDetails.LayoutDetails = _orderedDetails;
-
-            cattingtonPageDetails.MenuTitle = "index";
-            cattingtonPageDetails.StartIndex = startIndex;
-            cattingtonPageDetails.EndIndex = endIndex;
-            cattingtonPageDetails.PageIndex = pageIndex;
-
-            cattingtonPageDetails.CreatePage();
         }
     }
 }

@@ -29,6 +29,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append("<div class='container mt-12'>");
 
+            WebPage.Append("</br>");
             WebPage.Append(LocoRef.CreateHero(this));
             WebPage.Append(LocoRef.CreateGroups(this, ""));
             WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.SteamLoco));

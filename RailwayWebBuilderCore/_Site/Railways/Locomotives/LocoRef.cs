@@ -66,7 +66,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
         public static string CreateHero(PageDetails pageDetails)
         {
             HTMLBuilder pageBuilder = new HTMLBuilder();
-            pageBuilder.Jumbotron(pageDetails.DisplayTitle, "");
+            pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
             return pageBuilder.Output();
         }
 
@@ -100,6 +100,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
             WebPage.Append("<div class='container mt-12'>");
 
+            WebPage.Append("</br>");
             WebPage.Append(CreateHero(this));
             WebPage.Append(CreateGroups(this, ""));
 

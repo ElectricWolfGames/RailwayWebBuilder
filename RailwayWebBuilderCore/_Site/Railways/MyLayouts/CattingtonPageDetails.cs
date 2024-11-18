@@ -40,6 +40,7 @@ namespace RailwayWebBuilderCore._Site.Railways.MyLayouts
 
             WebPage.Append("<div class='container mt-12'>");
 
+            WebPage.Append("</br>");
             WebPage.Append(CreateHero());
             WebPage.HtmlPath = Constants.MyLayouts;
             if (PageIndex == 0)
