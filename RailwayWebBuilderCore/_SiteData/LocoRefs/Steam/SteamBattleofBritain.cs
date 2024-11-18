@@ -1,5 +1,4 @@
-﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
-using RailwayWebBuilderCore.Enums;
+﻿using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
 {

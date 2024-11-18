@@ -41,7 +41,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Append(LocoRef.CreateHero(this));
 
             var layoutsList = lbls.Layouts;
-            List<ILayoutBase> ordedBlogs = layoutsList.OrderBy(x => x.Name.ToString()).ToList();
+            List<ILayoutBase> ordedBlogs = [.. layoutsList.OrderBy(x => x.Name.ToString())];
 
             WebPage.Append("<div class='row mb-2'>");
 

@@ -4,7 +4,6 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
-using RailwayWebBuilderCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,14 +22,13 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             MenuTitle = "Loco Photos";
 
             Keywords.AddRange(
-                new string[]
-                {
+                [
                     "Model Railway",
                     "model trains",
                     "trains",
                     "Hornby",
                     "hertiage railway",
-                });
+                ]);
         }
 
         public static string CreateGroups(PageDetails pageDetails, string offSet)
@@ -110,30 +108,26 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
             WebPage.Output();
         }
 
-        internal static string[] GetKeywords(StockTypes steamLoco)
+        internal static string[] GetKeywords(StockTypes stockTypes)
         {
-            List<ILocomotiveRefPage> locorefTypes;
+            var locoDetals = from t in Assembly.GetExecutingAssembly().GetTypes()
+                             where t.GetInterfaces().Contains(typeof(IDieselClass))
+                                   && t.GetConstructor(Type.EmptyTypes) != null
+                             select Activator.CreateInstance(t) as IDieselClass;
 
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(ILocomotiveRefPage))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as ILocomotiveRefPage;
-
-            locorefTypes = layoutDetails.OrderBy(x => x.Title).ToList();
-            locorefTypes = locorefTypes.OrderBy(x => x.Order).ToList();
-
-            return locorefTypes.Select(x => x.Title).ToArray();
+            locoDetals = locoDetals.Where(x => x.StockType == stockTypes);
+            return locoDetals.Select(x => x.ClassName).ToArray();
         }
 
         private static IEnumerable<IDieselClass> GetLocoRefDetails(StockTypes stockTypes)
         {
-            var layoutDetails = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                where t.GetInterfaces().Contains(typeof(IDieselClass))
-                                      && t.GetConstructor(Type.EmptyTypes) != null
-                                select Activator.CreateInstance(t) as IDieselClass;
+            var locoDetals = from t in Assembly.GetExecutingAssembly().GetTypes()
+                             where t.GetInterfaces().Contains(typeof(IDieselClass))
+                                   && t.GetConstructor(Type.EmptyTypes) != null
+                             select Activator.CreateInstance(t) as IDieselClass;
 
-            layoutDetails = layoutDetails.Where(x => x.StockType == stockTypes);
-            return layoutDetails;
+            locoDetals = locoDetals.Where(x => x.StockType == stockTypes);
+            return locoDetals;
         }
     }
 }
