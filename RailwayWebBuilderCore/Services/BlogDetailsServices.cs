@@ -23,12 +23,6 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private void AddBlogs()
-        {
-            _blogs.AddRange(GetAll());
-            _blogs.AddRange(GetAllMore());
-        }
-
         private static List<IBlog> GetAll()
         {
             var canBlog = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -52,6 +46,12 @@ namespace RailwayWebBuilderCore.Services
                                        select Activator.CreateInstance(t) as IBlog;
 
             return blogs;
+        }
+
+        private void AddBlogs()
+        {
+            _blogs.AddRange(GetAll());
+            _blogs.AddRange(GetAllMore());
         }
     }
 }

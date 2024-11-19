@@ -29,11 +29,6 @@ namespace RailwayWebBuilderCore.Services
             return _layouts.FirstOrDefault(x => x.Name == nameEnum);
         }
 
-        private void AddModelEvents()
-        {
-            _layouts.AddRange(GetAll());
-        }
-
         private static List<ILayoutByLayout> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -42,6 +37,11 @@ namespace RailwayWebBuilderCore.Services
                           select Activator.CreateInstance(t) as ILayoutByLayout;
 
             return updates.ToList();
+        }
+
+        private void AddModelEvents()
+        {
+            _layouts.AddRange(GetAll());
         }
     }
 }

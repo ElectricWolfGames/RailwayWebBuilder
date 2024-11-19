@@ -8,10 +8,7 @@ using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System;
 using System.Text;
-using System.Windows.Controls;
 
 namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 {

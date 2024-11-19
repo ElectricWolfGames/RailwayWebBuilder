@@ -23,16 +23,6 @@ namespace RailwayWebBuilderCore.Services
             }
         }
 
-        private void AddModelEvents()
-        {
-            _modelEventDetails.AddRange(GetAll());
-
-            foreach (var pages in _modelEventDetails)
-            {
-                pages.Fix();
-            }
-        }
-
         private static List<IModelEvent> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -41,6 +31,16 @@ namespace RailwayWebBuilderCore.Services
                           select Activator.CreateInstance(t) as IModelEvent;
 
             return updates.ToList();
+        }
+
+        private void AddModelEvents()
+        {
+            _modelEventDetails.AddRange(GetAll());
+
+            foreach (var pages in _modelEventDetails)
+            {
+                pages.Fix();
+            }
         }
     }
 }

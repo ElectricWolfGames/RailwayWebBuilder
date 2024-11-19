@@ -1,11 +1,9 @@
-﻿using RailwayWebBuilderCore._Site.Railways.ModelEvents;
-using RailwayWebBuilderCore._SiteData.ModelRailways;
+﻿using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Enums;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http.Headers;
 using System.Reflection;
 
 namespace RailwayWebBuilderCore.Services
@@ -56,11 +54,6 @@ namespace RailwayWebBuilderCore.Services
             return layoutBase;
         }
 
-        private void AddModelEvents()
-        {
-            _layouts.AddRange(GetAll());
-        }
-
         private static List<ILayoutBase> GetAll()
         {
             var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
@@ -69,6 +62,11 @@ namespace RailwayWebBuilderCore.Services
                           select Activator.CreateInstance(t) as ILayoutBase;
 
             return updates.ToList();
+        }
+
+        private void AddModelEvents()
+        {
+            _layouts.AddRange(GetAll());
         }
     }
 }
