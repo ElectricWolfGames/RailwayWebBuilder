@@ -83,7 +83,8 @@ namespace RailwayWebBuilderCore._Site.Railways.GCR
             pageBuilder.TextBold("If you would like to place a bid email ", "gcr.friends.auctions@gmail.com");
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text("Please provide how much you would like to bid and your phone number and address. All details will be deleted upon the completion of the auction.");
-            pageBuilder.Text("");
+            pageBuilder.Text($"<br/><br/>");
+            pageBuilder.Text("The closing date is the last day of the Winter Gala, Sunday 26 January. At 12:00 noon, with collection on the Day or from the Loughborough booking office after the Gala.");
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text($"<br/><br/>");
 
