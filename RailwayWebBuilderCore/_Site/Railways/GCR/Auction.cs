@@ -74,15 +74,22 @@ namespace RailwayWebBuilderCore._Site.Railways.GCR
             pageBuilder.Text($"<hr/>");
             pageBuilder.Text("Back in 2021, the Friends of the Great Central Main Line auctioned the Duchess of Hamilton Terence Cuneo's limited edition print, which raised £1000 for the reunification project.");
             pageBuilder.Text($"<br/><br/>");
-            pageBuilder.Text("We are back to try that same again with another of Terence Cuneo's limited edition prints 'Flying Scotsman.' 820/850");
+            pageBuilder.Text("We are back to try that same again with two painting");
+            pageBuilder.Text($"<br/><br/>");
+            pageBuilder.TextBoldText("","Terence Cuneo's"," limited edition prints 'Flying Scotsman.' 820/850");
+            pageBuilder.Text($"<br/><br/>");
+            pageBuilder.TextBoldText("", "David Shepherd’s"," famous painting ’Nine Elms, The Last Hours’ depicts a BR Standard 5 and a West Country Class loco on a rundown shed, speaking powerfully to a poignant moment in history, which happily was far from steam’s last stand");
+            pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text($"<br/><br/>");
 
             pageBuilder.Image("Full.jpg", 100);
+            pageBuilder.Text($"<br/><br/>");
+            pageBuilder.Image("Nine-Elms-The-Last-Hours.jpg", 100);
 
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.TextBold("If you would like to place a bid email ", "gcr.friends.auctions@gmail.com");
             pageBuilder.Text($"<br/><br/>");
-            pageBuilder.Text("Please provide how much you would like to bid and your phone number and address. All details will be deleted upon the completion of the auction.");
+            pageBuilder.Text("Please provide which painting you would like to bid on and how much with your phone number and address. All details will be deleted upon the completion of the auction.");
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text("The closing date is the last day of the Winter Gala, Sunday 26 January. At 12:00 noon, with collection on the Day or from the Loughborough booking office after the Gala.");
             pageBuilder.Text($"<br/><br/>");

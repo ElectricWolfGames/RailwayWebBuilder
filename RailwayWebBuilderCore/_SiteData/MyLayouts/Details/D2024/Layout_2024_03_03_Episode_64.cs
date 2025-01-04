@@ -2,28 +2,27 @@
 using RailwayWebBuilderCore.Interfaces;
 using System;
 
-namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
+namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details.D2024
 {
-    public class Layout_2024_03_31_Episode_65 : LayoutBase, IBlogger
+    public class Layout_2024_03_03_Episode_64 : LayoutBase, IBlogger
     {
-        public Layout_2024_03_31_Episode_65()
+        public Layout_2024_03_03_Episode_64()
         {
             Active = true;
-            When = new DateTime(2024, 03, 31);
-            EpisodeNumber = 65;
+            When = new DateTime(2024, 03, 03);
+            EpisodeNumber = 64;
 
             InitDatedPaths();
 
-            Title = "<h2>65: New Loco</h2>";
+            Title = "<h2>64: New Car Park</h2>";
             Details.Append("<p>Hello and welcome back to Karl and Debbie trains, And we have another Cattington model railway layout update for you.</p>");
             Details.Append("</br>");
-            Details.Append("<p>We have a new Loco, Class 14 </p>");
-            Details.Append("<p>D9545 - 1413 BR Green Class 14 </p>");
-            Details.Append("<p>And we have some small updates around the layout</p>");
+            Details.Append("<p>I've added a new car pack next to the main station.</p>");
+            Details.Append("<p>Keep an eye out as I've got two guest locos in the Running session, Can you spot them, Comment below.</p>");
 
             Details.Append("</br>");
             Details.Append("<p>Thank you for watching, Take care</p>");
-            YouTubeLink = "8sI6o6__t9g";
+            YouTubeLink = "h6ndFEHx9Mg";
         }
 
         public IBlog GetBlog()
@@ -33,8 +32,8 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
                 Name = $"Cattington Update {EpisodeNumber}",
                 Date = When,
                 Link = "MyLayouts/index.html",
-                Paragraph = "New Loco, Small layout updates",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_5682-Cattington-thumb.JPG",
+                Paragraph = "New Car Park!",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_5410-Cattington-thumb.JPG",
             };
         }
     }
