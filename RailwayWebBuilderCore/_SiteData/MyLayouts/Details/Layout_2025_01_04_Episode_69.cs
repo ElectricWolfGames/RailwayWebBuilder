@@ -25,7 +25,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 
             Details.Append("</br>");
             Details.Append("<p>Thank you for watching, Take care</p>");
-            YouTubeLink = "";
+            YouTubeLink = "4fLDQkoq4m4";
         }
 
         public IBlog GetBlog()
@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
                 Date = When,
                 Link = "MyLayouts/index.html",
                 Paragraph = "Hill, Goods Sheds and Wagons",
-                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_7610-Cattington-thumb.JPG",
+                KeyImage = $@"MyLayouts\images\{When.ToString("yyyyMMdd")}\IMG_7676-2025-01-04-Cattington-thumb.JPG",
             };
         }
     }
