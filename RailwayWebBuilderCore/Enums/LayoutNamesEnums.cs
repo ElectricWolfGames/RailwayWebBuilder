@@ -871,5 +871,31 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Knowles Hill Colliery", Gauges.OO_Gauge)]
         KnowlesHillColliery,
+
+
+        [DescriptionGauge("Glenellen", Gauges.N_Gauge)]
+        Glenellen,
+
+        [DescriptionGauge("Northern Junction", Gauges.OO_Gauge)]
+        NorthernJunction,
+
+        [DescriptionGauge("Allsop & Sons", Gauges.OO_Gauge)]
+        AllsopAndSons,
+
+        [DescriptionGauge("Medan Vale", Gauges.N_Gauge)]
+        MedanVale,
+
+        [DescriptionGauge("Oliver Hill", Gauges.HO_Gauge)]
+        OliverHill,
+
+        [DescriptionGauge("Port Willian", Gauges.OO9_Gauge)]
+        PortWillian,
+
+        [DescriptionGauge("Glenties", Gauges.OOn3)]
+        Glenties,
+
+        [DescriptionGauge("Foxhill Colliery", Gauges.OO_Gauge)]
+        FoxhillColliery
+
     }
 }

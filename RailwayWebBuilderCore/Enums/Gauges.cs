@@ -105,5 +105,8 @@ namespace RailwayWebBuilderCore.Enums
 
         [Description("TT3_Gauge")]
         TT3_Gauge,
+
+        [Description("OOn3")]
+        OOn3,
     }
 }

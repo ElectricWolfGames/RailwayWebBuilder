@@ -15,7 +15,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
 {
     public class ClassBase : IDieselClass, ITypeAndOrigin
     {
-        private const string LookInFolders = "E:\\Trains\\Photos - Main\\2024\\";
+        private const string LookInFolders = "E:\\Trains\\Photos - Main\\2025\\";
         public string BuildDate { get; set; } = string.Empty;
         public string Builder { get; set; } = string.Empty;
         public string ClassDisplayName { get; set; }
