@@ -12,16 +12,16 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
         public SystonModelRailwaySocietyBirstall2025()
         {
             Name = "Syston Model Railway Society Birstall 2025";
-            Location = new BurtonRailwaySociety();
+            Location = new BirstallSystonModelRailwaySociety();
             EventDates = "18 January";
             Descrption = "Syston Model Railway Society";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2025-01-18 Syston Model Railway";
             TripDate = new DateTime(2025, 01, 18);
 
-            YouTubeLink = "https://www.youtube.com/embed/??????";
+            YouTubeLink = "https://www.youtube.com/embed/zX5rtkYbuI4";
             ImageFolder = "20250118-Birstall";
             Title = "Syston Model Railway Society 2025";
-            ImagePreview = "??????????.jpg";
+            ImagePreview = "IMG_7742-Allsop-&-Sons.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Glenellen));
 
@@ -44,7 +44,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             {
                 Name = "Syston Model Railway Society",
                 Date = new DateTime(2025, 01, 13),
-                Paragraph = "We visited the Syston Model Railway Society on the 18th January 2025, lots of amazing models displays.",
+                Paragraph = "We visited the Syston Model Railway Society on the 18th and 19th January 2025, lots of amazing models displays.",
                 Link = $"{Constants.ModelEvents}/20250118-Birstall/index.html",
                 ModelEvent = this,
             };
