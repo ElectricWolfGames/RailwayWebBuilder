@@ -23,6 +23,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
             LocoNumbers.AddRange(new[]
             {
                 new LocoDetails("3802"),
+                new LocoDetails("3850"),
                 });
         }
     }

@@ -30,6 +30,8 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs
         public StockTypes StockType { get; set; } = StockTypes.Diesel;
         public int TotalProduced { get; set; } = 0;
 
+        public string WikiLink { get; set; }
+
         public List<string> GetAllImages(string tag, List<string> ignore)
         {
             if (tag == "48305")
