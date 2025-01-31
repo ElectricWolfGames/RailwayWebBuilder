@@ -91,7 +91,7 @@ namespace RailwayWebBuilderCore._Site.Railways.GCR
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text("Please provide which painting you would like to bid on and how much with your phone number and address. All details will be deleted upon the completion of the auction.");
             pageBuilder.Text($"<br/><br/>");
-            pageBuilder.Text("The closing date is the last day of the Winter Gala, Sunday 26 January. At 12:00 noon, with collection on the Day or from the Loughborough booking office after the Gala.");
+            pageBuilder.Text("The closing date is Easter Monday 21 April. At 12:00 noon, with collection to be arranged from Loughborough after the auction has closed. ");
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text($"<br/><br/>");
 
