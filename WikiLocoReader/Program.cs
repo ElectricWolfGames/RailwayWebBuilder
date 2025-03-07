@@ -24,6 +24,9 @@ namespace WikiLocoReader
             uris.Add("https://en.wikipedia.org/wiki/British_Rail_Class_08");
             uris.Add("https://en.wikipedia.org/wiki/BR_Standard_Class_5");
 
+            uris.Add("https://en.wikipedia.org/wiki/British_Rail_Class_31");
+            uris.Add("https://en.wikipedia.org/wiki/British_Rail_Class_33");
+
             foreach (string uri in uris)
             {
 
@@ -32,10 +35,13 @@ namespace WikiLocoReader
 
                 WebPageSiteReader webPageSiteReader = new WebPageSiteReader(raw);
                 string text = webPageSiteReader.From("<th colspan=\"2\" class=\"infobox-above\" style=\";\">", "</th></tr><tr>");
-                Console.WriteLine($"{text}");
+                Console.WriteLine($"Name: {text}");
+
+                text = webPageSiteReader.Find("Builder</th><td class=\"infobox-data\">").In("<td class=\"infobox-data\">");
+                Console.WriteLine($"Builder: {text}");
 
                 text = webPageSiteReader.ReadHRefAfter("Designer</th><td class=\"infobox-data\">");
-                Console.WriteLine($"Designer => {text}");
+                Console.WriteLine($"Designer: {text}");
 
 
                 Console.WriteLine("");
