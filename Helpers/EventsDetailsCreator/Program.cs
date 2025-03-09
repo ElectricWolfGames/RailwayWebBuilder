@@ -1,4 +1,5 @@
-﻿namespace LayoutHelper
+﻿
+namespace LayoutHelper
 {
     public static class Programm
     {
@@ -6,7 +7,9 @@
         {
             Console.WriteLine("Hello, World!");
 
-            NameItemsAfterFolders.Now(@"E:\Trains\Photos - Main\2024\2024-10-12 The Elizabethan Railway Society\");
+            NameItemsAfterFolders.Now(@"E:\Trains\Photos - Main\2025\2025-03-08 Ivanhoe Model Railway\");
+
+
             return;
 
             //List<string> allNames = new List<string>();
@@ -20,25 +23,40 @@
 
             List<string> allNames = new List<string>();
 
-            string names = "Northfields,Meden Vale";
+            string names = "Bradley,Breganbach Im Schwarzwald,Doe Lea,Hartshill Bank,North Road,The Station Master";
             allNames.AddRange(ShowEnums(names, "Gauges.N_Gauge"));
 
-            names = "Birds Folly";
-            allNames.AddRange(ShowEnums(names, "Gauges.OO9_Gauge"));
+            names = "Weslo Steel";
+            allNames.AddRange(ShowEnums(names, "Gauges.EM_Gauge"));
 
-            names = "Sutton-In-Ashfield,Llanforen Shed,Heanor South,Britannia Mills,Kirkby-In-Ashfield,Hindlow,Knowles Hill Colliery";
+            names = "Birchwood,Ingleberry End,South Millfields,Stonesby Magna,Thomas the Tank Engine,Troddinnick Dries,Notgotaname,Ebbols Lane TMD";
             allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
 
-            names = "";
+            names = "Johannesdorf";
             allNames.AddRange(ShowEnums(names, "Gauges.HO_Gauge"));
 
-            names = "";
-            allNames.AddRange(ShowEnums(names, "Gauges.OO_Gauge"));
+            names = "Glen Bogle,Knype Bridge,Vintage Train Collection";
+            allNames.AddRange(ShowEnums(names, "Gauges.O_Gauge"));
 
-            names = "Uppingham";
-            allNames.AddRange(ShowEnums(names, "Gauges.TT3_Gauge"));
+            names = "Salzgrabe";
+            allNames.AddRange(ShowEnums(names, "Gauges.HOe_Gauge"));
 
             ListAllLayoyts(allNames);
+            CreateFolders(allNames);
+        }
+
+        private static void CreateFolders(List<string> allNames)
+        {
+            string path = "E:\\Trains\\Photos - Main\\2025\\2025-03-08\\";
+            Console.WriteLine();
+            Console.WriteLine();
+            foreach (string part in allNames)
+            {
+                //Console.WriteLine($"Layouts.Add(new LayoutDetails(LayoutNamesEnums.{name}));");
+
+                Directory.CreateDirectory($"{path}\\{part}");
+                Console.WriteLine();
+            }
         }
 
         private static void ListAllLayoyts(List<string> allNames)
@@ -53,7 +71,7 @@
 
         private static List<string> ShowEnums(string names, string enumGauge)
         {
-            string path = "E:\\Trains\\Photos - Main\\2024\\2024-10-12 The Elizabethan Railway Society\\Images";
+            string path = "E:\\Trains\\Photos - Main\\2025\\2025-03-08";
 
             List<string> allNames = new List<string>();
 

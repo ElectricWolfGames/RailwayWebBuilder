@@ -895,7 +895,62 @@ namespace RailwayWebBuilderCore.Enums
         Glenties,
 
         [DescriptionGauge("Foxhill Colliery", Gauges.OO_Gauge)]
-        FoxhillColliery
+        FoxhillColliery,
 
+
+
+        [DescriptionGauge("Bradley", Gauges.N_Gauge)]
+        Bradley,
+
+        [DescriptionGauge("Breganbach Im Schwarzwald", Gauges.N_Gauge)]
+        BreganbachImSchwarzwald,
+
+
+        [DescriptionGauge("Hartshill Bank", Gauges.N_Gauge)]
+        HartshillBank,
+
+
+        [DescriptionGauge("The Station Master", Gauges.N_Gauge)]
+        TheStationMaster,
+
+        [DescriptionGauge("Weslo Steel", Gauges.EM_Gauge)]
+        WesloSteel,
+
+
+        [DescriptionGauge("Ingleberry End", Gauges.OO_Gauge)]
+        IngleberryEnd,
+
+        [DescriptionGauge("South Millfields", Gauges.OO_Gauge)]
+        SouthMillfields,
+
+        [DescriptionGauge("Stonesby Magna", Gauges.OO_Gauge)]
+        StonesbyMagna,
+
+        [DescriptionGauge("Thomas the Tank Engine", Gauges.OO_Gauge)]
+        ThomastheTankEngine,
+
+        [DescriptionGauge("Troddinnick Dries", Gauges.OO_Gauge)]
+        TroddinnickDries,
+
+        [DescriptionGauge("Notgotaname", Gauges.OO_Gauge)]
+        Notgotaname,
+
+        [DescriptionGauge("Ebbols Lane TMD", Gauges.OO_Gauge)]
+        EbbolsLaneTMD,
+
+        [DescriptionGauge("Johannesdorf", Gauges.HO_Gauge)]
+        Johannesdorf,
+
+        [DescriptionGauge("Glen Bogle", Gauges.O_Gauge)]
+        GlenBogle,
+
+        [DescriptionGauge("Knype Bridge", Gauges.O_Gauge)]
+        KnypeBridge,
+
+        [DescriptionGauge("Vintage Train Collection", Gauges.O_Gauge)]
+        VintageTrainCollection,
+
+        [DescriptionGauge("Salzgrabe", Gauges.HOe_Gauge)]
+        Salzgrabe,
     }
 }

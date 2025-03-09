@@ -31,10 +31,10 @@ namespace LayoutHelper
 
         private static void NameFromFolder(string folderRoot)
         {
-            var folders = Directory.GetDirectories(folderRoot);
-            foreach (var folder in folders)
+            //var folders = Directory.GetDirectories(folderRoot);
+            //foreach (var folder in folders)
             {
-                NameFilesIn(folder);
+                NameFilesIn(folderRoot);
             }
         }
     }
