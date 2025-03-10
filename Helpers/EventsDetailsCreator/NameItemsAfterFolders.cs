@@ -26,6 +26,7 @@ namespace LayoutHelper
                     string newName = fileName.Replace(".", " " + name + ".");
                     File.Move(file, folder + "\\" + newName, true);
                 }
+                
             }
         }
 

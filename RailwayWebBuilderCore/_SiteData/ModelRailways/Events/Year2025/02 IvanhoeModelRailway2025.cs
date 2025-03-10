@@ -4,7 +4,9 @@ using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
+using RestSharp;
 using System;
+using System.Windows.Input;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
 {
@@ -44,8 +46,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.VintageTrainCollection));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Salzgrabe));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrinkleyTown));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MethonSouth));
             
-
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

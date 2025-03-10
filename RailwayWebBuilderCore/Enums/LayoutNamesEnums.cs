@@ -952,5 +952,9 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Salzgrabe", Gauges.HOe_Gauge)]
         Salzgrabe,
+
+        [DescriptionGauge("Methon South", Gauges.OO_Gauge)]
+        MethonSouth
+
     }
 }
