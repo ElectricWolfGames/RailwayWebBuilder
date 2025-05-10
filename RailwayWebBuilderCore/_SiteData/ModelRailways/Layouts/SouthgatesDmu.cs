@@ -2,11 +2,11 @@ using RailwayWebBuilderCore.Enums;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
 {
-    internal class SouthgatesDmu : LayoutBase
+    internal class SouthgateDmu : LayoutBase
     {
-        public SouthgatesDmu()
+        public SouthgateDmu()
         {
-            Name = LayoutNamesEnums.SouthgatesDmu;
+            Name = LayoutNamesEnums.SouthgateDMU;
             Owner = "";
             Description = "";
         }

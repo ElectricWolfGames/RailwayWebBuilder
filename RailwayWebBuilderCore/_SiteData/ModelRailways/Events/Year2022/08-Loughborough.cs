@@ -43,7 +43,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.PedwardineForest));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Pencoed));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.PennaLaneTMD));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgatesDmu));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgateDMU));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthWigston));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Tremawn));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Silverton));

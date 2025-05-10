@@ -23,6 +23,17 @@ namespace RailwayWebBuilderCore.Data
             Path = Name;
         }
 
+        public LayoutDetails(LayoutNamesEnums name, string path)
+        {
+            NameEnum = name;
+            var (a, b) = ItemHelper.GetEnumDescription(name);
+            Name = a;
+            Gauge = b;
+            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
+
+            Path = path;
+        }
+
         public LayoutDetails(string name, Gauges gauge, bool setPath)
         {
             Name = name;

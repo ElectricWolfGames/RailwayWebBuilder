@@ -26,6 +26,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanyBwlch));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BywayMPD));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.ModularLayoutNCMA));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroxleyHallDepot));
 
 
             Keywords.AddRange(ModelEventKeywords());

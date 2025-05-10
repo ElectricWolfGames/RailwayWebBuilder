@@ -163,7 +163,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Tytton Hall Yard", Gauges.NONE)]
         TyttonHallYard,
 
-        [DescriptionGauge("Byway MPD", Gauges.NONE)]
+        [DescriptionGauge("Byway MPD", Gauges.OO_Gauge)]
         BywayMPD,
 
         [DescriptionGauge("Fairlie Syniad Da", Gauges.NONE)]
@@ -214,8 +214,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Penna Lane TMD", Gauges.OO_Gauge)]
         PennaLaneTMD,
 
-        [DescriptionGauge("Southgates Dmu", Gauges.OO_Gauge)]
-        SouthgatesDmu,
 
         [DescriptionGauge("South Wigston (Now and Then)", Gauges.OO_Gauge)]
         SouthWigston,
@@ -959,10 +957,14 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Tan-Y-Bwlch", Gauges.OO9_Gauge)]
         TanyBwlch,
 
-        [DescriptionGauge("Croxley Hall Depot", Gauges.OO9_Gauge)]
+        [DescriptionGauge("Croxley Hall Depot", Gauges.OO_Gauge)]
         CroxleyHallDepot,
 
         [DescriptionGauge("Modular Layout NCMA", Gauges.OO_Gauge)]
-        ModularLayoutNCMA
+        ModularLayoutNCMA,
+
+        [DescriptionGauge("Southgate DMU", Gauges.OO_Gauge)]
+        SouthgateDMU,
+
     }
 }
