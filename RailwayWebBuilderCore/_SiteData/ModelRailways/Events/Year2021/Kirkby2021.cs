@@ -27,7 +27,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2021
             Layouts.Add(new LayoutDetails("Westbrook", Gauges.N_Gauge, "Westbrook"));
             Layouts.Add(new LayoutDetails("North Road", Gauges.N_Gauge, "North Road"));
             Layouts.Add(new LayoutDetails("Avyn-a-llyin", Gauges.OO9_Gauge, "Avyn-a-llyin"));
-            Layouts.Add(new LayoutDetails("Karolina Falls", Gauges.On30_Gauge, "Karolina Falls"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.KarolinaFalls, "Karolina Falls"));
             Layouts.Add(new LayoutDetails("St. Marys", Gauges.O165_Gauge, "St. Marys"));
             Layouts.Add(new LayoutDetails("Industrivej", Gauges.HO_Gauge, "Industrivej"));
             Layouts.Add(new LayoutDetails("High Level Junction", Gauges.N_Gauge, "High Level Junction"));

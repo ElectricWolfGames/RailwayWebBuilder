@@ -37,7 +37,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Halland", Gauges._45mm, "Halland"));
             Layouts.Add(new LayoutDetails("Hambleden Valley", Gauges.OO_Gauge, "Hambleden Valley"));
             Layouts.Add(new LayoutDetails("Heanor South", Gauges.OO_Gauge, "Heanor South"));
-            Layouts.Add(new LayoutDetails("Karolina Falls", Gauges.On30_Gauge, "Karolina Falls"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.KarolinaFalls, "Karolina Falls"));
             Layouts.Add(new LayoutDetails("Knowles Hill Colliery", Gauges.OO_Gauge, "Knowles Hill Colliery"));
             Layouts.Add(new LayoutDetails("Medway Quay", Gauges.O_Gauge, "Medway Quay"));
             Layouts.Add(new LayoutDetails("Merstone and Ventnor", Gauges.OO_Gauge, "Merstone and Ventnor"));

@@ -76,9 +76,9 @@ namespace RailwayWebBuilderCore._Site.Railways.GCR
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text("We are back to try that same again with two painting");
             pageBuilder.Text($"<br/><br/>");
-            pageBuilder.TextBoldText("","Terence Cuneo's"," limited edition prints 'Flying Scotsman.' 820/850");
+            pageBuilder.TextBoldText("", "Terence Cuneo's", " limited edition prints 'Flying Scotsman.' 820/850");
             pageBuilder.Text($"<br/><br/>");
-            pageBuilder.TextBoldText("", "David Shepherd’s"," famous painting ’Nine Elms, The Last Hours’ depicts a BR Standard 5 and a West Country Class loco on a rundown shed, speaking powerfully to a poignant moment in history, which happily was far from steam’s last stand");
+            pageBuilder.TextBoldText("", "David Shepherd’s", " famous painting ’Nine Elms, The Last Hours’ depicts a BR Standard 5 and a West Country Class loco on a rundown shed, speaking powerfully to a poignant moment in history, which happily was far from steam’s last stand");
             pageBuilder.Text($"<br/><br/>");
             pageBuilder.Text($"<br/><br/>");
 

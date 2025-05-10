@@ -44,7 +44,6 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.TroddinnickDries));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.VintageTrainCollection));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WesloSteel));
-            
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

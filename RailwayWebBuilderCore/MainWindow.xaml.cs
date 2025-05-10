@@ -58,6 +58,13 @@ namespace RailwayWebBuilderCore
             Close();
         }
 
+        private static string RemoveCharacterCodes(string tractiveEffort)
+        {
+            tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
+
+            return tractiveEffort;
+        }
+
         private void AddLoco_Click(object sender, RoutedEventArgs e)
         {
             /*string url = NewUrl.Text;
@@ -150,13 +157,6 @@ namespace RailwayWebBuilderCore
         {
             /*if (myList.SelectedItem != null)
                 this.Title = (myList.SelectedItem as LocomotiveDetails).Name;*/
-        }
-
-        private static string RemoveCharacterCodes(string tractiveEffort)
-        {
-            tractiveEffort = tractiveEffort.Replace(@"&#160;", " ");
-
-            return tractiveEffort;
         }
     }
 }

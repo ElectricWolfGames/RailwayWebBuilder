@@ -214,7 +214,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Penna Lane TMD", Gauges.OO_Gauge)]
         PennaLaneTMD,
 
-
         [DescriptionGauge("South Wigston (Now and Then)", Gauges.OO_Gauge)]
         SouthWigston,
 
@@ -870,7 +869,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Knowles Hill Colliery", Gauges.OO_Gauge)]
         KnowlesHillColliery,
 
-
         [DescriptionGauge("Glenellen", Gauges.N_Gauge)]
         Glenellen,
 
@@ -895,25 +893,20 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Foxhill Colliery", Gauges.OO_Gauge)]
         FoxhillColliery,
 
-
-
         [DescriptionGauge("Bradley", Gauges.N_Gauge)]
         Bradley,
 
         [DescriptionGauge("Breganbach Im Schwarzwald", Gauges.N_Gauge)]
         BreganbachImSchwarzwald,
 
-
         [DescriptionGauge("Hartshill Bank", Gauges.N_Gauge)]
         HartshillBank,
-
 
         [DescriptionGauge("The Station Master", Gauges.N_Gauge)]
         TheStationMaster,
 
         [DescriptionGauge("Weslo Steel", Gauges.EM_Gauge)]
         WesloSteel,
-
 
         [DescriptionGauge("Ingleberry End", Gauges.OO_Gauge)]
         IngleberryEnd,
@@ -966,5 +959,28 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Southgate DMU", Gauges.OO_Gauge)]
         SouthgateDMU,
 
+        [DescriptionGauge("Heath Green", Gauges.OO_Gauge)]
+        HeathGreen,
+
+        [DescriptionGauge("Tennis Court Sidings", Gauges.N_Gauge)]
+        TennisCourtSidings,
+
+        [DescriptionGauge("Karolina Falls", Gauges.On30_Gauge)]
+        KarolinaFalls,
+
+        [DescriptionGauge("Newtown East", Gauges.OO_Gauge)]
+        NewtownEast,
+
+        [DescriptionGauge("Netherwood Sidings", Gauges.O_Gauge)]
+        NetherwoodSidings,
+
+        [DescriptionGauge("Tudwich Road Sidings", Gauges.O_Gauge)]
+        TudwichRoadSidings,
+
+        [DescriptionGauge("Harrowby Hill MPD", Gauges.OO_Gauge)]
+        HarrowbyHillMPD,
+
+        [DescriptionGauge("Kozel Cement", Gauges.HO_Gauge)]
+        KozelCement
     }
 }

@@ -14,7 +14,6 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
             BuildDate = "1957–1962";
             TotalProduced = 263;
 
-
             Paragraph1 = "The British Rail Class 31 diesel locomotives, " +
                 "also known as the Brush Type 2 and previously as Class 30, " +
                 "were built by Brush Traction from 1957 to 1962. " +

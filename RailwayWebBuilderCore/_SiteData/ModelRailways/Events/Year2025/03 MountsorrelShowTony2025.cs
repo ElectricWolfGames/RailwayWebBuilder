@@ -22,12 +22,11 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             Title = "Mountsorrel Tony Trains 2025";
             ImagePreview = "IMG_7953--thumb.JPG";
 
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BywayMPD));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroxleyHallDepot));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ModularLayoutNCMA));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanyBwlch));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BywayMPD));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ModularLayoutNCMA));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroxleyHallDepot));
-
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
