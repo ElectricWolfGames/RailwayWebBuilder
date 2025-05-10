@@ -954,7 +954,15 @@ namespace RailwayWebBuilderCore.Enums
         Salzgrabe,
 
         [DescriptionGauge("Methon South", Gauges.OO_Gauge)]
-        MethonSouth
+        MethonSouth,
 
+        [DescriptionGauge("Tan-Y-Bwlch", Gauges.OO9_Gauge)]
+        TanyBwlch,
+
+        [DescriptionGauge("Croxley Hall Depot", Gauges.OO9_Gauge)]
+        CroxleyHallDepot,
+
+        [DescriptionGauge("Modular Layout NCMA", Gauges.OO_Gauge)]
+        ModularLayoutNCMA
     }
 }

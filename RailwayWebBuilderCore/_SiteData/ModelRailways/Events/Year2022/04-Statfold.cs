@@ -49,8 +49,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Sixpenny Handley", Gauges.OO_Gauge, "Sixpenny Handley"));
             Layouts.Add(new LayoutDetails("South Wigston", Gauges.OO_Gauge, "South Wigston"));
             Layouts.Add(new LayoutDetails("Southgate Park", Gauges.OO_Gauge, "Southgate Park"));
-            Layouts.Add(new LayoutDetails("Sutton Bank TMD", Gauges.OO_Gauge, "Sutton Bank TMD"));
-            Layouts.Add(new LayoutDetails("TanyBwlch", Gauges.OO9_Gauge, "TanyBwlch"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanyBwlch));
             Layouts.Add(new LayoutDetails("Tramline", Gauges.OO_Gauge, "Tramline"));
             Layouts.Add(new LayoutDetails("Tryffan Ddu", Gauges.OO9_Gauge, "Tryffan Ddu"));
             Layouts.Add(new LayoutDetails("Ulvyard", Gauges.OO9_Gauge, "Ulvyard"));
