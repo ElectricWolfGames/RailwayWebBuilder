@@ -17,10 +17,10 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             Descrption = "Mountsorrel Tony Trains Model Show";
             ImagesPath = Constants.RawDataPath + @"ModelEvents\2025-05-10 Mountsorrel Tony Trains";
             TripDate = new DateTime(2025, 05, 10);
-            YouTubeLink = "https://www.youtube.com/embed/????";
+            YouTubeLink = "https://www.youtube.com/embed/wIkAFwhOKK0";
             ImageFolder = "20250510-MountsorrelTony";
             Title = "Mountsorrel Tony Trains 2025";
-            ImagePreview = "IMG_7953--thumb.JPG";
+            ImagePreview = "Byway-MPD.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BywayMPD));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroxleyHallDepot));
@@ -40,8 +40,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             {
                 Name = "Mountsorrel Tony Trains Model Show",
                 Date = new DateTime(2025, 05, 10),
-                Paragraph = "",
-                Link = $"{Constants.ModelEvents}/2025-05-10 Mountsorrel Tony Trains/index.html",
+                Paragraph = "Join us for a fun-filled day at the Mountsorrel and Rothley Community Heritage Centre as we explore the Tony Trains Model Show! From intricately detailed model railways to hands-on exhibits and vintage displays, this event is a must-see for train enthusiasts of all ages.",
+                Link = $"{Constants.ModelEvents}/20250510-MountsorrelTony/index.html",
                 ModelEvent = this,
             };
         }
