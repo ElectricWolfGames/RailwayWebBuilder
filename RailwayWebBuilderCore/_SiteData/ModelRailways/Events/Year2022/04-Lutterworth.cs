@@ -27,10 +27,10 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("South Wigston", Gauges.OO_Gauge, "South Wigston"));
             Layouts.Add(new LayoutDetails("Rugby Central", Gauges.N_Gauge, "Rugby Central"));
             Layouts.Add(new LayoutDetails("Johnston", Gauges.OO_Gauge, "Johnston"));
-            Layouts.Add(new LayoutDetails("Brinklow", Gauges.N_Gauge, "Brinklow"));
-            Layouts.Add(new LayoutDetails("Chippenham Junction", Gauges.N_Gauge, "Chippenham Junction"));
-            Layouts.Add(new LayoutDetails("Cucknoe", Gauges.N_Gauge, "Cucknoe"));
-            Layouts.Add(new LayoutDetails("Whartson Hall", Gauges.N_Gauge, "Whartson Hall"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brinklow));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ChippenhamJunction));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cucknoe));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WhartsonHall));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgateDMU, "Southgate DMU"));
             Layouts.Add(new LayoutDetails("Le Club 143 and Seen Better days", Gauges.N_Gauge, "Le Club 143 and Seen Better days"));
 

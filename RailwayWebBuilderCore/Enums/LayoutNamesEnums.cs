@@ -997,5 +997,17 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Taste of Alber", Gauges.HO_Gauge)]
         TasteOfAlber,
+
+        [DescriptionGauge("Whartson Hall", Gauges.N_Gauge)]
+        WhartsonHall,
+
+        [DescriptionGauge("Cucknoe", Gauges.N_Gauge)]
+        Cucknoe,
+
+        [DescriptionGauge("Chippenham Junction", Gauges.N_Gauge)]
+        ChippenhamJunction,
+
+        [DescriptionGauge("Brinklow", Gauges.N_Gauge)]
+        Brinklow,
     }
 }
