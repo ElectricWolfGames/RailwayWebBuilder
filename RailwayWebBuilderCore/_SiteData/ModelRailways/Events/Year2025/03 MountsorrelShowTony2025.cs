@@ -20,7 +20,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             YouTubeLink = "https://www.youtube.com/embed/wIkAFwhOKK0";
             ImageFolder = "20250510-MountsorrelTony";
             Title = "Mountsorrel Tony Trains 2025";
-            ImagePreview = "Byway-MPD.JPG";
+            ImagePreview = "Byway-MPD.jpg";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BywayMPD));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.CroxleyHallDepot));

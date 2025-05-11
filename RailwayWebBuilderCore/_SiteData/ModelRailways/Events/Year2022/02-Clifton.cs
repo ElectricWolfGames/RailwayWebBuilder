@@ -22,14 +22,14 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Title = "Nottingham Model Railway Society";
             ImagePreview = "P2266927-2022-02-26-Netherwood-sidings-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Taste of Alber", Gauges.TTE_Gauge, "Taste of Alber"));
-            Layouts.Add(new LayoutDetails("North Haston", Gauges.HO_Gauge, "North Haston"));
-            Layouts.Add(new LayoutDetails("Netherwood Sidings", Gauges.O_Gauge, "Netherwood Sidings"));
-            Layouts.Add(new LayoutDetails("Hazelby Ballast Loader", Gauges.N_Gauge, "Hazelby Ballast Loader"));
-            Layouts.Add(new LayoutDetails("Welby Lane RTC", Gauges.OO_Gauge, "Welby Lane RTC"));
-            Layouts.Add(new LayoutDetails("Junesdale", Gauges.OO_Gauge, "Junesdale"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TasteOfAlber));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NorthHaston));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NetherwoodSidings));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HazelbyBallastLoader));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WelbyLane, "Welby Lane RTC"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Junesdale));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
-            Layouts.Add(new LayoutDetails("Hollington Quarry", Gauges.OO9_Gauge, "Hollington Quarry"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HollingtonQuarry));
             Layouts.Add(new LayoutDetails("East Midlands Fremo Group", Gauges.HO_Gauge, "East Midlands Fremo Group"));
 
             Keywords.AddRange(ModelEventKeywords());

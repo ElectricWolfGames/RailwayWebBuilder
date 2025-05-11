@@ -36,7 +36,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
             Layouts.Add(new LayoutDetails("Emsworth", Gauges.OO_Gauge, "Emsworth"));
             Layouts.Add(new LayoutDetails("Glenellen Castle", Gauges.N_Gauge, "Glenellen Castle"));
             Layouts.Add(new LayoutDetails("Hartley Poole", Gauges.N_Gauge, "Hartley Poole"));
-            Layouts.Add(new LayoutDetails("Hollington Quarry", Gauges.OO9_Gauge));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HollingtonQuarry));
             Layouts.Add(new LayoutDetails("Kleine Rundfahrt", Gauges.N_Gauge_Continental, "Kleine Rundfahrt"));
             Layouts.Add(new LayoutDetails("Kozel Cement", Gauges.HO_Gauge));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.NormanColliery));

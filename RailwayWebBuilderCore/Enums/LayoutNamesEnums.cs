@@ -7,6 +7,12 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("None", Gauges.OO_Gauge)]
         None,
 
+        [DescriptionGauge("Junesdale", Gauges.OO_Gauge)]
+        Junesdale,
+
+        [DescriptionGauge("Hollington Quarry", Gauges.OO9_Gauge)]
+        HollingtonQuarry,
+
         [DescriptionGauge("Ambleside", Gauges.OO_Gauge)]
         Ambleside,
 
@@ -387,6 +393,12 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Welby Lane", Gauges.OO_Gauge)]
         WelbyLane,
+
+        [DescriptionGauge("Netherwood Sidings", Gauges.O_Gauge)]
+        NetherwoodSidings,
+
+        [DescriptionGauge("Hazelby Ballast Loader", Gauges.N_Gauge)]
+        HazelbyBallastLoader,
 
         [DescriptionGauge("Granby Lane", Gauges.OO_Gauge)]
         GranbyLane,
@@ -971,9 +983,6 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Newtown East", Gauges.OO_Gauge)]
         NewtownEast,
 
-        [DescriptionGauge("Netherwood Sidings", Gauges.O_Gauge)]
-        NetherwoodSidings,
-
         [DescriptionGauge("Tudwich Road Sidings", Gauges.O_Gauge)]
         TudwichRoadSidings,
 
@@ -981,6 +990,12 @@ namespace RailwayWebBuilderCore.Enums
         HarrowbyHillMPD,
 
         [DescriptionGauge("Kozel Cement", Gauges.HO_Gauge)]
-        KozelCement
+        KozelCement,
+
+        [DescriptionGauge("North Haston", Gauges.HO_Gauge)]
+        NorthHaston,
+
+        [DescriptionGauge("Taste of Alber", Gauges.HO_Gauge)]
+        TasteOfAlber,
     }
 }
