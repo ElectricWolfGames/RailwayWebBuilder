@@ -1009,5 +1009,29 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Brinklow", Gauges.N_Gauge)]
         Brinklow,
+
+        [DescriptionGauge("Upson Down Tramway Museum", Gauges._3mm)]
+        UpsonDownTramwayMuseum,
+
+        [DescriptionGauge("Ulvyard", Gauges.OO9_Gauge)]
+        Ulvyard,
+
+        [DescriptionGauge("Tryffan Ddu", Gauges.OO9_Gauge)]
+        TryffanDdu,
+
+        [DescriptionGauge("Tramline", Gauges.OO_Gauge)]
+        Tramline,
+
+        [DescriptionGauge("Sixpenny Handley", Gauges.OO_Gauge)]
+        SixpennyHandley,
+
+        [DescriptionGauge("Scole", Gauges.O_Gauge)]
+        Scole,
+
+        [DescriptionGauge("Rush Green Colliery", Gauges.OO_Gauge)]
+        RushGreenColliery,
+
+        [DescriptionGauge("Ridge Lane", Gauges.OO9_Gauge)]
+        RidgeLane,
     }
 }

@@ -43,18 +43,18 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails("Merstone and Ventnor", Gauges.OO_Gauge, "Merstone and Ventnor"));
             Layouts.Add(new LayoutDetails("Middle Elmton", Gauges.N_Gauge, "Middle Elmton"));
             Layouts.Add(new LayoutDetails("Quorn Magna", Gauges.OO_Gauge, "Quorn Magna"));
-            Layouts.Add(new LayoutDetails("Ridge Lane", Gauges.OO9_Gauge, "Ridge Lane"));
-            Layouts.Add(new LayoutDetails("Rush Green Colliery", Gauges.OO_Gauge, "Rush Green Colliery"));
-            Layouts.Add(new LayoutDetails("Scole", Gauges.O_Gauge, "Scole"));
-            Layouts.Add(new LayoutDetails("Sixpenny Handley", Gauges.OO_Gauge, "Sixpenny Handley"));
-            Layouts.Add(new LayoutDetails("South Wigston", Gauges.OO_Gauge, "South Wigston"));
-            Layouts.Add(new LayoutDetails("Southgate Park", Gauges.OO_Gauge, "Southgate Park"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RidgeLane));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RushGreenColliery));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Scole));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SixpennyHandley));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthWigston, "South Wigston"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgatePark));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttonBankTMD));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanyBwlch));
-            Layouts.Add(new LayoutDetails("Tramline", Gauges.OO_Gauge, "Tramline"));
-            Layouts.Add(new LayoutDetails("Tryffan Ddu", Gauges.OO9_Gauge, "Tryffan Ddu"));
-            Layouts.Add(new LayoutDetails("Ulvyard", Gauges.OO9_Gauge, "Ulvyard"));
-            Layouts.Add(new LayoutDetails("Upson Down Tramway Museum", Gauges._3mm, "Upson Down Tramway Museum"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TanyBwlch, "A6 - TanyBwlch"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Tramline));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TryffanDdu, "R12 - Tryffan Ddu"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ulvyard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.UpsonDownTramwayMuseum));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
