@@ -4,7 +4,6 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
-using System.Windows.Controls;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2024
 {
