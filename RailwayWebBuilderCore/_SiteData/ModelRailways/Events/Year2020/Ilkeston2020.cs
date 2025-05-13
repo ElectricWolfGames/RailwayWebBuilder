@@ -24,13 +24,13 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2020
 
             Layouts.Add(new LayoutDetails("Thomas the Tank Layout", Gauges.OO_Gauge));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Neuburg));
-            Layouts.Add(new LayoutDetails("Avyn-A-Llyin", Gauges.OO9_Gauge, "03 Avyn-A-Llyin"));
-            Layouts.Add(new LayoutDetails("Rothbury", Gauges.OO_Gauge, "04 Rothbury"));
-            Layouts.Add(new LayoutDetails("Brookfield N (USA Based)", Gauges.NONE, "06 Brookfield N"));
-            Layouts.Add(new LayoutDetails("Poplar Sidings", Gauges.OO_Gauge, "07 Poplar Sidings"));
-            Layouts.Add(new LayoutDetails("Glenellen Castle", Gauges.N_Gauge, "08 Glenellen Castle"));
-            Layouts.Add(new LayoutDetails("Winter and Summer Hornby", Gauges.Dublo3Rail, "11 Winter and Summer Hornby Dublo 3 Rail"));
-            Layouts.Add(new LayoutDetails("Malcolm Hughes Vintage Trains", Gauges.Mixed_Gauge, "10 Malcolm Hughes Vintage Trains"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.AvynALlyin));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Rothbury));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrookfieldN));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PoplarSidings));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.GlenellenCastle));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WinterandSummerHornby));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MalcolmHughesVintageTrains));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Ilkeston", "Ilkeston (Woodside) Model Railway Club", "Ilkeston (Woodside) Model Railway", "Heanor Miners Welfare", "Heanor Model Railway" });

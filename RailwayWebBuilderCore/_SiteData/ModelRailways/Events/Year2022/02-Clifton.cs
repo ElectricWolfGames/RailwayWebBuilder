@@ -30,7 +30,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Junesdale));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.HollingtonQuarry));
-            Layouts.Add(new LayoutDetails("East Midlands Fremo Group", Gauges.HO_Gauge, "East Midlands Fremo Group"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.EastMidlandsFremoGroup));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

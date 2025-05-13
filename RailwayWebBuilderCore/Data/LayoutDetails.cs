@@ -34,24 +34,6 @@ namespace RailwayWebBuilderCore.Data
             Path = path;
         }
 
-        public LayoutDetails(string name, Gauges gauge, bool setPath)
-        {
-            Name = name;
-            Gauge = gauge;
-            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
-
-            if (setPath)
-                Path = Name;
-        }
-
-        public LayoutDetails(string name, Gauges gauge, string path)
-        {
-            Name = name;
-            Gauge = gauge;
-            GaugeName = ItemHelper.GetEnumGaugeDescription(Gauge);
-            Path = path;
-        }
-
         public Gauges Gauge { get; private set; }
         public string GaugeName { get; private set; }
 

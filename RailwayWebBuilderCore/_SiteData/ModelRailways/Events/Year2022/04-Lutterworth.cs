@@ -22,17 +22,17 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2022
             Title = "Lutterworth Railway Society Event";
             ImagePreview = "P5218659-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Museum of Transport", Gauges.OO_Gauge, "Museum of Transport"));
-            Layouts.Add(new LayoutDetails("Re united Biscuits", Gauges.OO_Gauge, "Re united Biscuits"));
-            Layouts.Add(new LayoutDetails("South Wigston", Gauges.OO_Gauge, "South Wigston"));
-            Layouts.Add(new LayoutDetails("Rugby Central", Gauges.N_Gauge, "Rugby Central"));
-            Layouts.Add(new LayoutDetails("Johnston", Gauges.OO_Gauge, "Johnston"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MuseumofTransport));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ReunitedBiscuits));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthWigston));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RugbyCentral));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Johnston));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Brinklow));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.ChippenhamJunction));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cucknoe));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.WhartsonHall));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.SouthgateDMU, "Southgate DMU"));
-            Layouts.Add(new LayoutDetails("Le Club 143 and Seen Better days", Gauges.N_Gauge, "Le Club 143 and Seen Better days"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LeClub143andSeenBetterdays));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

@@ -24,27 +24,27 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Linclon", "Lincoln Model Rail Club", "Newark Showground", "Post Modernisation Exhibition" });
 
-            Layouts.Add(new LayoutDetails("Crimson Road", Gauges.NONE, "CrimsonRoad"));
-            Layouts.Add(new LayoutDetails("Cumanavago", Gauges.NONE, "Cumanavago"));
-            Layouts.Add(new LayoutDetails("Dovington Camp", Gauges.NONE, "DovingtonCamp"));
-            Layouts.Add(new LayoutDetails("Eight Dollar Canyon", Gauges.NONE, "EightDollarCanyon"));
-            Layouts.Add(new LayoutDetails("Euxton Junction", Gauges.NONE, "EuxtonJunction"));
-            Layouts.Add(new LayoutDetails("Gillingbourne", Gauges.NONE, "Gillingbourne"));
-            Layouts.Add(new LayoutDetails("Holland Beck", Gauges.NONE, "HollandBeck"));
-            Layouts.Add(new LayoutDetails("Illie Town", Gauges.NONE, "IllieTown"));
-            Layouts.Add(new LayoutDetails("K Street Yard", Gauges.NONE, "KStreetYard"));
-            Layouts.Add(new LayoutDetails("Lea Green Yard", Gauges.NONE, "LeaGreenYard"));
-            Layouts.Add(new LayoutDetails("Loch Tat", Gauges.NONE, "LochTat"));
-            Layouts.Add(new LayoutDetails("Low Moor", Gauges.NONE, "LowMoor"));
-            Layouts.Add(new LayoutDetails("Lynchwood Sidings", Gauges.NONE, "LynchwoodSidings"));
-            Layouts.Add(new LayoutDetails("Norton Folgate", Gauges.NONE, "NortonFolgate"));
-            Layouts.Add(new LayoutDetails("Oil DrumLane", Gauges.NONE, "OilDrumLane"));
-            Layouts.Add(new LayoutDetails("Penna Lane", Gauges.NONE, "PennaLane"));
-            Layouts.Add(new LayoutDetails("Sutherland Street", Gauges.NONE, "SutherlandStreet"));
-            Layouts.Add(new LayoutDetails("Titheridge Junction", Gauges.NONE, "TitheridgeJunction"));
-            Layouts.Add(new LayoutDetails("Weaver Hill", Gauges.NONE, "WeaverHill"));
-            Layouts.Add(new LayoutDetails("West Street Station", Gauges.NONE, "WestStreetStation"));
-            Layouts.Add(new LayoutDetails("Zlata Vychod", Gauges.NONE, "ZlataVychod"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CrimsonRoad));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cumanavago));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.DovingtonCamp));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.EightDollarCanyon));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.EuxtonJunction));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Gillingbourne));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HollandBeck));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.IllieTown));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.KStreetYard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LeaGreenYard));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LochTat));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LowMoor));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.LynchwoodSidings));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NortonFolgate));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.OilDrumLane));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.PennaLane));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SutherlandStreet));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TitheridgeJunction));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WeaverHill));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WestStreetStation));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.ZlataVychod));
         }
     }
 }

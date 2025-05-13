@@ -397,6 +397,9 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Netherwood Sidings", Gauges.O_Gauge)]
         NetherwoodSidings,
 
+        [DescriptionGauge("Shaken Not Stirred", Gauges.NONE)]
+        ShakenNotStirred,
+
         [DescriptionGauge("Hazelby Ballast Loader", Gauges.N_Gauge)]
         HazelbyBallastLoader,
 
@@ -980,6 +983,9 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Karolina Falls", Gauges.On30_Gauge)]
         KarolinaFalls,
 
+        [DescriptionGauge("St Marys", Gauges.OO_Gauge)]
+        StMarys,
+
         [DescriptionGauge("Newtown East", Gauges.OO_Gauge)]
         NewtownEast,
 
@@ -1033,5 +1039,224 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Ridge Lane", Gauges.OO9_Gauge)]
         RidgeLane,
+
+        [DescriptionGauge("Quorn Magna", Gauges.OO_Gauge)]
+        QuornMagna,
+
+        [DescriptionGauge("East Midlands Fremo Group", Gauges.HO_Gauge)]
+        EastMidlandsFremoGroup,
+
+        [DescriptionGauge("Museum of Transport", Gauges.OO_Gauge)]
+        MuseumofTransport,
+
+        [DescriptionGauge("Re united Biscuits", Gauges.OO_Gauge)]
+        ReunitedBiscuits,
+
+        [DescriptionGauge("Rugby Central", Gauges.N_Gauge)]
+        RugbyCentral,
+
+        [DescriptionGauge("Johnston", Gauges.OO_Gauge)]
+        Johnston,
+
+        [DescriptionGauge("Le Club 143 and Seen Better days", Gauges.N_Gauge)]
+        LeClub143andSeenBetterdays,
+
+        [DescriptionGauge("Appleton Dene", Gauges.O_Gauge)]
+        AppletonDene,
+
+        [DescriptionGauge("Arley", Gauges.OO_Gauge)]
+        Arley,
+
+        [DescriptionGauge("Campbell Quarry", Gauges._16mm)]
+        CampbellQuarry,
+
+        [DescriptionGauge("Caroline Concrete", Gauges.O_Gauge)]
+        CarolineConcrete,
+
+        [DescriptionGauge("Coleford", Gauges.OO9_Gauge)]
+        Coleford,
+
+        [DescriptionGauge("Cregwir", Gauges.OO_Gauge)]
+        Cregwir,
+
+        [DescriptionGauge("Duxbury", Gauges.OO_Gauge)]
+        Duxbury,
+
+        [DescriptionGauge("Grenstad", Gauges.N_Gauge)]
+        Grenstad,
+
+        [DescriptionGauge("Gresty Bridge", Gauges.OO_Gauge)]
+        GrestyBridge,
+
+        [DescriptionGauge("Hackworth (Jutland St)", Gauges.OO_Gauge)]
+        Hackworth_JutlandSt,
+
+        [DescriptionGauge("Halland", Gauges._45mm)]
+        Halland,
+
+        [DescriptionGauge("Hambleden Valley", Gauges.OO_Gauge)]
+        HambledenValley,
+
+        [DescriptionGauge("Medway Quay", Gauges.O_Gauge)]
+        MedwayQuay,
+
+        [DescriptionGauge("Merstone and Ventnor", Gauges.OO_Gauge)]
+        MerstoneandVentnor,
+
+        [DescriptionGauge("Middle Elmton", Gauges.N_Gauge)]
+        MiddleElmton,
+
+        [DescriptionGauge("Buxworth", Gauges.O_Gauge)]
+        Buxworth,
+
+        [DescriptionGauge("The Electric Tram", Gauges.N_Gauge)]
+        TheElectricTram,
+
+        [DescriptionGauge("Robinson Heath", Gauges.N_Gauge)]
+        RobinsonHeath,
+
+        [DescriptionGauge("Canal Park and Station", Gauges.OO_Gauge)]
+        CanalParkandStation,
+
+        [DescriptionGauge("Badgers Hollow", Gauges.OO_Gauge)]
+        BadgersHollow,
+
+        [DescriptionGauge("Magna Park", Gauges.OO_Gauge)]
+        MagnaPark,
+
+        [DescriptionGauge("Sutton-in-Ashfield Town", Gauges.OO_Gauge)]
+        SuttoninAshfieldTown,
+
+        [DescriptionGauge("Westbrook", Gauges.N_Gauge)]
+        Westbrook,
+
+        [DescriptionGauge("High Level Junction", Gauges.N_Gauge)]
+        HighLevelJunction,
+
+        [DescriptionGauge("Cardboard Works", Gauges.N_Gauge)]
+        CardboardWorks,
+
+        [DescriptionGauge("Kirkby-in-Ashfield MPD", Gauges.OO_Gauge)]
+        KirkbyInAshfieldMPD,
+
+        [DescriptionGauge("Avyn-A-Llyin", Gauges.OO9_Gauge)]
+        AvynALlyin,
+
+        [DescriptionGauge("Rothbury", Gauges.OO_Gauge)]
+        Rothbury,
+
+        [DescriptionGauge("Brookfield N (USA Based)", Gauges.NONE)]
+        BrookfieldN,
+
+        [DescriptionGauge("Poplar Sidings", Gauges.OO_Gauge)]
+        PoplarSidings,
+
+        [DescriptionGauge("Glenellen Castle", Gauges.N_Gauge)]
+        GlenellenCastle,
+
+        [DescriptionGauge("Winter and Summer Hornby", Gauges.Dublo3Rail)]
+        WinterandSummerHornby,
+
+        [DescriptionGauge("Malcolm Hughes Vintage Trains", Gauges.Mixed_Gauge)]
+        MalcolmHughesVintageTrains,
+
+        [DescriptionGauge("Ambleton Vale", Gauges.N_Gauge)]
+        AmbletonVale,
+
+        [DescriptionGauge("Barden", Gauges.O_Gauge)]
+        Barden,
+
+        [DescriptionGauge("Bedford Road", Gauges.O_Gauge)]
+        BedfordRoad,
+
+        [DescriptionGauge("Blackgang", Gauges.NONE)]
+        Blackgang,
+
+        [DescriptionGauge("Caroline Concrete Works", Gauges.NONE)]
+        CarolineConcreteWorks,
+
+        [DescriptionGauge("Croft SPA", Gauges.N_Gauge)]
+        CroftSPA,
+
+        [DescriptionGauge("Emsworth", Gauges.OO_Gauge)]
+        Emsworth,
+
+        [DescriptionGauge("Hartley Poole", Gauges.N_Gauge)]
+        HartleyPoole,
+
+        [DescriptionGauge("Northallerton", Gauges.N_Gauge)]
+        Northallerton,
+
+        [DescriptionGauge("Obervaz", Gauges.H0mNarrowGauge)]
+        Obervaz,
+
+        [DescriptionGauge("Thomas the Tank Layout", Gauges.H0mNarrowGauge)]
+        ThomastheTankLayout,
+
+        [DescriptionGauge("Roberts Road", Gauges.N_Gauge)]
+        RobertsRoad,
+
+        [DescriptionGauge("Salthaven Quay", Gauges.O_Gauge)]
+        SalthavenQuay,
+
+        [DescriptionGauge("Stamford East", Gauges.N_Gauge)]
+        StamfordEast,
+
+        [DescriptionGauge("Worlds Way", Gauges.OO_Gauge)]
+        WorldsWay,
+
+        [DescriptionGauge("Crimson Road", Gauges.NONE)]
+        CrimsonRoad,
+
+        [DescriptionGauge("Dovington Camp", Gauges.NONE)]
+        DovingtonCamp,
+
+        [DescriptionGauge("Eight Dollar Canyon", Gauges.NONE)]
+        EightDollarCanyon,
+
+        [DescriptionGauge("Euxton Junction", Gauges.NONE)]
+        EuxtonJunction,
+
+        [DescriptionGauge("Gillingbourne", Gauges.NONE)]
+        Gillingbourne,
+
+        [DescriptionGauge("K Street Yard", Gauges.NONE)]
+        KStreetYard,
+
+        [DescriptionGauge("Lea Green Yard", Gauges.NONE)]
+        LeaGreenYard,
+
+        [DescriptionGauge("Loch Tat", Gauges.NONE)]
+        LochTat,
+
+        [DescriptionGauge("Low Moor", Gauges.NONE)]
+        LowMoor,
+
+        [DescriptionGauge("Lynchwood Sidings", Gauges.NONE)]
+        LynchwoodSidings,
+
+        [DescriptionGauge("Norton Folgate", Gauges.NONE)]
+        NortonFolgate,
+
+        [DescriptionGauge("Penna Lane", Gauges.NONE)]
+        PennaLane,
+
+        [DescriptionGauge("Sutherland Street", Gauges.NONE)]
+        SutherlandStreet,
+
+        [DescriptionGauge("Titheridge Junction", Gauges.NONE)]
+        TitheridgeJunction,
+
+        [DescriptionGauge("Weaver Hill", Gauges.NONE)]
+        WeaverHill,
+
+        [DescriptionGauge("West Street Station", Gauges.NONE)]
+        WestStreetStation,
+
+        [DescriptionGauge("Zlata Vychod", Gauges.NONE)]
+        ZlataVychod,
+
+        [DescriptionGauge("Sutton-in-Ashfield Town", Gauges.OO_Gauge)]
+        SuttonInAshfieldTown,
     }
 }

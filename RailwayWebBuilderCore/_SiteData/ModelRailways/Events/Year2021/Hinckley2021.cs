@@ -22,13 +22,13 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2021
             Title = "Hinckley Model Railway Show 2021";
             ImagePreview = "PA305806-2021-10-30-Hinckley-model-show-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Buxworth", Gauges.O_Gauge, "01 Buxworth"));
-            Layouts.Add(new LayoutDetails("The Electric Tram", Gauges.N_Gauge, "07 The Electric Tram"));
-            Layouts.Add(new LayoutDetails("Robinson Heath", Gauges.N_Gauge, "09 Robinson Heath"));
-            Layouts.Add(new LayoutDetails("Canal Park and Station", Gauges.OO_Gauge, "10 Canal Park and Station"));
-            Layouts.Add(new LayoutDetails("Badgers Hollow", Gauges.OO_Gauge, "15 Badgers Hollow"));
-            Layouts.Add(new LayoutDetails("Magna Park", Gauges.OO_Gauge, "17 Magna Park"));
-            Layouts.Add(new LayoutDetails("St Ruth", Gauges.N_Gauge, "18 St. Ruth"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Buxworth));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.TheElectricTram));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.RobinsonHeath));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CanalParkandStation));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.BadgersHollow));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.MagnaPark));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StRuth));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {

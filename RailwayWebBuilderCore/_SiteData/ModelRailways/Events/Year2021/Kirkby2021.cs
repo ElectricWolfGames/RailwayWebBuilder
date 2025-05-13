@@ -22,17 +22,17 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2021
             Title = "The Elizabethan Railway Society Exhibition 2021";
             ImagePreview = "PA105301-2021-10-10-Kirkby-in-ashfield-North-road-thumb.JPG";
 
-            Layouts.Add(new LayoutDetails("Sutton-in-Ashfield Town", Gauges.OO_Gauge, "Sutton-in-Ashfield Town"));
-            Layouts.Add(new LayoutDetails("Cumanavago", Gauges.OO_Gauge, "Cumanavago"));
-            Layouts.Add(new LayoutDetails("Westbrook", Gauges.N_Gauge, "Westbrook"));
-            Layouts.Add(new LayoutDetails("North Road", Gauges.N_Gauge, "North Road"));
-            Layouts.Add(new LayoutDetails("Avyn-a-llyin", Gauges.OO9_Gauge, "Avyn-a-llyin"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.SuttoninAshfieldTown));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cumanavago));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Westbrook));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.NorthRoad));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.AvynALlyin));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.KarolinaFalls, "Karolina Falls"));
-            Layouts.Add(new LayoutDetails("St. Marys", Gauges.O165_Gauge, "St. Marys"));
-            Layouts.Add(new LayoutDetails("Industrivej", Gauges.HO_Gauge, "Industrivej"));
-            Layouts.Add(new LayoutDetails("High Level Junction", Gauges.N_Gauge, "High Level Junction"));
-            Layouts.Add(new LayoutDetails("Cardboard Works", Gauges.N_Gauge, "Cardboard Works"));
-            Layouts.Add(new LayoutDetails("Kirkby-in-Ashfield MPD", Gauges.OO_Gauge, "Kirkby-in-Ashfield MPD"));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.StMarys));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Industrivej));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.HighLevelJunction));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.CardboardWorks));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.KirkbyInAshfieldMPD));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
