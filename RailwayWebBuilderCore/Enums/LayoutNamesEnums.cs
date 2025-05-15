@@ -94,7 +94,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Lionel Vintage Collection", Gauges.O_Gauge)]
         LionelVintageCollection,
 
-        [DescriptionGauge("LymebrookYard", Gauges.N_Gauge)]
+        [DescriptionGauge("Lymebrook Yard", Gauges.N_Gauge)]
         LymebrookYard,
 
         [DescriptionGauge("Millfield Yard", Gauges.N_Gauge)]
@@ -220,7 +220,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Penna Lane TMD", Gauges.OO_Gauge)]
         PennaLaneTMD,
 
-        [DescriptionGauge("South Wigston (Now and Then)", Gauges.OO_Gauge)]
+        [DescriptionGauge("South Wigston", Gauges.OO_Gauge)]
         SouthWigston,
 
         [DescriptionGauge("Tremawn", Gauges.OO_Gauge)]

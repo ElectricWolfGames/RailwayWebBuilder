@@ -1,6 +1,7 @@
 ﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
+using RailwayWebBuilderCore.Enums;
 using System;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
@@ -19,6 +20,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2019
             ImageFolder = "20191012-Kirkby";
             Title = "The Elizabethan Railway Society Exhibition 2019";
             ImagePreview = "PA126400-Willen-end-Kirkby-In-Ashfield-thumb.JPG";
+
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Barden));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] { "Kirkby-In-Ashfield", "The Elizabethan Railway Society Exhibition", "Kirkby-In-Ashfield Model Railway" });
