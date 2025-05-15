@@ -2,7 +2,6 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
-using RailwayWebBuilderCore._Site.Railways.Locomotives;
 using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
