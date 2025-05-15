@@ -1,4 +1,5 @@
-﻿using eWolfBootstrap.SiteBuilder;
+﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._Site.Railways.Locomotives;
@@ -20,8 +21,15 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
         public AllLayouts()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Layout By Layout";
+            DisplayTitle = "Layout By Layouts";
             MenuTitle = "Layout By Layout";
+        }
+
+        public string CreateLayoutbyLayoutHero(int usableLayouts)
+        {
+            HTMLBuilder pageBuilder = new();
+            pageBuilder.Jumbotron($"{usableLayouts} {DisplayTitle}", string.Empty);
+            return pageBuilder.Output();
         }
 
         public override void CreatePage()
@@ -31,6 +39,19 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
 
             var meh = new ModelEventsHeader();
 
+            var layoutsList = lbls.Layouts;
+            List<ILayoutBase> ordedBlogs = [.. layoutsList.OrderBy(x => x.Name.ToString())];
+            List<ILayoutBase> usableLayouts = new List<ILayoutBase>();
+            for (int index = 0; index < ordedBlogs.Count; index++)
+            {
+                ILayoutBase layout = ordedBlogs[index];
+
+                if (layout.Name == LayoutNamesEnums.None)
+                    continue;
+
+                usableLayouts.Add(layout);
+            }
+
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
@@ -38,19 +59,13 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Append("<div class='container mt-12'>");
 
             WebPage.Append("</br>");
-            WebPage.Append(LocoRef.CreateHero(this));
-
-            var layoutsList = lbls.Layouts;
-            List<ILayoutBase> ordedBlogs = [.. layoutsList.OrderBy(x => x.Name.ToString())];
+            WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count));
 
             WebPage.Append("<div class='row mb-2'>");
 
-            for (int index = 0; index < ordedBlogs.Count; index++)
+            for (int index = 0; index < usableLayouts.Count; index++)
             {
-                ILayoutBase layout = ordedBlogs[index];
-
-                if (layout.Name == LayoutNamesEnums.None)
-                    continue;
+                ILayoutBase layout = usableLayouts[index];
 
                 LayoutNamesEnums pre = FindPreviousWithImages(ordedBlogs, index);
 

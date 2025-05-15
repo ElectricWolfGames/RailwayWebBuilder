@@ -145,30 +145,14 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
 
         private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
         {
-            //var st = images.Where(x => x.Contains("ST seeb", StringComparison.InvariantCultureIgnoreCase)).ToList();
-
             foreach (string imageName in images)
             {
                 foreach (Data.LayoutDetails layout in pageDetails.Layouts)
                 {
-                    /*if (imageName.Contains("ST seeb", StringComparison.InvariantCultureIgnoreCase) && layout.NameEnum == Enums.LayoutNamesEnums.StSeeb)
-                    {
-                        int i = 0;
-                        i++;
-                    }*/
-
                     if (layout.Path != null && imageName.Contains(layout.Path, StringComparison.InvariantCultureIgnoreCase))
                     {
                         layout.ImagePaths.Add(imageName);
                     }
-
-                    /*var st2 = images.Where(x => x.Contains("ST seeb", StringComparison.InvariantCultureIgnoreCase)).ToList();
-
-                    if (layout.NameEnum == Enums.LayoutNamesEnums.StSeeb)
-                    {
-                        int i = 0;
-                        i++;
-                    }*/
                 }
             }
         }
