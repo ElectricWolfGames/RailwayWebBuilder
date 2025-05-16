@@ -2,14 +2,14 @@
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class DieselClass02 : DieselClassBase
+    public class DieselClass09 : DieselClassBase
     {
-        public DieselClass02()
+        public DieselClass09()
         {
-            ClassName = "Class 02";
+            ClassName = "Class 09";
             StockType = StockTypes.Diesel;
 
-            PowerType = "Diesel-mechanical";
+            PowerType = "";
             Builder = "";
             BuildDate = "";
             TotalProduced = 0;
@@ -20,9 +20,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             LocoNumbers.AddRange(new[]
             {
-                new LocoDetails("D2868"),
-                new LocoDetails("02003"),
-                new LocoDetails("SBR"),
+                new LocoDetails("09001"),
                 });
         }
     }
