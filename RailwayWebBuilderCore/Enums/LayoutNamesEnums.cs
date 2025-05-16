@@ -692,6 +692,9 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Willevie", Gauges.OO9_Gauge)]
         Willevie,
 
+        [DescriptionGauge("Willevie2", Gauges.OO9_Gauge)]
+        Willevie2,
+
         [DescriptionGauge("Falcon Road", Gauges.O_Gauge)]
         FalconRoad,
 
@@ -989,6 +992,12 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Newtown East", Gauges.OO_Gauge)]
         NewtownEast,
 
+        [DescriptionGauge("Chaddesley Corbett", Gauges.N_Gauge)]
+        ChaddesleyCorbett,
+
+        [DescriptionGauge("Witham Layout", Gauges.OO_Gauge)]
+        WithamLayout,
+
         [DescriptionGauge("Tudwich Road Sidings", Gauges.O_Gauge)]
         TudwichRoadSidings,
 
@@ -1132,6 +1141,12 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("High Level Junction", Gauges.N_Gauge)]
         HighLevelJunction,
+
+        [DescriptionGauge("Essex Brick", Gauges.OO_Gauge)]
+        EssexBrick,
+
+        [DescriptionGauge("Ano", Gauges.NONE)]
+        Ano,
 
         [DescriptionGauge("Cardboard Works", Gauges.N_Gauge)]
         CardboardWorks,
