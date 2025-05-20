@@ -2,11 +2,11 @@
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 {
-    public class DieselClass07 : DieselClassBase
+    public class DieselClass05 : DieselClassBase
     {
-        public DieselClass07()
+        public DieselClass05()
         {
-            ClassName = "Class 07";
+            ClassName = "Class 05";
             StockType = StockTypes.Diesel;
 
             PowerType = "";
@@ -20,8 +20,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
 
             LocoNumbers.AddRange(new[]
             {
-                new LocoDetails("D2996"),
-                new LocoDetails("07001"),
+                new LocoDetails("D2587"),
                 });
         }
     }
