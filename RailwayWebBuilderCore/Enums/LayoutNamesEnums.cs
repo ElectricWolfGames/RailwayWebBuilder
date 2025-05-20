@@ -349,8 +349,11 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Port William Trebarwith Quarry", Gauges.OO_Gauge)]
         PortWilliamTrebarwithQuarry,
 
-        [DescriptionGauge("Effingborough", Gauges.OO_Gauge)]
+        [DescriptionGauge("Effingborough", Gauges.N_Gauge)]
         Effingborough,
+
+        [DescriptionGauge("Twygg", Gauges.O_Gauge)]
+        Twygg,
 
         [DescriptionGauge("Hackworth Jutland Street", Gauges.OO_Gauge)]
         HackworthJutlandStreet,
@@ -986,7 +989,7 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Karolina Falls", Gauges.On30_Gauge)]
         KarolinaFalls,
 
-        [DescriptionGauge("St Marys", Gauges.OO_Gauge)]
+        [DescriptionGauge("St Marys", Gauges.O165_Gauge)]
         StMarys,
 
         [DescriptionGauge("Newtown East", Gauges.OO_Gauge)]
@@ -995,8 +998,8 @@ namespace RailwayWebBuilderCore.Enums
         [DescriptionGauge("Chaddesley Corbett", Gauges.N_Gauge)]
         ChaddesleyCorbett,
 
-        [DescriptionGauge("Witham Layout", Gauges.OO_Gauge)]
-        WithamLayout,
+        [DescriptionGauge("Witham", Gauges.OO_Gauge)]
+        Witham,
 
         [DescriptionGauge("Tudwich Road Sidings", Gauges.O_Gauge)]
         TudwichRoadSidings,

@@ -20,17 +20,19 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Year2025
             YouTubeLink = "https://www.youtube.com/embed/";
             ImageFolder = "20250516-System";
             Title = "Syston Model Railway 2025";
-            ImagePreview = "Byway-MPD.jpg";
+            ImagePreview = "IMG_8330-thumb.JPG";
 
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.BrittaniaMills));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.StMarys));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.ChaddesleyCorbett));
-            Layouts.Add(new LayoutDetails(LayoutNamesEnums.WithamLayout));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Witham));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Oldmarket));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.HighLevelJunction));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Willevie2));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.EssexBrick));
             Layouts.Add(new LayoutDetails(LayoutNamesEnums.Ano));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Effingborough));
+            Layouts.Add(new LayoutDetails(LayoutNamesEnums.Twygg));
 
             Keywords.AddRange(ModelEventKeywords());
             Keywords.AddRange(new string[] {
