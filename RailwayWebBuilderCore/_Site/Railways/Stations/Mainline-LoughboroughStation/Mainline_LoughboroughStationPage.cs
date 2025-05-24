@@ -37,7 +37,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Stations.Mainline_LoughboroughSta
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
             WebPage.StartBody();
 

@@ -51,7 +51,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
                 usableLayouts.Add(layout);
             }
 
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 

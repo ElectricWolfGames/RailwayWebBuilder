@@ -21,7 +21,7 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
