@@ -58,7 +58,7 @@ namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
             WebPage.Append("<div class='container mt-12'>");
 
             WebPage.Append("</br>");
-            WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count));
+            WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count + 1));
 
             WebPage.Append("<div class='row mb-2'>");
 
