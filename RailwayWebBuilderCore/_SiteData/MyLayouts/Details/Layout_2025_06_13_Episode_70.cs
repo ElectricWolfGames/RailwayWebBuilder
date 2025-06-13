@@ -24,7 +24,7 @@ namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details
 
             Details.Append("</br>");
             Details.Append("<p>Please mind the gap...</p>");
-            YouTubeLink = "";
+            YouTubeLink = "7J6mJ19kXWk";
         }
 
         public IBlog GetBlog()
