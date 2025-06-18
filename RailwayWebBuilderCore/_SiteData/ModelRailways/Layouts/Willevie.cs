@@ -7,8 +7,8 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         public Willevie()
         {
             Name = LayoutNamesEnums.Willevie;
-            Owner = "";
-            Description = "Small oval two track layout with engine shed, siding and passenger halt.\n\r";
+            Owner = "Michael Lanham";
+            Description = "Small oval two track layout with engine shed, siding and passenger halt.";
         }
     }
 }
