@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="_Site\Railways\Shop\**" />
+    <Compile Remove="_Site\Railways\StockVideos\**" />
+    <EmbeddedResource Remove="_Site\Railways\Shop\**" />
+    <EmbeddedResource Remove="_Site\Railways\StockVideos\**" />
+    <None Remove="_Site\Railways\Shop\**" />
+    <None Remove="_Site\Railways\StockVideos\**" />
+    <Page Remove="_Site\Railways\Shop\**" />
+    <Page Remove="_Site\Railways\StockVideos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="19.225.1" />
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.0" />
   </ItemGroup>
@@ -15,11 +26,6 @@
     <None Update="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="_Site\Railways\Shop\" />
-    <Folder Include="_Site\Railways\StockVideos\" />
   </ItemGroup>
 
   <ItemGroup>

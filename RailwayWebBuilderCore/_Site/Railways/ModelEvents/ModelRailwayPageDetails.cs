@@ -45,6 +45,24 @@ namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
             WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
             WebPage.SetDontBuild = false;
 
+            if (!string.IsNullOrWhiteSpace(ModelEvent.CreateLayoutFolders))
+            {
+                string path = $"{ModelEvent.CreateLayoutFolders}_Layouts";
+                Directory.CreateDirectory(path);
+                foreach (var l in ModelEvent.Layouts)
+                {
+                    path = $"{ModelEvent.CreateLayoutFolders}{l.Name}";
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                        path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Images";
+                        Directory.CreateDirectory(path);
+                        path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Videos";
+                        Directory.CreateDirectory(path);
+                    }
+                }
+            }
+
             ModelEvent.CopyLayoutsToKeywords();
             List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
             AddImageToLayouts(ModelEvent, images);

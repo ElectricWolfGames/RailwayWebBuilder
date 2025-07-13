@@ -1276,5 +1276,26 @@ namespace RailwayWebBuilderCore.Enums
 
         [DescriptionGauge("Sutton-in-Ashfield Town", Gauges.OO_Gauge)]
         SuttonInAshfieldTown,
+
+        [DescriptionGauge("Napier Road-Early", Gauges.O_Gauge)]
+        NapierRoadEarly,
+
+        [DescriptionGauge("Wardwood", Gauges.OO_Gauge)]
+        Wardwood,
+
+        [DescriptionGauge("Hind - Leigh Yard", Gauges.OO_Gauge)]
+        HindLeighYard,
+
+        [DescriptionGauge("River Kwai-Bridge", Gauges.HO_Gauge)]
+        RiverKwaiBridge,
+
+        [DescriptionGauge("Roundtrees Sidinngs", Gauges.EM_Gauge)]
+        RoundtreesSidinngs,
+
+        [DescriptionGauge("Witts End ", Gauges.EM_Gauge)]
+        WittsEnd,
+
+        [DescriptionGauge("Martini Junction", Gauges.EM_Gauge)]
+        MartiniJunction
     }
 }

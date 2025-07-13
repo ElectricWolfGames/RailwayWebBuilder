@@ -6,6 +6,7 @@ namespace RailwayWebBuilderCore.Interfaces
 {
     public interface IModelPageDetails
     {
+        string CreateLayoutFolders { get; set; }
         string Descrption { get; set; }
 
         string EventDates { get; set; }

@@ -7,6 +7,7 @@ namespace RailwayWebBuilderCore.Data
 {
     public abstract class ModelEventPageDetails : HeaderBase, IModelEvent
     {
+        public string CreateLayoutFolders { get; set; }
         public string Descrption { get; set; }
         public string EventDates { get; set; }
         public string ImageFolder { get; set; }
