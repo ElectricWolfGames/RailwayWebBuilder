@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WillowbrookMarsh : LayoutBase
 {
-    internal class WillowbrookMarsh : LayoutBase
+    public WillowbrookMarsh()
     {
-        public WillowbrookMarsh()
-        {
-            Name = LayoutNamesEnums.WillowbrookMarsh;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.WillowbrookMarsh;
+        Owner = "";
+        Description = "";
     }
 }

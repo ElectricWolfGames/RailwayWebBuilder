@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class KozelCement : LayoutBase
 {
-    internal class KozelCement : LayoutBase
+    public KozelCement()
     {
-        public KozelCement()
-        {
-            Name = LayoutNamesEnums.KozelCement;
-            Owner = "";
-            Description = "";  // TODO KozelCement Needs description
-        }
+        Name = LayoutNamesEnums.KozelCement;
+        Owner = "";
+        Description = "";  // TODO KozelCement Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Obervaz : LayoutBase
 {
-    internal class Obervaz : LayoutBase
+    public Obervaz()
     {
-        public Obervaz()
-        {
-            Name = LayoutNamesEnums.Obervaz;
-            Owner = "";
-            Description = "";  // TODO Obervaz Needs description
-        }
+        Name = LayoutNamesEnums.Obervaz;
+        Owner = "";
+        Description = "";  // TODO Obervaz Needs description
     }
 }

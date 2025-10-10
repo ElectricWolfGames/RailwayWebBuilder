@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PedwardineForest : LayoutBase
 {
-    internal class PedwardineForest : LayoutBase
+    public PedwardineForest()
     {
-        public PedwardineForest()
-        {
-            Name = LayoutNamesEnums.PedwardineForest;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.PedwardineForest;
+        Owner = "";
+        Description = "";
     }
 }

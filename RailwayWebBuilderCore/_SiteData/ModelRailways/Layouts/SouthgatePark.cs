@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SouthgatePark : LayoutBase
 {
-    internal class SouthgatePark : LayoutBase
+    public SouthgatePark()
     {
-        public SouthgatePark()
-        {
-            Name = LayoutNamesEnums.SouthgatePark;
-            Owner = "";
-            Description = "";  // TODO SouthgatePark Needs description
-        }
+        Name = LayoutNamesEnums.SouthgatePark;
+        Owner = "";
+        Description = "";  // TODO SouthgatePark Needs description
     }
 }

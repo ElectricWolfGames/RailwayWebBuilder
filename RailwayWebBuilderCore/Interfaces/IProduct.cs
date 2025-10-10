@@ -1,10 +1,9 @@
-﻿namespace RailwayWebBuilderCore.Interfaces
+﻿namespace RailwayWebBuilderCore.Interfaces;
+
+public interface IProduct
 {
-    public interface IProduct
-    {
-        string Descrption { get; set; }
-        string Image { get; set; }
-        string Title { get; set; }
-        string URL { get; set; }
-    }
+    string Descrption { get; set; }
+    string Image { get; set; }
+    string Title { get; set; }
+    string URL { get; set; }
 }

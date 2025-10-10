@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Brookthorpe : LayoutBase
 {
-    internal class Brookthorpe : LayoutBase
+    public Brookthorpe()
     {
-        public Brookthorpe()
-        {
-            Name = LayoutNamesEnums.Brookthorpe;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Brookthorpe;
+        Owner = "";
+        Description = "";
     }
 }

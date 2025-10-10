@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Ambleside : LayoutBase
 {
-    internal class Ambleside : LayoutBase
+    public Ambleside()
     {
-        public Ambleside()
-        {
-            Name = LayoutNamesEnums.Ambleside;
-            Owner = "The Elizabethan Railway Society";
-            Description = "Pre-grouping through station serving two branch lines. If the Kendal and Windermere Railway " +
-                "company had fulfilled their plans, then Ambleside would have been a junction between Keswick and " +
-                "Penrith.";
-        }
+        Name = LayoutNamesEnums.Ambleside;
+        Owner = "The Elizabethan Railway Society";
+        Description = "Pre-grouping through station serving two branch lines. If the Kendal and Windermere Railway " +
+            "company had fulfilled their plans, then Ambleside would have been a junction between Keswick and " +
+            "Penrith.";
     }
 }

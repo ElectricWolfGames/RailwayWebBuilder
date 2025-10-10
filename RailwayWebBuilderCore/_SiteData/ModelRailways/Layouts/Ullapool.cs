@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Ullapool : LayoutBase
 {
-    internal class Ullapool : LayoutBase
+    public Ullapool()
     {
-        public Ullapool()
-        {
-            Name = LayoutNamesEnums.Ullapool;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Ullapool;
+        Owner = "";
+        Description = "";
     }
 }

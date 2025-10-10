@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SutherlandStreet : LayoutBase
 {
-    internal class SutherlandStreet : LayoutBase
+    public SutherlandStreet()
     {
-        public SutherlandStreet()
-        {
-            Name = LayoutNamesEnums.SutherlandStreet;
-            Owner = "";
-            Description = "";  // TODO SutherlandStreet Needs description
-        }
+        Name = LayoutNamesEnums.SutherlandStreet;
+        Owner = "";
+        Description = "";  // TODO SutherlandStreet Needs description
     }
 }

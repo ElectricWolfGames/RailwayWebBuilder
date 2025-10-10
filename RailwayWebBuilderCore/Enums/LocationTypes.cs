@@ -1,8 +1,7 @@
-﻿namespace RailwayWebBuilderCore.Enums
+﻿namespace RailwayWebBuilderCore.Enums;
+
+public enum LocationTypes
 {
-    public enum LocationTypes
-    {
-        ModelRailway,
-        Startion,
-    }
+    ModelRailway,
+    Startion,
 }

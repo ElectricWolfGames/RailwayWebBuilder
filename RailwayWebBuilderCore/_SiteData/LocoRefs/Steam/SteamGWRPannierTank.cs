@@ -1,22 +1,21 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam;
+
+public class SteamGWRPannierTank : SteamClassBase
 {
-    public class SteamGWRPannierTank : SteamClassBase
+    public SteamGWRPannierTank()
     {
-        public SteamGWRPannierTank()
+        ClassName = "GWR Pannier";
+        StockType = StockTypes.SteamLoco;
+
+        Paragraph1 = "";
+        Paragraph2 = "";
+        Paragraph3 = "";
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "GWR Pannier";
-            StockType = StockTypes.SteamLoco;
-
-            Paragraph1 = "";
-            Paragraph2 = "";
-            Paragraph3 = "";
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("1369"),
-                });
-        }
+            new LocoDetails("1369"),
+            });
     }
 }

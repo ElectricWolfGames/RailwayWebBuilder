@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class AvynALlyin : LayoutBase
 {
-    internal class AvynALlyin : LayoutBase
+    public AvynALlyin()
     {
-        public AvynALlyin()
-        {
-            Name = LayoutNamesEnums.AvynALlyin;
-            Owner = "";
-            Description = "";  // TODO AvynALlyin Needs description
-        }
+        Name = LayoutNamesEnums.AvynALlyin;
+        Owner = "";
+        Description = "";  // TODO AvynALlyin Needs description
     }
 }

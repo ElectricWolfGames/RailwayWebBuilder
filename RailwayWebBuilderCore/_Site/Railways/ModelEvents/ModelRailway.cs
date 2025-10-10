@@ -10,115 +10,114 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
+namespace RailwayWebBuilderCore._Site.Railways.ModelEvents;
+
+[PageTitle("index.html")]
+[Navigation(NavigationTypes.Main, 1)]
+internal class ModelRailway : PageDetails
 {
-    [PageTitle("index.html")]
-    [Navigation(NavigationTypes.Main, 1)]
-    internal class ModelRailway : PageDetails
+    public ModelRailway()
     {
-        public ModelRailway()
+        WebPage = new WebPage(this);
+        DisplayTitle = "Model Events";
+        MenuTitle = "Model Events";
+    }
+
+    public override void CreatePage()
+    {
+        ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
+
+        var meh = new ModelEventsHeader();
+
+        foreach (IModelEvent modelEvent in meds.Events)
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "Model Events";
-            MenuTitle = "Model Events";
+            meh.Keywords.AddRange(modelEvent.Layouts.Select(x => x.Name));
         }
 
-        public override void CreatePage()
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+        WebPage.StartBody();
+
+        WebPage.Append("<div class='container mt-12'>");
+
+        WebPage.Append("</br>");
+        WebPage.Append(LocoRef.CreateHero(this));
+
+        var ordedBlogs = meds.Events.OrderByDescending(x => x.TripDate);
+        WebPage.Append("<div class='row mb-2'>");
+
+        foreach (IModelEvent modelEvent in ordedBlogs)
         {
-            ModelEventDetailsServices meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
+            WebPage.Append(CreateBlog(modelEvent));
 
-            var meh = new ModelEventsHeader();
-
-            foreach (IModelEvent modelEvent in meds.Events)
-            {
-                meh.Keywords.AddRange(modelEvent.Layouts.Select(x => x.Name));
-            }
-
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
-            WebPage.StartBody();
-
-            WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.Append("</br>");
-            WebPage.Append(LocoRef.CreateHero(this));
-
-            var ordedBlogs = meds.Events.OrderByDescending(x => x.TripDate);
-            WebPage.Append("<div class='row mb-2'>");
-
-            foreach (IModelEvent modelEvent in ordedBlogs)
-            {
-                WebPage.Append(CreateBlog(modelEvent));
-
-                CreatModelLayoutPage(modelEvent);
-            }
-
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");
-
-            WebPage.EndBody();
-            WebPage.Output();
-
-            CreaetLayoutByLayoutReport();
+            CreatModelLayoutPage(modelEvent);
         }
 
-        private static void CreaetLayoutByLayoutReport()
+        WebPage.Append("</div>");
+        WebPage.Append("</div>");
+
+        WebPage.EndBody();
+        WebPage.Output();
+
+        CreaetLayoutByLayoutReport();
+    }
+
+    private static void CreaetLayoutByLayoutReport()
+    {
+        var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+
+        foreach (var layout in layoutDetails.Layouts)
         {
-            var layoutDetails = ServiceLocator.Instance.GetService<LayoutbyLayoutDetailsServices>();
+            var sb = new StringBuilder();
 
-            foreach (var layout in layoutDetails.Layouts)
-            {
-                var sb = new StringBuilder();
+            var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
+            var gaugeName = ItemHelper.GetEnumGaugeDescription(gauge);
 
-                var (name, gauge) = ItemHelper.GetEnumDescription(layout.Name);
-                var gaugeName = ItemHelper.GetEnumGaugeDescription(gauge);
+            string path = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
+            Directory.CreateDirectory(path);
 
-                string path = $"E:\\Trains\\Photos - Main\\2024 Layouts\\Layouts\\{name}\\";
-                Directory.CreateDirectory(path);
+            sb.AppendLine($"{name}: {gaugeName}: Model Railway");
+            //sb.AppendLine(layout.Owner);
+            sb.AppendLine();
+            sb.AppendLine(layout.Description);
 
-                sb.AppendLine($"{name}: {gaugeName}: Model Railway");
-                //sb.AppendLine(layout.Owner);
-                sb.AppendLine();
-                sb.AppendLine(layout.Description);
+            sb.AppendLine();
+            sb.AppendLine("Layout by Layout playlist");
+            sb.AppendLine("https://www.youtube.com/playlist?list=PLNf9gBDTdAH3BotcuiAryGVHXleFvGgco");
 
-                sb.AppendLine();
-                sb.AppendLine("Layout by Layout playlist");
-                sb.AppendLine("https://www.youtube.com/playlist?list=PLNf9gBDTdAH3BotcuiAryGVHXleFvGgco");
-
-                File.WriteAllText($"{path}{name}.txt", sb.ToString());
-            }
+            File.WriteAllText($"{path}{name}.txt", sb.ToString());
         }
+    }
 
-        private static string CreateBlog(IModelEvent blog)
+    private static string CreateBlog(IModelEvent blog)
+    {
+        StringBuilder blogHtml = new();
+
+        blogHtml.AppendLine("<div class='col-md-6'>");
+        blogHtml.AppendLine("<div class='card border-dark mb-3'>");
+        blogHtml.AppendLine($"<h5 class='card-header'>{blog.Title}</h5>");
+        blogHtml.AppendLine("<div class='card-body'>");
+        blogHtml.AppendLine($"<h6>{blog.TripDate.ToShortDateString()}</h6>");
+        blogHtml.AppendLine($"      <a href='{blog.ImageFolder}/index.html'><img class='rounded float-right' width='214px' height ='160px'src='{blog.ImageFolder}\\images\\{blog.ImagePreview}'></a>");
+        blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
+        blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
+        blogHtml.AppendLine("</div>");
+        blogHtml.AppendLine("</div>");
+        blogHtml.AppendLine("</div>");
+
+        return blogHtml.ToString();
+    }
+
+    private static void CreatModelLayoutPage(IModelEvent modelEvent)
+    {
+        ModelRailwayPageDetails cattingtonPageDetails = new()
         {
-            StringBuilder blogHtml = new();
+            ModelEvent = modelEvent,
+            DisplayTitle = modelEvent.Title,
+            MenuTitle = "index"
+        };
 
-            blogHtml.AppendLine("<div class='col-md-6'>");
-            blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-            blogHtml.AppendLine($"<h5 class='card-header'>{blog.Title}</h5>");
-            blogHtml.AppendLine("<div class='card-body'>");
-            blogHtml.AppendLine($"<h6>{blog.TripDate.ToShortDateString()}</h6>");
-            blogHtml.AppendLine($"      <a href='{blog.ImageFolder}/index.html'><img class='rounded float-right' width='214px' height ='160px'src='{blog.ImageFolder}\\images\\{blog.ImagePreview}'></a>");
-            blogHtml.AppendLine($"<p class='col-md-6 card-text float-left'>{blog.Descrption}</p>");
-            blogHtml.AppendLine($"<p class='col-md-6 '><a href='{blog.ImageFolder}/index.html' class='font-weight-bold'>See more</a></p>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-            blogHtml.AppendLine("</div>");
-
-            return blogHtml.ToString();
-        }
-
-        private static void CreatModelLayoutPage(IModelEvent modelEvent)
-        {
-            ModelRailwayPageDetails cattingtonPageDetails = new()
-            {
-                ModelEvent = modelEvent,
-                DisplayTitle = modelEvent.Title,
-                MenuTitle = "index"
-            };
-
-            // need to sort out folder
-            cattingtonPageDetails.CreatePage();
-        }
+        // need to sort out folder
+        cattingtonPageDetails.CreatePage();
     }
 }

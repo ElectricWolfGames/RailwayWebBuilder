@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Barden : LayoutBase
 {
-    internal class Barden : LayoutBase
+    public Barden()
     {
-        public Barden()
-        {
-            Name = LayoutNamesEnums.Barden;
-            Owner = "";
-            Description = "";  // TODO Barden Needs description
-        }
+        Name = LayoutNamesEnums.Barden;
+        Owner = "";
+        Description = "";  // TODO Barden Needs description
     }
 }

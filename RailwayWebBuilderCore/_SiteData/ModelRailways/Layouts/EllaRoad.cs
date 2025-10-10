@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class EllaRoad : LayoutBase
 {
-    internal class EllaRoad : LayoutBase
+    public EllaRoad()
     {
-        public EllaRoad()
-        {
-            Name = LayoutNamesEnums.EllaRoad;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.EllaRoad;
+        Owner = "";
+        Description = "";
     }
 }

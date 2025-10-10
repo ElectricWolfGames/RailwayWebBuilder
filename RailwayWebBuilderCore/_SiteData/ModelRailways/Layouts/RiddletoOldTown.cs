@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class RiddletoOldTown : LayoutBase
 {
-    internal class RiddletoOldTown : LayoutBase
+    public RiddletoOldTown()
     {
-        public RiddletoOldTown()
-        {
-            Name = LayoutNamesEnums.RiddletoOldTown;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.RiddletoOldTown;
+        Owner = "";
+        Description = "";
     }
 }

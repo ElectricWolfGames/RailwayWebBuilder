@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WinterandSummerHornby : LayoutBase
 {
-    internal class WinterandSummerHornby : LayoutBase
+    public WinterandSummerHornby()
     {
-        public WinterandSummerHornby()
-        {
-            Name = LayoutNamesEnums.WinterandSummerHornby;
-            Owner = "";
-            Description = "";  // TODO WinterandSummerHornby Needs description
-        }
+        Name = LayoutNamesEnums.WinterandSummerHornby;
+        Owner = "";
+        Description = "";  // TODO WinterandSummerHornby Needs description
     }
 }

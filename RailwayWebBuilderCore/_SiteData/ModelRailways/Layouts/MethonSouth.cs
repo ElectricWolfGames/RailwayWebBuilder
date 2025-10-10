@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MethonSouth : LayoutBase
 {
-    internal class MethonSouth : LayoutBase
+    public MethonSouth()
     {
-        public MethonSouth()
-        {
-            Name = LayoutNamesEnums.MethonSouth;
-            Owner = "";
-            Description = "";  // TODO MethonSouth Needs description
-        }
+        Name = LayoutNamesEnums.MethonSouth;
+        Owner = "";
+        Description = "";  // TODO MethonSouth Needs description
     }
 }

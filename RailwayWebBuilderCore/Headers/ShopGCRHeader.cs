@@ -1,18 +1,17 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Headers;
+
+public class ShopGCRHeader : HeaderBase, IPageHeader
 {
-    public class ShopGCRHeader : HeaderBase, IPageHeader
+    public ShopGCRHeader()
     {
-        public ShopGCRHeader()
+        Title = "Reunification Shop";
+        Keywords = new List<string>
         {
-            Title = "Reunification Shop";
-            Keywords = new List<string>
-            {
-                "Reunification",
-            };
-            Description = "GCR Reunification Shop";
-        }
+            "Reunification",
+        };
+        Description = "GCR Reunification Shop";
     }
 }

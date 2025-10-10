@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SuttoninAshfieldTown : LayoutBase
 {
-    internal class SuttoninAshfieldTown : LayoutBase
+    public SuttoninAshfieldTown()
     {
-        public SuttoninAshfieldTown()
-        {
-            Name = LayoutNamesEnums.SuttoninAshfieldTown;
-            Owner = "";
-            Description = "";  // TODO SuttoninAshfieldTown Needs description
-        }
+        Name = LayoutNamesEnums.SuttoninAshfieldTown;
+        Owner = "";
+        Description = "";  // TODO SuttoninAshfieldTown Needs description
     }
 }

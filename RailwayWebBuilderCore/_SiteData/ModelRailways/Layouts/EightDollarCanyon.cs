@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class EightDollarCanyon : LayoutBase
 {
-    internal class EightDollarCanyon : LayoutBase
+    public EightDollarCanyon()
     {
-        public EightDollarCanyon()
-        {
-            Name = LayoutNamesEnums.EightDollarCanyon;
-            Owner = "";
-            Description = "";  // TODO EightDollarCanyon Needs description
-        }
+        Name = LayoutNamesEnums.EightDollarCanyon;
+        Owner = "";
+        Description = "";  // TODO EightDollarCanyon Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class OliverHill : LayoutBase
 {
-    internal class OliverHill : LayoutBase
+    public OliverHill()
     {
-        public OliverHill()
-        {
-            Name = LayoutNamesEnums.OliverHill;
-            Owner = "";
-            Description = "";  // TODO OliverHill Needs description
-        }
+        Name = LayoutNamesEnums.OliverHill;
+        Owner = "";
+        Description = "";  // TODO OliverHill Needs description
     }
 }

@@ -8,63 +8,62 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Interfaces;
 using System.IO;
 
-namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge
+namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_A60Bridge;
+
+[PageTitle("index.html")]
+[Navigation(NavigationTypes.Main, 1)]
+[AddGallery()]
+public class GCR_A60BridgePage : PageDetails, IStationsPages
 {
-    [PageTitle("index.html")]
-    [Navigation(NavigationTypes.Main, 1)]
-    [AddGallery()]
-    public class GCR_A60BridgePage : PageDetails, IStationsPages
+    public GCR_A60BridgePage()
     {
-        public GCR_A60BridgePage()
+        WebPage = new WebPage(this);
+        DisplayTitle = "";
+        MenuTitle = "A60 Bridge";
+        DontShowNavigation = true;
+    }
+
+    public string HilightImage { get; } = @"GCR-A60Bridge\images\P8070154-2022-08-07-A60Bridge326.JPG";
+
+    public string HtmlFileName
+    {
+        get
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "";
-            MenuTitle = "A60 Bridge";
-            DontShowNavigation = true;
+            return MenuTitle;
         }
+    }
 
-        public string HilightImage { get; } = @"GCR-A60Bridge\images\P8070154-2022-08-07-A60Bridge326.JPG";
+    public StationLocationsBase StationLocations { get; } = new LoughboroughA60Bridge();
 
-        public string HtmlFileName
-        {
-            get
-            {
-                return MenuTitle;
-            }
-        }
+    public override void CreatePage()
+    {
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
+        WebPage.StartBody();
 
-        public StationLocationsBase StationLocations { get; } = new LoughboroughA60Bridge();
+        WebPage.Append("<div class='container mt-4'>");
 
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
-            WebPage.StartBody();
+        WebPage.Append(GCR_LoughboroughStation.GCR_LoughboroughStationPage.CreateStationHero(this));
+        WebPage.Append(CreateGallery());
 
-            WebPage.Append("<div class='container mt-4'>");
+        WebPage.Append("</div>");
+        WebPage.Append("</div>");
 
-            WebPage.Append(GCR_LoughboroughStation.GCR_LoughboroughStationPage.CreateStationHero(this));
-            WebPage.Append(CreateGallery());
+        WebPage.EndBody();
+        WebPage.Output();
+    }
 
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");
+    private static string CreateGallery()
+    {
+        var pageBuilder = new HTMLBuilder();
+        string htmlpath = Constants._aRootPath + Constants.A60StationFolder;
+        string imagePath = $"{htmlpath}images";
 
-            WebPage.EndBody();
-            WebPage.Output();
-        }
-
-        private static string CreateGallery()
-        {
-            var pageBuilder = new HTMLBuilder();
-            string htmlpath = Constants._aRootPath + Constants.A60StationFolder;
-            string imagePath = $"{htmlpath}images";
-
-            Directory.CreateDirectory(imagePath);
-            pageBuilder.Text($"<hr/>");
-            pageBuilder.Text("<h2>Gallery</h2>");
-            string galleryPath = Constants.RawDataPath + @"Stations\GCR A60 Bridge\Gallery";
-            pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
-            return pageBuilder.Output();
-        }
+        Directory.CreateDirectory(imagePath);
+        pageBuilder.Text($"<hr/>");
+        pageBuilder.Text("<h2>Gallery</h2>");
+        string galleryPath = Constants.RawDataPath + @"Stations\GCR A60 Bridge\Gallery";
+        pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
+        return pageBuilder.Output();
     }
 }

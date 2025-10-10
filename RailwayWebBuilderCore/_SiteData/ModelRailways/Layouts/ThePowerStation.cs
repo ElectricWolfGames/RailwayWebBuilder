@@ -1,14 +1,13 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ThePowerStation : LayoutBase
 {
-    internal class ThePowerStation : LayoutBase
+    public ThePowerStation()
     {
-        public ThePowerStation()
-        {
-            Name = LayoutNamesEnums.ThePowerStation;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.ThePowerStation;
+        Owner = "";
+        Description = "";
     }
 }

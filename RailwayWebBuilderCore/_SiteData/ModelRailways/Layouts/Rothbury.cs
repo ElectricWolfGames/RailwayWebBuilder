@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Rothbury : LayoutBase
 {
-    internal class Rothbury : LayoutBase
+    public Rothbury()
     {
-        public Rothbury()
-        {
-            Name = LayoutNamesEnums.Rothbury;
-            Owner = "";
-            Description = "";  // TODO Rothbury Needs description
-        }
+        Name = LayoutNamesEnums.Rothbury;
+        Owner = "";
+        Description = "";  // TODO Rothbury Needs description
     }
 }

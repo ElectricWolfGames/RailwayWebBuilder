@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HarrowbyHillMPD : LayoutBase
 {
-    internal class HarrowbyHillMPD : LayoutBase
+    public HarrowbyHillMPD()
     {
-        public HarrowbyHillMPD()
-        {
-            Name = LayoutNamesEnums.HarrowbyHillMPD;
-            Owner = "";
-            Description = "";  // TODO HarrowbyHillMPD Needs description
-        }
+        Name = LayoutNamesEnums.HarrowbyHillMPD;
+        Owner = "";
+        Description = "";  // TODO HarrowbyHillMPD Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CoalHillWest : LayoutBase
 {
-    internal class CoalHillWest : LayoutBase
+    public CoalHillWest()
     {
-        public CoalHillWest()
-        {
-            Name = LayoutNamesEnums.CoalHillWest;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.CoalHillWest;
+        Owner = "";
+        Description = "";
     }
 }

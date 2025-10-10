@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LowMoor : LayoutBase
 {
-    internal class LowMoor : LayoutBase
+    public LowMoor()
     {
-        public LowMoor()
-        {
-            Name = LayoutNamesEnums.LowMoor;
-            Owner = "";
-            Description = "";  // TODO LowMoor Needs description
-        }
+        Name = LayoutNamesEnums.LowMoor;
+        Owner = "";
+        Description = "";  // TODO LowMoor Needs description
     }
 }

@@ -3,43 +3,42 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._Site.Railways.Locomotives
+namespace RailwayWebBuilderCore._Site.Railways.Locomotives;
+
+[PageTitle("WagonsList.html")]
+[Navigation(NavigationTypes.Main, 2)]
+public class WagonsList : PageDetails
 {
-    [PageTitle("WagonsList.html")]
-    [Navigation(NavigationTypes.Main, 2)]
-    public class WagonsList : PageDetails
+    public WagonsList()
     {
-        public WagonsList()
-        {
-            WebPage = new WebPage(this);
-            DisplayTitle = "Locomotive Photo Reference Collection";
-            MenuTitle = "WagonsList";
-            DontShowNavigation = true;
+        WebPage = new WebPage(this);
+        DisplayTitle = "Locomotive Photo Reference Collection";
+        MenuTitle = "WagonsList";
+        DontShowNavigation = true;
 
-            Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Wagon));
-        }
+        Keywords.AddRange(LocoRef.GetKeywords(StockTypes.Wagon));
+    }
 
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
-            WebPage.StartBody();
+    public override void CreatePage()
+    {
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+        WebPage.StartBody();
 
-            WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-12'>");
 
-            WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-12'>");
 
-            WebPage.Append("</br>");
-            WebPage.Append(LocoRef.CreateHero(this));
-            WebPage.Append(LocoRef.CreateGroups(this, ""));
-            WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.Wagon));
+        WebPage.Append("</br>");
+        WebPage.Append(LocoRef.CreateHero(this));
+        WebPage.Append(LocoRef.CreateGroups(this, ""));
+        WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.Wagon));
 
-            WebPage.Append("</div>");
+        WebPage.Append("</div>");
 
-            WebPage.Append("</div>");
+        WebPage.Append("</div>");
 
-            WebPage.EndBody();
-            WebPage.Output();
-        }
+        WebPage.EndBody();
+        WebPage.Output();
     }
 }

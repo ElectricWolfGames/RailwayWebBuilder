@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class NoPlace : LayoutBase
 {
-    internal class NoPlace : LayoutBase
+    public NoPlace()
     {
-        public NoPlace()
-        {
-            Name = LayoutNamesEnums.NoPlace;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.NoPlace;
+        Owner = "";
+        Description = "";
     }
 }

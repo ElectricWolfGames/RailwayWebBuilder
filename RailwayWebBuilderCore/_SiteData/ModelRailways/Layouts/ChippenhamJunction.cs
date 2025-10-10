@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ChippenhamJunction : LayoutBase
 {
-    internal class ChippenhamJunction : LayoutBase
+    public ChippenhamJunction()
     {
-        public ChippenhamJunction()
-        {
-            Name = LayoutNamesEnums.ChippenhamJunction;
-            Owner = "";
-            Description = "";  // TODO ChippenhamJunction Needs description
-        }
+        Name = LayoutNamesEnums.ChippenhamJunction;
+        Owner = "";
+        Description = "";  // TODO ChippenhamJunction Needs description
     }
 }

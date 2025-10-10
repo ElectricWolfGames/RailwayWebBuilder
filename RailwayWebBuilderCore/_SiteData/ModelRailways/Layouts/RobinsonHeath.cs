@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class RobinsonHeath : LayoutBase
 {
-    internal class RobinsonHeath : LayoutBase
+    public RobinsonHeath()
     {
-        public RobinsonHeath()
-        {
-            Name = LayoutNamesEnums.RobinsonHeath;
-            Owner = "";
-            Description = "";  // TODO RobinsonHeath Needs description
-        }
+        Name = LayoutNamesEnums.RobinsonHeath;
+        Owner = "";
+        Description = "";  // TODO RobinsonHeath Needs description
     }
 }

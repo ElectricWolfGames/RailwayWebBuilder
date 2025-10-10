@@ -1,21 +1,20 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons;
+
+public class WagonPipe : WagonsClassBase
 {
-    public class WagonPipe : WagonsClassBase
+    public WagonPipe()
     {
-        public WagonPipe()
+        ClassName = "Pipe";
+        StockType = StockTypes.Wagon;
+
+        Paragraph1 = "";
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "Pipe";
-            StockType = StockTypes.Wagon;
-
-            Paragraph1 = "";
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("B740654" ),
-                });
-        }
+            new LocoDetails("B740654" ),
+            });
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class JamesStreet : LayoutBase
 {
-    internal class JamesStreet : LayoutBase
+    public JamesStreet()
     {
-        public JamesStreet()
-        {
-            Name = LayoutNamesEnums.JamesStreet;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.JamesStreet;
+        Owner = "";
+        Description = "";
     }
 }

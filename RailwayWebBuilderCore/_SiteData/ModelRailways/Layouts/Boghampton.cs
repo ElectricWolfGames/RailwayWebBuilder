@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Boghampton : LayoutBase
 {
-    internal class Boghampton : LayoutBase
+    public Boghampton()
     {
-        public Boghampton()
-        {
-            Name = LayoutNamesEnums.Boghampton;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Boghampton;
+        Owner = "";
+        Description = "";
     }
 }

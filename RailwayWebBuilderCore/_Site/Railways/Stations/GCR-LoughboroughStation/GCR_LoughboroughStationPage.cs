@@ -8,79 +8,78 @@ using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Interfaces;
 using System.IO;
 
-namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation
+namespace RailwayWebBuilderCore._Site.Railways.Stations.GCR_LoughboroughStation;
+
+[PageTitle("index.html")]
+[Navigation(NavigationTypes.Main, 1)]
+[AddGallery()]
+public class GCR_LoughboroughStationPage : PageDetails, IStationsPages
 {
-    [PageTitle("index.html")]
-    [Navigation(NavigationTypes.Main, 1)]
-    [AddGallery()]
-    public class GCR_LoughboroughStationPage : PageDetails, IStationsPages
+    public GCR_LoughboroughStationPage()
     {
-        public GCR_LoughboroughStationPage()
+        WebPage = new WebPage(this);
+        DisplayTitle = "Loughborough Central Station, LE11 1RW";
+        MenuTitle = "Loughborough Station";
+        DontShowNavigation = true;
+    }
+
+    public string HilightImage { get; } = @"GCR-LoughboroughStation\images\PA210666-GCR-Loughborough.JPG";
+
+    public string HtmlFileName
+    {
+        get
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "Loughborough Central Station, LE11 1RW";
-            MenuTitle = "Loughborough Station";
-            DontShowNavigation = true;
+            return MenuTitle;
         }
+    }
 
-        public string HilightImage { get; } = @"GCR-LoughboroughStation\images\PA210666-GCR-Loughborough.JPG";
+    public StationLocationsBase StationLocations { get; } = new LoughboroughGCR();
 
-        public string HtmlFileName
-        {
-            get
-            {
-                return MenuTitle;
-            }
-        }
+    public static string CreateStationHero(PageDetails pageDetails)
+    {
+        HTMLBuilder pageBuilder = new();
 
-        public StationLocationsBase StationLocations { get; } = new LoughboroughGCR();
+        pageBuilder.Text("<div class='jumbotron'>");
+        pageBuilder.Text("<div class='row'>");
+        pageBuilder.Text("<div class='col-md-4'>");
+        pageBuilder.Text($"<h1>{pageDetails.MenuTitle}</h1>");
+        pageBuilder.Text($"<h5>{pageDetails.DisplayTitle}</h5>");
+        pageBuilder.Text("</div>");
+        pageBuilder.Text("</div>");
+        pageBuilder.Text("</div>");
 
-        public static string CreateStationHero(PageDetails pageDetails)
-        {
-            HTMLBuilder pageBuilder = new();
+        return pageBuilder.Output();
+    }
 
-            pageBuilder.Text("<div class='jumbotron'>");
-            pageBuilder.Text("<div class='row'>");
-            pageBuilder.Text("<div class='col-md-4'>");
-            pageBuilder.Text($"<h1>{pageDetails.MenuTitle}</h1>");
-            pageBuilder.Text($"<h5>{pageDetails.DisplayTitle}</h5>");
-            pageBuilder.Text("</div>");
-            pageBuilder.Text("</div>");
-            pageBuilder.Text("</div>");
+    public override void CreatePage()
+    {
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
+        WebPage.StartBody();
 
-            return pageBuilder.Output();
-        }
+        WebPage.Append("<div class='container mt-4'>");
 
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
-            WebPage.StartBody();
+        WebPage.Append(CreateStationHero(this));
+        WebPage.Append(CreateGallery());
 
-            WebPage.Append("<div class='container mt-4'>");
+        WebPage.Append("</div>");
+        WebPage.Append("</div>");
 
-            WebPage.Append(CreateStationHero(this));
-            WebPage.Append(CreateGallery());
+        WebPage.EndBody();
+        WebPage.Output();
+    }
 
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");
+    private static string CreateGallery()
+    {
+        var pageBuilder = new HTMLBuilder();
+        string htmlpath = Constants._aRootPath + Constants.LoughboroughStationFolder;
+        string imagePath = $"{htmlpath}images";
 
-            WebPage.EndBody();
-            WebPage.Output();
-        }
-
-        private static string CreateGallery()
-        {
-            var pageBuilder = new HTMLBuilder();
-            string htmlpath = Constants._aRootPath + Constants.LoughboroughStationFolder;
-            string imagePath = $"{htmlpath}images";
-
-            Directory.CreateDirectory(imagePath);
-            pageBuilder.Text($"<hr/>");
-            pageBuilder.Text("<h2>Gallery</h2>");
-            string galleryPath = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\Gallery";
-            pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
-            return pageBuilder.Output();
-        }
+        Directory.CreateDirectory(imagePath);
+        pageBuilder.Text($"<hr/>");
+        pageBuilder.Text("<h2>Gallery</h2>");
+        string galleryPath = Constants.RawDataPath + @"Stations\GCR-Loughborough Station\Gallery";
+        pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, galleryPath);
+        return pageBuilder.Output();
     }
 }

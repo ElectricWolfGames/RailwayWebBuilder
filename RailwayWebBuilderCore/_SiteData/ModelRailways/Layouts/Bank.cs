@@ -1,14 +1,13 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Bank : LayoutBase
 {
-    internal class Bank : LayoutBase
+    public Bank()
     {
-        public Bank()
-        {
-            Name = LayoutNamesEnums.Bank;
-            Owner = "Carl White";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Bank;
+        Owner = "Carl White";
+        Description = "";
     }
 }

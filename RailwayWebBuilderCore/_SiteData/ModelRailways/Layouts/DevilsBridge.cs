@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class DevilsBridge : LayoutBase
 {
-    internal class DevilsBridge : LayoutBase
+    public DevilsBridge()
     {
-        public DevilsBridge()
-        {
-            Name = LayoutNamesEnums.DevilsBridge;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.DevilsBridge;
+        Owner = "";
+        Description = "";
     }
 }

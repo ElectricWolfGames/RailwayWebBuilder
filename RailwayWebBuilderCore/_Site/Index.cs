@@ -2,28 +2,27 @@
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 
-namespace RailwayWebBuilderCore._Site
+namespace RailwayWebBuilderCore._Site;
+
+[PageTitle("index2.html")]
+[Navigation(NavigationTypes.Main, 0)]
+public class Index : PageDetails
 {
-    [PageTitle("index2.html")]
-    [Navigation(NavigationTypes.Main, 0)]
-    public class Index : PageDetails
+    public Index()
     {
-        public Index()
-        {
-            WebPage = new WebPage(this);
-            DisplayTitle = "Home";
-            MenuTitle = "Home";
-            DontBuildPage = true;
-        }
+        WebPage = new WebPage(this);
+        DisplayTitle = "Home";
+        MenuTitle = "Home";
+        DontBuildPage = true;
+    }
 
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main);
-            WebPage.StartBody();
+    public override void CreatePage()
+    {
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main);
+        WebPage.StartBody();
 
-            WebPage.EndBody();
-            WebPage.Output();
-        }
+        WebPage.EndBody();
+        WebPage.Output();
     }
 }

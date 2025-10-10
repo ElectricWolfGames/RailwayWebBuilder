@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ReunitedBiscuits : LayoutBase
 {
-    internal class ReunitedBiscuits : LayoutBase
+    public ReunitedBiscuits()
     {
-        public ReunitedBiscuits()
-        {
-            Name = LayoutNamesEnums.ReunitedBiscuits;
-            Owner = "";
-            Description = "";  // TODO ReunitedBiscuits Needs description
-        }
+        Name = LayoutNamesEnums.ReunitedBiscuits;
+        Owner = "";
+        Description = "";  // TODO ReunitedBiscuits Needs description
     }
 }

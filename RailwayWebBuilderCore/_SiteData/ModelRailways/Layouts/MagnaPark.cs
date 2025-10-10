@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MagnaPark : LayoutBase
 {
-    internal class MagnaPark : LayoutBase
+    public MagnaPark()
     {
-        public MagnaPark()
-        {
-            Name = LayoutNamesEnums.MagnaPark;
-            Owner = "";
-            Description = "";  // TODO MagnaPark Needs description
-        }
+        Name = LayoutNamesEnums.MagnaPark;
+        Owner = "";
+        Description = "";  // TODO MagnaPark Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Industrivej : LayoutBase
 {
-    internal class Industrivej : LayoutBase
+    public Industrivej()
     {
-        public Industrivej()
-        {
-            Name = LayoutNamesEnums.Industrivej;
-            Owner = "";
-            Description = "";  // TODO Industrivej Needs description
-        }
+        Name = LayoutNamesEnums.Industrivej;
+        Owner = "";
+        Description = "";  // TODO Industrivej Needs description
     }
 }

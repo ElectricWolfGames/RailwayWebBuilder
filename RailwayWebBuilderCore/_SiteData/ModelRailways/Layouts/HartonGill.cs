@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HartonGill : LayoutBase
 {
-    internal class HartonGill : LayoutBase
+    public HartonGill()
     {
-        public HartonGill()
-        {
-            Name = LayoutNamesEnums.HartonGill;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.HartonGill;
+        Owner = "";
+        Description = "";
     }
 }

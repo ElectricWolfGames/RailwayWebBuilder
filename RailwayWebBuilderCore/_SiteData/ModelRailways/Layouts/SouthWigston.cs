@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SouthWigston : LayoutBase
 {
-    internal class SouthWigston : LayoutBase
+    public SouthWigston()
     {
-        public SouthWigston()
-        {
-            Name = LayoutNamesEnums.SouthWigston;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.SouthWigston;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HeathGreen : LayoutBase
 {
-    internal class HeathGreen : LayoutBase
+    public HeathGreen()
     {
-        public HeathGreen()
-        {
-            Name = LayoutNamesEnums.HeathGreen;
-            Owner = "";
-            Description = "";  // TODO HeathGreen Needs description
-        }
+        Name = LayoutNamesEnums.HeathGreen;
+        Owner = "";
+        Description = "";  // TODO HeathGreen Needs description
     }
 }

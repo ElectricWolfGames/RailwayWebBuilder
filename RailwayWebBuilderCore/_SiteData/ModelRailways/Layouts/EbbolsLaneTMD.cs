@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class EbbolsLaneTMD : LayoutBase
 {
-    internal class EbbolsLaneTMD : LayoutBase
+    public EbbolsLaneTMD()
     {
-        public EbbolsLaneTMD()
-        {
-            Name = LayoutNamesEnums.EbbolsLaneTMD;
-            Owner = "";
-            Description = "";  // TODO EbbolsLaneTMD Needs description
-        }
+        Name = LayoutNamesEnums.EbbolsLaneTMD;
+        Owner = "";
+        Description = "";  // TODO EbbolsLaneTMD Needs description
     }
 }

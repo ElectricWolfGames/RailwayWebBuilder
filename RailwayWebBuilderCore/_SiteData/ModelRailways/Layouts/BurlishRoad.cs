@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class BurlishRoad : LayoutBase
 {
-    internal class BurlishRoad : LayoutBase
+    public BurlishRoad()
     {
-        public BurlishRoad()
-        {
-            Name = LayoutNamesEnums.BurlishRoad;
-            Owner = "";
-            Description = "";  // TODO BurlishRoad Needs description
-        }
+        Name = LayoutNamesEnums.BurlishRoad;
+        Owner = "";
+        Description = "";  // TODO BurlishRoad Needs description
     }
 }

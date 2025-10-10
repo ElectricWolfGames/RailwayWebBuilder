@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HazelbyBallastLoader : LayoutBase
 {
-    internal class HazelbyBallastLoader : LayoutBase
+    public HazelbyBallastLoader()
     {
-        public HazelbyBallastLoader()
-        {
-            Name = LayoutNamesEnums.HazelbyBallastLoader;
-            Owner = "";
-            Description = "";  // TODO HazelbyBallastLoader Needs description
-        }
+        Name = LayoutNamesEnums.HazelbyBallastLoader;
+        Owner = "";
+        Description = "";  // TODO HazelbyBallastLoader Needs description
     }
 }

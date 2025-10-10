@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LimbyFields : LayoutBase
 {
-    internal class LimbyFields : LayoutBase
+    public LimbyFields()
     {
-        public LimbyFields()
-        {
-            Name = LayoutNamesEnums.LimbyFields;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.LimbyFields;
+        Owner = "";
+        Description = "";
     }
 }

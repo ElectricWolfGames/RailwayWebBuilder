@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CarriageandWagon : LayoutBase
 {
-    internal class CarriageandWagon : LayoutBase
+    public CarriageandWagon()
     {
-        public CarriageandWagon()
-        {
-            Name = LayoutNamesEnums.CarriageandWagon;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.CarriageandWagon;
+        Owner = "";
+        Description = "";
     }
 }

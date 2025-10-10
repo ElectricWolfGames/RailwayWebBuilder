@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class UndermilkWood : LayoutBase
 {
-    internal class UndermilkWood : LayoutBase
+    public UndermilkWood()
     {
-        public UndermilkWood()
-        {
-            Name = LayoutNamesEnums.UndermilkWood;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.UndermilkWood;
+        Owner = "";
+        Description = "";
     }
 }

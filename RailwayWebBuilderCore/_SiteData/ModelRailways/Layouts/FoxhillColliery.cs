@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class FoxhillColliery : LayoutBase
 {
-    internal class FoxhillColliery : LayoutBase
+    public FoxhillColliery()
     {
-        public FoxhillColliery()
-        {
-            Name = LayoutNamesEnums.FoxhillColliery;
-            Owner = "";
-            Description = "";  // TODO FoxhillColliery Needs description
-        }
+        Name = LayoutNamesEnums.FoxhillColliery;
+        Owner = "";
+        Description = "";  // TODO FoxhillColliery Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HollandBeck : LayoutBase
 {
-    internal class HollandBeck : LayoutBase
+    public HollandBeck()
     {
-        public HollandBeck()
-        {
-            Name = LayoutNamesEnums.HollandBeck;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.HollandBeck;
+        Owner = "";
+        Description = "";
     }
 }

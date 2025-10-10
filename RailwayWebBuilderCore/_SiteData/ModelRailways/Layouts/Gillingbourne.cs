@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Gillingbourne : LayoutBase
 {
-    internal class Gillingbourne : LayoutBase
+    public Gillingbourne()
     {
-        public Gillingbourne()
-        {
-            Name = LayoutNamesEnums.Gillingbourne;
-            Owner = "";
-            Description = "";  // TODO Gillingbourne Needs description
-        }
+        Name = LayoutNamesEnums.Gillingbourne;
+        Owner = "";
+        Description = "";  // TODO Gillingbourne Needs description
     }
 }

@@ -4,38 +4,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilderCore.Services
+namespace RailwayWebBuilderCore.Services;
+
+public class ModelLayoutServices
 {
-    public class ModelLayoutServices
+    private readonly List<ILayoutBase> _modelLayout = new();
+
+    public ModelLayoutServices()
     {
-        private readonly List<ILayoutBase> _modelLayout = new();
+        AddModelLayouts();
+    }
 
-        public ModelLayoutServices()
+    internal List<ILayoutBase> Layouts
+    {
+        get
         {
-            AddModelLayouts();
+            return _modelLayout;
         }
+    }
 
-        internal List<ILayoutBase> Layouts
-        {
-            get
-            {
-                return _modelLayout;
-            }
-        }
+    private static List<ILayoutBase> GetAll()
+    {
+        var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
+                      where t.GetInterfaces().Contains(typeof(ILayoutBase))
+                            && t.GetConstructor(Type.EmptyTypes) != null
+                      select Activator.CreateInstance(t) as ILayoutBase;
 
-        private static List<ILayoutBase> GetAll()
-        {
-            var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
-                          where t.GetInterfaces().Contains(typeof(ILayoutBase))
-                                && t.GetConstructor(Type.EmptyTypes) != null
-                          select Activator.CreateInstance(t) as ILayoutBase;
+        return updates.ToList();
+    }
 
-            return updates.ToList();
-        }
-
-        private void AddModelLayouts()
-        {
-            _modelLayout.AddRange(GetAll());
-        }
+    private void AddModelLayouts()
+    {
+        _modelLayout.AddRange(GetAll());
     }
 }

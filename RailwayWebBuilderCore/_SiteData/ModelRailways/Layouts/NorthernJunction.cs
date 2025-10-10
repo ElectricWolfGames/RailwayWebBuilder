@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class NorthernJunction : LayoutBase
 {
-    internal class NorthernJunction : LayoutBase
+    public NorthernJunction()
     {
-        public NorthernJunction()
-        {
-            Name = LayoutNamesEnums.NorthernJunction;
-            Owner = "";
-            Description = "";  // TODO NorthernJunction Needs description
-        }
+        Name = LayoutNamesEnums.NorthernJunction;
+        Owner = "";
+        Description = "";  // TODO NorthernJunction Needs description
     }
 }

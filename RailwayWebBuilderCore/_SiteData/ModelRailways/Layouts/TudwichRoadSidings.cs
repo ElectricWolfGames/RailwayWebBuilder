@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class TudwichRoadSidings : LayoutBase
 {
-    internal class TudwichRoadSidings : LayoutBase
+    public TudwichRoadSidings()
     {
-        public TudwichRoadSidings()
-        {
-            Name = LayoutNamesEnums.TudwichRoadSidings;
-            Owner = "";
-            Description = "";  // TODO TudwichRoadSidings Needs description
-        }
+        Name = LayoutNamesEnums.TudwichRoadSidings;
+        Owner = "";
+        Description = "";  // TODO TudwichRoadSidings Needs description
     }
 }

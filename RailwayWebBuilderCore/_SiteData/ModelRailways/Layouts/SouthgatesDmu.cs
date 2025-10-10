@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SouthgateDmu : LayoutBase
 {
-    internal class SouthgateDmu : LayoutBase
+    public SouthgateDmu()
     {
-        public SouthgateDmu()
-        {
-            Name = LayoutNamesEnums.SouthgateDMU;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.SouthgateDMU;
+        Owner = "";
+        Description = "";
     }
 }

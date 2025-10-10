@@ -6,67 +6,66 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace RailwayWebBuilderCore.Services
+namespace RailwayWebBuilderCore.Services;
+
+internal class LayoutBaseServices
 {
-    internal class LayoutBaseServices
+    private List<ILayoutBase> _layouts = new();
+
+    internal LayoutBaseServices()
     {
-        private List<ILayoutBase> _layouts = new();
+        AddModelEvents();
+    }
 
-        internal LayoutBaseServices()
+    internal List<ILayoutBase> Layouts
+    {
+        get
         {
-            AddModelEvents();
+            return _layouts;
+        }
+    }
+
+    internal ILayoutBase FindLayout(LayoutNamesEnums nameEnum)
+    {
+        ILayoutBase layoutBase = _layouts.FirstOrDefault(x => x.Name == nameEnum);
+        if (layoutBase == null)
+        {
+            File.AppendAllText("e:\\temp\\list.txt", nameEnum.ToString() + "\n\r");
+            int i = 0;
+            i++;
+
+            var path = @"E:\Projects\eWolfModelRailwayWeb\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
+            string filedata = "using RailwayWebBuilderCore.Enums;" +
+                "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts" +
+                "{" +
+                $"    internal class {nameEnum} : LayoutBase\r\n" +
+                "    {\r\n" +
+                $"        public {nameEnum}()\r\n" +
+                "        {\r\n" +
+                $"            Name = LayoutNamesEnums.{nameEnum};\r\n" +
+                "            Owner = \"\";\r\n" +
+                $"            Description = \"\";  // TODO {nameEnum} Needs description \r\n" +
+                "        }\r\n" +
+                "    }\r\n" +
+                "}";
+            File.WriteAllText(path + nameEnum + ".cs", filedata);
         }
 
-        internal List<ILayoutBase> Layouts
-        {
-            get
-            {
-                return _layouts;
-            }
-        }
+        return layoutBase;
+    }
 
-        internal ILayoutBase FindLayout(LayoutNamesEnums nameEnum)
-        {
-            ILayoutBase layoutBase = _layouts.FirstOrDefault(x => x.Name == nameEnum);
-            if (layoutBase == null)
-            {
-                File.AppendAllText("e:\\temp\\list.txt", nameEnum.ToString() + "\n\r");
-                int i = 0;
-                i++;
+    private static List<ILayoutBase> GetAll()
+    {
+        var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
+                      where t.GetInterfaces().Contains(typeof(ILayoutBase))
+                            && t.GetConstructor(Type.EmptyTypes) != null
+                      select Activator.CreateInstance(t) as ILayoutBase;
 
-                var path = @"E:\Projects\eWolfModelRailwayWeb\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
-                string filedata = "using RailwayWebBuilderCore.Enums;" +
-                    "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts" +
-                    "{" +
-                    $"    internal class {nameEnum} : LayoutBase\r\n" +
-                    "    {\r\n" +
-                    $"        public {nameEnum}()\r\n" +
-                    "        {\r\n" +
-                    $"            Name = LayoutNamesEnums.{nameEnum};\r\n" +
-                    "            Owner = \"\";\r\n" +
-                    $"            Description = \"\";  // TODO {nameEnum} Needs description \r\n" +
-                    "        }\r\n" +
-                    "    }\r\n" +
-                    "}";
-                File.WriteAllText(path + nameEnum + ".cs", filedata);
-            }
+        return updates.ToList();
+    }
 
-            return layoutBase;
-        }
-
-        private static List<ILayoutBase> GetAll()
-        {
-            var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
-                          where t.GetInterfaces().Contains(typeof(ILayoutBase))
-                                && t.GetConstructor(Type.EmptyTypes) != null
-                          select Activator.CreateInstance(t) as ILayoutBase;
-
-            return updates.ToList();
-        }
-
-        private void AddModelEvents()
-        {
-            _layouts.AddRange(GetAll());
-        }
+    private void AddModelEvents()
+    {
+        _layouts.AddRange(GetAll());
     }
 }

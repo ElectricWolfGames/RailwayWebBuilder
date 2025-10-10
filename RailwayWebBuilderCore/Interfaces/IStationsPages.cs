@@ -1,11 +1,10 @@
 ﻿using RailwayWebBuilderCore.Data;
 
-namespace RailwayWebBuilderCore.Interfaces
+namespace RailwayWebBuilderCore.Interfaces;
+
+public interface IStationsPages
 {
-    public interface IStationsPages
-    {
-        string HilightImage { get; }
-        public string HtmlFileName { get; }
-        StationLocationsBase StationLocations { get; }
-    }
+    string HilightImage { get; }
+    public string HtmlFileName { get; }
+    StationLocationsBase StationLocations { get; }
 }

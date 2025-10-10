@@ -1,47 +1,46 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
+
+public class DieselClass17 : DieselClassBase
 {
-    public class DieselClass17 : DieselClassBase
+    public DieselClass17()
     {
-        public DieselClass17()
+        ClassName = "Class 17";
+        StockType = StockTypes.Diesel;
+
+        PowerType = "Diesel-electric";
+        Builder = "Clayton Equipment Company & Beyer, Peacock & Co.";
+        BuildDate = "1962-1965";
+        TotalProduced = 117;
+
+        Paragraph1 = "The British Rail Class 17 (also known as the Clayton Type 1) was a class of 117 Bo-Bo " +
+            "diesel-electric locomotives built 1962–1965 by Clayton Equipment Company and their sub-contractor Beyer, Peacock & Co., " +
+            "on behalf of British Railways (BR).";
+        Paragraph2 = "During the 1950s and 1960s BR procured a wide range of Type 1 diesel locomotives, many of them under the Pilot Scheme. " +
+            "However, several officials felt that the single-cabbed arrangement used by the majority of Type 1s presented drivers with visibility " +
+            "difficulties in the 'less convenient' direction. BR therefore approached several manufacturers to seek a new locomotive that had a " +
+            "centre cab and low bonnets to maximise visibility. Clayton were selected to produce their proposed locomotive as the Class 17. " +
+            "Its low engine covers required the use of a pair of Paxman 6ZHXL six-cylinder horizontal engines, which had been intended for " +
+            "powering railcars; it was a somewhat unorthodox arrangement for the era.";
+        Paragraph3 = "Production of the Class 17 was undertaken between 1962 and 1965, with the locomotives being assigned to the north " +
+            "of Britain and the Scottish Region. Early on it was determined that the locomotive was not suited to heavy freight trains, " +
+            "and they quickly acquired a reputation for unreliability largely due to the engines, which continued to deliver poor " +
+            "performance even after extensive modifications. The Class 17 proved to be one of the least successful of the Type 1s, " +
+            "such that by 1967, long lines of unserviceable locomotives could be found stored in less accessible sidings at various " +
+            "locations across the Central Belt of Scotland (e.g. Ardrossan and Millerhill).[2] Withdrawals took place from July 1968 " +
+            "to December 1971, meaning some members of the class had a working life of less than 5 years. Several were sold to industrial " +
+            "users; only one example has been preserved.";
+
+        Keywords.Add("British Rail");
+        Keywords.Add("British Rail Class 27");
+        Keywords.Add("Class 27");
+        Keywords.Add("D8568");
+        Keywords.Add("Paxman 6ZHXL six-cylinder horizontal engines");
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "Class 17";
-            StockType = StockTypes.Diesel;
-
-            PowerType = "Diesel-electric";
-            Builder = "Clayton Equipment Company & Beyer, Peacock & Co.";
-            BuildDate = "1962-1965";
-            TotalProduced = 117;
-
-            Paragraph1 = "The British Rail Class 17 (also known as the Clayton Type 1) was a class of 117 Bo-Bo " +
-                "diesel-electric locomotives built 1962–1965 by Clayton Equipment Company and their sub-contractor Beyer, Peacock & Co., " +
-                "on behalf of British Railways (BR).";
-            Paragraph2 = "During the 1950s and 1960s BR procured a wide range of Type 1 diesel locomotives, many of them under the Pilot Scheme. " +
-                "However, several officials felt that the single-cabbed arrangement used by the majority of Type 1s presented drivers with visibility " +
-                "difficulties in the 'less convenient' direction. BR therefore approached several manufacturers to seek a new locomotive that had a " +
-                "centre cab and low bonnets to maximise visibility. Clayton were selected to produce their proposed locomotive as the Class 17. " +
-                "Its low engine covers required the use of a pair of Paxman 6ZHXL six-cylinder horizontal engines, which had been intended for " +
-                "powering railcars; it was a somewhat unorthodox arrangement for the era.";
-            Paragraph3 = "Production of the Class 17 was undertaken between 1962 and 1965, with the locomotives being assigned to the north " +
-                "of Britain and the Scottish Region. Early on it was determined that the locomotive was not suited to heavy freight trains, " +
-                "and they quickly acquired a reputation for unreliability largely due to the engines, which continued to deliver poor " +
-                "performance even after extensive modifications. The Class 17 proved to be one of the least successful of the Type 1s, " +
-                "such that by 1967, long lines of unserviceable locomotives could be found stored in less accessible sidings at various " +
-                "locations across the Central Belt of Scotland (e.g. Ardrossan and Millerhill).[2] Withdrawals took place from July 1968 " +
-                "to December 1971, meaning some members of the class had a working life of less than 5 years. Several were sold to industrial " +
-                "users; only one example has been preserved.";
-
-            Keywords.Add("British Rail");
-            Keywords.Add("British Rail Class 27");
-            Keywords.Add("Class 27");
-            Keywords.Add("D8568");
-            Keywords.Add("Paxman 6ZHXL six-cylinder horizontal engines");
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("D8568"),
-                });
-        }
+            new LocoDetails("D8568"),
+            });
     }
 }

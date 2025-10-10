@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LeaGreenYard : LayoutBase
 {
-    internal class LeaGreenYard : LayoutBase
+    public LeaGreenYard()
     {
-        public LeaGreenYard()
-        {
-            Name = LayoutNamesEnums.LeaGreenYard;
-            Owner = "";
-            Description = "";  // TODO LeaGreenYard Needs description
-        }
+        Name = LayoutNamesEnums.LeaGreenYard;
+        Owner = "";
+        Description = "";  // TODO LeaGreenYard Needs description
     }
 }

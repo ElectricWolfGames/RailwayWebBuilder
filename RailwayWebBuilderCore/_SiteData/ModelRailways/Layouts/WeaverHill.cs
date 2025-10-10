@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WeaverHill : LayoutBase
 {
-    internal class WeaverHill : LayoutBase
+    public WeaverHill()
     {
-        public WeaverHill()
-        {
-            Name = LayoutNamesEnums.WeaverHill;
-            Owner = "";
-            Description = "";  // TODO WeaverHill Needs description
-        }
+        Name = LayoutNamesEnums.WeaverHill;
+        Owner = "";
+        Description = "";  // TODO WeaverHill Needs description
     }
 }

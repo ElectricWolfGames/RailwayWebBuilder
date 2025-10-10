@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LittleBurton : LayoutBase
 {
-    internal class LittleBurton : LayoutBase
+    public LittleBurton()
     {
-        public LittleBurton()
-        {
-            Name = LayoutNamesEnums.LittleBurton;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.LittleBurton;
+        Owner = "";
+        Description = "";
     }
 }

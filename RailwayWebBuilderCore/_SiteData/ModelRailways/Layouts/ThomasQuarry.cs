@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ThomasQuarry : LayoutBase
 {
-    internal class ThomasQuarry : LayoutBase
+    public ThomasQuarry()
     {
-        public ThomasQuarry()
-        {
-            Name = LayoutNamesEnums.ThomasQuarry;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.ThomasQuarry;
+        Owner = "";
+        Description = "";
     }
 }

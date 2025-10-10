@@ -1,22 +1,21 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Headers;
+
+public class StationsHeader : HeaderBase, IPageHeader
 {
-    public class StationsHeader : HeaderBase, IPageHeader
+    public StationsHeader()
     {
-        public StationsHeader()
+        Title = "Stations";
+        Keywords = new List<string>
         {
-            Title = "Stations";
-            Keywords = new List<string>
-            {
-                "Stations",
-                "GCR",
-                "GCRN",
-                "Rushcliffe Halt",
-                "Loughborough",
-            };
-            Description = "Railway Stations";
-        }
+            "Stations",
+            "GCR",
+            "GCRN",
+            "Rushcliffe Halt",
+            "Loughborough",
+        };
+        Description = "Railway Stations";
     }
 }

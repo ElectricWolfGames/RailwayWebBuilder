@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class BuggleskellyModels : LayoutBase
 {
-    internal class BuggleskellyModels : LayoutBase
+    public BuggleskellyModels()
     {
-        public BuggleskellyModels()
-        {
-            Name = LayoutNamesEnums.BuggleskellyModels;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.BuggleskellyModels;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Tremawn : LayoutBase
 {
-    internal class Tremawn : LayoutBase
+    public Tremawn()
     {
-        public Tremawn()
-        {
-            Name = LayoutNamesEnums.Tremawn;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Tremawn;
+        Owner = "";
+        Description = "";
     }
 }

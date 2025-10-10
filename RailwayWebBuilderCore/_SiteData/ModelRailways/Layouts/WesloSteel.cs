@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WesloSteel : LayoutBase
 {
-    internal class WesloSteel : LayoutBase
+    public WesloSteel()
     {
-        public WesloSteel()
-        {
-            Name = LayoutNamesEnums.WesloSteel;
-            Owner = "";
-            Description = "";  // TODO WesloSteel Needs description
-        }
+        Name = LayoutNamesEnums.WesloSteel;
+        Owner = "";
+        Description = "";  // TODO WesloSteel Needs description
     }
 }

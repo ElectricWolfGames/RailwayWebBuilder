@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CardboardWorks : LayoutBase
 {
-    internal class CardboardWorks : LayoutBase
+    public CardboardWorks()
     {
-        public CardboardWorks()
-        {
-            Name = LayoutNamesEnums.CardboardWorks;
-            Owner = "";
-            Description = "";  // TODO CardboardWorks Needs description
-        }
+        Name = LayoutNamesEnums.CardboardWorks;
+        Owner = "";
+        Description = "";  // TODO CardboardWorks Needs description
     }
 }

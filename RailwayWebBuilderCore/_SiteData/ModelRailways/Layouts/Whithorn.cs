@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Whithorn : LayoutBase
 {
-    internal class Whithorn : LayoutBase
+    public Whithorn()
     {
-        public Whithorn()
-        {
-            Name = LayoutNamesEnums.Whithorn;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Whithorn;
+        Owner = "";
+        Description = "";
     }
 }

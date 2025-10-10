@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Salzgrabe : LayoutBase
 {
-    internal class Salzgrabe : LayoutBase
+    public Salzgrabe()
     {
-        public Salzgrabe()
-        {
-            Name = LayoutNamesEnums.Salzgrabe;
-            Owner = "";
-            Description = "";  // TODO Salzgrabe Needs description
-        }
+        Name = LayoutNamesEnums.Salzgrabe;
+        Owner = "";
+        Description = "";  // TODO Salzgrabe Needs description
     }
 }

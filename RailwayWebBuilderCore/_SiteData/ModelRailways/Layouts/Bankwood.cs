@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Bankwood : LayoutBase
 {
-    internal class Bankwood : LayoutBase
+    public Bankwood()
     {
-        public Bankwood()
-        {
-            Name = LayoutNamesEnums.Bankwood;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Bankwood;
+        Owner = "";
+        Description = "";
     }
 }

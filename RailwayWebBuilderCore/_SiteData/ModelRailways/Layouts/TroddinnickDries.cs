@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class TroddinnickDries : LayoutBase
 {
-    internal class TroddinnickDries : LayoutBase
+    public TroddinnickDries()
     {
-        public TroddinnickDries()
-        {
-            Name = LayoutNamesEnums.TroddinnickDries;
-            Owner = "";
-            Description = "";  // TODO TroddinnickDries Needs description
-        }
+        Name = LayoutNamesEnums.TroddinnickDries;
+        Owner = "";
+        Description = "";  // TODO TroddinnickDries Needs description
     }
 }

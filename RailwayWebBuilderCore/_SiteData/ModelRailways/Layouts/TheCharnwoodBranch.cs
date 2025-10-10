@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class TheCharnwoodBranch : LayoutBase
 {
-    internal class TheCharnwoodBranch : LayoutBase
+    public TheCharnwoodBranch()
     {
-        public TheCharnwoodBranch()
-        {
-            Name = LayoutNamesEnums.TheCharnwoodBranch;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.TheCharnwoodBranch;
+        Owner = "";
+        Description = "";
     }
 }

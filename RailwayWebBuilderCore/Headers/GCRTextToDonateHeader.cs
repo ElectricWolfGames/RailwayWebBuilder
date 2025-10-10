@@ -1,18 +1,17 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Headers;
+
+public class GCRTextToDonateHeader : HeaderBase, IPageHeader
 {
-    public class GCRTextToDonateHeader : HeaderBase, IPageHeader
+    public GCRTextToDonateHeader()
     {
-        public GCRTextToDonateHeader()
+        Title = "GCR Text To Donate";
+        Keywords = new List<string>
         {
-            Title = "GCR Text To Donate";
-            Keywords = new List<string>
-            {
-                "Reunification",
-            };
-            Description = "Text To Donate";
-        }
+            "Reunification",
+        };
+        Description = "Text To Donate";
     }
 }

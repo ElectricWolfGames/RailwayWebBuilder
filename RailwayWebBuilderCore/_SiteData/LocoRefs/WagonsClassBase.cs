@@ -1,13 +1,12 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Configuration;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs
+namespace RailwayWebBuilderCore._SiteData.LocoRefs;
+
+public class WagonsClassBase : DieselClassBase
 {
-    public class WagonsClassBase : DieselClassBase
+    public override string GetRawImagePath(string locoNo)
     {
-        public override string GetRawImagePath(string locoNo)
-        {
-            return Constants.RawDataPath + @$"\Locos\_Wagons\{locoNo}\";
-        }
+        return Constants.RawDataPath + @$"\Locos\_Wagons\{locoNo}\";
     }
 }

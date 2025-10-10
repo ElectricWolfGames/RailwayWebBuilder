@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA;
+
+internal class BearCreek : LayoutBase, ILayoutByLayoutSetA
 {
-    internal class BearCreek : LayoutBase, ILayoutByLayoutSetA
+    public BearCreek()
     {
-        public BearCreek()
-        {
-            Name = LayoutNamesEnums.BearCreek;
-            Owner = "";
-            Description = "";
-            LayoutByLayoutVideo = "https://youtu.be/q-iGJ-WBEos";
-        }
+        Name = LayoutNamesEnums.BearCreek;
+        Owner = "";
+        Description = "";
+        LayoutByLayoutVideo = "https://youtu.be/q-iGJ-WBEos";
     }
 }

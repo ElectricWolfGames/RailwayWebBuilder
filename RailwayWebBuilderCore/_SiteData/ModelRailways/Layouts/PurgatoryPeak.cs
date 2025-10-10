@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PurgatoryPeak : LayoutBase
 {
-    internal class PurgatoryPeak : LayoutBase
+    public PurgatoryPeak()
     {
-        public PurgatoryPeak()
-        {
-            Name = LayoutNamesEnums.PurgatoryPeak;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.PurgatoryPeak;
+        Owner = "";
+        Description = "";
     }
 }

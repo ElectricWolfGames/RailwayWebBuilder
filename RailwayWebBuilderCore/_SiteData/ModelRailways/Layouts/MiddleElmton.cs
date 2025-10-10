@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MiddleElmton : LayoutBase
 {
-    internal class MiddleElmton : LayoutBase
+    public MiddleElmton()
     {
-        public MiddleElmton()
-        {
-            Name = LayoutNamesEnums.MiddleElmton;
-            Owner = "";
-            Description = "";  // TODO MiddleElmton Needs description
-        }
+        Name = LayoutNamesEnums.MiddleElmton;
+        Owner = "";
+        Description = "";  // TODO MiddleElmton Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Northallerton : LayoutBase
 {
-    internal class Northallerton : LayoutBase
+    public Northallerton()
     {
-        public Northallerton()
-        {
-            Name = LayoutNamesEnums.Northallerton;
-            Owner = "";
-            Description = "";  // TODO Northallerton Needs description
-        }
+        Name = LayoutNamesEnums.Northallerton;
+        Owner = "";
+        Description = "";  // TODO Northallerton Needs description
     }
 }

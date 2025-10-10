@@ -1,21 +1,20 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons;
+
+public class WagonCoalHopper : WagonsClassBase
 {
-    public class WagonCoalHopper : WagonsClassBase
+    public WagonCoalHopper()
     {
-        public WagonCoalHopper()
+        ClassName = "Coal Hopper";
+        StockType = StockTypes.Wagon;
+
+        Paragraph1 = "Head Wrightson 1957";
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "Coal Hopper";
-            StockType = StockTypes.Wagon;
-
-            Paragraph1 = "Head Wrightson 1957";
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("B425356" ),
-                });
-        }
+            new LocoDetails("B425356" ),
+            });
     }
 }

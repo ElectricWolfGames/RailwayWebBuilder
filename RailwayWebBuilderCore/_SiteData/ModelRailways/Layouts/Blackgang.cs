@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Blackgang : LayoutBase
 {
-    internal class Blackgang : LayoutBase
+    public Blackgang()
     {
-        public Blackgang()
-        {
-            Name = LayoutNamesEnums.Blackgang;
-            Owner = "";
-            Description = "";  // TODO Blackgang Needs description
-        }
+        Name = LayoutNamesEnums.Blackgang;
+        Owner = "";
+        Description = "";  // TODO Blackgang Needs description
     }
 }

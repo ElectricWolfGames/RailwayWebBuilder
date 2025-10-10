@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ShawbridgeJunction : LayoutBase, ILayoutByLayoutSetA
 {
-    internal class ShawbridgeJunction : LayoutBase, ILayoutByLayoutSetA
+    public ShawbridgeJunction()
     {
-        public ShawbridgeJunction()
-        {
-            Name = LayoutNamesEnums.ShawbridgeJunction;
-            Owner = "The Elizabethan Society";
-            Description = "";
-            LayoutByLayoutVideo = "";
-        }
+        Name = LayoutNamesEnums.ShawbridgeJunction;
+        Owner = "The Elizabethan Society";
+        Description = "";
+        LayoutByLayoutVideo = "";
     }
 }

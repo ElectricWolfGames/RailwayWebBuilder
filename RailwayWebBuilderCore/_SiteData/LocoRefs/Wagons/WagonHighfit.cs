@@ -1,22 +1,21 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Wagons;
+
+public class WagonHighfit : WagonsClassBase
 {
-    public class WagonHighfit : WagonsClassBase
+    public WagonHighfit()
     {
-        public WagonHighfit()
+        ClassName = "Highfit";
+        StockType = StockTypes.Wagon;
+
+        Paragraph1 = "";
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "Highfit";
-            StockType = StockTypes.Wagon;
-
-            Paragraph1 = "";
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("E312422" ),
-                new LocoDetails("B477060" ),
-                });
-        }
+            new LocoDetails("E312422" ),
+            new LocoDetails("B477060" ),
+            });
     }
 }

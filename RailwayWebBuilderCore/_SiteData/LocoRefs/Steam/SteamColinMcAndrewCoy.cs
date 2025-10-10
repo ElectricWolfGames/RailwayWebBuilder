@@ -1,22 +1,21 @@
 ﻿using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam;
+
+public class SteamColinMcAndrewCoy : SteamClassBase
 {
-    public class SteamColinMcAndrewCoy : SteamClassBase
+    public SteamColinMcAndrewCoy()
     {
-        public SteamColinMcAndrewCoy()
+        ClassName = "ColinMcAndrew&Coy";
+        StockType = StockTypes.SteamLoco;
+
+        Paragraph1 = "";
+        Paragraph2 = "";
+
+        LocoNumbers.AddRange(new[]
         {
-            ClassName = "ColinMcAndrew&Coy";
-            StockType = StockTypes.SteamLoco;
-
-            Paragraph1 = "";
-            Paragraph2 = "";
-
-            LocoNumbers.AddRange(new[]
-            {
-                new LocoDetails("ColinMcAndrew&Coy"),
-                });
-        }
+            new LocoDetails("ColinMcAndrew&Coy"),
+            });
     }
 }

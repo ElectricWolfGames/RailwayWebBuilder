@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Ulvyard : LayoutBase
 {
-    internal class Ulvyard : LayoutBase
+    public Ulvyard()
     {
-        public Ulvyard()
-        {
-            Name = LayoutNamesEnums.Ulvyard;
-            Owner = "";
-            Description = "";  // TODO Ulvyard Needs description
-        }
+        Name = LayoutNamesEnums.Ulvyard;
+        Owner = "";
+        Description = "";  // TODO Ulvyard Needs description
     }
 }

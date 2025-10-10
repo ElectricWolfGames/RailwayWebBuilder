@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Marmagne : LayoutBase
 {
-    internal class Marmagne : LayoutBase
+    public Marmagne()
     {
-        public Marmagne()
-        {
-            Name = LayoutNamesEnums.Marmagne;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Marmagne;
+        Owner = "";
+        Description = "";
     }
 }

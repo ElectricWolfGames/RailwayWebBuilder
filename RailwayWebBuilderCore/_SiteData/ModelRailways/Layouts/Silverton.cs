@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Silverton : LayoutBase
 {
-    internal class Silverton : LayoutBase
+    public Silverton()
     {
-        public Silverton()
-        {
-            Name = LayoutNamesEnums.Silverton;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Silverton;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,10 +1,9 @@
-﻿namespace RailwayWebBuilderCore.Interfaces
+﻿namespace RailwayWebBuilderCore.Interfaces;
+
+public interface ILocomotiveSpecifications
 {
-    public interface ILocomotiveSpecifications
-    {
-        string Builder { get; }
-        string BuildRange { get; }
-        string Designer { get; }
-        int TotalProduced { get; }
-    }
+    string Builder { get; }
+    string BuildRange { get; }
+    string Designer { get; }
+    int TotalProduced { get; }
 }

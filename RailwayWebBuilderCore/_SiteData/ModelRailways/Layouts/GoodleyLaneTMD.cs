@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GoodleyLaneTMD : LayoutBase
 {
-    internal class GoodleyLaneTMD : LayoutBase
+    public GoodleyLaneTMD()
     {
-        public GoodleyLaneTMD()
-        {
-            Name = LayoutNamesEnums.GoodleyLaneTMD;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.GoodleyLaneTMD;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class RobertsRoad : LayoutBase
 {
-    internal class RobertsRoad : LayoutBase
+    public RobertsRoad()
     {
-        public RobertsRoad()
-        {
-            Name = LayoutNamesEnums.RobertsRoad;
-            Owner = "";
-            Description = "";  // TODO RobertsRoad Needs description
-        }
+        Name = LayoutNamesEnums.RobertsRoad;
+        Owner = "";
+        Description = "";  // TODO RobertsRoad Needs description
     }
 }

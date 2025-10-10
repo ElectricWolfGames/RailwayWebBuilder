@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MedanVale : LayoutBase
 {
-    internal class MedanVale : LayoutBase
+    public MedanVale()
     {
-        public MedanVale()
-        {
-            Name = LayoutNamesEnums.MedanVale;
-            Owner = "";
-            Description = "";  // TODO MedanVale Needs description
-        }
+        Name = LayoutNamesEnums.MedanVale;
+        Owner = "";
+        Description = "";  // TODO MedanVale Needs description
     }
 }

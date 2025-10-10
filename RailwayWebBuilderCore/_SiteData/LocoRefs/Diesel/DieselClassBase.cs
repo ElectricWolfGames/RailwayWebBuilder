@@ -1,6 +1,5 @@
-﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+﻿namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
+
+public class DieselClassBase : ClassBase
 {
-    public class DieselClassBase : ClassBase
-    {
-    }
 }

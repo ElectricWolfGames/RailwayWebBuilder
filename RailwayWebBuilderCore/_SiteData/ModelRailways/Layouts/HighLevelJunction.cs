@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HighLevelJunction : LayoutBase
 {
-    internal class HighLevelJunction : LayoutBase
+    public HighLevelJunction()
     {
-        public HighLevelJunction()
-        {
-            Name = LayoutNamesEnums.HighLevelJunction;
-            Owner = "";
-            Description = "";  // TODO HighLevelJunction Needs description
-        }
+        Name = LayoutNamesEnums.HighLevelJunction;
+        Owner = "";
+        Description = "";  // TODO HighLevelJunction Needs description
     }
 }

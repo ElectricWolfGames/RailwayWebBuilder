@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class BlaendareRoad : LayoutBase
 {
-    internal class BlaendareRoad : LayoutBase
+    public BlaendareRoad()
     {
-        public BlaendareRoad()
-        {
-            Name = LayoutNamesEnums.BlaendareRoad;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.BlaendareRoad;
+        Owner = "";
+        Description = "";
     }
 }

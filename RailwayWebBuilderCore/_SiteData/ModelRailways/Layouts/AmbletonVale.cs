@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class AmbletonVale : LayoutBase
 {
-    internal class AmbletonVale : LayoutBase
+    public AmbletonVale()
     {
-        public AmbletonVale()
-        {
-            Name = LayoutNamesEnums.AmbletonVale;
-            Owner = "";
-            Description = "";  // TODO AmbletonVale Needs description
-        }
+        Name = LayoutNamesEnums.AmbletonVale;
+        Owner = "";
+        Description = "";  // TODO AmbletonVale Needs description
     }
 }

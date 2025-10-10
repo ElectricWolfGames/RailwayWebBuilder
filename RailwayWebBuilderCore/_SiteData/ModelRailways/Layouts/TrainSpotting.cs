@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class TrainSpotting : LayoutBase
 {
-    internal class TrainSpotting : LayoutBase
+    public TrainSpotting()
     {
-        public TrainSpotting()
-        {
-            Name = LayoutNamesEnums.TrainSpotting;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.TrainSpotting;
+        Owner = "";
+        Description = "";
     }
 }

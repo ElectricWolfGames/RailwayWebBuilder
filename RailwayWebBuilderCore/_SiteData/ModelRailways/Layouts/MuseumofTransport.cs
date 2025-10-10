@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MuseumofTransport : LayoutBase
 {
-    internal class MuseumofTransport : LayoutBase
+    public MuseumofTransport()
     {
-        public MuseumofTransport()
-        {
-            Name = LayoutNamesEnums.MuseumofTransport;
-            Owner = "";
-            Description = "";  // TODO MuseumofTransport Needs description
-        }
+        Name = LayoutNamesEnums.MuseumofTransport;
+        Owner = "";
+        Description = "";  // TODO MuseumofTransport Needs description
     }
 }

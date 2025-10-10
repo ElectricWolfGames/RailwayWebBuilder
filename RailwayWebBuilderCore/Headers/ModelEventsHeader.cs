@@ -1,23 +1,22 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Headers;
+
+public class ModelEventsHeader : HeaderBase, IPageHeader
 {
-    public class ModelEventsHeader : HeaderBase, IPageHeader
+    public ModelEventsHeader()
     {
-        public ModelEventsHeader()
+        Title = "ModelEvents";
+        Keywords = new List<string>
         {
-            Title = "ModelEvents";
-            Keywords = new List<string>
-            {
-                "Model Trains",
-                "Model railway",
-                "N Gauge Model Railways",
-                "OO Gauge Model Railways",
-                "Hornby",
-                "Model staions",
-            };
-            Description = "Model railway events pages";
-        }
+            "Model Trains",
+            "Model railway",
+            "N Gauge Model Railways",
+            "OO Gauge Model Railways",
+            "Hornby",
+            "Model staions",
+        };
+        Description = "Model railway events pages";
     }
 }

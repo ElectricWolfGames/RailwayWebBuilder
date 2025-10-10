@@ -1,14 +1,13 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Willevie : LayoutBase
 {
-    internal class Willevie : LayoutBase
+    public Willevie()
     {
-        public Willevie()
-        {
-            Name = LayoutNamesEnums.Willevie;
-            Owner = "Michael Lanham";
-            Description = "Small oval two track layout with engine shed, siding and passenger halt.";
-        }
+        Name = LayoutNamesEnums.Willevie;
+        Owner = "Michael Lanham";
+        Description = "Small oval two track layout with engine shed, siding and passenger halt.";
     }
 }

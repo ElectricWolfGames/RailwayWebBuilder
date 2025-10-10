@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class FredstoneLane : LayoutBase
 {
-    internal class FredstoneLane : LayoutBase
+    public FredstoneLane()
     {
-        public FredstoneLane()
-        {
-            Name = LayoutNamesEnums.FredstoneLane;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.FredstoneLane;
+        Owner = "";
+        Description = "";
     }
 }

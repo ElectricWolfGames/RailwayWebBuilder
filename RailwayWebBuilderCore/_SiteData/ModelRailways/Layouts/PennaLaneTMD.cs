@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PennaLaneTMD : LayoutBase
 {
-    internal class PennaLaneTMD : LayoutBase
+    public PennaLaneTMD()
     {
-        public PennaLaneTMD()
-        {
-            Name = LayoutNamesEnums.PennaLaneTMD;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.PennaLaneTMD;
+        Owner = "";
+        Description = "";
     }
 }

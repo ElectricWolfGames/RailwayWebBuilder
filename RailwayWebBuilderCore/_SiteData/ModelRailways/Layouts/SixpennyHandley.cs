@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class SixpennyHandley : LayoutBase
 {
-    internal class SixpennyHandley : LayoutBase
+    public SixpennyHandley()
     {
-        public SixpennyHandley()
-        {
-            Name = LayoutNamesEnums.SixpennyHandley;
-            Owner = "";
-            Description = "";  // TODO SixpennyHandley Needs description
-        }
+        Name = LayoutNamesEnums.SixpennyHandley;
+        Owner = "";
+        Description = "";  // TODO SixpennyHandley Needs description
     }
 }

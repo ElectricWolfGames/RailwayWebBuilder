@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MalcolmHughesVintageTrains : LayoutBase
 {
-    internal class MalcolmHughesVintageTrains : LayoutBase
+    public MalcolmHughesVintageTrains()
     {
-        public MalcolmHughesVintageTrains()
-        {
-            Name = LayoutNamesEnums.MalcolmHughesVintageTrains;
-            Owner = "";
-            Description = "";  // TODO MalcolmHughesVintageTrains Needs description
-        }
+        Name = LayoutNamesEnums.MalcolmHughesVintageTrains;
+        Owner = "";
+        Description = "";  // TODO MalcolmHughesVintageTrains Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CarolineConcreteWorks : LayoutBase
 {
-    internal class CarolineConcreteWorks : LayoutBase
+    public CarolineConcreteWorks()
     {
-        public CarolineConcreteWorks()
-        {
-            Name = LayoutNamesEnums.CarolineConcreteWorks;
-            Owner = "";
-            Description = "";  // TODO CarolineConcreteWorks Needs description
-        }
+        Name = LayoutNamesEnums.CarolineConcreteWorks;
+        Owner = "";
+        Description = "";  // TODO CarolineConcreteWorks Needs description
     }
 }

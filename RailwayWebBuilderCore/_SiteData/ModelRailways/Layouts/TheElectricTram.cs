@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class TheElectricTram : LayoutBase
 {
-    internal class TheElectricTram : LayoutBase
+    public TheElectricTram()
     {
-        public TheElectricTram()
-        {
-            Name = LayoutNamesEnums.TheElectricTram;
-            Owner = "";
-            Description = "";  // TODO TheElectricTram Needs description
-        }
+        Name = LayoutNamesEnums.TheElectricTram;
+        Owner = "";
+        Description = "";  // TODO TheElectricTram Needs description
     }
 }

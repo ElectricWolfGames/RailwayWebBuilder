@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LynchwoodSidings : LayoutBase
 {
-    internal class LynchwoodSidings : LayoutBase
+    public LynchwoodSidings()
     {
-        public LynchwoodSidings()
-        {
-            Name = LayoutNamesEnums.LynchwoodSidings;
-            Owner = "";
-            Description = "";  // TODO LynchwoodSidings Needs description
-        }
+        Name = LayoutNamesEnums.LynchwoodSidings;
+        Owner = "";
+        Description = "";  // TODO LynchwoodSidings Needs description
     }
 }

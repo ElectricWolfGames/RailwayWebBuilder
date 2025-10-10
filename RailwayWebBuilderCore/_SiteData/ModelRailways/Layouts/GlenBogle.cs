@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GlenBogle : LayoutBase
 {
-    internal class GlenBogle : LayoutBase
+    public GlenBogle()
     {
-        public GlenBogle()
-        {
-            Name = LayoutNamesEnums.GlenBogle;
-            Owner = "";
-            Description = "";  // TODO GlenBogle Needs description
-        }
+        Name = LayoutNamesEnums.GlenBogle;
+        Owner = "";
+        Description = "";  // TODO GlenBogle Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class KnypeBridge : LayoutBase
 {
-    internal class KnypeBridge : LayoutBase
+    public KnypeBridge()
     {
-        public KnypeBridge()
-        {
-            Name = LayoutNamesEnums.KnypeBridge;
-            Owner = "";
-            Description = "";  // TODO KnypeBridge Needs description
-        }
+        Name = LayoutNamesEnums.KnypeBridge;
+        Owner = "";
+        Description = "";  // TODO KnypeBridge Needs description
     }
 }

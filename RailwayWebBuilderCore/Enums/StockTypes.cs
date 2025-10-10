@@ -1,11 +1,10 @@
-﻿namespace RailwayWebBuilderCore.Enums
+﻿namespace RailwayWebBuilderCore.Enums;
+
+public enum StockTypes
 {
-    public enum StockTypes
-    {
-        SteamLoco,
-        Diesel,
-        Wagon,
-        Coach,
-        Electric,
-    }
+    SteamLoco,
+    Diesel,
+    Wagon,
+    Coach,
+    Electric,
 }

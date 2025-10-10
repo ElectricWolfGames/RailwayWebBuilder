@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class DilhornColliery : LayoutBase
 {
-    internal class DilhornColliery : LayoutBase
+    public DilhornColliery()
     {
-        public DilhornColliery()
-        {
-            Name = LayoutNamesEnums.DilhornColliery;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.DilhornColliery;
+        Owner = "";
+        Description = "";
     }
 }

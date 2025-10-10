@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class NortonFolgate : LayoutBase
 {
-    internal class NortonFolgate : LayoutBase
+    public NortonFolgate()
     {
-        public NortonFolgate()
-        {
-            Name = LayoutNamesEnums.NortonFolgate;
-            Owner = "";
-            Description = "";  // TODO NortonFolgate Needs description
-        }
+        Name = LayoutNamesEnums.NortonFolgate;
+        Owner = "";
+        Description = "";  // TODO NortonFolgate Needs description
     }
 }

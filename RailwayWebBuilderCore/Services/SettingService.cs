@@ -1,75 +1,74 @@
 ﻿using System;
 using System.Configuration;
 
-namespace RailwayWebBuilderCore.Services
+namespace RailwayWebBuilderCore.Services;
+
+public class SettingService
 {
-    public class SettingService
+    public SettingService()
     {
-        public SettingService()
+        ReadAllSettings();
+        GoogleMapKey = ReadSetting("GoogleMapKey");
+    }
+
+    public static SettingService GetSetting
+    {
+        get
         {
-            ReadAllSettings();
-            GoogleMapKey = ReadSetting("GoogleMapKey");
+            return ServiceLocator.Instance.GetService<SettingService>();
         }
+    }
 
-        public static SettingService GetSetting
+    public string GoogleMapKey { get; private set; }
+
+    private static void ReadAllSettings()
+    {
+        try
         {
-            get
+            // Get the configuration file.
+            var config =
+                ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            // Get the appSettings section.
+            AppSettingsSection appSettings =
+                (AppSettingsSection)config.GetSection("appSettings");
+
+            // Get the auxiliary file name.
+            Console.WriteLine("Auxiliary file: {0}", config.AppSettings.File);
+
+            // Get the settings collection (key/value pairs).
+            if (appSettings.Settings.Count != 0)
             {
-                return ServiceLocator.Instance.GetService<SettingService>();
-            }
-        }
-
-        public string GoogleMapKey { get; private set; }
-
-        private static void ReadAllSettings()
-        {
-            try
-            {
-                // Get the configuration file.
-                var config =
-                    ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-                // Get the appSettings section.
-                AppSettingsSection appSettings =
-                    (AppSettingsSection)config.GetSection("appSettings");
-
-                // Get the auxiliary file name.
-                Console.WriteLine("Auxiliary file: {0}", config.AppSettings.File);
-
-                // Get the settings collection (key/value pairs).
-                if (appSettings.Settings.Count != 0)
+                foreach (string key in appSettings.Settings.AllKeys)
                 {
-                    foreach (string key in appSettings.Settings.AllKeys)
-                    {
-                        string value = appSettings.Settings[key].Value;
-                        Console.WriteLine("Key: {0} Value: {1}", key, value);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("The appSettings section is empty. Write first.");
+                    string value = appSettings.Settings[key].Value;
+                    Console.WriteLine("Key: {0} Value: {1}", key, value);
                 }
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine("Exception raised: {0}",
-                    e.Message);
+                Console.WriteLine("The appSettings section is empty. Write first.");
             }
         }
-
-        private static string ReadSetting(string key)
+        catch (Exception e)
         {
-            try
-            {
-                var appSettings = ConfigurationManager.AppSettings;
-                string result = appSettings[key] ?? "Not Found";
-                return result;
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Error reading app settings");
-            }
-            return null;
+            Console.WriteLine("Exception raised: {0}",
+                e.Message);
         }
+    }
+
+    private static string ReadSetting(string key)
+    {
+        try
+        {
+            var appSettings = ConfigurationManager.AppSettings;
+            string result = appSettings[key] ?? "Not Found";
+            return result;
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Error reading app settings");
+        }
+        return null;
     }
 }

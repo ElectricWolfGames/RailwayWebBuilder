@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class FallMill : LayoutBase
 {
-    internal class FallMill : LayoutBase
+    public FallMill()
     {
-        public FallMill()
-        {
-            Name = LayoutNamesEnums.FallMill;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.FallMill;
+        Owner = "";
+        Description = "";
     }
 }

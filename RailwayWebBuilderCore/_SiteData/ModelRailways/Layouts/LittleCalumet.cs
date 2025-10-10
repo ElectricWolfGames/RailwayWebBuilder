@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LittleCalumet : LayoutBase
 {
-    internal class LittleCalumet : LayoutBase
+    public LittleCalumet()
     {
-        public LittleCalumet()
-        {
-            Name = LayoutNamesEnums.LittleCalumet;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.LittleCalumet;
+        Owner = "";
+        Description = "";
     }
 }

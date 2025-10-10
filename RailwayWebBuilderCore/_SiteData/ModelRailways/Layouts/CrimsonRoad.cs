@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CrimsonRoad : LayoutBase
 {
-    internal class CrimsonRoad : LayoutBase
+    public CrimsonRoad()
     {
-        public CrimsonRoad()
-        {
-            Name = LayoutNamesEnums.CrimsonRoad;
-            Owner = "";
-            Description = "";  // TODO CrimsonRoad Needs description
-        }
+        Name = LayoutNamesEnums.CrimsonRoad;
+        Owner = "";
+        Description = "";  // TODO CrimsonRoad Needs description
     }
 }

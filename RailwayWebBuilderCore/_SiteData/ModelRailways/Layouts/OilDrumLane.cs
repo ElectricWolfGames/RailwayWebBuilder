@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class OilDrumLane : LayoutBase
 {
-    internal class OilDrumLane : LayoutBase
+    public OilDrumLane()
     {
-        public OilDrumLane()
-        {
-            Name = LayoutNamesEnums.OilDrumLane;
-            Owner = "";
-            Description = "";  // TODO OilDrumLane Needs description
-        }
+        Name = LayoutNamesEnums.OilDrumLane;
+        Owner = "";
+        Description = "";  // TODO OilDrumLane Needs description
     }
 }

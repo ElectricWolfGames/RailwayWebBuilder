@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class AyleettEnd : LayoutBase
 {
-    internal class AyleettEnd : LayoutBase
+    public AyleettEnd()
     {
-        public AyleettEnd()
-        {
-            Name = LayoutNamesEnums.AyleettEnd;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.AyleettEnd;
+        Owner = "";
+        Description = "";
     }
 }

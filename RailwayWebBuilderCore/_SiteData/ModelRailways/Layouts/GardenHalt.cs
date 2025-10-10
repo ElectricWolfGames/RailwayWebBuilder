@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GardenHalt : LayoutBase
 {
-    internal class GardenHalt : LayoutBase
+    public GardenHalt()
     {
-        public GardenHalt()
-        {
-            Name = LayoutNamesEnums.GardenHalt;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.GardenHalt;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PassageLaneTMD : LayoutBase
 {
-    internal class PassageLaneTMD : LayoutBase
+    public PassageLaneTMD()
     {
-        public PassageLaneTMD()
-        {
-            Name = LayoutNamesEnums.PassageLaneTMD;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.PassageLaneTMD;
+        Owner = "";
+        Description = "";
     }
 }

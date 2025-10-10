@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CowleyYard : LayoutBase
 {
-    internal class CowleyYard : LayoutBase
+    public CowleyYard()
     {
-        public CowleyYard()
-        {
-            Name = LayoutNamesEnums.CowleyYard;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.CowleyYard;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Kaninchenbau : LayoutBase
 {
-    internal class Kaninchenbau : LayoutBase
+    public Kaninchenbau()
     {
-        public Kaninchenbau()
-        {
-            Name = LayoutNamesEnums.Kaninchenbau;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Kaninchenbau;
+        Owner = "";
+        Description = "";
     }
 }

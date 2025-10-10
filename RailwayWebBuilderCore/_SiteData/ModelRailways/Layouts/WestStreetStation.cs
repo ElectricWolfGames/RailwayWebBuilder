@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WestStreetStation : LayoutBase
 {
-    internal class WestStreetStation : LayoutBase
+    public WestStreetStation()
     {
-        public WestStreetStation()
-        {
-            Name = LayoutNamesEnums.WestStreetStation;
-            Owner = "";
-            Description = "";  // TODO WestStreetStation Needs description
-        }
+        Name = LayoutNamesEnums.WestStreetStation;
+        Owner = "";
+        Description = "";  // TODO WestStreetStation Needs description
     }
 }

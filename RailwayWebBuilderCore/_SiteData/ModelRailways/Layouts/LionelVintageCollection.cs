@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class LionelVintageCollection : LayoutBase
 {
-    internal class LionelVintageCollection : LayoutBase
+    public LionelVintageCollection()
     {
-        public LionelVintageCollection()
-        {
-            Name = LayoutNamesEnums.LionelVintageCollection;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.LionelVintageCollection;
+        Owner = "";
+        Description = "";
     }
 }

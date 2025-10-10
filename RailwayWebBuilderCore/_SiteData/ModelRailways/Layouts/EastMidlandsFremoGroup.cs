@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class EastMidlandsFremoGroup : LayoutBase
 {
-    internal class EastMidlandsFremoGroup : LayoutBase
+    public EastMidlandsFremoGroup()
     {
-        public EastMidlandsFremoGroup()
-        {
-            Name = LayoutNamesEnums.EastMidlandsFremoGroup;
-            Owner = "";
-            Description = "";  // TODO EastMidlandsFremoGroup Needs description
-        }
+        Name = LayoutNamesEnums.EastMidlandsFremoGroup;
+        Owner = "";
+        Description = "";  // TODO EastMidlandsFremoGroup Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class MerstoneandVentnor : LayoutBase
 {
-    internal class MerstoneandVentnor : LayoutBase
+    public MerstoneandVentnor()
     {
-        public MerstoneandVentnor()
-        {
-            Name = LayoutNamesEnums.MerstoneandVentnor;
-            Owner = "";
-            Description = "";  // TODO MerstoneandVentnor Needs description
-        }
+        Name = LayoutNamesEnums.MerstoneandVentnor;
+        Owner = "";
+        Description = "";  // TODO MerstoneandVentnor Needs description
     }
 }

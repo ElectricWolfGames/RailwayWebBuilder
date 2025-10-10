@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class DovingtonCamp : LayoutBase
 {
-    internal class DovingtonCamp : LayoutBase
+    public DovingtonCamp()
     {
-        public DovingtonCamp()
-        {
-            Name = LayoutNamesEnums.DovingtonCamp;
-            Owner = "";
-            Description = "";  // TODO DovingtonCamp Needs description
-        }
+        Name = LayoutNamesEnums.DovingtonCamp;
+        Owner = "";
+        Description = "";  // TODO DovingtonCamp Needs description
     }
 }

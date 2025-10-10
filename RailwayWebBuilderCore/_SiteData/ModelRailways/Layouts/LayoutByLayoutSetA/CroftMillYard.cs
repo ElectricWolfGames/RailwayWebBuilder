@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class CroftMillYard : LayoutBase, ILayoutByLayoutSetA
 {
-    internal class CroftMillYard : LayoutBase, ILayoutByLayoutSetA
+    public CroftMillYard()
     {
-        public CroftMillYard()
-        {
-            Name = LayoutNamesEnums.CroftMillWharf;
-            Owner = "Ian Atkinson";
-            Description = "";
-            LayoutByLayoutVideo = "";
-        }
+        Name = LayoutNamesEnums.CroftMillWharf;
+        Owner = "Ian Atkinson";
+        Description = "";
+        LayoutByLayoutVideo = "";
     }
 }

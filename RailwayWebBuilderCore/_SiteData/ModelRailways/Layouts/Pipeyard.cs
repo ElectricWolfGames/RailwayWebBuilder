@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Pipeyard : LayoutBase
 {
-    internal class Pipeyard : LayoutBase
+    public Pipeyard()
     {
-        public Pipeyard()
-        {
-            Name = LayoutNamesEnums.Pipeyard;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Pipeyard;
+        Owner = "";
+        Description = "";
     }
 }

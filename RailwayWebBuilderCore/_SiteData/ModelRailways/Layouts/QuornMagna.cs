@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class QuornMagna : LayoutBase
 {
-    internal class QuornMagna : LayoutBase
+    public QuornMagna()
     {
-        public QuornMagna()
-        {
-            Name = LayoutNamesEnums.QuornMagna;
-            Owner = "";
-            Description = "";  // TODO QuornMagna Needs description
-        }
+        Name = LayoutNamesEnums.QuornMagna;
+        Owner = "";
+        Description = "";  // TODO QuornMagna Needs description
     }
 }

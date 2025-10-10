@@ -1,14 +1,13 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HillportGoods : LayoutBase
 {
-    internal class HillportGoods : LayoutBase
+    public HillportGoods()
     {
-        public HillportGoods()
-        {
-            Name = LayoutNamesEnums.HillportGoods;
-            Owner = "Stephen Farmer";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.HillportGoods;
+        Owner = "Stephen Farmer";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class RavensRavine : LayoutBase
 {
-    internal class RavensRavine : LayoutBase
+    public RavensRavine()
     {
-        public RavensRavine()
-        {
-            Name = LayoutNamesEnums.RavensRavine;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.RavensRavine;
+        Owner = "";
+        Description = "";
     }
 }

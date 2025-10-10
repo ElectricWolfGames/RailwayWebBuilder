@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WadsleyBridge : LayoutBase
 {
-    internal class WadsleyBridge : LayoutBase
+    public WadsleyBridge()
     {
-        public WadsleyBridge()
-        {
-            Name = LayoutNamesEnums.WadsleyBridge;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.WadsleyBridge;
+        Owner = "";
+        Description = "";
     }
 }

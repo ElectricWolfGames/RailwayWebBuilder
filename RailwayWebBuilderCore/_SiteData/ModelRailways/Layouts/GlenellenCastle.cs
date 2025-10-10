@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GlenellenCastle : LayoutBase
 {
-    internal class GlenellenCastle : LayoutBase
+    public GlenellenCastle()
     {
-        public GlenellenCastle()
-        {
-            Name = LayoutNamesEnums.GlenellenCastle;
-            Owner = "";
-            Description = "";  // TODO GlenellenCastle Needs description
-        }
+        Name = LayoutNamesEnums.GlenellenCastle;
+        Owner = "";
+        Description = "";  // TODO GlenellenCastle Needs description
     }
 }

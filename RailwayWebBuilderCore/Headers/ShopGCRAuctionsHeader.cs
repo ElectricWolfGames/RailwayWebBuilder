@@ -1,22 +1,21 @@
 ﻿using eWolfBootstrap.Interfaces;
 using System.Collections.Generic;
 
-namespace RailwayWebBuilderCore.Headers
+namespace RailwayWebBuilderCore.Headers;
+
+public class ShopGCRAuctionsHeader : HeaderBase, IPageHeader
 {
-    public class ShopGCRAuctionsHeader : HeaderBase, IPageHeader
+    public ShopGCRAuctionsHeader()
     {
-        public ShopGCRAuctionsHeader()
+        Title = "GCR Auctions Reunification";
+        Keywords = new List<string>
         {
-            Title = "GCR Auctions Reunification";
-            Keywords = new List<string>
-            {
-                "Auctions",
-                "Train Painting",
-                "LMS Princess Coronation Class No. 46229 Duchess Of Hamilton",
-                "Terence Cuneo",
-                "46229 Duchess Of Hamilton",
-            };
-            Description = "GCR Reunification Auctions";
-        }
+            "Auctions",
+            "Train Painting",
+            "LMS Princess Coronation Class No. 46229 Duchess Of Hamilton",
+            "Terence Cuneo",
+            "46229 Duchess Of Hamilton",
+        };
+        Description = "GCR Reunification Auctions";
     }
 }

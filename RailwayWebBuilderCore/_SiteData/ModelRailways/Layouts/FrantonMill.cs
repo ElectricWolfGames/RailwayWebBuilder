@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class FrantonMill : LayoutBase
 {
-    internal class FrantonMill : LayoutBase
+    public FrantonMill()
     {
-        public FrantonMill()
-        {
-            Name = LayoutNamesEnums.FrantonMill;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.FrantonMill;
+        Owner = "";
+        Description = "";
     }
 }

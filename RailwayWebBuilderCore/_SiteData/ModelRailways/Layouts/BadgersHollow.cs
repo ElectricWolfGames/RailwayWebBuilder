@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class BadgersHollow : LayoutBase
 {
-    internal class BadgersHollow : LayoutBase
+    public BadgersHollow()
     {
-        public BadgersHollow()
-        {
-            Name = LayoutNamesEnums.BadgersHollow;
-            Owner = "";
-            Description = "";  // TODO BadgersHollow Needs description
-        }
+        Name = LayoutNamesEnums.BadgersHollow;
+        Owner = "";
+        Description = "";  // TODO BadgersHollow Needs description
     }
 }

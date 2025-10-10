@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class HartleyPoole : LayoutBase
 {
-    internal class HartleyPoole : LayoutBase
+    public HartleyPoole()
     {
-        public HartleyPoole()
-        {
-            Name = LayoutNamesEnums.HartleyPoole;
-            Owner = "";
-            Description = "";  // TODO HartleyPoole Needs description
-        }
+        Name = LayoutNamesEnums.HartleyPoole;
+        Owner = "";
+        Description = "";  // TODO HartleyPoole Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Halland : LayoutBase
 {
-    internal class Halland : LayoutBase
+    public Halland()
     {
-        public Halland()
-        {
-            Name = LayoutNamesEnums.Halland;
-            Owner = "";
-            Description = "";  // TODO Halland Needs description
-        }
+        Name = LayoutNamesEnums.Halland;
+        Owner = "";
+        Description = "";  // TODO Halland Needs description
     }
 }

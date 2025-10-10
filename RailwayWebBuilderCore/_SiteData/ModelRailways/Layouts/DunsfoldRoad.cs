@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class DunsfoldRoad : LayoutBase
 {
-    internal class DunsfoldRoad : LayoutBase
+    public DunsfoldRoad()
     {
-        public DunsfoldRoad()
-        {
-            Name = LayoutNamesEnums.DunsfoldRoad;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.DunsfoldRoad;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,15 +1,14 @@
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class EuDepot : LayoutBase, ILayoutByLayoutSetB
 {
-    internal class EuDepot : LayoutBase, ILayoutByLayoutSetB
+    public EuDepot()
     {
-        public EuDepot()
-        {
-            Name = LayoutNamesEnums.EuDepot;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.EuDepot;
+        Owner = "";
+        Description = "";
     }
 }

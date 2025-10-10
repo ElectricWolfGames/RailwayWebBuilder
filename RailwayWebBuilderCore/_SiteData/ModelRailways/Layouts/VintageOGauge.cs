@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class VintageOGauge : LayoutBase
 {
-    internal class VintageOGauge : LayoutBase
+    public VintageOGauge()
     {
-        public VintageOGauge()
-        {
-            Name = LayoutNamesEnums.VintageOGauge;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.VintageOGauge;
+        Owner = "";
+        Description = "";
     }
 }

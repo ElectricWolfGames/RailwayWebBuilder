@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PoplarSidings : LayoutBase
 {
-    internal class PoplarSidings : LayoutBase
+    public PoplarSidings()
     {
-        public PoplarSidings()
-        {
-            Name = LayoutNamesEnums.PoplarSidings;
-            Owner = "";
-            Description = "";  // TODO PoplarSidings Needs description
-        }
+        Name = LayoutNamesEnums.PoplarSidings;
+        Owner = "";
+        Description = "";  // TODO PoplarSidings Needs description
     }
 }

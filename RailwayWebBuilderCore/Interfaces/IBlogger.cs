@@ -1,7 +1,6 @@
-﻿namespace RailwayWebBuilderCore.Interfaces
+﻿namespace RailwayWebBuilderCore.Interfaces;
+
+public interface IBlogger
 {
-    public interface IBlogger
-    {
-        IBlog GetBlog();
-    }
+    IBlog GetBlog();
 }

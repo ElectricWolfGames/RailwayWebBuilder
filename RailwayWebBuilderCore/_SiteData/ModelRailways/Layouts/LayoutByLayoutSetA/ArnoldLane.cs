@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts.LayoutByLayoutSetA;
+
+internal class ArnoldLane : LayoutBase, ILayoutByLayoutSetA
 {
-    internal class ArnoldLane : LayoutBase, ILayoutByLayoutSetA
+    public ArnoldLane()
     {
-        public ArnoldLane()
-        {
-            Name = LayoutNamesEnums.ArnoldLane;
-            Owner = "Pauline Mckenna";
-            Description = "";
-            LayoutByLayoutVideo = "https://youtu.be/2KdK28yvDqs";
-        }
+        Name = LayoutNamesEnums.ArnoldLane;
+        Owner = "Pauline Mckenna";
+        Description = "";
+        LayoutByLayoutVideo = "https://youtu.be/2KdK28yvDqs";
     }
 }

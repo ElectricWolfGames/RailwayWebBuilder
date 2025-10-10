@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class PortWilliamTrebarwithQuarry : LayoutBase
 {
-    internal class PortWilliamTrebarwithQuarry : LayoutBase
+    public PortWilliamTrebarwithQuarry()
     {
-        public PortWilliamTrebarwithQuarry()
-        {
-            Name = LayoutNamesEnums.PortWilliamTrebarwithQuarry;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.PortWilliamTrebarwithQuarry;
+        Owner = "";
+        Description = "";
     }
 }

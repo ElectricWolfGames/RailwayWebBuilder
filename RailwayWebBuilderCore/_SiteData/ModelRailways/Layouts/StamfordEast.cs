@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class StamfordEast : LayoutBase
 {
-    internal class StamfordEast : LayoutBase
+    public StamfordEast()
     {
-        public StamfordEast()
-        {
-            Name = LayoutNamesEnums.StamfordEast;
-            Owner = "";
-            Description = "";  // TODO StamfordEast Needs description
-        }
+        Name = LayoutNamesEnums.StamfordEast;
+        Owner = "";
+        Description = "";  // TODO StamfordEast Needs description
     }
 }

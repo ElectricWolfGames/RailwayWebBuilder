@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ModularLayoutNCMA : LayoutBase
 {
-    internal class ModularLayoutNCMA : LayoutBase
+    public ModularLayoutNCMA()
     {
-        public ModularLayoutNCMA()
-        {
-            Name = LayoutNamesEnums.ModularLayoutNCMA;
-            Owner = "";
-            Description = "";  // TODO ModularLayoutNCMA Needs description
-        }
+        Name = LayoutNamesEnums.ModularLayoutNCMA;
+        Owner = "";
+        Description = "";  // TODO ModularLayoutNCMA Needs description
     }
 }

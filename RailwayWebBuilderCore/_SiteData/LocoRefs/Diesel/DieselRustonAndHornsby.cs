@@ -1,21 +1,20 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel
+namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
+
+public class DieselRustonAndHornsby : DieselClassBase
 {
-    public class DieselRustonAndHornsby : DieselClassBase
+    public DieselRustonAndHornsby()
     {
-        public DieselRustonAndHornsby()
-        {
-            ClassName = "Ruston And Hornsby";
-            StockType = StockTypes.Diesel;
+        ClassName = "Ruston And Hornsby";
+        StockType = StockTypes.Diesel;
 
-            Paragraph1 = "";
-            Paragraph2 = "";
-            Paragraph3 = "";
+        Paragraph1 = "";
+        Paragraph2 = "";
+        Paragraph3 = "";
 
-            LocoNumbers.AddRange(new[] {
-                new LocoDetails("319290", "Iris"),
-                });
-        }
+        LocoNumbers.AddRange(new[] {
+            new LocoDetails("319290", "Iris"),
+            });
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class WorldsWay : LayoutBase
 {
-    internal class WorldsWay : LayoutBase
+    public WorldsWay()
     {
-        public WorldsWay()
-        {
-            Name = LayoutNamesEnums.WorldsWay;
-            Owner = "";
-            Description = "";  // TODO WorldsWay Needs description
-        }
+        Name = LayoutNamesEnums.WorldsWay;
+        Owner = "";
+        Description = "";  // TODO WorldsWay Needs description
     }
 }

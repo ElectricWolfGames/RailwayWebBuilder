@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class IngleberryEnd : LayoutBase
 {
-    internal class IngleberryEnd : LayoutBase
+    public IngleberryEnd()
     {
-        public IngleberryEnd()
-        {
-            Name = LayoutNamesEnums.IngleberryEnd;
-            Owner = "";
-            Description = "";  // TODO IngleberryEnd Needs description
-        }
+        Name = LayoutNamesEnums.IngleberryEnd;
+        Owner = "";
+        Description = "";  // TODO IngleberryEnd Needs description
     }
 }

@@ -11,168 +11,167 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout
+namespace RailwayWebBuilderCore._Site.Railways.LayoutByLayout;
+
+[PageTitle("index.html")]
+[Navigation(NavigationTypes.Main, 1)]
+internal class AllLayouts : PageDetails
 {
-    [PageTitle("index.html")]
-    [Navigation(NavigationTypes.Main, 1)]
-    internal class AllLayouts : PageDetails
+    public AllLayouts()
     {
-        public AllLayouts()
+        WebPage = new WebPage(this);
+        DisplayTitle = "Layout By Layouts";
+        MenuTitle = "Layout By Layout";
+    }
+
+    public string CreateLayoutbyLayoutHero(int usableLayouts)
+    {
+        HTMLBuilder pageBuilder = new();
+        pageBuilder.Jumbotron($"{usableLayouts} {DisplayTitle}", string.Empty);
+        return pageBuilder.Output();
+    }
+
+    public override void CreatePage()
+    {
+        var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
+        var meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
+
+        var meh = new ModelEventsHeader();
+
+        var layoutsList = lbls.Layouts;
+        List<ILayoutBase> ordedBlogs = [.. layoutsList.OrderBy(x => x.Name.ToString())];
+        List<ILayoutBase> usableLayouts = new List<ILayoutBase>();
+        for (int index = 0; index < ordedBlogs.Count; index++)
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "Layout By Layouts";
-            MenuTitle = "Layout By Layout";
+            ILayoutBase layout = ordedBlogs[index];
+
+            if (layout.Name == LayoutNamesEnums.None)
+                continue;
+
+            usableLayouts.Add(layout);
         }
 
-        public string CreateLayoutbyLayoutHero(int usableLayouts)
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+        WebPage.StartBody();
+
+        WebPage.Append("<div class='container mt-12'>");
+
+        WebPage.Append("</br>");
+        WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count + 1));
+
+        WebPage.Append("<div class='row mb-2'>");
+
+        for (int index = 0; index < usableLayouts.Count; index++)
         {
-            HTMLBuilder pageBuilder = new();
-            pageBuilder.Jumbotron($"{usableLayouts} {DisplayTitle}", string.Empty);
-            return pageBuilder.Output();
-        }
+            ILayoutBase layout = usableLayouts[index];
 
-        public override void CreatePage()
-        {
-            var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
-            var meds = ServiceLocator.Instance.GetService<ModelEventDetailsServices>();
+            LayoutNamesEnums pre = FindPreviousWithImages(ordedBlogs, index);
 
-            var meh = new ModelEventsHeader();
+            LayoutNamesEnums post = FindNextWithImages(ordedBlogs, index);
 
-            var layoutsList = lbls.Layouts;
-            List<ILayoutBase> ordedBlogs = [.. layoutsList.OrderBy(x => x.Name.ToString())];
-            List<ILayoutBase> usableLayouts = new List<ILayoutBase>();
-            for (int index = 0; index < ordedBlogs.Count; index++)
+            if (layout.Images.Count > 2)
             {
-                ILayoutBase layout = ordedBlogs[index];
-
-                if (layout.Name == LayoutNamesEnums.None)
-                    continue;
-
-                usableLayouts.Add(layout);
-            }
-
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
-            WebPage.StartBody();
-
-            WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.Append("</br>");
-            WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count + 1));
-
-            WebPage.Append("<div class='row mb-2'>");
-
-            for (int index = 0; index < usableLayouts.Count; index++)
-            {
-                ILayoutBase layout = usableLayouts[index];
-
-                LayoutNamesEnums pre = FindPreviousWithImages(ordedBlogs, index);
-
-                LayoutNamesEnums post = FindNextWithImages(ordedBlogs, index);
-
-                if (layout.Images.Count > 2)
-                {
-                    WebPage.Append(CreateBlog(layout));
-                    CreatModelLayoutPage(layout, pre, post);
-                }
-            }
-
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");
-
-            WebPage.EndBody();
-            WebPage.Output();
-        }
-
-        private static string CreateBlog(ILayoutBase layout)
-        {
-            if (layout.Images.Count == 0)
-                return string.Empty;
-
-            StringBuilder sb = new();
-
-            LayoutDetails layoutDetails = new(layout.Name);
-
-            sb.AppendLine("<div class='col-md-6'>");
-            sb.AppendLine("<div class='card border-dark mb-3'>");
-            sb.AppendLine($"<h5 class='card-header'><a href='{layout.Name}.html'>{layoutDetails.Name}</a></h5>");
-            sb.AppendLine("<div class='card-body'>");
-            if (layout.Images.Count > 0)
-            {
-                var filaname = layout.Images[0].Filename;
-                var filanameThumb = layout.Images[0].FilenameThumb;
-                var folder = $"../ModelEvents/{layout.Images[0].Folder}/";
-
-                sb.AppendLine("<Table>");
-                sb.AppendLine("  <tr>");
-                sb.AppendLine("    <td width ='214px'>");
-
-                sb.AppendLine($"<h5><a href='{layout.Name}.html'>{layoutDetails.GaugeName}</a></h5>");
-
-                sb.AppendLine("    </td>");
-                sb.AppendLine("    <td>");
-                sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
-                sb.AppendLine("    </td>");
-                sb.AppendLine("  </tr>");
-                sb.AppendLine("</Table>");
-            }
-
-            sb.AppendLine("</div>");
-            sb.AppendLine("</div>");
-            sb.AppendLine("</div>");
-
-            return sb.ToString();
-        }
-
-        private static void CreatModelLayoutPage(ILayoutBase layout, LayoutNamesEnums pre, LayoutNamesEnums post)
-        {
-            LayoutDetails layoutDetails = new(layout.Name);
-
-            LayoutByLayoutPageDetails cattingtonPageDetails = new()
-            {
-                LayoutByLayoutDetails = layout,
-                DisplayTitle = layoutDetails.Name,
-                MenuTitle = layout.Name.ToString(),
-                LayoutDetails = layoutDetails,
-                Pre = pre,
-                Post = post
-            };
-
-            // need to sort out folder
-            cattingtonPageDetails.CreatePage();
-        }
-
-        private static LayoutNamesEnums FindNextWithImages(List<ILayoutBase> ordedBlogs, int index)
-        {
-            while (true)
-            {
-                if (index == ordedBlogs.Count - 1)
-                    return LayoutNamesEnums.None;
-
-                index++;
-                var item = ordedBlogs[index];
-                if (item.Name == LayoutNamesEnums.None)
-                    continue;
-                if (item.Images.Count > 2)
-                    return item.Name;
+                WebPage.Append(CreateBlog(layout));
+                CreatModelLayoutPage(layout, pre, post);
             }
         }
 
-        private static LayoutNamesEnums FindPreviousWithImages(List<ILayoutBase> ordedBlogs, int index)
+        WebPage.Append("</div>");
+        WebPage.Append("</div>");
+
+        WebPage.EndBody();
+        WebPage.Output();
+    }
+
+    private static string CreateBlog(ILayoutBase layout)
+    {
+        if (layout.Images.Count == 0)
+            return string.Empty;
+
+        StringBuilder sb = new();
+
+        LayoutDetails layoutDetails = new(layout.Name);
+
+        sb.AppendLine("<div class='col-md-6'>");
+        sb.AppendLine("<div class='card border-dark mb-3'>");
+        sb.AppendLine($"<h5 class='card-header'><a href='{layout.Name}.html'>{layoutDetails.Name}</a></h5>");
+        sb.AppendLine("<div class='card-body'>");
+        if (layout.Images.Count > 0)
         {
-            while (true)
-            {
-                if (index == 0)
-                    return LayoutNamesEnums.None;
+            var filaname = layout.Images[0].Filename;
+            var filanameThumb = layout.Images[0].FilenameThumb;
+            var folder = $"../ModelEvents/{layout.Images[0].Folder}/";
 
-                index--;
-                var item = ordedBlogs[index];
-                if (item.Name == LayoutNamesEnums.None)
-                    continue;
+            sb.AppendLine("<Table>");
+            sb.AppendLine("  <tr>");
+            sb.AppendLine("    <td width ='214px'>");
 
-                if (item.Images.Count > 2)
-                    return item.Name;
-            }
+            sb.AppendLine($"<h5><a href='{layout.Name}.html'>{layoutDetails.GaugeName}</a></h5>");
+
+            sb.AppendLine("    </td>");
+            sb.AppendLine("    <td>");
+            sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
+            sb.AppendLine("    </td>");
+            sb.AppendLine("  </tr>");
+            sb.AppendLine("</Table>");
+        }
+
+        sb.AppendLine("</div>");
+        sb.AppendLine("</div>");
+        sb.AppendLine("</div>");
+
+        return sb.ToString();
+    }
+
+    private static void CreatModelLayoutPage(ILayoutBase layout, LayoutNamesEnums pre, LayoutNamesEnums post)
+    {
+        LayoutDetails layoutDetails = new(layout.Name);
+
+        LayoutByLayoutPageDetails cattingtonPageDetails = new()
+        {
+            LayoutByLayoutDetails = layout,
+            DisplayTitle = layoutDetails.Name,
+            MenuTitle = layout.Name.ToString(),
+            LayoutDetails = layoutDetails,
+            Pre = pre,
+            Post = post
+        };
+
+        // need to sort out folder
+        cattingtonPageDetails.CreatePage();
+    }
+
+    private static LayoutNamesEnums FindNextWithImages(List<ILayoutBase> ordedBlogs, int index)
+    {
+        while (true)
+        {
+            if (index == ordedBlogs.Count - 1)
+                return LayoutNamesEnums.None;
+
+            index++;
+            var item = ordedBlogs[index];
+            if (item.Name == LayoutNamesEnums.None)
+                continue;
+            if (item.Images.Count > 2)
+                return item.Name;
+        }
+    }
+
+    private static LayoutNamesEnums FindPreviousWithImages(List<ILayoutBase> ordedBlogs, int index)
+    {
+        while (true)
+        {
+            if (index == 0)
+                return LayoutNamesEnums.None;
+
+            index--;
+            var item = ordedBlogs[index];
+            if (item.Name == LayoutNamesEnums.None)
+                continue;
+
+            if (item.Images.Count > 2)
+                return item.Name;
         }
     }
 }

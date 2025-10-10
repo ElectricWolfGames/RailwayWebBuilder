@@ -1,16 +1,15 @@
 ﻿using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Elmfield : LayoutBase
 {
-    internal class Elmfield : LayoutBase
+    public Elmfield()
     {
-        public Elmfield()
-        {
-            Name = LayoutNamesEnums.Elmfield;
-            Owner = "David Westwood";
-            Description = "Elmfield is a small town in North Worcestershire on the edge of the Black country. The model " +
-                "depicts the station amd exchange sidings in the early 1960's before the Beeching axe removed " +
-                "the passenger services in 1964.";
-        }
+        Name = LayoutNamesEnums.Elmfield;
+        Owner = "David Westwood";
+        Description = "Elmfield is a small town in North Worcestershire on the edge of the Black country. The model " +
+            "depicts the station amd exchange sidings in the early 1960's before the Beeching axe removed " +
+            "the passenger services in 1964.";
     }
 }

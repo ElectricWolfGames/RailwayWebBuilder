@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class BrinkleyTown : LayoutBase
 {
-    internal class BrinkleyTown : LayoutBase
+    public BrinkleyTown()
     {
-        public BrinkleyTown()
-        {
-            Name = LayoutNamesEnums.BrinkleyTown;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.BrinkleyTown;
+        Owner = "";
+        Description = "";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Johannesdorf : LayoutBase
 {
-    internal class Johannesdorf : LayoutBase
+    public Johannesdorf()
     {
-        public Johannesdorf()
-        {
-            Name = LayoutNamesEnums.Johannesdorf;
-            Owner = "";
-            Description = "";  // TODO Johannesdorf Needs description
-        }
+        Name = LayoutNamesEnums.Johannesdorf;
+        Owner = "";
+        Description = "";  // TODO Johannesdorf Needs description
     }
 }

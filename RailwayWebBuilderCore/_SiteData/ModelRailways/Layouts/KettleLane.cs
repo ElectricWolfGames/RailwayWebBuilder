@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class KettleLane : LayoutBase
 {
-    internal class KettleLane : LayoutBase
+    public KettleLane()
     {
-        public KettleLane()
-        {
-            Name = LayoutNamesEnums.KettleLane;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.KettleLane;
+        Owner = "";
+        Description = "";
     }
 }

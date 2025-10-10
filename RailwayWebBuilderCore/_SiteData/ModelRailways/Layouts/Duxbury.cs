@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Duxbury : LayoutBase
 {
-    internal class Duxbury : LayoutBase
+    public Duxbury()
     {
-        public Duxbury()
-        {
-            Name = LayoutNamesEnums.Duxbury;
-            Owner = "";
-            Description = "";  // TODO Duxbury Needs description
-        }
+        Name = LayoutNamesEnums.Duxbury;
+        Owner = "";
+        Description = "";  // TODO Duxbury Needs description
     }
 }

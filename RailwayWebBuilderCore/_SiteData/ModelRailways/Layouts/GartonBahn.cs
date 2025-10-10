@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GartonBahn : LayoutBase
 {
-    internal class GartonBahn : LayoutBase
+    public GartonBahn()
     {
-        public GartonBahn()
-        {
-            Name = LayoutNamesEnums.GartonBahn;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.GartonBahn;
+        Owner = "";
+        Description = "";
     }
 }

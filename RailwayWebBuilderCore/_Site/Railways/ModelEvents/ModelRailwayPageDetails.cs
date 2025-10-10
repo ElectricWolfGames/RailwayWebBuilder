@@ -13,220 +13,219 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace RailwayWebBuilderCore._Site.Railways.ModelEvents
+namespace RailwayWebBuilderCore._Site.Railways.ModelEvents;
+
+[PageTitle("Place holder Page")]
+[Navigation(NavigationTypes.Main, 2)]
+[AddGallery()]
+public class ModelRailwayPageDetails : PageDetails
 {
-    [PageTitle("Place holder Page")]
-    [Navigation(NavigationTypes.Main, 2)]
-    [AddGallery()]
-    public class ModelRailwayPageDetails : PageDetails
+    public IModelEvent ModelEvent;
+
+    public ModelRailwayPageDetails()
     {
-        public IModelEvent ModelEvent;
+        WebPage = new WebPage(this);
+        DisplayTitle = "To update later";
+        MenuTitle = "To update later";
+        DontShowNavigation = true;
+        DontBuildPage = true;
+    }
 
-        public ModelRailwayPageDetails()
+    public override void CreatePage()
+    {
+        WebPage.AddHeader(this, @"../");
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
+        WebPage.StartBody();
+
+        WebPage.Append("<div class='container mt-12'>");
+
+        WebPage.HtmlPath = Constants.ModelEvents + "\\" + ModelEvent.ImageFolder;
+        WebPage.HtmlTitle = $"index.html";
+
+        WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
+        WebPage.SetDontBuild = false;
+
+        if (!string.IsNullOrWhiteSpace(ModelEvent.CreateLayoutFolders))
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "To update later";
-            MenuTitle = "To update later";
-            DontShowNavigation = true;
-            DontBuildPage = true;
-        }
-
-        public override void CreatePage()
-        {
-            WebPage.AddHeader(this, @"../");
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
-            WebPage.StartBody();
-
-            WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.HtmlPath = Constants.ModelEvents + "\\" + ModelEvent.ImageFolder;
-            WebPage.HtmlTitle = $"index.html";
-
-            WebPage.SetRootAddress = RootAddress = @"E:\eWolfSiteUploads\Railways"; // TODO Make this a const!
-            WebPage.SetDontBuild = false;
-
-            if (!string.IsNullOrWhiteSpace(ModelEvent.CreateLayoutFolders))
+            string path = $"{ModelEvent.CreateLayoutFolders}_Layouts";
+            Directory.CreateDirectory(path);
+            foreach (var l in ModelEvent.Layouts)
             {
-                string path = $"{ModelEvent.CreateLayoutFolders}_Layouts";
-                Directory.CreateDirectory(path);
-                foreach (var l in ModelEvent.Layouts)
+                path = $"{ModelEvent.CreateLayoutFolders}{l.Name}";
+                if (!Directory.Exists(path))
                 {
-                    path = $"{ModelEvent.CreateLayoutFolders}{l.Name}";
-                    if (!Directory.Exists(path))
-                    {
-                        Directory.CreateDirectory(path);
-                        path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Images";
-                        Directory.CreateDirectory(path);
-                        path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Videos";
-                        Directory.CreateDirectory(path);
-                    }
+                    Directory.CreateDirectory(path);
+                    path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Images";
+                    Directory.CreateDirectory(path);
+                    path = $"{ModelEvent.CreateLayoutFolders}{l.Name}\\Videos";
+                    Directory.CreateDirectory(path);
                 }
             }
-
-            ModelEvent.CopyLayoutsToKeywords();
-            List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
-            AddImageToLayouts(ModelEvent, images);
-
-            // create folders
-            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents);
-            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder);
-            Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images");
-
-            string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + "\\";
-            string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images";
-
-            WebPage.Append("<div class='container mt-4'>");
-
-            WebPage.Append(Jumbotron(ModelEvent));
-
-            LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
-            ls.AddLocation(ModelEvent);
-
-            WebPage.Append(AddImagesByLayout(images, ModelEvent, htmlpath, imagePath));
-            WebPage.Append("</div>");
-            WebPage.Append(HTMLRailHelper.Modal());
-            WebPage.Append("<script src='../Scripts/script.js'></script>");
-
-            WebPage.EndBody();
-            WebPage.Output();
         }
 
-        private static string AddDescription(Data.LayoutDetails layoutDetails)
+        ModelEvent.CopyLayoutsToKeywords();
+        List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
+        AddImageToLayouts(ModelEvent, images);
+
+        // create folders
+        Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents);
+        Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder);
+        Directory.CreateDirectory(Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images");
+
+        string htmlpath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + "\\";
+        string imagePath = Constants._aRootPath + "\\" + Constants.ModelEvents + "\\" + ModelEvent.ImageFolder + @"\images";
+
+        WebPage.Append("<div class='container mt-4'>");
+
+        WebPage.Append(Jumbotron(ModelEvent));
+
+        LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
+        ls.AddLocation(ModelEvent);
+
+        WebPage.Append(AddImagesByLayout(images, ModelEvent, htmlpath, imagePath));
+        WebPage.Append("</div>");
+        WebPage.Append(HTMLRailHelper.Modal());
+        WebPage.Append("<script src='../Scripts/script.js'></script>");
+
+        WebPage.EndBody();
+        WebPage.Output();
+    }
+
+    private static string AddDescription(Data.LayoutDetails layoutDetails)
+    {
+        ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
+        var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
+
+        if (layout == null)
+            return String.Empty;
+
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.AppendLine("<div class='row'>");
+        stringBuilder.AppendLine("<div class='col-md-12'>");
+
+        stringBuilder.AppendLine(layout.Description);
+        stringBuilder.AppendLine("</br></br>");
+        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
+        return stringBuilder.ToString();
+    }
+
+    private static string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
+    {
+        var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
+
+        HTMLBuilder htmBuilder = new();
+
+        foreach (Data.LayoutDetails layout in pageDetails.Layouts)
         {
-            ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
-            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
+            if (!layout.ImagePaths.Any())
+            {
+                continue;
+            }
 
-            if (layout == null)
-                return String.Empty;
+            HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
 
-            StringBuilder stringBuilder = new();
+            htmBuilder.TextNewLine(AddDescription(layout));
 
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-12'>");
+            htmBuilder.Text("</div>");
+            htmBuilder.Text("<div class='row'>");
 
-            stringBuilder.AppendLine(layout.Description);
-            stringBuilder.AppendLine("</br></br>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            return stringBuilder.ToString();
+            var lbl = lbls.FindLayout(layout.NameEnum);
+            foreach (string layoutImage in layout.ImagePaths)
+            {
+                if (images.Contains(layoutImage))
+                {
+                    ImagesPair ip = HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
+                    if (lbl != null)
+                        lbl.Images.Add(ip);
+
+                    images.Remove(layoutImage);
+                }
+            }
+            HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
         }
 
-        private static string AddImagesByLayout(List<string> images, IModelEvent pageDetails, string htmlpath, string imagePath)
+        if (images.Any())
         {
-            var lbls = ServiceLocator.Instance.GetService<LayoutBaseServices>();
+            HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
 
-            HTMLBuilder htmBuilder = new();
+            foreach (string image in images)
+            {
+                HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
+            }
 
+            HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
+        }
+
+        return htmBuilder.Output();
+    }
+
+    private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
+    {
+        foreach (string imageName in images)
+        {
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
-                if (!layout.ImagePaths.Any())
+                if (layout.Path != null && imageName.Contains(layout.Path, StringComparison.InvariantCultureIgnoreCase))
                 {
-                    continue;
-                }
-
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
-
-                htmBuilder.TextNewLine(AddDescription(layout));
-
-                htmBuilder.Text("</div>");
-                htmBuilder.Text("<div class='row'>");
-
-                var lbl = lbls.FindLayout(layout.NameEnum);
-                foreach (string layoutImage in layout.ImagePaths)
-                {
-                    if (images.Contains(layoutImage))
-                    {
-                        ImagesPair ip = HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, layoutImage);
-                        if (lbl != null)
-                            lbl.Images.Add(ip);
-
-                        images.Remove(layoutImage);
-                    }
-                }
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-            }
-
-            if (images.Any())
-            {
-                HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, null);
-
-                foreach (string image in images)
-                {
-                    HTMLHelper.AddImageToGallery(htmlpath, imagePath, htmBuilder, image);
-                }
-
-                HTMLHelper.Gallery.AddGalleryFooter(htmBuilder);
-            }
-
-            return htmBuilder.Output();
-        }
-
-        private static void AddImageToLayouts(IModelEvent pageDetails, List<string> images)
-        {
-            foreach (string imageName in images)
-            {
-                foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-                {
-                    if (layout.Path != null && imageName.Contains(layout.Path, StringComparison.InvariantCultureIgnoreCase))
-                    {
-                        layout.ImagePaths.Add(imageName);
-                    }
+                    layout.ImagePaths.Add(imageName);
                 }
             }
         }
+    }
 
-        private static string Jumbotron(IModelPageDetails pageDetails)
+    private static string Jumbotron(IModelPageDetails pageDetails)
+    {
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.AppendLine("<div class='jumbotron'>");
+        stringBuilder.AppendLine("<div class='row'>");
+        stringBuilder.AppendLine("<div class='col-md-12'>");
+        stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
+        stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
+        stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
+        stringBuilder.AppendLine($"<p'>{pageDetails.Location?.Address}</p>");
+
+        if (pageDetails.Layouts.Any())
         {
-            StringBuilder stringBuilder = new();
+            // add the extra details.
+            StringBuilder sb = new();
+            sb.Append("<p class='font-weight-bold'>");
+            sb.Append("Featuring layouts.");
+            sb.Append("</p>");
+            sb.Append("<p>");
 
-            stringBuilder.AppendLine("<div class='jumbotron'>");
+            List<string> names = new();
+            foreach (Data.LayoutDetails layout in pageDetails.Layouts)
+            {
+                if (layout.ImagePaths.Any())
+                {
+                    names.Add($"<a href='#{layout.IDName}'>{layout.Name}</a>");
+                }
+            }
+            sb.Append(string.Join(", ", names));
+            sb.Append("</p>");
+            stringBuilder.AppendLine(sb.ToString());
+        }
+
+        stringBuilder.AppendLine("</div>");
+
+        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
+        if (!string.IsNullOrWhiteSpace(pageDetails.YouTubeLink))
+        {
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
-            stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
-            stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
-            stringBuilder.AppendLine($"<p'>{pageDetails.Location?.Address}</p>");
 
-            if (pageDetails.Layouts.Any())
-            {
-                // add the extra details.
-                StringBuilder sb = new();
-                sb.Append("<p class='font-weight-bold'>");
-                sb.Append("Featuring layouts.");
-                sb.Append("</p>");
-                sb.Append("<p>");
-
-                List<string> names = new();
-                foreach (Data.LayoutDetails layout in pageDetails.Layouts)
-                {
-                    if (layout.ImagePaths.Any())
-                    {
-                        names.Add($"<a href='#{layout.IDName}'>{layout.Name}</a>");
-                    }
-                }
-                sb.Append(string.Join(", ", names));
-                sb.Append("</p>");
-                stringBuilder.AppendLine(sb.ToString());
-            }
-
+            stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9'>");
+            stringBuilder.AppendLine($"<iframe src='{pageDetails.YouTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
             stringBuilder.AppendLine("</div>");
 
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
-            if (!string.IsNullOrWhiteSpace(pageDetails.YouTubeLink))
-            {
-                stringBuilder.AppendLine("<div class='row'>");
-                stringBuilder.AppendLine("<div class='col-md-12'>");
-
-                stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9'>");
-                stringBuilder.AppendLine($"<iframe src='{pageDetails.YouTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-                stringBuilder.AppendLine("</div>");
-
-                stringBuilder.AppendLine("</div>");
-                stringBuilder.AppendLine("</div>");
-            }
-
-            return stringBuilder.ToString();
         }
+
+        return stringBuilder.ToString();
     }
 }

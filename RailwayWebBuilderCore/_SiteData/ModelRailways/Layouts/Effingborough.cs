@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Effingborough : LayoutBase
 {
-    internal class Effingborough : LayoutBase
+    public Effingborough()
     {
-        public Effingborough()
-        {
-            Name = LayoutNamesEnums.Effingborough;
-            Owner = "";
-            Description = "";
-        }
+        Name = LayoutNamesEnums.Effingborough;
+        Owner = "";
+        Description = "";
     }
 }

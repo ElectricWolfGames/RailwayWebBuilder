@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class KStreetYard : LayoutBase
 {
-    internal class KStreetYard : LayoutBase
+    public KStreetYard()
     {
-        public KStreetYard()
-        {
-            Name = LayoutNamesEnums.KStreetYard;
-            Owner = "";
-            Description = "";  // TODO KStreetYard Needs description
-        }
+        Name = LayoutNamesEnums.KStreetYard;
+        Owner = "";
+        Description = "";  // TODO KStreetYard Needs description
     }
 }

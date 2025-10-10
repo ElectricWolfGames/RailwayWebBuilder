@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Cucknoe : LayoutBase
 {
-    internal class Cucknoe : LayoutBase
+    public Cucknoe()
     {
-        public Cucknoe()
-        {
-            Name = LayoutNamesEnums.Cucknoe;
-            Owner = "";
-            Description = "";  // TODO Cucknoe Needs description
-        }
+        Name = LayoutNamesEnums.Cucknoe;
+        Owner = "";
+        Description = "";  // TODO Cucknoe Needs description
     }
 }

@@ -1,20 +1,19 @@
 ﻿using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Neuburg : LayoutBase, ILayoutByLayoutSetA
 {
-    internal class Neuburg : LayoutBase, ILayoutByLayoutSetA
+    public Neuburg()
     {
-        public Neuburg()
-        {
-            Name = LayoutNamesEnums.Neuburg;
+        Name = LayoutNamesEnums.Neuburg;
 
-            Owner = "";
-            Description = "Neuburg portrays a small terminus station set in the former East Germany (DDR) in the 1980s, shortly before reunification. </br></br>" +
-                " There is a small industrial complex that provides various types of freight traffic. Passenger traffic is a mix of local and regional trains. </br></br>" +
-                " Motive power is mainly diesel but there is the occasional steam visitor.";
+        Owner = "";
+        Description = "Neuburg portrays a small terminus station set in the former East Germany (DDR) in the 1980s, shortly before reunification. </br></br>" +
+            " There is a small industrial complex that provides various types of freight traffic. Passenger traffic is a mix of local and regional trains. </br></br>" +
+            " Motive power is mainly diesel but there is the occasional steam visitor.";
 
-            LayoutByLayoutVideo = "https://youtu.be/A2fB93yY7HY";
-        }
+        LayoutByLayoutVideo = "https://youtu.be/A2fB93yY7HY";
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class KleineRundfahrt : LayoutBase
 {
-    internal class KleineRundfahrt : LayoutBase
+    public KleineRundfahrt()
     {
-        public KleineRundfahrt()
-        {
-            Name = LayoutNamesEnums.KleineRundfahrt;
-            Owner = "";
-            Description = "";  // TODO KleineRundfahrt Needs description
-        }
+        Name = LayoutNamesEnums.KleineRundfahrt;
+        Owner = "";
+        Description = "";  // TODO KleineRundfahrt Needs description
     }
 }

@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class Arley : LayoutBase
 {
-    internal class Arley : LayoutBase
+    public Arley()
     {
-        public Arley()
-        {
-            Name = LayoutNamesEnums.Arley;
-            Owner = "";
-            Description = "";  // TODO Arley Needs description
-        }
+        Name = LayoutNamesEnums.Arley;
+        Owner = "";
+        Description = "";  // TODO Arley Needs description
     }
 }

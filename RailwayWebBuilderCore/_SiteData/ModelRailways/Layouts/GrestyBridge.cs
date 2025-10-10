@@ -1,14 +1,13 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class GrestyBridge : LayoutBase
 {
-    internal class GrestyBridge : LayoutBase
+    public GrestyBridge()
     {
-        public GrestyBridge()
-        {
-            Name = LayoutNamesEnums.GrestyBridge;
-            Owner = "";
-            Description = "";  // TODO GrestyBridge Needs description
-        }
+        Name = LayoutNamesEnums.GrestyBridge;
+        Owner = "";
+        Description = "";  // TODO GrestyBridge Needs description
     }
 }
