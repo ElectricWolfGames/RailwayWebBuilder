@@ -28,6 +28,7 @@ public class SteamBRStandard4T : SteamClassBase
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("80080"),
+            new LocoDetails("80079"),
             new LocoDetails("80136"),
             });
     }
