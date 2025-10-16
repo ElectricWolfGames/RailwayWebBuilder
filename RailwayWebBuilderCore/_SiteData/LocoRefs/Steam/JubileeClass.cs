@@ -2,10 +2,10 @@
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam;
 
-#warning Need to add description JubileeClass
-
 public class JubileeClass : SteamClassBase
 {
+#warning Need to add description JubileeClass
+
     public JubileeClass()
     {
         ClassName = "Jubilee Class";
