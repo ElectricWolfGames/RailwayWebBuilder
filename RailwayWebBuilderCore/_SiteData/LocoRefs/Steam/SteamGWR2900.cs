@@ -1,5 +1,4 @@
 ﻿using RailwayWebBuilderCore.Enums;
-using static System.Net.WebRequestMethods;
 
 namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam;
 

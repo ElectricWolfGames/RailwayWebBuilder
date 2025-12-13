@@ -1,15 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-
-namespace RailwayWebBuilderCore._SiteData.MyLayouts;
+﻿namespace RailwayWebBuilderCore._SiteData.MyLayouts;
 
 /*public class BuildMyLayoutsPage
 {

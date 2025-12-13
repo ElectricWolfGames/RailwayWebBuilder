@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details;
 
-public abstract partial class LayoutBase : ILayoutPagesDetails
+public abstract class MistyLayoutBase : IMistyPagesDetails
 {
     public bool Active { get; set; } = true;
     public StringBuilder Details { get; set; }

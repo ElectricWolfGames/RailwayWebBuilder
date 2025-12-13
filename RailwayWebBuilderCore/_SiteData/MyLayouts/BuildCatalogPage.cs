@@ -1,14 +1,4 @@
-﻿using eWolfBootstrap.Builders;
-using eWolfBootstrap.Helpers;
-using RailwayWebBuilderCore.Configuration;
-using RailwayWebBuilderCore.Headers;
-using RailwayWebBuilderCore.Helpers;
-using RailwayWebBuilderCore.Interfaces;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
-namespace RailwayWebBuilderCore._SiteData.MyLayouts;
+﻿namespace RailwayWebBuilderCore._SiteData.MyLayouts;
 
 /*public class BuildCatalogPage
 {
