@@ -46,7 +46,7 @@ public class MistyPageDetails : PageDetails
 
         WebPage.Append("</br>");
         WebPage.Append(CreateHero());
-        WebPage.HtmlPath = Constants.MVRLayouts2;
+        WebPage.HtmlPath = Constants.MVRLayouts;
         if (PageIndex == 0)
         {
             WebPage.HtmlTitle = $"index.html";
@@ -124,11 +124,11 @@ public class MistyPageDetails : PageDetails
         string imageHtmlName = "../Others/images/";
 
         HTMLBuilder pageBuilder = new();
-        pageBuilder.JumbotronWithImage("<h1>Cattington</h1>",
-            "<p'>This is our first layout, Hope you enjoy it.</p>",
+        pageBuilder.JumbotronWithImage("<h1>Misty Valley Railway</h1>",
+            "<p'></p>",
             imageName,
             imageHtmlName,
-            "CATTINGTON.png");
+            "MISTY VALLEY RAILWAY.png");
 
         return pageBuilder.Output();
     }
