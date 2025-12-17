@@ -19,7 +19,7 @@ public abstract class MistyLayoutBase : IMistyPagesDetails
     protected void InitDatedPaths()
     {
         Details = new StringBuilder();
-        RawImagePath = Constants.RawDataPath + @$"MyLayout\{When.ToString("yyyy-MM-dd")} {EpisodeNumber}\";
+        RawImagePath = Constants.RawDataPath + @$"{Constants.MVRLayouts}\{When.ToString("yyyy-MM-dd")} {EpisodeNumber}\";
         ExportImagePath = Constants.FullMyLayouts + $"images\\{When.ToString("yyyyMMdd")}\\";
     }
 }
