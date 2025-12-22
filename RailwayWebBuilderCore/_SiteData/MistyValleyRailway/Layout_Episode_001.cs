@@ -34,8 +34,8 @@ public class Layout_Episode_001 : MistyLayoutBase, IBlogger
             Name = $"The Misty Valley Railway {EpisodeNumber}",
             Date = When,
             Link = $"{Constants.MVRLayouts}/index.html",
-            Paragraph = "Named",
-            KeyImage = $@"MVRLayouts\images\{When.ToString("yyyyMMdd")}\IMG_8488-thumb.JPG",
+            Paragraph = "The Misty Valley Railway is named!",
+            KeyImage = $@"{Constants.MVRLayouts}\images\{When.ToString("yyyyMMdd")}\Whats-app-Image-2025-12-19-at-16.50.11---b.jpeg",
         };
     }
 }
