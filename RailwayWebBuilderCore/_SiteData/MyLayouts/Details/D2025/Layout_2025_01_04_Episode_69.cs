@@ -2,7 +2,7 @@
 using RailwayWebBuilderCore.Interfaces;
 using System;
 
-namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details;
+namespace RailwayWebBuilderCore._SiteData.MyLayouts.Details.D2025;
 
 public class Layout_2025_01_04_Episode_69 : LayoutBase, IBlogger
 {

@@ -112,7 +112,7 @@ public class MistyPageDetails : PageDetails
         if (!string.IsNullOrWhiteSpace(detail.ExportImagePath))
         {
             Directory.CreateDirectory(detail.ExportImagePath);
-            pageBuilder.AddImagesGroupedByDate(Constants.FullMyLayouts, detail.ExportImagePath, detail.RawImagePath);
+            pageBuilder.AddImagesGroupedByDate(Constants.FullMVRLayouts, detail.ExportImagePath, detail.RawImagePath);
         }
 
         return pageBuilder.Output();

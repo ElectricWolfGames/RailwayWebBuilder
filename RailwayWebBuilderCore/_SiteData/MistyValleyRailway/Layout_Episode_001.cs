@@ -24,7 +24,7 @@ public class Layout_Episode_001 : MistyLayoutBase, IBlogger
         Details.Append("<p>I've started to replace the tempary wooden supports with cut wood.</p>");
 
         Details.Append("</br>");
-        YouTubeLink = "https://youtu.be/NjXjlw-5p0s";
+        YouTubeLink = "NjXjlw-5p0s";
     }
 
     public IBlog GetBlog()
