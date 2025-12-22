@@ -20,6 +20,6 @@ public abstract class MistyLayoutBase : IMistyPagesDetails
     {
         Details = new StringBuilder();
         RawImagePath = Constants.RawDataPath + @$"{Constants.MVRLayouts}\{When.ToString("yyyy-MM-dd")} {EpisodeNumber}\";
-        ExportImagePath = Constants.FullMyLayouts + $"images\\{When.ToString("yyyyMMdd")}\\";
+        ExportImagePath = Constants.FullMVRLayouts + $"images\\{When.ToString("yyyyMMdd")}\\";
     }
 }
