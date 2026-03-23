@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\GitHub\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
-    <ProjectReference Include="..\..\..\GitHub\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
+    <ProjectReference Include="..\..\GitHub\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
+    <ProjectReference Include="..\..\GitHub\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
   </ItemGroup>
 </Project>
