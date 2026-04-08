@@ -2,27 +2,14 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/packages
-/RailwayWebBuilder/bin/Debug
-/RailwayWebBuilder/obj/Debug
-/.vs/RailwayWebBuilder
-/RailwayWebBuilderCore/bin/Debug/netcoreapp3.1
-/RailwayWebBuilderCore/obj
-/RailwayWebBuilderCore/RailwayWebBuilderCore.csproj.user
-/RailwayWebBuilderCore/App.config
-/RailwayWebBuilderCore/bin/Debug/net5.0-windows
+/*/bin/
+/*/obj/
 /.vs/ProjectEvaluation
-/Helpers/EventsDetailsCreator/bin/Debug/net7.0
+/.vs/RailwayWebBuilder
+/Helpers/EventsDetailsCreator/bin/Debug/
 /Helpers/EventsDetailsCreator/obj
-/RailwayWebBuilderCore/bin/Debug/net6.0-windows
-/LocoDBSync/obj/
-/LocoDBSync/bin/Debug/net8.0
-
-/LocoDBSync/bin/Debug/net8.0-windows
+/Helpers/ThumbnailCreator/bin/Debug/
 /Helpers/ThumbnailCreator/obj
-/Helpers/ThumbnailCreator/bin/Debug/net8.0-windows
-/RailwayWebBuilderCore/bin/Debug/net7.0-windows7.0
-/RailwayWebBuilderCore/bin/Debug/net8.0-windows7.0
-/WikiLocoReader/bin/Debug/net8.0
-/WikiLocoReader/obj
-/RailwayWebBuilderCore/bin/Debug/net9.0-windows7.0
+/RailwayWebBuilderCore/App.config
+/RailwayWebBuilderCore/RailwayWebBuilderCore.csproj.user
+/packages
