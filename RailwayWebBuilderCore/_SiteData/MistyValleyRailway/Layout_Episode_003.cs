@@ -33,7 +33,7 @@ public class Layout_Episode_003 : MistyLayoutBase, IBlogger
             Date = When,
             Link = $"{Constants.MVRLayouts}/index.html",
             Paragraph = "Embankment and Bridges",
-            KeyImage = $@"{Constants.MVRLayouts}\images\{When.ToString("yyyyMMdd")}\IMG_8901.JPG",
+            KeyImage = $@"{Constants.MVRLayouts}\images\{When.ToString("yyyyMMdd")}\IMG_8901-thumb.JPG",
         };
     }
 }

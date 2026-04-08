@@ -36,7 +36,7 @@ public class Layout_Episode_002 : MistyLayoutBase, IBlogger
             Date = When,
             Link = $"{Constants.MVRLayouts}/index.html",
             Paragraph = "Lights, Track and Rolling stock",
-            KeyImage = $@"{Constants.MVRLayouts}\images\{When.ToString("yyyyMMdd")}\IMG_8835.JPG",
+            KeyImage = $@"{Constants.MVRLayouts}\images\{When.ToString("yyyyMMdd")}\IMG_8835-thumb.JPG",
         };
     }
 }

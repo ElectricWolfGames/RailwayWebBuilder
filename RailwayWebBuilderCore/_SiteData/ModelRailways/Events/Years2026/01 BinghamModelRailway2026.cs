@@ -7,6 +7,7 @@ using System;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Years2026;
 
+/*
 public class BinghamModelRailway2026 : ModelEventPageDetails, IBlogger
 {
     public BinghamModelRailway2026()
@@ -41,4 +42,4 @@ public class BinghamModelRailway2026 : ModelEventPageDetails, IBlogger
             ModelEvent = this,
         };
     }
-}
+}*/
