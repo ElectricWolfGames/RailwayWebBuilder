@@ -41,3 +41,29 @@ public class DieselClass25 : DieselClassBase
             });
     }
 }
+
+public class DieselClass26 : DieselClassBase
+{
+    public DieselClass26() // TODO Need to add description
+    {
+        ClassName = "Class 26";
+        StockType = StockTypes.Diesel;
+
+        PowerType = "Diesel-electric";
+        Builder = "";
+        BuildDate = "";
+        TotalProduced = 0;
+
+        Paragraph1 = "";
+        Paragraph2 = "";
+        Paragraph3 = "";
+
+        Keywords.Add("British Rail");
+        Keywords.Add("British Rail Class 26");
+
+        LocoNumbers.AddRange(new[]
+        {
+            new LocoDetails("26043"),
+            });
+    }
+}

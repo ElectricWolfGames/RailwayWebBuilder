@@ -25,6 +25,7 @@ public class DieselClass14 : DieselClassBase
         {
             new LocoDetails("D9551"),
             new LocoDetails("D9555"),
+            new LocoDetails("D9525"),
             });
     }
 }

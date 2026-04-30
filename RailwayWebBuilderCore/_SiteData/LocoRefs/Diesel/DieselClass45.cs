@@ -27,7 +27,6 @@ public class DieselClass45 : DieselClassBase
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D123"),
-            new LocoDetails("43044"),
             new LocoDetails("45105"),
             });
     }
