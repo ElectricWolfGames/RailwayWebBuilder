@@ -13,7 +13,7 @@ internal class RailwaySiteHeader : IPageHeaderDetails
         var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", "")) + extraOffSet;
         _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
         _stringBuilder.Append("	<head>");
-        // AddSiteTracker(_stringBuilder);
+        AddSiteTracker(_stringBuilder);
         _stringBuilder.AppendLine($"<meta charset='UTF-8'>");
         _stringBuilder.AppendLine($"<title>{pageDetails.DisplayTitle}</title>");
         _stringBuilder.AppendLine($"<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
@@ -58,6 +58,6 @@ internal class RailwaySiteHeader : IPageHeaderDetails
 </script>");
 
         // Add the Ad Scene
-        sb.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5100298817928604\"\r\n     crossorigin=\"anonymous\"></script>");
+        // sb.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5100298817928604\"\r\n     crossorigin=\"anonymous\"></script>");
     }
 }
