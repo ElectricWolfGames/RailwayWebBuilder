@@ -1,13 +1,9 @@
 ﻿using RailwayWebBuilderCore._SiteData.ModelRailways.EventLocations;
-using RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
 using RailwayWebBuilderCore.Interfaces;
 using System;
-using System.Text.RegularExpressions;
-using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace RailwayWebBuilderCore._SiteData.ModelRailways.Events.Years2026;
 
