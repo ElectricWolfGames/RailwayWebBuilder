@@ -9,12 +9,14 @@ public class DieselClass07 : DieselClassBase
         ClassName = "Class 07";
         StockType = StockTypes.Diesel;
 
-        PowerType = "";
-        Builder = "";
-        BuildDate = "";
-        TotalProduced = 0;
+        PowerType = "Diesel-electric";
+        Builder = "Ruston & Hornsby";
+        BuildDate = "1962";
+        TotalProduced = 14;
 
-        Paragraph1 = "";
+        Paragraph1 = "The British Rail Class 07 diesel locomotive is an off-centre cab 0-6-0 diesel-electric " +
+            "shunter type built by Ruston & Hornsby in 1962 for the Southern Region of British Railways. " +
+            "The 14 members of the class were primarily used at Southampton Docks and later also at Eastleigh Works.";
         Paragraph2 = "";
         Overview = "";
 

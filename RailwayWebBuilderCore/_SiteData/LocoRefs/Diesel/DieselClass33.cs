@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass33 : DieselClassBase
 {
-    public DieselClass33()
+    public DieselClass33()// TODO Add details
     {
         ClassName = "Class 33";
         StockType = StockTypes.Diesel;

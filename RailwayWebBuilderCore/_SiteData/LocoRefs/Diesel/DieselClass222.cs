@@ -5,7 +5,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 public class DieselClass222 : DieselClassBase
 {
     // TODO: CLass 222 missing paragraphs, Image not tag with number
-    public DieselClass222()
+    public DieselClass222()// TODO Add details
     {
         ClassName = "Class 222";
         StockType = StockTypes.Diesel;

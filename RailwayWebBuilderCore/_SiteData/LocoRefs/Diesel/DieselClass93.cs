@@ -6,7 +6,7 @@ public class DieselClass93 : DieselClassBase
 {
 #warning Need to add description Class 93
 
-    public DieselClass93()
+    public DieselClass93()// TODO Add details
     {
         ClassName = "Class 93";
         StockType = StockTypes.Diesel;

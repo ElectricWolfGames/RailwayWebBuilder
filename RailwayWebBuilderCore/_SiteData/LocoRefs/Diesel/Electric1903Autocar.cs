@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class Electric1903Autocar : DieselClassBase
 {
-    public Electric1903Autocar()
+    public Electric1903Autocar()// TODO Add details
     {
         ClassName = "1903 Autocar";
         StockType = StockTypes.Electric;

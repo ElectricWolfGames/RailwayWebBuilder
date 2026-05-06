@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass82 : DieselClassBase
 {
-    public DieselClass82()
+    public DieselClass82()// TODO Add details
     {
         ClassName = "Class 82";
         ClassDisplayName = "Class 82";

@@ -6,7 +6,7 @@ public partial class DieselClass99 : DieselClassBase
 {
 #warning Need to add description Class 99
 
-    public DieselClass99()
+    public DieselClass99()// TODO Add details
     {
         ClassName = "Class 99";
         StockType = StockTypes.Diesel;
