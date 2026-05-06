@@ -34,7 +34,8 @@ internal class LayoutBaseServices
             int i = 0;
             i++;
 
-            var path = @"E:\Projects\eWolfModelRailwayWeb\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
+            var path = @"E:\Projects\RailwayWebBuilder\RailwayWebBuilderCore\_SiteData\ModelRailways\Layouts\";
+
             string filedata = "using RailwayWebBuilderCore.Enums;" +
                 "namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts" +
                 "{" +
