@@ -1296,5 +1296,29 @@ public enum LayoutNamesEnums
     WittsEnd,
 
     [DescriptionGauge("Martini Junction", Gauges.EM_Gauge)]
-    MartiniJunction
+    MartiniJunction,
+
+    [DescriptionGauge("Kelvin Grove To Thompson Street", Gauges.OO_Gauge)]
+    KelvinGroveToThompsonStreet,
+
+    [DescriptionGauge("Sidsend", Gauges.OO_Gauge)]
+    Sidsend,
+
+    [DescriptionGauge("Shau Kei Wan Tramway", Gauges.OO_Gauge)]
+    ShauKeiWanTramway,
+
+    [DescriptionGauge("Bettws Road", Gauges.N_Gauge)]
+    BettwsRoad,
+
+    [DescriptionGauge("Morton Yard/Hill Farm", Gauges.SM32)]
+    MortonYardHillFarm,
+
+    [DescriptionGauge("Kingsworth", Gauges.OO_Gauge)]
+    Kingsworth,
+
+    [DescriptionGauge("Morton Yard/Hill Farm", Gauges.N_Gauge)]
+    GreenwoodGardenRailway,
+
+    [DescriptionGauge("Spion Kop", Gauges.N_Gauge)]
+    SpionKop,
 }
