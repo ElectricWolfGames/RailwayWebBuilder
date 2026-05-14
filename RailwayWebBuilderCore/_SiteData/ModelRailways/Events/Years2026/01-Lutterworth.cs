@@ -17,7 +17,7 @@ public class Lutterworth2026 : ModelEventPageDetails, IBlogger
         Descrption = "Lutterworth Railway Society Event";
         ImagesPath = Constants.RawDataPath + @"ModelEvents\2026-05-09 Lutterworth";
         TripDate = new DateTime(2026, 05, 09);
-        YouTubeLink = "https://youtu.be/qdZCsXlYt9Y";
+        YouTubeLink = "https://www.youtube.com/embed/qdZCsXlYt9Y";
         ImageFolder = "20260509-Lutterworth";
         Title = "Lutterworth Railway Society Event";
         ImagePreview = "IMG_8963-thumb.JPG";
