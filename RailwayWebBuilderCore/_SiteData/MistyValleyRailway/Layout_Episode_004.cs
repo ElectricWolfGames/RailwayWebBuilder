@@ -17,13 +17,13 @@ public class Layout_Episode_004 : MistyLayoutBase, IBlogger
         InitDatedPaths();
 
         Title = "<h2>004: Embankment and Road | Model Railway Episode 4</h2>";
-        Details.Append("<p>Here Misty Valley railway</p>");
+        Details.Append("<p>Here at Misty Valley railway</p>");
         Details.Append("<p></p>");
         Details.Append("<p>We have updated the corner of the railway with some scenic </p>");
         Details.Append("<p>It's starting to make the layout come to life!</p>");
 
         Details.Append("</br>");
-        YouTubeLink = "";
+        YouTubeLink = "YnBJ_ibf39o";
     }
 
     public IBlog GetBlog()

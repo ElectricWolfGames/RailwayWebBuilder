@@ -17,9 +17,9 @@ public class Layout_Episode_003 : MistyLayoutBase, IBlogger
         InitDatedPaths();
 
         Title = "<h2>003: Embankment and Bridges | Model Railway Episode 3</h2>";
-        Details.Append("<p>Here Misty Valley railway</p>");
+        Details.Append("<p>Here at Misty Valley railway</p>");
         Details.Append("<p></p>");
-        Details.Append("<p>we have a new bridge to show and some work on the Embankment</p>");
+        Details.Append("<p>We have a new bridge to show and some work on the Embankment</p>");
 
         Details.Append("</br>");
         YouTubeLink = "tnANGcHqig8";
