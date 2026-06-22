@@ -2,10 +2,12 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData.LocoRefs;
 using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Helpers;
 using System.IO;
+using System.Text;
 
 namespace RailwayWebBuilderCore._Site.Railways.Locomotives;
 
@@ -36,12 +38,13 @@ public class LocoRefPageDetails : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-4'>");
 
         WebPage.Append(LocoRef.CreateHero(this));
         WebPage.Append(LocoRef.CreateGroups(this, "../"));
 
         WebPage.Append($"<h2>{DieselClassBase.ClassName}: {LocoNumber}</h2>");
+        WebPage.Append(CreateClassInfoPanel());
         WebPage.Append($"<p>{DieselClassBase.Paragraph1}</p>");
         WebPage.Append($"<p>{DieselClassBase.Paragraph2}</p>");
 
@@ -59,6 +62,57 @@ public class LocoRefPageDetails : PageDetails
 
         WebPage.EndBody();
         WebPage.Output();
+    }
+
+    private string CreateClassInfoPanel()
+    {
+        if (DieselClassBase is not ClassBase cb)
+            return string.Empty;
+
+        var sb = new StringBuilder();
+        sb.AppendLine("<div class='card bg-light mb-4'>");
+        sb.AppendLine("<div class='card-body'>");
+        sb.AppendLine("<div class='row'>");
+
+        if (!string.IsNullOrEmpty(cb.Builder))
+        {
+            sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+            sb.AppendLine("<small class='text-muted d-block'>Builder</small>");
+            sb.AppendLine($"<span class='font-weight-bold'>{cb.Builder}</span>");
+            sb.AppendLine("</div>");
+        }
+        if (!string.IsNullOrEmpty(cb.BuildDate))
+        {
+            sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+            sb.AppendLine("<small class='text-muted d-block'>Built</small>");
+            sb.AppendLine($"<span class='font-weight-bold'>{cb.BuildDate}</span>");
+            sb.AppendLine("</div>");
+        }
+        if (cb.TotalProduced > 0)
+        {
+            sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+            sb.AppendLine("<small class='text-muted d-block'>Total Produced</small>");
+            sb.AppendLine($"<span class='font-weight-bold'>{cb.TotalProduced}</span>");
+            sb.AppendLine("</div>");
+        }
+        if (!string.IsNullOrEmpty(cb.PowerType))
+        {
+            sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+            sb.AppendLine("<small class='text-muted d-block'>Power Type</small>");
+            sb.AppendLine($"<span class='font-weight-bold'>{cb.PowerType}</span>");
+            sb.AppendLine("</div>");
+        }
+
+        sb.AppendLine("</div>");
+
+        if (!string.IsNullOrEmpty(cb.WikiLink))
+        {
+            sb.AppendLine($"<a href='{cb.WikiLink}' class='btn btn-sm btn-outline-secondary mt-2' target='_blank'>Wikipedia &rarr;</a>");
+        }
+
+        sb.AppendLine("</div>");
+        sb.AppendLine("</div>");
+        return sb.ToString();
     }
 
     private string CreateGallery()

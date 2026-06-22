@@ -35,28 +35,17 @@ public class LocoRef : PageDetails
     {
         HTMLBuilder pageBuilder = new();
 
-        if (pageDetails.MenuTitle.Contains("Steam"))
-            pageBuilder.Text($"<a href='{offSet}SteamList.html' class='btn btn-info btn-lg'><h1>Steam</h1></a>");
-        else
-            pageBuilder.Text($"<a href='{offSet}SteamList.html' class='btn btn-primary btn-lg'><h1>Steam</h1></a>");
+        string steamActive  = pageDetails.MenuTitle.Contains("Steam")  ? " active" : "";
+        string dieselActive = pageDetails.MenuTitle.Contains("Diesel") ? " active" : "";
+        string wagonsActive = pageDetails.MenuTitle.Contains("Wagon")  ? " active" : "";
+        string coachActive  = pageDetails.MenuTitle.Contains("Coach")  ? " active" : "";
 
-        if (pageDetails.MenuTitle.Contains("Diesel"))
-            pageBuilder.Text($"<a href='{offSet}DieselList.html' class='btn btn-info btn-lg'><h1>Diesel</h1></a>");
-        else
-            pageBuilder.Text($"<a href='{offSet}DieselList.html' class='btn btn-primary btn-lg'><h1>Diesel</h1></a>");
-
-        if (pageDetails.MenuTitle.Contains("Wagon"))
-            pageBuilder.Text($"<a href='{offSet}WagonsList.html' class='btn btn-info btn-lg'><h1>Wagons</h1></a>");
-        else
-            pageBuilder.Text($"<a href='{offSet}WagonsList.html' class='btn btn-primary btn-lg'><h1>Wagons</h1></a>");
-
-        if (pageDetails.MenuTitle.Contains("Coach"))
-            pageBuilder.Text($"<a href='{offSet}CoachesList.html' class='btn btn-info btn-lg'><h1>Coaches</h1></a>");
-        else
-            pageBuilder.Text($"<a href='{offSet}CoachesList.html' class='btn btn-primary btn-lg'><h1>Coaches</h1></a>");
-
-        pageBuilder.NewLine();
-        pageBuilder.NewLine();
+        pageBuilder.Text("<ul class='nav nav-pills nav-fill mb-4'>");
+        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}SteamList.html'   class='nav-link{steamActive}'>Steam</a></li>");
+        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}DieselList.html'  class='nav-link{dieselActive}'>Diesel</a></li>");
+        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}WagonsList.html'  class='nav-link{wagonsActive}'>Wagons</a></li>");
+        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}CoachesList.html' class='nav-link{coachActive}'>Coaches</a></li>");
+        pageBuilder.Text("</ul>");
 
         return pageBuilder.Output();
     }
@@ -96,7 +85,7 @@ public class LocoRef : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-4'>");
 
         WebPage.Append("</br>");
         WebPage.Append(CreateHero(this));

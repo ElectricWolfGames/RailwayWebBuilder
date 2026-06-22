@@ -25,16 +25,11 @@ public class SteamList : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-4'>");
 
-        WebPage.Append("<div class='container mt-12'>");
-
-        WebPage.Append("</br>");
         WebPage.Append(LocoRef.CreateHero(this));
         WebPage.Append(LocoRef.CreateGroups(this, ""));
         WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.SteamLoco));
-
-        WebPage.Append("</div>");
 
         WebPage.Append("</div>");
 

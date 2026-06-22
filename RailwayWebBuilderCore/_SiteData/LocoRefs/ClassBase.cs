@@ -89,13 +89,12 @@ public class ClassBase : IDieselClass, ITypeAndOrigin
 
         path += $"{locoNumber}.html";
 
-        blogHtml.AppendLine("<div class='col-md-4'>");
-        blogHtml.AppendLine("<div class='card border-dark mb-3'>");
-        blogHtml.AppendLine($"<h5 class='card-header'>{locoNumber}</h5>");
-        blogHtml.AppendLine("<div class='card-body'>");
-        blogHtml.AppendLine($"      <a href='{path}'><img class='rounded float-right' width='214px' height ='160px'src='{imagePath}'></a>");
-        blogHtml.AppendLine($"<p class='col-md-4 card-text float-left'></p>");
-        //            blogHtml.AppendLine($"<p class='col-md-2 '><a href='{path}' class='font-weight-bold'>See more</a></p>");
+        blogHtml.AppendLine("<div class='col-6 col-md-4 col-lg-3 mb-4'>");
+        blogHtml.AppendLine("<div class='card h-100 shadow-sm'>");
+        blogHtml.AppendLine($"<img src='{imagePath}' class='card-img-top' alt='{locoNumber}' style='height:160px;object-fit:cover;'>");
+        blogHtml.AppendLine("<div class='card-body d-flex flex-column'>");
+        blogHtml.AppendLine($"<h6 class='card-title font-weight-bold'>{locoNumber}</h6>");
+        blogHtml.AppendLine($"<a href='{path}' class='btn btn-sm btn-outline-primary mt-auto'>View Gallery</a>");
         blogHtml.AppendLine("</div>");
         blogHtml.AppendLine("</div>");
         blogHtml.AppendLine("</div>");
