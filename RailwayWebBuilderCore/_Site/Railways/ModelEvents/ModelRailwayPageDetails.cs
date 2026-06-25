@@ -37,8 +37,6 @@ public class ModelRailwayPageDetails : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
-
         WebPage.HtmlPath = Constants.ModelEvents + "\\" + ModelEvent.ImageFolder;
         WebPage.HtmlTitle = $"index.html";
 
@@ -100,14 +98,7 @@ public class ModelRailwayPageDetails : PageDetails
             return String.Empty;
 
         StringBuilder stringBuilder = new();
-
-        stringBuilder.AppendLine("<div class='row'>");
-        stringBuilder.AppendLine("<div class='col-md-12'>");
-
-        stringBuilder.AppendLine(layout.Description);
-        stringBuilder.AppendLine("</br></br>");
-        stringBuilder.AppendLine("</div>");
-        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine($"<p class='mb-3'>{layout.Description}</p>");
         return stringBuilder.ToString();
     }
 
@@ -179,50 +170,43 @@ public class ModelRailwayPageDetails : PageDetails
     {
         StringBuilder stringBuilder = new();
 
-        stringBuilder.AppendLine("<div class='jumbotron'>");
-        stringBuilder.AppendLine("<div class='row'>");
-        stringBuilder.AppendLine("<div class='col-md-12'>");
-        stringBuilder.AppendLine($"<h1>{pageDetails.Name}</h1>");
-        stringBuilder.AppendLine($"<p'>{pageDetails.EventDates}</p>");
-        stringBuilder.AppendLine($"<p'>{pageDetails.Descrption}</p>");
-        stringBuilder.AppendLine($"<p'>{pageDetails.Location?.Address}</p>");
+        stringBuilder.AppendLine("<div class='card bg-light border-0 mb-4'>");
+        stringBuilder.AppendLine("<div class='card-body'>");
+        stringBuilder.AppendLine($"<h1 class='card-title mb-1'>{pageDetails.Name}</h1>");
+
+        if (!string.IsNullOrWhiteSpace(pageDetails.EventDates))
+            stringBuilder.AppendLine($"<p class='text-muted mb-2'>{pageDetails.EventDates}</p>");
+
+        if (!string.IsNullOrWhiteSpace(pageDetails.Descrption))
+            stringBuilder.AppendLine($"<p class='mb-2'>{pageDetails.Descrption}</p>");
+
+        if (!string.IsNullOrWhiteSpace(pageDetails.Location?.Address))
+            stringBuilder.AppendLine($"<p class='text-muted mb-3'><small>{pageDetails.Location.Address}</small></p>");
 
         if (pageDetails.Layouts.Any())
         {
-            // add the extra details.
-            StringBuilder sb = new();
-            sb.Append("<p class='font-weight-bold'>");
-            sb.Append("Featuring layouts.");
-            sb.Append("</p>");
-            sb.Append("<p>");
-
             List<string> names = new();
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
                 if (layout.ImagePaths.Any())
-                {
                     names.Add($"<a href='#{layout.IDName}'>{layout.Name}</a>");
-                }
             }
-            sb.Append(string.Join(", ", names));
-            sb.Append("</p>");
-            stringBuilder.AppendLine(sb.ToString());
+            if (names.Any())
+            {
+                stringBuilder.AppendLine("<p class='mb-0'>");
+                stringBuilder.AppendLine("<span class='font-weight-bold'>Featuring layouts: </span>");
+                stringBuilder.AppendLine(string.Join(", ", names));
+                stringBuilder.AppendLine("</p>");
+            }
         }
 
         stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
 
-        stringBuilder.AppendLine("</div>");
-        stringBuilder.AppendLine("</div>");
         if (!string.IsNullOrWhiteSpace(pageDetails.YouTubeLink))
         {
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-
-            stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9'>");
+            stringBuilder.AppendLine("<div class='embed-responsive embed-responsive-16by9 mb-4'>");
             stringBuilder.AppendLine($"<iframe src='{pageDetails.YouTubeLink}' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
-            stringBuilder.AppendLine("</div>");
-
-            stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
         }
 

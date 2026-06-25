@@ -37,8 +37,6 @@ public class LayoutByLayoutPageDetails : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
-
         WebPage.HtmlPath = Constants.LayoutByLayout + "/";
         WebPage.HtmlTitle = $"{MenuTitle}.html";
 
@@ -91,15 +89,12 @@ public class LayoutByLayoutPageDetails : PageDetails
     {
         StringBuilder stringBuilder = new();
 
-        stringBuilder.AppendLine("<div class='jumbotron'>");
-        stringBuilder.AppendLine("<div class='row'>");
-        stringBuilder.AppendLine("<div class='col-md-12'>");
-        stringBuilder.AppendLine($"<h1>{DisplayTitle} </h1>");
-        stringBuilder.AppendLine($"<h3>{LayoutDetails.GaugeName}</h3>");
-        stringBuilder.AppendLine("<div class='col-md-12'>");
-        stringBuilder.AppendLine($"<p'>{LayoutByLayoutDetails.Description}</p>");
-        stringBuilder.AppendLine("</div>");
-        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("<div class='card bg-light border-0 mb-4'>");
+        stringBuilder.AppendLine("<div class='card-body'>");
+        stringBuilder.AppendLine($"<h1 class='card-title mb-1'>{DisplayTitle}</h1>");
+        stringBuilder.AppendLine($"<p class='text-muted mb-2'>{LayoutDetails.GaugeName}</p>");
+        if (!string.IsNullOrWhiteSpace(LayoutByLayoutDetails.Description))
+            stringBuilder.AppendLine($"<p class='mb-0'>{LayoutByLayoutDetails.Description}</p>");
         stringBuilder.AppendLine("</div>");
         stringBuilder.AppendLine("</div>");
 
@@ -110,28 +105,25 @@ public class LayoutByLayoutPageDetails : PageDetails
     {
         StringBuilder sb = new();
 
-        var preDetails = new LayoutDetails(Pre);
-        string preButton = $"<a href='{preDetails.NameEnum}.html' class='btn btn-info btn-lg'><h1>{preDetails.Name}</h1></a>";
+        sb.AppendLine("<div class='d-flex justify-content-between mb-4'>");
 
-        var PostDetails = new LayoutDetails(Post);
-        string postButton = $"<a href='{PostDetails.NameEnum}.html' class='float-right btn btn-info btn-lg'><h1>{PostDetails.Name}</h1></a>";
-
-        sb.AppendLine("<Table width ='100%'>");
-        sb.AppendLine("  <tr>");
-        sb.AppendLine("    <td width ='40%'>");
         if (Pre != LayoutNamesEnums.None)
-            sb.AppendLine($"{preButton}");
-        sb.AppendLine("    </td>");
-        sb.AppendLine("    <td width ='20%'>");
-        sb.AppendLine("    </td>");
-        sb.AppendLine("    <td width ='40%'>");
+        {
+            var preDetails = new LayoutDetails(Pre);
+            sb.AppendLine($"<a href='{preDetails.NameEnum}.html' class='btn btn-outline-secondary'>&larr; {preDetails.Name}</a>");
+        }
+        else
+            sb.AppendLine("<span></span>");
+
         if (Post != LayoutNamesEnums.None)
-            sb.AppendLine($"{postButton}");
-        sb.AppendLine("    </td>");
-        sb.AppendLine("  </tr>");
-        sb.AppendLine("</Table>");
-        sb.AppendLine("<br/>");
-        sb.AppendLine("<br/>");
+        {
+            var postDetails = new LayoutDetails(Post);
+            sb.AppendLine($"<a href='{postDetails.NameEnum}.html' class='btn btn-outline-secondary'>{postDetails.Name} &rarr;</a>");
+        }
+        else
+            sb.AppendLine("<span></span>");
+
+        sb.AppendLine("</div>");
         return sb.ToString();
     }
 }

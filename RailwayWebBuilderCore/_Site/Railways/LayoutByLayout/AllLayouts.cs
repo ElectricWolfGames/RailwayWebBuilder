@@ -26,9 +26,13 @@ internal class AllLayouts : PageDetails
 
     public string CreateLayoutbyLayoutHero(int usableLayouts)
     {
-        HTMLBuilder pageBuilder = new();
-        pageBuilder.Jumbotron($"{usableLayouts} {DisplayTitle}", string.Empty);
-        return pageBuilder.Output();
+        StringBuilder sb = new();
+        sb.AppendLine("<div class='card bg-light border-0 mb-4'>");
+        sb.AppendLine("<div class='card-body'>");
+        sb.AppendLine($"<h1 class='card-title'>{usableLayouts} {DisplayTitle}</h1>");
+        sb.AppendLine("</div>");
+        sb.AppendLine("</div>");
+        return sb.ToString();
     }
 
     public override void CreatePage()
@@ -55,12 +59,11 @@ internal class AllLayouts : PageDetails
         WebPage.AddNavigation(NavigationTypes.Main, @"../../");
         WebPage.StartBody();
 
-        WebPage.Append("<div class='container mt-12'>");
+        WebPage.Append("<div class='container mt-4'>");
 
-        WebPage.Append("</br>");
         WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count + 1));
 
-        WebPage.Append("<div class='row mb-2'>");
+        WebPage.Append("<div class='row'>");
 
         for (int index = 0; index < usableLayouts.Count; index++)
         {
@@ -89,34 +92,18 @@ internal class AllLayouts : PageDetails
         if (layout.Images.Count == 0)
             return string.Empty;
 
-        StringBuilder sb = new();
-
         LayoutDetails layoutDetails = new(layout.Name);
+        var filanameThumb = layout.Images[0].FilenameThumb;
+        var folder = $"../ModelEvents/{layout.Images[0].Folder}/";
 
-        sb.AppendLine("<div class='col-md-6'>");
-        sb.AppendLine("<div class='card border-dark mb-3'>");
-        sb.AppendLine($"<h5 class='card-header'><a href='{layout.Name}.html'>{layoutDetails.Name}</a></h5>");
-        sb.AppendLine("<div class='card-body'>");
-        if (layout.Images.Count > 0)
-        {
-            var filaname = layout.Images[0].Filename;
-            var filanameThumb = layout.Images[0].FilenameThumb;
-            var folder = $"../ModelEvents/{layout.Images[0].Folder}/";
-
-            sb.AppendLine("<Table>");
-            sb.AppendLine("  <tr>");
-            sb.AppendLine("    <td width ='214px'>");
-
-            sb.AppendLine($"<h5><a href='{layout.Name}.html'>{layoutDetails.GaugeName}</a></h5>");
-
-            sb.AppendLine("    </td>");
-            sb.AppendLine("    <td>");
-            sb.AppendLine($"      <a href='{layout.Name}.html'><img class='rounded float-right' width='214px' height ='160px'src='{folder}/{filanameThumb}'></a>");
-            sb.AppendLine("    </td>");
-            sb.AppendLine("  </tr>");
-            sb.AppendLine("</Table>");
-        }
-
+        StringBuilder sb = new();
+        sb.AppendLine("<div class='col-6 col-md-4 col-lg-3 mb-4'>");
+        sb.AppendLine("<div class='card h-100 shadow-sm'>");
+        sb.AppendLine($"<a href='{layout.Name}.html'><img src='{folder}/{filanameThumb}' class='card-img-top' alt='{layoutDetails.Name}' style='height:160px;object-fit:cover;'></a>");
+        sb.AppendLine("<div class='card-body d-flex flex-column'>");
+        sb.AppendLine($"<h6 class='card-title font-weight-bold mb-1'>{layoutDetails.Name}</h6>");
+        sb.AppendLine($"<p class='text-muted small mb-3'>{layoutDetails.GaugeName}</p>");
+        sb.AppendLine($"<a href='{layout.Name}.html' class='btn btn-sm btn-outline-primary mt-auto'>View Layout</a>");
         sb.AppendLine("</div>");
         sb.AppendLine("</div>");
         sb.AppendLine("</div>");
