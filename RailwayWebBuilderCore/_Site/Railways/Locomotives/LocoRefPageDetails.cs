@@ -28,6 +28,8 @@ public class LocoRefPageDetails : PageDetails
     public IDieselClass DieselClassBase { get; set; }
     public string GalleryPath { get; set; }
     public string LocoNumber { get; set; }
+    public string NextLocoNumber { get; set; }
+    public string PrevLocoNumber { get; set; }
 
     public override void CreatePage()
     {
@@ -49,6 +51,7 @@ public class LocoRefPageDetails : PageDetails
         WebPage.Append($"<p>{DieselClassBase.Paragraph2}</p>");
 
         WebPage.Append(CreateGallery());
+        WebPage.Append(CreateLocoNavigation());
 
         WebPage.HtmlPath = "Locomotives\\Ref";
         WebPage.HtmlTitle = $"{LocoNumber}.html";
@@ -62,6 +65,25 @@ public class LocoRefPageDetails : PageDetails
 
         WebPage.EndBody();
         WebPage.Output();
+    }
+
+    private string CreateLocoNavigation()
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("<div class='d-flex justify-content-between mt-4 mb-2'>");
+
+        if (!string.IsNullOrEmpty(PrevLocoNumber))
+            sb.AppendLine($"<a href='{PrevLocoNumber}.html' class='btn btn-outline-secondary'>&larr; {PrevLocoNumber}</a>");
+        else
+            sb.AppendLine("<span></span>");
+
+        if (!string.IsNullOrEmpty(NextLocoNumber))
+            sb.AppendLine($"<a href='{NextLocoNumber}.html' class='btn btn-outline-secondary'>{NextLocoNumber} &rarr;</a>");
+        else
+            sb.AppendLine("<span></span>");
+
+        sb.AppendLine("</div>");
+        return sb.ToString();
     }
 
     private string CreateClassInfoPanel()

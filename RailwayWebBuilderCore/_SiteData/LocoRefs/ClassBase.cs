@@ -54,15 +54,20 @@ public class ClassBase : IDieselClass, ITypeAndOrigin
 
     public int PreviewLocos(HTMLBuilder pageBuilder, WebPage webPage)
     {
-        int count = 0;
-        pageBuilder.Text("<div class='row'>");
-        foreach (var tag in LocoNumbers)
-        {
-            var images = GetAllImages(tag.Number, tag.Ignore);
-            count += images.Count();
+        // Pre-filter to only locos that have images so prev/next is accurate
+        var locosWithImages = LocoNumbers
+            .Select(tag => (tag, images: GetAllImages(tag.Number, tag.Ignore)))
+            .Where(x => x.images.Any())
+            .ToList();
 
-            if (!images.Any())
-                continue;
+        int count = locosWithImages.Sum(x => x.images.Count);
+
+        pageBuilder.Text("<div class='row'>");
+        for (int i = 0; i < locosWithImages.Count; i++)
+        {
+            var (tag, images) = locosWithImages[i];
+            string prevNumber = i > 0 ? locosWithImages[i - 1].tag.Number : null;
+            string nextNumber = i < locosWithImages.Count - 1 ? locosWithImages[i + 1].tag.Number : null;
 
             string image = images.First();
             var showImages = images.Where(x => x.Contains("Show"));
@@ -72,8 +77,7 @@ public class ClassBase : IDieselClass, ITypeAndOrigin
             string finalPath = "E:\\eWolfSiteUploads\\Railways\\Locomotives\\Ref\\images\\";
             (string newPath, string newPathThumb) = HTMLHelper.CopyImageUploads(finalPath, image);
 
-            var filename = Path.GetFileName(newPath);
-            CreateLocorefPage(tag.Number, this, webPage);
+            CreateLocorefPage(tag.Number, this, webPage, prevNumber, nextNumber);
 
             newPathThumb = newPathThumb.Replace("E:\\eWolfSiteUploads\\Railways\\Locomotives\\", "");
 
@@ -102,12 +106,14 @@ public class ClassBase : IDieselClass, ITypeAndOrigin
         return blogHtml.ToString();
     }
 
-    private void CreateLocorefPage(string number, ClassBase dieselClassBase, WebPage webPage)
+    private void CreateLocorefPage(string number, ClassBase dieselClassBase, WebPage webPage, string prevNumber, string nextNumber)
     {
         LocoRefPageDetails pageDetails = new();
         pageDetails.DieselClassBase = dieselClassBase;
         pageDetails.MenuTitle = number;
         pageDetails.LocoNumber = number;
+        pageDetails.PrevLocoNumber = prevNumber;
+        pageDetails.NextLocoNumber = nextNumber;
         pageDetails.WebPage.HtmlPath = webPage.HtmlPath + "\\Ref";
         pageDetails.GalleryPath = GetRawImagePath(number);
         pageDetails.CreatePage();
