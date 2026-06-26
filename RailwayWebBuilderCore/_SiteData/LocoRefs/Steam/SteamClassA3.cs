@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Steam;
 
 public class SteamClassA3 : SteamClassBase
 {
-#warning Need to add description Class 99
+#warning Need to add description
 
     public SteamClassA3()
     {
