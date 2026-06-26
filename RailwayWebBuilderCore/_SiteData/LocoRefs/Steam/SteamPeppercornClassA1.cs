@@ -15,6 +15,15 @@ public class SteamPeppercornClassA1 : SteamClassBase
             "60163 is named after the Panavia Tornado, a combat aircraft flown by the Royal Air Force. In 2017," +
             "Tornado became the first steam locomotive to officially reach 100 mph on British tracks for over 50 years.";
 
+        Keywords.Add("Peppercorn A1");
+        Keywords.Add("60163");
+        Keywords.Add("Tornado");
+        Keywords.Add("4-6-2");
+        Keywords.Add("LNER");
+        Keywords.Add("A1 Steam Locomotive Trust");
+        Keywords.Add("new build");
+        Keywords.Add("100 mph");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("60163", "Tornado"),

@@ -9,9 +9,19 @@ public class SteamGWRPannierTank : SteamClassBase
         ClassName = "GWR Pannier";
         StockType = StockTypes.SteamLoco;
 
-        Paragraph1 = "";
-        Paragraph2 = "";
-        Paragraph3 = "";
+        Paragraph1 = "The GWR 1366 Class is a class of 0-6-0 pannier tank steam locomotives designed by Charles Collett for the Great Western Railway. " +
+            "Six locomotives were built at Swindon Works between 1934 and 1936, numbered 1366–1371. " +
+            "Designed specifically for dock shunting and branch line work, their short wheelbase allowed them to negotiate the tight curves found in dockside areas. " +
+            "Examples were notably used at Weymouth Quay and Plymouth Docks.";
+        Paragraph2 = "1369 has been preserved and is based on the South Devon Railway, where it is regularly used on goods and demonstration freight workings.";
+
+        Keywords.Add("GWR Pannier");
+        Keywords.Add("1366 Class");
+        Keywords.Add("Collett");
+        Keywords.Add("0-6-0PT");
+        Keywords.Add("Great Western Railway");
+        Keywords.Add("dock shunting");
+        Keywords.Add("1369");
 
         LocoNumbers.AddRange(new[]
         {

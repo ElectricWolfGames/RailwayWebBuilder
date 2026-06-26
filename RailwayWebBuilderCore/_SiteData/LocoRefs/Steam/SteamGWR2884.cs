@@ -19,6 +19,14 @@ public class SteamGWR2884 : SteamClassBase
             "The locomotive was withdrawn from Bristol Barrow Road depot in August 1965 and reached Barry Scrapyard in October. " +
             "In Summer 2010 the locomotive fleet was ‘one short’ for the summer peak service, resulting in the hire of 3802 from Llangollen";
 
+        Keywords.Add("GWR 2884");
+        Keywords.Add("2-8-0");
+        Keywords.Add("heavy freight");
+        Keywords.Add("Great Western Railway");
+        Keywords.Add("Collett");
+        Keywords.Add("3802");
+        Keywords.Add("3850");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("3802"),

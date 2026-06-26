@@ -18,6 +18,15 @@ public class SteamClassA4 : SteamClassBase
             "Several A4s saw out their remaining days until 1966 in Scotland, particularly on the Aberdeen – Glasgow express trains, " +
             "for which they were used to improve the timing from 3.5 to 3 hours.";
 
+        Keywords.Add("LNER A4");
+        Keywords.Add("Nigel Gresley");
+        Keywords.Add("4-6-2 streamlined");
+        Keywords.Add("60007");
+        Keywords.Add("Sir Nigel Gresley");
+        Keywords.Add("Mallard");
+        Keywords.Add("world speed record");
+        Keywords.Add("East Coast Main Line");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("60007"),

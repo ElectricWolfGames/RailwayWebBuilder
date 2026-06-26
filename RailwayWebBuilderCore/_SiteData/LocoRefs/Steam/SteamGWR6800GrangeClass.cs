@@ -14,6 +14,15 @@ public class SteamGWR6800GrangeClass : SteamClassBase
         Paragraph1 = "The Great Western Railway (GWR) 6800 Class or Grange Class is a mixed-traffic class of 4-6-0 steam locomotive, built to replace the GWR 4300 Class 2-6-0. There were 80 originally built in the class, all built at the Swindon works, using some reconditioned parts from withdrawn 4300 Class locomotives. The 81st Grange, 6880 Betton Grange, was completed in 2024 as new member of the class.";
         Paragraph2 = "";
 
+        Keywords.Add("GWR Grange Class");
+        Keywords.Add("6800 Class");
+        Keywords.Add("4-6-0");
+        Keywords.Add("Great Western Railway");
+        Keywords.Add("mixed traffic");
+        Keywords.Add("6880");
+        Keywords.Add("Betton Grange");
+        Keywords.Add("new build");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("6880", "Betton Grange"),
