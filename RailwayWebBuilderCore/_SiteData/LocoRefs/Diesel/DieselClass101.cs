@@ -5,7 +5,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 public class DieselClass101 : DieselClassBase
 {
     // TODO : Class 101  Don't think all images are tag with 50203
-    public DieselClass101()// TODO Add details
+    public DieselClass101()
     {
         ClassName = "Class 101";
         StockType = StockTypes.Diesel;

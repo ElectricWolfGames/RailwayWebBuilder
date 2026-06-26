@@ -18,6 +18,13 @@ public class DieselClass02 : DieselClassBase
         Paragraph2 = "They had the door to the cab at the rear, with a railed veranda behind the cab; this feature was very unusual on British Rail locomotives, although it was used on many Yorkshire Engine Co. designs and is quite normal in North American practice.";
         Overview = "";
 
+        Keywords.Add("Class 02");
+        Keywords.Add("Yorkshire Engine Company");
+        Keywords.Add("diesel-hydraulic");
+        Keywords.Add("shunter");
+        Keywords.Add("D2868");
+        Keywords.Add("02003");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("D2868"),

@@ -18,6 +18,13 @@ public class DieselClass06 : DieselClassBase
         Paragraph2 = "They were originally numbered D2410–D2444 and survivors after 1973 were given the TOPS numbers 06001–06010.";
         Overview = "";
 
+        Keywords.Add("Class 06");
+        Keywords.Add("Andrew Barclay");
+        Keywords.Add("diesel-mechanical");
+        Keywords.Add("shunter");
+        Keywords.Add("Scottish Region");
+        Keywords.Add("06003");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("06003"),

@@ -18,6 +18,13 @@ public class DieselClass43 : DieselClassBase
         Paragraph2 = "The class is officially the fastest diesel locomotive in the world, with an absolute maximum speed of 148.5 mph (239.0 km/h), and a regular service speed of 125 mph (201 km/h). The record run was led by 43102 (43302) and trailed by 43159.";
         Paragraph3 = "";
 
+        Keywords.Add("Class 43");
+        Keywords.Add("HST");
+        Keywords.Add("InterCity 125");
+        Keywords.Add("High Speed Train");
+        Keywords.Add("43025");
+        Keywords.Add("125 mph");
+
         LocoNumbers.AddRange(new[] {
             new LocoDetails("43025"),
             new LocoDetails("43044"),

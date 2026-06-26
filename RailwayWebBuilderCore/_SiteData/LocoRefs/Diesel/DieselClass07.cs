@@ -20,6 +20,14 @@ public class DieselClass07 : DieselClassBase
         Paragraph2 = "";
         Overview = "";
 
+        Keywords.Add("Class 07");
+        Keywords.Add("Ruston and Hornsby");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("shunter");
+        Keywords.Add("Southampton Docks");
+        Keywords.Add("D2996");
+        Keywords.Add("07001");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("D2996"),

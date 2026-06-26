@@ -23,6 +23,13 @@ public class DieselClass08 : DieselClassBase
             "On heritage railways, they have become common, appearing on many of the preserved standard-gauge lines in Britain, " +
             "with over 70 preserved including the first one built.";
 
+        Keywords.Add("Class 08");
+        Keywords.Add("diesel-electric shunter");
+        Keywords.Add("British Railways standard shunter");
+        Keywords.Add("08114");
+        Keywords.Add("heritage railway");
+        Keywords.Add("996 built");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("08114"),

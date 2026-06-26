@@ -4,21 +4,28 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass93 : DieselClassBase
 {
-#warning Need to add description Class 93
-
-    public DieselClass93()// TODO Add details
+    public DieselClass93()
     {
         ClassName = "Class 93";
         StockType = StockTypes.Diesel;
 
-        //PowerType = "Diesel-hydraulic";
-        //Builder = "Yorkshire Engine Co.";
-        //BuildDate = "1960–1961";
-        //TotalProduced = 20;
+        PowerType = "Tri-mode (Electric/Diesel/Battery)";
+        Builder = "Stadler Rail";
+        BuildDate = "2023–";
+        TotalProduced = 30;
 
-        Paragraph1 = "";
-        Paragraph2 = "";
+        Paragraph1 = "The British Rail Class 93 is a class of tri-mode locomotives ordered by Rock Rail and operated by GB Railfreight, built by Stadler Rail at their Valencia factory in Spain. " +
+            "Capable of operating under 25 kV AC overhead electrification, on diesel power, or under battery power, the Class 93 is one of the most flexible locomotive types ever built for the British network. " +
+            "The tri-mode capability allows the class to work through electrified and non-electrified sections without changing traction power.";
+        Paragraph2 = "The Class 93 is designed for both passenger charter and freight operation on mixed routes, offering significant reductions in emissions compared to pure diesel traction.";
         Overview = "";
+
+        Keywords.Add("Class 93");
+        Keywords.Add("tri-mode");
+        Keywords.Add("Stadler Rail");
+        Keywords.Add("GB Railfreight");
+        Keywords.Add("electric diesel battery");
+        Keywords.Add("93000");
 
         LocoNumbers.AddRange(new[]
         {

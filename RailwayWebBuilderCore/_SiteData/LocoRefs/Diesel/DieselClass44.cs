@@ -4,7 +4,7 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass44 : DieselClassBase
 {
-    public DieselClass44()// TODO Add details
+    public DieselClass44()
     {
         ClassName = "Class 44";
         ClassDisplayName = "Class 44: Peak";
@@ -12,11 +12,13 @@ public class DieselClass44 : DieselClassBase
 
         PowerType = "Diesel-electric";
         Builder = "British Railways' Derby Works and Crewe Works";
-        BuildDate = "";
-        TotalProduced = 0;
+        BuildDate = "1959–1960";
+        TotalProduced = 10;
 
-        Paragraph1 = "";
-        Paragraph2 = "";
+        Paragraph1 = "The British Rail Class 44 is a class of ten diesel-electric 'Peak' locomotives built by British Railways at Derby Works between 1959 and 1960. " +
+            "Originally numbered D1–D10, they were the first of the Peak family, which also included the more numerous Class 45 and Class 46 locomotives. " +
+            "All ten were named after English mountains — including Scafell Pike, Helvellyn and Great Gable — giving rise to the 'Peak' nickname used for all three classes.";
+        Paragraph2 = "The Class 44s were powered by a Sulzer 12LDA28A twin-bank twelve-cylinder engine producing 2,300 bhp. They were used on express passenger and freight services on the Midland Main Line and were all withdrawn by 1980.";
         Paragraph3 = "";
 
         Keywords.Add("British Rail");

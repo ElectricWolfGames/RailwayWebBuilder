@@ -4,14 +4,28 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass222 : DieselClassBase
 {
-    // TODO: CLass 222 missing paragraphs, Image not tag with number
-    public DieselClass222()// TODO Add details
+    public DieselClass222()
     {
         ClassName = "Class 222";
         StockType = StockTypes.Diesel;
 
-        Paragraph1 = "";
-        Paragraph2 = "";
+        PowerType = "Diesel multiple unit";
+        Builder = "Bombardier Transportation";
+        BuildDate = "2004–2005";
+        TotalProduced = 23;
+
+        Paragraph1 = "The British Rail Class 222 Meridian is a class of high-speed diesel multiple unit (DMU) built by Bombardier Transportation at Bruges, Belgium between 2004 and 2005. " +
+            "The class operates on the Midland Main Line, running services between London St Pancras and Nottingham, Derby and Sheffield. " +
+            "They are capable of 125 mph (201 km/h) and replaced locomotive-hauled HST trains on those routes.";
+        Paragraph2 = "The Class 222 units are formed in four or five car configurations and offer a high standard of passenger comfort, making them popular on their Midland Main Line routes.";
+
+        Keywords.Add("Class 222");
+        Keywords.Add("Meridian");
+        Keywords.Add("Bombardier");
+        Keywords.Add("DMU");
+        Keywords.Add("Midland Main Line");
+        Keywords.Add("high speed");
+        Keywords.Add("222000");
 
         LocoNumbers.AddRange(new[]
         {

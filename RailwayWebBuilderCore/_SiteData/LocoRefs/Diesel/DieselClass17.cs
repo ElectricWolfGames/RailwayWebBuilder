@@ -33,10 +33,11 @@ public class DieselClass17 : DieselClassBase
             "users; only one example has been preserved.";
 
         Keywords.Add("British Rail");
-        Keywords.Add("British Rail Class 27");
-        Keywords.Add("Class 27");
+        Keywords.Add("British Rail Class 17");
+        Keywords.Add("Clayton Type 1");
         Keywords.Add("D8568");
         Keywords.Add("Paxman 6ZHXL six-cylinder horizontal engines");
+        Keywords.Add("unreliable");
 
         LocoNumbers.AddRange(new[]
         {

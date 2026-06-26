@@ -6,21 +6,28 @@ public partial class DieselClass99
 {
     public class DieselClass23 : DieselClassBase
     {
-#warning Need to add description Class 23
-
-        public DieselClass23()// TODO Add details
+        public DieselClass23()
         {
             ClassName = "Class 23";
             StockType = StockTypes.Diesel;
 
-            //PowerType = "Diesel-hydraulic";
-            //Builder = "Yorkshire Engine Co.";
-            //BuildDate = "1960–1961";
-            //TotalProduced = 20;
+            PowerType = "Diesel-electric";
+            Builder = "English Electric at Vulcan Foundry";
+            BuildDate = "1959";
+            TotalProduced = 10;
 
-            Paragraph1 = "";
-            Paragraph2 = "";
+            Paragraph1 = "The British Rail Class 23, nicknamed the 'Baby Deltic', is a class of ten Type 2 diesel-electric locomotives built by English Electric at Vulcan Foundry in 1959. " +
+                "They used a smaller 9-cylinder Napier Deltic T9-29 engine rather than the 18-cylinder version used in the full-size Class 55 Deltics. " +
+                "The class was intended for use on the Eastern Region on stopping passenger trains in East Anglia, but gained a reputation for unreliability due to problems with the Deltic engines.";
+            Paragraph2 = "All ten were allocated to Hornsey depot and withdrawn by 1971 after a troublesome service life of just over a decade. Only one example, D5910, has been preserved.";
             Overview = "";
+
+            Keywords.Add("Baby Deltic");
+            Keywords.Add("Class 23");
+            Keywords.Add("English Electric");
+            Keywords.Add("Napier Deltic");
+            Keywords.Add("D5910");
+            Keywords.Add("Type 2");
 
             LocoNumbers.AddRange(new[]
             {

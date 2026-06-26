@@ -18,6 +18,13 @@ public class DieselClass40 : DieselClassBase
         Paragraph2 = "As they were slowly relegated from express passenger uses, the type found work on secondary passenger and freight services where they worked for many years. The final locomotives ended regular service in 1985. The locomotives were commonly known as 'Whistlers' because of the distinctive noise made by their turbochargers.";
         Paragraph3 = "";
 
+        Keywords.Add("Class 40");
+        Keywords.Add("English Electric Type 4");
+        Keywords.Add("Whistlers");
+        Keywords.Add("D200");
+        Keywords.Add("40106");
+        Keywords.Add("Atlantic Conveyor");
+
         LocoNumbers.AddRange(new[] {
             new LocoDetails("40106", "Atlantic Conveyor"),
             });

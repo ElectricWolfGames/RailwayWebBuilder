@@ -4,19 +4,27 @@ namespace RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 
 public class DieselClass09 : DieselClassBase
 {
-    public DieselClass09() // TODO Add details
+    public DieselClass09()
     {
         ClassName = "Class 09";
         StockType = StockTypes.Diesel;
 
-        PowerType = "";
-        Builder = "";
-        BuildDate = "";
-        TotalProduced = 0;
+        PowerType = "Diesel-electric";
+        Builder = "British Railways, Darlington Works";
+        BuildDate = "1959–1962";
+        TotalProduced = 26;
 
-        Paragraph1 = "";
-        Paragraph2 = "";
+        Paragraph1 = "The British Rail Class 09 is a class of diesel-electric shunting locomotives, essentially a more powerful variant of the Class 08. " +
+            "Twenty-six were built at Darlington Works between 1959 and 1962, primarily for the Southern Region of British Railways. " +
+            "The Class 09 was geared for a higher top speed of 27 mph (43 km/h) compared to the Class 08's 15 mph (24 km/h), making them better suited to trip working between sidings and yards.";
+        Paragraph2 = "The class remained in service on the Southern Region for many years. Several examples have survived into preservation on heritage railways.";
         Overview = "";
+
+        Keywords.Add("Class 09");
+        Keywords.Add("diesel-electric shunter");
+        Keywords.Add("Darlington Works");
+        Keywords.Add("Southern Region");
+        Keywords.Add("09001");
 
         LocoNumbers.AddRange(new[]
         {

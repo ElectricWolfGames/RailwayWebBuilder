@@ -24,6 +24,13 @@ public class DieselClass31 : DieselClassBase
             "after the launch of the Class 20 locomotive and was one of the Pilot Scheme locomotives ordered by British Railways to replace steam traction.";
         Paragraph3 = "";
 
+        Keywords.Add("Class 31");
+        Keywords.Add("Brush Type 2");
+        Keywords.Add("Brush Traction");
+        Keywords.Add("Class 30");
+        Keywords.Add("31466");
+        Keywords.Add("D5500");
+
         LocoNumbers.AddRange(new[]
         {
             new LocoDetails("31466"),

@@ -18,6 +18,13 @@ public class DieselClass47 : DieselClassBase
         Paragraph2 = "They were fitted with the Sulzer 12LDA28C twin-bank twelve-cylinder unit producing 2,750 bhp (2,050 kW) – though this was later derated to 2,580 bhp (1,920 kW) to improve reliability – and have been used on both passenger and freight trains on Britain's railways for over 55 years. Despite the introduction of more modern types of traction, a significant number are still in use, both on the mainline and on heritage railways.";
         Paragraph3 = "";
 
+        Keywords.Add("Class 47");
+        Keywords.Add("Brush Type 4");
+        Keywords.Add("Brush Traction");
+        Keywords.Add("Sulzer");
+        Keywords.Add("most numerous diesel class");
+        Keywords.Add("47292");
+
         LocoNumbers.AddRange(new[] {
             new LocoDetails("1705", "SparrowHawk"),
             new LocoDetails("47292"),
