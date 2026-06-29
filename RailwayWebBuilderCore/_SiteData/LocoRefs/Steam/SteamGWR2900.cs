@@ -9,6 +9,21 @@ public class SteamGWR2900 : SteamClassBase
         ClassName = "GWR 2900 Saint";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "George Jackson Churchward";
+        Builder = "GWR Swindon Works";
+        BuildDate = "1902–1913";
+        TotalProduced = 77;
+        WhyteNotation = "4-6-0";
+        Cylinders = "2 × 18½ in × 30 in";
+        BoilerPressure = "225 psi";
+        DriverWheelDia = "6 ft 8½ in";
+        LeadingWheelDia = "3 ft 2 in";
+        LocoWeight = "74 tons 7 cwt";
+        TenderWeight = "40 tons 0 cwt";
+        Length = "63 ft 0 in";
+        MaxSpeed = "80 mph";
+        TractiveEffort = "24,395 lbf";
+
         WikiLink = "https://en.wikipedia.org/wiki/GWR_2900_Class";
 
         Paragraph1 = "The GWR 2900 Class, commonly known as the Saint Class, is a class of 4-6-0 express passenger steam locomotives designed by George Jackson Churchward for the Great Western Railway. " +

@@ -9,8 +9,20 @@ public class SteamBRStandard9F : SteamClassBase
         ClassName = "BR Standard 9F";
         StockType = StockTypes.SteamLoco;
 
-        Builder = "BR Crewe Works(198), BR Swindon Works(53)";
+        Designer = "Robert Riddles";
+        Builder = "BR Crewe Works (198), BR Swindon Works (53)";
+        BuildDate = "1954–1960";
         TotalProduced = 251;
+        WhyteNotation = "2-10-0";
+        Cylinders = "2 × 20 in × 28 in";
+        BoilerPressure = "250 psi";
+        DriverWheelDia = "5 ft 0 in";
+        LeadingWheelDia = "3 ft 0 in";
+        LocoWeight = "86 tons 14 cwt";
+        TenderWeight = "54 tons 3 cwt";
+        Length = "66 ft 2 in";
+        MaxSpeed = "90 mph";
+        TractiveEffort = "39,667 lbf";
 
         Paragraph1 = "The British Railways BR Standard Class 9F 2-10-0 is a class of steam locomotive designed for British Railways by Robert Riddles. " +
             "The Class 9F was the last in a series of standardised locomotive classes designed for British Railways during the 1950s, " +

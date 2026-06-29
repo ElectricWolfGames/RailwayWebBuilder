@@ -3,6 +3,7 @@ using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData;
 using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Data;
@@ -55,6 +56,7 @@ public class LayoutByLayoutPageDetails : PageDetails
         WebPage.Append(NavButtons());
 
         WebPage.Append(Jumbotron());
+        WebPage.Append(GoogleAdsHelper.AdsBanner);
 
         WebPage.Append(AddImages());
         if (LayoutByLayoutDetails.Images.Count > 6)

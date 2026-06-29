@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData;
 using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
 using RailwayWebBuilderCore.Enums;
 using System;
@@ -90,6 +91,7 @@ public class LocoRef : PageDetails
         WebPage.Append("</br>");
         WebPage.Append(CreateHero(this));
         WebPage.Append(CreateGroups(this, ""));
+        WebPage.Append(GoogleAdsHelper.AdsBanner);
 
         WebPage.Append("</div>");
 

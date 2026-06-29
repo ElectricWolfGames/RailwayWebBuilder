@@ -9,6 +9,20 @@ public class SteamLMSIvattClass2Tank : SteamClassBase
         ClassName = "LMS Ivatt Class 2 Tank";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "H. G. Ivatt";
+        Builder = "Crewe Works";
+        BuildDate = "1946–1952";
+        TotalProduced = 130;
+        WhyteNotation = "2-6-2T";
+        Cylinders = "2 × 16 in × 24 in";
+        BoilerPressure = "200 psi";
+        DriverWheelDia = "5 ft 0 in";
+        LeadingWheelDia = "3 ft 0 in";
+        LocoWeight = "62 tons 0 cwt";
+        Length = "44 ft 7¼ in";
+        MaxSpeed = "70 mph";
+        TractiveEffort = "17,400 lbf";
+
         Paragraph1 = "Number 41241 was built by British Railways at Crewe Works in September 1949. " +
             "From new it was allocated to Bath Green Park on the Somerset and Dorset Joint Railway " +
             "and saw use on local passenger services over the S&D including the occasional banking job. " +

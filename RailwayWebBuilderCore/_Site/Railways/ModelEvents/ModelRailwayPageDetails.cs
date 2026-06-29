@@ -3,6 +3,7 @@ using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
@@ -76,6 +77,7 @@ public class ModelRailwayPageDetails : PageDetails
         WebPage.Append("<div class='container mt-4'>");
 
         WebPage.Append(Jumbotron(ModelEvent));
+        WebPage.Append(GoogleAdsHelper.AdsBanner);
 
         LocationsService ls = ServiceLocator.Instance.GetService<LocationsService>();
         ls.AddLocation(ModelEvent);

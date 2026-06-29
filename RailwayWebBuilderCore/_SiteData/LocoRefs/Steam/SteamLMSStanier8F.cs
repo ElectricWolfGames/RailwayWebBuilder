@@ -9,6 +9,22 @@ public class SteamLMSStanier8F : SteamClassBase
         ClassName = "LMS Stanier 8F Class";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "William Stanier";
+        Builder = "Crewe Works, Darlington Works, Doncaster Works, Eastleigh Works, Horwich Works, Swindon Works, Vulcan Foundry";
+        BuildDate = "1935–1946";
+        TotalProduced = 852;
+        WhyteNotation = "2-8-0";
+        Cylinders = "2 × 18½ in × 28 in";
+        BoilerPressure = "225 psi";
+        DriverWheelDia = "4 ft 8½ in";
+        LeadingWheelDia = "3 ft 3½ in";
+        LocoWeight = "72 tons 2 cwt";
+        TenderWeight = "54 tons 12 cwt";
+        Length = "63 ft 9 in";
+        MaxSpeed = "60 mph";
+        TractiveEffort = "32,438 lbf";
+        WikiLink = "https://en.wikipedia.org/wiki/LMS_Stanier_Class_8F";
+
         Paragraph1 = "The London Midland and Scottish Railway's class 8F is a class of steam locomotive designed for hauling heavy freight. " +
             "852 were built between 1935 and 1946 (not all to LMS order), as a freight version of William Stanier's successful Black Five, " +
             "and the class saw extensive service overseas during and after the Second World War.";

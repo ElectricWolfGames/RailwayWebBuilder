@@ -9,6 +9,21 @@ public class SteamGWR2884 : SteamClassBase
         ClassName = "GWR 2884";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "Charles Collett (development of Churchward 28xx)";
+        Builder = "GWR Swindon Works";
+        BuildDate = "1938–1942";
+        TotalProduced = 83;
+        WhyteNotation = "2-8-0";
+        Cylinders = "2 × 18½ in × 30 in";
+        BoilerPressure = "225 psi";
+        DriverWheelDia = "4 ft 7½ in";
+        LeadingWheelDia = "3 ft 2 in";
+        LocoWeight = "76 tons 6 cwt";
+        TenderWeight = "40 tons 0 cwt";
+        Length = "58 ft 9 in";
+        MaxSpeed = "60 mph";
+        TractiveEffort = "35,380 lbf";
+
         Paragraph1 = "They were designed for heavy freight work and were a development of the earlier 2800 Class. " +
                  "The 2884s differed from the original engines in a number of respects, " +
                  "the most obvious being that a more modern Collett side window cab was provided and that they were built with outside steam pipes. " +

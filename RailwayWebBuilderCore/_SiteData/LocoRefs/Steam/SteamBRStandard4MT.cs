@@ -9,6 +9,21 @@ public class SteamBRStandard4MT : SteamClassBase
         ClassName = "BR Standard 4 MT 2-6-4";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "Robert Riddles";
+        Builder = "BR Derby Works, BR Swindon Works";
+        BuildDate = "1951–1957";
+        TotalProduced = 80;
+        WhyteNotation = "4-6-0";
+        Cylinders = "2 × 18 in × 28 in";
+        BoilerPressure = "225 psi";
+        DriverWheelDia = "5 ft 8 in";
+        LeadingWheelDia = "3 ft 0 in";
+        LocoWeight = "68 tons 0 cwt";
+        TenderWeight = "42 tons 18 cwt";
+        Length = "59 ft 7⅝ in";
+        MaxSpeed = "90 mph";
+        TractiveEffort = "25,100 lbf";
+
         Paragraph1 = "On the nationalisation of British Railways (BR) in 1948, " +
         "the London Midland Region had a number of ex-London, " +
         "Midland and Scottish Railway 2-6-4T and the Western Region a number of GWR Large Prairie 2-6-2T types. " +

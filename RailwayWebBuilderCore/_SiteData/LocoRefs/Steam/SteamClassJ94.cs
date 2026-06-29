@@ -9,6 +9,19 @@ public class SteamClassJ94 : SteamClassBase
         ClassName = "LNER J94";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "Hunslet Engine Company (War Department Austerity)";
+        Builder = "Hunslet, Robert Stephenson & Hawthorns, Vulcan Foundry, Bagnall";
+        BuildDate = "1943–1946";
+        TotalProduced = 75;
+        WhyteNotation = "0-6-0ST";
+        Cylinders = "2 × 18 in × 26 in";
+        BoilerPressure = "170 psi";
+        DriverWheelDia = "4 ft 3 in";
+        LocoWeight = "48 tons 10 cwt";
+        Length = "30 ft 9 in";
+        MaxSpeed = "40 mph";
+        TractiveEffort = "23,870 lbf";
+
         Paragraph1 = "The LNER had had trials with one in November 1945 and bought 75 of them in 1946, " +
 "numbering them 8006-80. All entered British Railways (BR) service in 1948. BR added 60000 to their numbers so they became 68006-80, and classified them 4F. " +
 "They were used for shunting in docks, and other similar work where their short wheelbase meant they could negotiate sharp curves. " +

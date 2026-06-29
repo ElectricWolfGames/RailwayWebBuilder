@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using RailwayWebBuilderCore._SiteData;
 using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Data;
 using RailwayWebBuilderCore.Enums;
@@ -62,6 +63,7 @@ internal class AllLayouts : PageDetails
         WebPage.Append("<div class='container mt-4'>");
 
         WebPage.Append(CreateLayoutbyLayoutHero(usableLayouts.Count + 1));
+        WebPage.Append(GoogleAdsHelper.AdsBanner);
 
         WebPage.Append("<div class='row'>");
 

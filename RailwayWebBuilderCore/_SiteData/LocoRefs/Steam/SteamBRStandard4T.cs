@@ -9,6 +9,21 @@ public class SteamBRStandard4T : SteamClassBase
         ClassName = "BR Standard 4 Tank";
         StockType = StockTypes.SteamLoco;
 
+        Designer = "Robert Riddles";
+        Builder = "BR Brighton Works, BR Derby Works";
+        BuildDate = "1951–1957";
+        TotalProduced = 155;
+        WhyteNotation = "2-6-4T";
+        Cylinders = "2 × 18 in × 28 in";
+        BoilerPressure = "225 psi";
+        DriverWheelDia = "5 ft 8 in";
+        LeadingWheelDia = "3 ft 0 in";
+        TrailingWheelDia = "3 ft 3½ in";
+        LocoWeight = "88 tons 10 cwt";
+        Length = "47 ft 9⅜ in";
+        MaxSpeed = "75 mph";
+        TractiveEffort = "25,100 lbf";
+
         Paragraph1 = "The British Railways Standard Class 4 tank is a class of steam locomotive, " +
             "one of the BR standard classes built during the 1950s. They were used primarily on commuter and outer suburban services. " +
             "They were capable of reaching speeds of 75 mph (113 km/h).";
