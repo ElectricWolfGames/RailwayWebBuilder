@@ -29,6 +29,9 @@ public static class Constants
     public const string RushcliffeHaltFolder = _StationFolder + @"GCR-RushcliffeHalt\";
     public const string Shop = @"Shop";
     public const string ShopFolder = @"Shop\";
+    public const string LocoDesigners = _LocomotiveName + @"\Designers";
+    public const string LocoBuilders = _LocomotiveName + @"\Builders";
+    public const string LocoWheelArrangements = _LocomotiveName + @"\WheelArrangements";
     public const string StandardClasses = "StandardClasses";
     public const string StockVideos = @"StockVideos\";
 }

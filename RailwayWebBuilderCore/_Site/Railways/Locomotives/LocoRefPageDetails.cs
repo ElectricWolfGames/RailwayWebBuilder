@@ -100,7 +100,7 @@ public class LocoRefPageDetails : PageDetails
 
         // --- Base facts row (all loco types) ---
         sb.AppendLine("<div class='row'>");
-        AppendSpecTile(sb, "Builder", cb.Builder);
+        AppendBuilderTile(sb, cb.Builder);
         AppendSpecTile(sb, "Built", cb.BuildDate);
         if (cb.TotalProduced > 0)
         {
@@ -132,8 +132,8 @@ public class LocoRefPageDetails : PageDetails
             {
                 sb.AppendLine("<hr class='my-2'/>");
                 sb.AppendLine("<div class='row'>");
-                AppendSpecTile(sb, "Designer", sc.Designer);
-                AppendSpecTile(sb, "Wheel Arrangement", sc.WhyteNotation);
+                AppendSpecTileLink(sb, "Designer", sc.Designer, $"../Designers/{DesignerListPage.ToSlug(sc.Designer)}.html");
+                AppendSpecTileLink(sb, "Wheel Arrangement", sc.WhyteNotation, $"../WheelArrangements/{DesignerListPage.ToSlug(sc.WhyteNotation)}.html");
                 AppendSpecTile(sb, "Cylinders", sc.Cylinders);
                 AppendSpecTile(sb, "Boiler Pressure", sc.BoilerPressure);
                 AppendSpecTile(sb, "Max Speed", sc.MaxSpeed);
@@ -168,6 +168,31 @@ public class LocoRefPageDetails : PageDetails
         sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
         sb.AppendLine($"<span class='font-weight-bold'>{value}</span>");
         sb.AppendLine("</div>");
+    }
+
+    private static void AppendSpecTileLink(StringBuilder sb, string label, string value, string href)
+    {
+        if (string.IsNullOrEmpty(value))
+            return;
+        sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+        sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
+        sb.AppendLine($"<a href='{href}' class='font-weight-bold'>{value}</a>");
+        sb.AppendLine("</div>");
+    }
+
+    private static void AppendBuilderTile(StringBuilder sb, string builder)
+    {
+        if (string.IsNullOrEmpty(builder))
+            return;
+        // Only link when there is a single builder (no comma-separated list)
+        if (!builder.Contains(','))
+        {
+            AppendSpecTileLink(sb, "Builder", builder, $"../Builders/{DesignerListPage.ToSlug(builder)}.html");
+        }
+        else
+        {
+            AppendSpecTile(sb, "Builder", builder);
+        }
     }
 
     private string CreateGallery()
