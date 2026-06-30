@@ -13,6 +13,13 @@ public class DieselClass09 : DieselClassBase
         Builder = "British Railways, Darlington Works";
         BuildDate = "1959–1962";
         TotalProduced = 26;
+        WheelArrangement = "0-6-0";
+        Engine = "English Electric 6KT";
+        Power = "400 hp (298 kW)";
+        MaxSpeed = "27 mph (43 km/h)";
+        TractiveEffort = "25,000 lbf (111 kN)";
+        LocoWeight = "49 t 18 cwt";
+        Length = "29 ft 3 in (8.92 m)";
 
         Paragraph1 = "The British Rail Class 09 is a class of diesel-electric shunting locomotives, essentially a more powerful variant of the Class 08. " +
             "Twenty-six were built at Darlington Works between 1959 and 1962, primarily for the Southern Region of British Railways. " +

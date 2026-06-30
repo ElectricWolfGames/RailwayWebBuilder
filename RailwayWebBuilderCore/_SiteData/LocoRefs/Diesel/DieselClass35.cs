@@ -12,8 +12,16 @@ public class DieselClass35 : DieselClassBase
 
         PowerType = "Diesel-hydraulic";
         Builder = "Beyer Peacock (Hymek) Ltd";
-        BuildDate = "1961-1694";
+        BuildDate = "1961–1964";
         TotalProduced = 101;
+        Designer = "Beyer, Peacock & Co / BR Swindon";
+        WheelArrangement = "B-B";
+        Engine = "Bristol-Siddeley Maybach MD870";
+        Power = "1,700 hp (1,268 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "49,700 lbf (221 kN)";
+        LocoWeight = "75 t";
+        Length = "51 ft 0 in (15.54 m)";
 
         Paragraph1 = "The British Rail Class 35 is a class of mixed-traffic B-B diesel locomotive with hydraulic transmission. Because of their Mekydro-design hydraulic transmission units, the locomotives became known as the Hymeks. They were numbered D7000-D7100.";
         Paragraph2 = "The class was developed for the Western Region of British Railways, which had opted for lightweight locomotives with hydraulic transmission, when allocated funds under the British Railways Modernisation Plan of 1955. 101 of the class were built between 1961 and 1964, when it became apparent that there was a requirement for a medium-power diesel-hydraulic design for both secondary passenger work and freight duties.";

@@ -14,6 +14,14 @@ public class DieselClass44 : DieselClassBase
         Builder = "British Railways' Derby Works and Crewe Works";
         BuildDate = "1959–1960";
         TotalProduced = 10;
+        Designer = "BR Derby Works";
+        WheelArrangement = "1Co-Co1";
+        Engine = "Sulzer 12LDA28";
+        Power = "2,300 hp (1,716 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "70,000 lbf (311 kN)";
+        LocoWeight = "133 t";
+        Length = "67 ft 11 in (20.70 m)";
 
         Paragraph1 = "The British Rail Class 44 is a class of ten diesel-electric 'Peak' locomotives built by British Railways at Derby Works between 1959 and 1960. " +
             "Originally numbered D1–D10, they were the first of the Peak family, which also included the more numerous Class 45 and Class 46 locomotives. " +

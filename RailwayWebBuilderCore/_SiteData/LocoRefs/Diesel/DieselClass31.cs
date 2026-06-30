@@ -13,6 +13,14 @@ public class DieselClass31 : DieselClassBase
         Builder = "Brush Traction";
         BuildDate = "1957–1962";
         TotalProduced = 263;
+        Designer = "Brush Traction";
+        WheelArrangement = "A1A-A1A";
+        Engine = "English Electric 12SVT (later Mirrlees JVS12T)";
+        Power = "1,470 hp (1,096 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "42,000 lbf (187 kN)";
+        LocoWeight = "111 t";
+        Length = "56 ft 9 in (17.30 m)";
 
         Paragraph1 = "The British Rail Class 31 diesel locomotives, " +
             "also known as the Brush Type 2 and previously as Class 30, " +

@@ -14,6 +14,14 @@ public class DieselClass52 : DieselClassBase
         Builder = "Swindon Works (30), Crewe Works (44)";
         BuildDate = "1961–1964";
         TotalProduced = 74;
+        Designer = "BR Swindon / BR Crewe";
+        WheelArrangement = "C-C";
+        Engine = "2 × Bristol-Siddeley Maybach MD655";
+        Power = "2,700 hp (2,014 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "72,600 lbf (323 kN)";
+        LocoWeight = "108 t";
+        Length = "68 ft 0 in (20.73 m)";
 
         Paragraph1 = "The British Rail Class 52 is a class of 74 Type 4 diesel-hydraulic locomotives built for the Western Region of British Railways between 1961 and 1964. All were given two-word names, the first word being 'Western' and thus the type became known as Westerns. They were also known as Wizzos and Thousands. The final Class 52 locomotives were withdrawn from service in 1977.";
         Paragraph2 = "";

@@ -13,6 +13,12 @@ public class DieselClass07 : DieselClassBase
         Builder = "Ruston & Hornsby";
         BuildDate = "1962";
         TotalProduced = 14;
+        WheelArrangement = "0-6-0";
+        Engine = "Paxman 6RPHL";
+        Power = "275 hp (205 kW)";
+        MaxSpeed = "25 mph (40 km/h)";
+        TractiveEffort = "35,000 lbf (156 kN)";
+        LocoWeight = "42 t";
 
         Paragraph1 = "The British Rail Class 07 diesel locomotive is an off-centre cab 0-6-0 diesel-electric " +
             "shunter type built by Ruston & Hornsby in 1962 for the Southern Region of British Railways. " +

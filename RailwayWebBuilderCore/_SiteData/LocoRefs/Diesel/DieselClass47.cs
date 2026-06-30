@@ -13,6 +13,14 @@ public class DieselClass47 : DieselClassBase
         Builder = "Brush Traction, British Rail Crewe Works";
         BuildDate = "1962–1968";
         TotalProduced = 512;
+        Designer = "Brush Traction";
+        WheelArrangement = "Co-Co";
+        Engine = "Sulzer 12LDA28C";
+        Power = "2,580 hp (1,924 kW)";
+        MaxSpeed = "95 mph (153 km/h)";
+        TractiveEffort = "62,000 lbf (276 kN)";
+        LocoWeight = "111–125 t";
+        Length = "63 ft 6 in (19.35 m)";
 
         Paragraph1 = "The British Rail Class 47 or Brush Type 4 is a class of diesel-electric locomotive that was developed in the 1960s by Brush Traction. A total of 512 Class 47s were built at Brush's Falcon Works in Loughborough and at British Railways' Crewe Works between 1962 and 1968, which made them the most numerous class of British mainline diesel locomotive.";
         Paragraph2 = "They were fitted with the Sulzer 12LDA28C twin-bank twelve-cylinder unit producing 2,750 bhp (2,050 kW) – though this was later derated to 2,580 bhp (1,920 kW) to improve reliability – and have been used on both passenger and freight trains on Britain's railways for over 55 years. Despite the introduction of more modern types of traction, a significant number are still in use, both on the mainline and on heritage railways.";

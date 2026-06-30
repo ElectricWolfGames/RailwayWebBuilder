@@ -13,6 +13,12 @@ public partial class DieselClass99 : DieselClassBase
         Builder = "Stadler Rail";
         BuildDate = "2025–";
         TotalProduced = 30;
+        Designer = "Stadler Rail";
+        WheelArrangement = "Co-Co";
+        Engine = "Cummins QSK23 (diesel mode)";
+        Power = "1,800 kW (diesel), 5,600 kW (electric)";
+        MaxSpeed = "100 mph (161 km/h)";
+        LocoWeight = "130 t";
 
         Paragraph1 = "The British Rail Class 99 is a class of bi-mode freight locomotives ordered by DB Cargo UK and built by Stadler Rail. " +
             "Capable of operating under 25 kV AC overhead electrification and on diesel power, the Class 99s are designed to replace older freight locomotive types on key freight routes. " +

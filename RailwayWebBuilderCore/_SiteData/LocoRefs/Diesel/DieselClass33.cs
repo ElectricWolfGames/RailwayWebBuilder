@@ -13,6 +13,14 @@ public class DieselClass33 : DieselClassBase
         Builder = "Birmingham Railway Carriage and Wagon Company";
         BuildDate = "1960–1962";
         TotalProduced = 98;
+        Designer = "Birmingham Railway Carriage and Wagon Company";
+        WheelArrangement = "Bo-Bo";
+        Engine = "Sulzer 8LDA28";
+        Power = "1,550 hp (1,156 kW)";
+        MaxSpeed = "85 mph (137 km/h)";
+        TractiveEffort = "45,000 lbf (200 kN)";
+        LocoWeight = "77 t";
+        Length = "50 ft 9 in (15.47 m)";
 
         Paragraph1 = "The British Rail Class 33, also known as the BRCW Type 3 or Crompton, is a class of Bo-Bo diesel-electric locomotives, ordered in 1957 and built for the Southern Region of British Railways between 1960 and 1962.";
         Paragraph2 = "They were produced as a more powerful Type 3 (1,550 bhp) development of the 1,160 bhp Type 2 Class 26. This was achieved by removing the steam heating boiler and fitting a larger 8-cylinder version of the previous 6-cylinder engine. Thus, they became the most powerful BR Bo-Bo diesel locomotive. A total of 98 were built by the Birmingham Railway Carriage and Wagon Company (BRCW) and they were known as 'Cromptons' after the Crompton Parkinson electrical equipment installed in them.";

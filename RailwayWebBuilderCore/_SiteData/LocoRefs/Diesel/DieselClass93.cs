@@ -13,6 +13,13 @@ public class DieselClass93 : DieselClassBase
         Builder = "Stadler Rail";
         BuildDate = "2023–";
         TotalProduced = 30;
+        Designer = "Stadler Rail";
+        WheelArrangement = "Bo-Bo";
+        Engine = "Caterpillar C32 ACERT (diesel mode)";
+        Power = "900 kW (diesel), 4,000 kW (electric)";
+        MaxSpeed = "110 mph (177 km/h)";
+        LocoWeight = "97 t";
+        Length = "23.5 m (77 ft 1 in)";
 
         Paragraph1 = "The British Rail Class 93 is a class of tri-mode locomotives ordered by Rock Rail and operated by GB Railfreight, built by Stadler Rail at their Valencia factory in Spain. " +
             "Capable of operating under 25 kV AC overhead electrification, on diesel power, or under battery power, the Class 93 is one of the most flexible locomotive types ever built for the British network. " +

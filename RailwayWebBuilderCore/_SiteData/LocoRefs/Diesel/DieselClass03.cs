@@ -13,6 +13,13 @@ public class DieselClass03 : DieselClassBase
         Builder = "British Railways, Doncaster & Swindon";
         BuildDate = "1957–1961";
         TotalProduced = 230;
+        WheelArrangement = "0-6-0";
+        Engine = "Gardner 8L3";
+        Power = "204 hp (152 kW)";
+        MaxSpeed = "28 mph (45 km/h)";
+        TractiveEffort = "15,600 lbf (69.4 kN)";
+        LocoWeight = "30 t";
+        Length = "26 ft 5 in (8.05 m)";
 
         Paragraph1 = "The British Rail Class 03 locomotive was, together with the similar Class 04, one of British Railways' most successful 0-6-0 diesel-mechanical shunters. 230 were built at Doncaster and Swindon works between 1957 and 1962, and were numbered D2000–D2199 and D2370–D2399 (later 03004 to 03399). D2370 and D2371 were used as departmental locomotives and originally numbered 91 and 92 respectively.";
         Paragraph2 = "";

@@ -13,6 +13,14 @@ public class DieselClass26 : DieselClassBase
         Builder = "Birmingham Railway Carriage and Wagon Company";
         BuildDate = "1958-1959";
         TotalProduced = 47;
+        Designer = "Birmingham Railway Carriage and Wagon Company";
+        WheelArrangement = "Bo-Bo";
+        Engine = "Sulzer 6LDA28-A";
+        Power = "1,160 hp (865 kW)";
+        MaxSpeed = "75 mph (121 km/h)";
+        TractiveEffort = "42,000 lbf (187 kN)";
+        LocoWeight = "73 t";
+        Length = "51 ft 1 in (15.57 m)";
 
         Paragraph1 = "The British Rail Class 26 diesel locomotives, also known as the BRCW Type 2, " +
             "were built by the Birmingham Railway Carriage and Wagon Company (BRCW) at Smethwick in 1958–59. " +

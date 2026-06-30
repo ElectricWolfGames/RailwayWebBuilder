@@ -15,6 +15,13 @@ public partial class DieselClass99
             Builder = "English Electric at Vulcan Foundry";
             BuildDate = "1959";
             TotalProduced = 10;
+            Designer = "English Electric";
+            WheelArrangement = "Bo-Bo";
+            Engine = "English Electric 8SVT";
+            Power = "1,100 hp (820 kW)";
+            MaxSpeed = "90 mph (145 km/h)";
+            TractiveEffort = "47,000 lbf (209 kN)";
+            LocoWeight = "73 t";
 
             Paragraph1 = "The British Rail Class 23, nicknamed the 'Baby Deltic', is a class of ten Type 2 diesel-electric locomotives built by English Electric at Vulcan Foundry in 1959. " +
                 "They used a smaller 9-cylinder Napier Deltic T9-29 engine rather than the 18-cylinder version used in the full-size Class 55 Deltics. " +

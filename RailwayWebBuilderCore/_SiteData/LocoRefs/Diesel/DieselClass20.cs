@@ -10,9 +10,17 @@ public class DieselClass20 : DieselClassBase
         StockType = StockTypes.Diesel;
 
         PowerType = "Diesel-electric";
-        Builder = "Clayton Equipment Company & Beyer, Peacock & Co.";
-        BuildDate = "1962-1965";
-        TotalProduced = 117;
+        Builder = "English Electric at Vulcan Foundry";
+        BuildDate = "1957–1968";
+        TotalProduced = 228;
+        Designer = "English Electric";
+        WheelArrangement = "Bo-Bo";
+        Engine = "English Electric 8SVT Mk 2";
+        Power = "1,000 hp (746 kW)";
+        MaxSpeed = "75 mph (121 km/h)";
+        TractiveEffort = "42,000 lbf (187 kN)";
+        LocoWeight = "73 t";
+        Length = "46 ft 9¾ in (14.27 m)";
 
         Paragraph1 = "The British Rail (BR) Class 20, otherwise known as an English Electric Type 1, is a class of diesel-electric locomotive. In total, 228 locomotives in the class were built by English Electric between 1957 and 1968, the large number being in part because of the failure of other early designs in the same power range to provide reliable locomotives.";
         Paragraph2 = "The locomotives were originally numbered D8000–D8199 and D8300–D8327. They are known by railway enthusiasts as 'Choppers'";

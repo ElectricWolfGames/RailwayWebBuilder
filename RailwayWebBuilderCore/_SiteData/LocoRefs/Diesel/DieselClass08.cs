@@ -13,6 +13,13 @@ public class DieselClass08 : DieselClassBase
         Builder = "British Railways,Crewe Works,Darlington Works,Derby Works,Doncaster Works,Horwich Works";
         BuildDate = "1952–1962";
         TotalProduced = 996;
+        WheelArrangement = "0-6-0";
+        Engine = "English Electric 6KT";
+        Power = "400 hp (298 kW)";
+        MaxSpeed = "15 mph (24 km/h)";
+        TractiveEffort = "35,000 lbf (156 kN)";
+        LocoWeight = "49 t 18 cwt";
+        Length = "29 ft 3 in (8.92 m)";
 
         Paragraph1 = "The British Rail Class 08 is a class of diesel-electric shunting locomotive builtby British Railways (BR). " +
 "As the standard BR general-purpose diesel shunter, the class became a familiar sight at major stations and freight yards. " +

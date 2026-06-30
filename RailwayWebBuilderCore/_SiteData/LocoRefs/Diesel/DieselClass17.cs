@@ -13,6 +13,13 @@ public class DieselClass17 : DieselClassBase
         Builder = "Clayton Equipment Company & Beyer, Peacock & Co.";
         BuildDate = "1962-1965";
         TotalProduced = 117;
+        WheelArrangement = "Bo-Bo";
+        Engine = "Paxman 6ZHXL (later MAN L12V18/21S)";
+        Power = "900 hp (671 kW)";
+        MaxSpeed = "60 mph (97 km/h)";
+        TractiveEffort = "35,000 lbf (156 kN)";
+        LocoWeight = "68 t";
+        Length = "45 ft 0 in (13.72 m)";
 
         Paragraph1 = "The British Rail Class 17 (also known as the Clayton Type 1) was a class of 117 Bo-Bo " +
             "diesel-electric locomotives built 1962–1965 by Clayton Equipment Company and their sub-contractor Beyer, Peacock & Co., " +

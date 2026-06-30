@@ -13,6 +13,14 @@ public class DieselClass37 : DieselClassBase
         Builder = "English Electric at Vulcan Foundry and Robert Stephenson and Hawthorns";
         BuildDate = "1960–1965";
         TotalProduced = 309;
+        Designer = "English Electric";
+        WheelArrangement = "Co-Co";
+        Engine = "English Electric 12CSVT";
+        Power = "1,750 hp (1,305 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "55,500 lbf (247 kN)";
+        LocoWeight = "102–108 t";
+        Length = "61 ft 6 in (18.75 m)";
 
         Paragraph1 = "The British Rail Class 37 is a diesel-electric locomotive. Also known as the English Electric Type 3," +
                        "the class was ordered as part of the British Rail modernisation plan. They were numbered in two series, " +

@@ -13,6 +13,10 @@ public class DieselClass222 : DieselClassBase
         Builder = "Bombardier Transportation";
         BuildDate = "2004–2005";
         TotalProduced = 23;
+        Designer = "Bombardier Transportation";
+        Engine = "MTU 6H1800R83 (per car)";
+        Power = "560 kW per car";
+        MaxSpeed = "125 mph (201 km/h)";
 
         Paragraph1 = "The British Rail Class 222 Meridian is a class of high-speed diesel multiple unit (DMU) built by Bombardier Transportation at Bruges, Belgium between 2004 and 2005. " +
             "The class operates on the Midland Main Line, running services between London St Pancras and Nottingham, Derby and Sheffield. " +

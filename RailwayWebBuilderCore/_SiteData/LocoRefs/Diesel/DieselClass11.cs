@@ -13,6 +13,12 @@ public class DieselClass11 : DieselClassBase
         Builder = "British Railways,Crewe Works,Darlington Works,Derby Works,Doncaster Works,Horwich Works";
         BuildDate = "1945–1952";
         TotalProduced = 57;
+        WheelArrangement = "0-6-0";
+        Engine = "English Electric 6KT";
+        Power = "400 hp (298 kW)";
+        MaxSpeed = "20 mph (32 km/h)";
+        TractiveEffort = "35,000 lbf (156 kN)";
+        LocoWeight = "49 t";
 
         Paragraph1 = "The British Rail Class 11 diesel shunting locomotives were built between 1945 and 1952 by Harland and Wolff, Vulcan Foundry and the English Electric Company. " +
             "They were a development of the experimental LMS diesel shunters from the 1930s and were a predecessor to the standard Class 08. " +

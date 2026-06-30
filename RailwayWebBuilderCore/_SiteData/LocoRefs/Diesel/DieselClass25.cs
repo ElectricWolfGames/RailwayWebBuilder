@@ -13,6 +13,14 @@ public class DieselClass25 : DieselClassBase
         Builder = "British Railways' Crewe Works, Darlington Works and Derby Works; Beyer, Peacock & Co.";
         BuildDate = "1961–1967";
         TotalProduced = 327;
+        Designer = "BR Derby Works";
+        WheelArrangement = "Bo-Bo";
+        Engine = "Sulzer 6LDA28-B";
+        Power = "1,250 hp (932 kW)";
+        MaxSpeed = "90 mph (145 km/h)";
+        TractiveEffort = "45,000 lbf (200 kN)";
+        LocoWeight = "70 t 12 cwt";
+        Length = "50 ft 6 in (15.39 m)";
 
         Paragraph1 = "The British Rail Class 25 diesel locomotives, also known as Sulzer Type 2 were a class of 327 locomotives built " +
             "between 1961 and 1967 for British Rail. They were numbered in two series, D5151-D5299 and D7500-D7677";

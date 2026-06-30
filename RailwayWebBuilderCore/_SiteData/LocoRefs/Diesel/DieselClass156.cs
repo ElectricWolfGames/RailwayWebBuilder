@@ -13,6 +13,12 @@ public class DieselClass156 : DieselClassBase
         Builder = "Metro-Cammell";
         BuildDate = "1987–1989";
         TotalProduced = 114;
+        Designer = "Metro-Cammell";
+        Engine = "Cummins NT855R5 or Perkins 2006TWH";
+        Power = "285 hp (213 kW) per car";
+        MaxSpeed = "75 mph (121 km/h)";
+        LocoWeight = "38.7 t";
+        Length = "75 ft 6 in (23.01 m)";
 
         Paragraph1 = "The British Rail Class 156 Super Sprinter is a class of diesel multiple unit (DMU) built by Metro-Cammell at Washwood Heath, Birmingham between 1987 and 1989. " +
             "A total of 114 vehicles (57 two-car units) were built for provincial and regional passenger services across the British Rail network. " +

@@ -11,9 +11,11 @@ public class DieselClass101 : DieselClassBase
         StockType = StockTypes.Diesel;
 
         PowerType = "Diesel";
-        Builder = "";
+        Builder = "Metro-Cammell";
         BuildDate = "1956–1960";
         TotalProduced = 527;
+        Designer = "Metro-Cammell";
+        MaxSpeed = "70 mph (113 km/h)";
 
         Paragraph1 = "The British Rail Classes 101 and 102 diesel mechanical multiple units were built by Metro-Cammell " +
             "at Washwood Heath in Birmingham, England from 1956 to 1959, following construction of a series of prototype units. " +

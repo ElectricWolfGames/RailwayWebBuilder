@@ -32,6 +32,11 @@ public static class Constants
     public const string LocoDesigners = _LocomotiveName + @"\Designers";
     public const string LocoBuilders = _LocomotiveName + @"\Builders";
     public const string LocoWheelArrangements = _LocomotiveName + @"\WheelArrangements";
+    public const string DieselDesigners = _LocomotiveName + @"\DieselDesigners";
+    public const string DieselBuilders = _LocomotiveName + @"\DieselBuilders";
+    public const string DieselWheelArrangements = _LocomotiveName + @"\DieselWheelArrangements";
+    public const string DieselMaxSpeeds = _LocomotiveName + @"\DieselMaxSpeeds";
+    public const string DieselPowers = _LocomotiveName + @"\DieselPowers";
     public const string StandardClasses = "StandardClasses";
     public const string StockVideos = @"StockVideos\";
 }

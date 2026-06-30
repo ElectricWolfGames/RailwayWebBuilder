@@ -14,6 +14,14 @@ public class DieselClass55 : DieselClassBase
         Builder = "English Electric at Vulcan Foundry";
         BuildDate = "1961-1962";
         TotalProduced = 22;
+        Designer = "English Electric";
+        WheelArrangement = "Co-Co";
+        Engine = "2 × Napier Deltic 18-25";
+        Power = "3,300 hp (2,462 kW)";
+        MaxSpeed = "100 mph (161 km/h)";
+        TractiveEffort = "50,000 lbf (222 kN)";
+        LocoWeight = "100 t";
+        Length = "69 ft 6 in (21.18 m)";
 
         Paragraph1 = "The British Rail Class 55, also known as a Deltic, is a class of diesel locomotive built in 1961 and 1962 by English Electric for British Railways. " +
                         "They were designed for the high-speed express passenger services on the East Coast Main Line (ECML) between Edinburgh and London King's Cross. " +
