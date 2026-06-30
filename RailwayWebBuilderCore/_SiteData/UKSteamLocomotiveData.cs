@@ -154,6 +154,22 @@ public static class UKSteamLocomotiveData
         ["Wilson Worsdell"] = "Thomas William Worsdell (1838–1916) and his brother Wilson Worsdell (1850–1920) were successive Chief Mechanical Engineers of the North Eastern Railway. Wilson's Class P3 (LNER J27) freight 0-6-0 was one of the most successful pre-Grouping freight designs, with examples lasting into the 1960s.",
         ["John McIntosh"] = "John Farquharson McIntosh (1846–1918) was Locomotive Superintendent of the Caledonian Railway from 1895 to 1914. His Dunalastair series of express 4-4-0s was influential across Europe, and his 439 Class 0-4-4T tanks were the last steam locomotives to work in everyday BR passenger service (until 1962).",
         ["Hunslet Engine Company"] = "The Hunslet Engine Company (founded 1864) was a Leeds-based locomotive manufacturer that produced industrial, colliery, and military locomotives. Their WD Austerity 0-6-0ST design was built in large numbers for the War Department during World War Two and many were later acquired by the LNER and other operators.",
+        ["John Ramsbottom"] = "John Ramsbottom (1814–1897) was Locomotive Superintendent of the London and North Western Railway from 1857 to 1871. He invented the Ramsbottom safety valve and the water trough (allowing locomotives to pick up water without stopping), and his DX Goods 0-6-0 became one of the most numerous classes of the Victorian era with over 940 built.",
+        ["Patrick Stirling"] = "Patrick Stirling (1820–1895) was Locomotive Superintendent of the Great Northern Railway from 1866 until his death in 1895. He is best known for his graceful 8-foot Single 4-2-2 express locomotives, particularly No. 1, which regularly hauled the Flying Scotsman express and survives preserved at the National Railway Museum.",
+        ["David Jones"] = "David Jones (1834–1906) was Locomotive Superintendent of the Highland Railway from 1870 to 1896. He is notable for designing the Jones Goods 4-6-0 in 1894 — the first 4-6-0 type locomotive to run in Britain — breaking new ground with a wheel arrangement that would later be adopted by virtually every major British railway.",
+        ["William Stroudley"] = "William Stroudley (1833–1889) was Locomotive Superintendent of the London, Brighton and South Coast Railway from 1870 until his death in 1889. He imposed strict standardisation and introduced the distinctive Stroudley yellow ochre livery. His most celebrated design is the diminutive Terrier 0-6-0T, several of which remain in active preservation today.",
+        ["Samuel Johnson"] = "Samuel Waite Johnson (1831–1912) was Locomotive Superintendent of the Midland Railway from 1873 to 1903. He produced the elegant 'Midland Spinner' single-driver 4-2-2s and a series of refined 4-4-0 passenger engines. He also continued developing the Midland's distinctive aesthetic of beautifully proportioned, Crimson Lake–painted locomotives.",
+        ["William Dean"] = "William Dean (1840–1905) was Locomotive Superintendent of the Great Western Railway from 1877 to 1902. His reign bridged the Victorian and modern eras of GWR locomotive design. His later 4-4-0 locomotives pointed toward the Saint and Star classes, and he mentored George Jackson Churchward, who would revolutionise British locomotive engineering.",
+        ["William Adams"] = "William Adams (1823–1904) was Locomotive Superintendent of the London and South Western Railway from 1878 to 1895. He designed capable and reliable 4-4-0 express and 0-4-2 tank engines, and introduced the Adams Radial axle which improved stability at speed. Several of his radial tank locomotives survived in industrial service into the 1960s.",
+        ["James Stirling"] = "James Stirling (1835–1917) was Locomotive Superintendent of the South Eastern Railway from 1878 to 1898, and brother of Patrick Stirling. He designed the '0' class 0-6-0 freight engines and 'F' class 4-4-0 express locomotives that formed the backbone of SER motive power through the end of the nineteenth century.",
+        ["T. W. Worsdell"] = "Thomas William Worsdell (1838–1916) was Locomotive Superintendent of the North Eastern Railway from 1885 to 1890. He experimented with two-cylinder compound locomotives and introduced several useful classes before handing over to his brother Wilson Worsdell. His Class C (later LNER J21) 0-6-0 was widely used for NER freight work.",
+        ["James Holden"] = "James Holden (1837–1925) was Locomotive Superintendent of the Great Eastern Railway from 1885 to 1907. He designed the handsome 'Claud Hamilton' 4-4-0 express locomotives and, most famously, proved in 1891 that a Great Eastern 2-4-0 could outrun a horse-drawn tram — a publicity triumph for the railway.",
+        ["R. J. Billinton"] = "Robert John Billinton (1845–1904) was Locomotive Superintendent of the London, Brighton and South Coast Railway from 1890 to 1904. He succeeded Stroudley and replaced the yellow ochre livery with dark brown. His B2 and B4 4-4-0 classes were competent express engines for LBSCR coastal and London services.",
+        ["Dugald Drummond"] = "Dugald Drummond (1840–1912) was Locomotive Superintendent of the London and South Western Railway from 1895 to 1912. His T9 'Greyhound' 4-4-0s were among the most elegant and successful express locomotives of the Edwardian era, earning a reputation for sustained high-speed running on LSWR expresses to Bournemouth and Exeter.",
+        ["H. A. Ivatt"] = "Henry Alfred Ivatt (1851–1923) was Locomotive Superintendent of the Great Northern Railway from 1896 to 1911 and father of H. G. Ivatt. He introduced the Atlantic (4-4-2) type to Britain, initially as small-boilered engines (C1) and then the very successful large-boilered 'Klondike' Atlantics that dominated GNR express work for two decades.",
+        ["Harry Wainwright"] = "Harry Smith Wainwright (1864–1925) was Locomotive Superintendent of the South Eastern & Chatham Railway from 1899 to 1913. His D and E class 4-4-0 locomotives were striking machines in the SECR's distinctive green livery, and were considered handsome even by the standards of the Edwardian locomotive renaissance.",
+        ["Richard Deeley"] = "Richard Mountford Deeley (1855–1944) was Chief Mechanical Engineer of the Midland Railway from 1904 to 1909. His tenure was brief but he succeeded in simplifying Johnson's compound locomotive design into the reliable Midland Compound 4-4-0, of which Fowler later built further batches for the LMS. 45 MR Compounds passed into LMS ownership.",
+        ["F. W. Hawksworth"] = "Frederick William Hawksworth (1884–1976) was Chief Mechanical Engineer of the Great Western Railway from 1941 to 1947. He presided over wartime conditions with pragmatism, producing the Modified Hall and the County class 4-6-0 — the latter being the most powerful two-cylinder express engine the GWR ever built — before nationalisation ended independent GWR locomotive design.",
     };
 
     public static readonly IReadOnlyDictionary<string, string> WheelArrangementDescriptions = new Dictionary<string, string>
@@ -202,6 +218,68 @@ public static class UKSteamLocomotiveData
         ["St Rollox Works"] = "St Rollox Works (Glasgow) was the principal locomotive works of the Caledonian Railway. Under McIntosh it produced the Dunalastair express 4-4-0s and the 439 class suburban tank engines.",
         ["Hunslet Engine Company"] = "Hunslet Engine Company (Leeds, founded 1864) was a major manufacturer of industrial, colliery, and military locomotives. Their WD Austerity 0-6-0ST was produced in large numbers for the War Department and later used by the LNER and other operators.",
         ["A1 Steam Locomotive Trust"] = "The A1 Steam Locomotive Trust was founded in 1990 to construct a new Peppercorn A1 Pacific. Tornado (60163) was completed at Darlington in 2008 — the first new main-line steam locomotive built in Britain since 1960.",
+    };
+
+    // ── All known UK steam CMEs / Locomotive Superintendents, sorted by ActiveFrom ──
+    public static readonly IReadOnlyList<DesignerInfo> AllDesigners = new List<DesignerInfo>
+    {
+        new() { Name = "John Ramsbottom",        RailwayName = "London & North Western Railway",      RailwayCode = "LNWR", ActiveFrom = 1857, ActiveTo = 1871, Role = "Locomotive Superintendent" },
+        new() { Name = "Patrick Stirling",        RailwayName = "Great Northern Railway",              RailwayCode = "GNR",  ActiveFrom = 1866, ActiveTo = 1895, Role = "Locomotive Superintendent" },
+        new() { Name = "David Jones",             RailwayName = "Highland Railway",                    RailwayCode = "HR",   ActiveFrom = 1870, ActiveTo = 1896, Role = "Locomotive Superintendent" },
+        new() { Name = "William Stroudley",       RailwayName = "London, Brighton & South Coast Rly", RailwayCode = "LBSCR",ActiveFrom = 1870, ActiveTo = 1889, Role = "Locomotive Superintendent" },
+        new() { Name = "F. W. Webb",              RailwayName = "London & North Western Railway",      RailwayCode = "LNWR", ActiveFrom = 1871, ActiveTo = 1903, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Samuel Johnson",          RailwayName = "Midland Railway",                     RailwayCode = "MR",   ActiveFrom = 1873, ActiveTo = 1903, Role = "Locomotive Superintendent" },
+        new() { Name = "William Dean",            RailwayName = "Great Western Railway",               RailwayCode = "GWR",  ActiveFrom = 1877, ActiveTo = 1902, Role = "Locomotive Superintendent" },
+        new() { Name = "William Adams",           RailwayName = "London & South Western Railway",      RailwayCode = "LSWR", ActiveFrom = 1878, ActiveTo = 1895, Role = "Locomotive Superintendent" },
+        new() { Name = "James Stirling",          RailwayName = "South Eastern Railway",               RailwayCode = "SER",  ActiveFrom = 1878, ActiveTo = 1898, Role = "Locomotive Superintendent" },
+        new() { Name = "T. W. Worsdell",          RailwayName = "North Eastern Railway",               RailwayCode = "NER",  ActiveFrom = 1885, ActiveTo = 1890, Role = "Locomotive Superintendent" },
+        new() { Name = "James Holden",            RailwayName = "Great Eastern Railway",               RailwayCode = "GER",  ActiveFrom = 1885, ActiveTo = 1907, Role = "Locomotive Superintendent" },
+        new() { Name = "John Aspinall",           RailwayName = "Lancashire & Yorkshire Railway",      RailwayCode = "LYR",  ActiveFrom = 1886, ActiveTo = 1899, Role = "Locomotive Superintendent" },
+        new() { Name = "R. J. Billinton",         RailwayName = "London, Brighton & South Coast Rly", RailwayCode = "LBSCR",ActiveFrom = 1890, ActiveTo = 1904, Role = "Locomotive Superintendent" },
+        new() { Name = "Wilson Worsdell",         RailwayName = "North Eastern Railway",               RailwayCode = "NER",  ActiveFrom = 1890, ActiveTo = 1910, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Dugald Drummond",         RailwayName = "London & South Western Railway",      RailwayCode = "LSWR", ActiveFrom = 1895, ActiveTo = 1912, Role = "Locomotive Superintendent" },
+        new() { Name = "John McIntosh",           RailwayName = "Caledonian Railway",                  RailwayCode = "CR",   ActiveFrom = 1895, ActiveTo = 1914, Role = "Locomotive Superintendent" },
+        new() { Name = "H. A. Ivatt",             RailwayName = "Great Northern Railway",              RailwayCode = "GNR",  ActiveFrom = 1896, ActiveTo = 1911, Role = "Locomotive Superintendent" },
+        new() { Name = "Harry Wainwright",        RailwayName = "South Eastern & Chatham Railway",     RailwayCode = "SECR", ActiveFrom = 1899, ActiveTo = 1913, Role = "Locomotive Superintendent" },
+        new() { Name = "John G. Robinson",        RailwayName = "Great Central Railway",               RailwayCode = "GCR",  ActiveFrom = 1900, ActiveTo = 1922, Role = "Chief Mechanical Engineer" },
+        new() { Name = "George Jackson Churchward",RailwayName = "Great Western Railway",              RailwayCode = "GWR",  ActiveFrom = 1902, ActiveTo = 1921, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Richard Deeley",          RailwayName = "Midland Railway",                     RailwayCode = "MR",   ActiveFrom = 1904, ActiveTo = 1909, Role = "Chief Mechanical Engineer" },
+        new() { Name = "George Hughes",           RailwayName = "Lancashire & Yorkshire / LMS",        RailwayCode = "LMS",  ActiveFrom = 1904, ActiveTo = 1925, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Nigel Gresley",           RailwayName = "Great Northern / LNER",               RailwayCode = "LNER", ActiveFrom = 1911, ActiveTo = 1941, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Robert Urie",             RailwayName = "London & South Western Railway",      RailwayCode = "LSWR", ActiveFrom = 1912, ActiveTo = 1922, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Richard Maunsell",        RailwayName = "SE&CR / Southern Railway",            RailwayCode = "SR",   ActiveFrom = 1913, ActiveTo = 1937, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Henry Fowler",            RailwayName = "Midland Railway / LMS",               RailwayCode = "LMS",  ActiveFrom = 1909, ActiveTo = 1931, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Charles Collett",         RailwayName = "Great Western Railway",               RailwayCode = "GWR",  ActiveFrom = 1921, ActiveTo = 1941, Role = "Chief Mechanical Engineer" },
+        new() { Name = "William Stanier",         RailwayName = "London Midland & Scottish Railway",   RailwayCode = "LMS",  ActiveFrom = 1932, ActiveTo = 1944, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Edward Thompson",         RailwayName = "London & North Eastern Railway",      RailwayCode = "LNER", ActiveFrom = 1941, ActiveTo = 1946, Role = "Chief Mechanical Engineer" },
+        new() { Name = "F. W. Hawksworth",        RailwayName = "Great Western Railway",               RailwayCode = "GWR",  ActiveFrom = 1941, ActiveTo = 1947, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Oliver Bulleid",          RailwayName = "Southern Railway",                    RailwayCode = "SR",   ActiveFrom = 1937, ActiveTo = 1948, Role = "Chief Mechanical Engineer" },
+        new() { Name = "H. G. Ivatt",             RailwayName = "London Midland & Scottish Railway",   RailwayCode = "LMS",  ActiveFrom = 1945, ActiveTo = 1947, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Arthur Peppercorn",       RailwayName = "London & North Eastern Railway",      RailwayCode = "LNER", ActiveFrom = 1946, ActiveTo = 1948, Role = "Chief Mechanical Engineer" },
+        new() { Name = "Robert Riddles",          RailwayName = "British Railways",                    RailwayCode = "BR",   ActiveFrom = 1948, ActiveTo = 1953, Role = "Member (Mechanical & Electrical Engineering)" },
+    };
+
+    // Hex colours keyed by RailwayCode — chosen to reflect each company's historic livery
+    public static readonly IReadOnlyDictionary<string, string> RailwayColors = new Dictionary<string, string>
+    {
+        ["GNR"]   = "#3d7a3d",  // GNR apple green
+        ["GWR"]   = "#005c2e",  // GWR Brunswick green
+        ["LNER"]  = "#509b2a",  // LNER apple green
+        ["LMS"]   = "#8b0000",  // LMS crimson lake
+        ["SR"]    = "#007d3e",  // SR malachite green
+        ["LBSCR"] = "#c8a428",  // LBSCR umber/ochre
+        ["LSWR"]  = "#6b8c42",  // LSWR sage green
+        ["MR"]    = "#c0003c",  // Midland Railway crimson red
+        ["LNWR"]  = "#2d2d2d",  // LNWR black
+        ["NER"]   = "#4a6741",  // NER olive green
+        ["GCR"]   = "#7b3300",  // GCR chocolate/maroon
+        ["GER"]   = "#1a4d8f",  // GER royal blue
+        ["LYR"]   = "#555555",  // L&YR dark grey
+        ["HR"]    = "#8b7d4e",  // Highland Railway olive
+        ["CR"]    = "#003087",  // Caledonian blue
+        ["SECR"]  = "#9b8b58",  // SECR bronze/olive
+        ["SER"]   = "#9b8b58",  // SER (same as SECR)
+        ["BR"]    = "#1a3a6b",  // British Railways dark blue
     };
 
     // Comprehensive ordered list of every Whyte wheel arrangement used on UK steam locomotives.

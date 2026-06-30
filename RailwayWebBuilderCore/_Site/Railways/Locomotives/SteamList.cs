@@ -29,11 +29,22 @@ public class SteamList : PageDetails
 
         WebPage.Append(LocoRef.CreateHero(this));
         WebPage.Append(LocoRef.CreateGroups(this, ""));
+        WebPage.Append(CreateReferenceLinks());
         WebPage.Append(LocoRef.CreatelItemList(WebPage, StockTypes.SteamLoco));
 
         WebPage.Append("</div>");
 
         WebPage.EndBody();
         WebPage.Output();
+    }
+
+    private static string CreateReferenceLinks()
+    {
+        return @"<div class='mb-4'>
+  <h6 class='text-muted mb-2'>Browse by</h6>
+  <a href='LocoDesigners.html'    class='btn btn-outline-secondary mr-2 mb-2'>&#9998; Designers</a>
+  <a href='WheelArrangements.html' class='btn btn-outline-secondary mr-2 mb-2'>&#9900; Wheel Arrangements</a>
+  <a href='LocoBuilders.html'     class='btn btn-outline-secondary mr-2 mb-2'>&#9965; Builders</a>
+</div>";
     }
 }
