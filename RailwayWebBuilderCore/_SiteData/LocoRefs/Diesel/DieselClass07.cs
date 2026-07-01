@@ -33,6 +33,11 @@ public class DieselClass07 : DieselClassBase
         Keywords.Add("Southampton Docks");
         Keywords.Add("D2996");
         Keywords.Add("07001");
+        Keywords.Add("BR Class 07");
+        Keywords.Add("British Rail");
+        Keywords.Add("Southern Region");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

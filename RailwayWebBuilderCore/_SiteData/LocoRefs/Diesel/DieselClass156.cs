@@ -31,6 +31,9 @@ public class DieselClass156 : DieselClassBase
         Keywords.Add("DMU");
         Keywords.Add("diesel multiple unit");
         Keywords.Add("156410");
+        Keywords.Add("British Rail");
+        Keywords.Add("provincial services");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

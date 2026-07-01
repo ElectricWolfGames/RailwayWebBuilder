@@ -32,6 +32,15 @@ public class DieselClass40 : DieselClassBase
         Keywords.Add("D200");
         Keywords.Add("40106");
         Keywords.Add("Atlantic Conveyor");
+        Keywords.Add("BR Class 40");
+        Keywords.Add("British Rail");
+        Keywords.Add("English Electric");
+        Keywords.Add("1Co-Co1 diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("40106", "Atlantic Conveyor"),

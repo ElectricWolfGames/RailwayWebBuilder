@@ -32,6 +32,11 @@ public class DieselClass09 : DieselClassBase
         Keywords.Add("Darlington Works");
         Keywords.Add("Southern Region");
         Keywords.Add("09001");
+        Keywords.Add("BR Class 09");
+        Keywords.Add("British Rail");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -28,6 +28,16 @@ public class DieselClass14 : DieselClassBase
 
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 14");
+        Keywords.Add("Class 14");
+        Keywords.Add("diesel-hydraulic");
+        Keywords.Add("trip working");
+        Keywords.Add("Swindon Works");
+        Keywords.Add("D9551");
+        Keywords.Add("D9555");
+        Keywords.Add("D9525");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

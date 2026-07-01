@@ -42,6 +42,14 @@ public class SteamClassA4 : SteamClassBase
         Keywords.Add("Mallard");
         Keywords.Add("world speed record");
         Keywords.Add("East Coast Main Line");
+        Keywords.Add("LNER");
+        Keywords.Add("streamlined pacific");
+        Keywords.Add("4-6-2");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("East Coast Main Line steam");
+        Keywords.Add("Doncaster Works");
 
         LocoNumbers.AddRange(new[]
         {

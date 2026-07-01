@@ -29,6 +29,11 @@ public class DieselClass10 : DieselClassBase
         Keywords.Add("Darlington Works");
         Keywords.Add("Doncaster Works");
         Keywords.Add("10119");
+        Keywords.Add("BR Class 10");
+        Keywords.Add("British Rail");
+        Keywords.Add("D4067");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("10119"),

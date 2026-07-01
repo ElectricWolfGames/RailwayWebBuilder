@@ -34,6 +34,12 @@ public class DieselClass70 : DieselClassBase
         Keywords.Add("Freightliner");
         Keywords.Add("freight");
         Keywords.Add("70001");
+        Keywords.Add("BR Class 70");
+        Keywords.Add("Co-Co diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("intermodal");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

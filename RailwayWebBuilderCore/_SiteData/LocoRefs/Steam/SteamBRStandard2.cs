@@ -29,6 +29,15 @@ public class SteamBRStandard2 : SteamClassBase
 
         Keywords.Add("BR Standard Class 2");
         Keywords.Add("class 2");
+        Keywords.Add("Robert Riddles");
+        Keywords.Add("2-6-0");
+        Keywords.Add("78018");
+        Keywords.Add("78019");
+        Keywords.Add("British Railways");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

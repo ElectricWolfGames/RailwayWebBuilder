@@ -39,6 +39,16 @@ public class SteamBRStandard4T : SteamClassBase
         Keywords.Add("Robert Riddles");
         Keywords.Add("Standard Class 4 tank");
         Keywords.Add("80080");
+        Keywords.Add("BR Standard 4 tank");
+        Keywords.Add("BR Class 4 tank");
+        Keywords.Add("2-6-4T");
+        Keywords.Add("80079");
+        Keywords.Add("80136");
+        Keywords.Add("British Railways");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

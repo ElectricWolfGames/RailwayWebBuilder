@@ -32,6 +32,17 @@ public class DieselClass26 : DieselClassBase
 
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 26");
+        Keywords.Add("Class 26");
+        Keywords.Add("BRCW Type 2");
+        Keywords.Add("Birmingham Railway Carriage and Wagon");
+        Keywords.Add("Sulzer");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("26043");
+        Keywords.Add("Scottish Region");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

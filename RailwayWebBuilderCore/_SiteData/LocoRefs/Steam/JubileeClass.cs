@@ -35,6 +35,13 @@ public class JubileeClass : SteamClassBase
         Keywords.Add("LMS");
         Keywords.Add("45596");
         Keywords.Add("Bahamas");
+        Keywords.Add("LMS Jubilee");
+        Keywords.Add("London Midland and Scottish Railway");
+        Keywords.Add("express passenger");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

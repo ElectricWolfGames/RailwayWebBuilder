@@ -39,6 +39,13 @@ public class SteamGWR2900 : SteamClassBase
         Keywords.Add("Lady of Legend");
         Keywords.Add("2999");
         Keywords.Add("new build");
+        Keywords.Add("GWR");
+        Keywords.Add("George Jackson Churchward");
+        Keywords.Add("Didcot Railway Centre");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

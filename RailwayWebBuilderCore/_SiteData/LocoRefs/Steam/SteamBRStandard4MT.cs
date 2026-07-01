@@ -39,6 +39,14 @@ public class SteamBRStandard4MT : SteamClassBase
         Keywords.Add("Robert Riddles");
         Keywords.Add("Standard Class 4 MT");
         Keywords.Add("75069");
+        Keywords.Add("BR Standard 4MT");
+        Keywords.Add("BR Class 4");
+        Keywords.Add("4-6-0");
+        Keywords.Add("British Railways");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

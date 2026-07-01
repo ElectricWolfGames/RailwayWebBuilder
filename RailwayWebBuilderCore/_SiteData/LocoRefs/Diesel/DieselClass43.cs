@@ -32,6 +32,13 @@ public class DieselClass43 : DieselClassBase
         Keywords.Add("High Speed Train");
         Keywords.Add("43025");
         Keywords.Add("125 mph");
+        Keywords.Add("British Rail");
+        Keywords.Add("BREL");
+        Keywords.Add("Paxman Valenta");
+        Keywords.Add("diesel power car");
+        Keywords.Add("43044");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("43025"),

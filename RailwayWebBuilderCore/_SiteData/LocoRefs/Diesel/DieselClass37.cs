@@ -32,6 +32,31 @@ public class DieselClass37 : DieselClassBase
             "between the class's engine and a tractor's";
         Paragraph3 = "";
 
+        Keywords.Add("Class 37");
+        Keywords.Add("BR Class 37");
+        Keywords.Add("English Electric Type 3");
+        Keywords.Add("Tractor");
+        Keywords.Add("British Rail");
+        Keywords.Add("37009");
+        Keywords.Add("D6700");
+        Keywords.Add("37207");
+        Keywords.Add("37714");
+        Keywords.Add("37263");
+        Keywords.Add("D6808");
+        Keywords.Add("37422");
+        Keywords.Add("37612");
+        Keywords.Add("37419");
+        Keywords.Add("37558");
+        Keywords.Add("37425");
+        Keywords.Add("37402");
+        Keywords.Add("37310");
+        Keywords.Add("English Electric");
+        Keywords.Add("Co-Co diesel");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
+
         LocoNumbers.AddRange(new[] {
             new LocoDetails("37009"),
             new LocoDetails("37207"),

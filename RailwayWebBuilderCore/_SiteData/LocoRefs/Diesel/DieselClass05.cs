@@ -30,6 +30,10 @@ public class DieselClass05 : DieselClassBase
         Keywords.Add("shunter");
         Keywords.Add("D2587");
         Keywords.Add("Eastern Region");
+        Keywords.Add("BR Class 05");
+        Keywords.Add("British Rail");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

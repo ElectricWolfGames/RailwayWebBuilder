@@ -37,6 +37,12 @@ public class SteamClassA3 : SteamClassBase
         Keywords.Add("60103");
         Keywords.Add("Pacific");
         Keywords.Add("London and North Eastern Railway");
+        Keywords.Add("LNER");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("East Coast Main Line");
+        Keywords.Add("Doncaster Works");
 
         LocoNumbers.AddRange(new[]
         {

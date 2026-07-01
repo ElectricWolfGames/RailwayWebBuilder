@@ -33,6 +33,17 @@ public class DieselClass50 : DieselClassBase
         Keywords.Add("haul express passenger");
         Keywords.Add("50017");
         Keywords.Add("Electric Type 4s");
+        Keywords.Add("English Electric");
+        Keywords.Add("English Electric Type 4");
+        Keywords.Add("Co-Co diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("West Coast Main Line");
+        Keywords.Add("50035");
+        Keywords.Add("Ark Royal");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("50017"),

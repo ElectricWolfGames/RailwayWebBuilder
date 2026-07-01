@@ -30,6 +30,16 @@ public class DieselClass82 : DieselClassBase
 
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 82");
+        Keywords.Add("Class 82");
+        Keywords.Add("electric locomotive");
+        Keywords.Add("25kV AC");
+        Keywords.Add("West Coast Main Line");
+        Keywords.Add("Beyer Peacock");
+        Keywords.Add("AEI");
+        Keywords.Add("AL2");
+        Keywords.Add("Bo-Bo electric");
+        Keywords.Add("82008");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("82008"),

@@ -27,8 +27,16 @@ public class DieselClass24 : DieselClassBase
 
         Keywords.Add("Sulzer Type 2");
         Keywords.Add("British Rail");
-        Keywords.Add("English Electric Type 1");
         Keywords.Add("Class 24");
+        Keywords.Add("BR Class 24");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("D5054");
+        Keywords.Add("Phil Southern");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -35,6 +35,13 @@ public partial class DieselClass99
             Keywords.Add("Napier Deltic");
             Keywords.Add("D5910");
             Keywords.Add("Type 2");
+            Keywords.Add("BR Class 23");
+            Keywords.Add("British Rail");
+            Keywords.Add("Eastern Region");
+            Keywords.Add("Bo-Bo diesel");
+            Keywords.Add("diesel-electric");
+            Keywords.Add("diesel locomotive");
+            Keywords.Add("locomotive photo");
 
             LocoNumbers.AddRange(new[]
             {

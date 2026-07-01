@@ -38,6 +38,15 @@ public class SteamBRStandard9F : SteamClassBase
         Keywords.Add("Robert Riddles");
         Keywords.Add("Oxfordshire quarries");
         Keywords.Add("Great Central");
+        Keywords.Add("BR Standard 9F");
+        Keywords.Add("BR Class 9F");
+        Keywords.Add("2-10-0");
+        Keywords.Add("92134");
+        Keywords.Add("92214");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

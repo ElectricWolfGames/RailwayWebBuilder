@@ -40,6 +40,18 @@ public class SteamLMSClass5 : SteamClassBase
         Keywords.Add("William Stanier");
         Keywords.Add("Albert Draper");
         Keywords.Add("British Railways");
+        Keywords.Add("LMS");
+        Keywords.Add("LMS Class 5");
+        Keywords.Add("Stanier Black Five");
+        Keywords.Add("4-6-0");
+        Keywords.Add("45305");
+        Keywords.Add("45428");
+        Keywords.Add("Alderman A E Draper");
+        Keywords.Add("Eric Treacy");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

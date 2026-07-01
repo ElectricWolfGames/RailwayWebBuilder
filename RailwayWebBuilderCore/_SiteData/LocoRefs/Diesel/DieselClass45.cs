@@ -32,6 +32,15 @@ public class DieselClass45 : DieselClassBase
         Keywords.Add("Sulzer Type 4");
         Keywords.Add("Class 45");
         Keywords.Add("Peaks");
+        Keywords.Add("Midland Main Line");
+        Keywords.Add("1Co-Co1 diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("D123");
+        Keywords.Add("45105");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D123"),

@@ -32,6 +32,12 @@ public class SteamLYRClass27 : SteamClassBase
         Keywords.Add("Aspinall");
         Keywords.Add("freight");
         Keywords.Add("52322");
+        Keywords.Add("L&YR");
+        Keywords.Add("John Aspinall");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

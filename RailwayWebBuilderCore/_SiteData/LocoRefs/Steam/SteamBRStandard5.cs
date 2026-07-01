@@ -33,6 +33,16 @@ public class SteamBRStandard5 : SteamClassBase
         Keywords.Add("BR Standard Class 5");
         Keywords.Add("class 5");
         Keywords.Add("1960");
+        Keywords.Add("Robert Riddles");
+        Keywords.Add("4-6-0");
+        Keywords.Add("73156");
+        Keywords.Add("73082");
+        Keywords.Add("Camelot");
+        Keywords.Add("British Railways");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

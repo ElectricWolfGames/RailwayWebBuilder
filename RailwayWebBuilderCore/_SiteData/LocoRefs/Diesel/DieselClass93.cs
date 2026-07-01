@@ -33,6 +33,11 @@ public class DieselClass93 : DieselClassBase
         Keywords.Add("GB Railfreight");
         Keywords.Add("electric diesel battery");
         Keywords.Add("93000");
+        Keywords.Add("93001");
+        Keywords.Add("93002");
+        Keywords.Add("Bo-Bo locomotive");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

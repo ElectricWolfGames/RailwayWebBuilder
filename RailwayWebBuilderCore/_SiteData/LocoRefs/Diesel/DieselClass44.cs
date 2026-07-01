@@ -32,6 +32,16 @@ public class DieselClass44 : DieselClassBase
         Keywords.Add("British Rail");
         Keywords.Add("Class 44");
         Keywords.Add("Peaks");
+        Keywords.Add("BR Class 44");
+        Keywords.Add("Sulzer");
+        Keywords.Add("1Co-Co1 diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("Midland Main Line");
+        Keywords.Add("44004");
+        Keywords.Add("Great Gable");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("44004" , "Great Gable"),

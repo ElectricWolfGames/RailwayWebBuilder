@@ -36,6 +36,23 @@ public class DieselClass08 : DieselClassBase
         Keywords.Add("08114");
         Keywords.Add("heritage railway");
         Keywords.Add("996 built");
+        Keywords.Add("BR Class 08");
+        Keywords.Add("British Rail");
+        Keywords.Add("08220");
+        Keywords.Add("08694");
+        Keywords.Add("08706");
+        Keywords.Add("08784");
+        Keywords.Add("08922");
+        Keywords.Add("13101");
+        Keywords.Add("D3690");
+        Keywords.Add("D4137");
+        Keywords.Add("D3586");
+        Keywords.Add("08571");
+        Keywords.Add("D3290");
+        Keywords.Add("D3236");
+        Keywords.Add("shunter");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

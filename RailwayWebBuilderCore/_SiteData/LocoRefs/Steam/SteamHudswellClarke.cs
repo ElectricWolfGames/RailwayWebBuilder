@@ -22,6 +22,9 @@ public class SteamHudswellClarke : SteamClassBase
         Keywords.Add("contractor locomotive");
         Keywords.Add("Hunslet");
         Keywords.Add("No31");
+        Keywords.Add("Sir Robert McAlpine");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

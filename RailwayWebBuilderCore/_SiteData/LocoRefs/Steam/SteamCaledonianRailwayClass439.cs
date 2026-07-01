@@ -32,6 +32,12 @@ public class SteamCaledonianRailwayClass439 : SteamClassBase
         Keywords.Add("John McIntosh");
         Keywords.Add("William Pickersgill");
         Keywords.Add("No419");
+        Keywords.Add("CR");
+        Keywords.Add("Scottish steam");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -17,6 +17,9 @@ public class SteamColinMcAndrewCoy : SteamClassBase
         Keywords.Add("industrial locomotive");
         Keywords.Add("contractor locomotive");
         Keywords.Add("Victorian");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -33,6 +33,11 @@ public partial class DieselClass99 : DieselClassBase
         Keywords.Add("freight");
         Keywords.Add("EURODUAL");
         Keywords.Add("99000");
+        Keywords.Add("99001");
+        Keywords.Add("99002");
+        Keywords.Add("Co-Co locomotive");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

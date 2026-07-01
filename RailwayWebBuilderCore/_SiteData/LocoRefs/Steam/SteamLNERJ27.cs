@@ -32,6 +32,12 @@ public class SteamLNERJ27 : SteamClassBase
         Keywords.Add("freight");
         Keywords.Add("North Eastern Railway");
         Keywords.Add("65894");
+        Keywords.Add("LNER");
+        Keywords.Add("NER");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

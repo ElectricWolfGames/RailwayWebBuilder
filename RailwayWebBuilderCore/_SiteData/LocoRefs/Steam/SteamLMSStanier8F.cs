@@ -35,6 +35,18 @@ public class SteamLMSStanier8F : SteamClassBase
         Keywords.Add("London Midland and Scottish Railway");
         Keywords.Add("class 8F");
         Keywords.Add("hauling heavy freight");
+        Keywords.Add("LMS");
+        Keywords.Add("LMS 8F");
+        Keywords.Add("Stanier 8F");
+        Keywords.Add("William Stanier");
+        Keywords.Add("2-8-0");
+        Keywords.Add("48305");
+        Keywords.Add("48773");
+        Keywords.Add("GORDON");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

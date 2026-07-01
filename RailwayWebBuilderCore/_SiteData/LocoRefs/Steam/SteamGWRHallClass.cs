@@ -34,6 +34,19 @@ public class SteamGWRHallClass : SteamClassBase
         Keywords.Add("classification 5MT");
         Keywords.Add("Great Western Railway");
         Keywords.Add("Hall");
+        Keywords.Add("GWR");
+        Keywords.Add("GWR Hall Class");
+        Keywords.Add("GWR 4900 Class");
+        Keywords.Add("4-6-0");
+        Keywords.Add("6988");
+        Keywords.Add("6990");
+        Keywords.Add("Swithland Hall");
+        Keywords.Add("Witherslack Hall");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
+        Keywords.Add("Swindon Works");
 
         LocoNumbers.AddRange(new[]
         {

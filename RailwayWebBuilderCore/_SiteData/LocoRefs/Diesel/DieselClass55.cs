@@ -39,6 +39,17 @@ public class DieselClass55 : DieselClassBase
         Keywords.Add("English Electric");
         Keywords.Add("Deltic");
         Keywords.Add("Alycidon");
+        Keywords.Add("Co-Co diesel");
+        Keywords.Add("Napier Deltic engine");
+        Keywords.Add("East Coast Main Line");
+        Keywords.Add("55009");
+        Keywords.Add("55013");
+        Keywords.Add("55019");
+        Keywords.Add("D9015");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("55009"),

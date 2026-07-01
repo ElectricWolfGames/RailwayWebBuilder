@@ -18,6 +18,10 @@ public class Electric1903Autocar : DieselClassBase
         Keywords.Add("NER");
         Keywords.Add("3170");
         Keywords.Add("pioneering");
+        Keywords.Add("railcar");
+        Keywords.Add("railway history");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

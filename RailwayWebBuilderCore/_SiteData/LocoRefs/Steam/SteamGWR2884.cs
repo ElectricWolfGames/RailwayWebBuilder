@@ -41,6 +41,13 @@ public class SteamGWR2884 : SteamClassBase
         Keywords.Add("Collett");
         Keywords.Add("3802");
         Keywords.Add("3850");
+        Keywords.Add("GWR");
+        Keywords.Add("Charles Collett");
+        Keywords.Add("Swindon Works");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

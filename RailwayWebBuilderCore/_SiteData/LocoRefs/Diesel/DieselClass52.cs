@@ -29,6 +29,21 @@ public class DieselClass52 : DieselClassBase
 
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 52");
+        Keywords.Add("Western");
+        Keywords.Add("Wizzos");
+        Keywords.Add("diesel-hydraulic");
+        Keywords.Add("Western Region");
+        Keywords.Add("D1013");
+        Keywords.Add("D1015");
+        Keywords.Add("D1062");
+        Keywords.Add("Western Ranger");
+        Keywords.Add("Western Champion");
+        Keywords.Add("Western Courier");
+        Keywords.Add("Maybach");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D1013", "Western Ranger"),

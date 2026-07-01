@@ -37,6 +37,13 @@ public class SteamGWR6800GrangeClass : SteamClassBase
         Keywords.Add("6880");
         Keywords.Add("Betton Grange");
         Keywords.Add("new build");
+        Keywords.Add("GWR");
+        Keywords.Add("Charles Collett");
+        Keywords.Add("Swindon Works");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

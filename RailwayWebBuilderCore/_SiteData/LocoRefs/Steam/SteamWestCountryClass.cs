@@ -33,6 +33,16 @@ public class SteamWestCountryClass : SteamClassBase
         Keywords.Add("TamValley");
         Keywords.Add("4-6-2");
         Keywords.Add("West Country Class");
+        Keywords.Add("Oliver Bulleid");
+        Keywords.Add("Southern Railway");
+        Keywords.Add("SR");
+        Keywords.Add("Light Pacific");
+        Keywords.Add("Spam Can");
+        Keywords.Add("21C127");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

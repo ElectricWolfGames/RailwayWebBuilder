@@ -34,6 +34,12 @@ public class SteamGWR5700 : SteamClassBase
         Keywords.Add("Charles Collett");
         Keywords.Add("Great Western Railway");
         Keywords.Add("7714");
+        Keywords.Add("GWR");
+        Keywords.Add("London Transport");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

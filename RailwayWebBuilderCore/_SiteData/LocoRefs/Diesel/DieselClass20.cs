@@ -29,6 +29,21 @@ public class DieselClass20 : DieselClassBase
         Keywords.Add("English Electric Type 1");
         Keywords.Add("Choppers");
         Keywords.Add("Class 20");
+        Keywords.Add("BR Class 20");
+        Keywords.Add("English Electric");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("D8098");
+        Keywords.Add("D8154");
+        Keywords.Add("20189");
+        Keywords.Add("20048");
+        Keywords.Add("D8001");
+        Keywords.Add("20311");
+        Keywords.Add("20302");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D8098"),

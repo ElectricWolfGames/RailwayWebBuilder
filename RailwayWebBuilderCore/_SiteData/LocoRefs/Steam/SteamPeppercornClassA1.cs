@@ -39,6 +39,12 @@ public class SteamPeppercornClassA1 : SteamClassBase
         Keywords.Add("A1 Steam Locomotive Trust");
         Keywords.Add("new build");
         Keywords.Add("100 mph");
+        Keywords.Add("Arthur Peppercorn");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
+        Keywords.Add("Pacific");
 
         LocoNumbers.AddRange(new[]
         {

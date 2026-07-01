@@ -38,6 +38,18 @@ public class DieselClass31 : DieselClassBase
         Keywords.Add("Class 30");
         Keywords.Add("31466");
         Keywords.Add("D5500");
+        Keywords.Add("BR Class 31");
+        Keywords.Add("British Rail");
+        Keywords.Add("A1A-A1A diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("31210");
+        Keywords.Add("31108");
+        Keywords.Add("31289");
+        Keywords.Add("31235");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

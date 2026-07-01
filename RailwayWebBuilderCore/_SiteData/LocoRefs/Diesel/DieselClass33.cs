@@ -31,6 +31,17 @@ public class DieselClass33 : DieselClassBase
         Keywords.Add("BRCW Type 3");
         Keywords.Add("Crompton");
         Keywords.Add("Class 33");
+        Keywords.Add("Southern Region");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("33201");
+        Keywords.Add("D6508");
+        Keywords.Add("D6535");
+        Keywords.Add("33108");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

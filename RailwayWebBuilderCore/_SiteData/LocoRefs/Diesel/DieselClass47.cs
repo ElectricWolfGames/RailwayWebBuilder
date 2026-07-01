@@ -32,6 +32,21 @@ public class DieselClass47 : DieselClassBase
         Keywords.Add("Sulzer");
         Keywords.Add("most numerous diesel class");
         Keywords.Add("47292");
+        Keywords.Add("BR Class 47");
+        Keywords.Add("British Rail");
+        Keywords.Add("Co-Co diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("1705");
+        Keywords.Add("SparrowHawk");
+        Keywords.Add("47761");
+        Keywords.Add("47205");
+        Keywords.Add("47077");
+        Keywords.Add("D1842");
+        Keywords.Add("D1501");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("1705", "SparrowHawk"),

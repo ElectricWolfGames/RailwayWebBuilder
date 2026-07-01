@@ -29,6 +29,13 @@ public class WebbCoalTank : SteamClassBase
         Keywords.Add("Webb Coal Tank");
         Keywords.Add("1054");
         Keywords.Add("LNWR");
+        Keywords.Add("F. W. Webb");
+        Keywords.Add("London and North Western Railway");
+        Keywords.Add("0-6-2T");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -45,6 +45,12 @@ public class DieselClass17 : DieselClassBase
         Keywords.Add("D8568");
         Keywords.Add("Paxman 6ZHXL six-cylinder horizontal engines");
         Keywords.Add("unreliable");
+        Keywords.Add("Class 17");
+        Keywords.Add("centre cab");
+        Keywords.Add("Scottish Region");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

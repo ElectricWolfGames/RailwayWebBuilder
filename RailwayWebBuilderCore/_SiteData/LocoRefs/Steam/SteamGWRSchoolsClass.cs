@@ -32,6 +32,16 @@ public class SteamGWRSchoolsClass : SteamClassBase
         Keywords.Add("Schools class");
         Keywords.Add("Richard Maunsell");
         Keywords.Add("Repton");
+        Keywords.Add("Southern Railway");
+        Keywords.Add("SR");
+        Keywords.Add("4-4-0");
+        Keywords.Add("926");
+        Keywords.Add("30926");
+        Keywords.Add("North Yorkshire Moors Railway");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

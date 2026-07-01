@@ -40,6 +40,15 @@ public class SteamLMSIvattClass2Tank : SteamClassBase
         Keywords.Add("Leamington Spa");
         Keywords.Add("Croes Newydd");
         Keywords.Add("H. G. Ivatt");
+        Keywords.Add("LMS Ivatt Class 2 tank");
+        Keywords.Add("LMS");
+        Keywords.Add("2-6-2T");
+        Keywords.Add("41312");
+        Keywords.Add("Somerset and Dorset");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

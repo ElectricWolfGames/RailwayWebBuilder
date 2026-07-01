@@ -29,6 +29,13 @@ public class DieselClass03 : DieselClassBase
         Keywords.Add("D2120");
         Keywords.Add("03118");
         Keywords.Add("Doncaster Works");
+        Keywords.Add("BR Class 03");
+        Keywords.Add("British Rail");
+        Keywords.Add("03066");
+        Keywords.Add("03113");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         Overview = "Like other shunters of this size, the Class 03 was built for light duties where a larger locomotive was not needed, especially for shunting at locomotive and carriage depots and as station pilots, or where larger or heavier locomotives could not be used. The reduction over time in the demand for shunting locomotives meant that they were progressively withdrawn from 1968 onwards, many being sold to private industry, including three that were exported to Belgium. However, some remained in service much longer, with two examples on the Isle of Wight lasting until 1993 (mainland examples had gone by 1987). In 1998, one of the Isle of Wight locos, 03179, was reinstated by the West Anglia Great Northern for service at Hornsey depot. It was named Clive after a depot employee. It was not fitted with Train Protection & Warning System equipment and thus confined to the depot from 2002. It was operated subsequently by First Capital Connect until withdrawal in 2008. In 2016 it was sold by Govia Thameslink Railway to the Rushden, Higham and Wellingborough Railway.";
 

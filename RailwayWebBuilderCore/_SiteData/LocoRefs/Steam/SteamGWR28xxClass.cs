@@ -38,6 +38,13 @@ public class SteamGWR28xxClass : SteamClassBase
         Keywords.Add("Great Western Railway");
         Keywords.Add("heavy freight");
         Keywords.Add("2807");
+        Keywords.Add("GWR");
+        Keywords.Add("George Jackson Churchward");
+        Keywords.Add("Gloucestershire Warwickshire Steam Railway");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

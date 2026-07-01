@@ -30,6 +30,15 @@ public class DieselClass46 : DieselClassBase
         Keywords.Add("British Rail Class 46");
         Keywords.Add("Class 46");
         Keywords.Add("Peaks");
+        Keywords.Add("Sulzer");
+        Keywords.Add("1Co-Co1 diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("46010");
+        Keywords.Add("D182");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("46010"),

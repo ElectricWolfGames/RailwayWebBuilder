@@ -35,6 +35,11 @@ public class SteamLNERThompsonClassB1 : SteamClassBase
         Keywords.Add("mixed traffic");
         Keywords.Add("London and North Eastern Railway");
         Keywords.Add("1264");
+        Keywords.Add("LNER");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

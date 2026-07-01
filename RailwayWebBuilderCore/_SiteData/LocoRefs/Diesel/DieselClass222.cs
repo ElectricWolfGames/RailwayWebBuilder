@@ -30,6 +30,11 @@ public class DieselClass222 : DieselClassBase
         Keywords.Add("Midland Main Line");
         Keywords.Add("high speed");
         Keywords.Add("222000");
+        Keywords.Add("diesel multiple unit");
+        Keywords.Add("St Pancras");
+        Keywords.Add("Nottingham");
+        Keywords.Add("Sheffield");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

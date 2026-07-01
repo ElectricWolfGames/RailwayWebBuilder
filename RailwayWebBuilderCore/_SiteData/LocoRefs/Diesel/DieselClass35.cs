@@ -29,6 +29,16 @@ public class DieselClass35 : DieselClassBase
 
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 35");
+        Keywords.Add("Hymek");
+        Keywords.Add("diesel-hydraulic");
+        Keywords.Add("Western Region");
+        Keywords.Add("B-B diesel");
+        Keywords.Add("Beyer Peacock");
+        Keywords.Add("D7076");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D7076"),

@@ -35,6 +35,15 @@ public class SteamClassJ94 : SteamClassBase
         Keywords.Add("Hunslet Engine Company");
         Keywords.Add("Hudswell Clarke");
         Keywords.Add("BR: 4F");
+        Keywords.Add("LNER J94");
+        Keywords.Add("War Department Austerity");
+        Keywords.Add("0-6-0ST");
+        Keywords.Add("68067");
+        Keywords.Add("saddle tank");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -31,6 +31,11 @@ public class DieselClass02 : DieselClassBase
         Keywords.Add("shunter");
         Keywords.Add("D2868");
         Keywords.Add("02003");
+        Keywords.Add("BR Class 02");
+        Keywords.Add("British Rail");
+        Keywords.Add("dock shunter");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

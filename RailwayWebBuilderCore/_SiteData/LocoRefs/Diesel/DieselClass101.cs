@@ -29,6 +29,14 @@ public class DieselClass101 : DieselClassBase
         Keywords.Add("Metro-Cammell");
         Keywords.Add("most successful and longest-lived of BR");
         Keywords.Add("First Generation DMUs");
+        Keywords.Add("Class 101");
+        Keywords.Add("BR Class 101");
+        Keywords.Add("British Rail");
+        Keywords.Add("DMU");
+        Keywords.Add("50203");
+        Keywords.Add("E51427");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

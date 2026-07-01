@@ -34,6 +34,16 @@ public class SteamBattleofBritain : SteamClassBase
         Keywords.Add("257 Squadron");
         Keywords.Add("34072");
         Keywords.Add("Battle of Britain");
+        Keywords.Add("Oliver Bulleid");
+        Keywords.Add("Southern Railway");
+        Keywords.Add("SR");
+        Keywords.Add("Light Pacific");
+        Keywords.Add("Spam Can");
+        Keywords.Add("4-6-2");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

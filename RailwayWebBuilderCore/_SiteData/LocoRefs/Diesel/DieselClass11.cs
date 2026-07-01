@@ -31,6 +31,11 @@ public class DieselClass11 : DieselClassBase
         Keywords.Add("English Electric");
         Keywords.Add("12139");
         Keywords.Add("12077");
+        Keywords.Add("BR Class 11");
+        Keywords.Add("British Rail");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

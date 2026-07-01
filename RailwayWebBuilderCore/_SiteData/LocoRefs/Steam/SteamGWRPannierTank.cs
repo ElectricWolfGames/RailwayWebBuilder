@@ -35,6 +35,13 @@ public class SteamGWRPannierTank : SteamClassBase
         Keywords.Add("Great Western Railway");
         Keywords.Add("dock shunting");
         Keywords.Add("1369");
+        Keywords.Add("GWR");
+        Keywords.Add("Charles Collett");
+        Keywords.Add("South Devon Railway");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

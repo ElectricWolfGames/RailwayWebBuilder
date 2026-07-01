@@ -35,6 +35,13 @@ public class LMSStanierMogul : SteamClassBase
         Keywords.Add("2-6-0");
         Keywords.Add("LMS");
         Keywords.Add("13268");
+        Keywords.Add("London Midland and Scottish Railway");
+        Keywords.Add("George Hughes");
+        Keywords.Add("Henry Fowler");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -21,6 +21,9 @@ public class DieselRustonAndHornsby : DieselClassBase
         Keywords.Add("diesel-mechanical");
         Keywords.Add("319290");
         Keywords.Add("Iris");
+        Keywords.Add("Ruston Hornsby");
+        Keywords.Add("preserved locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("319290", "Iris"),

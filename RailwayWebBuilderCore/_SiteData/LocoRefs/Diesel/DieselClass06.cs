@@ -30,6 +30,11 @@ public class DieselClass06 : DieselClassBase
         Keywords.Add("shunter");
         Keywords.Add("Scottish Region");
         Keywords.Add("06003");
+        Keywords.Add("BR Class 06");
+        Keywords.Add("British Rail");
+        Keywords.Add("Andrew Barclay Sons");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("locomotive photo");
 
         LocoNumbers.AddRange(new[]
         {

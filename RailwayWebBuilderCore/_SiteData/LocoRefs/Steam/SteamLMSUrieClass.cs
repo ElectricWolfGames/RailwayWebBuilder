@@ -36,6 +36,12 @@ public class SteamLMSUrieClass : SteamClassBase
         Keywords.Add("Southern Railway");
         Keywords.Add("freight");
         Keywords.Add("506");
+        Keywords.Add("SR");
+        Keywords.Add("LSWR");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

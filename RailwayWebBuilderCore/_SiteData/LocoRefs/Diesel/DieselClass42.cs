@@ -33,6 +33,16 @@ public class DieselClass42 : DieselClassBase
         Keywords.Add("Western Region");
         Keywords.Add("D821");
         Keywords.Add("D832");
+        Keywords.Add("BR Class 42");
+        Keywords.Add("British Rail");
+        Keywords.Add("B-B diesel");
+        Keywords.Add("Maybach");
+        Keywords.Add("GreyHound");
+        Keywords.Add("Onslaught");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[] {
             new LocoDetails("D821", "GreyHound"),

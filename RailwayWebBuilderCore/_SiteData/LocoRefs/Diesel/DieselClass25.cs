@@ -38,9 +38,16 @@ public class DieselClass25 : DieselClassBase
         Keywords.Add("British Rail");
         Keywords.Add("British Rail Class 25");
         Keywords.Add("SulzerType2");
-        Keywords.Add("Class 23");
+        Keywords.Add("Class 25");
         Keywords.Add("D5185");
-        Keywords.Add("Sulzer six-cylinder engine ");
+        Keywords.Add("Sulzer six-cylinder engine");
+        Keywords.Add("Bo-Bo diesel");
+        Keywords.Add("diesel-electric");
+        Keywords.Add("D7628");
+        Keywords.Add("diesel locomotive");
+        Keywords.Add("BR diesel");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

@@ -32,6 +32,11 @@ public class SteamGWR5600 : SteamClassBase
         Keywords.Add("Great Western Railway");
         Keywords.Add("Welsh valleys");
         Keywords.Add("6695");
+        Keywords.Add("GWR");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {

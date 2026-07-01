@@ -35,6 +35,12 @@ public class DirectorClass : SteamClassBase
         Keywords.Add("4-4-0");
         Keywords.Add("GCR 506");
         Keywords.Add("Butler Henderson");
+        Keywords.Add("LNER");
+        Keywords.Add("GCR");
+        Keywords.Add("steam locomotive");
+        Keywords.Add("preserved steam");
+        Keywords.Add("locomotive photo");
+        Keywords.Add("heritage railway");
 
         LocoNumbers.AddRange(new[]
         {
