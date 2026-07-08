@@ -45,6 +45,10 @@ public class RailWayHome : PageDetails
 
         IOrderedEnumerable<IBlog> ordedBlogs = blogs.Blogs.OrderByDescending(x => x.Date);
         WebPage.Append(AddCarousel(ordedBlogs.ToList()));
+
+        WebPage.Append(AddWelcomeSection());
+        WebPage.Append(AddSectionCards());
+
         WebPage.Append("<main role='main' class='container'>");
         WebPage.Append("<div class='col-md-8 blog-main'>");
         WebPage.Append("<div class='row'>");
@@ -68,8 +72,10 @@ public class RailWayHome : PageDetails
         stringBuilder.Text("			<h4>Latest Updates</h4>");
         stringBuilder.Text("			<ul class='timeline'>");
 
+        int count = 0;
         foreach (IBlog blog in ordedBlogs)
         {
+            if (count >= 15) break;
             if (!string.IsNullOrWhiteSpace(blog.Name))
             {
                 stringBuilder.Text("				<li>");
@@ -83,6 +89,7 @@ public class RailWayHome : PageDetails
                     stringBuilder.Text($"      <a href='{blog.Link}'><img class='rounded ' width='320px' height ='240px'src='{keyImage}'></a>");
                 }
                 stringBuilder.Text("				</li>");
+                count++;
             }
         }
 
@@ -146,5 +153,74 @@ public class RailWayHome : PageDetails
         carouselHtml.Text("");
         carouselHtml.Text("<br/><br/>");
         return carouselHtml.Output();
+    }
+
+    private static string AddSectionCards()
+    {
+        return @"<div class='row mb-5'>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#127947; Model Layouts</h5>
+        <p class='card-text'>Follow the build of Cattington and the new Misty Valley Railway — from bare baseboards to full scenic layouts.</p>
+        <a href='MyLayouts/index.html' class='btn btn-sm btn-outline-primary mr-2'>Cattington</a>
+        <a href='MistyValleyRailway/index.html' class='btn btn-sm btn-outline-primary'>Misty Valley</a>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#128642; Loco Reference</h5>
+        <p class='card-text'>Browse the photo reference collection of steam and diesel locomotives, with specs and class information.</p>
+        <a href='Locomotives/LocoRef.html' class='btn btn-sm btn-outline-primary'>View Collection</a>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#9654; Heritage Railways</h5>
+        <p class='card-text'>Videos from visits to preserved railways across the UK — steam galas, diesel events, and scenic journeys.</p>
+        <a href='HeritageRailways/HeritageRailways.html' class='btn btn-sm btn-outline-primary'>Watch Videos</a>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#127881; Model Events</h5>
+        <p class='card-text'>Coverage of model railway exhibitions and shows from clubs across the Midlands and beyond.</p>
+        <a href='ModelEvents/index.html' class='btn btn-sm btn-outline-primary'>View Events</a>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#128247; Stations</h5>
+        <p class='card-text'>Photo galleries of heritage railway stations — platforms, signals, and architecture captured in detail.</p>
+        <a href='Stations/index.html' class='btn btn-sm btn-outline-primary'>Browse Stations</a>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4 mb-3'>
+    <div class='card h-100'>
+      <div class='card-body'>
+        <h5 class='card-title'>&#128250; Layout By Layout</h5>
+        <p class='card-text'>A close-up look at layouts from model shows — exploring the detail and craftsmanship of each exhibit.</p>
+        <a href='LayoutByLayout/index.html' class='btn btn-sm btn-outline-primary'>Explore</a>
+      </div>
+    </div>
+  </div>
+</div>";
+    }
+
+    private static string AddWelcomeSection()
+    {
+        return @"<div class='jumbotron py-4 mb-4'>
+  <h1 class='display-5'>Welcome to Karl n Debbie Railway World</h1>
+  <p class='lead'>A collection of model railway layouts, heritage railway visits, locomotive photos, and model show coverage from across the UK.</p>
+</div>";
     }
 }

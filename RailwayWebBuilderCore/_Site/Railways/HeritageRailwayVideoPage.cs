@@ -11,8 +11,6 @@ namespace RailwayWebBuilderCore._Site.Railways.HeritageRailways;
 [Navigation(NavigationTypes.Main, 2)]
 public class HeritageRailwayVideoPage : PageDetails
 {
-    public HeritageRailwayVisit Visit { get; set; }
-
     public HeritageRailwayVideoPage()
     {
         WebPage = new WebPage(this);
@@ -21,6 +19,8 @@ public class HeritageRailwayVideoPage : PageDetails
         DontShowNavigation = true;
         DontBuildPage = true;
     }
+
+    public HeritageRailwayVisit Visit { get; set; }
 
     public override void CreatePage()
     {
