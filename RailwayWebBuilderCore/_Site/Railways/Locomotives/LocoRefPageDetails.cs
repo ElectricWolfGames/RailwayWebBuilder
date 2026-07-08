@@ -5,11 +5,11 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData;
 using RailwayWebBuilderCore._SiteData.LocoRefs;
 using RailwayWebBuilderCore._SiteData.LocoRefs.Diesel;
-using DieselBase = RailwayWebBuilderCore._SiteData.LocoRefs.Diesel.DieselClassBase;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Helpers;
 using System.IO;
 using System.Text;
+using DieselBase = RailwayWebBuilderCore._SiteData.LocoRefs.Diesel.DieselClassBase;
 
 namespace RailwayWebBuilderCore._Site.Railways.Locomotives;
 
@@ -71,23 +71,39 @@ public class LocoRefPageDetails : PageDetails
         WebPage.Output();
     }
 
-    private string CreateLocoNavigation()
+    private static void AppendBuilderTile(StringBuilder sb, string builder)
     {
-        var sb = new StringBuilder();
-        sb.AppendLine("<div class='d-flex justify-content-between mt-4 mb-2'>");
-
-        if (!string.IsNullOrEmpty(PrevLocoNumber))
-            sb.AppendLine($"<a href='{PrevLocoNumber}.html' class='btn btn-outline-secondary'>&larr; {PrevLocoNumber}</a>");
+        if (string.IsNullOrEmpty(builder))
+            return;
+        // Only link when there is a single builder (no comma-separated list)
+        if (!builder.Contains(','))
+        {
+            AppendSpecTileLink(sb, "Builder", builder, $"../Builders/{DesignerListPage.ToSlug(builder)}.html");
+        }
         else
-            sb.AppendLine("<span></span>");
+        {
+            AppendSpecTile(sb, "Builder", builder);
+        }
+    }
 
-        if (!string.IsNullOrEmpty(NextLocoNumber))
-            sb.AppendLine($"<a href='{NextLocoNumber}.html' class='btn btn-outline-secondary'>{NextLocoNumber} &rarr;</a>");
-        else
-            sb.AppendLine("<span></span>");
-
+    private static void AppendSpecTile(StringBuilder sb, string label, string value)
+    {
+        if (string.IsNullOrEmpty(value))
+            return;
+        sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+        sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
+        sb.AppendLine($"<span class='font-weight-bold'>{value}</span>");
         sb.AppendLine("</div>");
-        return sb.ToString();
+    }
+
+    private static void AppendSpecTileLink(StringBuilder sb, string label, string value, string href)
+    {
+        if (string.IsNullOrEmpty(value))
+            return;
+        sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
+        sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
+        sb.AppendLine($"<a href='{href}' class='font-weight-bold'>{value}</a>");
+        sb.AppendLine("</div>");
     }
 
     private string CreateClassInfoPanel()
@@ -192,41 +208,6 @@ public class LocoRefPageDetails : PageDetails
         return sb.ToString();
     }
 
-    private static void AppendSpecTile(StringBuilder sb, string label, string value)
-    {
-        if (string.IsNullOrEmpty(value))
-            return;
-        sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
-        sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
-        sb.AppendLine($"<span class='font-weight-bold'>{value}</span>");
-        sb.AppendLine("</div>");
-    }
-
-    private static void AppendSpecTileLink(StringBuilder sb, string label, string value, string href)
-    {
-        if (string.IsNullOrEmpty(value))
-            return;
-        sb.AppendLine("<div class='col-sm-6 col-md-3 mb-2'>");
-        sb.AppendLine($"<small class='text-muted d-block'>{label}</small>");
-        sb.AppendLine($"<a href='{href}' class='font-weight-bold'>{value}</a>");
-        sb.AppendLine("</div>");
-    }
-
-    private static void AppendBuilderTile(StringBuilder sb, string builder)
-    {
-        if (string.IsNullOrEmpty(builder))
-            return;
-        // Only link when there is a single builder (no comma-separated list)
-        if (!builder.Contains(','))
-        {
-            AppendSpecTileLink(sb, "Builder", builder, $"../Builders/{DesignerListPage.ToSlug(builder)}.html");
-        }
-        else
-        {
-            AppendSpecTile(sb, "Builder", builder);
-        }
-    }
-
     private string CreateGallery()
     {
         var pageBuilder = new HTMLBuilder();
@@ -238,5 +219,24 @@ public class LocoRefPageDetails : PageDetails
         pageBuilder.Text("<h2>Gallery</h2>");
         pageBuilder.AddImagesGroupedByDate(htmlpath, imagePath, GalleryPath);
         return pageBuilder.Output();
+    }
+
+    private string CreateLocoNavigation()
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("<div class='d-flex justify-content-between mt-4 mb-2'>");
+
+        if (!string.IsNullOrEmpty(PrevLocoNumber))
+            sb.AppendLine($"<a href='{PrevLocoNumber}.html' class='btn btn-outline-secondary'>&larr; {PrevLocoNumber}</a>");
+        else
+            sb.AppendLine("<span></span>");
+
+        if (!string.IsNullOrEmpty(NextLocoNumber))
+            sb.AppendLine($"<a href='{NextLocoNumber}.html' class='btn btn-outline-secondary'>{NextLocoNumber} &rarr;</a>");
+        else
+            sb.AppendLine("<span></span>");
+
+        sb.AppendLine("</div>");
+        return sb.ToString();
     }
 }

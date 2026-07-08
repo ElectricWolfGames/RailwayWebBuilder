@@ -12,13 +12,6 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives;
 [Navigation(NavigationTypes.Main, 2)]
 public class DieselReferencePageDetails : PageDetails
 {
-    public string RefTitle { get; set; } = string.Empty;
-    public string CategoryLabel { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public List<DieselClassEntry> Entries { get; set; } = new();
-    public string OutputSubPath { get; set; } = string.Empty;
-    public string OutputSlug { get; set; } = string.Empty;
-
     public DieselReferencePageDetails()
     {
         WebPage = new WebPage(this);
@@ -27,6 +20,13 @@ public class DieselReferencePageDetails : PageDetails
         DontShowNavigation = true;
         DontBuildPage = true;
     }
+
+    public string CategoryLabel { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public List<DieselClassEntry> Entries { get; set; } = new();
+    public string OutputSlug { get; set; } = string.Empty;
+    public string OutputSubPath { get; set; } = string.Empty;
+    public string RefTitle { get; set; } = string.Empty;
 
     public override void CreatePage()
     {

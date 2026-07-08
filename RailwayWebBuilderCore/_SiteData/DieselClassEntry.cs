@@ -9,20 +9,20 @@ namespace RailwayWebBuilderCore._SiteData;
 
 public class DieselClassEntry
 {
+    public string BuildDate { get; init; } = string.Empty;
+    public string Builder { get; init; } = string.Empty;
     public string ClassName { get; init; } = string.Empty;
     public string Designer { get; init; } = string.Empty;
-    public string Builder { get; init; } = string.Empty;
-    public string WheelArrangement { get; init; } = string.Empty;
     public string Engine { get; init; } = string.Empty;
-    public string Power { get; init; } = string.Empty;
-    public string MaxSpeed { get; init; } = string.Empty;
-    public string TractiveEffort { get; init; } = string.Empty;
-    public string LocoWeight { get; init; } = string.Empty;
-    public string Length { get; init; } = string.Empty;
-    public string BuildDate { get; init; } = string.Empty;
-    public int TotalProduced { get; init; }
-    public string PowerType { get; init; } = string.Empty;
     public string FirstLocoNumber { get; init; } = string.Empty;
+    public string Length { get; init; } = string.Empty;
+    public string LocoWeight { get; init; } = string.Empty;
+    public string MaxSpeed { get; init; } = string.Empty;
+    public string Power { get; init; } = string.Empty;
+    public string PowerType { get; init; } = string.Empty;
+    public int TotalProduced { get; init; }
+    public string TractiveEffort { get; init; } = string.Empty;
+    public string WheelArrangement { get; init; } = string.Empty;
 
     public static List<DieselClassEntry> BuildAll()
     {

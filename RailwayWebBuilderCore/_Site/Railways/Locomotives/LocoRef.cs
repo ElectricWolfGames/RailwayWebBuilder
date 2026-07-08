@@ -36,10 +36,10 @@ public class LocoRef : PageDetails
     {
         HTMLBuilder pageBuilder = new();
 
-        string steamActive  = pageDetails.MenuTitle.Contains("Steam")  ? " active" : "";
+        string steamActive = pageDetails.MenuTitle.Contains("Steam") ? " active" : "";
         string dieselActive = pageDetails.MenuTitle.Contains("Diesel") ? " active" : "";
-        string wagonsActive = pageDetails.MenuTitle.Contains("Wagon")  ? " active" : "";
-        string coachActive  = pageDetails.MenuTitle.Contains("Coach")  ? " active" : "";
+        string wagonsActive = pageDetails.MenuTitle.Contains("Wagon") ? " active" : "";
+        string coachActive = pageDetails.MenuTitle.Contains("Coach") ? " active" : "";
 
         pageBuilder.Text("<ul class='nav nav-pills nav-fill mb-4'>");
         pageBuilder.Text($"<li class='nav-item'><a href='{offSet}SteamList.html'   class='nav-link{steamActive}'>Steam</a></li>");

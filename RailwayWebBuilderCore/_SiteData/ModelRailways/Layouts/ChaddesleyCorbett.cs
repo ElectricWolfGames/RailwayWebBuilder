@@ -1,6 +1,8 @@
 using RailwayWebBuilderCore.Enums;
 
-namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts; internal class ChaddesleyCorbett : LayoutBase
+namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts;
+
+internal class ChaddesleyCorbett : LayoutBase
 {
     public ChaddesleyCorbett()
     {

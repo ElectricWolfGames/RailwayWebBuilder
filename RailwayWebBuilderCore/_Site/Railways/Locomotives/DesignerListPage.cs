@@ -101,6 +101,35 @@ public class DesignerListPage : PageDetails
         }
     }
 
+    internal static Dictionary<string, string> BuildCollectionLookup()
+    {
+        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var type in Assembly.GetExecutingAssembly().GetTypes()
+            .Where(t => t.IsSubclassOf(typeof(SteamClassBase)) && !t.IsAbstract))
+        {
+            try
+            {
+                var sc = (SteamClassBase)Activator.CreateInstance(type);
+                if (sc.LocoNumbers.Count > 0)
+                    result[sc.ClassName.Trim()] = sc.LocoNumbers[0].Number;
+            }
+            catch { }
+        }
+        return result;
+    }
+
+    internal static string GetRailwayColor(string code)
+    {
+        UKSteamLocomotiveData.RailwayColors.TryGetValue(code, out string color);
+        return color ?? "#6c757d";
+    }
+
+    internal static string ToSlug(string value)
+    {
+        var s = Regex.Replace(value.ToLowerInvariant(), @"[^a-z0-9]", "-");
+        return Regex.Replace(s, @"-+", "-").Trim('-');
+    }
+
     private static string BuildColourKey()
     {
         // Group designers by railway code, keeping order of first appearance
@@ -121,34 +150,5 @@ public class DesignerListPage : PageDetails
         }
         sb.AppendLine("</div>");
         return sb.ToString();
-    }
-
-    internal static string GetRailwayColor(string code)
-    {
-        UKSteamLocomotiveData.RailwayColors.TryGetValue(code, out string color);
-        return color ?? "#6c757d";
-    }
-
-    internal static Dictionary<string, string> BuildCollectionLookup()
-    {
-        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-        foreach (var type in Assembly.GetExecutingAssembly().GetTypes()
-            .Where(t => t.IsSubclassOf(typeof(SteamClassBase)) && !t.IsAbstract))
-        {
-            try
-            {
-                var sc = (SteamClassBase)Activator.CreateInstance(type);
-                if (sc.LocoNumbers.Count > 0)
-                    result[sc.ClassName.Trim()] = sc.LocoNumbers[0].Number;
-            }
-            catch { }
-        }
-        return result;
-    }
-
-    internal static string ToSlug(string value)
-    {
-        var s = Regex.Replace(value.ToLowerInvariant(), @"[^a-z0-9]", "-");
-        return Regex.Replace(s, @"-+", "-").Trim('-');
     }
 }

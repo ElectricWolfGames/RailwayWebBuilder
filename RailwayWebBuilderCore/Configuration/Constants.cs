@@ -7,6 +7,11 @@ public static class Constants
     public const string _LocomotiveName = "Locomotives";
     public const string _StationFolder = "Stations" + @"\";
     public const string A60StationFolder = _StationFolder + @"GCR-A60Bridge\";
+    public const string DieselBuilders = _LocomotiveName + @"\DieselBuilders";
+    public const string DieselDesigners = _LocomotiveName + @"\DieselDesigners";
+    public const string DieselMaxSpeeds = _LocomotiveName + @"\DieselMaxSpeeds";
+    public const string DieselPowers = _LocomotiveName + @"\DieselPowers";
+    public const string DieselWheelArrangements = _LocomotiveName + @"\DieselWheelArrangements";
     public const string FullCatalog = _aRootPath + "Catalog" + @"\";
     public const string FullMVRLayouts = _aRootPath + MVRLayouts + @"\";
     public const string FullMyLayouts = _aRootPath + MyLayouts + @"\";
@@ -14,9 +19,12 @@ public static class Constants
     public const string GCRFolder = @"GCR\";
     public const string LayoutByLayout = @"LayoutByLayout";
     public const string LeicestershireNorthFolder = _StationFolder + @"GCR-LeicestershireNorth\";
+    public const string LocoBuilders = _LocomotiveName + @"\Builders";
+    public const string LocoDesigners = _LocomotiveName + @"\Designers";
     public const string Locomotive = _LocomotiveName + @"\";
     public const string LocomotiveRef = _LocomotiveName + @"\" + "Ref" + @"\";
     public const string LocoRef = @"LocoRefs";
+    public const string LocoWheelArrangements = _LocomotiveName + @"\WheelArrangements";
     public const string LoughboroughStationFolder = _StationFolder + @"GCR-LoughboroughStation\";
     public const string MainlineLoughboroughStationFolder = _StationFolder + @"Mainline-LoughboroughStation\";
     public const string MistyValleyRailwayLayouts = "MistyValleyRailway";
@@ -29,14 +37,6 @@ public static class Constants
     public const string RushcliffeHaltFolder = _StationFolder + @"GCR-RushcliffeHalt\";
     public const string Shop = @"Shop";
     public const string ShopFolder = @"Shop\";
-    public const string LocoDesigners = _LocomotiveName + @"\Designers";
-    public const string LocoBuilders = _LocomotiveName + @"\Builders";
-    public const string LocoWheelArrangements = _LocomotiveName + @"\WheelArrangements";
-    public const string DieselDesigners = _LocomotiveName + @"\DieselDesigners";
-    public const string DieselBuilders = _LocomotiveName + @"\DieselBuilders";
-    public const string DieselWheelArrangements = _LocomotiveName + @"\DieselWheelArrangements";
-    public const string DieselMaxSpeeds = _LocomotiveName + @"\DieselMaxSpeeds";
-    public const string DieselPowers = _LocomotiveName + @"\DieselPowers";
     public const string StandardClasses = "StandardClasses";
     public const string StockVideos = @"StockVideos\";
 }
