@@ -11,6 +11,8 @@ public static class Constants
     public const string DieselDesigners = _LocomotiveName + @"\DieselDesigners";
     public const string DieselMaxSpeeds = _LocomotiveName + @"\DieselMaxSpeeds";
     public const string DieselPowers = _LocomotiveName + @"\DieselPowers";
+    public const string HeritageRailways = @"HeritageRailways";
+    public const string HeritageRailwaysRoot = _aRootPath + HeritageRailways + @"\";
     public const string DieselWheelArrangements = _LocomotiveName + @"\DieselWheelArrangements";
     public const string FullCatalog = _aRootPath + "Catalog" + @"\";
     public const string FullMVRLayouts = _aRootPath + MVRLayouts + @"\";
