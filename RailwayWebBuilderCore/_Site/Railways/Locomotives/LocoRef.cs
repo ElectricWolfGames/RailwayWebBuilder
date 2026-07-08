@@ -28,7 +28,7 @@ public class LocoRef : PageDetails
                 "model trains",
                 "trains",
                 "Hornby",
-                "hertiage railway",
+                "heritage railway",
             ]);
     }
 

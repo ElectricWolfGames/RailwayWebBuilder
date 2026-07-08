@@ -1,5 +1,6 @@
 ﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
+using System.Linq;
 using System.Text;
 
 namespace RailwayWebBuilderCore._SiteData;
@@ -11,16 +12,30 @@ internal class RailwaySiteHeader : IPageHeaderDetails
         StringBuilder _stringBuilder = new();
 
         var offSet = pageDetails.GetRooloffSet(pageDetails.WebPage.HtmlPath.Replace("Railways", "")) + extraOffSet;
+        var pageTitle = string.IsNullOrWhiteSpace(pageDetails.DisplayTitle)
+            ? "Karl and Debbie Railway World"
+            : pageDetails.DisplayTitle;
+        var siteTitle = "Karl's Railway World";
+        var fullTitle = pageTitle == siteTitle ? siteTitle : $"{pageTitle} | {siteTitle}";
+        var description = BuildDescription(pageDetails);
+
         _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
         _stringBuilder.Append("	<head>");
         AddSiteTracker(_stringBuilder);
         _stringBuilder.AppendLine($"<meta charset='UTF-8'>");
-        _stringBuilder.AppendLine($"<title>{pageDetails.DisplayTitle}</title>");
+        _stringBuilder.AppendLine($"<title>{fullTitle}</title>");
         _stringBuilder.AppendLine($"<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
-        _stringBuilder.AppendLine($"<meta name='description' content='{pageDetails.DisplayTitle}'/>");
+        _stringBuilder.AppendLine($"<meta name='description' content='{description}'/>");
         _stringBuilder.AppendLine($"<meta name='keywords' content='{string.Join(",", pageDetails.Keywords)}'/>");
-        _stringBuilder.AppendLine($"<meta name='title' content='{pageDetails.DisplayTitle}'/>");
+        _stringBuilder.AppendLine($"<meta name='title' content='{fullTitle}'/>");
         _stringBuilder.AppendLine($"<meta name='author' content='Electric Wolf'>");
+        _stringBuilder.AppendLine($"<meta property='og:title' content='{fullTitle}'/>");
+        _stringBuilder.AppendLine($"<meta property='og:description' content='{description}'/>");
+        _stringBuilder.AppendLine($"<meta property='og:type' content='website'/>");
+        _stringBuilder.AppendLine($"<meta property='og:site_name' content='{siteTitle}'/>");
+        _stringBuilder.AppendLine($"<meta name='twitter:card' content='summary'/>");
+        _stringBuilder.AppendLine($"<meta name='twitter:title' content='{fullTitle}'/>");
+        _stringBuilder.AppendLine($"<meta name='twitter:description' content='{description}'/>");
         _stringBuilder.AppendLine($"<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>");
         _stringBuilder.AppendLine($"<link rel='stylesheet' href='{offSet}Scripts/style.css'>");
         _stringBuilder.AppendLine($"<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'>");
@@ -59,5 +74,25 @@ internal class RailwaySiteHeader : IPageHeaderDetails
 
         // Add the Ad Scene
         // sb.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5100298817928604\"\r\n     crossorigin=\"anonymous\"></script>");
+    }
+
+    private static string BuildDescription(PageDetails pageDetails)
+    {
+        var title = pageDetails.DisplayTitle ?? string.Empty;
+        var keywords = pageDetails.Keywords;
+
+        if (keywords == null || keywords.Count == 0)
+            return $"{title} - Karl's Railway World. UK model railways, heritage railway visits, locomotive photos and model show coverage.";
+
+        // Pick up to 5 keywords not already contained in the title
+        var extras = keywords
+            .Where(k => !string.IsNullOrWhiteSpace(k) && !title.Contains(k, System.StringComparison.OrdinalIgnoreCase))
+            .Take(5)
+            .ToList();
+
+        if (extras.Count == 0)
+            return $"{title} - Karl's Railway World. UK model railways and heritage railway photography.";
+
+        return $"{title} - {string.Join(", ", extras)}. Karl's Railway World.";
     }
 }

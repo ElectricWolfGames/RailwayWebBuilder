@@ -28,7 +28,7 @@ public class RailWayHome : PageDetails
                 "Hornby",
                 "OO Scale",
                 "OO Gauge",
-                "hertiage railway",
+                "heritage railway",
                 "model layout",
             });
     }
