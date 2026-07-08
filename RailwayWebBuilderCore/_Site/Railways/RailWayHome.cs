@@ -161,7 +161,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#127947; Model Layouts</h5>
+        <h5 class='card-title'>Model Layouts</h5>
         <p class='card-text'>Follow the build of Cattington and the new Misty Valley Railway — from bare baseboards to full scenic layouts.</p>
         <a href='MyLayouts/index.html' class='btn btn-sm btn-outline-primary mr-2'>Cattington</a>
         <a href='MistyValleyRailway/index.html' class='btn btn-sm btn-outline-primary'>Misty Valley</a>
@@ -171,7 +171,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#128642; Loco Reference</h5>
+        <h5 class='card-title'>Loco Reference</h5>
         <p class='card-text'>Browse the photo reference collection of steam and diesel locomotives, with specs and class information.</p>
         <a href='Locomotives/LocoRef.html' class='btn btn-sm btn-outline-primary'>View Collection</a>
       </div>
@@ -180,7 +180,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#9654; Heritage Railways</h5>
+        <h5 class='card-title'>Heritage Railways</h5>
         <p class='card-text'>Videos from visits to preserved railways across the UK — steam galas, diesel events, and scenic journeys.</p>
         <a href='HeritageRailways/HeritageRailways.html' class='btn btn-sm btn-outline-primary'>Watch Videos</a>
       </div>
@@ -189,7 +189,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#127881; Model Events</h5>
+        <h5 class='card-title'>Model Events</h5>
         <p class='card-text'>Coverage of model railway exhibitions and shows from clubs across the Midlands and beyond.</p>
         <a href='ModelEvents/index.html' class='btn btn-sm btn-outline-primary'>View Events</a>
       </div>
@@ -198,7 +198,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#128247; Stations</h5>
+        <h5 class='card-title'>Stations</h5>
         <p class='card-text'>Photo galleries of heritage railway stations — platforms, signals, and architecture captured in detail.</p>
         <a href='Stations/index.html' class='btn btn-sm btn-outline-primary'>Browse Stations</a>
       </div>
@@ -207,7 +207,7 @@ public class RailWayHome : PageDetails
   <div class='col-md-4 mb-3'>
     <div class='card h-100'>
       <div class='card-body'>
-        <h5 class='card-title'>&#128250; Layout By Layout</h5>
+        <h5 class='card-title'>Layout By Layout</h5>
         <p class='card-text'>A close-up look at layouts from model shows — exploring the detail and craftsmanship of each exhibit.</p>
         <a href='LayoutByLayout/index.html' class='btn btn-sm btn-outline-primary'>Explore</a>
       </div>
@@ -219,7 +219,7 @@ public class RailWayHome : PageDetails
     private static string AddWelcomeSection()
     {
         return @"<div class='jumbotron py-4 mb-4'>
-  <h1 class='display-5'>Welcome to Karl n Debbie Railway World</h1>
+  <h1 class='display-5'>Welcome to Karl and Debbie Railway World</h1>
   <p class='lead'>A collection of model railway layouts, heritage railway visits, locomotive photos, and model show coverage from across the UK.</p>
 </div>";
     }
