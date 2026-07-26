@@ -1321,4 +1321,7 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Spion Kop", Gauges.N_Gauge)]
     SpionKop,
+
+    [DescriptionGauge("Gwynog-ar-y-Bryn", Gauges.OO9_Gauge)]
+    GwynogArYBryn,
 }
