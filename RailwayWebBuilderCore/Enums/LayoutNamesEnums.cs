@@ -1324,4 +1324,55 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Gwynog-ar-y-Bryn", Gauges.OO9_Gauge)]
     GwynogArYBryn,
+
+    [DescriptionGauge("Inver", Gauges.Unknown)]
+    Inver,
+
+    [DescriptionGauge("Abbey Light Railway", Gauges.Unknown)]
+    AbbeyLightRailway,
+
+    [DescriptionGauge("Baracke Works", Gauges.O_Gauge)]
+    BarackeWorks,
+
+    [DescriptionGauge("Worcester South Quay", Gauges.O_Gauge)]
+    WorcesterSouthQuay,
+
+    [DescriptionGauge("Pulsons Amalgamated Munitions", Gauges.O_Gauge)]
+    PulsonsAmalgamatedMunitions,
+
+    [DescriptionGauge("Burford", Gauges.OO_Gauge)]
+    Burford,
+
+    [DescriptionGauge("Gibben Quarry", Gauges.N_Gauge)]
+    GibbenQuarry,
+
+    [DescriptionGauge("Monument Lane", Gauges.N_Gauge)]
+    MonumentLane,
+
+    [DescriptionGauge("Le Vieux Hameau", Gauges.HOe_Gauge)]
+    LeVieuxHameau,
+
+    [DescriptionGauge("Rock Hill Yard USA", Gauges.HO_Gauge)]
+    RockHillYardUSA,
+
+    [DescriptionGauge("Seaford Promenade", Gauges.OO_Gauge)]
+    SeafordPromenade,
+
+    [DescriptionGauge("Eardley Mor Halt", Gauges.OO_Gauge)]
+    EardleyMorHalt,
+
+    [DescriptionGauge("Portishead TMD", Gauges.OO_Gauge)]
+    PortisheadTMD,
+
+    [DescriptionGauge("Orfe Quay", Gauges.EM_Gauge)]
+    OrfeQuay,
+
+    [DescriptionGauge("Hadley Town", Gauges.EM_Gauge)]
+    HadleyTown,
+
+    [DescriptionGauge("Ty'n-y-Coedcae", Gauges._33mm_Gauge)]
+    TynYCoedcae,
+
+    [DescriptionGauge("Bond Lane", Gauges.Mixed_Gauge)]
+    BondLane,
 }
