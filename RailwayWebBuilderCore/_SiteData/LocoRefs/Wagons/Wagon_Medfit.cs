@@ -10,6 +10,9 @@ public class Wagon_Medfit : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Diagram = "1/019 (steel-bodied)";
+        LoadCapacity = "13T";
+        BrakeType = "Vacuum-braked when new (often later removed)";
 
         LocoNumbers.AddRange(new[]
         {

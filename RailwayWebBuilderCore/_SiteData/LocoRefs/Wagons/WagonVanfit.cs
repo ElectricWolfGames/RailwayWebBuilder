@@ -10,6 +10,11 @@ public class WagonVanfit : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        BuildDate = "1951-1958";
+        Diagram = "1/208 (TOPS VVV)";
+        Wheelbase = "10ft";
+        LoadCapacity = "12T";
+        BrakeType = "Vacuum-braked (Morton 4-shoe, later BR 8-shoe clasp)";
 
         LocoNumbers.AddRange(new[]
         {

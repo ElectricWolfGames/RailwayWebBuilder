@@ -10,6 +10,11 @@ public class WagonHighfit : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Builder = "BR Shildon";
+        Diagram = "1/041 (TOPS OHV)";
+        Wheelbase = "10ft";
+        LoadCapacity = "13T";
+        BrakeType = "Vacuum-braked (Morton 4-shoe)";
 
         LocoNumbers.AddRange(new[]
         {

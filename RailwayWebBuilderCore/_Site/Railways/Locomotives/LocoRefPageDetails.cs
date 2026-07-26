@@ -110,8 +110,6 @@ public class LocoRefPageDetails : PageDetails
     {
         if (DieselClassBase is not ClassBase cb)
             return string.Empty;
-        if (DieselClassBase is not DieselBase db)
-            return string.Empty;
 
         var sb = new StringBuilder();
         sb.AppendLine("<div class='card bg-light mb-4'>");
@@ -134,41 +132,41 @@ public class LocoRefPageDetails : PageDetails
         // --- Steam-specific specs ---
         if (DieselClassBase is SteamClassBase sc)
         {
-            bool hasSpecs = !string.IsNullOrEmpty(db.Designer)
+            bool hasSpecs = !string.IsNullOrEmpty(sc.Designer)
                 || !string.IsNullOrEmpty(sc.WhyteNotation)
                 || !string.IsNullOrEmpty(sc.Cylinders)
                 || !string.IsNullOrEmpty(sc.BoilerPressure)
-                || !string.IsNullOrEmpty(db.MaxSpeed)
-                || !string.IsNullOrEmpty(db.TractiveEffort)
+                || !string.IsNullOrEmpty(sc.MaxSpeed)
+                || !string.IsNullOrEmpty(sc.TractiveEffort)
                 || !string.IsNullOrEmpty(sc.DriverWheelDia)
                 || !string.IsNullOrEmpty(sc.LeadingWheelDia)
                 || !string.IsNullOrEmpty(sc.TrailingWheelDia)
-                || !string.IsNullOrEmpty(db.LocoWeight)
+                || !string.IsNullOrEmpty(sc.LocoWeight)
                 || !string.IsNullOrEmpty(sc.TenderWeight)
-                || !string.IsNullOrEmpty(db.Length);
+                || !string.IsNullOrEmpty(sc.Length);
 
             if (hasSpecs)
             {
                 sb.AppendLine("<hr class='my-2'/>");
                 sb.AppendLine("<div class='row'>");
-                AppendSpecTileLink(sb, "Designer", db.Designer, $"../Designers/{DesignerListPage.ToSlug(db.Designer)}.html");
+                AppendSpecTileLink(sb, "Designer", sc.Designer, $"../Designers/{DesignerListPage.ToSlug(sc.Designer)}.html");
                 AppendSpecTileLink(sb, "Wheel Arrangement", sc.WhyteNotation, $"../WheelArrangements/{DesignerListPage.ToSlug(sc.WhyteNotation)}.html");
                 AppendSpecTile(sb, "Cylinders", sc.Cylinders);
                 AppendSpecTile(sb, "Boiler Pressure", sc.BoilerPressure);
-                AppendSpecTile(sb, "Max Speed", db.MaxSpeed);
-                AppendSpecTile(sb, "Tractive Effort", db.TractiveEffort);
+                AppendSpecTile(sb, "Max Speed", sc.MaxSpeed);
+                AppendSpecTile(sb, "Tractive Effort", sc.TractiveEffort);
                 sb.AppendLine("</div>");
                 sb.AppendLine("<div class='row'>");
                 AppendSpecTile(sb, "Driver Wheel Dia.", sc.DriverWheelDia);
                 AppendSpecTile(sb, "Leading Wheel Dia.", sc.LeadingWheelDia);
                 AppendSpecTile(sb, "Trailing Wheel Dia.", sc.TrailingWheelDia);
-                AppendSpecTile(sb, "Length", db.Length);
-                AppendSpecTile(sb, "Loco Weight", db.LocoWeight);
+                AppendSpecTile(sb, "Length", sc.Length);
+                AppendSpecTile(sb, "Loco Weight", sc.LocoWeight);
                 AppendSpecTile(sb, "Tender Weight", sc.TenderWeight);
                 sb.AppendLine("</div>");
             }
         }
-        else
+        else if (DieselClassBase is DieselBase db)
         {
             // --- Diesel / electric specs ---
             bool hasDieselSpecs = !string.IsNullOrEmpty(db.Designer)
@@ -194,6 +192,54 @@ public class LocoRefPageDetails : PageDetails
                 sb.AppendLine("<div class='row'>");
                 AppendSpecTile(sb, "Length", db.Length);
                 AppendSpecTile(sb, "Loco Weight", db.LocoWeight);
+                sb.AppendLine("</div>");
+            }
+        }
+        else if (DieselClassBase is WagonsClassBase wb)
+        {
+            // --- Wagon-specific specs ---
+            bool hasWagonSpecs = !string.IsNullOrEmpty(wb.Diagram)
+                || !string.IsNullOrEmpty(wb.Length)
+                || !string.IsNullOrEmpty(wb.Wheelbase)
+                || !string.IsNullOrEmpty(wb.TareWeight)
+                || !string.IsNullOrEmpty(wb.LoadCapacity)
+                || !string.IsNullOrEmpty(wb.BrakeType);
+
+            if (hasWagonSpecs)
+            {
+                sb.AppendLine("<hr class='my-2'/>");
+                sb.AppendLine("<div class='row'>");
+                AppendSpecTile(sb, "Diagram", wb.Diagram);
+                AppendSpecTile(sb, "Length", wb.Length);
+                AppendSpecTile(sb, "Wheelbase", wb.Wheelbase);
+                AppendSpecTile(sb, "Brake Type", wb.BrakeType);
+                sb.AppendLine("</div>");
+                sb.AppendLine("<div class='row'>");
+                AppendSpecTile(sb, "Tare Weight", wb.TareWeight);
+                AppendSpecTile(sb, "Load Capacity", wb.LoadCapacity);
+                sb.AppendLine("</div>");
+            }
+        }
+        else if (DieselClassBase is CoachesClassBase ccb)
+        {
+            // --- Coach-specific specs ---
+            bool hasCoachSpecs = !string.IsNullOrEmpty(ccb.Diagram)
+                || !string.IsNullOrEmpty(ccb.Length)
+                || !string.IsNullOrEmpty(ccb.BogieType)
+                || !string.IsNullOrEmpty(ccb.SeatingCapacity)
+                || !string.IsNullOrEmpty(ccb.TareWeight);
+
+            if (hasCoachSpecs)
+            {
+                sb.AppendLine("<hr class='my-2'/>");
+                sb.AppendLine("<div class='row'>");
+                AppendSpecTile(sb, "Diagram", ccb.Diagram);
+                AppendSpecTile(sb, "Length", ccb.Length);
+                AppendSpecTile(sb, "Bogie Type", ccb.BogieType);
+                sb.AppendLine("</div>");
+                sb.AppendLine("<div class='row'>");
+                AppendSpecTile(sb, "Seating Capacity", ccb.SeatingCapacity);
+                AppendSpecTile(sb, "Tare Weight", ccb.TareWeight);
                 sb.AppendLine("</div>");
             }
         }

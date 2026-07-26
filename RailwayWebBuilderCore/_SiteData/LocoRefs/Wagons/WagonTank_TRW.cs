@@ -10,6 +10,9 @@ public class WagonTank_TRW : WagonsClassBase
         StockType = StockTypes.Wagon;
         Paragraph1 = "Charles Roberts & Co 1958, Tank, TRW";
         Paragraph2 = "Diagram number: 6/002";
+        Builder = "Charles Roberts & Co";
+        BuildDate = "1958";
+        Diagram = "6/002";
 
         LocoNumbers.AddRange(new[]
         {
@@ -26,6 +29,9 @@ public class WagonTank_TRWa : WagonsClassBase
         StockType = StockTypes.Wagon;
         Paragraph1 = "Hurst Nelson 1959, Tank, TRW";
         Paragraph2 = "Diagram number: 6/668";
+        Builder = "Hurst Nelson";
+        BuildDate = "1959";
+        Diagram = "6/668";
 
         LocoNumbers.AddRange(new[]
         {

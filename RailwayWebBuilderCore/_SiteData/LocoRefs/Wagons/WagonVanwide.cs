@@ -12,9 +12,10 @@ public class WagonVanwide : WagonsClassBase
         Paragraph1 = "";
 
         Paragraph1 = "12T, Built in Derby, Type Vanwide, Wheelbase 10ft, TOPS VEB";
-        //Built = "Derby";
-        //Wheelbase = "10ft";
-        //Diagram number 1/217
+        Builder = "Derby Works";
+        Wheelbase = "10ft";
+        LoadCapacity = "12T";
+        Diagram = "1/217 (TOPS VEB)";
 
         LocoNumbers.AddRange(new[]
         {

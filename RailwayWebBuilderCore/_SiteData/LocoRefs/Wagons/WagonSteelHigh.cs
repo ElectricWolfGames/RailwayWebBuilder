@@ -10,6 +10,8 @@ public class WagonSteelHigh : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Diagram = "TOPS OHV/OHB";
+        LoadCapacity = "13T";
 
         LocoNumbers.AddRange(new[]
         {

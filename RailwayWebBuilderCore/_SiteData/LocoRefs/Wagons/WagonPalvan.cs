@@ -10,6 +10,12 @@ public class WagonPalvan : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Builder = "BR Darlington";
+        BuildDate = "1955-1959";
+        Diagram = "1/211";
+        Wheelbase = "10ft";
+        TareWeight = "12T";
+        BrakeType = "Vacuum-braked";
 
         LocoNumbers.AddRange(new[]
         {

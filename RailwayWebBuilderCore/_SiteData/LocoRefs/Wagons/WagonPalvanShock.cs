@@ -10,6 +10,9 @@ public class WagonPalvanShock : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        BuildDate = "1961";
+        Diagram = "219 (TOPS VRV)";
+        BrakeType = "Vacuum-braked (BR clasp)";
 
         LocoNumbers.AddRange(new[]
         {

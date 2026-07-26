@@ -9,6 +9,7 @@ public class WagonTankA : WagonsClassBase
         ClassName = "Tank A 20T";
         StockType = StockTypes.Wagon;
         Paragraph1 = "Tank, 20T ";
+        LoadCapacity = "20T";
 
         LocoNumbers.AddRange(new[]
         {

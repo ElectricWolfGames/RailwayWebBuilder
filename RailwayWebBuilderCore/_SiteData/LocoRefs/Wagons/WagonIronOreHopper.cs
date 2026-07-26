@@ -10,6 +10,10 @@ public class WagonIronOreHopper : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        BuildDate = "1955-1957";
+        Diagram = "1/163 (TOPS HJO/HIO, vacuum-fitted conversions HJV/HKV)";
+        LoadCapacity = "25.5T";
+        BrakeType = "Unfitted (originally)";
 
         LocoNumbers.AddRange(new[]
         {

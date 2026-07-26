@@ -10,6 +10,9 @@ public class CoachesTestCar2 : CoachesClassBase
         StockType = StockTypes.Coach;
 
         Paragraph1 = "TOPS QXX, Wolverton 1962";
+        Builder = "Wolverton Works";
+        BuildDate = "1962";
+        Diagram = "TOPS QXX";
 
         LocoNumbers.AddRange(new[]
         {

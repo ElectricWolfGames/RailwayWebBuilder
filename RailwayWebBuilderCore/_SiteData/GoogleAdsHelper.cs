@@ -2,10 +2,17 @@
 
 public static class GoogleAdsHelper
 {
+    // Only 1 in 4 ad slots actually render (75% reduction), shared across
+    // every AdsBanner/AddSideAd call so the cut applies site-wide.
+    private static int _adCounter;
+
     public static string AdsBanner
     {
         get
         {
+            if (!ShouldShow())
+                return string.Empty;
+
             string adsresp = @"
 <script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
 <!-- VintageFilmsResponzive -->
@@ -23,6 +30,9 @@ public static class GoogleAdsHelper
 
     internal static string AddSideAd()
     {
+        if (!ShouldShow())
+            return string.Empty;
+
         // VintageFilmsSide
         string adsresp = @"<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
 <!--VintageFilmsSide-->
@@ -36,5 +46,11 @@ public static class GoogleAdsHelper
 (adsbygoogle = window.adsbygoogle || []).push({ });
 </script>";
         return adsresp;
+    }
+
+    private static bool ShouldShow()
+    {
+        _adCounter++;
+        return _adCounter % 4 == 0;
     }
 }

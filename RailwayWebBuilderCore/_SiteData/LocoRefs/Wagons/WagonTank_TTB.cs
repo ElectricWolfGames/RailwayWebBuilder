@@ -10,6 +10,9 @@ public class WagonTank_TTB : WagonsClassBase
         StockType = StockTypes.Wagon;// Tank
         Paragraph1 = "Charles Roberts & Co 1965, Tank,  TTB";
         Paragraph2 = "Diagram number: 6/138 – TT020C";
+        Builder = "Charles Roberts & Co";
+        BuildDate = "1965";
+        Diagram = "6/138 (TT020C)";
 
         LocoNumbers.AddRange(new[]
         {

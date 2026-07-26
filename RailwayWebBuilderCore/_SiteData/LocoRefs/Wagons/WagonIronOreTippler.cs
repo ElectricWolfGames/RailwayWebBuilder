@@ -10,6 +10,9 @@ public class WagonIronOreTippler : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Diagram = "TOPS MSO/MSV (also MCO/MCV, MXV)";
+        LoadCapacity = "21T (later 27T)";
+        BrakeType = "Unfitted (majority; some vacuum-fitted conversions)";
 
         LocoNumbers.AddRange(new[]
         {

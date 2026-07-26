@@ -10,6 +10,9 @@ public class WagonMinfit : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Diagram = "TOPS MCO/MCV (later MXV)";
+        LoadCapacity = "16T";
+        BrakeType = "Vacuum-braked (8-shoe clasp tread brake)";
 
         LocoNumbers.AddRange(new[]
         {

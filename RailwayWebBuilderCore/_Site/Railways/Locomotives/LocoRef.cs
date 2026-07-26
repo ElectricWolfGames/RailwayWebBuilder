@@ -1,4 +1,5 @@
 ﻿using eWolfBootstrap.Builders;
+using eWolfBootstrap.Helpers;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
@@ -16,6 +17,8 @@ namespace RailwayWebBuilderCore._Site.Railways.Locomotives;
 [Navigation(NavigationTypes.Main, 2)]
 public class LocoRef : PageDetails
 {
+    private static readonly Random _random = new();
+
     public LocoRef()
     {
         WebPage = new WebPage(this);
@@ -36,17 +39,65 @@ public class LocoRef : PageDetails
     {
         HTMLBuilder pageBuilder = new();
 
-        string steamActive = pageDetails.MenuTitle.Contains("Steam") ? " active" : "";
-        string dieselActive = pageDetails.MenuTitle.Contains("Diesel") ? " active" : "";
-        string wagonsActive = pageDetails.MenuTitle.Contains("Wagon") ? " active" : "";
-        string coachActive = pageDetails.MenuTitle.Contains("Coach") ? " active" : "";
+        string steamActive = pageDetails.MenuTitle.Contains("Steam") ? "btn-primary" : "btn-outline-primary";
+        string dieselActive = pageDetails.MenuTitle.Contains("Diesel") ? "btn-primary" : "btn-outline-primary";
+        string wagonsActive = pageDetails.MenuTitle.Contains("Wagon") ? "btn-primary" : "btn-outline-primary";
+        string coachActive = pageDetails.MenuTitle.Contains("Coach") ? "btn-primary" : "btn-outline-primary";
 
-        pageBuilder.Text("<ul class='nav nav-pills nav-fill mb-4'>");
-        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}SteamList.html'   class='nav-link{steamActive}'>Steam</a></li>");
-        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}DieselList.html'  class='nav-link{dieselActive}'>Diesel</a></li>");
-        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}WagonsList.html'  class='nav-link{wagonsActive}'>Wagons</a></li>");
-        pageBuilder.Text($"<li class='nav-item'><a href='{offSet}CoachesList.html' class='nav-link{coachActive}'>Coaches</a></li>");
-        pageBuilder.Text("</ul>");
+        pageBuilder.Text("<div class='d-flex flex-wrap mb-4'>");
+        pageBuilder.Text($"<a href='{offSet}SteamList.html'   class='btn btn-lg {steamActive} flex-fill mx-1 mb-2'>Steam</a>");
+        pageBuilder.Text($"<a href='{offSet}DieselList.html'  class='btn btn-lg {dieselActive} flex-fill mx-1 mb-2'>Diesel</a>");
+        pageBuilder.Text($"<a href='{offSet}WagonsList.html'  class='btn btn-lg {wagonsActive} flex-fill mx-1 mb-2'>Wagons</a>");
+        pageBuilder.Text($"<a href='{offSet}CoachesList.html' class='btn btn-lg {coachActive} flex-fill mx-1 mb-2'>Coaches</a>");
+        pageBuilder.Text("</div>");
+
+        return pageBuilder.Output();
+    }
+
+    public static string CreateTypePreview(StockTypes stockTypes, string title, string listHref, int count = 4)
+    {
+        var candidates = new List<(IDieselClass cls, ILocoDetails tag, List<string> images)>();
+        foreach (var cls in GetLocoRefDetails(stockTypes))
+        {
+            foreach (var tag in cls.LocoNumbers)
+            {
+                var images = cls.GetAllImages(tag.Number, tag.Ignore);
+                if (images.Any())
+                    candidates.Add((cls, tag, images));
+            }
+        }
+
+        if (!candidates.Any())
+            return string.Empty;
+
+        var picked = candidates.OrderBy(_ => _random.Next()).Take(count).ToList();
+
+        HTMLBuilder pageBuilder = new();
+        pageBuilder.Text("<div class='d-flex justify-content-between align-items-center mb-2'>");
+        pageBuilder.Text($"<h5 class='mb-0'>{title}</h5>");
+        pageBuilder.Text($"<a href='{listHref}' class='small'>View all &rarr;</a>");
+        pageBuilder.Text("</div>");
+
+        pageBuilder.Text("<div class='row mb-4'>");
+        foreach (var (cls, tag, images) in picked)
+        {
+            string image = images.FirstOrDefault(x => x.Contains("Show")) ?? images.First();
+
+            const string finalPath = "E:\\eWolfSiteUploads\\Railways\\Locomotives\\Ref\\images\\";
+            (_, string newPathThumb) = HTMLHelper.CopyImageUploads(finalPath, image);
+            newPathThumb = newPathThumb.Replace("E:\\eWolfSiteUploads\\Railways\\Locomotives\\", "");
+
+            pageBuilder.Text($@"<div class='col-6 col-md-3 mb-3'>
+  <a href='Ref/{tag.Number}.html' class='card h-100 shadow-sm text-decoration-none'>
+    <img src='{newPathThumb}' class='card-img-top' alt='{cls.ClassName}' style='height:120px;object-fit:cover;'>
+    <div class='card-body p-2'>
+      <small class='text-muted d-block'>{cls.ClassName}</small>
+      <span class='font-weight-bold'>{tag.Number}</span>
+    </div>
+  </a>
+</div>");
+        }
+        pageBuilder.Text("</div>");
 
         return pageBuilder.Output();
     }
@@ -91,6 +142,12 @@ public class LocoRef : PageDetails
         WebPage.Append("</br>");
         WebPage.Append(CreateHero(this));
         WebPage.Append(CreateGroups(this, ""));
+
+        WebPage.Append(CreateTypePreview(StockTypes.SteamLoco, "Steam", "SteamList.html"));
+        WebPage.Append(CreateTypePreview(StockTypes.Diesel, "Diesel", "DieselList.html"));
+        WebPage.Append(CreateTypePreview(StockTypes.Wagon, "Wagons", "WagonsList.html"));
+        WebPage.Append(CreateTypePreview(StockTypes.Coach, "Coaches", "CoachesList.html"));
+
         WebPage.Append(GoogleAdsHelper.AdsBanner);
 
         WebPage.Append("</div>");

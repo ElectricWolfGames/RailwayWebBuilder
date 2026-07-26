@@ -10,6 +10,9 @@ public class WagonSingleBolster : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Diagram = "1/402";
+        Wheelbase = "10ft";
+        BrakeType = "Unfitted (RCH standard)";
 
         LocoNumbers.AddRange(new[]
         {

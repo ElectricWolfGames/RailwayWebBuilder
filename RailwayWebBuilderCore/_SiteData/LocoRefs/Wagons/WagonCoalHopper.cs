@@ -10,6 +10,8 @@ public class WagonCoalHopper : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "Head Wrightson 1957";
+        Builder = "Head Wrightson";
+        BuildDate = "1957";
 
         LocoNumbers.AddRange(new[]
         {

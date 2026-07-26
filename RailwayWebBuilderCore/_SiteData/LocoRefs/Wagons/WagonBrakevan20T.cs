@@ -10,6 +10,12 @@ public class WagonBrakevan20T : WagonsClassBase
         StockType = StockTypes.Wagon;
 
         Paragraph1 = "";
+        Builder = "Faverdale Works, Darlington";
+        Diagram = "1/506 (TOPS CAO/CAP/CAR)";
+        Length = "27ft 6in";
+        Wheelbase = "16ft";
+        TareWeight = "20T";
+        BrakeType = "Unfitted";
 
         LocoNumbers.AddRange(new[]
         {
