@@ -7,7 +7,7 @@ internal class MedwayQuay : LayoutBase
     public MedwayQuay()
     {
         Name = LayoutNamesEnums.MedwayQuay;
-        Owner = "";
-        Description = "";  // TODO MedwayQuay Needs description
+        Owner = "Beckenham and West Wickham Model Railway Club";
+        Description = "A small industrial-scene layout with a small station and sidings for shunting wagons around.";
     }
 }

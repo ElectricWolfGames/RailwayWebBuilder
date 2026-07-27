@@ -8,6 +8,6 @@ internal class Halland : LayoutBase
     {
         Name = LayoutNamesEnums.Halland;
         Owner = "";
-        Description = "";  // TODO Halland Needs description
+        Description = "Controlled entirely via iPods and iPads over DCC, including turnouts and signals, Halland represents 1960s late-steam/early-diesel operations in the Northern regions, using Peco trackwork - a classic example of mainstream modelling.";
     }
 }

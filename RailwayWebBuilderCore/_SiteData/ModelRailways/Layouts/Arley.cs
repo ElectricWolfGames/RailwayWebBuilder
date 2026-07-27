@@ -8,6 +8,6 @@ internal class Arley : LayoutBase
     {
         Name = LayoutNamesEnums.Arley;
         Owner = "";
-        Description = "";  // TODO Arley Needs description
+        Description = "Represents Arley station, formerly GWR and BR, now on the Severn Valley Railway, operable as GWR, BR or SVR to allow stock ranging \"from Panniers to Kings, DMUs to Deltics\". Fiddle yards at each end give a good range of movements, with mostly ready-to-run stock and some static exhibits.";
     }
 }

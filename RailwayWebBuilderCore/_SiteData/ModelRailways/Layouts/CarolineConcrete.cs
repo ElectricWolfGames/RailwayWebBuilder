@@ -8,6 +8,6 @@ internal class CarolineConcrete : LayoutBase
     {
         Name = LayoutNamesEnums.CarolineConcrete;
         Owner = "";
-        Description = "";  // TODO CarolineConcrete Needs description
+        Description = "Loosely based on the real Tallington concrete works alongside the ECML near Stamford, historically operated by Dowmac and Tarmac and now making tunnel sections for the new London Sewer. The real works has no narrow gauge railway; this layout imagines a shunting narrow gauge railway within the works, connected to the standard gauge main line.";
     }
 }
