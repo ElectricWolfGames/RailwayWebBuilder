@@ -1375,4 +1375,7 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Bond Lane", Gauges.Mixed_Gauge)]
     BondLane,
+
+    [DescriptionGauge("Multigauge Test Track", Gauges.Multigauge)]
+    MultigaugeTestTrack,
 }

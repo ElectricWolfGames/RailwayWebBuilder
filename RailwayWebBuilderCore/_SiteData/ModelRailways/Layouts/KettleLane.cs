@@ -7,7 +7,7 @@ internal class KettleLane : LayoutBase
     public KettleLane()
     {
         Name = LayoutNamesEnums.KettleLane;
-        Owner = "";
-        Description = "";
+        Owner = "SVMRC";
+        Description = "A recently acquired OO layout with its final location still to be decided, currently undergoing upgrade work.";
     }
 }

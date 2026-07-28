@@ -47,7 +47,11 @@ public class DieselClass37 : DieselClassBase
         Keywords.Add("37612");
         Keywords.Add("37419");
         Keywords.Add("37558");
+        Keywords.Add("37409");
         Keywords.Add("37425");
+        Keywords.Add("37607");
+        Keywords.Add("37602");
+        Keywords.Add("37602");
         Keywords.Add("37402");
         Keywords.Add("37310");
         Keywords.Add("English Electric");
@@ -60,18 +64,20 @@ public class DieselClass37 : DieselClassBase
         LocoNumbers.AddRange(new[] {
             new LocoDetails("37009"),
             new LocoDetails("37207"),
+            new LocoDetails("37263"),
+            new LocoDetails("37310"),
+            new LocoDetails("37402"),
+            new LocoDetails("37409"),
+            new LocoDetails("37419"),
+            new LocoDetails("37422"),
+            new LocoDetails("37425"),
+            new LocoDetails("37425"),
+            new LocoDetails("37558"),
+            new LocoDetails("37602"),
+            new LocoDetails("37612"),
             new LocoDetails("37714"),
             new LocoDetails("D6700"),
-            new LocoDetails("37263"),
             new LocoDetails("D6808"),
-            new LocoDetails("37422"),
-
-            new LocoDetails("37612"),
-            new LocoDetails("37419"),
-            new LocoDetails("37558"),
-            new LocoDetails("37425"),
-            new LocoDetails("37402"),
-            new LocoDetails("37310")
             });
     }
 }

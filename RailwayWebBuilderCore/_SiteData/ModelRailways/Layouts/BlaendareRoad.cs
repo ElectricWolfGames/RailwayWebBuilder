@@ -7,7 +7,7 @@ internal class BlaendareRoad : LayoutBase
     public BlaendareRoad()
     {
         Name = LayoutNamesEnums.BlaendareRoad;
-        Owner = "";
-        Description = "";
+        Owner = "P. Harries";
+        Description = "A small terminus set in the 1950s and 60s, built to tap high-quality limestone and dolomite outcrops from Cwmniscoy, with a frequent passenger service and goods handled in the goods yard.";
     }
 }

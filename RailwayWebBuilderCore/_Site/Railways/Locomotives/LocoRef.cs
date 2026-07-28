@@ -54,6 +54,35 @@ public class LocoRef : PageDetails
         return pageBuilder.Output();
     }
 
+    public static string CreateHero(PageDetails pageDetails)
+    {
+        HTMLBuilder pageBuilder = new();
+        pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
+        return pageBuilder.Output();
+    }
+
+    public static string CreatelItemList(WebPage webPage, StockTypes stockTypes)
+    {
+        HTMLBuilder pageBuilder = new();
+        var dieselList = GetLocoRefDetails(stockTypes);
+
+        foreach (var dieselClass in dieselList)
+        {
+            HTMLBuilder pageBuilderTemp = new();
+            string title = dieselClass.ClassName;
+            if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
+                title = dieselClass.ClassDisplayName;
+            pageBuilderTemp.Title(title);
+
+            int count = dieselClass.PreviewLocos(pageBuilderTemp, webPage);
+            if (count != 0)
+            {
+                pageBuilder.Text(pageBuilderTemp.Output());
+            }
+        }
+        return pageBuilder.Output();
+    }
+
     public static string CreateTypePreview(StockTypes stockTypes, string title, string listHref, int count = 4)
     {
         var candidates = new List<(IDieselClass cls, ILocoDetails tag, List<string> images)>();
@@ -99,35 +128,6 @@ public class LocoRef : PageDetails
         }
         pageBuilder.Text("</div>");
 
-        return pageBuilder.Output();
-    }
-
-    public static string CreateHero(PageDetails pageDetails)
-    {
-        HTMLBuilder pageBuilder = new();
-        pageBuilder.Jumbotron(pageDetails.DisplayTitle, string.Empty);
-        return pageBuilder.Output();
-    }
-
-    public static string CreatelItemList(WebPage webPage, StockTypes stockTypes)
-    {
-        HTMLBuilder pageBuilder = new();
-        var dieselList = GetLocoRefDetails(stockTypes);
-
-        foreach (var dieselClass in dieselList)
-        {
-            HTMLBuilder pageBuilderTemp = new();
-            string title = dieselClass.ClassName;
-            if (!string.IsNullOrEmpty(dieselClass.ClassDisplayName))
-                title = dieselClass.ClassDisplayName;
-            pageBuilderTemp.Title(title);
-
-            int count = dieselClass.PreviewLocos(pageBuilderTemp, webPage);
-            if (count != 0)
-            {
-                pageBuilder.Text(pageBuilderTemp.Output());
-            }
-        }
         return pageBuilder.Output();
     }
 

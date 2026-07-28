@@ -7,7 +7,7 @@ internal class GartonBahn : LayoutBase
     public GartonBahn()
     {
         Name = LayoutNamesEnums.GartonBahn;
-        Owner = "";
-        Description = "";
+        Owner = "C. Green";
+        Description = "A G gauge layout based in Austria.";
     }
 }
