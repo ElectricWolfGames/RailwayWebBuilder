@@ -1378,4 +1378,25 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Multigauge Test Track", Gauges.Multigauge)]
     MultigaugeTestTrack,
+
+    [DescriptionGauge("Snowy River Railroad", Gauges.On30_Gauge)]
+    SnowyRiverRailroad,
+
+    [DescriptionGauge("Ivybridge", Gauges._2mm)]
+    Ivybridge,
+
+    [DescriptionGauge("2nd (Hand) Yard", Gauges.On30_Gauge)]
+    SecondHandYard,
+
+    [DescriptionGauge("Amiens 1918 - Tracks & Trenches", Gauges.OO9_Gauge)]
+    Amiens1918TracksAndTrenches,
+
+    [DescriptionGauge("Tipton Sub Division PA", Gauges.N_Gauge)]
+    TiptonSubDivisionPA,
+
+    [DescriptionGauge("The Waterman Collection - Leamington Spa", Gauges._7mm)]
+    WatermanCollectionLeamingtonSpa,
+
+    [DescriptionGauge("Awdry St Nicolas", Gauges.OO_Gauge)]
+    AwdryStNicolas,
 }
