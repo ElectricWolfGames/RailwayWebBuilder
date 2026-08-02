@@ -1399,4 +1399,103 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Awdry St Nicolas", Gauges.OO_Gauge)]
     AwdryStNicolas,
+
+    [DescriptionGauge("Beckenvick", Gauges.HOm_Gauge)]
+    Beckenvick,
+
+    [DescriptionGauge("Schwungischerplatz", Gauges.N_Gauge)]
+    Schwungischerplatz,
+
+    [DescriptionGauge("Stanley Junction", Gauges.N_Gauge)]
+    StanleyJunction,
+
+    [DescriptionGauge("Chica", Gauges.O_Gauge)]
+    Chica,
+
+    [DescriptionGauge("Clevedon WCPR", Gauges.EM_Gauge)]
+    ClevedonWCPR,
+
+    [DescriptionGauge("Plumpton Green", Gauges.P4_Gauge)]
+    PlumptonGreen,
+
+    [DescriptionGauge("Oake", Gauges.OO_Gauge)]
+    Oake,
+
+    [DescriptionGauge("Seven Ash", Gauges.OO_Gauge)]
+    SevenAsh,
+
+    [DescriptionGauge("Spencer 20 Heritage", Gauges.N_Gauge)]
+    Spencer20Heritage,
+
+    [DescriptionGauge("Brian Street", Gauges.OO_Gauge)]
+    BrianStreet,
+
+    [DescriptionGauge("Diano Marina", Gauges.HO_Gauge)]
+    DianoMarina,
+
+    [DescriptionGauge("Pottendorf", Gauges.HO_Gauge)]
+    Pottendorf,
+
+    [DescriptionGauge("Tucking Mill", Gauges._2mm)]
+    TuckingMill,
+
+    [DescriptionGauge("Yoxton", Gauges.N_Gauge)]
+    Yoxton,
+
+    [DescriptionGauge("Bordesley North", Gauges._2mm)]
+    BordesleyNorth,
+
+    [DescriptionGauge("Tan-y-Llyn", Gauges.OO9_Gauge)]
+    TanyLlyn,
+
+    [DescriptionGauge("Chwarel Tegid", Gauges.OO9_Gauge)]
+    ChwarelTegid,
+
+    [DescriptionGauge("Triang Minic Motorways", Gauges.NONE)]
+    TriangMinicMotorways,
+
+    [DescriptionGauge("Upwey Junction", Gauges.OO_Gauge)]
+    UpweyJunction,
+
+    [DescriptionGauge("Faugham Hill Pottery", Gauges.OO_Gauge)]
+    FaughamHillPottery,
+
+    [DescriptionGauge("Ashdan Junction", Gauges.OO_Gauge)]
+    AshdanJunction,
+
+    [DescriptionGauge("Camel Quay", Gauges.OO_Gauge)]
+    CamelQuay,
+
+    [DescriptionGauge("Brankstone", Gauges.OO_Gauge)]
+    Brankstone,
+
+    [DescriptionGauge("Fen March Depot", Gauges.OO_Gauge)]
+    FenMarchDepot,
+
+    [DescriptionGauge("Kirkby Stephen West", Gauges.OO_Gauge)]
+    KirkbyStephenWest,
+
+    [DescriptionGauge("Somewhere in France", Gauges.OO9_Gauge)]
+    SomewhereInFrance,
+
+    [DescriptionGauge("Farmers Drove", Gauges.N_Gauge)]
+    FarmersDrove,
+
+    [DescriptionGauge("Cobbolds Wharf", Gauges._33mm_Gauge)]
+    CobboldsWharf,
+
+    [DescriptionGauge("Palin's Yard", Gauges.O_Gauge)]
+    PalinsYard,
+
+    [DescriptionGauge("Challow Road", Gauges.O_Gauge)]
+    ChallowRoad,
+
+    [DescriptionGauge("Heyside", Gauges.O_Gauge)]
+    Heyside,
+
+    [DescriptionGauge("Kensington Addison Road", Gauges.O_Gauge)]
+    KensingtonAddisonRoad,
+
+    [DescriptionGauge("Worthington Shed", Gauges.O_Gauge)]
+    WorthingtonShed,
 }
