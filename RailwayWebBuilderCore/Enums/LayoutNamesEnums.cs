@@ -1498,4 +1498,31 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Worthington Shed", Gauges.O_Gauge)]
     WorthingtonShed,
+
+    [DescriptionGauge("Crewlisle Branch", Gauges.OO_Gauge)]
+    CrewlisleBranch,
+
+    [DescriptionGauge("Deadmans Lane", Gauges.OO_Gauge)]
+    DeadmansLane,
+
+    [DescriptionGauge("Maxwell Colliery Loading Point", Gauges.OO_Gauge)]
+    MaxwellCollieryLoadingPoint,
+
+    [DescriptionGauge("Coldfield Yard", Gauges.OO_Gauge)]
+    ColdfieldYard,
+
+    [DescriptionGauge("Melangoose", Gauges.OO_Gauge)]
+    Melangoose,
+
+    [DescriptionGauge("Chlatere", Gauges.Unknown)]
+    Chlatere,
+
+    [DescriptionGauge("Lotschbergbahn", Gauges.Unknown)]
+    Lotschbergbahn,
+
+    [DescriptionGauge("Cheffley", Gauges.Unknown)]
+    Cheffley,
+
+    [DescriptionGauge("Durston", Gauges.Unknown)]
+    Durston,
 }
