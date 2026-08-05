@@ -1525,4 +1525,13 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Durston", Gauges.Unknown)]
     Durston,
+
+    [DescriptionGauge("Dyfod o Gwmpas", Gauges.Unknown)]
+    DyfodOGwmpas,
+
+    [DescriptionGauge("Kindling Street", Gauges.OO_Gauge)]
+    KindlingStreet,
+
+    [DescriptionGauge("Dublingham", Gauges.OO_Gauge)]
+    Dublingham,
 }
