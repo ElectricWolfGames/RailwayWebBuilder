@@ -37,7 +37,12 @@ public class Kirkby2022 : ModelEventPageDetails, IBlogger
         Keywords.AddRange(new string[] {
             "Kirkby-In-Ashfield",
             "The Elizabethan Railway Society Exhibition",
-            "Kirkby-In-Ashfield Model Railway" });
+            "Kirkby-In-Ashfield Model Railway",
+            "The Elizabethan Railway Society",
+            "The Elizabethan Railway Society Exhibition 2022",
+            "The Summit Centre",
+            "Ashfield",
+            "Nottinghamshire" });
     }
 
     public IBlog GetBlog()

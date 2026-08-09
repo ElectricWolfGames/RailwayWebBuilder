@@ -21,6 +21,14 @@ public class Lichfield2019 : ModelEventPageDetails
         ImagePreview = "P9215780-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Lichfield", "Lichfield Model Railways", "Trent Valley Model Railway Society", "TVMRS" });
+        Keywords.AddRange(new string[] {
+            "Lichfield",
+            "Lichfield Model Railways",
+            "Trent Valley Model Railway Society",
+            "TVMRS",
+            "Lichfield Model Railways 2019",
+            "The Life Church",
+            "Netherstowe",
+            "Staffordshire" });
     }
 }

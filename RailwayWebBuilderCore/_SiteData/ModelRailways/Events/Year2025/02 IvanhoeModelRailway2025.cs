@@ -47,7 +47,11 @@ public class IvanhoeModelRailway2025 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Ivanhoe Model Railway Society"
+            "Ivanhoe Model Railway Society",
+            "Ivanhoe Model Railway Society 2025",
+            "Mountsorrel",
+            "The Mountsorrel Memorial Centre",
+            "Leicestershire"
             });
     }
 

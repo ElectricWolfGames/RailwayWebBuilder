@@ -75,7 +75,11 @@ public class StaffordRailwayCircle2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Stafford Railway Circle", });
+            "Stafford Railway Circle",
+            "Stafford Railway Circle 2024",
+            "Stafford County Showground",
+            "Stafford",
+            "Staffordshire", });
     }
 
     public IBlog GetBlog()

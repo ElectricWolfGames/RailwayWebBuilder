@@ -34,7 +34,12 @@ public class SystonModelRailwaySocietyBirstall2024 : ModelEventPageDetails, IBlo
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Syston Model Railway Society", });
+            "Syston Model Railway Society",
+            "Syston Model Railway Society Birstall 2024",
+            "Syston",
+            "Birstall",
+            "Birstall Social Club",
+            "Leicestershire", });
     }
 
     public IBlog GetBlog()

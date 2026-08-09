@@ -54,7 +54,17 @@ public class Linclon2020March : ModelEventPageDetails, IBlogger
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.Myton));
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Linclon", "L&DMRC", "Lincoln Model Rail Club", "Newark Showground", "General Exhibition" });
+        Keywords.AddRange(new string[] {
+            "Linclon",
+            "Lincoln",
+            "L&DMRC",
+            "Lincoln Model Rail Club",
+            "Lincoln Model Rail Club General Exhibition 2020",
+            "Newark Showground",
+            "Lady Eastwood Pavilion",
+            "Newark",
+            "Nottinghamshire",
+            "General Exhibition" });
     }
 
     public IBlog GetBlog()

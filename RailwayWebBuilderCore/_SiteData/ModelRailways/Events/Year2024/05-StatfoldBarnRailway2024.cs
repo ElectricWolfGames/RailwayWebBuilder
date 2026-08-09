@@ -48,7 +48,14 @@ public class StatfoldBarnRailway2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Statfold Model Railway Event 2024"
+            "Statfold Model Railway Event 2024",
+            "Statfold Model Railway Event",
+            "Statfold",
+            "Statfold Barn Railway",
+            "Statfold Narrow Gauge Museum",
+            "Narrow gauge",
+            "Tamworth",
+            "Staffordshire"
             });
     }
 

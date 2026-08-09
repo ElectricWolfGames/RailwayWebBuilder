@@ -33,7 +33,16 @@ public class Ilkeston2020 : ModelEventPageDetails, IBlogger
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.MalcolmHughesVintageTrains));
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Ilkeston", "Ilkeston (Woodside) Model Railway Club", "Ilkeston (Woodside) Model Railway", "Heanor Miners Welfare", "Heanor Model Railway" });
+        Keywords.AddRange(new string[] {
+            "Ilkeston",
+            "Ilkeston (Woodside) Model Railway Club",
+            "Ilkeston (Woodside) Model Railway",
+            "Ilkeston (Woodside) Model Railway Club 2020",
+            "Woodside Model Railway Club",
+            "Heanor Miners Welfare",
+            "Heanor Model Railway",
+            "Heanor",
+            "Derbyshire" });
     }
 
     public IBlog GetBlog()

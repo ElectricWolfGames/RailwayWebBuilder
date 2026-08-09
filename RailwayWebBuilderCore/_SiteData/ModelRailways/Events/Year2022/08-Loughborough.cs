@@ -58,7 +58,12 @@ public class Loughborough2022 : ModelEventPageDetails, IBlogger
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
             "Loughborough",
-            "Loughborough Model Railway Exhibition", });
+            "Loughborough Model Railway Exhibition",
+            "Loughborough Model Railway Exhibition 2022",
+            "Soar Valley Model Railway Club",
+            "Soar Valley Model Railway Club annual exhibition",
+            "Loughborough Grammar School",
+            "Leicestershire", });
     }
 
     public IBlog GetBlog()

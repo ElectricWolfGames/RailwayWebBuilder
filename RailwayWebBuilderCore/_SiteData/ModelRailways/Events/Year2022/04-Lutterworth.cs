@@ -37,6 +37,10 @@ public class Lutterworth2022 : ModelEventPageDetails, IBlogger
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
             "Lutterworth Railway Society",
+            "Lutterworth Railway Society 2022",
+            "Lutterworth",
+            "Lutterworth Sports Centre",
+            "Leicestershire",
            });
     }
 

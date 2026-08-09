@@ -34,7 +34,11 @@ public class Hinckley2021 : ModelEventPageDetails, IBlogger
         Keywords.AddRange(new string[] {
             "The Forrayan Centre",
             "Hinckley Model Railway Show",
-            "Railway Show at Hinckley" });
+            "Railway Show at Hinckley",
+            "Hinckley Model Railway Show 2021",
+            "Hinckley",
+            "St Peters R.C. Church",
+            "Leicestershire" });
     }
 
     public IBlog GetBlog()

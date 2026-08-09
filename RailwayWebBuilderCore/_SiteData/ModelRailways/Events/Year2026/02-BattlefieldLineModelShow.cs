@@ -14,7 +14,7 @@ public class BattlefieldLineMoodleShow2026 : ModelEventPageDetails, IBlogger
         Name = "Battlefield Line Model Show 2026";
         Location = new MarketBosworthStation();
         EventDates = "Sat 8th Aug 2026";
-        Descrption = "Battlefield Line v Show";
+        Descrption = "Battlefield Line Model Show";
         ImagesPath = Constants.RawDataPath + @"ModelEvents\2026-08-08 Battlefield Line Model Show";
         TripDate = new DateTime(2026, 08, 08);
         YouTubeLink = "https://www.youtube.com/embed/?????????";
@@ -36,7 +36,24 @@ public class BattlefieldLineMoodleShow2026 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "",
+            "Battlefield Line Model Show",
+            "Battlefield Line Model Show 2026",
+            "Battlefield Line Railway",
+            "Battlefield Line",
+            "Market Bosworth Station",
+            "Market Bosworth",
+            "Shackerstone",
+            "Hinckley and Bosworth",
+            "Leicestershire",
+            "Model railway exhibition",
+            "Model railway show",
+            "Heritage railway",
+            "OO gauge",
+            "OO9 gauge",
+            "N gauge",
+            "O gauge",
+            "Gauge 1",
+            "3mm scale",
            });
     }
 

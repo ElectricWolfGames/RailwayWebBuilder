@@ -21,6 +21,13 @@ public class Burton2019 : ModelEventPageDetails
         ImagePreview = "PB037041-Burton-model-railex-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Burton", "Burton Model Railex" });
+        Keywords.AddRange(new string[] {
+            "Burton",
+            "Burton Model Railex",
+            "Burton Model Railex 2019",
+            "Burton Railway Society",
+            "The National Brewery Centre",
+            "Burton Upon Trent",
+            "Staffordshire" });
     }
 }

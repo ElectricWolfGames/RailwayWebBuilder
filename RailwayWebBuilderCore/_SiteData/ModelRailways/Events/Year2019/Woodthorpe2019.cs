@@ -21,6 +21,13 @@ public class Woodthorpe2019 : ModelEventPageDetails
         ImagePreview = "PA266852-Woodthorpe-Model-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Woodthorpe", "Woodthorpe Model Railway Club" });
+        Keywords.AddRange(new string[] {
+            "Woodthorpe",
+            "Woodthorpe Model Railway Club",
+            "Woodthorpe Model Railway Club 2019",
+            "Sherwood Community Centre",
+            "Sherwood",
+            "Nottingham",
+            "Nottinghamshire" });
     }
 }

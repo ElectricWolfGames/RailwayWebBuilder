@@ -24,6 +24,14 @@ public class Kirkby2019 : ModelEventPageDetails
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.Barden));
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Kirkby-In-Ashfield", "The Elizabethan Railway Society Exhibition", "Kirkby-In-Ashfield Model Railway" });
+        Keywords.AddRange(new string[] {
+            "Kirkby-In-Ashfield",
+            "The Elizabethan Railway Society Exhibition",
+            "Kirkby-In-Ashfield Model Railway",
+            "The Elizabethan Railway Society",
+            "The Elizabethan Railway Society Exhibition 2019",
+            "The Summit Centre",
+            "Ashfield",
+            "Nottinghamshire" });
     }
 }

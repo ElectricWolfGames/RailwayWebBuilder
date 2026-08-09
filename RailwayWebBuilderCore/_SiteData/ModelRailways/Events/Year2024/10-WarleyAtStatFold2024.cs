@@ -33,7 +33,16 @@ public class WarleyAtStatFold2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Warley", });
+            "Warley",
+            "Warley at Statfold",
+            "Warley at Statfold Model Railway Show 2024",
+            "Warley Model Railway Club",
+            "Statfold",
+            "Statfold Barn Railway",
+            "Statfold Narrow Gauge Museum",
+            "Narrow gauge",
+            "Tamworth",
+            "Staffordshire", });
     }
 
     public IBlog GetBlog()

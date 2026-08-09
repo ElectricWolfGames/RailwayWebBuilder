@@ -37,7 +37,14 @@ public class BurtonModelRailex2023 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Burton Railway Society", });
+            "Burton Railway Society",
+            "Burton Model Railex",
+            "Burton Model Railex 2023",
+            "Burton",
+            "Burton Upon Trent",
+            "The Scout Headquarters",
+            "Rolleston on Dove",
+            "Staffordshire", });
     }
 
     public IBlog GetBlog()

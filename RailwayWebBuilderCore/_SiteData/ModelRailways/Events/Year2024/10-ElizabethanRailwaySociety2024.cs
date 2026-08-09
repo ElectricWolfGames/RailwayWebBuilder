@@ -36,7 +36,14 @@ public class ElizabethanRailwaySociety2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Warley", });
+            "The Elizabethan Railway Society",
+            "The Elizabethan Railway Society 2024",
+            "The Elizabethan Railway Society Exhibition",
+            "Kirkby-In-Ashfield",
+            "Kirkby-In-Ashfield Model Railway",
+            "The Summit Centre",
+            "Ashfield",
+            "Nottinghamshire", });
     }
 
     public IBlog GetBlog()

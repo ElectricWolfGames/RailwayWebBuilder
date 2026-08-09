@@ -36,7 +36,14 @@ public class BarrowHillRoundhouse2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Deltic Preservation Society", });
+            "Deltic Preservation Society",
+            "Deltic Preservation Society 2024",
+            "Deltic",
+            "Class 55",
+            "Barrow Hill Roundhouse",
+            "Barrow Hill",
+            "Staveley",
+            "Derbyshire", });
     }
 
     public IBlog GetBlog()

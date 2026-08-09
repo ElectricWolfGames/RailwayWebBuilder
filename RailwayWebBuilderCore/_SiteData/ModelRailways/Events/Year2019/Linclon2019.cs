@@ -22,7 +22,17 @@ public class Linclon2019 : ModelEventPageDetails
         ImagePreview = "PA196601-Newark-Model-Lincoln-model-rail-club-Crimson-road-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Linclon", "Lincoln Model Rail Club", "Newark Showground", "Post Modernisation Exhibition" });
+        Keywords.AddRange(new string[] {
+            "Linclon",
+            "Lincoln",
+            "Lincoln Model Rail Club",
+            "Lincoln Model Rail Club 2019",
+            "L&DMRC",
+            "Newark Showground",
+            "Lady Eastwood Pavilion",
+            "Newark",
+            "Nottinghamshire",
+            "Post Modernisation Exhibition" });
 
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.CrimsonRoad));
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.Cumanavago));

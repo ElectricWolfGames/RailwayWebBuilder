@@ -39,7 +39,12 @@ public class BinghamModelRailway2024 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Bingham Model Railway Show 2024"
+            "Bingham Model Railway Show 2024",
+            "Bingham Model Railway Club",
+            "Bingham",
+            "Cotgrave Welfare",
+            "Cotgrave",
+            "Nottinghamshire"
             });
     }
 

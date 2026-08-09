@@ -36,7 +36,15 @@ public class Syston2020 : ModelEventPageDetails, IBlogger
         Layouts.Add(new LayoutDetails(LayoutNamesEnums.KozelCement, "13 Kozel Cement"));
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Syston", "Syston Model Railway Society", "Leicester Model Railway Show" });
+        Keywords.AddRange(new string[] {
+            "Syston",
+            "Syston Model Railway Society",
+            "Syston Model Railway Society 2020",
+            "Leicester Model Railway Show",
+            "Sileby Community Centre",
+            "Sileby",
+            "Leicester",
+            "Leicestershire" });
     }
 
     public IBlog GetBlog()

@@ -36,7 +36,13 @@ public class SystonModelRailway2025 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Model Railway"
+            "Syston Model Railway 2025",
+            "Syston Model Railway Society",
+            "Syston",
+            "Roots at Thorpe Farm",
+            "Barkby Thorpe",
+            "Leicester",
+            "Leicestershire"
             });
     }
 

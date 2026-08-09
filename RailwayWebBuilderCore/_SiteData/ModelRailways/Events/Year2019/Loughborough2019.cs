@@ -21,6 +21,12 @@ public class Loughborough2019 : ModelEventPageDetails
         ImagePreview = "P8315301-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Loughborough", "Loughborough Model Railway Exhibition", });
+        Keywords.AddRange(new string[] {
+            "Loughborough",
+            "Loughborough Model Railway Exhibition",
+            "Loughborough Model Railway Exhibition 2019",
+            "Soar Valley Model Railway Club",
+            "Loughborough Grammar School",
+            "Leicestershire", });
     }
 }

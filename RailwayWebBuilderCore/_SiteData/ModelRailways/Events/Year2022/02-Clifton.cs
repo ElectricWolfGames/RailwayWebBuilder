@@ -36,7 +36,13 @@ public class Clifton2022 : ModelEventPageDetails, IBlogger
         Keywords.AddRange(new string[] {
             "Clifton, Nottingham",
             "Nottingham Model Railway Society",
-            "Clifton Model Railway Exhibition" });
+            "Clifton Model Railway Exhibition",
+            "Nottingham Model Railway Society Spring Show",
+            "Nottingham Model Railway Society 2022",
+            "Highbank Community Centre",
+            "Clifton",
+            "Nottingham",
+            "Nottinghamshire" });
     }
 
     public IBlog GetBlog()

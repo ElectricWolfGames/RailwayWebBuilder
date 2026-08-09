@@ -30,7 +30,12 @@ public class MountsorrelShowTony2025 : ModelEventPageDetails, IBlogger
 
         Keywords.AddRange(ModelEventKeywords());
         Keywords.AddRange(new string[] {
-            "Model Railway"
+            "Mountsorrel Tony Trains Model Show",
+            "Mountsorrel Tony Trains 2025",
+            "Tony Trains",
+            "Mountsorrel",
+            "The Mountsorrel Memorial Centre",
+            "Leicestershire"
             });
     }
 

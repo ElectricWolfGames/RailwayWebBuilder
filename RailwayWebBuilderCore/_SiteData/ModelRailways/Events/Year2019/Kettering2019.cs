@@ -21,6 +21,12 @@ public class Kettering2019 : ModelEventPageDetails
         ImagePreview = "P9145561-thumb.JPG";
 
         Keywords.AddRange(ModelEventKeywords());
-        Keywords.AddRange(new string[] { "Kettering", "Kettering Model Railway Exhibition", });
+        Keywords.AddRange(new string[] {
+            "Kettering",
+            "Kettering Model Railway Exhibition",
+            "Kettering Model Railway Exhibition 2019",
+            "Kettering and District Model Railway Society",
+            "Greenfields Primary School",
+            "Northamptonshire", });
     }
 }
