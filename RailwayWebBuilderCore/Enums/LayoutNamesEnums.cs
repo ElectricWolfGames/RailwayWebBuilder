@@ -1534,4 +1534,40 @@ public enum LayoutNamesEnums
 
     [DescriptionGauge("Dublingham", Gauges.OO_Gauge)]
     Dublingham,
+
+    [DescriptionGauge("Bell End", Gauges.O_Gauge)]
+    BellEnd,
+
+    [DescriptionGauge("Christoper's Sidings", Gauges.OO_Gauge)]
+    ChristopersSidings,
+
+    [DescriptionGauge("Howard's Yard", Gauges.O165_Gauge)]
+    HowardsYard,
+
+    [DescriptionGauge("Loft City Central Railway", Gauges.Unknown)]
+    LoftCityCentralRailway,
+
+    [DescriptionGauge("Bellswood End", Gauges.OO_Gauge)]
+    BellswoodEnd,
+
+    [DescriptionGauge("Bluish Moor", Gauges._3mm)]
+    BluishMoor,
+
+    [DescriptionGauge("Carding Road", Gauges.Gauge1)]
+    CardingRoad,
+
+    [DescriptionGauge("Daisy Lane TMD", Gauges.OO_Gauge)]
+    DaisyLaneTMD,
+
+    [DescriptionGauge("Penlee Harbour", Gauges.OO_Gauge)]
+    PenleeHarbour,
+
+    [DescriptionGauge("Rawdon", Gauges.O_Gauge)]
+    Rawdon,
+
+    [DescriptionGauge("Sharnbrook Summit", Gauges.OO_Gauge)]
+    SharnbrookSummit,
+
+    [DescriptionGauge("Two Locks", Gauges.N_Gauge)]
+    TwoLocks
 }

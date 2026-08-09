@@ -8,6 +8,6 @@ internal class AllsopAndSons : LayoutBase
     {
         Name = LayoutNamesEnums.AllsopAndSons;
         Owner = "";
-        Description = "";  // TODO AllsopAndSons Needs description
+        Description = "An example of how to create two different O scale narrow gauge railways, O-16.5 and O9, in a small space.";
     }
 }
