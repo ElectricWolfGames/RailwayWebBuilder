@@ -17,7 +17,7 @@ public class BattlefieldLineMoodleShow2026 : ModelEventPageDetails, IBlogger
         Descrption = "Battlefield Line Model Show";
         ImagesPath = Constants.RawDataPath + @"ModelEvents\2026-08-08 Battlefield Line Model Show";
         TripDate = new DateTime(2026, 08, 08);
-        YouTubeLink = "https://www.youtube.com/embed/?????????";
+        YouTubeLink = "https://www.youtube.com/embed/fytavJv_ejM";
         ImageFolder = "20260808-Battlefield";
         Title = "Battlefield Line Model Show 2026";
         ImagePreview = "IMG_9052-thumb.JPG";
