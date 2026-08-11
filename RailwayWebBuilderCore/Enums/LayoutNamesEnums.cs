@@ -1569,5 +1569,8 @@ public enum LayoutNamesEnums
     SharnbrookSummit,
 
     [DescriptionGauge("Two Locks", Gauges.N_Gauge)]
-    TwoLocks
+    TwoLocks,
+
+    [DescriptionGauge("World of Sodor", Gauges.G_Gauge)]
+    WorldOfSodor
 }

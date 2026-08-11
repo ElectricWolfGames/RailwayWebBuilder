@@ -7,6 +7,7 @@ internal class BywayMPD : LayoutBase
     public BywayMPD()
     {
         Name = LayoutNamesEnums.BywayMPD;
-        Description = "Byway is a fictional small BR urban Motive Power Depot set in the late steam era. It is built to one of a series compact layout plans for a 4ft 6in space using just three turnouts by lan Futers. The layout is used at shows to demonstrate my collection of sound equipped loco's. My main interest is in the technical side of model railways and I am happy to answer any ques- tions you may have, be it DCC sound decoder installation, layout lighting or DCC control.";
+        Owner = "John Gay";
+        Description = "Byway is a fictional small BR urban Motive Power Depot set in the late steam era of the 1950s. It is built to one of a series of compact layout plans by Ian Futers for a 4ft 6in space using just three turnouts. The layout is used at shows to demonstrate the owner's collection of sound equipped locomotives. His main interest is in the technical side of model railways and he is happy to answer any questions you may have, be it DCC sound decoder installation, layout lighting or DCC control.";
     }
 }
