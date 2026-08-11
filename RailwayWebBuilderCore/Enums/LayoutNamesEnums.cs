@@ -1572,5 +1572,17 @@ public enum LayoutNamesEnums
     TwoLocks,
 
     [DescriptionGauge("World of Sodor", Gauges.G_Gauge)]
-    WorldOfSodor
+    WorldOfSodor,
+
+    [DescriptionGauge("Coby", Gauges.OO9_Gauge)]
+    Coby,
+
+    [DescriptionGauge("Fareford North", Gauges.OO_Gauge)]
+    FarefordNorth,
+
+    [DescriptionGauge("Midsomer Meadow", Gauges.N_Gauge)]
+    MidsomerMeadow,
+
+    [DescriptionGauge("Little Bosworth Miniature Railway", Gauges.Unknown)]
+    LittleBosworthMiniatureRailway
 }
