@@ -8,6 +8,7 @@ namespace RailwayWebBuilderCore._SiteData.ModelRailways.Layouts
         {
             Name = LayoutNamesEnums.SpionKop;
             Owner = "";
+            LayoutByLayoutVideos = ["https://youtu.be/bKEnw4qj3qE"];
             Description = "";  // TODO SpionKop Needs description
         }
     }

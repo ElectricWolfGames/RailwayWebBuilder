@@ -14,6 +14,6 @@ internal class Neuburg : LayoutBase, ILayoutByLayoutSetA
             " There is a small industrial complex that provides various types of freight traffic. Passenger traffic is a mix of local and regional trains. </br></br>" +
             " Motive power is mainly diesel but there is the occasional steam visitor.";
 
-        LayoutByLayoutVideo = "https://youtu.be/A2fB93yY7HY";
+        LayoutByLayoutVideos = ["https://youtu.be/A2fB93yY7HY"];
     }
 }

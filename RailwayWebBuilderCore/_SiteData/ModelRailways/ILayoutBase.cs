@@ -8,6 +8,7 @@ internal interface ILayoutBase
 {
     string Description { get; set; }
     List<ImagesPair> Images { get; set; }
+    List<string> LayoutByLayoutVideos { get; set; }
     LayoutNamesEnums Name { get; set; }
     string Owner { get; set; }
 }

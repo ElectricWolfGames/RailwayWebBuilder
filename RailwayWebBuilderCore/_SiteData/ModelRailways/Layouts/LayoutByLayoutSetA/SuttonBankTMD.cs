@@ -10,6 +10,5 @@ internal class SuttonBankTMD : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.SuttonBankTMD;
         Description = "Sutton Bank TMD modern small depot layout with 3 sidings shed road and " +
             "low-level siding. Stock ranging from Early 2000s to present day";
-        LayoutByLayoutVideo = "";
     }
 }

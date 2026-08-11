@@ -10,6 +10,6 @@ internal class BearCreek : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.BearCreek;
         Owner = "";
         Description = "";
-        LayoutByLayoutVideo = "https://youtu.be/q-iGJ-WBEos";
+        LayoutByLayoutVideos = ["https://youtu.be/q-iGJ-WBEos"];
     }
 }

@@ -10,6 +10,5 @@ internal class ShawbridgeJunction : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.ShawbridgeJunction;
         Owner = "The Elizabethan Society";
         Description = "";
-        LayoutByLayoutVideo = "";
     }
 }

@@ -10,6 +10,6 @@ internal class ArnoldLane : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.ArnoldLane;
         Owner = "Pauline Mckenna";
         Description = "";
-        LayoutByLayoutVideo = "https://youtu.be/2KdK28yvDqs";
+        LayoutByLayoutVideos = ["https://youtu.be/2KdK28yvDqs"];
     }
 }

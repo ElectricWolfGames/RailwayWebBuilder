@@ -10,6 +10,5 @@ internal class CroftMillYard : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.CroftMillWharf;
         Owner = "Ian Atkinson";
         Description = "";
-        LayoutByLayoutVideo = "";
     }
 }

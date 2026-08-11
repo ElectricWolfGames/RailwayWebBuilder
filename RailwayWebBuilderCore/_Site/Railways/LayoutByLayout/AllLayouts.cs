@@ -100,7 +100,15 @@ internal class AllLayouts : PageDetails
         StringBuilder sb = new();
         sb.AppendLine("<div class='col-6 col-md-4 col-lg-3 mb-4'>");
         sb.AppendLine("<div class='card h-100 shadow-sm'>");
+        sb.AppendLine("<div class='position-relative'>");
         sb.AppendLine($"<a href='{layout.Name}.html'><img src='{folder}/{filanameThumb}' class='card-img-top' alt='{layoutDetails.Name}' style='height:160px;object-fit:cover;'></a>");
+        int videoCount = layout.LayoutByLayoutVideos == null ? 0 : layout.LayoutByLayoutVideos.Count(video => !string.IsNullOrWhiteSpace(video));
+        if (videoCount > 0)
+        {
+            string videoLabel = videoCount == 1 ? "Video" : $"{videoCount} Videos";
+            sb.AppendLine($"<span class='badge badge-danger position-absolute' style='top:.5rem;right:.5rem;' title='Layout video available'>&#9654; {videoLabel}</span>");
+        }
+        sb.AppendLine("</div>");
         sb.AppendLine("<div class='card-body d-flex flex-column'>");
         sb.AppendLine($"<h6 class='card-title font-weight-bold mb-1'>{layoutDetails.Name}</h6>");
         sb.AppendLine($"<p class='text-muted small mb-3'>{layoutDetails.GaugeName}</p>");

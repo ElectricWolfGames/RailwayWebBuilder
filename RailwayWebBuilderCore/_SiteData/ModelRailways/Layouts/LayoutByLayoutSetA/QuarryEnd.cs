@@ -10,6 +10,5 @@ internal class QuarryEnd : LayoutBase, ILayoutByLayoutSetA
         Name = LayoutNamesEnums.QuarryEnd;
 
         Description = "Quarry end is a small village set somewhere in Wales where most of the people work at the local slateimine. Questions are welcome at all times.";
-        LayoutByLayoutVideo = "";
     }
 }

@@ -8,7 +8,7 @@ internal class LayoutBase : ILayoutBase
 {
     public string Description { get; set; }
     public List<ImagesPair> Images { get; set; } = new List<ImagesPair>();
-    public string LayoutByLayoutVideo { get; set; }
+    public List<string> LayoutByLayoutVideos { get; set; } = new List<string>();
     public LayoutNamesEnums Name { get; set; }
     public string Owner { get; set; }
 }

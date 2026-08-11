@@ -8,7 +8,7 @@ public interface ILayoutByLayout
 {
     string Description { get; set; }
     List<ImagesPair> Images { get; set; }
-    string LayoutByLayoutVideo { get; set; }
+    List<string> LayoutByLayoutVideos { get; set; }
     LayoutNamesEnums Name { get; set; }
     string Owner { get; set; }
 }
