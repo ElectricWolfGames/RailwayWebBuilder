@@ -1544,7 +1544,7 @@ public enum LayoutNamesEnums
     [DescriptionGauge("Howard's Yard", Gauges.O165_Gauge)]
     HowardsYard,
 
-    [DescriptionGauge("Loft City Central Railway", Gauges.Unknown)]
+    [DescriptionGauge("Loft City Central Railway", Gauges.G_Gauge)]
     LoftCityCentralRailway,
 
     [DescriptionGauge("Bellswood End", Gauges.OO_Gauge)]
@@ -1584,5 +1584,62 @@ public enum LayoutNamesEnums
     MidsomerMeadow,
 
     [DescriptionGauge("Little Bosworth Miniature Railway", Gauges.Unknown)]
-    LittleBosworthMiniatureRailway
+    LittleBosworthMiniatureRailway,
+
+    [DescriptionGauge("Corsham", Gauges.N_Gauge)]
+    Corsham,
+
+    [DescriptionGauge("Los Tanimals", Gauges.N_Gauge)]
+    LosTanimals,
+
+    [DescriptionGauge("Lowndes Rode", Gauges.N_Gauge)]
+    LowndesRode,
+
+    [DescriptionGauge("Pettleworth Downs", Gauges.N_Gauge)]
+    PettleworthDowns,
+
+    [DescriptionGauge("Great Central", Gauges.N_Gauge)]
+    GreatCentral,
+
+    [DescriptionGauge("Smaulton", Gauges.N_Gauge)]
+    Smaulton,
+
+    [DescriptionGauge("Bowaters Paper Mill", Gauges.O165_Gauge)]
+    BowatersPaperMill,
+
+    [DescriptionGauge("Effingham Street", Gauges.OO_Gauge)]
+    EffinghamStreet,
+
+    [DescriptionGauge("Gotham Central", Gauges.OO_Gauge)]
+    GothamCentral,
+
+    [DescriptionGauge("Meaden Falls", Gauges.OO_Gauge)]
+    MeadenFalls,
+
+    [DescriptionGauge("Oakenshaw", Gauges.OO_Gauge)]
+    Oakenshaw,
+
+    [DescriptionGauge("Sandside Quarry", Gauges.OO_Gauge)]
+    SandsideQuarry,
+
+    [DescriptionGauge("Stern Point", Gauges.OO_Gauge)]
+    SternPoint,
+
+    [DescriptionGauge("CWS Dairies", Gauges.OO_Gauge)]
+    CWSDairies,
+
+    [DescriptionGauge("Smethurst Junction", Gauges.OO_Gauge)]
+    SmethurstJunction,
+
+    [DescriptionGauge("Burton Leicester Junction", Gauges.OO_Gauge)]
+    BurtonLeicesterJunction,
+
+    [DescriptionGauge("Evington St John", Gauges.OO_Gauge)]
+    EvingtonStJohn,
+
+    [DescriptionGauge("Rolvenden", Gauges.P4_Gauge)]
+    Rolvenden,
+
+    [DescriptionGauge("Kostritzer", Gauges.HO_Gauge)]
+    Kostritzer
 }
