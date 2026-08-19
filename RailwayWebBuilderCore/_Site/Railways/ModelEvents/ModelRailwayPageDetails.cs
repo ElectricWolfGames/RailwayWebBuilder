@@ -112,11 +112,6 @@ public class ModelRailwayPageDetails : PageDetails
 
         foreach (Data.LayoutDetails layout in pageDetails.Layouts)
         {
-            if (!layout.ImagePaths.Any())
-            {
-                continue;
-            }
-
             HTMLHelper.Gallery.AddGalleryHeader(htmBuilder, layout.IDName);
 
             htmBuilder.TextNewLine(AddDescription(layout));
@@ -190,8 +185,7 @@ public class ModelRailwayPageDetails : PageDetails
             List<string> names = new();
             foreach (Data.LayoutDetails layout in pageDetails.Layouts)
             {
-                if (layout.ImagePaths.Any())
-                    names.Add($"<a href='#{layout.IDName}'>{layout.Name}</a>");
+                names.Add($"<a href='#{layout.IDName}'>{layout.Name}</a>");
             }
             if (names.Any())
             {
