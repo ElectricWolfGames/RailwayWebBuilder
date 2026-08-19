@@ -18,6 +18,7 @@ public interface IModelPageDetails
     List<LayoutDetails> Layouts { get; set; }
     ILocations Location { get; set; }
     string Name { get; set; }
+    string RawPath { get; set; }
     DateTime TripDate { get; set; }
     string YouTubeLink { get; set; }
 }

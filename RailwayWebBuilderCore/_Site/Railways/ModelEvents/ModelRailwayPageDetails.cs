@@ -4,6 +4,7 @@ using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using RailwayWebBuilderCore._SiteData;
+using RailwayWebBuilderCore._SiteData.ModelRailways;
 using RailwayWebBuilderCore.Configuration;
 using RailwayWebBuilderCore.Helpers;
 using RailwayWebBuilderCore.Interfaces;
@@ -62,6 +63,8 @@ public class ModelRailwayPageDetails : PageDetails
             }
         }
 
+        CreateRawLayoutFolders(ModelEvent);
+
         ModelEvent.CopyLayoutsToKeywords();
         List<string> images = ImageHelper.GetAllImages(ModelEvent.ImagesPath);
         AddImageToLayouts(ModelEvent, images);
@@ -101,6 +104,86 @@ public class ModelRailwayPageDetails : PageDetails
 
         StringBuilder stringBuilder = new();
         stringBuilder.AppendLine($"<p class='mb-3'>{layout.Description}</p>");
+        return stringBuilder.ToString();
+    }
+
+    /// <summary>
+    /// When a RawPath is set, make sure every layout at the event has a folder in the
+    /// raw photo folder, each holding a generated copy of whatever we know about it.
+    /// </summary>
+    private static void CreateRawLayoutFolders(IModelEvent pageDetails)
+    {
+        if (string.IsNullOrWhiteSpace(pageDetails.RawPath))
+            return;
+
+        ModelLayoutServices mls = ServiceLocator.Instance.GetService<ModelLayoutServices>();
+
+        foreach (Data.LayoutDetails layoutDetails in pageDetails.Layouts)
+        {
+            string layoutPath = Path.Combine(pageDetails.RawPath, SafeFolderName(layoutDetails));
+            Directory.CreateDirectory(layoutPath);
+
+            var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
+
+            File.WriteAllText(Path.Combine(layoutPath, "_Description.txt"), RawLayoutDetails(layoutDetails, layout));
+        }
+    }
+
+    /// <summary>
+    /// The display name, less anything Windows will not accept in a folder name -
+    /// a few layouts are named with a slash, which would otherwise nest the folders.
+    /// </summary>
+    private static string SafeFolderName(Data.LayoutDetails layoutDetails)
+    {
+        string name = layoutDetails.Name;
+
+        foreach (char invalid in Path.GetInvalidFileNameChars())
+            name = name.Replace(invalid, '-');
+
+        name = name.Trim().TrimEnd('.');
+
+        return string.IsNullOrWhiteSpace(name) ? layoutDetails.NameEnum.ToString() : name;
+    }
+
+    /// <summary>
+    /// Everything we hold for a layout, as plain text for the raw photo folder.
+    /// </summary>
+    private static string RawLayoutDetails(Data.LayoutDetails layoutDetails, ILayoutBase layout)
+    {
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.AppendLine(layoutDetails.Name);
+
+        if (!string.IsNullOrWhiteSpace(layoutDetails.GaugeName))
+            stringBuilder.AppendLine(layoutDetails.GaugeName);
+
+        stringBuilder.AppendLine();
+
+        if (layout == null)
+        {
+            stringBuilder.AppendLine("No layout details are recorded yet.");
+            return stringBuilder.ToString();
+        }
+
+        if (!string.IsNullOrWhiteSpace(layout.Owner))
+        {
+            stringBuilder.AppendLine($"Owner: {layout.Owner}");
+            stringBuilder.AppendLine();
+        }
+
+        if (string.IsNullOrWhiteSpace(layout.Description))
+            stringBuilder.AppendLine("No description is recorded yet.");
+        else
+            stringBuilder.AppendLine(layout.Description);
+
+        if (layout.LayoutByLayoutVideos != null && layout.LayoutByLayoutVideos.Any())
+        {
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine("Videos:");
+            foreach (string video in layout.LayoutByLayoutVideos)
+                stringBuilder.AppendLine(video);
+        }
+
         return stringBuilder.ToString();
     }
 
