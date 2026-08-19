@@ -130,7 +130,23 @@ public class ModelRailwayPageDetails : PageDetails
             File.WriteAllText(Path.Combine(layoutPath, "_Description.txt"), RawLayoutDetails(layoutDetails, layout));
 
             CreateResolveProject(pageDetails, folderName);
+            CreateResolveImport(layoutPath, folderName, layoutDetails, layout);
         }
+    }
+
+    /// <summary>
+    /// A Resolve project export for the layout, with its title and description already
+    /// filled in, sitting alongside the photos ready to import.
+    /// </summary>
+    private static void CreateResolveImport(string layoutPath, string folderName, Data.LayoutDetails layoutDetails, ILayoutBase layout)
+    {
+        string title = string.IsNullOrWhiteSpace(layoutDetails.GaugeName)
+            ? layoutDetails.Name
+            : $"{layoutDetails.Name} ({layoutDetails.GaugeName})";
+
+        string description = ResolveProjectHelper.Cap(layout?.Description, Constants.ResolveDescriptionLength);
+
+        ResolveProjectHelper.Write(Constants.ResolveTemplateDrp, Path.Combine(layoutPath, folderName + ".drp"), title, description);
     }
 
     /// <summary>

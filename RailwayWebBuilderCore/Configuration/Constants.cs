@@ -18,6 +18,17 @@ public static class Constants
     public static readonly string ResolveEmptyProject = Path.Combine(
         ResolveProjectsRoot, @"2026\Template\Project.db");
 
+    /// <summary>
+    /// A Resolve project export holding the TITLE and DESCRIPTION placeholders,
+    /// copied and filled in to make a per layout project to import.
+    /// </summary>
+    public const string ResolveTemplateDrp = _aaDriveLetter + @"Trains\Photos - Main\Template.drp";
+
+    /// <summary>
+    /// Descriptions are trimmed to this before going into a Resolve title.
+    /// </summary>
+    public const int ResolveDescriptionLength = 600;
+
     public const string _aaDriveLetter = @"E:\";
     public const string _aRootPath = _aaDriveLetter + @"eWolfSiteUploads\Railways\";
     public const string _LocomotiveName = "Locomotives";
