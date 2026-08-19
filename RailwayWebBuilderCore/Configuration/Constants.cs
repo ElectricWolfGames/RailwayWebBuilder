@@ -1,7 +1,23 @@
-﻿namespace RailwayWebBuilderCore.Configuration;
+﻿using System;
+using System.IO;
+
+namespace RailwayWebBuilderCore.Configuration;
 
 public static class Constants
 {
+    /// <summary>
+    /// The Events folder of the DaVinci Resolve disk project library.
+    /// </summary>
+    public static readonly string ResolveProjectsRoot = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+        @"Blackmagic Design\DaVinci Resolve\Support\Resolve Project Library\Resolve Projects\Users\guest\Projects\Events");
+
+    /// <summary>
+    /// An empty project, copied to make a new one for each layout.
+    /// </summary>
+    public static readonly string ResolveEmptyProject = Path.Combine(
+        ResolveProjectsRoot, @"2026\Template\Project.db");
+
     public const string _aaDriveLetter = @"E:\";
     public const string _aRootPath = _aaDriveLetter + @"eWolfSiteUploads\Railways\";
     public const string _LocomotiveName = "Locomotives";

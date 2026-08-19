@@ -120,13 +120,63 @@ public class ModelRailwayPageDetails : PageDetails
 
         foreach (Data.LayoutDetails layoutDetails in pageDetails.Layouts)
         {
-            string layoutPath = Path.Combine(pageDetails.RawPath, SafeFolderName(layoutDetails));
+            string folderName = SafeFolderName(layoutDetails);
+
+            string layoutPath = Path.Combine(pageDetails.RawPath, folderName);
             Directory.CreateDirectory(layoutPath);
 
             var layout = mls.Layouts.FirstOrDefault(x => x.Name == layoutDetails.NameEnum);
 
             File.WriteAllText(Path.Combine(layoutPath, "_Description.txt"), RawLayoutDetails(layoutDetails, layout));
+
+            CreateResolveProject(pageDetails, folderName);
         }
+    }
+
+    /// <summary>
+    /// The DaVinci Resolve project folder for a layout, under the show it was seen at.
+    /// </summary>
+    private static string ResolveProjectFolder(IModelEvent pageDetails, string layoutFolderName)
+    {
+        string showFolder = new DirectoryInfo(pageDetails.RawPath).Name;
+
+        return Path.Combine(Constants.ResolveProjectsRoot, pageDetails.TripDate.Year.ToString(), showFolder, layoutFolderName);
+    }
+
+    /// <summary>
+    /// Give the layout an empty DaVinci Resolve project to start from, leaving any
+    /// project that already exists well alone.
+    /// </summary>
+    private static void CreateResolveProject(IModelEvent pageDetails, string layoutFolderName)
+    {
+        string projectDb = Path.Combine(ResolveProjectFolder(pageDetails, layoutFolderName), "Project.db");
+
+        if (File.Exists(projectDb))
+            return;
+
+        byte[] emptyProject;
+        try
+        {
+            // Resolve holds the project open for writing while it is running, so we
+            // have to allow other writers to be able to read the empty project at all.
+            using FileStream source = new(Constants.ResolveEmptyProject, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            using MemoryStream contents = new();
+
+            source.CopyTo(contents);
+            emptyProject = contents.ToArray();
+        }
+        catch (IOException)
+        {
+            // Only make the folder once we actually have a project to put in it.
+            return;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return;
+        }
+
+        Directory.CreateDirectory(Path.GetDirectoryName(projectDb));
+        File.WriteAllBytes(projectDb, emptyProject);
     }
 
     /// <summary>
