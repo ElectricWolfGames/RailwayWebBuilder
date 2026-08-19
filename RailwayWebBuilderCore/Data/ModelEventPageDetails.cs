@@ -17,6 +17,7 @@ public abstract class ModelEventPageDetails : HeaderBase, IModelEvent
     public List<LayoutDetails> Layouts { get; set; } = new List<LayoutDetails>();
     public ILocations Location { get; set; }
     public string Name { get; set; }
+    public string RawPath { get; set; }
     public DateTime TripDate { get; set; }
     public string YouTubeLink { get; set; }
 

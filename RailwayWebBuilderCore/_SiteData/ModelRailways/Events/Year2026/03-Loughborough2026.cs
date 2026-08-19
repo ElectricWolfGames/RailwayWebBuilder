@@ -17,6 +17,7 @@ public class Loughborough2026 : ModelEventPageDetails, IBlogger
         Descrption = "Loughborough Model Railway Exhibition, Soar Valley Model Railway Club annual exhibition";
         ImagesPath = Constants.RawDataPath + @"ModelEvents\2026-08-22 Loughborough model railway exhibition";
         TripDate = new DateTime(2026, 08, 22);
+        RawPath = "E:\\Trains\\Photos - Main\\2026\\2026-08-22 Soar Valley Model Railway\\";
 
         YouTubeLink = "https://www.youtube.com/embed/???????";
         ImageFolder = "20260822-Loughborough";
