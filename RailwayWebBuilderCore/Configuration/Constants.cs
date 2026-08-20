@@ -1,23 +1,7 @@
-﻿using System;
-using System.IO;
-
-namespace RailwayWebBuilderCore.Configuration;
+﻿namespace RailwayWebBuilderCore.Configuration;
 
 public static class Constants
 {
-    /// <summary>
-    /// The Events folder of the DaVinci Resolve disk project library.
-    /// </summary>
-    public static readonly string ResolveProjectsRoot = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-        @"Blackmagic Design\DaVinci Resolve\Support\Resolve Project Library\Resolve Projects\Users\guest\Projects\Events");
-
-    /// <summary>
-    /// An empty project, copied to make a new one for each layout.
-    /// </summary>
-    public static readonly string ResolveEmptyProject = Path.Combine(
-        ResolveProjectsRoot, @"2026\Template\Project.db");
-
     /// <summary>
     /// A Resolve project export holding the TITLE and DESCRIPTION placeholders,
     /// copied and filled in to make a per layout project to import.
